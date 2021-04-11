@@ -1,0 +1,49 @@
+{
+    "displayName": "Anti-CV",
+    "fluxCapacitors": 0,
+    "fluxVents": 28,
+    "hullId": "dominator",
+    "hullMods": [
+        "heavyarmor",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "dominator_AntiCV",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "devastator",
+                "WS 013": "devastator"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "annihilatorpod",
+                "WS 015": "annihilatorpod",
+                "WS 016": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 003": "lightdualac",
+                "WS 004": "lightdualac",
+                "WS 005": "lightdualac",
+                "WS 006": "lightmg",
+                "WS 007": "lightmg",
+                "WS 008": "lightmg",
+                "WS 009": "lightmg",
+                "WS 010": "dualflak",
+                "WS 011": "dualflak"
+            }
+        }
+    ]
+}

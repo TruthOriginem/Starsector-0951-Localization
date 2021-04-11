@@ -1,0 +1,30 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "wayfarer",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "wayfarer_Starting",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightdualac",
+                "WS 002": "lightag",
+                "WS 004": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightmg",
+                "WS 005": "lightmg",
+                "WS 006": "lightmg"
+            }
+        }
+    ]
+}

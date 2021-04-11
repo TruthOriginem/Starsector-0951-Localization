@@ -1,0 +1,55 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 21,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "dominator",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "variantId": "dominator_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "mark9",
+                "WS 013": "mark9"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "pilum",
+                "WS 015": "pilum",
+                "WS 016": "pilum"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightag",
+                "WS 004": "lightag",
+                "WS 005": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 002": "vulcan",
+                "WS 006": "vulcan",
+                "WS 007": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

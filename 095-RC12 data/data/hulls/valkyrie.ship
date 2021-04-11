@@ -1,0 +1,175 @@
+{
+    "bounds": [
+        -104,
+        37,
+        144,
+        20,
+        144,
+        -19,
+        -104,
+        -36
+    ],
+    "builtInMods": ["ground_support"],
+    "center": [
+        40,
+        111
+    ],
+    "collisionRadius": 200,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -110,
+                28
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -109,
+                20
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -109,
+                0
+            ],
+            "style": "MIDLINE",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -109,
+                -19
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -110,
+                -28
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        }
+    ],
+    "height": 260,
+    "hullId": "valkyrie",
+    "hullName": "Valkyrie",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        17,
+        0
+    ],
+    "shieldRadius": 180,
+    "spriteName": "graphics/ships/valkyrie_ap.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 90,
+            "arc": 190,
+            "id": "WS 001",
+            "locations": [
+                -62,
+                28
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -90,
+            "arc": 190,
+            "id": "WS 002",
+            "locations": [
+                -62,
+                -27
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 60,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                62,
+                22
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -60,
+            "arc": 150,
+            "id": "WS 004",
+            "locations": [
+                62,
+                -22
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 005",
+            "locations": [
+                142,
+                14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 006",
+            "locations": [
+                142,
+                -14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                149,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 80
+}

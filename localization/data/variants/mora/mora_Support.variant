@@ -1,0 +1,40 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 6,
+    "fluxVents": 27,
+    "goalVariant": true,
+    "hullId": "mora",
+    "hullMods": ["dedicated_targeting_core"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mora_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightag",
+                "WS 005": "lightdualac",
+                "WS 007": "lightdualac",
+                "WS 008": "lightac",
+                "WS 011": "lightac",
+                "WS 012": "lightag",
+                "WS 013": "lightag",
+                "WS 014": "vulcan"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "typhoon",
+                "WS 004": "typhoon"
+            }
+        }
+    ],
+    "wings": [
+        "talon_wing",
+        "talon_wing",
+        "gladius_wing"
+    ]
+}

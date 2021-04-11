@@ -1,0 +1,80 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 36,
+    "fluxVents": 50,
+    "hullId": "onslaught_xiv",
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_xiv_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "tpc",
+                "WS 017": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 021": "typhoon",
+                "WS 022": "typhoon",
+                "WS 023": "typhoon",
+                "WS 024": "typhoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "multineedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 003": "heavyac",
+                "WS 012": "heavyac",
+                "WS 013": "heavyac",
+                "WS 014": "heavyac",
+                "WS 015": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightag",
+                "WS 004": "lightag",
+                "WS 005": "lightag",
+                "WS 006": "lightag",
+                "WS 008": "lightdualac",
+                "WS 009": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "dualflak",
+                "WS 010": "dualflak",
+                "WS 011": "dualflak"
+            }
+        }
+    ]
+}
