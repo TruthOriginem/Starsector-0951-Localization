@@ -198,7 +198,7 @@
 		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
 	},	
 	"fleetTypeNames":{
-		"patrolSmall":"断片",【残片】
+		"patrolSmall":"断片",
 		"patrolMedium":"次级秩序",
 		"patrolLarge":"秩序",
 		"battlestation":"融合",
