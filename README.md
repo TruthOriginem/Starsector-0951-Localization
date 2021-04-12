@@ -26,4 +26,14 @@
 | hegemony | 霸主 |
 | Janus Device | ""双面神""装置 |
 | [REDACTED] | [数据删除] |
+| Nav Buoy | 导航浮标 |
+| Sensor Jammer | 传感干扰器 |
+| Sensor Array | 传感器阵列 |
+| Comm Relay | 通讯中继站 |
+| Probe | 探测器 |
+| Warning Beacon | 警告航标 |
+| Fusion Lamp | 聚变射灯 |
+| Yellow Star | 黄矮星 |
+| Orange Star | 橙矮星 |
+| Contacts | 联络人 |
 
