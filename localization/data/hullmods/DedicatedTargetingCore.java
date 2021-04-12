@@ -40,13 +40,13 @@ public class DedicatedTargetingCore extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship != null && ship.getHullSize() != HullSize.CAPITAL_SHIP && ship.getHullSize() != HullSize.CRUISER) {
-			return "Can only be installed on cruisers and capital ships";
+			return "只能安装在巡洋舰与主力舰上";
 		}
 		if (ship.getVariant().getHullMods().contains("targetingunit")) {
-			return "Incompatible with Integrated Targeting Unit";
+			return "与目标定位系统冲突";
 		}
 		if (ship.getVariant().getHullMods().contains("advancedcore")) {
-			return "Incompatible with Advanced Targeting Core";
+			return "与先进目标定位核心冲突";
 		}
 		
 		return null;

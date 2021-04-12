@@ -59,6 +59,6 @@ public class FrontShieldGenerator extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship already has shields";
+		return "该舰已经拥有护盾";
 	}
 }

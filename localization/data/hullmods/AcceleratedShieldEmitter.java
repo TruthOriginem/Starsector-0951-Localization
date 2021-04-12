@@ -26,6 +26,6 @@ public class AcceleratedShieldEmitter extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship has no shields";
+		return "该舰没有护盾";
 	}
 }

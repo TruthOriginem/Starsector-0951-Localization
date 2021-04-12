@@ -58,7 +58,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 		
 		// Asharu abandoned station
 		SectorEntityToken neutralStation = system.addCustomEntity("corvus_abandoned_station",
-				"Abandoned Terraforming Platform", "station_side06", "neutral");
+				"废弃的地貌改造平台", "station_side06", "neutral");
 		
 			neutralStation.setCircularOrbitPointingDown(system.getEntityById("asharu"), 45, 300, 30);		
 			neutralStation.setCustomDescriptionId("asharu_platform");
@@ -128,7 +128,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 			
 		
 			// Jangala Jumppoint - L4 (ahead)
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("jangala_jump", "Jangala Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("jangala_jump", "Jangala 跳跃点");
 			jumpPoint.setCircularOrbit(system.getEntityById("corvus"), 245+60, 4500, 200);
 			jumpPoint.setRelatedPlanet(corvusII);
 			
@@ -137,13 +137,13 @@ public class Corvus { // implements SectorGeneratorPlugin {
 		
 		// Corvus Gate
 		SectorEntityToken gate = system.addCustomEntity("jangala_gate", // unique id
-				 "Corvus Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Corvus 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		gate.setCircularOrbit(system.getEntityById("corvus"), 0, 6000, 350);
 
 	// Not-yet-named Asteroids // Let's try "Nemo"
-		system.addAsteroidBelt(star, 90, 5650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Nemo's Belt");
+		system.addAsteroidBelt(star, 90, 5650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Nemo 小行星带");
 		system.addRingBand(star, "misc", "rings_dust0", 256f, 3, Color.white, 256f, 5600, 305f, null, null);
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 3, Color.white, 256f, 5720, 295f, null, null);
 		
@@ -197,7 +197,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Barad L4 Asteroids")); // null for default name
+						"Barad L4 陨石区")); // null for default name
 			
 			SectorEntityToken baradL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -207,7 +207,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Barad L5 Asteroids")); // null for default name
+						"Barad L5 陨石区")); // null for default name
 			
 			baradL4.setCircularOrbit(star, baradAngle -60f, 7800, 400);
 			baradL5.setCircularOrbit(star, baradAngle +60f, 7800, 400);

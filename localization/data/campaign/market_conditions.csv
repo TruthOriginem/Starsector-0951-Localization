@@ -162,4 +162,4 @@ AI 管理员(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 丰富的耕地,farmland_rich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market的田野将以大丰收的形式奖励所有在肥沃土地上耕作的农民们。,graphics/icons/markets/farmland_rich.png,70
 肥沃的耕地,farmland_bountiful,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market}是名副其实的伊甸园；也是充满鲜花、缤纷、葱郁，阳光和植物的生命乐园，树枝低垂，果实累累，金色的田野在微风中闪闪发光。,graphics/icons/markets/farmland_bountiful.png,70
 ,,,,,,,
-轨道太阳阵列,solar_array,TRUE,,com.fs.starfarer.api.impl.campaign.econ.SolarArray,"这颗行星的轨道上有一排用于调节阳光的恒星盾或恒星镜, 它们被合理安置, 可以使星球地表条件更接近人类宜居的标准.",graphics/icons/markets/solar_shade.png,101
+轨道光照阵列,solar_array,TRUE,,com.fs.starfarer.api.impl.campaign.econ.SolarArray,"这颗行星的轨道上有一排用于调节光照的恒星罩或恒星镜, 它们被合理安置, 可以使星球地表条件更接近人类宜居的标准.",graphics/icons/markets/solar_shade.png,101

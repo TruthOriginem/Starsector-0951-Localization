@@ -50,11 +50,11 @@ public class ConvertedHangar extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship != null && ship.isFrigate()) return "Can not be installed on a frigate";
-		if (ship != null && ship.getHullSpec().getFighterBays() > 0) return "Ship has standard fighter bays";
-		if (ship != null && ship.getVariant().hasHullMod(HullMods.CONVERTED_BAY)) return "Ship has fighter bays";
+		if (ship != null && ship.isFrigate()) return "不能安装在护卫舰上";
+		if (ship != null && ship.getHullSpec().getFighterBays() > 0) return "该舰已经拥有飞行甲板";
+		if (ship != null && ship.getVariant().hasHullMod(HullMods.CONVERTED_BAY)) return "该舰已经拥有飞行甲板";
 		//if (ship != null && ship.getNumFighterBays() > 0) return "Ship has fighter bays";
-		return "Can not be installed on a phase ship";
+		return "不能安装在相位舰上";
 	}
 	
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
