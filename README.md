@@ -36,4 +36,6 @@
 | Yellow Star | 黄矮星 |
 | Orange Star | 橙矮星 |
 | Contacts | 联络人 |
+| Galatia Academy | Galatia 学院 |
+| Galatia Academy Station | Galatia 学院空间站 |
 
