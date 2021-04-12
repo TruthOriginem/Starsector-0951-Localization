@@ -1,12 +1,12 @@
 {
 	"baseHullId":"kite",
 	"skinHullId":"kite_hegemony",
-	"hullName":"Kite (A)",
+	"hullName":"风筝 (A)",
 	"ordnancePoints":32,
 	"descriptionId":"kite",  # optional
-	"descriptionPrefix":"This ship is on the Hegemony auxiliary list and as such its systems have been upgraded to military standard and a rigorous schedule of servicing enforced with the expectation that it can be pressed into military service during emergencies.",
+	"descriptionPrefix":"这艘舰船位列于霸主的补助舰列表上，因此它的系统已经升级到军用标准，并执行严格的定期维护，以便它在紧急情况下能被投入军事使用。",
 	"tags":["heg_aux_bp"],
-	"tech":"Hegemony",
+	"tech":"霸主",
 	"spriteName":"graphics/ships/aeroshuttle/aeroshuttle_hegemony.png",
 	"fleetPoints":4,
 	"baseValueMult":1.5,
