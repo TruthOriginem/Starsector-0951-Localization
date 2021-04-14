@@ -68,7 +68,7 @@ public class Eos {
 						15, // max asteroid count
 						4f, // min asteroid radius 
 						12f, // max asteroid radius
-						"Cherubim Asteroids")); // null for default name
+						"Cherubim 陨石区")); // null for default name
 			
 			SectorEntityToken phaosphorosL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -78,7 +78,7 @@ public class Eos {
 						15, // max asteroid count
 						4f, // min asteroid radius 
 						12f, // max asteroid radius
-						"Seraphim Asteroids")); // null for default name
+						"Seraphim 陨石区")); // null for default name
 			
 			phaosphorosL4.setCircularOrbit(star, 240 + 60, 2300, 40);
 			phaosphorosL5.setCircularOrbit(star, 240 - 60, 2300, 40);
@@ -90,11 +90,11 @@ public class Eos {
 		eos2.applySpecChanges();
 		eos2.setCustomDescriptionId("planet_tartessus");
 		
-			system.addRingBand(eos2, "misc", "rings_special0", 256f, 1, new Color(225,215,255,200), 128f, 380, 30f, Terrain.RING, "The Grace of Tartessus"); 
+			system.addRingBand(eos2, "misc", "rings_special0", 256f, 1, new Color(225,215,255,200), 128f, 380, 30f, Terrain.RING, "Tartessus 之视"); 
 			// 256f
 		
 			// Tartessus Jumppoint - Tartessus L5 (behind)
-			JumpPointAPI eos2JumpPoint = Global.getFactory().createJumpPoint("paladins_bridge", "Paladins' Bridge");
+			JumpPointAPI eos2JumpPoint = Global.getFactory().createJumpPoint("paladins_bridge", "圣骑士之桥 跳跃点");
 			eos2JumpPoint.setCircularOrbit(system.getEntityById("eos"), 200-60, 4400, 120);
 			eos2JumpPoint.setRelatedPlanet(eos2);
 			
@@ -115,7 +115,7 @@ public class Eos {
 			
 		// Asteroids - "The Pilgrims"
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 5980, 205f, null, null);
-		system.addAsteroidBelt(star, 150, 6000, 250, 150, 250, Terrain.ASTEROID_BELT, "The Pilgrims");
+		system.addAsteroidBelt(star, 150, 6000, 250, 150, 250, Terrain.ASTEROID_BELT, "朝圣者陨石带");
 			
 		PlanetAPI eos3 = system.addPlanet("hesperus", star, "Hesperus", "rocky_ice", 0, 150, 7400, 200);
 		eos3.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
@@ -163,12 +163,12 @@ public class Eos {
 			//And then use $daedaleon as a condition for custom interaction text in rules.csv.
 			
 			
-		SectorEntityToken relay = system.addCustomEntity("hesperus_relay", "Hesperus Relay", "comm_relay", "luddic_church");
+		SectorEntityToken relay = system.addCustomEntity("hesperus_relay", "Hesperus 通讯中继站", "comm_relay", "luddic_church");
 		relay.setCircularOrbitPointingDown( star, 0 + 60, 7400, 200);
 		
 		// Eos Exodus Gate - Tartessus L4 (ahead)
 		SectorEntityToken gate = system.addCustomEntity("eos_exodus_gate", // unique id
-				 "Eos Exodus Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Eos Exodus 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		
