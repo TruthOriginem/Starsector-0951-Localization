@@ -98,7 +98,7 @@ public class Magec {
 		system.addCorona(magec3, 150, 3f, 0.05f, 1f); // it's a very docile star.
 		
 		SectorEntityToken achaman_buoy = system.addCustomEntity("achaman_relay", // unique id
-				 "Achaman Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Achaman 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 				 "nav_buoy", // type of object, defined in custom_entities.json
 				 "tritachyon"); // faction
 		
@@ -107,7 +107,7 @@ public class Magec {
 		PlanetAPI magec3a = system.addPlanet("tibicena", magec3, "Tibicena", "rocky_metallic", 200, 80, 800, 45);
 		
 			SectorEntityToken achaman_station = system.addCustomEntity("achaman_enterprise_station", 
-																		"Achaman Enterprise Station",
+																		"Achaman 企业站",
 																		"station_side04",
 																		"tritachyon");
 			
@@ -131,7 +131,7 @@ public class Magec {
 		system.addRingBand(star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 3800, 80f);
 		
 		// add one ring that covers all of the above
-		SectorEntityToken ring = system.addTerrain(Terrain.RING, new RingParams(600 + 256, 3500, null, "Guayota's Disk"));
+		SectorEntityToken ring = system.addTerrain(Terrain.RING, new RingParams(600 + 256, 3500, null, "Guayota 吸积盘"));
 		ring.setCircularOrbit(star, 0, 0, 100);
 		
 		
@@ -140,7 +140,7 @@ public class Magec {
 		system.addRingBand(star, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 4200, 160f);
 		
 		// add one ring that covers all of the above
-		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 4100, null, "Guayota's Disk"));
+		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 4100, null, "Guayota 吸积盘"));
 		ring.setCircularOrbit(star, 0, 0, 100);
 		
 		
@@ -154,7 +154,7 @@ public class Magec {
 		system.addRingBand(star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4500, 220f);
 		
 		// add one ring that covers all of the above
-		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 4400, null, "Guayota's Disk"));
+		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 4400, null, "Guayota 吸积盘"));
 		ring.setCircularOrbit(star, 0, 0, 100);
 		
 		
@@ -164,7 +164,7 @@ public class Magec {
 		system.addRingBand(star, "misc", "rings_ice0", 256f, 2, Color.white, 256f, 4800, 180f);
 		
 		// add one ring that covers all of the above
-		ring = system.addTerrain(Terrain.RING, new RingParams(300 + 256, 4650, null, "Guayota's Disk"));
+		ring = system.addTerrain(Terrain.RING, new RingParams(300 + 256, 4650, null, "Guayota 吸积盘"));
 		ring.setCircularOrbit(star, 0, 0, 100);
 		
 		
@@ -185,13 +185,13 @@ public class Magec {
 	
 		
 		//SectorEntityToken pirateStation = system.addOrbitalStation("kantas_den", star, 240, 4250, 160, "Kanta's Den", "pirates");
-		SectorEntityToken pirateStation = system.addCustomEntity("kantas_den", "Kanta's Den", "station_side06", "pirates");
+		SectorEntityToken pirateStation = system.addCustomEntity("kantas_den", "Kanta 之巢", "station_side06", "pirates");
 		pirateStation.setCustomDescriptionId("station_kantas_den");
 		pirateStation.setInteractionImage("illustrations", "pirate_station");
 		pirateStation.setCircularOrbitWithSpin(star, 220, 4250, 160, 3, 5);
 		
 		
-		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("maxios_jump_point", "Maxios Jump-point");
+		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("maxios_jump_point", "Maxios 跳跃点");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(magec2, 0, 500, 30);
 		jumpPoint.setOrbit(orbit);
 		jumpPoint.setRelatedPlanet(magec2);
@@ -200,7 +200,7 @@ public class Magec {
 		
 		// Magec Gate - counter-orbit to Achaman 
 		SectorEntityToken gate = system.addCustomEntity("magec_gate", // unique id
-				 "Magec Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Magec 之门", // name - if null, defaultName from custom_entities.json will be used
 				 Entities.INACTIVE_GATE, // type of object, defined in custom_entities.json
 				 null); // faction
 		gate.setCircularOrbit(star, 45+180, 8000, 700);

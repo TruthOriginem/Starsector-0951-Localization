@@ -1,9 +1,9 @@
 {
 	"baseHullId":"talon",
 	"skinHullId":"talon_tritachyon",
-	"hullName":"Talon (Tri-Tachyon)",
+	"hullName":"利爪 (Tri-Tachyon)",
 	"descriptionId":"talon",  # optional
-	"descriptionPrefix":"This ship has been thoroughly overhauled by the Tri-Tachyon corporation. Tri-Tachyon compliant software patches have been installed which are fully integrated with TriPad (R) status monitoring protocols, high-spec flux conduit upgrades performed, and weapon attachment points refurbished for mounting advanced energy weapons.",
+	"descriptionPrefix":"该舰已由速子科技公司进行了彻底改造。包括安装内置TriPad(R)状态监视协议的速子科技软件补丁，进行高规格的辐能导管升级，翻新武器挂点以安装先进的能量武器。",
 	"spriteName":"graphics/ships/talon/talon_tritachyon.png",
 	"baseValueMult":0.75,
 	"removeWeaponSlots":[], 		# ids
