@@ -7,6 +7,7 @@ def main():
     cin = input("Enter E to use English files, other to use CN files")
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    current_folder = dir_path.split('\\').pop() + '\\'
     source = 'localization'
     if cin.lower() == 'e':
         source = 'original'
@@ -22,7 +23,7 @@ def main():
 
             (pure_file_name, extension) = os.path.splitext(file_name)
             original_file_path = os.path.join(root, pure_file_name + extension)
-            new_file_path = os.path.join(root.replace(source, 'starsector-core'), pure_file_name + extension)
+            new_file_path = os.path.join(root.replace(current_folder + source, 'starsector-core'), pure_file_name + extension)
             print(original_file_path)
             print(new_file_path)
 
