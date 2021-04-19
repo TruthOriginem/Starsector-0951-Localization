@@ -64,7 +64,7 @@ variant_map_json = json5.load(open(variant_map_file, 'r', encoding='utf-8'))
 
 for name in variant_name_list:
     if not variant_map_json.__contains__(name):
-        variant_map_json[name] = ""
+        variant_map_json[name] = name
 
 print(variant_map_json)
 json5.dump(variant_map_json, open(

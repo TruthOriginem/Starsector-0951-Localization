@@ -1,4 +1,5 @@
 import os
+# 用于进行中文和英文的互换，注意不会替换字库，字库要自己安装
 
 
 def main():
@@ -23,7 +24,8 @@ def main():
 
             (pure_file_name, extension) = os.path.splitext(file_name)
             original_file_path = os.path.join(root, pure_file_name + extension)
-            new_file_path = os.path.join(root.replace(current_folder + source, 'starsector-core'), pure_file_name + extension)
+            new_file_path = os.path.join(root.replace(
+                current_folder + source, 'starsector-core'), pure_file_name + extension)
             print(original_file_path)
             print(new_file_path)
 
