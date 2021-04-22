@@ -3,7 +3,7 @@ import os
 
 
 def main():
-    print("Swap lang file, please put this script and 'localization' folder and 'original' in the same position with 'starsector-core'.")
+    print("Swap lang file, please put this script and 'localization' folder in the same position with 'starsector-core'.")
     print("Modified from Originem by AnyIDElse")
     cin = input("Enter E to use English files, other to use CN files")
 

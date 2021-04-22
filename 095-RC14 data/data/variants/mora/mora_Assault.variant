@@ -1,0 +1,37 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 14,
+    "fluxVents": 14,
+    "goalVariant": true,
+    "hullId": "mora",
+    "hullMods": ["dedicated_targeting_core"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "mora_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightac",
+                "WS 005": "lightac",
+                "WS 007": "lightac",
+                "WS 012": "lightac",
+                "WS 013": "lightac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "typhoon",
+                "WS 004": "typhoon"
+            }
+        }
+    ],
+    "wings": [
+        "warthog_wing",
+        "warthog_wing",
+        "broadsword_wing"
+    ]
+}
