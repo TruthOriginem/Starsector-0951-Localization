@@ -3,7 +3,7 @@
 [TOC]
 
 ## 文件夹内容
-"版本号+ data"是游戏版本 data 文件夹
+"版本号 + data"是游戏版本 data 文件夹
 
 "localization" 指的是需要翻译的内容
 
