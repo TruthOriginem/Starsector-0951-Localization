@@ -12,7 +12,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 轨道聚变射灯,orbital_fusion_lamp,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fusion_lamp.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一座微型化、输出可控的聚变反应堆，能够为一整颗星球带来光和热。
 
 这种射灯需要消耗大量的的挥发物来确保其能安全运转。如果供给不足，则可能使该设备失稳，进而可能导致失控的能量输出激增。直到""大崩塌""发生时，人之领}的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼都没有停止过。",135
-超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一个微型虫洞式交互设备，可以与附近的星冕吸收器连接，给殖民地提供近乎无限的能源。
+超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一个微型虫洞式交互设备，可以与附近的星冕分流器连接，给殖民地提供近乎无限的能源。
 
 这样的输电操作需要工业级稀有金属的供应支持。这些稀有金属首先被用来打开虫洞，而等到获取的能量足以使它自维持后，则会改为被用于一种极为复杂的烧蚀流程，以此来稳定虫洞。因此，如果稀有金属供应不足，它将只能全面断开连接。",137
 全自动地幔钻机,mantle_bore,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,80000,1000,1,EXTREME,graphics/icons/cargo/terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,人们一般认为星区中已经没有仍能正常工作的钻机控制单元了，但是这台钻机能无需控制单元独立作业{——}尽管有时会有些无法预见的小毛病。自动模式的保险装置使这台钻机无法在宜居星球运行。,140

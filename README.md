@@ -39,4 +39,7 @@
 | Contacts                | 联络人             |
 | Galatia Academy         | Galatia 学院       |
 | Galatia Academy Station | Galatia 学院空间站 |
+| mote                    | 光尘               |
+| Hypershunt Tap          | 超分流阀门         |
+| Coronal Hypershunt      | 星冕分流器         |
 

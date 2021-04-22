@@ -36,7 +36,7 @@ starfortress,星际要塞 - 主宰纪元,200,180,,5,battlestation,,"station, sta
 radius:70,
 variant:station3_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"增建了大量的外挂装甲, 并配备城齿无人机, 且布置了感应雷区.
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"增建了大量的外挂装甲, 并配备{城齿-级}无人机, 且布置了感应雷区.
 
 它的存在将阻止任何轰炸行动的发生.",2030,
 orbitalstation_mid,轨道站 - 核心纪元,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
@@ -57,7 +57,7 @@ starfortress_mid,星际要塞 - 核心纪元,200,180,,5,battlestation_mid,,"stat
 radius:70,
 variant:station3_midline_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"增建了大量的外挂装甲, 并配备了三角堡无人机与感应雷区.
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"增建了大量的外挂装甲, 并配备了{三角堡-级}无人机与感应雷区.
 
 它的存在将阻止任何轰炸行动的发生.",2060,
 orbitalstation_high,轨道站 - 扩展纪元,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
@@ -78,7 +78,7 @@ starfortress_high,星际要塞 - 扩展纪元,200,180,,5,battlestation_high,,"st
 radius:70,
 variant:station3_hightech_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"配备强大的石像鬼无人机并给部分平台内置了传送感应空雷战术系统.
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"配备强大的{石像鬼-级}无人机并给部分平台内置了传送感应空雷战术系统.
 
 它的存在将阻止任何轰炸行动的发生.",2090,
 grounddefenses,地面防御设施,30,60,,2,,heavybatteries,"grounddefenses, unraidable, tactical_bombardment, structure",,graphics/icons/industry/ground_defenses.png,com.fs.starfarer.api.impl.campaign.econ.impl.GroundDefenses,"由小型隐蔽式武器所组成的一种分散的, 半自动火炮阵地. 能让敌方 一些小规模的突袭与轰炸行动的成本变得更加昂贵. 只有压倒性的 轨道轰炸或大规模的突袭舰队才能压制这些地面设施.",2200,
@@ -89,6 +89,6 @@ highcommand,最高指挥部,30,120,,14,militarybase,,"command, unraidable, tacti
 lionsguard,狮心守卫总部,90,60,,6,,,"military, unraidable, tactical_bombardment, structure",,graphics/icons/industry/lions_guard.png,com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ,"Phillip 的私人卫队总部. ""辛达瑞亚之狮""号称拥有大批一流军官, 且配备了时下所能够买到的最好装备. 而卫队所表现出的狂热忠诚是 通过一种高额津贴与奖励制度来维持的, 这种制度不仅能提高卫队作战 水准, 还能将执行常规军事行动的部队隔离开来.",2650,
 planetaryshield,行星护盾,150,90,,3,,,"grounddefenses, structure",,graphics/icons/industry/planetary_shield.png,com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield,"由一种带电等离子体包络而成, 其内含的奇异虚拟粒子不仅能有效 抵御轨道轰炸还能阻止小型舰队的突袭行动. 由于行星护盾是被 一种庞大的中央能源塔所控制并提供持续充能, 因此对于任何形式 的地面攻击都是一种巨大障碍.",2700,EXTREME
 waystation,星际驿站,20,60,,2,,,"waystation, structure",,graphics/icons/industry/waystation.png,com.fs.starfarer.api.impl.campaign.econ.impl.Waystation,为星际舰队提供补给/维修服务的中途站. 可小幅增加殖民地的流通性.,155,MEDIUM
-cryosanctum,寒冰圣地,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,"一座巨大如墓穴般的建筑, 用来储存为度过这次危机而冒险选择冷冻 睡眠的人们, 有可能的话, 他们将在一个更文明的时代醒来. 与维护设施, 大规模自动安全系统以及反舰炮相比, 冷冻舱的体积简直微不足道, 而这一切都被安置在地下一个四通八达如迷宫般的堡垒内.",3000,EXTREME
+cryosanctum,寒冰圣地,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,"一座巨大如墓穴般的建筑, 用来储存为度过这次危机而冒险选择冷冻睡眠的人们, 有可能的话, 他们将在一个更文明的时代醒来. 与维护设施, 大规模自动安全系统以及反舰炮相比, 冷冻舱的体积简直微不足道, 而这一切都被安置在地下一个四通八达如迷宫般的堡垒内.",3000,EXTREME
 ,,,,,,,,,,,,,,
 cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为人之领时代的低温睡眠者提供复苏与同化的重要设施. 大幅度提高人口增长率.,3200,MEDIUM
