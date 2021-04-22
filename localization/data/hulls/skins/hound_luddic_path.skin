@@ -1,12 +1,12 @@
 {
 	"baseHullId":"hound",
 	"skinHullId":"hound_luddic_path",
-	"hullName":"Hound (LP)",
+	"hullName":"猎犬 (LP)",
 	"hullDesignation":"Frigate",
 	"descriptionId":"hound",
-	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary trimmings and transforming it into a haphazard vehicle of holy war.",
+	"descriptionPrefix":"卢德左径的狂热者分子们强行占有了这艘船，去掉了所有的非必要设备，把它改造成了一个随时与意外相伴的圣战船。",
 	"tags":["LP_bp"],
-	"tech":"Luddic Path",
+	"tech":"卢德左径",
 	"baseValueMult":0.9,
 	"spriteName":"graphics/ships/hound/hound_luddic_path.png",
 	"removeWeaponSlots":[], 		# ids

@@ -1,0 +1,30 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 10,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "afflictor_d_pirates",
+    "hullMods": [
+        "fluxdistributor",
+        "fluxcoil",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "quality": 0.75,
+    "variantId": "afflictor_d_pirates_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "hammer",
+                "WS 003": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "ioncannon"}
+        }
+    ]
+}
