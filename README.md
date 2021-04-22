@@ -10,7 +10,7 @@
 | FindDifference        | 查找俩个版本直接的差异。                                  |
 | variant_name_map.json | 装配名映射文件，英文名对应汉化名，可后继继续更新。        |
 ## 文件夹内容
-"版本号+ data"是游戏版本 data 文件夹
+"版本号 + data"是游戏版本 data 文件夹
 
 "localization" 指的是需要翻译的内容
 
@@ -39,4 +39,7 @@
 | Contacts                | 联络人             |
 | Galatia Academy         | Galatia 学院       |
 | Galatia Academy Station | Galatia 学院空间站 |
+| mote                    | 光尘               |
+| Hypershunt Tap          | 超分流阀门         |
+| Coronal Hypershunt      | 星冕分流器         |
 
