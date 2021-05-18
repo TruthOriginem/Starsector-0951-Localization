@@ -1,0 +1,43 @@
+{
+    "displayName": "Rocket",
+    "fluxCapacitors": 10,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "venture",
+    "hullMods": ["heavyarmor"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "venture_Outdated",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "annihilatorpod",
+                "WS 006": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "hammer",
+                "WS 007": "hammer"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ],
+    "wings": []
+}

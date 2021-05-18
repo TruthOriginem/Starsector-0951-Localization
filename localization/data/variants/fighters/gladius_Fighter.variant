@@ -1,6 +1,6 @@
 {
 	"quality":0.75,
-	"displayName":"Fighter",
+	"displayName":"战斗机",
 	"hullId":"gladius",
 	"variantId":"gladius_Fighter",
 	"fluxVents":0,

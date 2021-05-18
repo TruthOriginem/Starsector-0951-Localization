@@ -837,9 +837,9 @@
 	},
 	
 	"coronal_tap":{
-		"defaultName":"星冕吸收器", # used if name=null in addCustomEntity()
-		"nameInText":"星冕吸收器",
-		"shortName":"星冕吸收器",
+		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
+		"nameInText":"星冕分流器",
+		"shortName":"星冕分流器",
 		"aOrAn":"一座",
 		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
@@ -858,7 +858,7 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
-		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "coronal_tap", "protects_from_corona_in_battle"],
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "coronal_tap", "protects_from_corona_in_battle", "not_random_mission_target"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,

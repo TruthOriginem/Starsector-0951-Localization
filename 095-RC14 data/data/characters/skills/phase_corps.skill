@@ -1,0 +1,19 @@
+{
+	"id":"phase_corps",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"all combat phase ships",
+	#"scopeStr":"all combat phase ships in fleet",
+	#"scopeStr":"all phase ships with officers, including flagship",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseCorps$Level3"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseCorps$Level4"},
+			]
+		},
+	],
+}

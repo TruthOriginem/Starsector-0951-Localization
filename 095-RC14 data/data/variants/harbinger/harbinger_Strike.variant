@@ -1,0 +1,35 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 20,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "harbinger",
+    "hullMods": [
+        "unstable_injector",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "harbinger_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyblaster",
+                "WS 002": "ionpulser",
+                "WS 003": "ionpulser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "pdburst"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "pdburst"}
+        }
+    ]
+}

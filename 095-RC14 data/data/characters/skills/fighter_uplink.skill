@@ -1,0 +1,17 @@
+{
+	"id":"fighter_uplink",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"ALL_FIGHTERS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.FighterUplink$Level1"},
+				{"type":"ALL_FIGHTERS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.FighterUplink$Level2"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"recovery_shuttles":1}},
+			]
+		},
+	],
+}
