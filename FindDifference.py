@@ -29,8 +29,8 @@ def findDiff():
     print("用于查找Source文件夹和Target文件夹的不同，以此来判断更新内容")
     print("最终结果会保存至logs文件夹")
     print()
-    source_folder = '095-RC12 data'
-    target_folder = '095-RC14 data'
+    source_folder = '095-RC14 data'
+    target_folder = '095-RC15 data'
     general_change_filepath = 'logs/file_changes.log'
     detail_folder = 'logs/details'
 
