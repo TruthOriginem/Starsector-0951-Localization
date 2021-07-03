@@ -2,7 +2,7 @@
 import os
 import shutil
 
-source_folder = '095-RC14 data'
+source_folder = '095-RC15 data'
 target_folder = 'original'
 
 for root, sub_folders, filenames in os.walk(target_folder):
