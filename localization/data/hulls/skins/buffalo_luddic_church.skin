@@ -3,7 +3,7 @@
 	"skinHullId":"buffalo_luddic_church",
 	"hullName":"水牛 (LC)",
 	"descriptionId":"buffalo",  # optional
-	"descriptionPrefix":"这艘船涂装有卢德教会的标记。除了外观之外，船只系统并没有接受任何修改。",
+	"descriptionPrefix":"这艘船涂装有卢德教会的标记。除了外观之外，船只系统并没有接受任何修改",
 	"tags":["LC_bp"],
 	"tech":"卢德教会",
 	"spriteName":"graphics/ships/buffalo/buffalo_luddic_church.png",

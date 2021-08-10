@@ -3,7 +3,7 @@
 	"skinHullId":"buffalo_tritachyon",
 	"hullName":"水牛 (TT)",
 	"descriptionId":"buffalo",  # optional
-	"descriptionPrefix":"这艘船涂装有速子科技公司的标记。除了外观之外，船只系统并没有接受任何修改。",
+	"descriptionPrefix":"这艘船涂装有速子科技公司的标记。除了外观之外，船只系统并没有接受任何修改",
 	"tags":["rare_bp"],
 	"tech":"速子科技",
 	"fleetPoints":5,
