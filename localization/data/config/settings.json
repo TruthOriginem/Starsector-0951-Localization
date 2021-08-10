@@ -20,13 +20,16 @@
 	"maxAASamples":16, # selectable value is limited by this
 	"aaSamplesOverride":-1, # >= 0 overrides value selected in launcher; required to use AA samples with legacyLauncher
 	"screenScaleOverride":0, # > 0 overrides UI scaling value from in-game settings 
+	"enableLauncherWarnings":true,
 	
 	"baseMemoryRequired":1024,
 	"maxMemoryFractionOfTotal":0.5,
 	"maxMemoryMB":6144,
-	"allowJVMRestartFromLauncher":true,
+	
+	# experimental feature; can cause problems such as invisible ships in combat and mouse-panning issues
+	# but only on some PCs
+	"allowJVMRestartFromLauncher":false,
 	"allowJVMRestartFromLauncherInDevMode":false,
-	"enableLauncherWarnings":true,
 	
 	"doRAMandVRAMChecksWhenRunningWithMods":true, # will periodically check if ram/vram is low and warn the player
 	"memoryCheckVerbose":false,
@@ -185,6 +188,7 @@
 	
 	"minNonCoreGatesInSector":15,
 	"maxNonCoreGatesInSector":20,
+	"minGatesToAddOnSecondPass":5, # at least this many gates added at farthest-from-any-other-gate systems
 	"gateTransitFuelCostMult":0.5,
 	
 	"showCampaignRadar":true,
@@ -195,6 +199,10 @@
 	# the number is a multiplier for the viewport size
 	"minCombatZoom":0.5, # zoomed in all the way
 	"maxCombatZoom":2.0, # zoomed out all the way
+	
+	# only used when devMode=false
+	"minCampaignZoom":0.5, # zoomed in all the way
+	"maxCampaignZoom":3.0, # zoomed out all the way
 	
 	#
 	# start difficulty config
@@ -325,6 +333,7 @@
 	"priorityContactMaxNumMissionsBonus":3,
 	"priorityContactMaxMissionQualityBonus":0.2,
 	"defaultPotentialContactProbability":0.25,
+	"potentialContactProbabilityAddPerFail":0.1,
 	
 	
 	# ship weapons and fighters; need to be cheaper to sell to avoid some ship production exploits
@@ -357,6 +366,8 @@
 	"minSystemBounties":0,
 	"maxSystemBounties":3,
 	
+	"baseCustomBounty":70000,
+	"personCustomBountyPerLevel":25000,
 	"basePersonBounty":40000,
 	"personBountyPerLevel":15000,
 	"minPersonBounties":3,
@@ -383,6 +394,9 @@
 	# BEGIN CAMPAIGN TUNING DATA - FOR VARIOUS CAMPAIGN GAMEPLAY TIMINGS ETC
 	# some durations are in days, some in months, sorry! the "months" ones are less exact
 	 
+	"pirateBaseDestroyedTimeoutMonths":[6, 18],
+	"patherBaseDestroyedTimeoutMonths":[6, 18],
+	
 	"fastStartBaseExtraDays":180,
 	"daysUntilFullTimeFactor":730,
 	"noPirateRaidDays":365, # no random pirate raids for this long after game start
@@ -519,7 +533,7 @@
 	
 	# start faction doctrine related config
 	
-	"maxDoctrineNumShipsMult":2, # at 5 points of "ship quantity", compared to 1 point
+	"maxDoctrineNumShipsMult":1.5, # at 5 points of "ship quantity", compared to 1 point
 	"doctrineFleetQualityPerPoint":0.125, # multiplied by (shipQuantity - 1)
 	
 	# end faction doctrine related config
@@ -598,8 +612,12 @@
 	"maxAIFleetCommanderLevel":7,
 	"commanderLevelForTwoSkills":6,
 	"commanderLevelForOneSkill":4,
-	"officerAIMaxMercsMult":2, # maximum "over-the-limit" merc-type officers that can be added to an AI fleet, times doctrine officer setting
-	"officerAIMercsStartingFP":100, # start adding more "merc" officers at this threshold
+	"baseFPPerAICore":20, # remnant fleets
+	#"baseFPPerOfficer":20, # halved when officer doctrine setting is maxed
+	"baseCombatShipsPerOfficer":3, # halved when officer doctrine setting is maxed; not used for AI core using fleets
+	"baseCombatShipsForMaxOfficerLevel":16, # halved when officer doctrine setting is maxed; not used for AI core using fleets
+	"officerAIMaxMercsMult":1, # maximum "over-the-limit" merc-type officers that can be added to an AI fleet, times doctrine officer setting
+	#"officerAIMercsStartingFP":100, # start adding more "merc" officers at this threshold; no longer used
 	"baseNumOfficers":8; # in a fleet w/o officer management skills
 	
 	"crewSalary":10, # credits per crew per month
@@ -720,10 +738,9 @@
 		"historianBP":0,
 		
 		"avoidCargoScan":1,
-		"cleanDisengage":0.5,
-		"emergencyRepairs":0.5,
+		"cleanDisengage":1,
+		"emergencyRepairs":1,
 		"forceBattle":1,
-		#"emergencyFlagshipRepairs":1,
 		
 		"noRepPenaltyRaid":0.5,
 		
@@ -886,16 +903,11 @@
 		"Common":[190,200,200,255],
 		"普通":[190,200,200,255],
 		
-		#"Common":[170,222,255,255],
-		#"Low Tech":[245,150,30,255],
-		#"Midline":[200,200,200,255],
-		#"High Tech":[135,206,255],
-		
 		"Low Tech":[209,110,91,255],
 		"主宰纪元":[209,110,91,255],
 		
 		"Midline":[221,201,104,255],
-		"扩展纪元":[221,201,104,255],
+		"核心纪元":[221,201,104,255],
 		
 		"High Tech":[160,213,225,255],
 		"扩展纪元":[160,213,225,255],
