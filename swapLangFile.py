@@ -1,4 +1,5 @@
 import os
+import shutil
 
 
 def main():
@@ -14,14 +15,17 @@ def main():
         source = 'original'
 
     dir_path = os.path.join(dir_path, source)
-    for root, sub_folders, filenames in os.walk(dir_path):
-        for file_name in filenames:
-            original_file_path = os.path.join(root, file_name)
-            new_file_path = os.path.join(root.replace(os.path.join(current_folder, source), 'starsector-core'), file_name)
-            print(original_file_path)
-            print(new_file_path)
+    target_path = dir_path.replace(os.path.join(
+        current_folder, source), 'starsector-core')
+    shutil.copytree(dir_path, target_path, dirs_exist_ok=True)
+    # for root, sub_folders, filenames in os.walk(dir_path):
+    #     for file_name in filenames:
+    #         original_file_path = os.path.join(root, file_name)
+    #         new_file_path = os.path.join(root.replace(os.path.join(current_folder, source), 'starsector-core'), file_name)
+    #         print(original_file_path)
+    #         print(new_file_path)
 
-            os.rename(original_file_path, new_file_path)
+    #         os.rename(original_file_path, new_file_path)
 
     print("Lang was changed to " + source)
     input("Press any key to exit.")

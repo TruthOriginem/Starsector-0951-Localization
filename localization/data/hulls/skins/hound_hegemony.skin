@@ -3,7 +3,7 @@
 	"skinHullId":"hound_hegemony",
 	"hullName":"猎犬 (A)",
 	"descriptionId":"hound",
-	"descriptionPrefix":"这艘舰船位列于霸主的补助舰列表上，因此它的系统已经升级到军用标准，并执行严格的定期维护，以便它在紧急情况下能被投入军事使用。",
+	"descriptionPrefix":"这艘舰船位列于霸主的补助舰列表上，因此它的系统已经升级到军用标准，并执行严格的定期维护，以便它在紧急情况下能被投入军事使用",
 	"tags":["heg_aux_bp"],
 	"tech":"霸主",
 	"fleetPoints":4,

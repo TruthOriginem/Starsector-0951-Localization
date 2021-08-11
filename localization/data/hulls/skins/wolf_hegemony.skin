@@ -3,7 +3,7 @@
 	"skinHullId":"wolf_hegemony",
 	"hullName":"野狼 (H)",
 	"descriptionId":"wolf",
-	"descriptionPrefix":"这艘船涂装有霸主的标记。除了外观之外，船只系统并没有接受任何修改。",
+	"descriptionPrefix":"这艘船涂装有霸主的标记。除了外观之外，船只系统并没有接受任何修改",
 	"tags":["heg_aux_bp"],
 	"tech":"霸主",
 	"spriteName":"graphics/ships/wolf/wolf_hegemony.png",
