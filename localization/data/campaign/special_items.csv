@@ -1,5 +1,5 @@
 name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
-基础船体插件,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,一组说明，实例与指导方针，使用户能够将此修改适配/应用于各种船体当中。,50
+基础船体插件,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,一组说明，实例与指导方针，使用户能够将此修改适配/应用于各种船体中。,50
 ,,,,,,,,,,,,,,,
 # industry-slotted items,,,,,,,,,,,,,,,
 受损的纳米锻炉,corrupted_nanoforge,"nanoforge, pather4",人之领管制科技,,50000,1000,1,HIGH,graphics/icons/cargo/nanoforge_corrupted.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"heavyindustry, orbitalworks","一种功能全面且效率强大的""黑盒子""，只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。
