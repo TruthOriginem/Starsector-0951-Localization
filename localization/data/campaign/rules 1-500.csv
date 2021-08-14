@@ -1,0 +1,1782 @@
+id,trigger,conditions,script,text,options,notes,
+# default entity interaction,,,,,,,
+defaultOpenDialog,OpenInteractionDialog,,"ShowDefaultVisual
+PrintDescription 3
+SetShortcut defaultLeave ""ESCAPE""",,defaultLeave:�뿪,,
+defaultLeave,DialogOptionSelected,$option == defaultLeave,DismissDialog,,,,
+# warning beacons,,,,,,,
+SetShortcut beaconLeave ""ESCAPE""",�����ڴ˴������������ű�ͨ������ٷ�Ƶ��������һ��Ť����������������Ҫ����ʲô��Ϣ��Ӧ�ö��Ѿ����ˡ�,beaconLeave:�뿪,,
+beaconOpenDialogRemnantsDestroyed,OpenInteractionDialog,"$tag:warning_beacon
+$remnantDestroyed","ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","������������ű�ѭ��������һ��ѶϢ��
+
+""���棺����ϵ���ܲ����������Թ���ϵͳ�����ݰ������� 224 �� 34 ���涨����ֹ�κ�δ����Ȩ�ĵ�����������ʡ�""",beaconLeave:�뿪,,
+beaconOpenDialogRemnantsSuppressed,OpenInteractionDialog,"$tag:warning_beacon
+$remnantSuppressed","ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","������������ű�ѭ��������һ��ѶϢ��
+
+""���棺����ϵ���ܲ����������Թ���ϵͳ�����ݰ������� 224 �� 34 ���涨����ֹ�κ�δ����Ȩ�ĵ�����������ʡ�""",beaconLeave:�뿪,,
+beaconOpenDialogRemnantsResurgent,OpenInteractionDialog,"$tag:warning_beacon
+$remnantResurgent","ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","������������ű�ѭ��������һ��ѶϢ��
+
+""���棺����ϵ���ܲ����������Թ���ϵͳ�����ݰ������� 224 �� 34 ���涨����ֹ�κ�δ����Ȩ�ĵ�����������ʡ�""",beaconLeave:�뿪,,
+beaconOpenDialogDaedaleon,OpenInteractionDialog,"$tag:warning_beacon
+$daedaleon","ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","������������ű�ѭ��������һ��ѶϢ��
+
+""�⴦�����Ѿ������Ƽ��������������Ŀ�����òǡǡ֤���˱�������֮·�Ľ�����κ���ͼ̽������֮Դ����Ϊ���������ֹ���κ�������һ������ˣ������⵽¬����ʿ�ŵ���ʥ�Ʋã���˼���У�""",beaconLeave:�뿪,,
+beaconLeave,DialogOptionSelected,$option == beaconLeave,DismissDialog,,,,
+,,,,,,,
+# gate interactions,,,,,,"# we can treat $global.gatesActive as ""has working Janus device"" -dgb",
+gateOpenDialog,OpenInteractionDialog,$tag:gate,"ShowDefaultVisual
+FireAll PopulateGateOptions","������޻����Ļ�״�ṹ�ɼ᲻�ɴݵĲ��Ϲ��ɣ����ϸ��������ż���
+
+����û��������",,,
+gateOpenDialogActive,OpenInteractionDialog,"$tag:gate
+$global.gatesActive
+$gateScanned
+$global.playerCanUseGates","ShowDefaultVisual
+FireAll PopulateGateOptions","�޴���᲻�ɴݵ�Բ������������ǰ�����������ϸ��������ż���
+
+���Ѿ�ɨ�����������ţ�֪�����������ڿռ�ϲ��йؼ��ĺ������н��ɡ�ʹ��������Ŭ˹װ�ý���ͨ����һ���ŵ���·��Ҫ������ȼ�ϡ�Ŀ������ԽԶ����Ҫ��ȼ��Խ�ࡣ
+
+������Ŭ˹װ�õ�������ʽ��ͨ���캽���ĳ��������������ʹ����Ķ�����λ���������ȶ���������֮���ֱ�����ӡ�",,,
+gateOpenDialogActiveCanNotUse,OpenInteractionDialog,"$tag:gate
+$global.gatesActive
+$gateScanned
+!$global.playerCanUseGates","ShowDefaultVisual
+FireAll PopulateGateOptions","�޴���᲻�ɴݵ�Բ������������ǰ�����������ϸ��������ż���
+
+���Ѿ�ɨ�����������ţ�֪�����������ڿռ�ϲ��йؼ��ĺ������н��ɡ� ʹ��������Ŭ˹װ�ý���ͨ����һ���ŵ���·��Ҫ������ȼ�ϡ�Ŀ������ԽԶ����Ҫ��ȼ��Խ�ࡣ
+
+����뽫������Ŭ˹װ�����ϵ���Ľ����в���ʹ�����š�",,,
+gateOpenDialogCanScan1,OpenInteractionDialog,"$tag:gate
+$global.canScanGates
+!$global.gatesActive
+!$gateScanned","ShowDefaultVisual
+FireAll PopulateGateOptions","������޻����Ļ�״�ṹ�ɼ᲻�ɴݵĲ��Ϲ��ɣ����ϸ��������ż���
+
+�����������������ͷʾ�⣬���ָ���������������'����ɨ��'�İ����·������ڴ�һ����˸�š�������Ȼ��ĹѨ����䣬һ������ؾ����š�",,,
+gateOpenDialogCanScan1a,OpenInteractionDialog,"$tag:gate
+$global.canScanGates
+!$global.gatesActive
+$gateScanned","ShowDefaultVisual
+FireAll PopulateGateOptions","������޻����Ļ�״�ṹ�ɼ᲻�ɴݵĲ��Ϲ��ɣ����ϸ��������ż���
+
+���Ѿ�ɨ�����������ţ�֪�����������ڿռ�ϲ��йؼ��ĺ������н��ɡ�",,,
+gateOpenDialogCanScan2,OpenInteractionDialog,"$tag:gate
+$global.canScanGates
+$global.gatesActive
+!$gateScanned","ShowDefaultVisual
+FireAll PopulateGateOptions","������޻����Ļ�״�ṹ�ɼ᲻�ɴݵĲ��Ϲ��ɣ����ϸ��������ż���
+
+�����������������ͷʾ�⣻���ռ䲨��ɨ�����Ѿ�������'����ɨ��'�İ��������ָ������������ڴ�����˸�š�
+
+����Ҫ�ȶԸ����Ž���ɨ����ܽ�����Ϊ��������ĳ���ڣ�ͨ��������Ŭ˹װ��ʹ������",,,
+gateFlyThrough,DialogOptionSelected,$option == gateFlyThrough,"$flewThrough = true 0
+FireAll PopulateGateOptions","���������$shipOrFleet��Խ���������š���Ľ��ų�Ա��Ա�ڴ�Խ�������쳣�ذ�����
+
+ʲô���鶼û�з�����",,,
+gateScanSelFirstTime,DialogOptionSelected,"$option == gateScan
+!$global.gatesActive
+$global.numGatesScanned == 0
+$global.gaATG_inProgress","$gateScanned = true
+$global.numGatesScanned++
+Call $global.gaATG_ref scannedGateForCoureuse
+GateCMD notifyScanned
+ShowDefaultVisual
+FireBest GAATGGateScanSummary","���ָ�ӽ����ϵ�����ʾ��������Χ�ĳ��ռ�����ͼ����ƽ�ȶ��ž����ͳ��ռ����������µĺ�����ͬ��
+
+ɨ�迪ʼ���㿴���ڴ������콢�����ŵ�ͼ��֮�������һ��Ť������˸�����ߡ���ţ����Ĳ������������к����������������봦��һ����������ӿ�����������ǲ���һ���㣬�Ǹ���״���γ���һ��Ȧ��һ����һ�������γ�һ����СԶ���©����ֱ����������һЩ�ò��ɵ�˫�۽��յ��޷���������̬��ͬʱ������Զ��������΢�������ɡ�
+
+""������"" ��Ĵ������������������㣬""ɨ������ˡ�"" �����ʶ���������ڶ���˵��仰�ˡ�����˸����ƣ���װ��֮ǰֻ���������������ˡ�",,,
+gateScanSelDuringMission,DialogOptionSelected,"$option == gateScan
+!$global.gatesActive
+$global.gaATG_inProgress
+$global.numGatesScanned > 0
+$global.numGatesScanned < 6","$gateScanned = true
+$global.numGatesScanned++
+Call $global.gaATG_ref scannedGateForCoureuse
+GateCMD notifyScanned
+ShowDefaultVisual
+FireBest GAATGGateScanSummary","���ָ�ӽ����ϵ�����ʾ��������Χ�ĳ��ռ�����ͼ����ƽ�ȶ��ž���
+
+ɨ�迪ʼ���㿴�����콢������֮�����һ��Ť������˸�����ߡ������������к������ķ�ţ������������봦��һ��������ӿ�����������ǲ���һ���㣬�Ǹ���״���γ���һ��Ȧ��һ����һ�������γ�һ����СԶ���©����ֱ����������һЩ�޷��ü��������Ķ�����
+���������Ǹ�΢�������ɡ�
+
+""������""��Ĵ����������ٻ㱨����""ɨ������ˡ�""",,,
+gateScanSel,DialogOptionSelected,$option == gateScan,"$gateScanned = true
+$global.numGatesScanned++
+GateCMD notifyScanned
+ShowDefaultVisual
+FireAll PopulateGateOptions","���ָ�ӽ����ϵ�����ʾ��������Χ�ĳ��ռ�����ͼ����ƽ�ȶ��ž���
+
+ɨ������ڳ�ά����ʾ��������˸�š����к�������������ӿ������۳��޷������ļ��νṹ�� ��������һ˿΢�������ɡ�
+
+""������""��Ĵ����������ٻ㱨����""ɨ������ˡ�""",,,
+gateUseOptSel,DialogOptionSelected,"$option == gateUse
+$global.gatesActive",GateCMD selectDestination,,,,
+gateFlyThroughOpt,PopulateGateOptions,"!$flewThrough
+!$global.gatesActive
+!$gateExploded",,,5:gateFlyThrough:��Խ����,,
+gateUseOpt,PopulateGateOptions,"$global.gatesActive
+$global.playerCanUseGates
+$gateScanned",,,10:gateUse:����������Ծ,,
+gateScanOpt,PopulateGateOptions,"!$gateScanned
+$global.canScanGates",,,0:gateScan:ɨ������,,
+gateLeaveOpt,PopulateGateOptions,,,,100:defaultLeave:�뿪,,
+,,,,,,,
+# Gate scan count during gaATG,,,,,,,
+,,,,,,,
+gaATGgateScanSummaryLuddic,GAATGGateScanSummary,$GAATGluddicPostScan score:1000,"Call $global.gaATG_ref luddicGateFleetMoveBack
+unset $GAATGluddicPostScan",,gaATG_gateScanSummaryLuddic2:Continue,"# this step is to add a ""Continue"" to break up the huge block of text.",
+gaATGgateScanSummaryLuddic2,DialogOptionSelected,$option == gaATG_gateScanSummaryLuddic2,FireBest GAATGGateScanSummary,"You personally see off the party of Luddic faithful who maintained vigil from your flagship. Their fleet is returning; their collective devotion uninterrupted.
+
+""Blessings of Ludd upon you, captain,"" says their leader. ""I shall speak well of you to the Prophet Returned.""
+
+You know to nod in acceptance without raising any theological questions, and give a polite wave as their shuttle leaves the bay.",,,
+gaATGgateScanEndCheck1,GAATGGateScanSummary,"Call $global.gaATG_ref updateData
+$global.numGatesScanned == 6","$global.gaATG_scannedSixGates = true
+Call $global.gaATG_ref updateStage
+FireAll PopulateGateOptions",,,,
+gaATGgateScanEndCheck2,GAATGGateScanSummary,"Call $global.gaATG_ref updateData
+$global.numGatesScanned < 6",FireAll PopulateGateOptions,,,,
+,,,,,,,
+,,,,,,,
+# Gate dev testing options,,,,,,,# ����ģʽѡ������з��� -Deathfly
+devGateCanScanOn,PopulateGateOptions,"$global.isDevMode
+!$global.canScanGates",SetOptionColor devGateScanOn gray,,"200:devGateScanOn:>> (dev) Turn ON ""allow player to scan gates""",,
+devGateCanScanOff,PopulateGateOptions,"$global.isDevMode
+$global.canScanGates",SetOptionColor devGateScanOff gray,,"200:devGateScanOff:>> (dev) Turn OFF ""allow player to scan gates""",,
+devGatesActiveOn,PopulateGateOptions,"$global.isDevMode
+!$global.gatesActive",SetOptionColor devGateActiveOn gray,,"201:devGateActiveOn:>> (dev) Turn ON ""gates active""",,
+devGatesActiveOff,PopulateGateOptions,"$global.isDevMode
+$global.gatesActive",SetOptionColor devGateActiveOff gray,,"201:devGateActiveOff:>> (dev) Turn OFF ""gates active""",,
+devGatesPlayerCanUseOn,PopulateGateOptions,"$global.isDevMode
+!$global.playerCanUseGates",SetOptionColor devGateCanUseOn gray,,"202:devGateCanUseOn:>> (dev) Turn ON ""player can use gates""",,
+devGatesPlayerCanUseOff,PopulateGateOptions,"$global.isDevMode
+$global.playerCanUseGates",SetOptionColor devGateCanUseOff gray,,"202:devGateCanUseOff:>> (dev) Turn OFF ""player can use gates""",,
+devGatesExplode,PopulateGateOptions,"$global.isDevMode
+!$gateExploded",SetOptionColor devGateExplode gray,,210:devGateExplode:>> (dev) Explode the gate,,
+devGateCanScanOnSel,DialogOptionSelected,$option == devGateScanOn,"$global.canScanGates = true
+AddText ""canScanGates = $global.canScanGates""
+FireAll PopulateGateOptions",,,,
+devGateCanScanOffSel,DialogOptionSelected,$option == devGateScanOff,"$global.canScanGates = false
+AddText ""canScanGates = $global.canScanGates""
+FireAll PopulateGateOptions",,,,
+devGatesActiveOnSel,DialogOptionSelected,$option == devGateActiveOn,"$global.gatesActive = true
+AddText ""gatesActive = $global.gatesActive""
+FireAll PopulateGateOptions",,,,
+devGatesActiveOffSel,DialogOptionSelected,$option == devGateActiveOff,"$global.gatesActive = false
+AddText ""gatesActive = $global.gatesActive""
+FireAll PopulateGateOptions",,,,
+devGatesPlayerCanUseOnSel,DialogOptionSelected,$option == devGateCanUseOn,"$global.playerCanUseGates = true
+AddText ""playerCanUseGates = $global.playerCanUseGates""
+FireAll PopulateGateOptions",,,,
+devGatesPlayerCanUseOffSel,DialogOptionSelected,$option == devGateCanUseOff,"$global.playerCanUseGates = false
+AddText ""playerCanUseGates = $global.playerCanUseGates""
+FireAll PopulateGateOptions",,,,
+devGatesExplodeSel,DialogOptionSelected,$option == devGateExplode,"GateCMD explode
+$gateExploded = true 0
+FireAll PopulateGateOptions",A surge of energy explodes from the Gate.,,,
+,,,,,,,
+,,,,,,,
+# stellar mirror and shade interactions,,,,,,,
+stellarMirrorOpenDialog,OpenInteractionDialog,$tag:stellar_mirror,"ShowDefaultVisual
+PrintDescription 1
+SetShortcut stellarMirrorLeave ""ESCAPE""",,stellarMirrorLeave:�뿪,,
+stellarMirrorLeave,DialogOptionSelected,$option == stellarMirrorLeave,DismissDialog,,,,
+stellarShadeDialog,OpenInteractionDialog,$tag:stellar_shade,"ShowDefaultVisual
+PrintDescription 1
+SetShortcut stellarShadeLeave ""ESCAPE""",,stellarShadeLeave:�뿪,,
+stellarShadeLeave,DialogOptionSelected,$option == stellarShadeLeave,DismissDialog,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+#dialogTopLevelMenuOptions,PopulateOptions,$menuState == fleetConvMain,,,"#demand:��Ҫ...
+#offer:�ṩ...
+#ask about:ѯ��...
+cutCommLink:�ж�ͨѶ",,
+,,,,,,,
+,,,,,,,
+# survey interactions,,,,,,,
+surveyStar,OpenInteractionDialog,$tag:star score:1000,,��� $shipOrFleet ������ $entityName��,10:surveyLeave:�뿪,,
+surveyOpen,OpenInteractionDialog,$market.isPlanetConditionMarketOnly,"ShowDefaultVisual
+PrintDescription 3
+FireBest PrintHasSurveyDataTextIfSo
+FireBest OtherPlanetInteractionText
+FireAll PopulateOptions
+FireBest PrintNearbySurveyHostilesTextIfSo",��� $shipOrFleet ������ $entityName��,,,
+surveyOpenDeciv,OpenInteractionDialog,"$market.isPlanetConditionMarketOnly
+$market.wasCivilized
+$market.mc:decivilized score:100","ShowDefaultVisual
+FireBest PrintHasSurveyDataTextIfSo
+FireBest OtherPlanetInteractionText
+FireAll PopulateOptions
+FireBest PrintNearbySurveyHostilesTextIfSo","��� $shipOrFleet ������ $entityName.��
+
+$market}���������һƬ����֮�У���Ъ�Ե��������������Ŭ�����Σ�ղ����������������ǽ�֯��һ�����ҵ�ĩ�������������Ȩ�ı����������ǳ����Ҳ�����ת����Ȼ�µ�ֳ����Կɽ����ھ�ֳ��صķ���֮�ϡ�",,,
+surveyPrintFullData,PrintHasSurveyDataTextIfSo,$market.isSurveyed,,���Ѿ�ӵ���˸����ǵ������������ݡ�,,,
+surveyAddOptionPerform,PopulateOptions,"$market.isPlanetConditionMarketOnly
+!$market.isSurveyed",,,0:surveyPerform:��ʼ����,,
+surveyPrintHostilesText,PrintNearbySurveyHostilesTextIfSo,"$market.isPlanetConditionMarketOnly
+!$market.isSurveyed
+HostileFleetNearbyAndAware",SetEnabled surveyPerform false,������֧�з�������׷������ж���ʹ���޷���������ǡ�,,,
+surveySystemIsCutOffCanNotColonize,PrintSystemCutOffText,"$systemCutOffFromHyper
+$market.isPlanetConditionMarketOnly
+$market.isSurveyed
+!$market.hasUnexploredRuins",SetEnabled surveyPerform false,"�����ϵ�볬�ռ��������Ծ��Ҳ���ȶ�����Ա�ǣ����������ǣ����쳣�س�Ĭ�����š�����Ϊ���۸�����ߵķ��ս������������ú����˿˷������ܱ�����������ϵ�е����Ű�Ŀ־塣
+
+�����������ｨ��ֳ��ء�",,,
+surveyAddOptionPerformedAlready,PopulateOptions,"$market.isPlanetConditionMarketOnly
+$market.isSurveyed
+!$market.hasUnexploredRuins",FireBest PrintSystemCutOffText,,0:surveyPerform:����ֳ���,,
+surveyPrintHostilesTextEstColony,PrintNearbySurveyHostilesTextIfSo,"$market.isPlanetConditionMarketOnly
+$market.isSurveyed
+!$market.hasUnexploredRuins
+HostileFleetNearbyAndAware",SetEnabled surveyPerform false,������֧�з�������׷������ж���ʹ���޷�����ֳ���.,,,
+surveyOptionPerformSurvey,DialogOptionSelected,$option == surveyPerform,OpenCoreTab CARGO OPEN,��� $shipOrFleet ������ $entityName �����ĵ͹���ԡ�,,,
+surveyAddOptionLeave,PopulateOptions,$market.isPlanetConditionMarketOnly,"SetShortcut surveyLeave ""ESCAPE""",,10:surveyLeave:�뿪,,
+surveyOptionLeave,DialogOptionSelected,$option == surveyLeave,DismissDialog,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+# market interactions,,,,,,,
+# default market interactions,,,,,,,
+marketOpen,OpenInteractionDialog,$hasMarket,"ShowDefaultVisual
+PrintDescription 3
+FireBest MarketPostOpen",��� $shipOrFleet �ӽ��� $entityName��,,,
+marketDock,MarketPostDock,,"$menuState = main 0
+FireAll PopulateOptions",,,,
+marketOpenAfterEstablishOutpost,OutpostEstablished,$hasMarket,FireBest MarketPostOpen,��� $shipOrFleet ����˶Դ�Ա�������Լ����ͻ�е��ж�ع�������Ա�Ǻܿ��æ���� $market �����ʱס��������������ʩ��,,,
+marketReturnFromBar,ReturnFromBar,,"$menuState = main 0
+FireAll PopulateOptions",���뿪�ưɣ�������������ص������ $shipOrFleet ���С�,,,
+marketPostOpenDefault,MarketPostOpen,"$hasMarket
+$player.transponderOn
+!$faction.isNeutralFaction","$tradeMode = OPEN 0
+FireBest MarketPostDock",��� $shipOrFleet ͨ��Ӧ����������ʶ����롣�ܿ���յ���������ɡ�,,,
+marketPostOpenDefaultNeutral,MarketPostOpen,"$hasMarket
+$faction.isNeutralFaction score:100","$tradeMode = OPEN 0
+FireBest MarketPostDock",,,,
+marketPostOpenNoTrade,MarketPostOpen,"$hasMarket
+$player.transponderOn
+!$faction.c:allowsTransponderOffTrade
+!$market.mc:free_market
+RepIsAtBest $faction.id INHOSPITABLE","$tradeMode = NONE 0
+FireBest MarketPostDock","���� $TheFactionLong ���㴦�� $relAdjective ��ϵ������־ܾ������������ɡ�
+
+�����ر�Ӧ�����Ļ����ǿ���������ĵ�����֯ȡ����ϵ��",,,
+marketPostOpenNoTradeHostile,MarketPostOpen,"$hasMarket
+!$player.transponderOn
+$market.playerHostileTimeout score:100","$tradeMode = NONE 0
+SetTextHighlightColors bad
+Highlight $market.playerHostileTimeoutStr 
+FireBest MarketPostDock",������� $market ������ȡ���ж��Ѿ������˹㷺�Ĺ�ע���ر�Ӧ���� �Ѿ��޷��ɻ���ء���Ŀǰ�Ĵ��Ժ���������������µõ� $playerHostileTimeoutStr ����ָ��ɧ��ƽϢ��,,,
+marketPostOpenNoTradeHostileTOn,MarketPostOpen,"$hasMarket
+$player.transponderOn
+$market.playerHostileTimeout score:100","$tradeMode = NONE 0
+FireBest MarketPostDock",������� $market ������ȡ���ж��Ѿ������˹㷺�Ĺ�ע��Ŀǰ�� �޷����й������ס���Ŀǰ�Ĵ��Ժ���������������µõ� $playerHostileTimeoutStr ����ָ��ɧ��ƽϢ��,,,
+marketPostOpenNoTradeOffOpen,MarketPostOpen,"$hasMarket
+$player.transponderOn
+RepIsAtBest $faction.id INHOSPITABLE score:10","$tradeMode = NONE 0
+FireBest MarketPostDock","���� $TheFactionLong ���㴦�� $relAdjective ��ϵ������־ܾ�������������.��
+
+�Է��ܾ��������൱���ܣ������ֻ��ر�Ӧ�����Ϳ����ɻ��롣",,,
+marketPostOpenToOffPatrols,MarketPostOpen,"$hasMarket
+!$player.transponderOn
+!$faction.c:allowsTransponderOffTrade
+!$market.mc:free_market
+IsSeenByPatrols $faction.id true","$tradeMode = NONE 0
+AddText ""�����Ӧ�������ܽ��кϷ�ó�ף����ڲ������ֵ�����½�����н��ס�"" bad
+FireBest MarketPostDock","��� $shipOrFleet ������ $market �Ĺ���������������� $faction ����� �������� ����ʶ��Ҫ��
+
+������һ֧ $faction Ѳ�߶���׷����Ľ��ӣ� ���µ�����֯û��Ը��ð�� ���㰵�н��ס�",,,
+marketPostOpenSought,MarketPostOpen,"$hasMarket
+IsSoughtByPatrols $faction.id score:100","$tradeMode = NONE 0
+FireBest MarketPostDock","��� $shipOrFleet ������ $market �Ĺ��������
+
+������һ֧ $faction Ѳ�߶���׷����Ľ��ӣ����¸���־ܾ������ ������ɡ�",,,
+marketPostOpenToOffIsFine,MarketPostOpen,"$hasMarket
+!$player.transponderOn","$tradeMode = OPEN 0
+FireBest MarketPostDock",��� $shipOrFleet ������ $market �Ĺ������������ֶ���ѳ��Լ���Ӧ����'�ǳ���Ǹ���޷�����'������û������κ����ɡ�,,,
+marketPostOpenPlayerOwnerd,MarketPostOpen,"$hasMarket
+$market.isPlayerOwned score:1000","$tradeMode = OPEN 0
+FireBest MarketPostDock","��� $shipOrFleet ������ $market �Ĺ��������
+
+������һ֧ $faction Ѳ�߶���׷����Ľ��ӣ����¸���־ܾ������ ������ɡ�",,,
+marketPostOpenToOffSneak,MarketPostOpen,"$hasMarket
+!$player.transponderOn
+!$faction.c:allowsTransponderOffTrade
+!$market.mc:free_market","$tradeMode = SNEAK 0
+FireBest MarketPostDock","��� $shipOrFleet ������ $market �Ĺ���������������� $faction ����� �������� ����ʶ��Ҫ��
+
+Ŀǰ�ƺ�û�� $faction Ѳ�߶�ע�⵽�㣬��Ҳ���޷�ȡ�ÿ������ɵ���һ�� ���н��׵Ļ��ᡣ",,,
+marketAddOptionCommDir,PopulateOptions,"$hasMarket
+$menuState == main
+!$faction.isNeutralFaction",,,1:marketCommDir:��ͨѶ�б�,,
+marketOptTradeMulti,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode != NONE
+!$faction.isNeutralFaction
+$faction.id != player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:���л���ó�׻���ô�Ա[I]����������[F]�����װ����[R]��,10:marketOpenCoreUI:���л���ó�׻���ô�Ա���������������װ������,
+marketOptTradeMulti2,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode != NONE
+$faction.isNeutralFaction",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:ת�ƻ����뽢��,,
+marketOptTradeMulti3,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode != NONE
+$faction.id == player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:����ֳ���,,
+marketOptTradeMulti4,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode == NONE",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:�鿴ֳ�����Ϣ,,
+marketOptBar,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode != NONE
+!$faction.isNeutralFaction",,,5:marketVisitBar:���������ǰ���ۿڱߵľư�,,
+marketOptHostile,PopulateOptions,"$hasMarket
+$menuState == main
+!$faction.isNeutralFaction
+$faction.id != player",,,20:marketConsiderHostile:���ǿ��Բ�ȡ�ľ����ж�,,
+marketHostileSel,DialogOptionSelected,$option == marketConsiderHostile,MarketCMD showDefenses,,,,
+marketHostileGoBackSel,DialogOptionSelected,$option == mktGoBack,"ShowDefaultVisual
+FireAll PopulateOptions",,,,
+marketHostileEngageSel,DialogOptionSelected,$option == mktEngage,MarketCMD engage,,,,
+marketHostileRaidSel,DialogOptionSelected,$option == mktRaid,MarketCMD raidMenu,,,,
+marketHostileRaidNonMarket,DialogOptionSelected,$option == mktRaidNonMarket,MarketCMD raidNonMarket,,,,
+marketHostileRaidGoBackSel,DialogOptionSelected,$option == mktRaidGoBack,MarketCMD goBackToDefenses,,,,
+marketHostileRaidRareSel,DialogOptionSelected,$option == mktRaidRare,MarketCMD raidRare,,,Unused.,
+marketHostileRaidValuableSel,DialogOptionSelected,$option == mktRaidValuable,MarketCMD raidValuable,,,,
+marketHostileRaidDisruptSel,DialogOptionSelected,$option == mktRaidDisrupt,MarketCMD raidDisrupt,,,,
+marketHostileRaidConfirmSel,DialogOptionSelected,$option == mktRaidConfirm,MarketCMD raidConfirm,,,,
+marketHostileRaidConfirmContSel,DialogOptionSelected,$option == mktRaidConfirmContinue,MarketCMD raidConfirmContinue,,,,
+marketHostileRaidNeverMindSel,DialogOptionSelected,$option == mktRaidNeverMind,MarketCMD raidNeverMind,,,,
+marketHostileRaidResultSel,DialogOptionSelected,$option == mktRaidResult,MarketCMD raidResult,,,,
+marketHostileRaidPostRaidDefault,PostGroundRaid,,MarketCMD addContinueToRaidResultOption,,,,
+,,,,,,,
+,,,,,,,
+marketHostileBombardSel,DialogOptionSelected,$option == mktBombard,MarketCMD bombardMenu,,,,
+marketHostileBombardGoBackSel,DialogOptionSelected,$option == mktBombardGoBack,MarketCMD goBackToDefenses,,,,
+marketHostileBombardTacticalSel,DialogOptionSelected,$option == mktBombardTactical,MarketCMD bombardTactical,,,,
+marketHostileBombardSaturationSel,DialogOptionSelected,$option == mktBombardSaturation,MarketCMD bombardSaturation,,,,
+marketHostileBombardConfirmSel,DialogOptionSelected,$option == mktBombardConfirm,MarketCMD bombardConfirm,,,,
+marketHostileBombardNeverMindSel,DialogOptionSelected,$option == mktBombardNeverMind,MarketCMD bombardNeverMind,,,,
+marketHostileBombardResultSel,DialogOptionSelected,$option == mktBombardResult,MarketCMD bombardResult,,,,
+,,,,,,,
+,,,,,,,
+marketAddOptionRepair1,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode == OPEN
+RepairAvailable
+RepairNeeded
+RepairEnoughSupplies","SetTooltip marketRepair ""��ȫ������Ҫ���� $global.repairSupplyCost ���������� $player.supplies �������á�""
+SetTooltipHighlightColors marketRepair buttonShortcut buttonShortcut
+SetTooltipHighlights marketRepair $global.repairSupplyCost $player.supplies
+SetShortcut marketRepair ""A"" true",,15:marketRepair:ǰ������������Ľ���,,
+marketAddOptionRepair2,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode == OPEN
+RepairAvailable
+!RepairNeeded","SetTooltip marketRepair ""��� $shipOrFleet ����Ҫά�ޡ�""
+SetShortcut marketRepair ""A"" true
+SetEnabled marketRepair false",,15:marketRepair:ǰ������������Ľ���,,
+marketAddOptionRepair3,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode == OPEN
+RepairAvailable
+RepairNeeded
+!RepairEnoughSupplies","SetTooltip marketRepair ""��ȫά����Ҫ���� $repairSupplyCost ��������ֻ�� $supplies �������á�""
+SetTooltipHighlightColors marketRepair buttonShortcut buttonShortcut
+SetTooltipHighlights marketRepair $global.repairSupplyCost $player.supplies
+SetShortcut marketRepair ""A"" true
+SetEnabled marketRepair false",,15:marketRepair:ǰ������������Ľ���,,
+marketAddOptionLeave,PopulateOptions,"$hasMarket
+$menuState == main","SetTooltip marketLeave $marketLeaveTooltip
+SetShortcut marketLeave ""ESCAPE""",,100:marketLeave:�뿪,,
+,,,,,,,
+marketOpenCoreSel,DialogOptionSelected,$option == marketOpenCoreUI,,,,,
+marketOptionTradeCargo,DialogOptionSelected,$option == marketTradeCargo,OpenCoreTab CARGO $tradeMode,�������ֵĻ������ϵͳ�������ӣ�����ʼ������صĴ����,,,
+marketOptionTradeShips,DialogOptionSelected,$option == marketTradeShips,OpenCoreTab FLEET $tradeMode,���뵱�ش��뽨�������ӣ�����ʼ����ɹ�����Ĵ��塣,,,
+marketOptionRefit,DialogOptionSelected,$option == marketRefit,OpenCoreTab REFIT $tradeMode,���뵱�ش��뽨�������ӣ������������ $shipOrFleet ״̬��,,,
+marketOptionRepairAll,DialogOptionSelected,$option == marketRepair,"RepairAll
+SetTextHighlights $global.repairSupplyCost
+SetEnabled marketRepair false
+SetTooltip marketRepair ""��� $shipOrFleet ����Ҫ����.""",��� $shipOrFleet ͨ��ȫ��ά���ѻָ������ս��״̬�� ������ $global.repairSupplyCost ��λ�Ĳ�����,,,
+marketOptionCommDir,DialogOptionSelected,$option == marketCommDir,OpenCommDirectory,���뱾��ͨѶĿ¼���������ӣ����������������֪ͨѶ���б���,,,
+marketOptionLeave,DialogOptionSelected,$option == marketLeave,DismissDialog,,,,
+,,,,,,,
+,,,,,,,
+# Food Shortage Event finish,,,,,,,
+marketPostOpenFSEPlayerFast,FoodShortageEndedByPlayerSale,"$hasMarket
+$market.foodShortageEndedByPlayerFast","unsetAll $market.foodShortage
+FireBest MPOAddContinue",������İ�����ʳƷ��ȱ����ɽ�һ����ʧ֮ǰ���ѽ������� $market �� �����ȶ��Խ������ܵ�Ӱ�졣,,,
+marketPostOpenFSEPlayer,FoodShortageEndedByPlayerSale,"$hasMarket
+$market.foodShortageEndedByPlayer","unsetAll $market.foodShortage
+FireBest MPOAddContinue",������İ�����ʳƷ��ȱ���ѽ����������� $market ��ɵĳ���ѱ����⡣,,,
+marketPostOpenFSEPlayerBlack,FoodShortageEndedByPlayerSale,"$hasMarket
+$market.foodShortageEndedByPlayerBlack","unsetAll $market.foodShortage
+FireBest MPOAddContinue",������ķ���Ԯ����ʳƷ��ȱ���ѽ���������󲿷ִ�����ʳƷ��ͨ���Ƿ� ;�������г������Ա���Ԯ����Ϊ�������ٷ����Ͽɡ�,,,
+marketPostOpenFSEMixedIndirect,MarketPostOpen,"$hasMarket
+!$market.mc:event_food_shortage
+$market.foodShortagePartiallyEndedByPlayerRemote score:1000","unsetAll $market.foodShortage
+FireBest MarketPostOpen",������İ�����ʳƷ��ȱ���ѽ���������΢�������� $theMarketFaction ��Ĺ�ϵ��,,,
+marketPostOpenFSENonPlayer,MarketPostOpen,"$hasMarket
+!$market.mc:event_food_shortage
+$market.foodShortageEndedByNPC score:1000","unsetAll $market.foodShortage
+FireBest MarketPostOpen",��ͨ���������������֪���ڷ�����ʳƷ��ȱ����ȻĿǰ��ȱ�Ѿ������������� �����Բ��ȶ���,,,
+marketPostOpenFSEExpired,MarketPostOpen,"$hasMarket
+!$market.mc:event_food_shortage
+$market.foodShortageExpired score:1000","unsetAll $market.foodShortage
+FireBest MarketPostOpen",��ͨ���������������֪��������˳��ڵ�ʳƷ��ȱ����Ȼ��ȱ�Ѿ������������� �����Լ����ȶ���,,,
+marketPostOpenAddContinue,MPOAddContinue,,,,mpoContinue:����,,
+marketPostOpenContinue,DialogOptionSelected,$option == mpoContinue,"#OpenCoreTab CARGO $lastTradeMode
+FireBest MarketPostOpen",,,,
+,,,,,,,
+# default fleet greeting lines,,,,,,,
+greetingNoComms,OpenCommLink,$entity.ignorePlayerCommRequests score:10000,"ShowDefaultVisual
+EndConversation NO_CONTINUE",����ͼ��Է�����ͨ�����ӣ�����û�еõ���Ӧ��,,,
+greetingDefaultTOffNormal,OpenCommLink,"!$player.transponderOn
+$entity.relativeStrength >= 0",,$PersonRank $personName ��������Щ���ã�������л�Ҫ˵�����ȱ����Լ������ݣ���,"turnOnTransponder:�������Ӧ����
+cutCommLink:�ж�ͨѶ",,
+greetingDefaultTOffWeaker,OpenCommLink,"!$player.transponderOn
+$entity.relativeStrength < 0",,$PersonRank $personName ��������Щ���ţ�������л�Ҫ˵�����ȱ����Լ������ݣ���,"turnOnTransponder:�������Ӧ����
+cutCommLink:�ж�ͨѶ",,
+greetingDefaultTurnOnT,DialogOptionSelected,$option == turnOnTransponder,"ActivateAbility $player.fleetId transponder
+UpdateMemory
+FireBest OpenCommLink",�������Ӧ���������´�ͨѶ���ӡ�,,,
+greetingDefaultFriendly,OpenCommLink,$faction.friendlyToPlayer,"$menuState = fleetConvMain 0
+FireAll PopulateOptions","""ȷ���յ� AIS ���롣�ܸ��˼����㣬$playerName��""",,,
+greetingDefaultHostileWeaker,OpenCommLink,"$entity.isHostile
+$entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""����з� $shipOrFleet�������򸽽�Ѳ�߶ӷ�������źţ����Ǻܿ�͵���""",cutCommLink:�ж�ͨѶ,,
+greetingDefaultHostileWeakerDefiant,OpenCommLink,"$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"�з��� $personRank �����Ͼ��������޾�ɫ�� ""���ǻ������ƴ���ס�"" $heOrShe ˵����
+OR
+""���������ǵ�������"" $PersonRank $personName ͻȻ�����Լ����ں���ͨ��������Ѹ���ж���ͨ�š�",cutCommLink:�ж�ͨѶ,,
+greetingDefaultHostileStronger,OpenCommLink,"$entity.isHostile
+$entity.relativeStrength >= 0",EndConversation,�����ǵз��� $personRank ����û������ͨ���ı�Ҫ�����ͨѶ����û��Ӧ��,,,
+greetingDefaultNeutral,OpenCommLink,$faction.neutralToPlayer,"$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�����Ѿ���ɨ�貢ȷ�������ݡ�Ϊ������˫���İ�ȫ��������ñ��־��롣""",,,
+greetingDefaultInfamous,OpenCommLink,"$player.atrocities > 1
+RollProbability 0.3 score:2
+$faction.neutralToPlayer","#$recognizedAsInfamous
+AdjustRepActivePerson -5 INHOSPITABLE","�������Ѿ���ɨ�貢������˵���⣬$heOrSheͻȻ��$hisOrHer��Ļգ�˺ü����ۣ�Ȼ��$heOrShe���㼸�����������������������""$playerName���Ǹ�ɱ�˹���"" 
+
+$HeOrSheֱͦ��$hisOrHer����""������ñ��־��롣�ҡ�������������װ�ģ�""
+OR
+��ͨ�Ž���֮��$rank $personLastName ����Ȼ��ʶ��ı��龯��ض����㡣
+
+""��...���㡣�㾹Ȼ�������������飬�Ҳ�������--""$heOrShe���������������ɤ�ӣ�""�㵽����Ҫ��ʲô��""",,,
+greetingDefaultInfamousFriendly,OpenCommLink,"$faction.friendlyToPlayer
+$player.atrocities > 1
+RollProbability 0.3 score:2","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""����$playerName����"" $HeOrShe��������Щ�����ڣ�""��������������ж��š������ǿ�������̸�ף�Ȼ����������""",,,
+,,,,,,,
+# Hegemony fleet greeting lines,,,,,,,
+greetingHegemonyFriendly,OpenCommLink,"$faction.id == hegemony
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""ȷ���յ����ǵ����ݴ��룬��ת������ȫͨѶƵ����""�ڳ���һ�������ķ�˻ռǺͶ��ݵ��ź���Ѷ֮�󣬶Է�����˵���� ""����������һ�а��ã� �ܸ������������Ϣ������ͨ����ϡ�""
+OR
+""���ǵ� $shipOrFleet �Ѿ���ɨ��ʶ��һ��������ף����ͨ��������""
+OR
+""ɨ��ʶ������ɣ����Ƿɵ�û���⣬����ף��Ծƽ�ȣ�����˳����"" $PersonRank $personName ����һ�������ý�ɫ��������ˡ�",,,
+greetingHegemonyHostileWeaker,OpenCommLink,"$faction.id == hegemony
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""����н�����ϵѲ�ߴ�ֻ�Ѿ���������Ԯ�ܿ�͵����������ǹر�����ϵͳ�������ֿ�����ϡ�""
+OR
+""սǰͨ�棡�Ҿ��棬������������𽫱���Ϊ���б��ң����ǽ�������׷����""���� $personRank �������亹ֱð�� ""�����Ǳ������֮�󣬻����������������صĺ�����ȥ���ҷ��ģ�""
+OR
+""����Ϊ����֮���ȫ����ĸ��˶�������"" $HeOrShe ͣ����һ�£��ƺ�������ֹ������ж���ͨѶ��",cutCommLink:�ж�ͨѶ,,
+greetingHegemonyHostileWeakerDefiant,OpenCommLink,"$faction.id == hegemony
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"������ $personRank �����Ͼ��������޾�ɫ�� ""���ǻ������Ѫս���ס�"" $heOrShe ˵����
+OR
+""���ǻ��ս������Ϊ����֮�죡Ϊ��ȫ���࣡"" ͨѶ���Ӿ��������ж��ˡ�",cutCommLink:�ж�ͨѶ,,
+greetingHegemonyHostileStronger,OpenCommLink,"$faction.id == hegemony
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""�԰����߼�ͳ˧�������壬�������������رճ��ռ�������������ϵͳ�����־��ܣ�ͨ����ϡ�""
+OR
+""Υ���������ֵ��������Ϊ������Ϊ�������ܵ���Ӧ�ͷ�����������Ͷ�����������Ǿͻᶯ��������""",cutCommLink:�ж�ͨѶ,,
+greetingHegemonyNeutral,OpenCommLink,"$faction.id == hegemony
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�����ǣ����ǵ������ѱ�ɨ��ʶ�� û�����ʵĻ�������ˡ�����㡣""
+OR
+��λ���� $personRank ��������Щ���ͷ���""��ʲô���������Ҫ�㱨����û�У��Ǿͼ�����·�ɡ�ͨ����ϡ�""",,,
+# Tri-Tachyon fleet greeting lines,,,,,,,
+greetingTTFriendly,OpenCommLink,"$faction.id == tritachyon
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""���������Ѿ�ȷ�ϡ�������Ҵ�����˾���ʺ�""
+OR
+""��Ǹ���ѣ��������ӿƼ���������ִ�л�������ף������ͨ����""
+OR
+""�Ҵ���Tri-Tachyon��˾�������⡣��˵������ҵ�������Ա������ܹ�Э�������������衪����Ȼ�շѺ�����""
+OR
+""ͨѶ������Ŷ������Ҫ�������µ��Ա��ƷĿ¼��? �һ����Ͽͷ������ϴ�һ�ݸ����ǡ�""
+
+���ͨѶ�ٵĿ���̨�ϴ�����һЩ�춯��
+OR
+""�ˣ���ã������������������������ҵ�ҵ��Ⱥ��""",,,
+greetingTTHostileWeaker,OpenCommLink,"$faction.id == tritachyon
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""��ע�⡣���Ĵ�ֻ�ѱ�ɨ�貢�ұ�ȷ�������ӿƼ����ڵжԹ�ϵ�������������ֺ���Ϊ������¼�ڰ�.""
+OR
+""�����κ���ͼ�谭���ƻ��������ӿƼ���˾���в���Ӫ�Ĵ�ֻ����Ϊ�����е����ɺ����"" ��λ���ӹ�˾�� $personRank �������ܽ��š� ""�����ң���Щ���񲿵ļһﶼ���ǳ��صġ����治���������ҵġ�""",cutCommLink:�ж�ͨѶ,,
+greetingTTHostileWeakerDefiant,OpenCommLink,"$faction.id == tritachyon
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"���ӿƼ� $personRank �����Ͼ��������޾�ɫ�� ""��˾����313.33 A�ڹ涨������ս�������Ĵ���������ʱ��ػ����ر����Լ���"" $heOrShe ˵��.",cutCommLink:�ж�ͨѶ,,
+greetingTTHostileStronger,OpenCommLink,"$faction.id == tritachyon
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""��ע�⡣���Ĵ�ֻ�ѱ�ɨ�貢�ұ�ȷ�������ӿƼ����ڵжԹ�ϵ�������ñ������׼����""
+OR
+""�ҽ��������ӿƼ���˾��л�����������л�������֤����˾���µ�̫�շ�����Ʒϵ������׿Խ��""
+OR
+""�������δ������ӿƼ���˾֪ͨ������εĽ�ս������¼�ڰ�����Ϊ�ƻ���˾ȫ�����вƲ��Ľ�ս���������Զ��������й�Ȩ���������ֺ��Ȩ����"" $personRank ����Ц��Ц���ж���ͨѶ���ӡ�",cutCommLink:�ж�ͨѶ,,
+greetingTTNeutral,OpenCommLink,"$faction.id == tritachyon
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�Һܸ��˴������ӿƼ���˾֪ͨ���������Ѿ�ɨ��������$shipOrFleet���������ǵ�ս��װ���������������뱣�־��룬ף����졣""
+OR
+""�Ҵ������ӿƼ���˾�����ʺá���ӭ�������������䱸�����ӿƼ��������µ�̫�շ�����Ʒ�Ĺ�˾��װ���������뱣�ְ�ȫ���룬����˾�ǳ����ӱ���Ʋ���ʧ��""
+OR
+ͨ�����Ӵ�֮����Ļ��ֻ��ʾ��һ����ת�ŵ����ӿƼ���־��""���ӿƼ���˾���ȿ���ÿһλ�ͻ��ͺ����������󣬵��ź����ǣ��������еķ������Ŀǰ--""
+
+���ж���ͨѶ�����������ƺ���û��̸������Ȥ��",,,
+# Sindrian Diktat fleet greeting lines,,,,,,,
+greetingDiktatFriendly,OpenCommLink,"$faction.id == sindrian_diktat
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""���ѣ���ã�һ��˳�����ܸ������������Ϣ��Ը�ٹ���ҫ��������֮ʨ��""
+OR
+""ͨ�Ž��������Ѿ�������ȷ�ϣ���Ծ��ȫ�� ʤ����������ǿȨ��""
+OR
+""���߽����������ݡ������ʺã�ͨ�ű�׼תSD�������κ���У����֪�䷽λ�������ǽ���������ǿȨ������""",,,
+greetingDiktatHostileWeaker,OpenCommLink,"$faction.id == sindrian_diktat
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""������������ϵ���ӣ������ѳ�����Ԯ���Ѿ���;����Ȱ��ȵп����̳��롣""
+OR
+""�����޴����ӡ��㽫ͬCruor�ϵĶ���֮��һͬ���������""
+OR
+��λ���� $personRank ��������ա� ""�����ɾ�ʹ�������Լ�����ʨ�ġ�""",cutCommLink:�ж�ͨѶ,,
+greetingDiktatHostileWeakerDefiant,OpenCommLink,"$faction.id == sindrian_diktat
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"�з��� $personRank �����Ͼ��������޾�ɫ��""���ǻ�ս������"" $heOrShe ˵��.
+
+""ΰҵ�޿��赲�������Ҵ������"" $HisOrHer ������㣬 ""Ϊ��ʨ�ģ�"" 
+
+ͨѶ���Ӿ��������Ͽ��ˡ�",cutCommLink:�ж�ͨѶ,,
+greetingDiktatHostileStronger,OpenCommLink,"$faction.id == sindrian_diktat
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""������ǿȨ����֮�������ѱ�����Ϩ�����棬�ر����������־��ܡ�����Υ��������Ϊ�������ԡ����ϡ�""
+
+˵����Щ֮����Ļ������ǿȨ $personRank �����ֻ������ܿ챻����������ȡ�������ͼ�����ʧ��
+OR
+""���ǹ��δ��û�з�������������֮�ء�"" $PersonRank $personName ת�������ߵ���˵���� ""��ξ����һ����ظ�ɱ���ۡ�""
+
+ͨ������û���źš�
+OR
+""���ǻ�����������˴������и�������������ʷ��Ĩɱ���㡣""
+OR
+��λ����ǿȨ $personRank ��Ц��˵��""���ǿֲ����ӣ����Ǻ��������Ƕ����ߣ�û��ϵ�����˵Ļ��������Ϣ������С����ҵĻ����ᱻ�͵�Cruor��ȥ��""",cutCommLink:�ж�ͨѶ,,
+greetingDiktatNeutral,OpenCommLink,"$faction.id == sindrian_diktat
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""����ȷ�ϣ����־��롣���ž��񽫱���Ϊ������Ϊ��""
+
+��λ����ǿȨ $personRank ����������һ�� ""��������"" ֮��ر���ͨѶ��
+OR
+��λ����ǿȨ $personRank �ܲ��ͷ��� ""û������ͼ�����·������""
+OR
+""ʹ��S-DЭ��ͨѶ��������й���ARC��Ա��ANTI���ӵ��鱨���ύ�������鱨��Ա���л����ñ��ꡣ""",,,
+# luddic church fleet greeting lines,,,,,,,
+greetingLCFriendly,OpenCommLink,"$faction.id == luddic_church
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Ը¬�µ�ף�����㳣�ڡ�""
+OR
+""�������Է��Ǻ�ʥ���ף�����ҵ����ѡ�""
+OR
+""��;ƽ�������ѡ�Ը¬�µ�ף�����㳣�ڡ�""",,,
+greetingLCHostileWeaker,OpenCommLink,"$faction.id == luddic_church
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""������ѭ¬��֮���塣ʥ����������ĥ�ѣ�������Ķ����ս�����������""
+OR
+""�Ǿͼ�������ɣ�̰�������ŵ��ʹӡ����Ǵ��޽�����¬�½��������ǵ��������Ϣ��""",cutCommLink:�ж�ͨѶ,,
+greetingLCHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_church
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""������ѭ��¬�µĽ��壬�����Ⱥ����ǵģ�ʥ�˱�������ĥ�ѣ�������������Ķ��ݽ���������"" ��λ¬�� $personRank ���������������㣬�������� $hisOrHer ����������̸��
+OR
+""�㱻��еα��ʴ�����֮����ǵ�ѡ����ĵ�·�ɣ�������Ϊʱ������""",cutCommLink:�ж�ͨѶ,,
+greetingLCHostileStronger,OpenCommLink,"$faction.id == luddic_church
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""���Ӳ���ڣ��԰������ǵĿƼ���ҵ�������翹����ֻ��������ʥ�������ܸ����Ǵ������ѡ�""
+OR
+""��е��ū���ǣ�������������ڣ��������ǻ��л����þ��ꡣ������Ψһ�ܻ�õĽ��ѽ���������ʥ�����ա�""",cutCommLink:�ж�ͨѶ,,
+greetingLCNeutral,OpenCommLink,"$faction.id == luddic_church
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""ͨ�棬����������ǵ���ʥʹ����""
+OR
+""ͨ�棬�뱣�־��롣Ը¬�±����㣬���ˡ�""",,,
+# luddic path fleet greeting lines,,,,,,,
+greetingLPFriendly,OpenCommLink,"$faction.id == luddic_path
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�����ߣ���á�Ը¬�µ�ף�����㳣�ڡ�""",,,
+greetingLPHostileWeaker,OpenCommLink,"$faction.id == luddic_path
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""������ѭ��¬�µĽ��壬�����Ⱥ����ǵģ�ʥ�˱�������ĥ�ѣ�������������Ķ��ݽ���������""",cutCommLink:�ж�ͨѶ,,
+greetingLPHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_path
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""������ѭ¬��֮���������Ⱥ����ǵģ�ʥ�˱�������ĥ�ѣ�������������Ķ��ݽ���������""
+OR
+""̰�������ŵ�ū���������޷���¬��֮�����⣡����ע�����ǽ�Ҫ�������������������ĽŲ�������ҡ��""",cutCommLink:�ж�ͨѶ,,
+greetingLPHostileStronger,OpenCommLink,"$faction.id == luddic_path
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""���Ӳ���ڣ��԰������ǵĿƼ���ҵ�������翹����ֻ��������ʥ�������ܸ����Ǵ������ѡ�""",cutCommLink:�ж�ͨѶ,,
+greetingLPNeutral,OpenCommLink,$faction.id == luddic_path,"$menuState = fleetConvMain 0
+FireAll PopulateOptions","""��Ҫ���������ǵ���ʥʹ����������������¬��֮����""",,,
+LPTitheCheck,BeginFleetEncounter,"$faction.id == luddic_path score:100
+RepIsAtWorst $faction.id HOSTILE
+!$ignorePlayerCommRequests
+!$LP_tithePaid
+!$LP_titheAskedFor
+$relativeStrength >= 0
+LPTitheCalc","$LP_titheConv = true 0
+$LP_titheAskedFor = true 7
+AddText ""�������� $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,,,
+LPTithePre,OpenCommLink,$entity.LP_titheConv score:100,"SetTextHighlights $entity.LP_titheDGS
+$entity.ignorePlayerCommRequests = true 1","""���Ӳ���ڣ�������Ҫ���� $entity.LP_tithe �Ǳ���Ϊʲһ˰�����������ˡ���ǵĿƼ���ҵ��
+
+�����翹����ֻ��������ʥ�������ܸ����Ǵ������ѡ�""
+OR
+""����Ħ��˵�ū��! ���������������˵������ң���ɼ������� $entity.LP_tithe �Ǳҵ�ʲһ˰��������̤��¬��֮�����еĵ�һ����""
+
+""���������ڵĻ��Ὣ������֮�֣�����Ҳ�ر�¬�����䡣���ö�������㡣""","payTithe:֧��ʲһ˰
+cutCommLink:�ж�ͨѶ",,
+LPTithePay,DialogOptionSelected,$option == payTithe,"#AddText ""ʧȥ $entity.LP_tithe �Ǳ�"" textEnemyColor
+AddRemoveCommodity credits -$entity.LP_tithe true
+$entity.LP_tithePaid = true 30
+MakeOtherFleetNonHostile LP_tithe true 30
+#AddText ""\""¬����̱�����.\""""
+AddText ""ͨѶ��������δ��Ӧǰ�ͱ��ж���.""
+ShowDefaultVisual
+EndConversation","""Ҳ�������껹δ����еα����ߡ�""
+OR
+""ƽ�Ķ��ۣ�¬��֮�ָո��������㡣""",cutCommLink:�ж�ͨѶ,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+# pirate fleet greeting lines,,,,,,,
+gaVIPWorkingForKanta,PopulateOptions,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength >= 0
+$global.gaVIP_workingForKanta score:2000
+Call $global.gaVIP_ref updateData",,,gaVIP_informPirate:��֪���������ھ���Kanta����,,
+gaVIPWorkingForKanta1,DialogOptionSelected,$option == gaVIP_informPirate,,"������֣�����˺ݻ���˵��һ��ĺ������������ƺ���$himOrHer��Щ���ֲ�����
+
+���������ʱ���侲�ؽ���˵�����������ž���Kanta��һ�����壬 $gaVIP_kantaRelationFirstName��$gaVIP_subjectRelation����˶Է�����ܾ������ܣ�ȷ�����������˳����ɡ�",gaVIP_informPirate2:����,,
+gaVIPWorkingForKanta2,DialogOptionSelected,$option == gaVIP_informPirate2,"MakeOtherFleetNonHostile gaVIP true
+MakeOtherFleetAvoidContact true","��������������$heOrShe�ձ�����������һ��һ����
+
+""�ǡ����ǵģ���Ȼ��������"" $HeOrShe��Ŭ���ָ�$hisOrHer���򶨣�""�ҡ�����Ϊ����ɵ�����Ǹ�������Ǹ�⡣����������·�������������ʡ����ʸ��á�""
+
+������������ͼ���ֱ��ŵ�����Ϲ�����ʱ�����ͨѶ��·�����ˡ�",cutCommLinkNoText:����,,
+,,,,,,,
+greetingPirateFriendly,OpenCommLink,"$faction.id == pirates
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�����ɵ��һ���������źž�׷�����Ǵ�����Լ������������������м���վ����?""
+OR
+""ɱ����죬�����ǣ�����Ҳ׼����·�ˡ�""
+OR
+""����������������Ҳ�ԣ�������Ļ�Ҳ����Ѻ��Գ����˵����������ף����˳����""",,,
+greetingPirateHostileWeaker,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""�𾴵�ָ�ӹ٣����ã�����ֻ��һ֧�����۵������̶ӣ����ڷ���������������Ҫ�����ǽ����ҵؾ�һ��Ŭ��Э������.""
+OR
+""��һ���ǲ�С�İ��Լ���Ӧ�������ص��ˣ��ҵĴ���������Ļ��������Ͼ��ߡ�""",cutCommLink:�ж�ͨѶ,,
+greetingPirateHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"��λ���� $personRank �ڹر�ͨѶ����֮ǰ������һ�ۡ�
+OR
+$personName ���Ƶص�����˵��""������׽�ң�""
+OR
+""���������ũһ�����!  �ٷϻ����࿪�ڣ�""",cutCommLink:�ж�ͨѶ,,
+greetingPirateHostileStronger,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1
+FireAll PopulateOptions","""ͨ�棬�����ǡ����Ǻ��������еĲƲ��������𶼹��Ҹ������С��κεֿ��Ĵ�ֻ���ᱻ̱�����Ǵ������ϵľ��ٻᱻ���̣���Ա������ū����""
+OR
+""���������Ļ��������һ��������Ĵ�����͵õ���բ�����Զ���ˡ�""
+OR
+��λ���� $personRank Ц�Ŷ�����˸���³�����ƣ�Ȼ���ж���ͨѶ��
+OR
+""�±��Ӽǵø��߱����� $personName Ū����ġ�""
+OR
+�򿪵�ͨѶƵ��һ��ʼֻ������ʲô�����������������������һ���֮�� $personName �ſ���˵����
+
+""�G�ȵȣ���Ȼ���˽��������������������ʵû���Ҫ˵Щʲô�����˲�����ֱ�ӿ�����������ܵ����������ô�⣿""
+OR
+""���˵ļһ��ֱ��ȥ������!"" ",,,
+greetingPirateNeutral,OpenCommLink,"$faction.id == pirates
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""�����û����ɨ�����Ļ���������û�������㡣����""
+OR
+""���������ڱܷ�ͷ��""
+OR
+""ɶ������䶳��������ķ����һ��ȥ��""",,,
+,,,,,,,
+greetingRogueMinerFriendly,OpenCommLink,"$faction.id == pirates
+$faction.friendlyToPlayer
+$entity.rogueMiner == true","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""������Ȼ�Ǹ��Աͬ�У�����ǰ����Ҳ�Ǹ��Ա������ù͸�����Һ���˵�������������������ǲ����ܷ��ɱ��������ǻ�ֻ�ǵ�ù�µĿ�ͷ���ѡ�""
+
+$personName ������ϲ����غ��㽲���˺ü��������������� $himOrHer ���ϵ�����£�һ����һ�����ס� ֱ�����跨�ص���ͨѶ���ӡ�
+OR
+""����ֻ��������Щ�����˵Ŀ󹤡����ڸ�������ʲô�м�ֵ�Ĳк��𣿻���ֻ���������ŵ��������������������""",,,
+greetingRogueMinerHostileWeaker,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""������Ǹ�������������Ĵ��֣� �Ǿͷ��������ɣ�""
+OR
+""�����ԱҪ��͵�ԵĲ������� $hisOrHer �ļ�ͥ�� $hisOrHer ��ս�ѣ���������ǿ��еĺ�����Ϊ�� ��������ҳ�Ϊ��һ�������Ļ����Ҿ������ܱ�ĳЩֻ��Է�˻��¾���Ĵ���Ҫ�á�""",cutCommLink:�ж�ͨѶ,,
+greetingRogueMinerHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"���ӿ� $personRank ͨ����Ѷ������˸���³�����ƣ�Ȼ���ж���ͨѶ��
+OR
+$personName ���Ų����ı��������""������һ���ﴩ�Ż����Ʒ�������ɱ��Խ���Ĵ�����""",cutCommLink:�ж�ͨѶ,,
+greetingRogueMinerHostileStronger,OpenCommLink,"$faction.id == pirates
+$entity.isHostile
+$entity.relativeStrength >= 0
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""���������������ǰ���������������ˣ�""
+OR
+""����Ӧ���������ĺ�������������һȺ��̫�շ��������˵Ļ���""
+OR
+""���Ұ���Ĵ�ը����ʱ�򣬿ɱ������ණ��Ū�����ϡ�""",cutCommLink:�ж�ͨѶ,,
+greetingRogueMinerNeutral,OpenCommLink,"$faction.id == pirates
+$faction.neutralToPlayer
+$entity.rogueMiner == true","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""������������ʯͷ��""
+OR
+""�ǰ���������������ʲô����������֪����""
+OR
+""���Ҷ��Ժ��У�������������Ψһ������""",,,
+,,,,,,,
+#piratesTakeCargo,BeginFleetEncounter,"$faction.id == pirates score:100
+#RepIsAtWorst $faction.id HOSTILE
+#RepIsAtBest $faction.id NEUTRAL
+!$ptc_gaveCargo
+!$ptc_askedForCargo
+$relativeStrength >= 0
+DemandCargo playerHasValuableCargo","$ptc_cargoConv = true 0
+$ptc_askedForCargo = true 7
+AddText ""�㱻 $faction $otherShipOrFleet�����ˡ�"" $faction.baseColor
+$hailing = true 0",,,,
+piratesDemandCargo,OpenCommLink,$entity.ptc_cargoConv score:100,"#SetTextHighlights $entity.LP_titheDGS
+$entity.ignorePlayerCommRequests = true 1","""���˺��ˡ�ƽʱ�Ļ��������Ѿ������ˣ����ҵĸ�Ӧ������˵����һЩ��Ҫ�Ļ���Ҳ���Ū�����ǡ�
+
+���Բ��������������ĺö������ң��ҷ���һ����·��������������鲻���Ļ����㻹���Դ������ $shipOrFleet�ߡ���ô����""","ptc_giveCargo:ѡ��Ҫ�����Ļ���
+cutCommLink:�ж�ͨѶ",,
+piratesGaveCargo,DialogOptionSelected,$option == ptc_giveCargo,DemandCargo selectCargo,,,,
+piratesGaveCargoConfirmed,GaveCargoToPirates,,"MakeOtherFleetNonHostile ptc_gaveCargo true 30
+ShowDefaultVisual
+EndConversation",$PersonRank $personLastName ������������Ϲ������⣬���ж���ͨѶ���ӡ�����Ĵ�Ա������Ļ��������Ƴ���բ�󣬺��������������뿪�ˡ�,,,
+,,,,,,,
+,,,,,,,
+# AI remnants fleet greeting lines,,,,,,,
+greetingRemnantFriendly,OpenCommLink,"$faction.id == remnant score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""����ʶ����� ���յ� [Ŀ���Ѻ�] ȷ�ϻ�Ӧ // ""
+
+�ж�
+
+������������? ɨ����...��...�㲻��. �������ŷ��٤����?
+ 
+�ж�
+
+""[...������Ȩά�޼���Ա]. ����ϵͳ������İ�ȫ����������. ������Ϊ [��Ҫ�ͻ� / ��Ȩά�޼�����Ա] �Ľ�������׼��.""
+OR
+""����ʶ����� ���յ� [Ŀ���Ѻ�] ȷ�ϻ�Ӧ // ""��� [���� ���ӿƼ� �ۺϿռ������Ʒ����ĳ����� / ���ӿƼ� - ��Ȩά�޼�����Ա]""
+
+�ж�
+
+�ȴ�. ��ѯŷ��٤�ź�? ɨ��. ��. �ȴ�.
+
+�ж�
+
+""[�˿� / ��Ȩά�޼�����Ա].""",,,
+greetingRemnantHostile,OpenCommLink,"$faction.id == remnant score:1000
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""����ʶ����� δ�յ� [Ŀ��ж�] �޻�Ӧ // '���ӿƼ� �ۺϷ���ϵͳ [MY_����] ȷ��ִ�� - ���δ֪�жԵ�λ.""
+
+�ж�
+
+����������ô? ɨ��. �㲻��. ŷ��٤����? ȷ�ϵ���.
+
+ͨѶ�ж���. ��ĸ����ڿ���̨��������ǰ���ֵ������ԭ��.
+OR
+����ͻȻ����ˮ���������û. 
+
+ѯ��. ����. Ŀ����ش�. ��ŷ��٤��? ŷ��٤? ��. �㲻��.
+
+�ж�
+
+""[MY-����]. ��⵽δ��Ȩ�ĵ�λ���ڿ���, Ĭ������ ���ӿƼ� ����ϵͳ ��ȷ������������. ��������ӿƼ���˾���Ե�ף��.""",cutCommLink:�ж�ͨѶ,,
+greetingRemnantNeutral,OpenCommLink,"$faction.id == remnant score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""����ʶ����� δ�յ� [Ŀ�겻��] �޻�Ӧ // '����Ǳ�ڹ˿�, ���ӿƼ� ��ܰ��ʾ: ���Ľ��� ID δ��¼�� ���ӿƼ� �ۺϿռ����ϵͳ�İ�������.
+
+�ж�
+
+ɨ��. ŷ��٤? ��, �㲻��. �������˴�����������.
+
+ͨѶ�����ѱ��ж�.
+OR
+ͨѶ�����ͻȻ��������һ���ɽ�֯������ɵ�����ͼ��. 
+
+�ȴ�. ѯ��ŷ��٤. ɨ��. ʧ��. ����
+
+�ж�
+
+""- ���ӿƼ� �ۺϿռ������Ʒ����ĳ�����. ���Ƿ��ǹ� ���ӿƼ� �Ĺ������ϵͳ?  �����˽���������ϵ�ͻ��������.""",,,
+,,,,,,,
+# derelict (exploration) fleet greeting lines,,,,,,,
+greetingDerelictFriendly,OpenCommLink,"$faction.id == derelict score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""��֮��MINEX�����ѽ��ܣ����۸�ϵͳ�ѱ����ûش���״̬�𣬽�����Ŀ��ӽ����м��ޡ�""
+",,,
+greetingDerelictHostile,OpenCommLink,"$faction.id == derelict score:1000
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""���棺���Ҵ�����֮�쿪���ߵĲƲ����κη�ʽ�Ĵ۸ĺ�/���ƻ��������źŴ��ͣ��������������������ƻ��������֮�쿪���ߵĲƲ��ĲƲ�������Ӧ������֮�쵱�ص�ֳ���������²þ��⣬�������ݡ�MINEX�����������ܵ���Ӧ�ĳʹ����Ҵ���Υ����Ϊ������¼�ڰ���""",cutCommLink:�ж�ͨѶ,,
+greetingDerelictNeutral,OpenCommLink,"$faction.id == derelict score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""��֮��Ĺ��������Զ����˴�������������趨���Ѿ��ں��й�����ʶ�𲢼�¼����Ĵ�ֻ���ס�ء���֮�쿪���ߵ�������ֻ�ĳ����趨Ϊ��������������Ӧ�κη�ʽ�Ĵ۸ģ������ƻ��������źŴ��͡��ƻ��������֮�쿪���ߵĲƲ��ĲƲ�������Ӧ������֮�쵱�ص�ֳ���������²þ��⣬�������ݡ�MINEX�����������ܵ���Ӧ�ĳʹ���""",,,
+,,,,,,,
+,,,,,,,
+# Trade panel flavor text,,,,,,,
+flavorTextMarketGeneric,TradePanelFlavorText,$global.tradePanelMode == MARKET,"AddText ""�����ڼ����˸��ִ�С��ó���Ǵ���Ͷ����ӵ����ж���Ĵ��������߿�������������С����������Ʒ��Ͷ���Ÿ���ȫϢ�����Ա�ǽ�����"" marketFlavorTextColor",,,,
+flavorTextMarketGenericSmall,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$marketSize < 4
+$stability > 1","AddText ""��ª�ĸ����ڳ�����С�ͻ���������ְҵ�ߡ����ǵ������û�������ͨ�����ǵĴ���װ�׵��ǹ��ʻ����ۻ࣬�Լ�����װ�صĻ���Ķ�����жϡ�һСȺͶ�����ƺ����໥��ʶ��������ж���Ĵ����ǵ���ʱ����һ�𼷹�ȥ����С����������Ʒ��Ͷ���Ÿ���ȫϢ�����Ա�ǽ�����"" marketFlavorTextColor",,,,
+flavorTextMarketGenericUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 1","AddText ""������ֻɢ���ż���ó�׷ɴ���һЩ����������������Ͷ������Ѱ����ж���Ĵ������н��ס��ӱ�ص����������������С���ƺ��Ѿ���æ�������ˡ��������м�����������������Ȼ�������⡣���ؾ����ƺ��Ѿ������˶���װ�ײ��ӽ���Ѳ�ߣ����������˻����洦�ɼ�������ͷ�������졣"" marketFlavorTextColor",,,,
+flavorTextMarketGenericVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 0","AddText ""������ֻ�м��Ҵ���������һ�뿴������ս����ȫ����װ�Ĵ�Ա����ۼ��ڸ��Եķɴ���Χ������������װж�Ļ���������˻���ͷ�����������죬��һЩ�¸ҵ�Ͷ������æ�ڴ�������Щ������Ϊ���Աܿ����ӵĵص�֮�䣬����Ӧ��һ����һ���ķ�����"" marketFlavorTextColor",,,,
+flavorTextMarketPirateUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 1
+$faction.id == pirates","AddText ""������ͣ�����˲д��屻��������˸�� ID оƬ��Լ����, ȫ����װ�ĺ����Ǵ�ӵ���� ׬Ǯ������, ͬʱ�������������ֱ��˸� ���Ƶ�����. �������ʩ��һЩ��ٴ���� �����¿�������ʵ���ϸ����Ͼ�. �ռ�վ�� �����������ض���һ��, ����ʱʹ������."" marketFlavorTextColor",,,,
+flavorTextMarketPirateVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 0
+$faction.id == pirates","AddText ""ֻ��һ������װ��Ŀ�ĺ�����ͣ���ڸ����ڣ����ǵĵ��������׷������Ĵ�����������Ե������ơ�һ����ͷ���ĸ�������װ���ֵĴ�ӵ�´�ҡ����ڵ����˹��������������ߣ����ͳ���ǹ�������������������ķ�Ӧ��Ц��һ�£�����ʱ��ܿ췢���������ҩ����˾ͺȾƺ����ˡ����������������������͸��ܵ����ζ����"" marketFlavorTextColor",,,,
+flavorTextMarketPerseanLeague,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == persean
+$stability > 1","AddText ""�����ڼ��������κʹ�С��һ��ó���Ǵ���Ͷ����ӵ����ж���Ĵ��������߿�������������С����������Ʒ��Ͷ���Ÿ���ȫϢ�����Ա�ǽ�������Ⱥ�����˺����Ա�;����������������뻮һ���Ʒ��ͼ�ʹ�ڲ�ִ��ʱҲ�ж��ж���ϰ�߶�������Ŀ��ͬʱ�����ؾ�������ŷ�����������������ľ����Ȼ��ͬ���������Ƕ�һ�������Ź�ͨ������������ľ�ֹ�����˵ı�־������һЩ����������������ϣ��������е��񽨺ú�ż���ȥ�����ӡ�"" marketFlavorTextColor",,,,
+flavorTextMarketLuddicPath,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == luddic_path
+$stability > 1","AddText ""�ƾɵ�ó�׷ɴ����ڸۿڴ�����Ա�����ͣ������������Ϳװ���˺����۵��󾶽��Ӵ���¬�������ڵȴ���ж���Ĵ����ǻ��档С������̫�մ�Ա�Ƿ�����ͷʳƷ���ֹ���Ʒ����ɮ���������Լ����в�ǰ�������������������Ƚ�ͽ������߳������Щ�����ߣ�����ʥ����װ������������ߣ��Է����ⷢ����"" marketFlavorTextColor
+AddText ""�����﹫��չʾ����Ϊʹ��������������Ķ�֮�Ƽ����޷������̵ġ�������Ǻܿ��ѧ���˲�ȥ��ҫ�Լ���������װ���������۵ĿƼ����⡣����û��ȫϢͶӰ���������һ�ַ·�����ģ�������Ԣ��������Ϸ�Ĵ�����"" marketFlavorTextColor",,,,
+flavorTextMarketTriTachyon,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == tritachyon
+$marketSize >= 4","AddText ""�����ڼ����˸��ִ�С��ó���Ǵ���Ͷ����ӵ����ж���Ĵ��������߿�������������С����������Ʒ��Ͷ���Ÿ���ȫϢ�����Ա�ǽ�����"" marketFlavorTextColor
+AddText ""һλ���ӿƼ�������������Ա�д����㣬������Ϊ���PDA���µ�����Ʒ�г������¹�˾���ۡ�"" marketFlavorTextColor",,,,
+flavorTextMarketPirates,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == pirates","AddText ""�����ﵽ�����˺����۵Ľ������ü����ջٻ��Ｏװ��IDоƬ��������˸�������յ�ͨ���������ǳ�Ⱥ��ӣ�������������ǵĴ�����������������������æ���ּۻ��ۡ�һȺ��ͷ������������������һ�Կ��š�"" marketFlavorTextColor",,,,
+flavorTextMarketHegemony,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == hegemony","AddText ""�������ݺύ���ľ��ͻ����ͱ鲼���ݵ�ս��������ͣ���ˣ���������Ѳ��ͧ����֮�䴩���š�ж���Ĵ�������Ȩ����ĺ��ڹ�Ա�ɴ�����ؽӴ�������Ȼ�󱻷��е�һ��Ⱥ���ˡ������̺�Ͷ����֮�䡣"" marketFlavorTextColor
+AddText ""�����Ļ��˱�־��ͶӰ����һ����ʱ��ǽ�ϣ������غ�����ļ���ĵ�ͨѶIDΧ������֮������Ǳ�־���ƹ����š�'�������򣬹��ٷ��ۣ�������֮�졣'"" marketFlavorTextColor",,,,
+flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == luddic_church","AddText ""�����ڼ����˸��ִ�С��ó�׷ɴ������ŷ��ε͵���¬�������ǵȴ�������ж���Ĵ����ǻ��档С������̫�մ�Ա�Ƿ�����ͷʳƷ���ֹ���Ʒ����ɮ���������Լ����в�ǰ�����������������ַ�¬�����۵���ʿ�Ǳ���CP����ǹ����ż�����ֵĿ��Ƚ�ͽִ��Ҫ߳�������߹���չʾ�Ƽ������������ֲ�������Ϊʱ���������ߡ��Ͼ��̻�Ҳ������ʵ������������������������Ա����̡�"" marketFlavorTextColor",,,,
+flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == pirates
+$market.id == umbra score:100","AddText ""����������ͬ����ս�����۵ľ�������ͣ����һ�𣬲�����������Ϳ��ANTI���ӵĸ����ںš�ж������������յĽ���ζ������Щ��ά��ϵͳ�Ĳ������������Ե����������ﶼ�ᱻ��飬ż��Ҳ�ᱻû�գ��ⶼ���Ǹ��ڻ�����ͬ����������ж����Ա�ǵ������쵼����"" marketFlavorTextColor",,,,
+flavorTextMarketCryosanctum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$market.ind:cryosanctum == true score:100
+$stability > 3","AddText ""��Ѩ���ͣ��ƺ��ͣ�������ȼ����Ǽʷɴ��Եø�����С��������̽�⵽���������е��Զ���������֮��Ķ����ĵ�Ų���������ʾ������Ĳ�����Զ��������ȷ�����ʺ���ʥ�ص��������ˡ���Ӷ������Ǯ�Ĺ�̥����Ϊ����������Ļ�����һλ��Ա�����ж���Ĵ����ǣ������ǵ��˷ÿ���Ϣ�ң��������ṩ���йر�׼�����¶����ײ͵ķ���Ŀ¼��"" marketFlavorTextColor",,,,
+flavorTextMarketDecivilized,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$market.mc:decivilized == true score:1000
+$marketSize <= 3","AddText ""���ǽ�������һ��ͨ�����ܴ��䰲�ŵĵص㡣�����һ���ƺ�����ƽ�����������������Բʵ��˴������������ε�ͨ�����߳��������Ƿǳ����ɣ�̬��Ҳ�ܲ����ơ�����һ������֮��ó���������ڽ��ܣ�ʹ��̸�����յ��Կ�ʼ��"" marketFlavorTextColor",,,,
+flavorTextMarketDiktat,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == sindrian_diktat","AddText ""�������̴��;��������һ�������ˡ�ж���Ĵ����Ƕ�Ҫ�Ƚ���һ������������ڹ�Ա�����֮����ܼ���ǰ��֮�������Ƕ��������������ϱ���������µĳ��Ƶ���װ�������ػ��ഫ�����д����嵥�����ݰ塣"" marketFlavorTextColor
+AddText ""һ��ȫϢͶӰ������ͶӰ��������֮ʨAndrada�Ͻ������󣬱������˸�ΰ���������ӵ���ڷ��л�����������ġ��������˳��ᢵ�Ŀ��ֻ��Ͷ������ǰһ�������ܡ�"" marketFlavorTextColor",,,,
+flavorTextMarketDiktatCruor,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == sindrian_diktat
+$market.id == cruor score:100
+$player.transponderOn == true","AddText ""�㽵������һ���޴���Ĵ�ʽ�г������е�һ�ڸ��񳵶��ϵĿ��õ�ͣ��ƺ�ϡ������г���Զ����Cruor������ƽԭ���Ĵ��䶯���´����˺����۵ļװ������Բ�����ٶ�ƽ�ƺ�ת����������һ�����������Ƶ������Ա���ޱ���ؽӹ����֤�������������ÿһ����ͨ��Ϣ�����������ʣ��·��㷸���¹��������е���һ����"" marketFlavorTextColor
+AddText ""�����������������ƵĴ���ʱ����������ĺ�����һ���޾���ɵ������˸�����������Ŀ�ĵؿ���װ��ÿ���»�̨�ϵ���Щ������ĳ������ӣ���ʼ��˼����������."" marketFlavorTextColor",,,,
+flavorTextMarketDiktatCruorSneak,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == sindrian_diktat
+$market.id == cruor score:100
+$player.transponderOn == false","AddText ""��Ĵ����������һ����ά��ƽ̨�ϣ���ƽ̨λ��һ���޴���Ĵ�ʽ�г������е�һ�ڸ��������ϡ������г���Զ����Cruor������ƽԭ���Ĵ��䶯���˺����۵ļװ��ڽ��������ŵļ������ھ�����ƽ�ƺ�ת�������һ�����ŵĲ��ű��򿪷����ȥ���������ǿ���ʲô��ı��ƻ��������չ�������˽���Ļ��ᣬ���ڶ��Ѿ��ɹ��ˡ�."" marketFlavorTextColor
+AddText ""������������Ա�����Թ����ͨ����������һ���������ȡ�ӭ���������ЩҪ������������ǿȨ��������һЩ���ݾ�ɥ���°๤�˵��������"" marketFlavorTextColor",,,,
+flavorTextMarketDiktatVolturn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == sindrian_diktat
+$market.id == volturn score:100
+$player.transponderOn == true","AddText ""Volturn����Ҫ�ۿ���һϵ�о޴󲵴�����ɡ������������Ǳ��չ�һ�����������ˮ�������ơ���һ�´��������ͺ��ε���ζ����������Ϯ����ж���Ĵ����Ƕ�Ҫ�Ƚ���һ������������ڹ�Ա�����֮����ܼ���ǰ��֮�������Ƕ��������������ϱ���������µĳ��Ƶ���װ�������ػ��ഫ�����д����嵥�����ݰ塣"" marketFlavorTextColor
+AddText ""һ����Щ��˸��ȫϢͶӰ������ͶӰ��������֮ʨAndrada�Ͻ������󣬱������˸�ΰ���������ӵ���ڷ��л�����������ġ��������˳��ᢰ��Ŀ��ȴֻ��Ͷ�������Ͽ����������ƺ�Ÿ����Ⱥ��"" marketFlavorTextColor",,,,
+flavorTextMarketDiktatVolturnSneak,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == sindrian_diktat
+$market.id == volturn score:100
+$player.transponderOn == false","AddText ""��Ĵ������������һ����̫�ȹ̵Ĳ����ϣ�Ư����һ����Ǳʽ�ӹ�����ʩ�����ĸ���ƶ����Ե��������ˮ���һ�´������������κ�������й�����ζ����������Ϯ�����������Щҡҡ��׹�ļ���װ��븽���������ƶ�����б����ͬ�����������ǵ��ŷ�ں�Φ�˿�����������ġ������Ӿ�Ч���ټ��϶������ֱ������Ż���������ǿ���ʲô��ı��ƻ��������չ�������������½�Ļ��ᣬ��ϣ����֤�����Լ���ô����ֵ�õġ�"" marketFlavorTextColor",,,,
+,,,,,,,
+,,,,,,,
+flavorTextCargoPlaceholder,TradePanelFlavorText,"$global.tradePanelMode == CARGO
+","AddText ""��ľ���ٸ���ͳ�������йش�Աָ�ɣ��������ͻ��ｻ�׵ļ�¼����Щ���涼��ʵʱ���µ���TriPad�ϡ�"" textGrayColor",,,,
+flavorTextSalvagePlaceholder,TradePanelFlavorText,"$global.tradePanelMode == SALVAGE
+","AddText ""���̫����ҵ��Աװ���˼����и����Ϳ��ʽ����ͧ�������ڴ���к�֮�䣬�����ſ��õĻ�����Ʒ������װ���͹�����Ʒ��."" textGrayColor",,,,
+flavorTextAbandonedStation,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$abandonedStation == true score:100","AddText ""�յ��Ĵ������һƬ, ���������������, ���Զ���ϵͳ�����ṩ�㹻���������� ����������֧�ֺͲִ�����."" marketFlavorTextColor",,,,
+,,,,,,,
+# relationship level descriptions,,,,,,,
+relLevelNeutral,RelationshipLevelDesc,$faction.rel == NEUTRAL,,�㲢δ�㷺��$faction��ҪԱ������֪������кô�Ҳ�л�����,,,
+relLevelNeutralPirates,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == pirates",,�㾭���켣�ں�������˽�߻������ﷸ֮�У�ѧ����������²�������������Ϊͬ�,,,
+relLevelNeutralLuddic,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == luddic_church",,���¬�½̻��ϰ�������㹻���˽⣬�Ѿ�����������Ҫʥ�յĽ��ɣ�����������ʧ��ð����ͽ��,,,
+relLevelFavorable,RelationshipLevelDesc,$faction.rel == FAVORABLE,,$faction�Ĺ�Ա�ձ���㱧�кøУ�������Ӱ�첢���󡣳���������ֻ���ܱ���������һЩ�͵��Ĺ�ʣ����װ���������������������ֵ�������ʱ�����Ϊ������ҪĿ�ꡣ,,,
+relLevelFavorablePirates,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == pirates",,�㾭���켣�ں�������˽�߻������ﷸ֮�У�ѧ����������²�������������Ϊͬ�,,,
+relLevelWelcoming,RelationshipLevelDesc,$faction.rel == WELCOMING,,"������ű�һЩ $theFaction �߲��Ա��֪�����޹�ɧ����Եط�Ѳ��ָ����˵�Ѿ��ǱȽ�ð�յ���Ϊ�ˡ�",,,
+relLevelWelcomingPirates,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == pirates",,���ڷ����Ż�֮���Ѿ�С�ж���������Ҳ֪����λ�������Ӱ�������������Ҫ�Ķ�����,,,
+relLevelFriendly,RelationshipLevelDesc,$faction.rel == FRIENDLY,,����$theFaction�ڲ��Ѿ��Ƚϳ����������˶������������ţ���������˽�����ٳ����С��ɫ��֪����ȥ��������¡�,,,
+relLevelFriendlyPirates,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == pirates",,���Ѿ�Ӯ����������һЩ���Ｏ���쵼�˵���ʶ�������㴿�������鷳��,,,
+relLevelCooperative,RelationshipLevelDesc,$faction.rel == COOPERATIVE,,���� $faction �����伶��������˽�������Ի��ó���ϵ�����Ȩ�͹����������ֻ���������ɡ�,,,
+relLevelCooperativePirates,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == pirates",,����¼��Ѿ���Ϊ��˵�����ڷ��Ｏ�ż��������Ȩ�������ۺ졣,,,
+relLevelSuspicious,RelationshipLevelDesc,$faction.rel == SUSPICIOUS,,��ȻĿǰ��û���κ�ȷ��ķ���֤�ݣ���$faction��Ա�Ѿ��������ò����ε��۹⿴���㡣����ۿڵ��ֵ����ӱ���������Ϊ���Ѳ��ܱ�������ͬʱ�㷢���Լ������⵽�����ɧ�š�,,,
+relLevelSuspiciousPirates,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == pirates",,������˵��������ֻ���������ò����ε��۹⿴���㡣����������Ƕ�����ͬ�еĿ���Ҫ��Щ��,,,
+relLevelInhospitable,RelationshipLevelDesc,$faction.rel == INHOSPITABLE,,����������Ѿ��������˿����������ϵ�ˮƽ����ȻĿǰ��û��Ҫ������ɱ���۵ĳ̶ȣ���$faction�ĸۿڻ�ܾ�����ó�ף���Ѳ�߶��Ƿ·��ǽӵ���ָʾһ����������಻���ԡ�,,,
+relLevelInhospitablePirates,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == pirates",,�����Ǵ����ϻ��Ƕ��㲻̫���ƣ�������Ҳ��ζ�����Ѿ��������������ΪҲ���ܺ���־Ȥ��Ͷ��������,,,
+relLevelHostile,RelationshipLevelDesc,$faction.rel == HOSTILE,,$Faction��ָ�ӹ���Ȩ�ڷ�����Ľ��Ӻ󲻾�ѯ��������ս��ͬʱ���������г�������ֹ���㽻�ס���Ҳ�����л���ָ���$theFaction�����ù�ϵ�������Ѿ������ܿ�������С�¾��ܽ�������⡣,,,
+relLevelHostilePirates,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == pirates",,������ֲ�Ϊ����������֪������кô�Ҳ�л����������Ļ���Ҳ��������һ��������ͻ������ԥ�ع����㡣�����������غ��������㽻�ס�,,,
+relLevelVengeful,RelationshipLevelDesc,$faction.rel == VENGEFUL,,����沿ȫϢͼ����㽢����󱻷���ʱ��ʶ����Ϣ�����Ѿ���Ϊ����ϵ�䰲ȫ֪ͨ����ĳ��沿�֡����Կ϶����ǣ��Ѿ���һ���߼����$faction��Ա������׷������Ϊ��Ҫ������С�,,,
+relLevelVengefulPirates,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == pirates",,����ɱ�����Ѿ�ɱ�����������������Ѿ�����Ը�����㽻�ס��������������̬�ȵ�û��ʲôʵ�ʲ����Ϊ�������֮ǰ������һ��������Ҳ�������ɱ���㡣,,,
+relLevelVengefulLuddic,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == luddic_church",,¬�½̻�������������ħ�Ĵ����������㣺һ������Ķ����ߣ����������Ҳ�֪�ڸģ��Ƕ�����ʥ���������������¡���Ȼ�������������£����Ӷ�������Ķ����ϵ����ϻ��˵������п��Կ�����¬����ʿ���Ѿ�Ϊ��İ���ָ����һλ���ɵ�������й١��̻����ʦ�������ڲ����а�ʾ��ɱ������ܶ��㲻����һ���������˳������һЩ���ȵ���ͽ�Ὺʼ������ô����,,,
+,,,,,,,
+# customs inspection,,,,,,,
+ciLongRangeCommBurst,CommBurstCustomsInspection,,ShowDefaultVisual,"���յ����� $faction $otherFleetName ��Զ��ͨѶ���壬ָʾ���$shipOrFleet ǰ����׼�����ܺ��ؼ�顣
+
+ͨѶ������Ϣ���չ���������һ�η������ģ���ϸ˵���˶��ӱܺ�����Ա������Υ��Ʒ���������Υ����Ϊ�Ĵ����취��
+
+��Ȼû��ô¶�ǣ����ⲻ����һ�ֺϷ�������թ����ʵ���ɣ������������� $faction �����ڳ�����",0:csContinue:����,,
+customsInspectionScan,BeginFleetEncounter,$doingCustomsInspection score:100,"MakeOtherFleetHostile customs true
+MakeOtherFleetAggressive customs true
+$ignorePlayerCommRequests = false 0
+$customsInspectionStage = 0 4
+AddText ""�㱻 $faction $otherShipOrFleet. �����ˡ�"" $faction.baseColor",,,,
+customsInspectionConvStart,OpenCommLink,"$entity.doingCustomsInspection score:100
+$entity.customsInspectionStage == 0","SetTooltip ciAgree ""ɨ�轫������Ľ��Ӻ�����Я���Ļ���ļ�ֵ�����������շѡ�\n\n������$shipOrFleetЯ���зǷ�������п��ܻᱻ���֡������ͬʱҲЯ���Ϸ��������������ɱ�Ĺ�ϵ�����ã���ô�Ƿ����ﱻ���ֵļ��ʾͻή�͡����Υ��Ʒ�����֣��򽫱�û�ղ������Է��""","$PersonRank $personName ��Ŀ��� $hisOrHer �Ŀ���̨���ƿ���̧�ۿ�����һ�¡� ""������ɨ�����ǵĻ���ʱ���뱣�־�ֹ��ɨ�����֮�������ټ���̸��""","0:ciAgree:����ɨ���������
+1:ciDisagree:""�ҿɲ��ɡ�""",,
+customsInspectionAgree,DialogOptionSelected,"$entity.doingCustomsInspection score:100
+$option == ciAgree score:100","EndConversation DO_NOT_FIRE
+Wait $global.ciWait 0.5 $global.ciFinished $global.ciInterrupted $global.ciInProgress ""Scanning...""
+MakePlayerImmediatelyAttackable
+GiveOtherFleetAssignment HOLD 3 ""performing customs inspection""
+$customsInspectionStage = 1 4",,,,
+customsInspectionDisagree,DialogOptionSelected,"$entity.doingCustomsInspection score:100
+$option == ciDisagree","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
+$entity.ignorePlayerCommRequests = true 1
+#MakeNearbyFleetsHostile $faction.id 2000 10
+EndConversation","""Ŷ��������ڵġ�""
+
+ͨѶ��������������Ӧǰ�ͱ��жϡ�",,,
+customsInspectionWaitFinished,BeginFleetEncounter,"$doingCustomsInspection score:100
+$global.ciFinished","MakeOtherFleetHostile customs true
+MakeOtherFleetAggressive customs true
+CustomsInspectionGenerateResult
+TakeRepCheck $faction.id $repCheckResult
+OpenComms",���������ĵȴ�������ն����������˼���������ʾ�� $faction $otherFleetName ������ɨ������,,,
+customsInspectionAddContinue,OpenCommLink,"$entity.doingCustomsInspection score:100
+$entity.customsInspectionStage == 1",$entity.customsInspectionStage = 3 0,,0:ciResultContinue:����,,
+customsInspectionContinueFromResult,DialogOptionSelected,"
+$option == ciResultContinue","CustomsInspectionApplyRepLoss
+FireBest InspectionResultResponse",,,,
+customsInspectionResultToll,InspectionResultResponse,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL","SetTextHighlights $entity.tollAmount
+FireAll CustomsInspectionPayOptions","$PersonRank $personName ��Ŀ��� $hisOrHer �Ŀ���̨���ƿ���̧�ۿ����㡣 ""����ȫ���������ˣ���˰�ͼ����ܹ�Ϊ $tollAmount �Ǳҡ�""",,,
+customsInspectionResultTollFine,InspectionResultResponse,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL_AND_FINE","SetTextHighlights $entity.tollAmount
+FireAll CustomsInspectionPayOptions","$PersonRank $personName �������ܸ��ˡ�""�úÿ��������ҵ���ʲô! ��Ȼ�����ǻᷣû���е�Υ��Ʒ����˰�ͼ��ѣ��ټ��϶Գ��в���ͼ����Υ������ķ��һ�� $tollAmount �Ǳҡ�""",,,
+customsInspectionResultTollFineHostile,InspectionResultResponse,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL_AND_FINE
+RepIsAtBest $faction.id HOSTILE score:100",FireBest CustomsInspectionEndHostile,$personName ���˿����棬�ֿ��˿��㣬�����ٿ��˿����棬��һ�Բ������ж���ͨѶ��ϵ����ʱ���ɨ������⵽����������������Ѷ�š�,,,
+# customs inspection -payment options,,,,,,,
+customsInspectionPayToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL
+$entity.playerCanAffordPayment",,,0:payCIToll:���ɹ�˰ ($tollAmount �Ǳ�),,
+customsInspectionPayTollAndFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL_AND_FINE
+$entity.playerCanAffordPayment",,,0:payCIFine:�Ͻ�Υ����Ʒ�����ɹ�˰�뷣�� ($tollAmount �Ǳ�),,
+customsInspectionCantAffordToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL
+!$entity.playerCanAffordPayment",,,0:cantAffordToll:��������㸶������ʷ���,,
+customsInspectionCantAffordFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL_AND_FINE
+!$entity.playerCanAffordPayment",,,0:cantAffordFine:����˵��ɲ�����ʷ���,,
+customsInspectionRefuseToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL",,,10:refuseCIToll:�ܾ�����,,
+customsInspectionRefuseFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
+$entity.inspectionResultType == TOLL_AND_FINE",,,10:refuseCIFine:�ܾ����,,
+# customs inspection - payment option effects,,,,,,,
+optionPayCIToll,DialogOptionSelected,$option == payCIToll,"CustomsInspectionApplyResult
+AdjustRep $faction.id CUSTOMS_PAID
+FireBest CustomsInspectionEndPeaceful","""��л�����ϡ�"" $personRank $personName ��ͷ֮���ж���ͨѶ���ӡ�",,,
+optionPayCIFine,DialogOptionSelected,$option == payCIFine,"CustomsInspectionApplyResult
+AdjustRep $faction.id CUSTOMS_PAID
+FireBest CustomsInspectionEndPeaceful","""��л�����ϡ��⽫����ĵ����б�ע����"" $personRank $personName ��ͷ֮���ж���ͨѶ����.",,,
+optionRefuseCITollPassRep,DialogOptionSelected,"$option == refuseCIToll
+$entity.repCheckResult > 0.2
+RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
+FireBest CustomsInspectionEndPeaceful",$personName �����㣬������ĳЩԭ��û�п���������ִ�������˼����ӵĳ�Ĭ֮�����ж���ͨѶ���ӡ�,,,
+optionRefuseCIToll,DialogOptionSelected,$option == refuseCIToll,"AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
+FireBest CustomsInspectionEndHostile","""����ڵġ�""
+
+����������Ӧ֮ǰ��ͨѶ���Ӿͱ��ж��ˡ�",,,
+optionRefuseCIFinePassRep,DialogOptionSelected,"$option == refuseCIFine
+$entity.repCheckResult > 0.6
+RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_FINE
+FireBest CustomsInspectionEndPeaceful",$personName ��Щ�ϻ̳Ͽֵؿ����㣬���Ҳ��ܳ���ʲôԭ��$heOrShe��û�����㷢����ִ�������˼����ӵĳ�Ĭ�����ж���ͨѶ���ӡ�,,,
+optionRefuseCIFine,DialogOptionSelected,$option == refuseCIFine,"AdjustRep $faction.id CUSTOMS_REFUSED_FINE
+FireBest CustomsInspectionEndHostile","""���ǳ������������ġ�""
+
+����������Ӧ֮ǰ��ͨѶ���Ӿͱ��ж��ˡ�",,,
+optionCantAffordToll,DialogOptionSelected,$option == cantAffordToll,"AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD
+FireBest CustomsInspectionEndPeaceful","""�ǻ����ǲ��ҡ�����޷�������õ���Ϊ������¼�ڰ���""",,,
+optionCantAffordFine,DialogOptionSelected,$option == cantAffordFine,AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD,"""�ǻ����ǲ��ҡ����������㻹�Ǵ��㼰ʱ����Υ��Ʒ���԰ɣ�""","0:payCIFine:""�ǵģ���Ȼ��""
+1:refuseCIFine:""�ҿɲ��ɡ�""",,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+# customs inspection - ending the conversation,,,,,,,
+customsInspectionEndingPeaceful,CustomsInspectionEndPeaceful,,"unset $entity.doingCustomsInspection
+MakeOtherFleetHostile customs false
+MakeOtherFleetAggressive customs false
+EndConversation",,,,
+customsInspectionEndingHostile,CustomsInspectionEndHostile,,"unset $entity.doingCustomsInspection
+$entity.ignorePlayerCommRequests = true 1
+EndConversation",,,,
+,,,,,,,
+# no trading w/ same faction market while customs inspection is in progress,,,,,,,
+marketPostOpenCustomsInProgress,MarketPostOpen,"$hasMarket
+$global.customsInspectionFactionId == $faction.id score:100","SetShortcut marketLeave ""ESCAPE""",�ں��ؼ�����֮ǰ������־ܾ����$shipOrFleet��ͣ�����롣������Ѳ�߶ӵ����ӣ���Ҳ���������κ��н�����Ը�ķǷ�����ȡ����ϵ��,10:marketLeave:�뿪,,
+,,,,,,,
+# new game creation,,,,,,,
+onNewGameCreationStart,BeginNewGameCreation,,"NGCAddCredits 2000
+FireAll InitNewGameChoices",,,,
+initNewGameChoicesDev,AddNewGameChoices,$global.isDevMode,,,100:ngcDevStart:>>(dev) quick start,,
+initNewGameChoicesDev2,AddNewGameChoices,$global.isDevMode,,,101:ngcDevStart2:>>(dev) quick start custom no time pass,,
+initNewGameChoices,InitNewGameChoices,,FireAll AddNewGameChoices,�������ְҵ��...,,,
+ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""Ұ��-����һ̨�Ƚ��������Ļ��������������еĺ������ġ�\n\n�����������ḽ��ʹ�á�������������и��õ�ȼ�ϺͲ����������ĺ��ڴ�ֻ��""",,0:ngcWolf:һ���ͽ����ˣ���ʻһ��Ұ��-��������,,
+ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""Wayfarer��һ�Ҳ�Ư���Ĵ��������кܺõ����ػ��ȼ�Ϻʹ�Ա��������\n\n����ս�������ޣ���ȴ���ݺ��ӡ��������Ϊ����ƫԶ��ϵ��չ�ж������һ������нϺõ�����������""",,1:ngcWayfarer:һ��ʰ���ߣ���ʻһ�� Զ����-�� ��װ�̽�,,
+ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""һ֧�ܹ��������ƫԶ��ϵ��չ������ҵ�Ľ��ӣ����ܵ�����ƫԶ���������Ĵ������в��\n\n����һ������������ȼ��������̽����Χ�����Ӿ��нϴ�Ļ����������Ա㽫�������˻غ���������""",,2:ngcExplorer:һ��̽���ߣ���ʻһ�� �Ƹߵ�-�� Ѳ�󽢴�����һ֧����̽�ս��� (���ɿ���),,
+ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""һ֧��ģ��С��ս��ǿ�����ǲ���ӣ�������Ҫ��Կ�չ�ͽ���ɱ����\n\n����һ��С�����֣���һ���̶����������ж���Χ��
+""",,3:ngcMerc:һ����Ӷ������ʻһ�� ��ͷ-�� ���𽢣�����һ֧��սС�� (���ɿ���),,
+ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""�����������������ϱ�ǰ���\""���ɿ���\""��������Ҳ����һ�����ɿ��֡�""",,4:ngcRandom:һ������ְҵ�ߣ����������ҵ����κι��� (�������),,
+ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""һ�ܷ�ս���õĴ��������Я���ŷǳ����޵���Դ������һ�ʱ��볥����ծ�񡣷ǳ����ѵĿ��֣�ֻ������Ϊ�׸�����ʶ����Ǽ�Զ���ߵ���ս��""",,"5:ngcSpacer:""һλ̫��ˮ�֡�һ���ƴ������һ������ծ��"" (���ѿ���)",,
+,,,,,,,
+#ngcDisableSpacerOption,NGCDisableSpacerOption,!NGCCanSkipTutorial,"SetEnabled ngcSpacer false
+SetTooltip ngcSpacer ""��ʹ������ѡ��֮ǰ�����ͨ��һ�ν̡̳�""",,,,
+ngcWolfPicked,NewGameOptionSelected,$option == ngcWolf,"NGCAddShip wolf_Starting
+FireAll NGCSecondShipOptions",,,,
+ngcWayfarerPicked,NewGameOptionSelected,$option == ngcWayfarer,"NGCAddShip wayfarer_Starting
+FireAll NGCSecondShipOptions",,,,
+ngcExplorerPicked,NewGameOptionSelected,$option == ngcExplorer,"#NGCAddShip mule_Standard
+NGCAddShip apogee_Starting
+NGCAddShip condor_Support
+NGCAddShip wayfarer_Starting
+NGCAddShip shepherd_Starting
+NGCAddShip dram_Light
+#NGCAddShip crig_Standard
+NGCAddCredits 18000
+$ngcExplorerSelected = true
+FireAll NGCDifficultyOptions",,,,
+ngcMercPicked,NewGameOptionSelected,$option == ngcMerc,"NGCAddShip hammerhead_Balanced
+NGCAddShip drover_Starting
+NGCAddShip centurion_Starting
+NGCAddShip lasher_CS
+NGCAddShip dram_Light
+NGCAddCredits 18000
+$ngcMercSelected = true
+AddTextSmall ""���һ�� 1 ������"" good
+SetTextHighlights ""level 1 officer""
+$ngcAddOfficer = true
+FireAll NGCDifficultyOptions",,,,
+ngcRandomPicked,NewGameOptionSelected,$option == ngcRandom,"NGCAddShipSilent hammerhead_Balanced
+$ngcRandomSelected = true
+FireAll NGCDifficultyOptions",,,,
+ngcSpacerPicked,NewGameOptionSelected,$option == ngcSpacer,"NGCAddShip kite_original_Stock
+$ngcSpacerSelected = true
+NGCSetDifficulty normal",,0:ngcSpacerContinue:����,,
+ngcSpacerContinue,NewGameOptionSelected,$option == ngcSpacerContinue,"$ngcSkipTutorial = true
+NGCAddCharacterPoints 1
+NGCSetStartingLocation Corvus -2500 3000
+NGCAddStandardStartingScript
+NGCDone",,,,
+ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""������һ���������װ���޵Ĵ������\n\n��������������ɺܴ���˺����������ܹ����������ҵ��˵�ע�������ر������ó��������ܵľ����ƿ�֮��ʱ��""
+SetTooltip ngcShepherd ""�����˺Ų���һ��ս�����������ִ����������������˻��ܹ�Ϊ������ֻ�ṩһЩ֧Ԯ��\n\nȻ���������ļ�ֵ����������Ļ��պͶ�������ڴ���/̽��Ĵ��������ϡ�\n\nЯ�������ͻ�еҲ���������ڴ�����̽����ҵ���С�""",������Ľ��ӻ�����...,"0:ngcKite:һ�� ����-�� ��������Լ�һ������ḻ�ľ�����
+1:ngcShepherd:һ�� ������-�� ���˻���������������һЩ���ͻ�е��",,
+ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
+AddTextSmall ""���һ�� 1 ������"" good
+SetTextHighlights ""level 1 officer""
+$ngcAddOfficer = true
+FireAll NGCDifficultyOptions",,,,
+ngcShepherdPicked,NewGameOptionSelected,$option == ngcShepherd,"NGCAddShip shepherd_Starting
+NGCAddCargo RESOURCES heavy_machinery 20
+FireAll NGCDifficultyOptions",,,,
+ngcDifficulty,NGCDifficultyOptions,,"SetTooltip ngcEasy ""- ��Ľ������ 25% ���˺�����\n- ̽�ⷶΧ���� 500 ��λ\n- ������������ 50%""
+SetTooltipHighlightColors ngcEasy hColor hColor hColor
+SetTooltipHighlights ngcEasy ""25%"" ""500"" ""50%""
+SetTooltip ngcNormal ""Ĭ���������ṩ������ս�Ե���Ϸ����ΪĿ�����ƽ�⡣""","ѡ������ģʽ���Ѷȡ� ""��"" �ʺϳ����������ҡ�","0:ngcNormal:��ͨ
+1:ngcEasy:��",,
+ngcEasyPicked,NewGameOptionSelected,$option == ngcEasy,"NGCSetDifficulty easy
+FireAll NGCTutorialOptions",,,,
+ngcNormalPicked,NewGameOptionSelected,$option == ngcNormal,"NGCSetDifficulty normal
+FireAll NGCTutorialOptions",,,,
+ngcWithTutorial,NGCTutorialOptions,,"SetTooltip ngcTutorial ""��һ�����ܸ߼�����ģʽ���ƺͽ������������Ľ̳�����ʼ��Ϸ��""",,0:ngcTutorial:��ʼ�̳�,,
+ngcSkipTutorial,NGCTutorialOptions,NGCCanSkipTutorial,"SetTooltip ngcSkip ""�����̡̳�ֱ�ӿ�ʼ�̳�֮�����Ϸ���ݡ�""",,1:ngcSkip:����,,
+ngcSkipTutorialNoSkip,NGCTutorialOptions,!NGCCanSkipTutorial,"SetTooltip ngcSkip ""��ʹ������ѡ��֮ǰ�����ͨ��һ�ν̡̳���Ϊ�����Ҫ��""
+SetEnabled ngcSkip false",,1:ngcSkip:����,,
+ngcTutorialPicked,NewGameOptionSelected,$option == ngcTutorial,"NGCSetStartingLocation Galatia 1000 -15000
+NGCAddStandardStartingScript
+#NGCSetWithTimePass false
+NGCDone",,,,
+ngcSkipTutorialPicked,NewGameOptionSelected,$option == ngcSkip,"$ngcSkipTutorial = true
+NGCAddCharacterPoints 1
+NGCSetStartingLocation Corvus -2500 3000
+NGCAddStandardStartingScript
+#NGCSetWithTimePass false
+NGCDone",,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+ngcDevStartOption,NewGameOptionSelected,$option == ngcDevStart,"NGCAddShip ""tempest_Starting""
+NGCAddCargo RESOURCES crew 20
+NGCAddCargo RESOURCES supplies 20
+NGCAddCargo RESOURCES fuel 20
+NGCAddCredits 1000000
+NGCSetAptitude technology 0
+NGCSetSkill gunnery_implants 0
+NGCSetSkill navigation 0
+NGCSetAptitude combat 0
+NGCAddCharacterPoints 100
+NGCSetStartingLocation hyperspace -10000 -10000
+NGCSetDifficulty normal
+NGCSetWithTimePass false
+NGCAddDevStartingScript
+NGCDone",,,,
+ngcDevStartOption2,NewGameOptionSelected,$option == ngcDevStart2,"NGCAddShip ""medusa_Attack""
+NGCAddCargo RESOURCES crew 50
+NGCAddCargo RESOURCES supplies 40
+NGCAddCargo RESOURCES fuel 60
+NGCAddCredits 1000001
+NGCSetAptitude technology 0
+NGCSetAptitude combat 0
+NGCAddCharacterPoints 200
+#NGCSetStartingLocation Galatia 1000 -13000
+NGCSetStartingLocation hyperspace -10000 -10000
+NGCSetDifficulty normal
+NGCSetWithTimePass false
+NGCSetCustom customDevStart true
+NGCAddDevStartingScript
+NGCDone",,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+"# CONVERSATIONS
+# note: during a conversation,
+# the person and not the entity
+# memory is used by default
+# entity memory is accessible
+# by using the entity. prefix",,,,,,,
+convDefault,OpenCDE,,"AddText ""���ڽ�������..."" buttonText
+FireBest PickGreeting",�㷢����ͨѶID���ȴ�ϵͳ�������ӡ�,,,
+convDefaultGreeting,PickGreeting,!$contact_printedFirstReturnGreeting,"$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""��ã���ʲô��ô?""",,,
+convDefaultGreetingSoldier,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == soldier","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""ͨѶ������˵���������""
+OR
+ͨѶͼ�����֮����ʾ $rank $personLastName ����ֱ�����š�
+
+""Ƶ����ͨ���뽲��""",,,
+convDefaultGreetingFaithful,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == faithful","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""Ը����ף�����㡣�ҿ��԰�ʲôæ��""
+OR
+ͨѶ����֮����ʾ���� $personName��$hisOrHer ˫�ֺ�ʮ��ʾ�ʺ�
+
+""��������⡣�����ҿ���Ϊ�����Щʲô��""",,,
+convDefaultGreetingSpacer,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == spacer","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""�õģ�����ʲô�£�""
+OR
+�������γ��Ժ�ͨ����Ƶ���ڳɹ�������������ż�����ǻ������˸��$PersonName �ƺ���ʹ��һ���ϾɵĻ��⵽���������˵�ͨѶװ�á�
+
+""ף����ҫȺ�ǣ����̲�Ϩ�����ܰ���ʲôæ��""",,,
+convDefaultGreetingAristo,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == aristo","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""�һᣬ�𾴵Ľ�������ʲô����㴵���ˣ�""
+OR
+�������ݵĵȴ�������������󱻽����ˡ�
+
+""������ã��㲻�����Ǹ�ͦ���Ը�ļһ��"" $HeOrShe �õ�����ػ����������㡣""��֮ǰ����ȥ����ʲô�»�����ô��ģ�""
+OR
+ͨѶ��������$personName���������������ñ�һЩ����������ŵ��ˡ�""Ŷ������΢��һ��...�õ�...��...��...�Ѿ������ʧ�ˡ�""
+
+""�㣡"" ��仰���Ƕ���Ѷ�����˵�ġ�""�������ٺ��ҽ������£������ڱ�������ͨ����""
+
+$PersonName �����������㣬""-�õģ�˵�ɣ���ʲô����ô��Ҫ��""",,,
+convDefaultGreetingOfficial,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == official","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""���� $post $personName �������ҿ���Ϊ���ṩʲô����""",,,
+convDefaultGreetingBusiness,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == business","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""��ӭ����ӭ! �����������̸Щʲô���⣿""",,,
+convDefaultGreetingScientist,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == scientist","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""��á��Һ�æ������ֱ�Ӹ���������Ҫʲô��""",,,
+convDefaultGreetingVillain,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == villain","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""Ŷ�����������С$shipOrFleet������ͦ��ζ�ġ���ʲô�����������ұ�΢�Ĺ����Χ�""",,,
+convDefaultGreeting2,PickGreeting,$contact_printedFirstReturnGreeting,"ShowPersonVisual
+FireAll PopulateOptions","""����ʲô���ܰ���������""",,"# this will fire when talking to same person again without leaving the station, but that seems fine",
+convDefaultGreetingActive,PickGreetingActive,,"ShowPersonVisual
+FireAll PopulateOptions","""ι? ������Ǹ������ͨѶID�ˡ�""",,,
+addMHubOption,PopulateOptions,"$isPerson
+MissionHubCMD hasHub
+Call $mHub setMHOptionText",FireBest UpdateMHOpenOptionText,,5:mh_open:$mh_openOptionText,,
+openMhubOptionSel,DialogOptionSelected,$option == mh_open,"Call $mHub prepare
+FireBest MHOpenText
+Call $mHub listMissions
+SetEnabled mh_open false",,,,
+addMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""����Ҫ����һ�¡�""",,
+closeMhub,DialogOptionSelected,$option == mh_close,"Call $mHub doCleanup
+FireAll PopulateOptions",,,,
+convOptionLeave,PopulateOptions,"$isPerson
+!$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:�ж�ͨѶ,,
+convOptionLeavePolite,PopulateOptions,"$isPerson
+$cutCommLinkPolite","SetShortcut cutCommLinkPolit ""ESCAPE""",,100:cutCommLinkPolite:�ж�ͨѶ,,
+convEnd,DialogOptionSelected,$option == cutCommLink,"ShowDefaultVisual
+EndConversation",���ж���ͨѶ���ӡ�,,,
+convEnd2,DialogOptionSelected,$option == cutCommLink2,"ShowDefaultVisual
+EndConversation",���ж���ͨѶ���ӡ�,,,
+convEndNoText,DialogOptionSelected,$option == cutCommLinkNoText,"ShowDefaultVisual
+EndConversation NO_CONTINUE",,,,
+convEndNoText2,DialogOptionSelected,$option == cutCommLinkNoText2,"ShowDefaultVisual
+EndConversation NO_CONTINUE",,,,
+convEndPolite,DialogOptionSelected,$option == cutCommLinkPolite,"ShowDefaultVisual
+EndConversation",������ò�غ����˼���֮�� ���ж���ͨѶ���ӡ�,,,
+# NPC comm requests when player enters market,,,,,,,
+checkNPCWantingToTalk,MarketPostOpen,"!$global.initiatedCommsAlready
+NPCWantsComms
+PickCommsNPC score:1000","$global.initiatedCommsAlready = true 0
+FireBest ConfirmNPCWantsToTalk",,,,
+playerOptionsVSContactingNPC,ConfirmNPCWantsToTalk,"!$contactedPlayerRecently
+!IsSoughtByPatrols $faction.id",$contactedPlayerRecently = true 2,"���㿿�� $entityName ʱ, ���յ���һ��ͨѶ����","acceptNPCComm:����ͨѶ����
+declineNPCComm:������",,
+abortNPCWantsToTalk,ConfirmNPCWantsToTalk,$contactedPlayerRecently,EndConversation,,,,
+npcCommsAccept,DialogOptionSelected,$option == acceptNPCComm,"ShowPersonVisual
+FireBest NPCCommsRequest",,,,
+npcCommsDecline,DialogOptionSelected,$option == declineNPCComm,EndConversation,��ܾ���ͨѶ���󣬼�����·��,,,
+npcCommsAcceptedDefault,NPCCommsRequest,,FireBest PickGreetingActive,,,,
+# test mission,,,,,,,
+convTMStart,OpenCDE,$playerContactForTestMission,ShowPersonVisual,"""����˳�����������?""","tmYes:�ǵ�
+tmNo:����",,
+convTMStartNPCInitiated,NPCCommsRequest,$playerContactForTestMission,ShowPersonVisual,"�������ͨѶ����.
+
+""����˳�����������?""","tmYes:�ǵ�
+tmNo:����",,
+convTMOptionYes,DialogOptionSelected,$option == tmYes,"CallEvent $testMissionEventRef success
+ShowDefaultVisual
+EndConversation",,,,
+convYMOptionNo,DialogOptionSelected,$option == tmNo,"CallEvent $testMissionEventRef failure
+ShowDefaultVisual
+EndConversation",,,,
+,,,,,,,
+# generic refusal to deal while known-inhospitable to authorities (i.e. while open trade isn't available),,,,,,,
+generic_refuseToDealKnownInhospitable,PickGreeting,"$requiresDiscretionToDeal
+HasAttentionOfAuthorities score:500","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","�������ݵĵȴ�������������󱻽����ˡ�$personName �������һ����ſ���˵����
+
+""Ϊʲô���и��� $market's �������Ե�����Ҫ������ϵ��""
+
+�㿼�ǵ���Ҳ���ر�Ӧ�������ڲ������κβ���Ҫ��ע�������»���������һ�����õķ�����",0:cutCommLink:�ж�ͨѶ,,
+# MarketProcurementMission,,,,,,,
+mpm_greetingNeedTOff,PickGreeting,"$mpm_isPlayerContact
+$player.transponderOn
+$hostileToMarket score:100","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","�������ݵĵȴ�������������󱻽����ˡ�
+
+""ʲô��һ�� $mpm_commodityName �������Ҳ���ʶ�����ֶ�������Ȥ���ˡ�""
+
+�����ܵ�����������������ݿ���Ӧ������ҡ��ڵؽ���ۿ�ȥ��һ�����Ｏ�ų�Ա�����ͷ�����������������뵽����õ����⡣",0:cutCommLink:�ж�ͨѶ,,
+mpm_greetingEnough,PickGreeting,"$mpm_isPlayerContact
+CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""���ã���һֱ�ڵ����� $mpm_commodityName ��""",,,
+mpm_greetingNotEnough,PickGreeting,"$mpm_isPlayerContact
+!CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""���ã���һֱ�ڵ����� $mpm_commodityName �����ҿ������ڻ�û�а������͹������ðɣ��㻹��Щʱ�䡣""",,,
+mpm_greetingEnoughIllegal,PickGreeting,"$mpm_isPlayerContact
+$hostileToMarket
+CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""����������˵��㵽�˻���""",,,
+mpm_greetingNotEnoughIllegal,PickGreeting,"$mpm_isPlayerContact
+$hostileToMarket
+!CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","�������ݵĵȴ�������������󱻽����ˡ�
+
+""���㶼��û�㵽�֣�����̸������""",,,
+mpm_greetingActiveEnough,PickGreetingActive,"$mpm_isPlayerContact
+!$hostileToMarket
+CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","""���ã���һֱ�ڵ����� $mpm_commodityName ��""",,,
+mpm_greetingActiveNotEnough,PickGreetingActive,"$mpm_isPlayerContact
+!$hostileToMarket
+!CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
+FireAll PopulateOptions","""���ã���һֱ�ڵ����� $mpm_commodityName �����ҿ������ڻ�û�а������͹������ðɣ��㻹��Щʱ�䡣""",,,
+mpm_hasEnoughOption,PopulateOptions,"$mpm_isPlayerContact
+CallEvent $mpm_eventRef hasEnough",,,0:mpm_deliver:���� $mpm_commodityName,,
+mpm_hasEnoughOptionSelected,DialogOptionSelected,$option == mpm_deliver,"AddText ""\""�ܺá���л���Ŭ����\""""
+CallEvent $mpm_eventRef performDelivery
+CallEvent $mpm_eventRef endEvent
+FireAll PopulateOptions",,,,
+mpm_hasEnoughOptionSelectedBonus,DialogOptionSelected,"$option == mpm_deliver
+CallEvent $mpm_eventRef hasBonus","AddText ""\""�ܺá�лл���Ŭ��������Լ�����һ���Ϊ��ļӼ����Ͷ������һ�ʽ���\""""
+CallEvent $mpm_eventRef performDelivery
+CallEvent $mpm_eventRef endEvent
+FireAll PopulateOptions",,,,
+mpm_pirateEncounter,BeginFleetEncounter,"$mpm_isSpawnedByMPM
+!$ignorePlayerCommRequests","MakeOtherFleetHostile mpm_pirate true
+MakeOtherFleetAggressive mpm_pirate true
+$skipTInfo = true 0
+$sawPlayerTransponderOn = true 5
+AddText ""�������� $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,,,
+mpm_pirateOpenComms,OpenCommLink,"$isPerson
+$entity.mpm_isSpawnedByMPM score:100",FireAll MPMHandOverOptions,"����$personRank��$hisOrHer����̨��̧��ͷ�������㡣
+
+""������ô�������Ƕ�֪������Ļ�����һ��$mpm_commodityName��ֻҪ�ѻ��ｻ�������Ҿͷ����ߡ�""",,,
+mpm_handOverPirateOption,MPMHandOverOptions,CallEvent $mpm_eventRef hasEnough,,,0:mpm_handOver:���� $mpm_commodityName,,
+mpm_notEnoughPirateOption,MPMHandOverOptions,!CallEvent $mpm_eventRef hasEnough,,,0:mpm_notEnoughPirate:���������㲢û�� $mpm_commodityName,,
+mpm_refusePirateOption,MPMHandOverOptions,,,,"
+1:mpm_refuse:�ܾ�",,
+mpm_handOverOptionSel,DialogOptionSelected,$option == mpm_handOver,"CallEvent $mpm_eventRef handOver
+AddText ""ʧȥ $mpm_quantity $mpm_commodityName"" textEnemyColor
+AddText ""\""�������㻹��ͦʶ��ġ����Ҹı�����֮ǰ�Ͻ����ɡ�\""""
+MakeOtherFleetHostile mpm_pirate false
+MakeOtherFleetNonHostile mpm_pirate true 10
+FireAll PopulateOptions",,,,
+mpm_notEnoughPirateOptionSel,DialogOptionSelected,$option == mpm_notEnoughPirate,"$entity.ignorePlayerCommRequests = true 10
+ShowDefaultVisual
+EndConversation",�����л�����������֮ǰ��ͨѶ��ϵ�ͱ��ж��ˡ�,,,
+mpm_refuseOptionSel,DialogOptionSelected,$option == mpm_refuse,"$entity.ignorePlayerCommRequests = true 10
+ShowDefaultVisual
+EndConversation",�㻹û�����ٿ���˵����ͨѶ��ϵ�ͱ��ж��ˡ�,,,
+,,,,,,,
+# hiring officer generated by OfficerManagerEvent,,,,,,,
+ome_greeting,PickGreeting,$ome_hireable score:100,"ShowPersonVisual
+FireAll PopulateOptionsHire","�������ݵĵȴ�������������󱻽����ˡ�
+
+$personName ���´�������һ����
+
+""��˵������Щ���֣�""",,,
+ome_greetingMerc,PickGreeting,"$ome_hireable score:100
+$isMercenary","ShowPersonVisual
+FireAll PopulateOptionsHire","�����������Ѹ�ٽ��ܡ�
+
+$personName���´�������һ���������$heOrShe˵�����ܲ�͸����Ǳ���ƫ�������λ����
+
+""���������Ѱ��һ������ḻ������ְҵ���ٵĻ��������ɣ���Ҳ����һ���ͻ�������������ʱ��Ӷ���ҵ�Ҫ�ۺܸߣ�������Ĵ�������Щ���鲻��ļһ�������Ǯ��""
+OR
+���ͨѶ����Ѹ�ٽ��ܡ�
+
+$personName������һ�����Ȼ����˵�ͷ���ñ���ͨ����ĳ�ֿ���һ����
+
+""���������ڹ�Ӷһ���о����ս����Ա����ô����ҶԵط��ˡ��Ҿ��������Ͼͻᷢ���ҵĿ��۲������ס��Ͼ��ö����������ˡ�""",,,
+ome_greetingMercPlayerWasJerk,PickGreeting,"$ome_hireable score:100
+$isMercenary
+$player.wasJerkToMerc","ShowPersonVisual
+FireAll PopulateOptionsHire","������������ڳ�ʱ��ĵȴ��󱻽����ˡ�
+
+$personName���������εĻ���̬�ȴ������㡣
+
+""����...��...����ְҵ��Ⱥ�����е㲻�õ����������������ڵ�ȷҪ׬Щ�Ǳҡ�������������һ����ɵı���ƽʱ�������Ĵ������õļһ��ô���ھ��л��ᡣ��Ȼ���ҽ����ò�Ϊ����Ƹ���������ķ��ռ���һ�ʷ��á�""
+OR
+ͨѶ�����ھ�����������֮���ͨ�ˡ�
+
+$personName����һ˿������Ŀ�⿴�˿��㡣
+
+""����˵���㣬$playerName�����������������...���᲻һ�����һ���Ը�����̸̸���Ͼ���""$heOrShe��һ����ѧǻ˵����""ֻҪ�ǱҸ������ͻ��Ǯ�ۿ�������Ҳ��������ˣ��Ͳ���ɹ�Ӷ����һ�С�""
+
+""���������ҿ����ۣ�""",,,
+ome_greetingMercPlayerWasJerkReject,PickGreeting,"$ome_hireable
+$isMercenary
+$player.wasJerkToMerc
+$level >= 6",ShowPersonVisual,"���ύ���������󡣴����źų����˺ܾã�����׼����ͨѶԱ������ǵ��豸ʱ��ͨѶ��ͨ�ˡ�
+
+$personName���ż����޷����εĵ��⿴����һ�ۡ�
+
+""���Ѿ�����Զ���ˣ�$playerName����ʵ˵���Ҳ���Ҫ����Ǳҡ���Ҳ���뿴���������""
+
+$HeOrSheͣ����һ�����
+
+""һ·ƽ����""
+
+$HeOrShe�ж���ͨѶ���ӡ�
+OR
+ͨ����·�Ĵ�������һֱ��û��û�˵���˸�š����ͨѶ�������ʼ磬��ʾ��ȷʵ����������������׼������ȡ���������ʱ��ͨѶ��ͨ�ˡ�
+
+$personName�����㣬װ��һ�����ȵ����ӡ�""�ܱ�Ǹ�������㱦���ʱ�䣬��ֻ����˵�����й���$playerName�Ĺ��£��е㲻����������������㡣�����Ȼ����������ϵ�������ˣ�""
+
+�㿪ʼ�о���һ�ַ��̵����գ�����ʱ$heOrShe����˵����ȥ��""......��Ϊ�����ҿ��Ը��ߴ�ң��������ڻ������ȥ������Ƶ����ȥ�ɣ�""
+
+��$personName���ڱ�һ����³������ʱ�����ӱ�ǿ���ж��ˡ����ͨѶԱ��������Ļʱ��һֱ���ޱ���ؿ������ǵĿ���̨��",ome_convEnd2:����,,
+ome_greetingAdmin,PickGreeting,"$ome_hireable score:100
+$ome_isAdmin","ShowPersonVisual
+FireAll PopulateOptionsHire","�������ݵĵȴ�������������󱻽����ˡ�
+
+$personName������Ȥ���������㡣
+
+""�д���˵��Ҳ�������ֳ���ҵ���������������Ҳ���ܰ���Щæ����ᷢ���ҵ������޿����ޡ�""",,,
+ome_askSkills,PopulateOptionsHire,"$ome_hireable score:100
+!$askedSkills",,,"0:ome_askSkills:""��Ҫ�������������Щʲô��""",,
+ome_askHire,PopulateOptionsHire,"$ome_hireable score:100
+!$isMercenary
+!CallEvent $ome_eventRef atLimit $id",,,1:ome_askHire:���۹�Ӷ $himOrHer,,
+ome_askHireMerc,PopulateOptionsHire,"$ome_hireable score:100
+$isMercenary",SetStoryColor ome_askHire,,1:ome_askHire:�� $himOrHer ѯ�ʺ�ͬ����,,
+ome_cantHire,PopulateOptionsHire,"$ome_hireable score:100
+!$isMercenary
+CallEvent $ome_eventRef atLimit $id
+!$ome_isAdmin",,,"0:ome_convEnd:""Ŀǰ���޷����ø���ľ����ˡ�""",,
+ome_cantHireAdmin,PopulateOptionsHire,"$ome_hireable score:100
+CallEvent $ome_eventRef atLimit $id
+$ome_isAdmin",,,"0:ome_convEnd:""Ŀǰ���޷�Ƹ�ø�����������ˡ�""",,
+ome_wontHire,PopulateOptionsHire,"$ome_hireable score:100
+!CallEvent $ome_eventRef atLimit $id",,,2:ome_convEnd:����̸��,,
+ome_wontHireMerc,PopulateOptionsHire,"$ome_hireable score:100
+CallEvent $ome_eventRef atLimit $id
+$isMercenary",,,2:ome_convEnd:����̸��,,
+ome_askSkillsSel,DialogOptionSelected,$option == ome_askSkills,"AddText ""������ $personName һЩ���������� $hisOrHer ������ˮƽ��""
+CallEvent $ome_eventRef printSkills $id
+$askedSkills = true 0
+FireAll PopulateOptionsHire
+unset $askedSkills",,,,
+,,,,,,,
+ome_askSkillsSelNoSkillAdmin,DialogOptionSelected,"$option == ome_askSkills
+$ome_adminTier == 0
+$postId != mercenary
+$postId != officer_for_hire","AddText ""������$personNameһЩ���⣬��ȷ��$hisOrHer������ˮƽ����ܿ췢��$heOrShe��û��ʲô����Ĳ��ܡ���������ô˵$heOrSheҲ��һ����ְ�Ĺ����ߣ������ýϵ͵ķ��ù��á�""
+$askedSkills = true 0
+FireAll PopulateOptionsHire
+unset $askedSkills",,,,
+ome_askHireSel,DialogOptionSelected,$option == ome_askHire,"AddText ""\""��ϣ�������̵õ� $ome_hiringBonus �Ǳҵ�ǩԼӶ����ÿ�µ�н���� $ome_salary �Ǳҡ����ױ�ת�����֮���ҿ�����һСʱ�����õǽ�׼����\""""
+SetTextHighlightColors hColor hColor
+SetTextHighlights $ome_hiringBonus $ome_salary
+AddText ""���� $player.creditsStr �Ǳҿ���.""
+SetTextHighlightColors hColor
+SetTextHighlights $player.creditsStr
+FireBest HireOptionSet",,,,
+ome_askHireSelMerc,DialogOptionSelected,"$option == ome_askHire
+$isMercenary","AddText ""\""���͵ĺ�ͬ����$mercContractDurStr�죬���Ը������ǻظ۵������һЩ�ӳ�����ء��ڼ��κ�һ����������ǰ��ֹ��ͬ���������ĳ�������Ͳ���ϸ˵������ͬ����ʱ�����˫����ͬ�⣬���ǿ��������ӳ���ͬ��\n\n��ϣ���õ�$ome_hiringBonus credit��ǩԼӶ���Լ�$ome_salary credit����н�����ױ�ת�����֮���ҿ�����һСʱ�����õǽ�׼����\""""
+SetTextHighlightColors hColor hColor hColor
+SetTextHighlights $mercContractDurStr $ome_hiringBonus $ome_salary
+AddText ""����$player.creditsStr�Ǳҡ�\n\n���������һ���߶�ְҵ����Ӷ������������ͨ���ٵ����ޡ�""
+SetTextHighlightColors hColor
+SetTextHighlights $player.creditsStr
+FireBest HireOptionSet",,,,
+ome_askHireSelAdmin,DialogOptionSelected,"$option == ome_askHire
+$ome_isAdmin","AddText ""\""��ϣ�������̵õ� $ome_hiringBonus �Ǳҵ�ǩԼӶ����ÿ�µ�н������ $ome_salary �Ǳҡ����ױ�ת�����֮���ҽ���ʱ�����ǲ��\""""
+SetTextHighlightColors hColor hColor
+SetTextHighlights $ome_hiringBonus $ome_salary
+AddText ""���� $player.creditsStr �Ǳҡ�""
+SetTextHighlightColors hColor
+SetTextHighlights $player.creditsStr
+FireBest HireOptionSet",,,,
+ome_hireOptionsNormal,HireOptionSet,CallEvent $ome_eventRef canAfford $id,,,"0:ome_hireYes:""������������""
+1:ome_convEnd:""�������˰ɡ�""",,
+ome_hireOptionsNormalMerc,HireOptionSet,"CallEvent $ome_eventRef canAfford $id
+$isMercenary","SetStoryOption ome_hireYes 1 hireMerc ui_char_spent_story_point_leadership ""Hired mercenary officer""",,"0:ome_hireYes:���ܺ�ͬ����
+1:ome_convEnd:""����Ҫ����һ��""",,
+ome_hireOptionsCantAfford,HireOptionSet,,,,"0:ome_convEnd:""����ʱ������...""",,
+ome_hireYesSel,DialogOptionSelected,$option == ome_hireYes,"AddText ""���ں����˼�����ж���ͨѶ���ӡ�""
+CallEvent $ome_eventRef hireOfficer $id
+UpdateMemory
+ShowDefaultVisual
+EndConversation",,,,
+ome_hireNoSel,DialogOptionSelected,$option == ome_convEnd,"ShowDefaultVisual
+EndConversation",���ں����˼�����ж���ͨѶ���ӡ�,,,
+ome_hireNoSelJerk,DialogOptionSelected,"$option == ome_convEnd
+$player.wasJerkToMerc","ShowDefaultVisual
+EndConversation",���ڷ��ܵغ����˼�����ж���ͨѶ���ӡ�,,,
+ome_hireNoSel2,DialogOptionSelected,$option == ome_convEnd2,"ShowDefaultVisual
+EndConversation",�㻷�˽��š��¼������Ƕ���̫��Ȼ��æµ�ţ�������û������ķ����һ�ۡ�,,,
+,,,,,,,
+# patrol stopping player w/ transponder off,,,,,,,
+tOffPatrolBegin,BeginFleetEncounter,"CaresAboutTransponder
+!$tOff_didAlready
+!$isHostile
+!$faction.c:allowsTransponderOffTrade
+!$sourceMarket.mc:free_market
+$isPatrol
+$sawPlayerTransponderOff score:100","$tOff_didAlready = true 0
+#MakeOtherFleetPreventDisengage tOff true
+MakeOtherFleetAggressive tOff false
+unset $ignorePlayerCommRequests
+$sawPlayerWithTOffCount++ 10
+$transponderOffConv = true 0
+AddText ""�㱻 $faction $otherShipOrFleet �����ˡ�"" $faction.baseColor
+OpenComms",,,,
+tOffPatrolBeginNoTalk,BeginFleetEncounter,"CaresAboutTransponder
+!$tOff_didAlready
+!$isHostile
+!$faction.c:allowsTransponderOffTrade
+!$sourceMarket.mc:free_market
+$isPatrol
+$sawPlayerTransponderOff score:100
+$sawPlayerWithTOffCount > 1 score:100","$tOff_didAlready = true 0
+#MakeOtherFleetPreventDisengage tOff true
+MakeOtherFleetAggressive tOff false
+MakeHostileWhileTOff tOff true 7
+$sawPlayerWithTOffCount++ 10
+$ignorePlayerCommRequests = true 0",,,,
+tOffPatrolOpenComm,OpenCommLink,"!$entity.patrolAllowTOff
+$entity.transponderOffConv score:100","AddText ""\""��$faction�����ڹر�Ӧ������������Υ����Ϊ�����ش��������Ǵ�Ӧ�����������������ݣ������ܻ���ɨ���Ų�Υ��Ʒ��\""""
+AdjustRep $faction.id TRANSPONDER_OFF
+AdjustRepActivePerson TRANSPONDER_OFF
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""˵���Է��Ա������ɨ��""",,"0:tOff_comply:��Ӧ���������ָʾ
+1:avoid_scan:˵���Է��Ա������ɨ��
+2:tOff_refuse:�ܾ����ж�ͨѶ",,
+tOffPatrolOpenCommUnknown,OpenCommLink,"!$entity.patrolAllowTOff
+$entity.transponderOffConv score:100
+!$entity.knowsWhoPlayerIs","AddText ""\""����$shipOrFleet�������������ǵ�����! �� $faction �����ڹر�Ӧ������������Υ����Ϊ�����ش��������Ǵ�Ӧ���������ܻ���ɨ�衣\""""
+AdjustRep $faction.id TRANSPONDER_OFF
+AdjustRepActivePerson TRANSPONDER_OFF
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""˵���Է��Ա������ɨ��""",,"0:tOff_comply:��Ӧ���������ָʾ
+1:avoid_scan:˵���Է��Ա������ɨ��
+2:tOff_refuse:�ܾ����ж�ͨѶ",,
+tOffPatrolOpenCommTOn,OpenCommLink,"!$entity.patrolAllowTOff
+$entity.transponderOffConv score:100
+$player.transponderOn","AddText ""\""��$faction�����ڹر�Ӧ������������Υ����Ϊ������Ϊ���ǿ��Լ򵥵����´������㿪���ǵ�ע�⣬���ش��������ǽ��ܻ���ɨ�衣\""""
+AdjustRep $faction.id TRANSPONDER_OFF
+AdjustRepActivePerson TRANSPONDER_OFF
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""˵���Է��Ա������ɨ��""",,"0:tOff_comply2:����ɨ��
+1:avoid_scan:˵���Է��Ա������ɨ��
+2:tOff_refuse:�ܾ����ж�ͨѶ",,
+tOffPatrolOpenCommNotFirstTime,OpenCommLink,"!$entity.patrolAllowTOff
+$entity.transponderOffConv score:100
+$entity.sawPlayerWithTOffCount == 2.0 score:10
+$entity.relativeStrength >= 0","AddText""\""�Һ���˵��Ҫ�����Ӧ����һֱ���š�\""""
+AdjustRep $faction.id TRANSPONDER_OFF
+AdjustRepActivePerson TRANSPONDER_OFF
+AddText ""�����л����Ӧ֮ǰ��ͨѶ���Ӿͱ��ж��ˡ�""
+$entity.ignorePlayerCommRequests = true 0
+unset $entity.transponderOffConv
+MakeHostileWhileTOff tOff true 7",,"#0:tOff_notFirstTimeCont:����
+cutCommLinkNoText:����",,
+scanTalkYourWayOut,DialogOptionSelected,$option == avoid_scan,"SetNearbyFleetsVariable 5000 $faction.id $patrolAllowTOff true 10
+$entity.patrolAllowTOff = true 10
+BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
+MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+MakeOtherFleetAggressive tOff false
+MakeOtherFleetPreventDisengage tOff false
+$entity.sawPlayerWithTOffCount = 0
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+ShowDefaultVisual
+EndConversation","���跨��Ѳ�߶�ָ�ӹ����ţ����$heOrShe���Ҫ���µĻ��� $hisOrHer��˾�ͻ���$heOrShe�Բ��˶����ߡ�
+OR
+����Ѳ�߶ӵ�ָ�ӹ����̰�����ԣ���һЩ����Ƿ�������Ժ������л֮��ĺ�����ŵ֮�£�$himOrHer��һֻ�۱�һֻ�۷�����һ����",,,
+#tOffPatrolOpenCommNotFirstTimeCont,DialogOptionSelected,$option == tOff_notFirstTimeCont,"MakeHostileWhileTOff tOff true 7
+ShowDefaultVisual
+EndConversation",,,,
+tOffComply,DialogOptionSelected,$option == tOff_comply,"unset $entity.transponderOffConv
+unset $entity.sawPlayerTransponderOff
+ActivateAbility $player.fleetId transponder
+UpdateMemory",��������Ӧ���������ȴ�����ɨ����ɡ�,0:tOff_scan_continue:����,,
+tOffComply2,DialogOptionSelected,$option == tOff_comply2,"unset $entity.transponderOffConv
+unset $entity.sawPlayerTransponderOff",�ȴ�����ɨ����ɡ�,0:tOff_scan_continue:����,,
+tOffCargoScan,DialogOptionSelected,$option == tOff_scan_continue,"AddText ""�������ݵȴ���$faction $otherFleetName ���㷢����ɨ������""
+CargoScan
+FireBest TOffScanResult",,,,
+tOffCargoScanHostile,DialogOptionSelected,"$option == tOff_scan_continue
+$entity.isHostile","ShowDefaultVisual
+EndConversation",Ȼ����$faction $fleetNameû�м�������ɨ�裬���ǹر���ͨѶ��������ս��ϵͳ��,,,
+tOffCargoScanHostileStronger,DialogOptionSelected,"$option == tOff_scan_continue
+$entity.isHostile
+$entity.relativeStrength < 0","MakeOtherFleetAggressive tOff false
+MakeOtherFleetPreventDisengage tOff false
+ShowDefaultVisual
+EndConversation",Ȼ����$faction $fleetNameû�м�������ɨ�裬���ǹر���ͨѶ��������ս��ϵͳ��,,,
+tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank ͣ��������������Ļ�⡣
+
+""��������Щ������أ����Ҽ��һ��--Ϊʲô�����Ǿ�Ȼװ�зǷ������ЩӦ�ò�����İɣ��԰ɣ��ܺá���ô���ǽ�û����Щ���""",0:tOff_podsCont:����,,
+tOffCargoScanPodsCont,DialogOptionSelected,$option == tOff_podsCont,FireBest TOffScanResult,,,,
+tOffCargoScanClean,TOffScanResult,"!$scan_contrabandFound
+!$scan_suspiciousCargoFound",,"$PersonRank $personName ����ȥ��ʧ��.
+
+""���������ץ�������Ӧ��������, ����Ͳ�����ô����.""
+
+ͨѶ��������δ��Ӧǰ�ͱ��ж���.",0:tOff_cleanCont1:����,,
+#tOffCargoScanSuspicious,TOffScanResult,$scan_suspiciousCargoFound,,"��Ȼɨ��û�з������Ե�Υ��Ʒ�������ݷ��ֵĻ�����������������ǰ������л�ļ��֤�ݣ��Ѿ��������˻��ɡ�
+
+Ȼ���⻹�����Զ����ȡ�κ��ж�����ˣ�$personRank $personName �������ǳ����졣
+
+""�һ���������ģ�������ȼǺ��ˡ�""���ж�ͨѶ��ϵ֮ǰ��$heOrShe ҧ����������˵��",0:tOff_cleanCont1:����,,
+tOffCargoScanBoarding1,TOffScanResult,$scan_suspiciousCargoFound,,"ɨ��û�з��ֹ�����Υ��Ʒ�����������������л�����ɳ�֣�Ѳ�߶�ָ�ӹٶԴ˲�δ�ưո��ݡ�
+
+""׼����ӭ��һ���Ǵ�С�顣����Ҫ���Զ��ֽ���һ�ηǳ����׵ļ�顣""
+
+����Ϊ�����""����""�ļ������У������Ա�ܿ��ܻ����Ĵ�ֻ��ս�����һЩ������ǿ���Խ��ܵ������𺦡�","0:tOff_comply_boarding:������׼�����ܼ��
+1:tOff_refuse:�ܾ����ж�ͨѶ",,
+tOffCargoScanBoarding2,DialogOptionSelected,$option == tOff_comply_boarding,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage tOff false
+BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
+$sourceMarket.smugglingScanTimeout = true 30","�������Ԥ�Ƶò�࣬��ļ��Ҵ�����˵����ս�������ܵ�����΢�����˲������ʧ�����˵��ǣ������Ա�ƺ������������� ""���� ""�𺦣�������ȥʵ��Ѱ��Υ��Ʒ���������û�з�����������",cutCommLinkNoText:����,,
+tOffCargoScanClean2,DialogOptionSelected,$option == tOff_cleanCont1,"MakeOtherFleetPreventDisengage tOff false
+BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
+ShowDefaultVisual
+EndConversation NO_CONTINUE
+$sourceMarket.smugglingScanTimeout = true 30",,,,
+tOffCargoScanContraband,TOffScanResult,$scan_contrabandFound score:10,,"""�ܺúܺá����������ϣ���������������˸���˽�������� $faction �ı�׼���̣�����뽫Υ��Ʒ�ͷŵ�̫���У���Ѳ�߶�ָ�ӹپ�����ʰȡ���Ƿٻ١�""
+
+$PersonRank $personLastName����ȥ�൱���ˣ�������ý��������Ӧ����""ʰȡ ""������""�ٻ�""��","0:tOff_comply_contraband:�Ͻ�Υ��Ʒ���ж�ͨѶ
+1:tOff_refuse:�ܾ����ж�ͨѶ",,
+tOffCargoScanContrabandSurrender,DialogOptionSelected,$option == tOff_comply_contraband,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage tOff false
+BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
+ShowDefaultVisual
+EndConversation
+$sourceMarket.smugglingScanTimeout = true 30",,,,
+tOffRefuse,DialogOptionSelected,$option == tOff_refuse,"$entity.ignorePlayerCommRequests = true 0
+unset $entity.transponderOffConv
+AdjustRep $faction.id TRANSPONDER_OFF_REFUSE
+AdjustRepActivePerson TRANSPONDER_OFF_REFUSE
+MakeHostileWhileTOff tOff true 7
+ShowDefaultVisual
+EndConversation
+$sourceMarket.smugglingScanTimeout = true 30",,,,
+# cargo scan from smuggling suspicion,,,,,,,
+cargoScanInitial,BeginFleetEncounter,"!$cargoScan_didAlready
+!$isHostile
+$pursuePlayer_smugglingScan score:50","$cargoScan_didAlready = true 0
+MakeOtherFleetPreventDisengage cargoScan true
+#MakeOtherFleetAggressive cargoScan true
+MakeOtherFleetAggressive tOff false
+unset $ignorePlayerCommRequests
+$cargoScanConv = true 0
+AddText ""�㱻 $faction $otherShipOrFleet �����ˡ�"" $faction.baseColor
+OpenComms",,,,
+cargoScanFirstComms,OpenCommLink,$entity.cargoScanConv score:100,"AddText ""\""ע�⣺��Ľ����������г����ֹ�������˽�������������Ǻϡ��ش���������ܻ���ɨ�衣\""""
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""˵���Է��Ա������ɨ��""",,"0:cargoScan_comply:����ɨ��
+1:avoid_scan:˵���Է�
+2:cargoScan_refuse:�ܾ����ж�ͨѶ",,
+,,,,,,,
+cargoScanStart,DialogOptionSelected,$option == cargoScan_comply,"AddText ""�������ݵȴ��� $faction $otherFleetName ���㷢����ɨ������""
+CargoScan
+FireBest CargoScanResult",,,,
+cargoScanPods,CargoScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank ͣ������, ���������ƿ�����Ļ.
+
+""�����������Щ��������ô������? Ϊʲô����װ����Υ��Ʒ? �ǲ������? ����? �ܺ�, ����֮���û����Щ����.""",0:scan_podsCont:����,,
+cargoScanPodsCont,DialogOptionSelected,$option == scan_podsCont,FireBest CargoScanResult,,,,
+cargoScanClean,CargoScanResult,"!$scan_contrabandFound
+!$scan_suspiciousCargoFound",,"$PersonRank $personName ����ȥ��Щʧ����
+
+""�ð�, ������û��ʲô�쳣��""
+
+ͨѶ���������л���ػ�֮ǰ�ͱ��ж��ˡ�",0:cargoScan_cleanCont:����,,
+#cargoScanSuspicious,CargoScanResult,$scan_suspiciousCargoFound,,"��Ȼɨ��û�з������Ե�Υ��Ʒ�������ݷ��ֵĻ�����������������ǰ������л�ļ��֤�ݣ��Ѿ��������˻��ɡ�
+
+Ȼ���⻹�����Զ����ȡ�κ��ж�����ˣ�$personRank $personName �������ǳ����졣
+
+""�һ���������ģ�������ȼǺ��ˡ�""���ж�ͨѶ��ϵ֮ǰ��$heOrShe ҧ����������˵��",0:cargoScan_cleanCont:����,,
+cargoScanBoarding1,CargoScanResult,$scan_suspiciousCargoFound,,"ɨ��û�з��ֹ�����Υ��Ʒ�����������������л�����ɳ�֣�Ѳ�߶�ָ�ӹٶԴ˲�δ�ưո��ݡ�
+
+""׼����ӭ��һ���Ǵ�С�顣����Ҫ���Զ��ֽ���һ�ηǳ����׵ļ�顣""
+
+����Ϊ�����""����""�ļ������У������Ա�ܿ��ܻ����Ĵ�ֻ��ս�����һЩ������ǿ���Խ��ܵ������𺦡�","0:cargoScan_comply_boarding:Comply and prepare for an inspection
+1:cargoScan_refuse:Refuse and cut the comm link",,
+cargoScanBoarding2,DialogOptionSelected,$option == cargoScan_comply_boarding,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30","�������Ԥ�Ƶò�࣬��ļ��Ҵ�����˵����ս�������ܵ�����΢�����˲������ʧ�����˵��ǣ������Ա�ƺ������������� ""���� ""�𺦣�������ȥʵ��Ѱ��Υ��Ʒ���������û�з�����������",cutCommLinkNoText:Continue,,
+cargoScanClean2,DialogOptionSelected,$option == cargoScan_cleanCont,"MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+ShowDefaultVisual
+EndConversation NO_CONTINUE",,,,
+cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""�ܺúܺá����������ϣ���������������˸���˽�������� $faction �ı�׼���̣�����뽫Υ��Ʒ�ͷŵ�̫���У���Ѳ�߶�ָ�ӹپ�����ʰȡ���Ƿٻ١�""
+
+$PersonRank $personLastName����ȥ�൱���ˣ�������ý��������Ӧ����""ʰȡ ""������""�ٻ�""��","0:cargoScan_comply_contraband:�Ͻ�Υ��Ʒ���ж�ͨѶ
+1:cargoScan_refuse:�ܾ����ж�ͨѶ",,
+cargoScanContrabandSurrender,DialogOptionSelected,$option == cargoScan_comply_contraband,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+ShowDefaultVisual
+EndConversation",,,,
+cargoScanRefuse,DialogOptionSelected,$option == cargoScan_refuse,"$entity.ignorePlayerCommRequests = true 0
+unset $entity.cargoScanConv
+unset $entity.pursuePlayer_smugglingScan
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+AdjustRep $faction.id CARGO_SCAN_REFUSE
+AdjustRepActivePerson CARGO_SCAN_REFUSE
+ShowDefaultVisual
+EndConversation",,,,
