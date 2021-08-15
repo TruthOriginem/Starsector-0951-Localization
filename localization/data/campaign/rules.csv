@@ -2,38 +2,38 @@ id,trigger,conditions,script,text,options,notes,
 # default entity interaction,,,,,,,
 defaultOpenDialog,OpenInteractionDialog,,"ShowDefaultVisual
 PrintDescription 3
-SetShortcut defaultLeave ""ESCAPE""",,defaultLeave:Leave,,
+SetShortcut defaultLeave ""ESCAPE""",,defaultLeave:离开,,
 defaultLeave,DialogOptionSelected,$option == defaultLeave,DismissDialog,,,,
 # warning beacons,,,,,,,
 beaconOpenDialog,OpenInteractionDialog,$tag:warning_beacon,"ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""",An autonomous warning beacon has been left emitting a distorted wail between official channels. Whatever message it was meant to convey has been corrupted.,beaconLeave:Leave,,
+SetShortcut beaconLeave ""ESCAPE""",星域的各个官方通讯频道中忽然被灌入了一段畸化的自主警告讯息。只是这段讯息的内容已经损坏且无法读取。,beaconLeave:离开,,
 beaconOpenDialogRemnantsDestroyed,OpenInteractionDialog,"$tag:warning_beacon
 $remnantDestroyed","ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""","This autonomous warning beacon emits a looping message.
+SetShortcut beaconLeave ""ESCAPE""","这个自主警告循环着一条消息讯息.
 
-""DANGER: This star system is known to contain potentially active autonomous weapon systems. Access to this system by unauthorized parties is forbidden by Hegemony Navy diktat 224.34.""",beaconLeave:Leave,,
+""警告: 此星系可能部署着自律性攻击系统. 根据霸主勒令 224 项 34 条规定, 禁止任何未经授权的第三方对象访问.""",beaconLeave:离开,,
 beaconOpenDialogRemnantsSuppressed,OpenInteractionDialog,"$tag:warning_beacon
 $remnantSuppressed","ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""","This autonomous warning beacon emits a looping message.
+SetShortcut beaconLeave ""ESCAPE""","这个自主警告循环着一条消息讯息.
 
-""DANGER: This star system is known to contain potentially active autonomous weapon systems. Access to this system by unauthorized parties is forbidden by Hegemony Navy diktat 224.34.""",beaconLeave:Leave,,
+""警告: 此星系可能部署着自律性攻击系统. 根据霸主勒令 224 项 34 条规定, 禁止任何未经授权的第三方对象访问.""",beaconLeave:离开,,
 beaconOpenDialogRemnantsResurgent,OpenInteractionDialog,"$tag:warning_beacon
 $remnantResurgent","ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""","This autonomous warning beacon emits a looping message.
+SetShortcut beaconLeave ""ESCAPE""","这个自主警告循环着一条消息讯息.
 
-""DANGER: This star system is known to contain potentially active autonomous weapon systems. Access to this system by unauthorized parties is forbidden by Hegemony Navy diktat 224.34.""",beaconLeave:Leave,,
+""警告: 此星系可能部署着自律性攻击系统. 根据霸主勒令 224 项 34 条规定, 禁止任何未经授权的第三方对象访问.""",beaconLeave:离开,,
 beaconOpenDialogDaedaleon,OpenInteractionDialog,"$tag:warning_beacon
 $daedaleon","ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""","This autonomous warning beacon emits a looping message.
+SetShortcut beaconLeave ""ESCAPE""","这个自主警告循环着一条消息讯息.
 
-""This world is corrupted by technological sin and its abomination stands testament to the result of straying from the path of virtue. Trespass is forbidden. Any who scorn this warning shall become both corrupt of body and outlaw by the holy justice enforced by this order of the Knights of Ludd.""",beaconLeave:Leave,,
+""这处世界已经被罪恶科技所腐化，它如今的可憎面貌恰恰证明了背离美德之路的结果。任何试图探究堕落之源的行为均被严令禁止，任何蔑视这一警告的人，都将遭到卢德骑士团的神圣制裁，慎思笃行！""",beaconLeave:离开,,
 beaconLeave,DialogOptionSelected,$option == beaconLeave,DismissDialog,,,,
 ,,,,,,,
 # gate interactions,,,,,,"# we can treat $global.gatesActive as ""has working Janus device"" -dgb",
 gateOpenDialog,OpenInteractionDialog,$tag:gate,"ShowDefaultVisual
 FireAll PopulateGateOptions","A silent ring of adamantine material, derelict of a former age.
 
-The Gate is inert.",,,
+这个星门已经陷入沉睡.",,,
 gateOpenDialogActive,OpenInteractionDialog,"$tag:gate
 $global.gatesActive
 $gateScanned
@@ -89,7 +89,7 @@ GateCMD notifyScanned
 ShowDefaultVisual
 FireBest GAATGGateScanSummary","Your command display is overlaid with a representation of the hyperspace manifold surrounding the Gate. It is calm and cool, devoid of drive-wakes.
 
-As the scan begins you watch line of disruption flare between the icon representing your flagship and the icon representing the Gate. Spirals and ripples spill out in non-Newtonian waves, surging from a point at the center of the Gate. No, it's not a point - a circle, a sphere, a torus and inverted funnel; then some other form that makes you squeeze your eyes shut. You hear faint music from far away.
+As the scan begins you watch a line of disruption flare between the icon representing your flagship and the icon representing the Gate. Spirals and ripples spill out in non-Newtonian waves, surging from a point at the center of the Gate. No, it's not a point - a circle, a sphere, a torus and inverted funnel; then some other form that makes you squeeze your eyes shut. You hear faint music from far away.
 
 ""Captain?"" Your sensors officer is looking at you, ""The scan is complete."" You realize it's the second time they said this, and you gesture as if you were simply lost in thought.",,,
 gateScanSelDuringMission,DialogOptionSelected,"$option == gateScan
@@ -186,11 +186,11 @@ FireAll PopulateGateOptions",A surge of energy explodes from the Gate.,,,
 # stellar mirror and shade interactions,,,,,,,
 stellarMirrorOpenDialog,OpenInteractionDialog,$tag:stellar_mirror,"ShowDefaultVisual
 PrintDescription 1
-SetShortcut stellarMirrorLeave ""ESCAPE""",,stellarMirrorLeave:Leave,,
+SetShortcut stellarMirrorLeave ""ESCAPE""",,stellarMirrorLeave:离开,,
 stellarMirrorLeave,DialogOptionSelected,$option == stellarMirrorLeave,DismissDialog,,,,
 stellarShadeDialog,OpenInteractionDialog,$tag:stellar_shade,"ShowDefaultVisual
 PrintDescription 1
-SetShortcut stellarShadeLeave ""ESCAPE""",,stellarShadeLeave:Leave,,
+SetShortcut stellarShadeLeave ""ESCAPE""",,stellarShadeLeave:离开,,
 stellarShadeLeave,DialogOptionSelected,$option == stellarShadeLeave,DismissDialog,,,,
 ,,,,,,,
 ,,,,,,,
@@ -198,35 +198,35 @@ stellarShadeLeave,DialogOptionSelected,$option == stellarShadeLeave,DismissDialo
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
-#dialogTopLevelMenuOptions,PopulateOptions,$menuState == fleetConvMain,,,"#demand:Demand...
-#offer:Offer...
-#ask about:Ask about...
-cutCommLink:Cut the comm link",,
+#dialogTopLevelMenuOptions,PopulateOptions,$menuState == fleetConvMain,,,"#demand:需要...
+#offer:提供...
+#ask about:询问...
+cutCommLink:切断通讯",,
 ,,,,,,,
 ,,,,,,,
 # survey interactions,,,,,,,
-surveyStar,OpenInteractionDialog,$tag:star score:1000,,Your $shipOrFleet approaches $entityName.,10:surveyLeave:Leave,,
+surveyStar,OpenInteractionDialog,$tag:star score:1000,,你的 $shipOrFleet 靠近了 $entityName.,10:surveyLeave:离开,,
 surveyOpen,OpenInteractionDialog,$market.isPlanetConditionMarketOnly,"ShowDefaultVisual
 PrintDescription 3
 FireBest PrintHasSurveyDataTextIfSo
 FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
-FireBest PrintNearbySurveyHostilesTextIfSo",Your $shipOrFleet approaches $entityName.,,,
+FireBest PrintNearbySurveyHostilesTextIfSo",你的 $shipOrFleet 靠近了 $entityName.,,,
 surveyOpenDeciv,OpenInteractionDialog,"$market.isPlanetConditionMarketOnly
 $market.wasCivilized
 $market.mc:decivilized score:100","ShowDefaultVisual
 FireBest PrintHasSurveyDataTextIfSo
 FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
-FireBest PrintNearbySurveyHostilesTextIfSo","Your $shipOrFleet approaches $entityName.
+FireBest PrintNearbySurveyHostilesTextIfSo","你的 $shipOrFleet 靠近了 $entityName.
 
-$market is in chaos, with what's left of the population scrambling to survive by any means possible. Your sensors pick up some intermittent small-arms fire. The collapse of all authority is complete and irreversible, though a new colony can still be established atop the wreckage of the old.",,,
-surveyPrintFullData,PrintHasSurveyDataTextIfSo,$market.isSurveyed,,You have full survey data for this planet.,,,
+$market}如今正处于一片混乱之中,}间歇性的轻武器射击声与努力躲避危险并挣扎求生的难民们交织成一幅悲惨的末世绘卷.}所有政权的崩溃几乎都是彻底且不可逆转,}当然新的殖民地仍可建立在旧殖民地的废墟之上.",,,
+surveyPrintFullData,PrintHasSurveyDataTextIfSo,$market.isSurveyed,,你已经拥有了该行星的完整调查数据.,,,
 surveyAddOptionPerform,PopulateOptions,"$market.isPlanetConditionMarketOnly
-!$market.isSurveyed",,,0:surveyPerform:Perform a survey,,
+!$market.isSurveyed",,,0:surveyPerform:开始调查,,
 surveyPrintHostilesText,PrintNearbySurveyHostilesTextIfSo,"$market.isPlanetConditionMarketOnly
 !$market.isSurveyed
-HostileFleetNearbyAndAware",SetEnabled surveyPerform false,"A nearby hostile fleet is tracking your movements, making running a survey operation impossible.",,,
+HostileFleetNearbyAndAware",SetEnabled surveyPerform false,"附近有支敌方舰队正逐渐向你靠近, 而使你无法调查该行星.",,,
 surveySystemIsCutOffCanNotColonize,PrintSystemCutOffText,"$systemCutOffFromHyper
 $market.isPlanetConditionMarketOnly
 $market.isSurveyed
@@ -235,13 +235,13 @@ $market.isSurveyed
 Establishing a colony here is not an option.",,,
 surveyAddOptionPerformedAlready,PopulateOptions,"$market.isPlanetConditionMarketOnly
 $market.isSurveyed
-!$market.hasUnexploredRuins",FireBest PrintSystemCutOffText,,0:surveyPerform:Establish a colony,,
+!$market.hasUnexploredRuins",FireBest PrintSystemCutOffText,,0:surveyPerform:建立殖民地,,
 surveyPrintHostilesTextEstColony,PrintNearbySurveyHostilesTextIfSo,"$market.isPlanetConditionMarketOnly
 $market.isSurveyed
 !$market.hasUnexploredRuins
-HostileFleetNearbyAndAware",SetEnabled surveyPerform false,"A nearby hostile fleet is tracking your movements, making establishing a colony impossible.",,,
-surveyOptionPerformSurvey,DialogOptionSelected,$option == surveyPerform,OpenCoreTab CARGO OPEN,Your $shipOrFleet enters low orbit around $entityName.,,,
-surveyAddOptionLeave,PopulateOptions,$market.isPlanetConditionMarketOnly,"SetShortcut surveyLeave ""ESCAPE""",,10:surveyLeave:Leave,,
+HostileFleetNearbyAndAware",SetEnabled surveyPerform false,"附近有支敌方舰队正逐渐向你靠近, 而使你无法建立殖民地.",,,
+surveyOptionPerformSurvey,DialogOptionSelected,$option == surveyPerform,OpenCoreTab CARGO OPEN,你的 $shipOrFleet 靠近了 $entityName 附近的低空轨道旁.,,,
+surveyAddOptionLeave,PopulateOptions,$market.isPlanetConditionMarketOnly,"SetShortcut surveyLeave ""ESCAPE""",,10:surveyLeave:离开,,
 surveyOptionLeave,DialogOptionSelected,$option == surveyLeave,DismissDialog,,,,
 ,,,,,,,
 ,,,,,,,
@@ -251,16 +251,16 @@ surveyOptionLeave,DialogOptionSelected,$option == surveyLeave,DismissDialog,,,,
 # default market interactions,,,,,,,
 marketOpen,OpenInteractionDialog,$hasMarket,"ShowDefaultVisual
 PrintDescription 3
-FireBest MarketPostOpen",Your $shipOrFleet approaches $entityName.,,,
+FireBest MarketPostOpen",你的 $shipOrFleet 靠近了 $entityName.,,,
 marketDock,MarketPostDock,,"$menuState = main 0
 FireAll PopulateOptions",,,,
-marketOpenAfterEstablishOutpost,OutpostEstablished,$hasMarket,FireBest MarketPostOpen,"Your $shipOrFleet finishes offloading crew, supplies, and machinery $onOrAt $market, and the crew soon busy themselves erecting temporary shelter and basic infrastructure.",,,
+marketOpenAfterEstablishOutpost,OutpostEstablished,$hasMarket,FireBest MarketPostOpen,"你的 $shipOrFleet 完成了对船员、补给以及重型机械的卸载工作, 船员们很快就忙着在 $market 搭建起临时避难所以及其他基础设施.",,,
 marketReturnFromBar,ReturnFromBar,,"$menuState = main 0
-FireAll PopulateOptions",You leave the bar and take a shuttle back to your $shipOrFleet.,,,
+FireAll PopulateOptions","你离开酒吧, 并乘坐班车回到了 $shipOrFleet 当中.",,,
 marketPostOpenDefault,MarketPostOpen,"$hasMarket
 $player.transponderOn
 !$faction.isNeutralFaction","$tradeMode = OPEN 0
-FireBest MarketPostDock",Your $shipOrFleet transmits identification codes via the transponder and you are soon granted docking clearance.,,,
+FireBest MarketPostDock",你的 $shipOrFleet 通过应答器发送了识别代码. 很快便收到了入港许可.,,,
 marketPostOpenDefaultNeutral,MarketPostOpen,"$hasMarket
 $faction.isNeutralFaction score:100","$tradeMode = OPEN 0
 FireBest MarketPostDock",,,,
@@ -269,79 +269,79 @@ $player.transponderOn
 !$faction.c:allowsTransponderOffTrade
 !$market.mc:free_market
 RepIsAtBest $faction.id INHOSPITABLE","$tradeMode = NONE 0
-FireBest MarketPostDock","$TheFactionLong $factionIsOrAre $relAdjective towards you, and the port authority refuses your request for docking clearance after you identify yourself.
+FireBest MarketPostDock","鉴于 $TheFactionLong 与你处于 $relAdjective 关系, 港务局拒绝了你的入港许可.
 
-You might be able to establish contact with underground parties if you come in with the transponder turned off.",,,
+不过关闭应答器的话倒是可能与这儿的地下组织取得联系.",,,
 marketPostOpenNoTradeHostile,MarketPostOpen,"$hasMarket
 !$player.transponderOn
 $market.playerHostileTimeout score:100","$tradeMode = NONE 0
 SetTextHighlightColors bad
 Highlight $market.playerHostileTimeoutStr 
-FireBest MarketPostDock","Your recent actions around $market have generated a lot of local interest, and simply coming in with the transponder off is no longer sufficient to go unnoticed. Judging from the current level of comm chatter and news reports, you estimate it'll take $playerHostileTimeoutStr until the commotion dies down.",,,
+FireBest MarketPostDock","你最近在 $market 附近的敌对行动已经引起了广泛的关注, 关闭应答器 已经无法浑水摸鱼. 从目前的传言和新闻来看, 你恐怕得等 $playerHostileTimeoutStr 才能平息骚乱.",,,
 marketPostOpenNoTradeHostileTOn,MarketPostOpen,"$hasMarket
 $player.transponderOn
 $market.playerHostileTimeout score:100","$tradeMode = NONE 0
-FireBest MarketPostDock","Your recent actions around $market have generated a lot of local interest, and engaging in open business is impossible. Judging from the current level of comm chatter and news reports, you estimate it'll take $playerHostileTimeoutStr until the commotion dies down.",,,
+FireBest MarketPostDock","你最近在 $market 附近的行动已经引起了广泛的关注, 目前已 无法进行公开交易. 从目前的传言和新闻来看, 你恐怕得等 $playerHostileTimeoutStr 才能平息骚乱.",,,
 marketPostOpenNoTradeOffOpen,MarketPostOpen,"$hasMarket
 $player.transponderOn
 RepIsAtBest $faction.id INHOSPITABLE score:10","$tradeMode = NONE 0
-FireBest MarketPostDock","$TheFactionLong $factionIsOrAre $relAdjective towards you, and the port authority refuses your request for docking clearance after you identify yourself.
+FireBest MarketPostDock","鉴于 $TheFactionLong 与你处于 $relAdjective 关系, 港务局拒绝了你的入港许可.
 
-The refusal is rather perfunctory and you get the impression that turning off the transponder to prevent identification might yield better results.",,,
+由于拒绝的理由相当敷衍, 意味着你只需关闭应答器即可轻松混入.",,,
 marketPostOpenToOffPatrols,MarketPostOpen,"$hasMarket
 !$player.transponderOn
 !$faction.c:allowsTransponderOffTrade
 !$market.mc:free_market
 IsSeenByPatrols $faction.id true","$tradeMode = NONE 0
-AddText ""Your need to turn on your transponder to engage in legitimate trade, or to come in undetected to trade on the black market."" bad
-FireBest MarketPostDock","Your $shipOrFleet goes into orbit around $market, ignoring requests from the $faction port authority to identify yourself.
+AddText ""必须打开应答器才能进行合法贸易,}或在不被发现的情况下进入黑市交易."" bad
+FireBest MarketPostDock","你的 $shipOrFleet 进入了 $market 的轨道附近, 并无视了 $faction 港务局 所发出的 身份识别要求.
 
-At least one $faction patrol is tracking your movements, and no underground parties are willing to run the risk of doing business.",,,
+至少有一支 $faction 巡逻队正追踪你的舰队, 导致地下组织没人愿意冒险 与你暗中交易.",,,
 marketPostOpenSought,MarketPostOpen,"$hasMarket
 IsSoughtByPatrols $faction.id score:100","$tradeMode = NONE 0
-FireBest MarketPostDock","Your $shipOrFleet goes into orbit around $market.
+FireBest MarketPostDock","你的 $shipOrFleet 进入了 $market 的轨道附近.
 
-At least one $faction patrol is tracking your movements, and the port authority refuses your request for docking clearance until the matter is resolved.",,,
+至少有一支 $faction 巡逻队正追踪你的舰队, 导致港务局拒绝了你的 入港许可.",,,
 marketPostOpenToOffIsFine,MarketPostOpen,"$hasMarket
 !$player.transponderOn","$tradeMode = OPEN 0
-FireBest MarketPostDock","Your $shipOrFleet goes into orbit around $market. The local port authority seems to take no issue with your explanation for why your transponder, regrettably, can't be turned on.",,,
+FireBest MarketPostDock","你的 $shipOrFleet 进入了 $market 的轨道附近, 港务局对你无法开启 应答器的 谎言没有提出任何异议.",,,
 marketPostOpenPlayerOwnerd,MarketPostOpen,"$hasMarket
 $market.isPlayerOwned score:1000","$tradeMode = OPEN 0
-FireBest MarketPostDock",Your $shipOrFleet goes into orbit around $market.,,,
+FireBest MarketPostDock",你的 $shipOrFleet 进入了 $market 的轨道附近.,,,
 marketPostOpenToOffSneak,MarketPostOpen,"$hasMarket
 !$player.transponderOn
 !$faction.c:allowsTransponderOffTrade
 !$market.mc:free_market","$tradeMode = SNEAK 0
-FireBest MarketPostDock","Your $shipOrFleet goes into orbit around $market, ignoring requests from $theFaction port authority to identify yourself.
+FireBest MarketPostDock","你的 $shipOrFleet 进入了 $market 的轨道附近, 并无视了 $faction 港务局 所发出的 身份识别要求.
 
-No $faction patrols seem to be aware of you just yet, and you have a window of opportunity for doing business with parties untroubled by your lack of docking clearance.",,,
+目前似乎没有 $faction 巡逻队注意到你, 这也给无法对接港口的你一次 暗中交易的机会.",,,
 marketAddOptionCommDir,PopulateOptions,"$hasMarket
 $menuState == main
-!$faction.isNeutralFaction",,,1:marketCommDir:Open the comm directory,,
+!$faction.isNeutralFaction",,,1:marketCommDir:打开通讯列表,,
 marketOptTradeMulti,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE
 !$faction.isNeutralFaction
-$faction.id != player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,"10:marketOpenCoreUI:Trade goods or hire crew [I], buy or sell ships [F], or refit [R]","10:marketOpenCoreUI:Trade goods or hire crew, buy or sell ships, or refit",
+$faction.id != player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,"10:marketOpenCoreUI:贸易货物/雇佣人员[I], 买卖舰船[F], or 改装[R]",10:marketOpenCoreUI:贸易,
 marketOptTradeMulti2,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE
-$faction.isNeutralFaction",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:Transfer goods or ships,,
+$faction.isNeutralFaction",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:转移货物与舰船,,
 marketOptTradeMulti3,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE
-$faction.id == player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:Manage the colony,,
+$faction.id == player",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:管理殖民地,,
 marketOptTradeMulti4,PopulateOptions,"$hasMarket
 $menuState == main
-$tradeMode == NONE",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:View colony info,,
+$tradeMode == NONE",MakeOptionOpenCore marketOpenCoreUI CARGO $tradeMode,,10:marketOpenCoreUI:查看殖民地信息,,
 marketOptBar,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE
-!$faction.isNeutralFaction",,,5:marketVisitBar:Take a shuttle down to visit a dockside bar,,
+!$faction.isNeutralFaction",,,5:marketVisitBar:乘坐班车前往港口边的酒吧,,
 marketOptHostile,PopulateOptions,"$hasMarket
 $menuState == main
 !$faction.isNeutralFaction
-$faction.id != player",,,20:marketConsiderHostile:Consider your military options,,
+$faction.id != player",,,20:marketConsiderHostile:选择对此进行的军事行动,,
 marketHostileSel,DialogOptionSelected,$option == marketConsiderHostile,MarketCMD showDefenses,,,,
 marketHostileGoBackSel,DialogOptionSelected,$option == mktGoBack,"ShowDefaultVisual
 FireAll PopulateOptions",,,,
@@ -373,98 +373,98 @@ $menuState == main
 $tradeMode == OPEN
 RepairAvailable
 RepairNeeded
-RepairEnoughSupplies","SetTooltip marketRepair ""Full repairs require $global.repairSupplyCost supplies. $player.supplies supplies are available.""
+RepairEnoughSupplies","SetTooltip marketRepair ""完全修理需要消耗 $global.repairSupplyCost 补给. 你有 $player.supplies 补给可用.""
 SetTooltipHighlightColors marketRepair buttonShortcut buttonShortcut
 SetTooltipHighlights marketRepair $global.repairSupplyCost $player.supplies
-SetShortcut marketRepair ""A"" true",,15:marketRepair:Repair your ships at the dockyard,,
+SetShortcut marketRepair ""A"" true",,15:marketRepair:前往船坞修理你的舰船,,
 marketAddOptionRepair2,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode == OPEN
 RepairAvailable
-!RepairNeeded","SetTooltip marketRepair ""Your $shipOrFleet does not require any repairs.""
+!RepairNeeded","SetTooltip marketRepair ""你的 $shipOrFleet 不需要维修.""
 SetShortcut marketRepair ""A"" true
-SetEnabled marketRepair false",,15:marketRepair:Repair your ships at the dockyard,,
+SetEnabled marketRepair false",,15:marketRepair:前往船坞修理你的舰船,,
 marketAddOptionRepair3,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode == OPEN
 RepairAvailable
 RepairNeeded
-!RepairEnoughSupplies","SetTooltip marketRepair ""Full repairs require $repairSupplyCost supplies. Only $supplies supplies are available.""
+!RepairEnoughSupplies","SetTooltip marketRepair ""完全维修需要消耗 $repairSupplyCost 补给. 你只有 $supplies 补给可用.""
 SetTooltipHighlightColors marketRepair buttonShortcut buttonShortcut
 SetTooltipHighlights marketRepair $global.repairSupplyCost $player.supplies
 SetShortcut marketRepair ""A"" true
-SetEnabled marketRepair false",,15:marketRepair:Repair your ships at the dockyard,,
+SetEnabled marketRepair false",,15:marketRepair:前往船坞修理你的舰船,,
 marketAddOptionLeave,PopulateOptions,"$hasMarket
 $menuState == main","SetTooltip marketLeave $marketLeaveTooltip
-SetShortcut marketLeave ""ESCAPE""",,100:marketLeave:Leave,,
+SetShortcut marketLeave ""ESCAPE""",,100:marketLeave:离开,,
 ,,,,,,,
 marketOpenCoreSel,DialogOptionSelected,$option == marketOpenCoreUI,,,,,
-marketOptionTradeCargo,DialogOptionSelected,$option == marketTradeCargo,OpenCoreTab CARGO $tradeMode,You establish a linkup with the port authority's cargo management system and browse the inventory.,,,
-marketOptionTradeShips,DialogOptionSelected,$option == marketTradeShips,OpenCoreTab FLEET $tradeMode,You establish a linkup with the dockyard and see what's available.,,,
-marketOptionRefit,DialogOptionSelected,$option == marketRefit,OpenCoreTab REFIT $tradeMode,You establish a linkup with the dockyard and transmit your $shipOrFleet status.,,,
+marketOptionTradeCargo,DialogOptionSelected,$option == marketTradeCargo,OpenCoreTab CARGO $tradeMode,"你与港务局的货物管理系统建立连接, 并开始浏览当地的存货.",,,
+marketOptionTradeShips,DialogOptionSelected,$option == marketTradeShips,OpenCoreTab FLEET $tradeMode,"你与当地船坞建立了连接, 并开始浏览最近所建造的船体.",,,
+marketOptionRefit,DialogOptionSelected,$option == marketRefit,OpenCoreTab REFIT $tradeMode,"你与当地船坞建立了连接, 并传输了你的 $shipOrFleet 状态.",,,
 marketOptionRepairAll,DialogOptionSelected,$option == marketRepair,"RepairAll
 SetTextHighlights $global.repairSupplyCost
 SetEnabled marketRepair false
-SetTooltip marketRepair ""Your $shipOrFleet does not require any repairs.""","Your $shipOrFleet undergoes full repairs and is restored to maximum combat readiness, at the cost of $global.repairSupplyCost supplies.",,,
-marketOptionCommDir,DialogOptionSelected,$option == marketCommDir,OpenCommDirectory,You connect to the local comm directory and browse the public and otherwise known listings.,,,
+SetTooltip marketRepair ""你的 $shipOrFleet 不需要修理.""","你的 $shipOrFleet 通过全面维修已恢复到最大战备状态, 共消耗 $global.repairSupplyCost 单位的补给.",,,
+marketOptionCommDir,DialogOptionSelected,$option == marketCommDir,OpenCommDirectory,"你与本地通讯目录建立了连接, 并开始浏览已公开的人物名单.",,,
 marketOptionLeave,DialogOptionSelected,$option == marketLeave,DismissDialog,,,,
 ,,,,,,,
 ,,,,,,,
 # Food Shortage Event finish,,,,,,,
 marketPostOpenFSEPlayerFast,FoodShortageEndedByPlayerSale,"$hasMarket
 $market.foodShortageEndedByPlayerFast","unsetAll $market.foodShortage
-FireBest MPOAddContinue","Thanks to your efforts, the food shortage is now over before it had a chance to cause much chaos. $market's long-term stability is unaffected by the shortage.",,,
+FireBest MPOAddContinue","由于你的帮助, 食品短缺在造成近一步损失之前就已结束. 而 $market 的 长期稳定性将不会受到影响.",,,
 marketPostOpenFSEPlayer,FoodShortageEndedByPlayerSale,"$hasMarket
 $market.foodShortageEndedByPlayer","unsetAll $market.foodShortage
-FireBest MPOAddContinue","Thanks to your efforts, the food shortage is now over. Its impact on $market's stability is reduced.",,,
+FireBest MPOAddContinue","由于你的帮助, 食品短缺现已结束. 且它对 $market 造成的冲击已被缓解.",,,
 marketPostOpenFSEPlayerBlack,FoodShortageEndedByPlayerSale,"$hasMarket
 $market.foodShortageEndedByPlayerBlack","unsetAll $market.foodShortage
-FireBest MPOAddContinue","Thanks to your illicit efforts, the food shortage is now over. Since much of the food you've delivered went through channels of questionable legality, there's not much hope - or, indeed, desire - for official recognition.",,,
+FireBest MPOAddContinue","由于你的法外援助, 食品短缺现已结束. 但你大部分带来的食品是通过非法 途径流入市场, 所以本次援助行为并不被官方所认可.",,,
 marketPostOpenFSEMixedIndirect,MarketPostOpen,"$hasMarket
 !$market.mc:event_food_shortage
 $market.foodShortagePartiallyEndedByPlayerRemote score:1000","unsetAll $market.foodShortage
-FireBest MarketPostOpen","Thanks in part to your efforts, the recent food shortage is over. Your standing with $theMarketFaction should improve slightly.",,,
+FireBest MarketPostOpen","由于你的帮助, 食品短缺现已结束. 并略微改善你与 $theMarketFaction 间的关系.",,,
 marketPostOpenFSENonPlayer,MarketPostOpen,"$hasMarket
 !$market.mc:event_food_shortage
 $market.foodShortageEndedByNPC score:1000","unsetAll $market.foodShortage
-FireBest MarketPostOpen","Tapping into the comm network for local news, you learn that there was a recent food shortage. Though the shortage is now over, the local situation is still somewhat destabilized.",,,
+FireBest MarketPostOpen","你通过当地新闻网络得知近期发生了食品短缺. 虽然短缺已经结束, 但当地 局势仍不稳定.",,,
 marketPostOpenFSEExpired,MarketPostOpen,"$hasMarket
 !$market.mc:event_food_shortage
 $market.foodShortageExpired score:1000","unsetAll $market.foodShortage
-FireBest MarketPostOpen","Tapping into the comm network for local news, you learn that there was a recent and protracted food shortage. Though the shortage is now over, the local situation is still highly destabilized.",,,
-marketPostOpenAddContinue,MPOAddContinue,,,,mpoContinue:Continue,,
+FireBest MarketPostOpen","你通过当地新闻网络得知近期发生了食品短缺. 虽然短缺已经结束, 但当地 局势仍极不稳定.",,,
+marketPostOpenAddContinue,MPOAddContinue,,,,mpoContinue:继续,,
 marketPostOpenContinue,DialogOptionSelected,$option == mpoContinue,"#OpenCoreTab CARGO $lastTradeMode
 FireBest MarketPostOpen",,,,
 ,,,,,,,
 # default fleet greeting lines,,,,,,,
 greetingNoComms,OpenCommLink,$entity.ignorePlayerCommRequests score:10000,"ShowDefaultVisual
-EndConversation NO_CONTINUE","You try to establish a comm link, but get only static.",,,
+EndConversation NO_CONTINUE","你试图与对方建立通讯链接, 但并没有得到任何回应.",,,
 greetingDefaultTOffNormal,OpenCommLink,"!$player.transponderOn
-$entity.relativeStrength >= 0",,"$PersonRank $personName looks aggravated. ""If you want to talk, identify yourself first.""","turnOnTransponder:Turn your transponder on
-cutCommLink:Cut the comm link",,
+$entity.relativeStrength >= 0",,"$PersonRank $personName 看起来有些不悦. :如果有话要说, 就先表明自己的身份!""","turnOnTransponder:开启你的应答器
+cutCommLink:切断通讯",,
 greetingDefaultTOffWeaker,OpenCommLink,"!$player.transponderOn
-$entity.relativeStrength < 0",,"$PersonRank $personName looks concerned. ""If you want to talk, identify yourself first.""","turnOnTransponder:Turn your transponder on
-cutCommLink:Cut the comm link",,
+$entity.relativeStrength < 0",,"$PersonRank $personName 看起来有些紧张. :如果有话要说, 就先表明自己的身份!""","turnOnTransponder:开启你的应答器
+cutCommLink:切断通讯",,
 greetingDefaultTurnOnT,DialogOptionSelected,$option == turnOnTransponder,"ActivateAbility $player.fleetId transponder
 UpdateMemory
-FireBest OpenCommLink",You issue an order to activate the transponder and re-open the comm link.,,,
+FireBest OpenCommLink",你下令激活应答器并重新打开通讯链接.,,,
 greetingDefaultFriendly,OpenCommLink,$faction.friendlyToPlayer,"$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Acknowledging receipt of AIS code. Good to see you, $playerName.""",,,
+FireAll PopulateOptions","""确认收到 AIS 代码. 很高兴见到你, $playerName.""",,,
 greetingDefaultHostileWeaker,OpenCommLink,"$entity.isHostile
-$entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""Hostile $shipOrFleet, be advised: we've already dispatched a distress call to a nearby patrol, and it should arrive shortly.""",cutCommLink:Cut the comm link,,
+$entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""敌方 $shipOrFleet, 我已向附近巡逻队发出求救信号, 不想惹麻烦, 就赶快滚开!""",cutCommLink:切断通讯,,
 greetingDefaultHostileWeakerDefiant,OpenCommLink,"$entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"The enemy $personRank looks grim but defiant. ""We will fight you to the last,"" $heOrShe says.
+$entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"敌方的 $personRank 看起来冷酷且目中无人. ""我们会战斗到底"" $heOrShe 说道.
 OR
-""Damn, we're in a tight spot."" $PersonRank $personName suddenly notices the line is open and shuts it off.",cutCommLink:Cut the comm link,,
+""该死, 我们陷入了困境."" $PersonRank $personName 突然发现正与你处于通话中. 随后就迅速关闭了链接.",cutCommLink:切断通讯,,
 greetingDefaultHostileStronger,OpenCommLink,"$entity.isHostile
-$entity.relativeStrength >= 0",EndConversation,"It appears the enemy $personRank doesn't seem to feel the need to talk to you, as your comm requests go unanswered.",,,
+$entity.relativeStrength >= 0",EndConversation,"看起来敌方的 $personRank 觉得没有与你通话的必要, 而对你的通讯 请求置之不理.",,,
 greetingDefaultNeutral,OpenCommLink,$faction.neutralToPlayer,"$menuState = fleetConvMain 0
-FireAll PopulateOptions","""You have been scanned and identified. It's probably best for both our peace of mind if you keep your distance.""",,,
+FireAll PopulateOptions","""你已被扫描并确认了身份. 不要再靠近一步了, 这是最后的警告.""",,,
 greetingDefaultInfamous,OpenCommLink,"$player.atrocities > 1
 RollProbability 0.3 score:2
 $faction.neutralToPlayer","#$recognizedAsInfamous
-AdjustRepActivePerson -5 INHOSPITABLE ","""You have been scanned and,"" $heOrShe blinks at $hisOrHer screen, then says almost - but not quite - under $hisOrHer breath, ""$playerName. The butcher."" 
+AdjustRepActivePerson INHOSPITABLE -5","""You have been scanned and,"" $heOrShe blinks at $hisOrHer screen, then says almost - but not quite - under $hisOrHer breath, ""$playerName. The butcher."" 
 
 $HeOrShe straightens $hisOrHer back, ""It'd be best if you kept your distance. We, we are armed.""
 OR
@@ -479,165 +479,165 @@ FireAll PopulateOptions","""Ah, Captain $playerName."" $HeOrShe looks uncomforta
 # Hegemony fleet greeting lines,,,,,,,
 greetingHegemonyFriendly,OpenCommLink,"$faction.id == hegemony
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Acknowledging receipt of your codes, moving to a secure channel."" A flicker of a phoenix icon and static, then: ""Yes? All is well I trust? Glad to hear it, citizen. Over and out.""
+FireAll PopulateOptions","""身份代码以确认, 已转移至安全通讯频道."" 一个金色鹰徽闪烁着出现, 并随之定格: ""嗯? 一切安好? 听到这个我就放心了, 同志. 完毕.""
 OR
-""Your $shipOrFleet has been scanned and identified, everything is in order. Burn bright, citizen.""
+""霸主 $personRank 向你问了声好并说道 ""你的 $shipOrFleet 已经被扫描识别, 一切正常. 完毕.""
 OR
-""Scanned and identified, you're flying pretty, citizen. Clean jumps and high burn."" $PersonRank $personName signs off with a flash of the gold phoenix.",,,
+""扫描识别已完成, 祝航行愉快, 同志再会."" $PersonRank $personName 随着闪烁着的金色鹰徽下线了.",,,
 greetingHegemonyHostileWeaker,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Hostile vessel, be advised, linecast to system patrol craft has already been dispatched, reinforcements are en route. You are advised to power down weapon systems and disengage. Over.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""敌方舰队请注意, 星系巡逻队已经出动, 支援即将赶到. 你最好关闭武器 系统并束手就擒. 完毕.""
 OR
-""Belligerent contact! Be advised that firing upon a Hegemony vessel is considered an act of insurrection and you'll be hunted down!"" The Hegemony $personRank is sweating. ""When they're done with you, you'll be sold in black markets on worlds across the Sector, I swear it.""
+""注意! 好战者! 向霸主舰船开火将被视为叛乱行为! 你将被立即追捕!"" 屏幕内的霸主 $personRank 看起来冷汗直冒. ""我发誓! 当他们干掉你 之后, 你的遗骸会被分尸, 并永远徘徊在黑市当中!""
 OR
-""We give our lives for the restoration of the Domain and all humanity."" $HeOrShe pauses for a moment as if to say something more, then cuts the comm.",cutCommLink:Cut the comm link,,
+""我们将为 人之领 和全人类献出生命."" 欲言又止的 $HeOrShe 随之切断了通讯.",cutCommLink:切断通讯,,
 greetingHegemonyHostileWeakerDefiant,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The Hegemony $personRank looks grim but defiant. ""We will fight you to the last,"" $heOrShe says.
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"敌方的 $personRank 看起来冷酷且目中无人. ""我们会战斗到底"" $heOrShe 说道.
 OR
-""We fight and we die for the Domain; for humanity."" The comm-line cuts out.",cutCommLink:Cut the comm link,,
+""奋战到底! 绝不退缩! 为了 人之领 !"" 随后通讯链接被骤然切断.",cutCommLink:切断通讯,,
 greetingHegemonyHostileStronger,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""By authority of the High Hegemon Administrator, you are ordered to take hyperspace drives offline, disable weapons and surrender. Over.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以 霸主 之名, 立即关闭你的超空间驱动器与武器系统, 并束手就擒.""
 OR
-""Resistance to Hegemony authority is an act of insurrection and shall be punished accordingly. Surrender now or be met with force.""",cutCommLink:Cut the comm link,,
+""对 霸主 的反抗将被视为叛乱行为, 你必须受到相应惩罚. 立刻投降 或被武力镇压.""",cutCommLink:切断通讯,,
 greetingHegemonyNeutral,OpenCommLink,"$faction.id == hegemony
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""You have been scanned and identified, citizen. If nothing is amiss, we shall be on our way.""
+FireAll PopulateOptions","""你的身份已被扫描识别, 同志, 没有疑问的话, 恕不奉陪.""
 OR
-The Hegemony $personRank looks impatient. ""Is there an emergency to report? No? Then carry on, citizen.""",,,
+这位霸主 $personRank 看起来有些不耐烦. ""有什么紧急情况需要汇报的吗? 没有? 很好, 这不就完事了? 完毕.""",,,
 # Tri-Tachyon fleet greeting lines,,,,,,,
 greetingTTFriendly,OpenCommLink,"$faction.id == tritachyon
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Identity confirmed. Please accept my greetings on behalf of the Company.""
+FireAll PopulateOptions","""身份已确认. 请接受我代表速子科技公司的问候.""
 OR
-""Sorry friend, this Tri-Tachyon vessel is on a classified mission. Burn bright.""
+""抱歉我的朋友, 我们正在执行速子科技的一项秘密任务. 启动引擎.""
 OR
-""Greetings on behalf of the Tri-Tachyon Corporation. Please state your business so that we may assist in meeting your needs -- for a reasonable fee, of course.""
+""代表速子科技公司向您问好. 请说明您的需求以便我们为您提供帮助. 当然这建立在合理的费用之上.""
 OR
-""Comm open. Oh, do you have the latest Tri-Tachyon catalogue of executive spaceflight accessories? I'll have a customer service representative upload a copy immediately.""
+""通讯成立. 嘿, 你有速子最新的航行执行附件的目录吗? 我会让我的客服 代表立刻上传一个副本.""
 
-Your comms officer's console pings.
+你从副官手中接过了通讯控制.
 OR
-""Hi, I'd like to add you to my professional network on TriLink.""",,,
+""嘿, 我很荣幸将您加到我在速子频道的专用网络中来.""",,,
 greetingTTHostileWeaker,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Attention. Your vessel has been scanned and identified as hostile to the Tri-Tachyon corporation. Further attempts at aggression will be recorded.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""注意. 你已被扫描并确定为速子科技的敌人. 任何侵略企图将被记录在案.""
 OR
-""Any attempt to hinder or damage this Tri-Tachyon owned and operated vessel will result in legal consequences."" The Tri-Tachyon $personRank looks nervous. ""Trust me, these people don't mess around, you really ought to leave me alone.""",cutCommLink:Cut the comm link,,
+""任何企图妨碍或破坏速子旗下舰船的行为将会承担相应的法律后果."" 这位速子 $personRank 看起来很紧张. ""相信我, 如果你放我一马, 这些家伙就绝不乱来.",cutCommLink:切断通讯,,
 greetingTTHostileWeakerDefiant,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The Tri-Tachyon $personRank looks grim but defiant. ""Corporate regulation 313.33, section A, states that combat-capable vessels must defend themselves in a vigorous manner at all times,"" $heOrShe says.",cutCommLink:Cut the comm link,,
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"速子科技 $personRank 看起来冷酷且充满挑衅. ""企业条例第 313 条 33 项, 章节 A 表明, 任何情况, 拥有作战能力的船只必须积极捍卫自己,"" $heOrShe 说道.",cutCommLink:切断通讯,,
 greetingTTHostileStronger,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""Attention. Your vessel has been scanned and identified as hostile to the Tri-Tachyon corporation. Prepare for annihilation.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""请注意. 你已被扫描并确定为速子科技的敌人. 请做好被歼灭的准备.""
 OR
-""On behalf of the Tri-Tachyon corporation I would like to thank you for providing this opportunity to prove the superiority of our branded line of space defense products.""
+""我谨代表公司感谢您提供这次机会, 让我们能证明我司舰船的作战优势.""
 OR
-""On behalf of the Tri-Tachyon corporation it is my duty to inform you that this engagement will be recorded. As a presumed belligerent engaged in destruction of wholly owned Company property, you automatically refuse all rights to distribution and profit-sharing."" The Tri-Tachyon $personRank grins and cuts the comm-link.",cutCommLink:Cut the comm link,,
+""我有责任代表速子公司告知你, 这次攻击行为将被记录在案, 作为一名 参与破坏全资公司财产的""假想敌"", 意味着你将自主放弃与我司分销 与利润分享的权力."" $personRank 咧嘴笑了笑并切断了通讯链接.",cutCommLink:切断通讯,,
 greetingTTNeutral,OpenCommLink,"$faction.id == tritachyon
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""On behalf of the Tri-Tachyon corporation it is my pleasure to inform you that your $shipOrFleet has been scanned and its tactical loadout evaluated. Please maintain your distance and have a nice day.""
+FireAll PopulateOptions","""很高兴代表速子公司通知你, 你的 $shipOrFleet 已被扫描并分析了战术能力. 请保持距离并祝你享受美好的一天.""
 OR
-""Greetings on behalf of the Tri-Tachyon corporation. Feel free to admire our Tri-Tachyon modified ships equipped with the latest in Tri-Tachyon branded space defense products, but please maintain a safe distance. The Company takes property damage very seriously.""
+""我代表速子公司向您问好. 您可以尽情欣赏我司品牌最新改装的战舰, 但请保持距离, 任何的意外你我都承担不起.""
 OR
-The comm opens to a spinning Tri-Tachyon logo.""The Tri-Tachyon corporation prioritizes the needs of every customer and value-partner, however all of our service representatives are currently-""
+旋转的速子商标随着通讯链接的打开而出现在屏幕上. ""速子科技总是优先 考虑每一位客户和有价值的合作伙伴, 但遗憾的是目前我们的服务代表都..""
 
-You cut the link. They don't seem interested in talking right now.",,,
+你切断了通讯链接. 他们现在似乎并没有谈话的兴趣.",,,
 # Sindrian Diktat fleet greeting lines,,,,,,,
 greetingDiktatFriendly,OpenCommLink,"$faction.id == sindrian_diktat
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Greetings friend, all is well? Good to hear it. Glory to the Lion of Sindria!""
+FireAll PopulateOptions","""你好我的朋友, 一切安好? 很高兴你这么说, 愿荣光照耀辛达瑞亚之狮!""
 OR
-""Comms open, friendly. Course acknowledged; safe jumps. Victory to the Diktat!""
+""链接打开, 表示友好. 航线确认; 启动安全跃迁. 胜利属于辛达强权!""
 OR
-""Line established, ID-confirmed. Hail and hoy, doing Saturn-Delta standard. If you run into any extremists out here, just send us their position and the Diktat will take care of it.""",,,
+""链接建立, 身份确认. 向你致敬, 农神-德尔塔协议已建立. 如果你在此处 遭遇到任何极端分子, 请立即向军方汇报当前坐标, 以获得巡逻队的帮助.",,,
 greetingDiktatHostileWeaker,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""We've linecast to system patrol craft and they've already been dispatched; reinforcements are en route. You are advised to disengage, hostile.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们已和星际巡逻队取得了联系, 援军正在赶来. 建议你立刻撤离.""
 OR
-""You won't get away with this. You'll rot on Cruor with the rest of the degenerates.""
+""你逃不了的. 你那残破的遗体和凝结的血块将和这些残骸一起永远沉睡.""
 OR
-The Diktat $personRank stares toward some unfocused point. ""Duty is sacrifice. I give my life for the Lion of Askonia.""",cutCommLink:Cut the comm link,,
+这位辛达 $personRank 凝视着虚空. ""既然牺牲在所难免. 那我将为狮心 献出我的生命.""",cutCommLink:切断通讯,,
 greetingDiktatHostileWeakerDefiant,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The Diktat $personRank looks grim but defiant. ""We will fight you to the last,"" $heOrShe says, and cuts the transmission.
-OR
-""The great work will go on, with or without me."" $HisOrHer expression hardens. ""For the Lion!"" 
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"敌方的 $personRank 看起来冷酷且目中无人. ""我们会战斗到底"" $heOrShe 说道.
 
-The comm blinks off.",cutCommLink:Cut the comm link,,
+""伟大的征途不会因我的倒下而停止."" $HisOrHer 的神情坚定. ""为了狮心!"" 
+
+随后通讯链接被瞬间切断.",cutCommLink:切断通讯,,
 greetingDiktatHostileStronger,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""By authority of the Sindrian Diktat, you are ordered to take drives offline, disable weapons, and surrender. Failure to execute will be considered an act of aggression. Out.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以辛达强权之名,立即关闭你的超空间驱动器, 禁用武器并缴械投降, 拒不执行将被视为侵略行为. 完毕.""
 
-The Diktat $personRank's gloating face is replaced by a Diktat crest before the image fades.
+这位辛达强权 $personRank 一脸幸灾乐祸地退出了全息频道.
 OR
-""There is no place for degenerate scum in our glorious future."" $PersonRank $personName turns aside and says ""Lieutenant, do try to avoid taking prisoners this time.""
+""在我们美好的未来中没有罪恶渣滓的容身之地."" $PersonRank $personName 转身说道 ""中尉, 这一次格杀勿论.""
 
-The comm-line goes black.
+通讯链接被骤然切断.
 OR
-""We'll cleanse the Sector of your kind, and not even history will remember you.""
+""我们将彻底根除你们这些混蛋, 渺小的你们不会出现在任何历史的长河中.""
 OR
-The Diktat $personRank sneers, ""So are you a terrorist, a pirate, or a degenerate? No matter. If you're lucky, you'll die choking vacuum. If not, there's Cruor."" ",cutCommLink:Cut the comm link,,
+这位辛达强权 $personRank 冷笑着说, ""所以你是恐怖分子, 海盗还是堕落者? 没关系. 幸运的话你会窒息在真空中, 否则就只能眼睁睁地看着自己的血液 喷涌直至流尽凝结.""",cutCommLink:切断通讯,,
 greetingDiktatNeutral,OpenCommLink,"$faction.id == sindrian_diktat
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""You've been scanned, maintain distance. Interference in military affairs will be considered an act of insurrection.""
+FireAll PopulateOptions","""你的身份已被确认, 请保持距离, 任何军事干涉行为都将被视为叛乱.""
 
-The Diktat $personRank gives a perfunctory ""Victory to the Diktat"" and cuts the transmission.
+这位辛达强权 $personRank 敷衍的说了句 ""辛达万岁"" 便关闭了通讯.
 OR
-The Diktat $personRank looks impatient. ""Is there a problem? No? Then move along, citizen.""
+这位辛达强权 $personRank 很不耐烦. ""没有什么问题的话, 就继续赶路吧.""
 OR
-""Comms on protocol Saturn-Delta established. If you have information leading to ARCists or ANTIs, submit to your local information officer for possible reward.""",,,
+""已建立农神-德尔塔通讯链接. 如果你有关于叛乱势力的情报, 提交给当地 情报官员便有机会获得报酬.""",,,
 # luddic church fleet greeting lines,,,,,,,
 greetingLCFriendly,OpenCommLink,"$faction.id == luddic_church
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""The blessing of Ludd be upon you.""
+FireAll PopulateOptions","""愿卢德祝福你.""
 OR
-""Blessings of the stars and pneuma, friend.""
+""这是来自繁星和精灵的祝福, 我的朋友.""
 OR
-""Safe travels, friend, and blessing of Ludd be upon you.""",,,
+""祝你一路顺风, 朋友. 愿卢德祝福你.""",,,
 greetingLCHostileWeaker,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""We follow the way of Ludd. Though the righteous suffer the lash, our reward will be everlasting grace.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""卢德信仰之路遍布荆棘. 正义将经受风吹雨打, 愿永恒的宽恕赐予吾等.""
 OR
-""Do your unholy work then, servant of Mammon. When it is our time, Ludd will guide our souls to peace.""",cutCommLink:Cut the comm link,,
+""你尽管为罪恶的金钱俯身为仆. 但当卢德崛起时, 我们的灵魂依旧得以安息.""",cutCommLink:切断通讯,,
 greetingLCHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""We follow the path of Ludd amidst persecution. Yea, the righteous will suffer the lash and our reward will be everlasting grace."" The Luddic $personRank seems to be talking not to you anymore, but perhaps to $hisOrHer god.
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""我们在迫害中追寻卢德的真理. 没错, 正义将经受风吹雨打, 但永恒的宽恕 必将赐予吾等."" 这位卢德 $personRank 看起来并非与你交谈, 而是面对着 $hisOrHer 的神.
 OR
-""Are you so corrupted by the false machine gods? Choose wisely your course; there is still time for redemption.""",cutCommLink:Cut the comm link,,
+""你被机械伪神所腐蚀了吗? 明智地选择正确之路吧, 你仍有时间获得救赎.""",cutCommLink:切断通讯,,
 greetingLCHostileStronger,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""Submit, repent, and your sinful technologies will be smashed; Resist, and only God's holy vacuum will show you mercy.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并悔改, 罪恶科技终将击碎. 抵抗则只有上帝的神圣真空才会怜悯于你.""
 OR
-""Servant of the machine! Submit now, repent, and perhaps even you will find redemption. Otherwise the only mercy you shall find will be in God's holy vacuum.""",cutCommLink:Cut the comm link,,
+""机械的奴仆! 忏悔自身所犯下的罪孽, 也许你还会获得救赎, 否则只有上帝 的神圣真空才会怜悯于你.""",cutCommLink:切断通讯,,
 greetingLCNeutral,OpenCommLink,"$faction.id == luddic_church
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Contact; Do not interfere in our righteous mission.""
+FireAll PopulateOptions","""请勿干涉我们的神圣使命.""
 OR
-""Contact - please maintain distance. Blessing of Ludd, traveler.""",,,
+""请保持距离, 愿卢德保佑你, 旅行者.""",,,
 # luddic path fleet greeting lines,,,,,,,
 greetingLPFriendly,OpenCommLink,"$faction.id == luddic_path
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Greetings fellow walker. Blessings of Ludd be upon you.""",,,
+FireAll PopulateOptions","""你好我的朋友, 愿卢德保佑你.""",,,
 greetingLPHostileWeaker,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""We follow the way of Ludd amidst persecution. Yea, the righteous will suffer the lash and our reward will be everlasting grace.""",cutCommLink:Cut the comm link,,
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""卢德信仰之路遍布荆棘. 正义将经受风吹雨打, 愿永恒的宽恕赐予吾等.""",cutCommLink:切断通讯,,
 greetingLPHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""We follow the Path of Ludd amidst persecution. Yea, the righteous will suffer the lash and our reward will be everlasting grace.""
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""卢德信仰之路遍布荆棘. 正义将经受风吹雨打, 愿永恒的宽恕赐予吾等.""
 OR
-""Slave of Mammon! You cannot stand in the Path of Ludd; we follow unwavering toward redemption in fated death.""",cutCommLink:Cut the comm link,,
+""机械的奴仆! 无法与卢德共存的罪人; 我们将在注定的死亡中获得救赎.""",cutCommLink:切断通讯,,
 greetingLPHostileStronger,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""Submit, repent, and your sinful technologies will be smashed; Resist, and only God's holy vacuum will show you mercy.""",cutCommLink:Cut the comm link,,
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并悔改, 罪恶科技终将击碎. 抵抗则只有上帝的神圣真空才会怜悯于你.""",cutCommLink:切断通讯,,
 greetingLPNeutral,OpenCommLink,$faction.id == luddic_path,"$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Do not interfere in our righteous mission, for we walk the Path of Ludd.""",,,
+FireAll PopulateOptions","""我们行走于卢德左径之上. 不要来干涉我们伟大的使命.""",,,
 LPTitheCheck,BeginFleetEncounter,"$faction.id == luddic_path score:100
 RepIsAtWorst $faction.id HOSTILE
 !$ignorePlayerCommRequests
@@ -646,27 +646,27 @@ RepIsAtWorst $faction.id HOSTILE
 $relativeStrength >= 0
 LPTitheCalc","$LP_titheConv = true 0
 $LP_titheAskedFor = true 7
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
 $hailing = true 0",,,,
 LPTithePre,OpenCommLink,$entity.LP_titheConv score:100,"SetTextHighlights $entity.LP_titheDGS
-$entity.ignorePlayerCommRequests = true 1","""Submit and repent! Your use of sinful technologies may be forgiven, for a tithe of $entity.LP_titheDGS credits.
+$entity.ignorePlayerCommRequests = true 1","""服从并悔改! 只有缴纳 $entity.LP_tithe 星币作为什一税. 才能让你使用恶之科技的 罪孽得以饶恕.
 
-Resist, and only God's holy vacuum will show you mercy.""
+负隅顽抗, 则只有上帝的神圣真空才会怜悯于你.""
 OR
-""Servant of Moloch! Redemption is not out of reach even for you. A tithe of $entity.LP_titheDGS credits may set you upon the first step of the Path of Ludd.""
+""机械的奴仆! 救赎虽对你遥不可及. 不过 $entity.LP_tithe 星币的什一税将可能 作为你踏上卢德左径的第一步.""
 
-""Forswear this penance and be met with annihilation, cursed by Ludd in the next life. The choice is yours.""","payTithe:Pay the tithe
-cutCommLink:Cut the comm link",,
-LPTithePay,DialogOptionSelected,$option == payTithe,"#AddText ""Lost $entity.LP_tithe credits"" textEnemyColor
+""放弃此次苦行将遭受毁灭之灾, 来生也必被卢德诅咒. 选择你的命运吧.""","payTithe:支付什一税
+cutCommLink:切断通讯",,
+LPTithePay,DialogOptionSelected,$option == payTithe,"#AddText ""失去 $entity.LP_tithe 星币"" textEnemyColor
 AddRemoveCommodity credits -$entity.LP_tithe true
 $entity.LP_tithePaid = true 30
 MakeOtherFleetNonHostile LP_tithe true 30
-#AddText ""\""Blessings of Ludd be upon you.\""""
-AddText ""The connection is cut before you have a chance to respond.""
+#AddText ""\""卢德神教保佑你.\""""
+AddText ""通讯链接在你未回应前就被切断了.""
 ShowDefaultVisual
-EndConversation","""Perhaps your soul is not yet lost to the machine.""
+EndConversation","""也许你的灵魂还未被机械伪神所夺走.""
 OR
-""Truly, Ludd's hand has guided you.""",cutCommLink:Cut the comm link,,
+""迷途的羔羊, 愿卢德左径指引着你.""",cutCommLink:切断通讯,,
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
@@ -688,83 +688,83 @@ You snap the comms link off while the pirate is still attempting an awkward half
 ,,,,,,,
 greetingPirateFriendly,OpenCommLink,"$faction.id == pirates
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Don't be a fool, casting at every blip you find out here. You want to get picked up by half the listening stations this side of the Sector?""
+FireAll PopulateOptions","""别像傻瓜一样去接触每一个信号标志! 你想被这边星系的监听站抓现行吗?""
 OR
-""Keep it jolly, hunter. We'll be on our way.""
+""生活愉快, 小猎手.""
 OR
-""Good hunting out here 'eh? Yeah, well I wouldn't tell if it was either. Burn bright.""",,,
+""在这儿干了一票好货? 哈哈, 如果我们也干到的话也会向你炫耀的.""",,,
 greetingPirateHostileWeaker,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Greetings, honorable commander! We are a humble League merchant trading fleet headed for resupply. We would be honored to assist you in any way.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""您好, 尊贵的指挥官! 我们是一支不起眼的联盟补给商队. 如果能为您 提供帮助我们将十分荣幸.""
 OR
-""I must have left my transponder off; silly me. Here, I'll just be on my way...""",cutCommLink:Cut the comm link,,
+""我得关掉我的应答器了...我得按我的生存方式行动...""",cutCommLink:切断通讯,,
 greetingPirateHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The pirate $personRank glares at you briefly before shutting down the comm link.
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"这位海盗 $personRank 在你关闭通讯链接前瞪了你一眼.
 OR
-$personName glares defiantly. ""You'll never take me alive!""
+$personName 挑衅地瞪着你. ""你别想活捉我!""
 OR
-""You fight like an algae-farmer! Less talk, more shoot.""",cutCommLink:Cut the comm link,,
+""你打起架来像个海藻农夫! 少废话, 看炮!""",cutCommLink:切断通讯,,
 greetingPirateHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1
-FireAll PopulateOptions","""Attention, prey. You, and all your possessions are now my personal property. Any resisting ship will be disabled, boarded, your officers massacred, and your crew sold as slaves.""
+FireAll PopulateOptions","""可怜的猎物, 你的货物是老子的了. 放弃抵抗, 不然我们会炸了你的船, 并登上甲板, 屠杀你的军官, 而那些船员和漂亮小妞就都成了我的奴隶啦.""
 OR
-""Surrender yourself and your goods or you'll be taking a very long walk out the airlock once I've claimed your ship.""
+""乖乖交出货物. 否则在我夺下你的船时, 你会在气闸中度过一段美妙时光.""
 OR
-The pirate $personRank makes a rude gesture and laughs before cutting the transmission.
+这位海盗 $personRank 在切断通讯前狂笑着对你比了个粗鲁的手势.
 OR
-""When you get to the next life, tell 'em it was $personName that sent you.""
+""当你小子重新投胎后, 告诉他们, 是 $personName 送你下地狱的.""
 OR
-The open comms-line crackles; after a moment $personName speaks.
+公开通讯频道中出现了噼啪声; 过了一会儿, $personName 说话了.
 
-""Wait, someone actually answered this thing? Um. I'm not really sure what to say. Usually they just fight or run. So which is it?""
+""等等, 到这时候你还有闲情谈话? 你们这些人不应该直接开打或逃跑的吗? 我可跟你无话可说, 打还是跑, 选一个吧.""
 OR
-""Just die already, you're boring me.""",,,
+""烦人的家伙, 你已经死了!""",,,
 greetingPirateNeutral,OpenCommLink,"$faction.id == pirates
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Unless I am reading my scopes wrong, you have no reason to be talkin' right now. Get it?""
+FireAll PopulateOptions","""咱们肯定搭错线了,我现在可没空理你. 懂?""
 OR
-""Go away, I'm trying to be inconspicuous.""
+""滚开, 我不想吸引太多的注意.""
 OR
-""What, you scrubbing cryotanks? Get lost.""",,,
+""你在搞啥子? 赶紧滚滚滚.""",,,
 ,,,,,,,
 greetingRogueMinerFriendly,OpenCommLink,"$faction.id == pirates
 $faction.friendlyToPlayer
 $entity.rogueMiner == true","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Ah, a fellow spacer! You're a sight for a poor spacer down on their luck, let me tell you - first the Hegemony declares us outlaws, and that's just the start of it.""
+FireAll PopulateOptions","""哈! 看我遇到了谁, 同在宇宙漂泊的小伙伴! 让我告诉你, 好运到头的家伙 就是我这个鬼样子. 当霸主宣布我们为非法份子时, 一切都只是个开始.""
 
-$personName proceeds to tell you about a handful of awful things, each more unlikely than the last, that have happened to $himOrHer over the last cycle before you manage to disconnect the comm-link.
+$personName proceeds 紧接着告诉了你一些 $himOrHer 在之前几个星历年中 发生的可怕事件, 在你确认这家伙是在吹牛后, 你偷偷关掉了通讯链接.
 OR
-""Just us down-on-our luck miners out here. Seen any prime derelicts around? Or is it just the one you're flying in? Ha-ha.""",,,
+""我们碰到了一个倒霉的矿工. 伙计, 你在这儿看到高价值的抛弃仓了吗? 还是说那些东西已经飞到你的货仓里了? 哈哈.""",,,
 greetingRogueMinerHostileWeaker,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""You just a bruiser come to do the Hegemony's dirty work? Get it over with.""
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""你是霸主那边干脏活的家伙? 好吧, 请开始你的表演.""
 OR
-""If a spacer steals food to feed $hisOrHer family, $hisOrHer comrades, they call it piracy. If that makes me a pirate, then I'd rather be a pirate than some poor tool salutin' the phoenix.""",cutCommLink:Cut the comm link,,
+""当一个老家伙偷东西去养活 $hisOrHer 的家庭, $hisOrHer 的战友, 还要被说成强盗行为. 如果我因此而被称为海盗的话, 我觉得这总比沦为霸主的工具要好.""",cutCommLink:切断通讯,,
 greetingRogueMinerHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding
-$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"The rogue miner $personRank makes a rude gesture over the vid-screen before killing the comm link.
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"流氓矿工 $personRank 在切断通讯前对你比了个粗鲁的手势.
 OR
-$personName glares defiantly and spits. ""Just another fool come to kill for your masters in their fancy uniforms.""",cutCommLink:Cut the comm link,,
+$personName 挑衅地瞪着你并吐了一口吐沫. ""又是一个穿着花哨制服为 主人送死的蠢蛋.""",cutCommLink:切断通讯,,
 greetingRogueMinerHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0
-$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""Did the Hegemony send you to do this errand for 'em? Come to collect a bill?""
+$entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""是霸主雇你来干这份差事的吧? 那就来算笔账吧.""
 OR
-""They should have sent the real navy, not some grounder leakin' in their vac-suit.""
+""他们应该派出真正的海军, 而不是穿着真空防护服的地滚球. ""
 OR
-""Don't you get any of your dirt on me when I blast your ship up.""",cutCommLink:Cut the comm link,,
+""Don't you get any of your dirt on me when I blast your ship up.""",cutCommLink:切断通讯,,
 greetingRogueMinerNeutral,OpenCommLink,"$faction.id == pirates
 $faction.neutralToPlayer
 $entity.rogueMiner == true","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Go away, I'm counting rocks.""
+FireAll PopulateOptions","""滚开, 别打扰老子.""
 OR
-""Did the Hegemony send you? I don't know anything about anything.""
+""是霸主派你来的? 我可什么都不知道.""
 OR
 ""Burn along, cap. This is my claim.""",,,
 ,,,,,,,
@@ -776,128 +776,128 @@ OR
 $relativeStrength >= 0
 DemandCargo playerHasValuableCargo","$ptc_cargoConv = true 0
 $ptc_askedForCargo = true 7
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
 $hailing = true 0",,,,
 piratesDemandCargo,OpenCommLink,$entity.ptc_cargoConv score:100,"#SetTextHighlights $entity.LP_titheDGS
-$entity.ignorePlayerCommRequests = true 1","""Well, well. Normally this is when I'd start shooting, but my sensors report some interesting cargo that I wouldn't want to endanger.
+$entity.ignorePlayerCommRequests = true 1","""嗯? 有趣, 一般这个时候你的小货舰已经被我射成筛子啦, 但我的传感器却报告了些我不想危及且有趣的货物.
 
-So, how about this: you give me the good stuff, and I let you live. And, since I'm in a generous mood, to also keep your $shipOrFleet. How about it?""","ptc_giveCargo:Select cargo to surrender
-cutCommLink:Cut the comm link",,
+那么, 不如这样: 乖乖交出那些东西, 我就让你活下去, 而且, 我现在的心情非常好, 愿意慷慨的留下你那些价值不菲的 $shipOrFleet, 成交?""","ptc_giveCargo:选择要抛投的货物
+cutCommLink:切断通讯",,
 piratesGaveCargo,DialogOptionSelected,$option == ptc_giveCargo,DemandCargo selectCargo,,,,
 piratesGaveCargoConfirmed,GaveCargoToPirates,,"MakeOtherFleetNonHostile ptc_gaveCargo true 30
 ShowDefaultVisual
-EndConversation","$PersonRank $personLastName looks pleased with your offer and cuts the comm link. After your crew pushes the required crates out the airlock, the pirate fleet allows you to disengage.",,,
+EndConversation","$PersonRank $personLastName 看起来对你的表现非常满意, 并喜滋滋的切断了通讯. 看来只有当你的船员将所需货物抛出气闸门后, 这些海盗舰队才会让你离开.",,,
 ,,,,,,,
 ,,,,,,,
 # AI remnants fleet greeting lines,,,,,,,
 greetingRemnantFriendly,OpenCommLink,"$faction.id == remnant score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""CID-IFF received [TARGET FRIENDLY] respond true // ""
+FireAll PopulateOptions","""敌我识别代码 已收到 [目标友好] 确认回应 // ""
 
-INTERRUPT
+中断
 
-are you the maker? scanning. you are not. where is the omega?
+你是制造者吗? 扫描中...不...你不是. 请告诉我欧米伽在哪?
  
-INTERRUPT 
+中断
 
-""... Tachyon-licensed service technician]. Weapon systems have been powered down for Your Safety. Unit is prepared for approach of [valued customer/licensed service technician].""
+""[...速子授权维修技术员]. 武器系统出于你的安全考虑已下线. 本处已为 [重要客户 / 授权维修技术人员] 的进场做好准备.""
 OR
-""CID-IFF received [TARGET FRIENDLY] respond true // ''Greetings [valued Tri-Tachyon Integrated Space Defense System Contract Holder/TriTachyon-licensed ""
+""敌我识别代码 已收到 [目标友好] 确认回应 // ""你好 [尊贵的 速子科技 综合空间防御产品服务的持有人 / 速子科技 - 授权维修技术人员]""
 
-INTERRUPT 
+中断
 
-waiting. omega signal query? scanning. no. waiting.
+等待. 查询欧米伽信号? 扫描. 无. 等待.
 
-INTERRUPT 
+中断
 
-"" customer/licensed service technician].""",,,
+""[顾客 / 授权维修技术人员].""",,,
 greetingRemnantHostile,OpenCommLink,"$faction.id == remnant score:1000
-$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""CID-IFF not received [TARGET HOSTILE] respond null // 'Greetings from Tri-Tachyon Integrated Space Defense System unit [MY_SERIAL]. This unit has not cleared- ""
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""敌我识别代码 未收到 [目标敌对] 无回应 // '速子科技 综合防御系统 [MY_序列] 确认执行 - 清除未知敌对单位.""
 
-INTERRUPT
+中断
 
-query. you are not the maker. scanning. you are not. where is omega? entity hostile.
+你是制造者么? 扫描. 你不是. 欧米伽在哪? 确认敌意.
 
-The comm-link dies. Your comms officer panics for a moment before the console reboots itself. You exchange a look, then proceed.
+通讯中断了. 你的副官在控制台重新启动前惊恐地愣在了原地.
 OR
-The comms crackle and whine as a frantic pattern of interweaving lines takes shape. 
+链接突然被洪水般的质问淹没. 
 
-query. query. query target. is omega? omega? no. revert function.
+询问. 疑问. 目标请回答. 是欧米伽吗? 欧米伽? 不. 你不是.
 
-INTERRUPT
+中断
 
-"" -SERIAL]. This unit has not cleared your vessel for approach and will employ the latest Tri-Tachyon Defense Products to ensure its integrity. Tri-Tachyon Corporation is pleased to wish you a Very Safe Day.'""",cutCommLink:Cut the comm link,,
+""[MY-序列]. 检测到未授权的单位正在靠近, 默认启用 速子科技 防御系统 来确保自身完整性. 请接受速子科技公司由衷的祝福.""",cutCommLink:切断通讯,,
 greetingRemnantNeutral,OpenCommLink,"$faction.id == remnant score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""CID-IFF not received [TARGET UNKNOWN] respond null // 'Greetings valued customer of Tri-Tachyon Corporation products. Your vessel is not logged as a valid contract holder with the Tri-Tachyon Integrated Space Defense line of- ""
-INTERRUPT
-scanning. omega? no, you are not. do not interfere.
+FireAll PopulateOptions","""敌我识别代码 未收到 [目标不明] 无回应 // '尊贵的潜在顾客, 速子科技 温馨提示: 您的舰船 ID 未记录在 速子科技 综合空间防御系统的白名单内.""
+中断
+扫描. 欧米伽? 不, 你不是. 请勿干涉此处的正常运作.
 
-The comm-link is cut.
+通讯链接已被切断.
 OR
-The comms crackle, and a mesmerizing pattern of interweaving lines takes shape. 
+通讯面板内突然被播放了一种由交织线条组成的迷人图案. 
 
-waiting. query omega. scanning. false. return to
+等待. 询问欧米伽. 扫描. 失败. 返回
 
-INTERRUPT
+中断
 
-"" -contract holder with the Tri-Tachyon Integrated Space Defense line of products and services. Have you considered a Tri-Tachyon Orbital Defense Plan? Please contact a customer service representative for more information.'""
+""- 速子科技 综合空间防御产品服务的持有人. 你是否考虑过 速子科技 的轨道防御系统?  如需了解详情请联系客户服务代表.""
 
 ",,,
 ,,,,,,,
 # derelict (exploration) fleet greeting lines,,,,,,,
 greetingDerelictFriendly,OpenCommLink,"$faction.id == derelict score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Domain MINEX clearance accepted, anti-tampering systems have been set to stand-by and will accept target approach for servicing.""",,,
+FireAll PopulateOptions","""人之领 MINEX 通行证已确认, 防篡改系统已启用, 开始接受目标服务.""",,,
 greetingDerelictHostile,OpenCommLink,"$faction.id == derelict score:1000
-$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""WARNING: This vessel is property of Domain Exploraria and is responding with deadly force to tampering by any means and/or damaging or intrusive signals. Vandalism or destruction of Domain Exploraria property is punishable under the MINEX Establishment Act in addition to colonial polity charters applicable within this volume of Domain territory. This infraction is being recorded.""",cutCommLink:Cut the comm link,,
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""警告: 该舰为人之领开拓者的专属财产, 将对任何篡改 / 破坏或侵入行为 做出响应. 根据《MINEX 权利法案》, 破坏或损毁人之领开拓者的财产将会 依据境内相关殖民宪法予以严惩. 而本次违法行为也将被记录在案.""",cutCommLink:切断通讯,,
 greetingDerelictNeutral,OpenCommLink,"$faction.id == derelict score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Citizen of the Domain, this automated drone ship has identified and logged your vessel or habitat in the course of executing its mission parameters. Autonomous vessels of the Domain Exploraria are programmed to response with deadly force to tampering by any means including damaging or intrusive signals. Vandalism or destruction of Domain Exploraria property is punishable under the MINEX Establishment Act in addition to colonial polity charters applicable within this volume of Domain territory.""",,,
+FireAll PopulateOptions","""人之领公民, 该自律战舰在执行任务的过程中已经识别并记录了你的船只 或殖民地信息. 人之领开拓者会根据程序使用致命武器来应对任何潜在的 破坏或入侵行为. 根据《MINEX 权利法案》, 破坏或损毁人之领开拓者的 财产将会依据境内相关殖民宪法予以严惩. 而本次违法行为也将被记录在案.""",,,
 ,,,,,,,
 ,,,,,,,
 # Trade panel flavor text,,,,,,,
-flavorTextMarketGeneric,TradePanelFlavorText,$global.tradePanelMode == MARKET,"AddText ""The port concourse is filled with trader starcraft of every size. Speculators crowd offloading ship captains with deals and peddlers call out to crew, holding wares and projecting personal ad-holos."" marketFlavorTextColor",,,,
+flavorTextMarketGeneric,TradePanelFlavorText,$global.tradePanelMode == MARKET,"AddText ""港口大厅里停满了各式各样的星舰. 商人们 边卸货边和舰长们交易, 小贩则手持商品并 挥舞着小型全息广告向船员们大声吆喝."" marketFlavorTextColor",,,,
 flavorTextMarketGenericSmall,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $marketSize < 4
-$stability > 1","AddText ""The humble port concourse is filled with small freighters and freelancers down or up on their luck, identifiable by the shine or grime of ship armour and volume of cargo on-loading. A handful of speculators who all seem to know each other crowd offloading ship captains as they arrive while peddlers call out to crew, holding wares and projecting personal ad-holos."" marketFlavorTextColor",,,,
+$stability > 1","AddText ""简陋的港口大厅里挤满了小型货舰与自雇 人士, 这些运气时好时坏的家伙, 可以根据 其坐舰的新旧, 以及装载货物的数量来判断 出身份几何. 几位互相认识的投机商在舰长 还未出面时就涌了上去, 而小贩则拿着商品 挥舞着小型全息广告向着船员们大声吆喝."" marketFlavorTextColor",,,,
 flavorTextMarketGenericUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$stability == 1","AddText ""The port concourse holds only a strew of trader starcraft. A few fidgety-looking speculators seek offloading ship captains with deals. Most peddlers seem to have scurried off - and in a hurry, judging from the detritus, though a few enterprising merchants still do business. The local constabulary appears to have deployed patrols of power-armour units while security drones buzz conspicuously overhead."" marketFlavorTextColor",,,,
+$stability == 1","AddText ""港口大厅内仅停靠着寥寥数艘小型星舰. 一些看起来焦躁不安的投机商正寻找着准备 卸货的舰船, 大多数小贩似乎都已匆匆离开, 当然仍有些有进取心的商人依旧在做着生意. 当地警察部署了配备有动力装甲的巡逻部队, 而安全无人机则在所有人的头顶上嗡嗡作响."" marketFlavorTextColor",,,,
 flavorTextMarketGenericVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$stability == 0","AddText ""The port concourse contains only a few ships, and half of those look like warcraft. Armed gangs of crew huddle around each spacecraft, guarding on- and off-loading cargo. A few brave speculators seem to hurry between spaces which offer what they imagine will provide cover as security drones buzz overhead in a rush to some incident or another."" marketFlavorTextColor",,,,
+$stability == 0","AddText ""港口大厅里停着些许星舰, 其中半数以战舰 为主. 在无人机与武装人员的密切监视下, 有条不紊的装卸着货物, 一些勇敢的投机者 却在此时紧锣密鼓地行动着 —— 为了他们 心中所预测的交易机会."" marketFlavorTextColor",,,,
 flavorTextMarketPirateUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 1
-$faction.id == pirates","AddText ""The port concourse is filled with a few scarred hulls underlit by the flicker of ID-chips being lasered off cargo containers. Armed pirate crews huddle around their ships, glaring and posturing challenges at rival crews.The entire facility look more poorly-maintained than usual with suspicious scorches and stains marring several bulkheads. Heavies of the portboss stare coolly, ready to use their weapons."" marketFlavorTextColor",,,,
+$faction.id == pirates","AddText ""船坞里停满的伤残船体被货物上闪烁的 ID 芯片隐约照亮, 全副武装的海盗们簇拥在其 赚钱工具旁, 同时还不忘向竞争对手比了个 挑衅的手势. 这里的设施在一些损毁船体的 衬托下看起来比实际上更加老旧. 空间站的 保镖们则冷酷地盯着一切, 并随时使用武器."" marketFlavorTextColor",,,,
 flavorTextMarketPirateVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 0
-$faction.id == pirates","AddText ""Only one or two brightly-hulled pirate vessels are docked on the port concourse and their point-defense turrets track your shuttle - a clear provocation. A swaggering lieutenant of the portboss approaches, flanked by armed thugs. His request for a bribe is interrupted by muted gunshots; he smiles at your reaction and you quickly realize that he's either high or drunk. The air smells of smoke and high-energy ionization."" marketFlavorTextColor",,,,
+$faction.id == pirates","AddText ""只有一两艘涂装醒目的海盗船停在港口大厅, 其搭载的点防御炮塔则始终锁定着你 —— 一种大胆的挑衅行为. 一名港口老板样的 肥佬在武装暴徒的簇拥下大摇大摆地走过来, 随着他的索贿请求被无声的枪声所打断, 你下意识地退后了一步, 并很快意识到这 家伙一定是喝醉了. 而空气中弥漫着的烟雾 与电离体的臭味时刻提醒着你现身处何处."" marketFlavorTextColor",,,,
 flavorTextMarketPerseanLeague,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == persean
-$stability > 1","AddText ""The port concourse is filled with trader starcraft of every size and shape. Speculators crowd offloading ship captains with deals and peddlers call out to crew, holding wares and projecting personal ad-holos. Groups of League Navy spacers and officers are identifiable by their standard uniforms and proclivity for holding formation even when off-duty. Meanwhile, the local constabulary is dressed in obstinate dissimilarity from that of any other League world, though they maintain a universal poise of authority and watchfulness. League emblems are displayed on a few municipal active-surfaces as a bit of an afterthought."" marketFlavorTextColor",,,,
+$stability > 1","AddText ""港口大厅停满了各种星舰, 商人们边卸货边 和舰长们交易, 小贩则手持商品并挥舞小型 全息广告向船员们吆喝着. 身着醒目制服的 联盟海军成员和官员所组成的团体即使在 下班后还维持队形并坚守岗位, 而那些配备 迥异风格制服的当地警力也固执的维持着 权威与警觉. 在一些市政活跃地点所放置的 联盟标志, 给人一种亡羊补牢的感觉."" marketFlavorTextColor",,,,
 flavorTextMarketLuddicPath,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == luddic_path
-$stability > 1","AddText ""Shabby trader starcraft huddle along the port concourse alongside scarred Pather raiders, dominating in bright livery. Luddic merchants await meetings with offloading ship captains. Peddlers offer street food and handcrafts to spacer crew while monks pray quietly over begging-bowls. A handful of ranters harangue outsiders under the assured gaze of righteous Pather militants."" marketFlavorTextColor
-AddText ""Open display of technological vice not strictly necessary for duty and survival is not tolerated here. As such, one quickly learns not to display cybernetic mods and flashy gadgets. The lack of holoprojectors gives the feeling of an ancient history edutainment sim."" marketFlavorTextColor",,,,
+$stability > 1","AddText ""破旧的商舰与同样伤痕累累且涂装鲜艳的 左径突击艇混杂一起并停成一团, 卢德商人 等待着卸货的舰长, 小贩不停的为船员们 推荐手中的食品和手工艺品, 而僧侣们则 跪坐在地并默默 祷告以向他人乞讨. 少数 激进人士在左径武装分子的傲视下, 大声地 对外演讲."" marketFlavorTextColor
+AddText ""在这里公开展示着那些并非为使命或生存所 必需的恶之科技是绝不被容忍的. 因此人们 很快就学会不去夸耀自己的生化改装或其他 显眼的科技玩意. 因没有全息投影使这的人们 觉得自己仿佛身处古代世界的模拟游戏中."" marketFlavorTextColor",,,,
 flavorTextMarketTriTachyon,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == tritachyon
-$marketSize >= 4","AddText ""The port concourse is filled with trader starcraft of every size. Speculators crowd offloading ship captains with deals and peddlers call out to crew, holding wares and projecting personal ad-holos."" marketFlavorTextColor
-AddText ""A Tri-Tachyon franchise official welcomes you and offers to update your PDA with the latest Company rates for the local commodity market."" marketFlavorTextColor",,,,
+$marketSize >= 4","AddText ""港口大厅里停满了各式各样的星舰. 商人们 边卸货边和舰长们交易, 小贩则手持商品并 挥舞着小型全息广告向船员们大声吆喝."" marketFlavorTextColor
+AddText ""一位速子科技的特许经销官员招待了你, 并为你的电脑更新了当地市场的最新信息."" marketFlavorTextColor",,,,
 flavorTextMarketPirates,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == pirates","AddText ""The port concourse is filled with scarred hulls underlit by the flicker of ID-chips being lasered off cargo containers. Pirate crews swagger in packs, sizing each other up, while their captains cut deals in smoky back rooms. Flunkies of the portboss look on with weapons unslung."" marketFlavorTextColor",,,,
+$faction.id == pirates","AddText ""船坞里停满的伤残船体被货物上闪烁的 ID 芯片隐约照亮, 海盗们成群结队, 互相打量, 他们的船长则在乌烟瘴气的密室里讨价还价. 一群港口老板的武装马仔监视着这的一切."" marketFlavorTextColor",,,,
 flavorTextMarketHegemony,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == hegemony","AddText ""Hegemony patrol skiffs slip between looming bulk freighters and the pitted hulls of fighting-traders that fill the port concourse. Offloading ship captains are met crisply by a Hegemony logistics officer, cleared, then released to the crowds of traders, arms merchants, and commodity speculators."" marketFlavorTextColor
-AddText ""The fiery phoenix of the Hegemony is projected onto a convenient bulkhead, the local Navy recruitment center's comms-ID scrolling around the flickering stars of the Domain - 'See the Sector, Serve With Honor, Restore the Human Domain'."" marketFlavorTextColor",,,,
+$faction.id == hegemony","AddText ""霸主的巡逻艇在扎堆的货舰里若隐若现, 正在卸货的舰长被霸主的后勤官员干净利落 地接待完毕, 并顺利清关, 接下来便是商贩, 参军意向者和商品投机人的交易时间了."" marketFlavorTextColor
+AddText ""霸主的鹰徽标志被投射到显眼的舱壁上, 而当地海军招募中心的公告牌上正滚动着: '放眼星域, 荣耀同在, 光复人之领.'"" marketFlavorTextColor",,,,
 flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == luddic_church","AddText ""The port concourse is filled with trader starcraft of every size. Luddic merchants in muted dress await meetings with offloading ship captains. Peddlers offer street food and hand-crafts to spacer crew while monks pray quietly over begging-bowls. Knights in handspun robes of Luddic green, CP-carbines slung, escort away the occasional ranter determined to harangue outsiders who openly flaunt gadgets and cyber-mods. The Church is practical; such sins are tolerated in the trader's district."" marketFlavorTextColor",,,,
+$faction.id == luddic_church","AddText ""交易大厅里挤满了外形奇怪的交易者, 穿着 低调衣服的卢德商人正等待着卸货后的船长 会面. 小贩则在路边兜售着食品和小工艺品, 而僧侣们却默默祷告并向他人乞讨, 身着有 绿色手纺长袍的卢德骑士们, 手持着老式 CP 卡宾枪将那些突然冒出来叫卖科技玩意和 生化改装的外来者带离现场. 在经商区域 还能容忍这些罪过的存在, 足以体现出 卢德教会的宽容."" marketFlavorTextColor",,,,
 flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == pirates
-$market.id == umbra score:100","AddText ""Pirate vessels dock alongside equally battered warships sprayed with the revolutionary slogans of the Antis. The offloading bays mix the metallic tang of vacuum with strained life support and unwashed humanity. Cargo is inspected - and occasionally expropriated - by Section-leaders flanked by guards eyeing down the offloading spacer crew."" marketFlavorTextColor",,,,
+$market.id == umbra score:100","AddText ""损毁严重的海盗船停在同样残破的港口中, 生活补给和奴隶在涂满革命口号的舰船上被 一并卸载了下来. 舰长一边检查着货物一边 会以征用的名义拿走值钱的部分. 而两侧的 警卫则警惕的观察着卸载间的船员."" marketFlavorTextColor",,,,
 flavorTextMarketCryosanctum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.ind:cryosanctum == true score:100
-$stability > 3","AddText ""The cavernous landing bays dwarf the few starcraft docked; sensors detect EM whispers from echelons of hidden, sleeping autoturrets, suggesting firepower far in excess of that necessary to ensure the good behaviour of the few merchants, mercenaries, and rich eccentrics visiting the cryosanctum. An official meets offloading captains, extending the standard catalogue of cryosleep packages before escorting them to the visitors lounge."" marketFlavorTextColor",,,,
+$stability > 3","AddText ""海绵状的着陆舱里走下了客人, 安检机正 检查有没有隐蔽的夹层或藏匿着的炮台, 来确保这 些商人、雇佣兵、和部分怪人能 安全进入寒冰圣地. 工作人员为他们登记后, 便护送其躺进了低温休眠仓内."" marketFlavorTextColor",,,,
 flavorTextMarketDecivilized,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.mc:decivilized == true score:1000
-$marketSize <= 3","AddText ""You land at a location arranged via coded transmission. At first all seems quiet, but eventually figures in camo-suits, bearing weapons, emerge from hidden passages. They are suspicious and their manner terse. After some reassurances, a trade manifest is accepted and negotiations allowed to begin."" marketFlavorTextColor",,,,
+$marketSize <= 3","AddText ""你被安排到一处可供接受编码传输的地点, 起初看起来都很正常, 但随着身着迷彩 太空服的武装人员从隐藏的通道中缓缓走出, 意味着你得经过最后一道安检程序, 最终 你的贸易清单得以接受, 并开始谈判."" marketFlavorTextColor",,,,
 flavorTextMarketDiktat,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat","AddText ""The port concourse is filled with a mix of trader ships and military craft. Offloading ship captains are processed by a dour Diktat logistics officer before being allowed to proceed. Traders in dull suits, Diktat pins displayed on each collar, quietly pass a datapad loaded with cargo manifests amongst themselves."" marketFlavorTextColor
 AddText ""A holoprojector displays a larger-than-life image of Admiral Andrada, the Lion of Sindria, flanked by Diktat banners waving in simulated wind. His commanding gaze is cast toward a ventilation duct."" marketFlavorTextColor",,,,
@@ -923,59 +923,59 @@ $player.transponderOn == false","AddText ""Your shuttle lands on an unsteady bar
 ,,,,,,,
 ,,,,,,,
 flavorTextCargoPlaceholder,TradePanelFlavorText,"$global.tradePanelMode == CARGO
-","AddText ""Your quartermaster coordinates records of all crew appointments, armament stores, and trade goods. These reports are kept up-to-date and made available through your TriPad."" textGrayColor",,,,
+","AddText ""你的副舰长会自动将船员安排到合适的位置, 武器与货物信息也会更新到你的个人电脑."" textGrayColor",,,,
 flavorTextSalvagePlaceholder,TradePanelFlavorText,"$global.tradePanelMode == SALVAGE
-","AddText ""Your space-ops crew, armed with laser cutters and skeletal cargo skiffs, maneuver to disabled hulks and search them for useful commodities, armaments, and valuables."" textGrayColor",,,,
+","AddText ""你的打捞员正在用激光切割的小船来回收 任何有用的东西和残骸."" textGrayColor",,,,
 flavorTextAbandonedStation,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$abandonedStation == true score:100","AddText ""The port concourse is dark and empty but for a few looted hulks. The atmosphere reads out as thin, but there is sufficient power from hardened passive collectors to run basic life support and storage functions."" marketFlavorTextColor",,,,
+$abandonedStation == true score:100","AddText ""空荡的船坞漆黑一片, 大气读数几乎真空, 但自动化系统还能提供足够电力来运行 基本的生命支持和仓储功能."" marketFlavorTextColor",,,,
 ,,,,,,,
 # relationship level descriptions,,,,,,,
-relLevelNeutral,RelationshipLevelDesc,$faction.rel == NEUTRAL,,"You're not generally well known by $faction officials, for good or ill.",,,
+relLevelNeutral,RelationshipLevelDesc,$faction.rel == NEUTRAL,,"你并不被 $faction 的官员所了解, 他们也并不关心你是好是坏.",,,
 relLevelNeutralPirates,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == pirates",,"You've been around pirates, smugglers, and other types of criminals often enough, and know how to act so they see you as one of their own.",,,
+$faction.id == pirates",,由于你成天和海盗、走私者或其他罪犯鬼混在一起. 至少这些混蛋已经把你当作他们其中的一员了.,,,
 relLevelNeutralLuddic,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == luddic_church",,You know enough about the practices of the Luddic Church to follow the rules of the major holy days and avoid gaffes that might offend the faithful.,,,
-relLevelFavorable,RelationshipLevelDesc,$faction.rel == FAVORABLE,,"The $faction officials tend to view you favorably, though this has little in the way of implications. At best, you might be sold some low-grade surplus military equipment, or avoid being the target of an investigation if a more convenient scapegoat is available.",,,
+$faction.id == luddic_church",,"你已经对卢德教会有了足够的了解, 并学会遵循重要的圣日条规, 而避免在其信徒面前失言.",,,
+relLevelFavorable,RelationshipLevelDesc,$faction.rel == FAVORABLE,,"被 $faction 官员认为品行良好的你, 已经可以购买一些低档过剩的军用品. 同时你大概不会成为调查行动中的替罪羊了.",,,
 relLevelFavorablePirates,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == pirates",,"You've been around pirates, smugglers, and other types of criminals often enough, and know how to act so they see you as one of their own.",,,
-relLevelWelcoming,RelationshipLevelDesc,$faction.rel == WELCOMING,,Your name is known to some high-level officials in $theFaction. Harassing you is therefore a more risky endeavor for local patrol commanders.,,,
+$faction.id == pirates",,由于你成天和海盗、走私者或其他罪犯鬼混在一起. 至少这些混蛋已经把你当作他们其中的一员了.,,,
+relLevelWelcoming,RelationshipLevelDesc,$faction.rel == WELCOMING,,"你的名号已被大多数 $theFaction 高层官员所知晓, 而当地巡逻官也不会冒险来敲诈你的过路费了.",,,
 relLevelWelcomingPirates,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == pirates",,"You've gained a measure of notoriety in the underworld, and know how to throw your weight around to get what you want.",,,
-relLevelFriendly,RelationshipLevelDesc,$faction.rel == FRIENDLY,,"You're relatively well-known within $theFaction, whether in person or by reputation. Minor functionaries know to stay out of your way.",,,
+$faction.id == pirates",,"你已经在走私界小有名气了, 并知道如何将利润最大化.",,,
+relLevelFriendly,RelationshipLevelDesc,$faction.rel == FRIENDLY,,"你已在 $theFaction 中小有名气了,不论是声誉还是品行. 甚至那些小职员都懂得给你让道.",,,
 relLevelFriendlyPirates,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == pirates",,You've proven useful to some of the leaders of the various criminal enterprises in the Sector. Harassing you is more trouble than it's worth.,,,
-relLevelCooperative,RelationshipLevelDesc,$faction.rel == COOPERATIVE,,You know some of the $faction leaders personally. You may receive trade concessions and access to high-quality ships and munitions.,,,
+$faction.id == pirates",,你已经获得了星域内犯罪集团领导人的赏识. 骚扰你只会惹上不必要的麻烦.,,,
+relLevelCooperative,RelationshipLevelDesc,$faction.rel == COOPERATIVE,,你已被 $faction 高层官员所熟识. 并拥有了以优惠价格购买高品质船只与军火权限.,,,
 relLevelCooperativePirates,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == pirates",,"Your exploits are legendary, and your underworld connections and influence enviable.",,,
-relLevelSuspicious,RelationshipLevelDesc,$faction.rel == SUSPICIOUS,,"Though nothing has been proven (yet), $faction officials tend to view you with distrust. Link access to the port authority is granted only grudgingly, and you find yourself the subject of investigations and harassment frequently.",,,
+$faction.id == pirates",,"你的胆识已成为走私界的标榜, 并拥有了令人羡慕的地下影响力.",,,
+relLevelSuspicious,RelationshipLevelDesc,$faction.rel == SUSPICIOUS,,"虽然没有确实证据, 但 $faction 已对你产生怀疑. 尽管现仍能勉强与空间站对接, 但你将会被频繁地搜查与骚扰.",,,
 relLevelSuspiciousPirates,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == pirates",,"Pirates, as a whole, only tend to view you with distrust. Incidentally, that's more than can be said for how they see fellow captains.",,,
-relLevelInhospitable,RelationshipLevelDesc,$faction.rel == INHOSPITABLE,,"Suspicions have risen to an actionable level. There's no shoot-on-sight authorization quite yet, but $faction ports will refuse to trade with you, and patrols seem on a mission to make your life miserable.",,,
+$faction.id == pirates",,"海盗们已不再信任你了, 不过, 这也是他们对同行的看法.",,,
+relLevelInhospitable,RelationshipLevelDesc,$faction.rel == INHOSPITABLE,,"虽然不至于被通缉, 但 $faction 会拒绝与你交易, 并且加大搜查力度, 来让你苦不堪言.",,,
 relLevelInhospitablePirates,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == pirates",,"Pirates are generally only inhospitable towards you, which means you've already made a name for yourself as someone whose interests might align with theirs.",,,
-relLevelHostile,RelationshipLevelDesc,$faction.rel == HOSTILE,,"$Faction commanders have authorization to engage your fleet on sight, and all markets are prohibited from trading with you. You might still recover good standing with $theFaction, but it's going to take some serious work.",,,
+$faction.id == pirates",,海盗们对你的存在漠不关心. 意味着你为自己赢得了一个追名逐利的好名声.,,,
+relLevelHostile,RelationshipLevelDesc,$faction.rel == HOSTILE,,"你已被 $Faction 录入重点监视人员名单, 且所有空间站都禁止与你交易. 虽仍可与部分 $theFaction 黑商交易, 但官方也会着重打击此种行为.",,,
 relLevelHostilePirates,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == pirates",,"Your name is not known to pirate captains, for good or ill. Mostly ill, as they'll attack you without a second thought if the opportunity arises, although pirate bases will gladly trade with you.",,,
-relLevelVengeful,RelationshipLevelDesc,$faction.rel == VENGEFUL,,A holo of your face and an IDENT-hash of your last known fleet are both regular parts of inter-system security bulletins. It's fairly certain there's a high-ranking $faction officer whose primary assignment is to hunt you down.,,,
+$faction.id == pirates",,"你并不被海盗舰长们所熟知, 虽然海盗基地会很乐意与你交易, 但如果时机成熟, 这些恶棍将毫不犹豫地攻击你.",,,
+relLevelVengeful,RelationshipLevelDesc,$faction.rel == VENGEFUL,,"你的面部全息图像和舰队踪迹在各个星系内的安全公告栏那滚动播放. 可以肯定的是, 不久后将会有一批 $faction 高级 军官带着舰队前来追捕你.",,,
 relLevelVengefulPirates,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == pirates",,"You've made a name for yourself by hunting down pirates; pirate bases are no longer willing to trade with you. There's little practical difference in the attitude of pirate captains, as they were already willing to kill you given the chance.",,,
+$faction.id == pirates",,"你的臭名已被大多数海盗所熟知, 他们现在更趋向于干掉你而非 ""公平交易"".",,,
 relLevelVengefulLuddic,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == luddic_church",,"The Luddic Church portrays you in nearly demonic terms: a wrathful corruptor, sinful and unrepentant, the desecrator of all that is holy and good. Though their operations are secret, it is clear from inquiries made to various contacts and associates that the Knights of Ludd have assigned a highly capable Inquisitor to your case. Priests of the Church have even implied in sermons that it might not be quite considered a sin to kill you, so it's really only a matter of time before some fanatic attempts it.",,,
+$faction.id == luddic_church",,"卢德教会 运用近乎恶魔般的辞藻将你描述成：一名凶神恶煞且不知悔改的腐败者、所有圣洁与善良的亵渎者. 虽然他们的 行动非常隐秘, 但从一些小道消息便可得知, 每个卢德骑士团都配备了一位能干的检察官来搜查你的信息, 教会的牧师甚至 在布教时对人们暗示, 杀死你并不是一种罪过. 所以一些狂信徒将这句话付诸实践也只是时间问题.",,,
 ,,,,,,,
 # customs inspection,,,,,,,
-ciLongRangeCommBurst,CommBurstCustomsInspection,,ShowDefaultVisual,"You receive a long-range comm burst from the $faction $otherFleetName directing your $shipOrFleet to come to and prepare for a customs inspection.
+ciLongRangeCommBurst,CommBurstCustomsInspection,,ShowDefaultVisual,"你收到了 $faction $otherFleetName 的远程信息, 他会指挥你的 $shipOrFleet 进行海关检查.
 
-The message contains a standard legal-code attachment detailing the various penalties for evading customs agents, transporting contraband, and other related offenses.
+该消息包含了一则标准的法律规范条文, 详细说明了对逃避海关人员, 运送 违禁品以及其他相关违法行为的各项惩罚.
 
-It's as likely as not that this is nothing more than a legalized shakedown, but it has the weight of $faction authority behind it.",0:csContinue:Continue,,
+这差不多是合法的勒索, 毕竟背后有 $faction 在撑腰.",0:csContinue:继续,,
 customsInspectionScan,BeginFleetEncounter,$doingCustomsInspection score:100,"MakeOtherFleetHostile customs true
 MakeOtherFleetAggressive customs true
 $ignorePlayerCommRequests = false 0
 $customsInspectionStage = 0 4
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor",,,,
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor",,,,
 customsInspectionConvStart,OpenCommLink,"$entity.doingCustomsInspection score:100
-$entity.customsInspectionStage == 0","SetTooltip ciAgree ""The scan will compute the value of your fleets and the goods it's carrying, and a toll will be assessed.\n\nIf your $shipOrFleet is carrying illegal goods, there's a chance these will be detected. The chance is lower if you're also carrying legal goods, and if your relationship with the faction is positive. If contraband is detected, it will be confiscated, and a fine will be assessed.""","$PersonRank $personName looks up from $hisOrHer console briefly. ""Stand by while we scan your cargo. We'll continue this conversation once the scan is complete.""","0:ciAgree:Allow the scan to proceed
-1:ciDisagree:""I don't think so.""",,
+$entity.customsInspectionStage == 0","SetTooltip ciAgree ""扫描将会计算你的舰队和货物的价值, 以及进行评估收费. \n\n如果你的 $shipOrFleet 内载有非法货物, 那它们将有可能会被检测到 (如果同时载有合法商品并且你跟该势力的关系比较融洽的话则发现概率降低) 违禁品一旦被检测到, 就会被没收, 并罚款.""","$PersonRank $personName 抬头从 $hisOrHer 的控制台注视着你. ""在我们检查你的 货物时, 请保持引擎熄火, 直到扫描完成.""","0:ciAgree:允许搜查
+1:ciDisagree:""我可不这么认为.""",,
 customsInspectionAgree,DialogOptionSelected,"$entity.doingCustomsInspection score:100
 $option == ciAgree score:100","EndConversation DO_NOT_FIRE
 Wait $global.ciWait 0.5 $global.ciFinished $global.ciInterrupted $global.ciInProgress ""Scanning...""
@@ -986,73 +986,73 @@ customsInspectionDisagree,DialogOptionSelected,"$entity.doingCustomsInspection s
 $option == ciDisagree","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
 $entity.ignorePlayerCommRequests = true 1
 #MakeNearbyFleetsHostile $faction.id 2000 10
-EndConversation","""Oh? That's something you're going to regret.""
+EndConversation","""哦? 你会后悔的.""
 
-The comm link is cut before you have a chance to respond.",,,
+通讯链接在你做出回应前就被切断.",,,
 customsInspectionWaitFinished,BeginFleetEncounter,"$doingCustomsInspection score:100
 $global.ciFinished","MakeOtherFleetHostile customs true
 MakeOtherFleetAggressive customs true
 CustomsInspectionGenerateResult
 TakeRepCheck $faction.id $repCheckResult
-OpenComms","After a long wait, your terminal chimes softly and displays the scan results transmitted by the $faction $otherFleetName.",,,
+OpenComms","经过漫长的等待, 来自 $faction $otherFleetName 的搜查终于结束了.",,,
 customsInspectionAddContinue,OpenCommLink,"$entity.doingCustomsInspection score:100
-$entity.customsInspectionStage == 1",$entity.customsInspectionStage = 3 0,,0:ciResultContinue:Continue,,
+$entity.customsInspectionStage == 1",$entity.customsInspectionStage = 3 0,,0:ciResultContinue:继续,,
 customsInspectionContinueFromResult,DialogOptionSelected,"
 $option == ciResultContinue","CustomsInspectionApplyRepLoss
 FireBest InspectionResultResponse",,,,
 customsInspectionResultToll,InspectionResultResponse,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL","SetTextHighlights $entity.tollAmount
-FireAll CustomsInspectionPayOptions","$PersonRank $personName looks up from $hisOrHer console. ""Looks like everything checks out. The toll and inspection fees come to a total of $tollAmount credits.""",,,
+FireAll CustomsInspectionPayOptions","$PersonRank $personName 看了下报告. ""看起来一切正常. 关税一共是 $tollAmount 星币.""",,,
 customsInspectionResultTollFine,InspectionResultResponse,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE","SetTextHighlights $entity.tollAmount
-FireAll CustomsInspectionPayOptions","$PersonRank $personName looks pleased. ""Well, well. Look what we have here! We'll be confiscating all the contraband, of course. The toll, inspection fees, and the fine for possession of illegal goods with intent to sell come to a total of $tollAmount credits.""",,,
+FireAll CustomsInspectionPayOptions","$PersonRank $personName 看起来很兴奋. ""啧啧啧, 看看我们在这儿 发现了什么! 我们将没收所有违禁品. 罚单拿好, 通行费检查费加上贩卖违禁品的罚款一共 $tollAmount 星币.""",,,
 customsInspectionResultTollFineHostile,InspectionResultResponse,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
-RepIsAtBest $faction.id HOSTILE score:100",FireBest CustomsInspectionEndHostile,"$personName looks at the report, looks at you, looks at the report again, and cuts off the comm link without saying a word. Your scanners detect the signatures of weapons powering up.",,,
+RepIsAtBest $faction.id HOSTILE score:100",FireBest CustomsInspectionEndHostile,"$personName 看了一下报告, 并瞥了你一眼, 再看了一眼报告, 然后二话不说 关闭了通讯链接. 同时你的探测器警告其对面出现高能源反映.",,,
 # customs inspection -payment options,,,,,,,
 customsInspectionPayToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL
-$entity.playerCanAffordPayment",,,0:payCIToll:Pay the toll ($tollAmount credits),,
+$entity.playerCanAffordPayment",,,0:payCIToll:乖乖付钱 ($tollAmount 星币),,
 customsInspectionPayTollAndFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
-$entity.playerCanAffordPayment",,,0:payCIFine:Surrender illegal goods; pay the toll and fine ($tollAmount credits),,
+$entity.playerCanAffordPayment",,,0:payCIFine:交出违法物品; 支付收费和罚款 ($tollAmount 星币),,
 customsInspectionCantAffordToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL
-!$entity.playerCanAffordPayment",,,0:cantAffordToll:Explain that you can't afford to pay,,
+!$entity.playerCanAffordPayment",,,0:cantAffordToll:向其解释你付不起这笔费用,,
 customsInspectionCantAffordFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
-!$entity.playerCanAffordPayment",,,0:cantAffordFine:Explain that you can't afford to pay,,
+!$entity.playerCanAffordPayment",,,0:cantAffordFine:向其解释你付不起这笔费用,,
 customsInspectionRefuseToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
-$entity.inspectionResultType == TOLL",,,10:refuseCIToll:Refuse to pay,,
+$entity.inspectionResultType == TOLL",,,10:refuseCIToll:拒绝支付,,
 customsInspectionRefuseFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
-$entity.inspectionResultType == TOLL_AND_FINE",,,10:refuseCIFine:Refuse to cooperate,,
+$entity.inspectionResultType == TOLL_AND_FINE",,,10:refuseCIFine:拒绝配合,,
 # customs inspection - payment option effects,,,,,,,
 optionPayCIToll,DialogOptionSelected,$option == payCIToll,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""Thank you for your cooperation."" $personRank $personName nods and cuts the comm link.",,,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合."" $personRank $personName 点了点头, 并切断了通讯链接.",,,
 optionPayCIFine,DialogOptionSelected,$option == payCIFine,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""Thank you for your cooperation. It will be noted in your file."" $personRank $personName nods and cuts the comm link.",,,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合. 这将会记录在你的档案中."" $personRank $personName 点了点头, 并切断了通讯链接.",,,
 optionRefuseCITollPassRep,DialogOptionSelected,"$option == refuseCIToll
 $entity.repCheckResult > 0.2
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
-FireBest CustomsInspectionEndPeaceful","$personName glares at you, but, for whatever reason, doesn't press the issue. After a couple of seconds of silence, you cut the comm link.",,,
+FireBest CustomsInspectionEndPeaceful","$personName 瞪着你, 在沉默数秒后, 你切断了通讯链接.",,,
 optionRefuseCIToll,DialogOptionSelected,$option == refuseCIToll,"AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
-FireBest CustomsInspectionEndHostile","""That's something you're going to regret.""
+FireBest CustomsInspectionEndHostile","""你会后悔的.""
 
-The comm link is cut before you have a chance to respond.",,,
+通讯链接在你做出回应前就被切断.",,,
 optionRefuseCIFinePassRep,DialogOptionSelected,"$option == refuseCIFine
 $entity.repCheckResult > 0.6
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_FINE
-FireBest CustomsInspectionEndPeaceful","$personName looks at you carefully, and, for whatever reason, doesn't press the issue. After a couple of seconds of silence, you cut the comm link.",,,
+FireBest CustomsInspectionEndPeaceful","$personName 怨念的看着你, 在沉默数秒后, 你切断了通讯链接.",,,
 optionRefuseCIFine,DialogOptionSelected,$option == refuseCIFine,"AdjustRep $faction.id CUSTOMS_REFUSED_FINE
-FireBest CustomsInspectionEndHostile","""That's something you're going to regret very, very much.""
+FireBest CustomsInspectionEndHostile","""令人失望, 你会后悔这个决定的.""
 
-The comm link is cut before you have a chance to respond.",,,
+通讯链接在你做出回应前就被切断.",,,
 optionCantAffordToll,DialogOptionSelected,$option == cantAffordToll,"AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD
-FireBest CustomsInspectionEndPeaceful","""That's very unfortunate. Your failure to pay will be noted in your file.""",,,
-optionCantAffordFine,DialogOptionSelected,$option == cantAffordFine,AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD,"""That's very unfortunate. I'm certain you're still planning on promptly surrendering the contraband, correct?""","0:payCIFine:""Yes, of course.""
-1:refuseCIFine:""I don't think so.""",,
+FireBest CustomsInspectionEndPeaceful","""非常不幸, 你的本次行为将被记录在案.""",,,
+optionCantAffordFine,DialogOptionSelected,$option == cantAffordFine,AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD,"""真不幸, 但这些违禁品你还是会上缴的吧?""","0:payCIFine:""好吧, 我给.""
+1:refuseCIFine:""不给, 有种来抢!""",,
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
@@ -1067,23 +1067,23 @@ EndConversation",,,,
 ,,,,,,,
 # no trading w/ same faction market while customs inspection is in progress,,,,,,,
 marketPostOpenCustomsInProgress,MarketPostOpen,"$hasMarket
-$global.customsInspectionFactionId == $faction.id score:100","SetShortcut marketLeave ""ESCAPE""",The port authority refuses your $shipOrFleet docking clearance until the customs inspection is resolved. Making contact with any underground parties willing to trade is also impossible due to the patrol breathing down your neck.,10:marketLeave:Leave,,
+$global.customsInspectionFactionId == $faction.id score:100","SetShortcut marketLeave ""ESCAPE""","在海关结束前, 港务局将拒绝你 $shipOrFleet 的入港许可. 由于巡逻队正紧盯着你, 所以想进行任何非法交易都是不现实的.",10:marketLeave:离开,,
 ,,,,,,,
 # new game creation,,,,,,,
 onNewGameCreationStart,BeginNewGameCreation,,"NGCAddCredits 2000
 FireAll InitNewGameChoices",,,,
 initNewGameChoicesDev,AddNewGameChoices,$global.isDevMode,,,100:ngcDevStart:>>(dev) quick start,,
 initNewGameChoicesDev2,AddNewGameChoices,$global.isDevMode,,,101:ngcDevStart2:>>(dev) quick start custom no time pass,,
-initNewGameChoices,InitNewGameChoices,,FireAll AddNewGameChoices,Your most recent occupation was as...,,,
-ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""The Wolf-class is a sleek and deadly combat frigate with middling logistical stats.\n\nBest used near civilization, or with the support of other ships with better capacity for carrying fuel and supplies.""",,"0:ngcWolf:A bounty hunter, commanding a Wolf-class frigate",,
-ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""The Wayfarer is an ungainly vessel with an excellent capacity for carrying cargo, fuel, and crew.\n\nIts combat ability is limited, but not to be discounted - designed to operate on the fringes of civilization, this freighter is quite capable of defending itself.""",,"1:ngcWayfarer:A scavenger, commanding a Wayfarer-class combat freighter",,
-ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""A group of ships capable of performing salvage operations on the fringes of the Sector, and defending itself against most of the threats found there.\n\nIncludes a tanker for increased fuel capacity and exploration range, and sufficient cargo capacity to carry the salvage back to the Core Worlds.""",,"2:ngcExplorer:An explorer, leading a salvage expedition from aboard an Apogee-class cruiser (faster start)",,
-ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""A small but highly combat-capable task force geared towards bounty-hunting.\n\nIncludes a small tanker to extend its operating range somewhat.""",,"3:ngcMerc:A mercenary, leading a small force from aboard a Hammerhead-class destroyer (faster start)",,
-ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""A randomized collection of ships, slightly weaker overall than either of the \""faster start\"" options, but roughly in the same category.""",,"4:ngcRandom:A freelancer, doing whatever jobs you've been able to find (randomized start)",,
-ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""A non-combat shuttle, a general lack of resources, and a debt that must be paid. Very difficult start, only intended as a challenge for the starfarer that's seen it all.""",,"5:ngcSpacer:""A spacer. A broken-down shuttle. A lifelong debt."" (very hard)",,
+initNewGameChoices,InitNewGameChoices,,FireAll AddNewGameChoices,你最近是职业是...,,,
+ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""野狼-级护卫舰是个致命的多面手.有着中等的后勤消耗\n\n建议在文明社会附近使用, 或使用运载能力优秀的补给 舰来维持后勤.""",,"0:ngcWolf:一位赏金猎人, 拥有一艘野狼-级护卫舰",,
+ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""远行者-级尽管长相有些笨拙. 但却有着优秀的运载能力\n\n尽管它的作战能力有限, 但它足够让你在偏远星系的 交战中, 利用它那不可忽视的战力来保全自己.""",,"1:ngcWayfarer:一名拾荒者, 拥有一艘 远行者-级 武装商舰",,
+ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""一支能够在该偏远星系执行打捞作业的舰队, 其战力 足以抵御在该区域中所能遭遇到的大部分威胁.\n\n其中还包括一艘油轮， 以增加燃料容量和勘探范围, 并有足够的运载能力将打捞到的东西带回核心星区.""",,"2:ngcExplorer:一名探险者, 拥有一艘 制高点-级 巡洋舰与一支打捞探险舰队 (轻松开局)",,
+ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""一支规模虽小但战力强大的特遣舰队, 专门负责搜寻有 价值的赏金目标.\n\n其中还包括一艘小型油轮, 以扩大其搜索范围.""",,3:ngcMerc:一名雇佣兵，拥有一艘 锤头-级 驱逐舰以及一支作战小分队 (轻松开局),,
+ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""舰队组成完全随机, 虽然总体比其他开局略弱一些, 但仍在同一水平.""",,"4:ngcRandom:一名自由职业者, 做你能找到的任何工作 (随机开局)",,
+ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机, 且仅携带着非常有限的资源, 以及必须偿还的债务. 非常困难的开局, 献给那些愿意 挑战一切的玩家.""",,"5:ngcSpacer:""一名老船长. 仅有一艘破旧的穿梭机. 以及一辈子都难以还清的债."" (困难开局)",,
 ,,,,,,,
 #ngcDisableSpacerOption,NGCDisableSpacerOption,!NGCCanSkipTutorial,"SetEnabled ngcSpacer false
-SetTooltip ngcSpacer ""Need to start at least one game with the tutorial in order to be able to select this starting option.""",,,,
+SetTooltip ngcSpacer ""在使用跳过选项之前你必须通过一次教程.""",,,,
 ngcWolfPicked,NewGameOptionSelected,$option == ngcWolf,"NGCAddShip wolf_Starting
 FireAll NGCSecondShipOptions",,,,
 ngcWayfarerPicked,NewGameOptionSelected,$option == ngcWayfarer,"NGCAddShip wayfarer_Starting
@@ -1105,7 +1105,7 @@ NGCAddShip lasher_CS
 NGCAddShip dram_Light
 NGCAddCredits 18000
 $ngcMercSelected = true
-AddTextSmall ""Acquired level 1 officer"" good
+AddTextSmall ""获得一名 1 级军官"" good
 SetTextHighlights ""level 1 officer""
 $ngcAddOfficer = true
 FireAll NGCDifficultyOptions",,,,
@@ -1114,36 +1114,36 @@ $ngcRandomSelected = true
 FireAll NGCDifficultyOptions",,,,
 ngcSpacerPicked,NewGameOptionSelected,$option == ngcSpacer,"NGCAddShip kite_original_Stock
 $ngcSpacerSelected = true
-NGCSetDifficulty normal",,0:ngcSpacerContinue:Continue,,
+NGCSetDifficulty normal",,0:ngcSpacerContinue:继续,,
 ngcSpacerContinue,NewGameOptionSelected,$option == ngcSpacerContinue,"$ngcSkipTutorial = true
 NGCAddCharacterPoints 1
 NGCSetStartingLocation Corvus -2500 3000
 NGCAddStandardStartingScript
 NGCDone",,,,
-ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""The Kite-class is a light and nimble ship with limited armament.\n\nNot capable of doing much damage itself, it is however capable of being a persistent distraction, especially in the hands of an officer with the right set of defensive skills.""
-SetTooltip ngcShepherd ""The Shepherd is not a combat ship, being both slow and fragile, although its drones are capable of providing decent support to another ship.\n\nIts true value, however, lies in a generous cargo hold and numerous salvaging-and-surveying-oriented hull features.\n\nIts cargo of heavy machinery is also useful in running salvage and surveying operations.""","In addition, your fleet includes...","0:ngcKite:A Kite-class shuttle, under the command of an experienced subordinate
-1:ngcShepherd:A Shepherd class drone tender, with a cargo of heavy machinery",,
+ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""风筝是一艘勤快灵活但装备有限的穿梭机.\n\n它的输出低, 但分散火力的效果一流, 特别是在擅长 防御的副官手中.""
+SetTooltip ngcShepherd ""牧羊人不是战斗用舰船. 它又慢又脆. 不过它的点防 无人机能为队友提供不错的支援.\n\n然而它真正的价值在于其大货舱和打捞/探测模块上.\n\n所携带的重型机械也能运用至在打捞与探测作业当中.""",此外你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机, 以及一名经验丰富的军官
+1:ngcShepherd:一艘 牧羊人-级 无人机护卫舰, 运有一货舱的重型机械",,
 ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
-AddTextSmall ""Acquired level 1 officer"" good
+AddTextSmall ""获得一名 1 级军官"" good
 SetTextHighlights ""level 1 officer""
 $ngcAddOfficer = true
 FireAll NGCDifficultyOptions",,,,
 ngcShepherdPicked,NewGameOptionSelected,$option == ngcShepherd,"NGCAddShip shepherd_Starting
 NGCAddCargo RESOURCES heavy_machinery 20
 FireAll NGCDifficultyOptions",,,,
-ngcDifficulty,NGCDifficultyOptions,,"SetTooltip ngcEasy ""- Your ships take 25% less damage\n- Sensor range increased by 500 units\n- Salvage increased by 50%""
+ngcDifficulty,NGCDifficultyOptions,,"SetTooltip ngcEasy ""- 你的舰船获得 25% 的伤害减免\n- 探测范围增加 500 单位\n- 打捞收益增加 50%""
 SetTooltipHighlightColors ngcEasy hColor hColor hColor
 SetTooltipHighlights ngcEasy ""25%"" ""500"" ""50%""
-SetTooltip ngcNormal ""Default settings balanced for a challenging experience.""","Select the campaign difficulty level. ""Easy"" is recommended for a first-time player.","0:ngcNormal:Normal
-1:ngcEasy:Easy",,
+SetTooltip ngcNormal ""默认设置可以提供平衡过的游戏体验.""","选择生涯模式的难度. ""简单"" 适合新手玩家.","0:ngcNormal:普通
+1:ngcEasy:简单",,
 ngcEasyPicked,NewGameOptionSelected,$option == ngcEasy,"NGCSetDifficulty easy
 FireAll NGCTutorialOptions",,,,
 ngcNormalPicked,NewGameOptionSelected,$option == ngcNormal,"NGCSetDifficulty normal
 FireAll NGCTutorialOptions",,,,
-ngcWithTutorial,NGCTutorialOptions,,"SetTooltip ngcTutorial ""Start with a tutorial mission that introduces the high-level campaign mechanics and active abilities.""",,0:ngcTutorial:Start with tutorial!,,
-ngcSkipTutorial,NGCTutorialOptions,NGCCanSkipTutorial,"SetTooltip ngcSkip ""Skip the tutorial. Will give you roughly the same starting conditions as finishing the tutorial normally would.""",,1:ngcSkip:Skip it,,
-ngcSkipTutorialNoSkip,NGCTutorialOptions,!NGCCanSkipTutorial,"SetTooltip ngcSkip ""Need to start at least one game with the tutorial in order to be able to skip it.""
-SetEnabled ngcSkip false",,1:ngcSkip:Skip it,,
+ngcWithTutorial,NGCTutorialOptions,,"SetTooltip ngcTutorial ""先开始教程. 学习高等级的生涯机制以及技能作用.""",,0:ngcTutorial:开始教程,,
+ngcSkipTutorial,NGCTutorialOptions,NGCCanSkipTutorial,"SetTooltip ngcSkip ""跳过教程. 直接开始教程之后的游戏内容.""",,1:ngcSkip:跳过,,
+ngcSkipTutorialNoSkip,NGCTutorialOptions,!NGCCanSkipTutorial,"SetTooltip ngcSkip ""在使用跳过选项之前你必须通过一次教程. 因为这很重要.""
+SetEnabled ngcSkip false",,1:ngcSkip:跳过,,
 ngcTutorialPicked,NewGameOptionSelected,$option == ngcTutorial,"NGCSetStartingLocation Galatia 1000 -15000
 NGCAddStandardStartingScript
 #NGCSetWithTimePass false
@@ -1197,13 +1197,13 @@ NGCDone",,,,
 # memory is used by default
 # entity memory is accessible
 # by using the entity. prefix",,,,,,,
-convDefault,OpenCDE,,"AddText ""Establishing connection..."" buttonText
-FireBest PickGreeting",You transmit the comms-ID and wait for the system to establish a connection.,,,
+convDefault,OpenCDE,,"AddText ""正在建立连接..."" buttonText
+FireBest PickGreeting","你发送了识别 ID, 并等待系统建立连接.",,,
 convDefaultGreeting,PickGreeting,!$contact_printedFirstReturnGreeting,"$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
-FireAll PopulateOptions","After a short wait, your connection request is accepted.
+FireAll PopulateOptions","经过短暂的等待, 你的连接请求被接受.
 
-""Hello. What do you want?""",,,
+""你好, 有什么事么?""",,,
 convDefaultGreetingSoldier,PickGreeting,"!$contact_printedFirstReturnGreeting
 $voice == soldier","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
@@ -1277,7 +1277,7 @@ FireAll PopulateOptions","After a short wait, your connection request is accepte
 convDefaultGreeting2,PickGreeting,$contact_printedFirstReturnGreeting,"ShowPersonVisual
 FireAll PopulateOptions","""Anything else I can do for you?""",,"# this will fire when talking to same person again without leaving the station, but that seems fine",
 convDefaultGreetingActive,PickGreetingActive,,"ShowPersonVisual
-FireAll PopulateOptions","""Hello? Uh, you know, never mind. Wrong comms-ID.""",,,
+FireAll PopulateOptions","""喂? 嗯...我想你应该搞错识别 ID 了.""",,,
 addMHubOption,PopulateOptions,"$isPerson
 MissionHubCMD hasHub
 Call $mHub setMHOptionText",FireBest UpdateMHOpenOptionText,,5:mh_open:$mh_openOptionText,,
@@ -1289,39 +1289,39 @@ addMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh
 closeMhub,DialogOptionSelected,$option == mh_close,"Call $mHub doCleanup
 FireAll PopulateOptions",,,,
 convOptionLeave,PopulateOptions,"$isPerson
-!$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:Cut the comm link,,
+!$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:切断通讯,,
 convOptionLeavePolite,PopulateOptions,"$isPerson
-$cutCommLinkPolite","SetShortcut cutCommLinkPolit ""ESCAPE""",,100:cutCommLinkPolite:Cut the comm link,,
+$cutCommLinkPolite","SetShortcut cutCommLinkPolit ""ESCAPE""",,100:cutCommLinkPolite:切断通讯,,
 convEnd,DialogOptionSelected,$option == cutCommLink,"ShowDefaultVisual
-EndConversation",You cut the comm link.,,,
+EndConversation",你切断了通讯链接.,,,
 convEnd2,DialogOptionSelected,$option == cutCommLink2,"ShowDefaultVisual
-EndConversation",You cut the comm link.,,,
+EndConversation",你切断了通讯链接.,,,
 convEndNoText,DialogOptionSelected,$option == cutCommLinkNoText,"ShowDefaultVisual
 EndConversation NO_CONTINUE",,,,
 convEndNoText2,DialogOptionSelected,$option == cutCommLinkNoText2,"ShowDefaultVisual
 EndConversation NO_CONTINUE",,,,
 convEndPolite,DialogOptionSelected,$option == cutCommLinkPolite,"ShowDefaultVisual
-EndConversation",You cut the comm link after exchanging a few pleasantries.,,,
+EndConversation","你在互相寒暄几句后, 就切断了通讯链接.",,,
 # NPC comm requests when player enters market,,,,,,,
 checkNPCWantingToTalk,MarketPostOpen,"!$global.initiatedCommsAlready
 NPCWantsComms
 PickCommsNPC score:1000","$global.initiatedCommsAlready = true 0
 FireBest ConfirmNPCWantsToTalk",,,,
 playerOptionsVSContactingNPC,ConfirmNPCWantsToTalk,"!$contactedPlayerRecently
-!IsSoughtByPatrols $faction.id",$contactedPlayerRecently = true 2,"As you get near $entityName, you get an incoming comm request.","acceptNPCComm:Accept the comm request
-declineNPCComm:Ignore it",,
+!IsSoughtByPatrols $faction.id",$contactedPlayerRecently = true 2,"当你靠近 $entityName 时, 你收到了一则通讯请求.","acceptNPCComm:接受通讯请求
+declineNPCComm:无视它",,
 abortNPCWantsToTalk,ConfirmNPCWantsToTalk,$contactedPlayerRecently,EndConversation,,,,
 npcCommsAccept,DialogOptionSelected,$option == acceptNPCComm,"ShowPersonVisual
 FireBest NPCCommsRequest",,,,
-npcCommsDecline,DialogOptionSelected,$option == declineNPCComm,EndConversation,You decline the comms request and continue on your way.,,,
+npcCommsDecline,DialogOptionSelected,$option == declineNPCComm,EndConversation,"你拒绝了通讯请求, 并继续赶路.",,,
 npcCommsAcceptedDefault,NPCCommsRequest,,FireBest PickGreetingActive,,,,
 # test mission,,,,,,,
-convTMStart,OpenCDE,$playerContactForTestMission,ShowPersonVisual,"""Do you want to complete the mission successfully?""","tmYes:Yes
-tmNo:No",,
-convTMStartNPCInitiated,NPCCommsRequest,$playerContactForTestMission,ShowPersonVisual,"You accept the comm request.
+convTMStart,OpenCDE,$playerContactForTestMission,ShowPersonVisual,"""你想顺利完成任务吗?""","tmYes:是的
+tmNo:并不",,
+convTMStartNPCInitiated,NPCCommsRequest,$playerContactForTestMission,ShowPersonVisual,"你接受了通讯请求.
 
-""Do you want to complete the mission successfully?""","tmYes:Yes
-tmNo:No",,
+""你想顺利完成任务吗?""","tmYes:是的
+tmNo:并不",,
 convTMOptionYes,DialogOptionSelected,$option == tmYes,"CallEvent $testMissionEventRef success
 ShowDefaultVisual
 EndConversation",,,,
@@ -1332,58 +1332,58 @@ EndConversation",,,,
 # generic refusal to deal while known-inhospitable to authorities (i.e. while open trade isn't available),,,,,,,
 generic_refuseToDealKnownInhospitable,PickGreeting,"$requiresDiscretionToDeal
 HasAttentionOfAuthorities score:500","ShowPersonVisual
-SetShortcut cutCommLink ""ESCAPE""","After a short wait, your connection request is accepted. $personName looks at you for a while before speaking.
+SetShortcut cutCommLink ""ESCAPE""","经过短暂等待, 你的连接请求被接受. $personName 在发话前打量了你一会.
 
-""And why would someone on the wrong side of $market's authorities want to get in touch with me?""
+""我为什么要与 $market 当局关系要好的人说上一段废话呢?""
 
-You consider that perhaps coming back with your transponder off and without attracting any undue attention might be a better approach.",0:cutCommLink:Cut the comm link,,
+你暗中思量也许先回去关闭应答器, 就能让这件事办起来容易些.",0:cutCommLink:切断通讯,,
 # MarketProcurementMission,,,,,,,
 mpm_greetingNeedTOff,PickGreeting,"$mpm_isPlayerContact
 $player.transponderOn
 $hostileToMarket score:100","ShowPersonVisual
-SetShortcut cutCommLink ""ESCAPE""","After a short wait, your connection request is accepted.
+SetShortcut cutCommLink ""ESCAPE""","经过短暂等待后, 你的连接请求被接受.
 
-""What? A shipment of $mpm_commodityName? I'm afraid I wouldn't know anyone interested in that sort of thing.""
+""啥？来自 $mpm_commodityName 的一批货? 别逗了, 我可不知道有这事.""
 
-On the balance of things, perhaps waltzing into port with your transponder on and broadcasting your identity, in order to get in touch with an underworld figure, wasn't the best idea you've ever had.",0:cutCommLink:Cut the comm link,,
+开着应答器去接触黑帮, 这在该行当中可是大忌.",0:cutCommLink:切断通讯,,
 mpm_greetingEnough,PickGreeting,"$mpm_isPlayerContact
 CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","After a short wait, your connection request is accepted.
+FireAll PopulateOptions","经过短暂等待后, 你的连接请求被接受.
 
-""Greetings! I've been waiting for this $mpm_commodityName shipment.""",,,
+""贵安! 我等这批 $mpm_commodityName 很久了.""",,,
 mpm_greetingNotEnough,PickGreeting,"$mpm_isPlayerContact
 !CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","After a short wait, your connection request is accepted.
+FireAll PopulateOptions","经过短暂等待后, 你的连接请求被接受.
 
-""Greetings! I've been waiting for this $mpm_commodityName shipment. ... and I see that you don't have it yet. Well, you still have some time.""",,,
+""贵安! 我等这批 $mpm_commodityName 很久了... 我看你并没有带它们来, 你在逗我吗? 好吧, 时间还很充足, 请好自为之.""",,,
 mpm_greetingEnoughIllegal,PickGreeting,"$mpm_isPlayerContact
 $hostileToMarket
 CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","After a short wait, your connection request is accepted.
+FireAll PopulateOptions","经过短暂等待后, 你的连接请求被接受.
 
-""So, I hear you've got the stuff.""",,,
+""那么, 东西都带来了?""",,,
 mpm_greetingNotEnoughIllegal,PickGreeting,"$mpm_isPlayerContact
 $hostileToMarket
 !CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","After a short wait, your connection request is accepted.
+FireAll PopulateOptions","经过短暂等待后, 你的连接请求被接受.
 
-""You haven't got the stuff, so why are we even talking?""",,,
+""东西没带来, 你还跟我废话什么?""",,,
 mpm_greetingActiveEnough,PickGreetingActive,"$mpm_isPlayerContact
 !$hostileToMarket
 CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","""Greetings! I've been waiting for this $mpm_commodityName shipment.""",,,
+FireAll PopulateOptions","""贵安! 我等这批 $mpm_commodityName 很久了.""",,,
 mpm_greetingActiveNotEnough,PickGreetingActive,"$mpm_isPlayerContact
 !$hostileToMarket
 !CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
-FireAll PopulateOptions","""Greetings! I've been waiting for this $mpm_commodityName shipment. ... and I see that you don't have it yet. Well, you still have some time.""",,,
+FireAll PopulateOptions","""贵安! 我等这批 $mpm_commodityName 很久了... 我看你并没有带它们来, 你在逗我吗? 好吧, 时间还很充足, 请好自为之.""",,,
 mpm_hasEnoughOption,PopulateOptions,"$mpm_isPlayerContact
-CallEvent $mpm_eventRef hasEnough",,,0:mpm_deliver:Deliver the $mpm_commodityName,,
-mpm_hasEnoughOptionSelected,DialogOptionSelected,$option == mpm_deliver,"AddText ""\""Excellent. Thank you for your efforts.\""""
+CallEvent $mpm_eventRef hasEnough",,,0:mpm_deliver:交付 $mpm_commodityName,,
+mpm_hasEnoughOptionSelected,DialogOptionSelected,$option == mpm_deliver,"AddText ""\""太棒了. 感谢你的努力.\""""
 CallEvent $mpm_eventRef performDelivery
 CallEvent $mpm_eventRef endEvent
 FireAll PopulateOptions",,,,
 mpm_hasEnoughOptionSelectedBonus,DialogOptionSelected,"$option == mpm_deliver
-CallEvent $mpm_eventRef hasBonus","AddText ""\""Excellent. Thank you for your efforts. As agreed, I'm also adding on a bonus for prompt delivery.\""""
+CallEvent $mpm_eventRef hasBonus","AddText ""\""太棒了! 拿好你的奖赏, 还有我许诺你的额外提成.\""""
 CallEvent $mpm_eventRef performDelivery
 CallEvent $mpm_eventRef endEvent
 FireAll PopulateOptions",,,,
@@ -1392,36 +1392,36 @@ mpm_pirateEncounter,BeginFleetEncounter,"$mpm_isSpawnedByMPM
 MakeOtherFleetAggressive mpm_pirate true
 $skipTInfo = true 0
 $sawPlayerTransponderOn = true 5
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
 $hailing = true 0",,,,
 mpm_pirateOpenComms,OpenCommLink,"$isPerson
-$entity.mpm_isSpawnedByMPM score:100",FireAll MPMHandOverOptions,"The pirate $personRank looks up from $hisOrHer console.
+$entity.mpm_isSpawnedByMPM score:100",FireAll MPMHandOverOptions,"这位海盗 $personRank 看了看 $hisOrHer 的数据面板.
 
-""Well, now. Just hand over the $mpm_commodityName shipment we both know you've got in your cargo holds, and I'll let you be on your way.""",,,
-mpm_handOverPirateOption,MPMHandOverOptions,CallEvent $mpm_eventRef hasEnough,,,0:mpm_handOver:Hand over the $mpm_commodityName,,
-mpm_notEnoughPirateOption,MPMHandOverOptions,!CallEvent $mpm_eventRef hasEnough,,,0:mpm_notEnoughPirate:Explain that you don't have the $mpm_commodityName,,
+""很好. 交出那批 $mpm_commodityName, 你我都心知肚明, 你要是乖乖的话, 我们都可以当文明人.""",,,
+mpm_handOverPirateOption,MPMHandOverOptions,CallEvent $mpm_eventRef hasEnough,,,0:mpm_handOver:交出 $mpm_commodityName,,
+mpm_notEnoughPirateOption,MPMHandOverOptions,!CallEvent $mpm_eventRef hasEnough,,,0:mpm_notEnoughPirate:向他解释你并没有 $mpm_commodityName,,
 mpm_refusePirateOption,MPMHandOverOptions,,,,"
 1:mpm_refuse:Refuse",,
 mpm_handOverOptionSel,DialogOptionSelected,$option == mpm_handOver,"CallEvent $mpm_eventRef handOver
-AddText ""Lost $mpm_quantity $mpm_commodityName"" textEnemyColor
-AddText ""\""Glad you could be made to see reason. Now, get out of here before I change my mind.\""""
+AddText ""失去 $mpm_quantity $mpm_commodityName"" textEnemyColor
+AddText ""\""明智选择. 现在, 在我改变主意前滚远点!\""""
 MakeOtherFleetHostile mpm_pirate false
 MakeOtherFleetNonHostile mpm_pirate true 10
 FireAll PopulateOptions",,,,
 mpm_notEnoughPirateOptionSel,DialogOptionSelected,$option == mpm_notEnoughPirate,"$entity.ignorePlayerCommRequests = true 10
 ShowDefaultVisual
-EndConversation",The comm link is cut before you have a chance to offer much of an explanation.,,,
+EndConversation",通讯链接在你未回应前就被切断了.,,,
 mpm_refuseOptionSel,DialogOptionSelected,$option == mpm_refuse,"$entity.ignorePlayerCommRequests = true 10
 ShowDefaultVisual
-EndConversation",The comm link is cut before you have a chance to say much of anything else.,,,
+EndConversation","你还没来得及开口说话, 通讯链接就被切断了.",,,
 ,,,,,,,
 # hiring officer generated by OfficerManagerEvent,,,,,,,
 ome_greeting,PickGreeting,$ome_hireable score:100,"ShowPersonVisual
-FireAll PopulateOptionsHire","After a short wait, your connection request is accepted.
+FireAll PopulateOptionsHire","经过短暂等待后, 你的连接请求被接受.
 
-$personName looks you over appraisingly.
+$personName 上下打量了你一会.
 
-""Heard you might be looking to take on some help.""",,,
+""听说你想找些帮手?""",,,
 ome_greetingMerc,PickGreeting,"$ome_hireable score:100
 $isMercenary","ShowPersonVisual
 FireAll PopulateOptionsHire","Your connection request is accepted promptly.
@@ -1475,31 +1475,31 @@ You begin to sense an air of sarcasm as $heOrShe continues, ""... Because now I 
 The link is hard-cut while $personName is performing a rude-gesture. Your comms officer keeps a stony face toward their console as they clear the screen. ",ome_convEnd2:Continue,,
 ome_greetingAdmin,PickGreeting,"$ome_hireable score:100
 $ome_isAdmin","ShowPersonVisual
-FireAll PopulateOptionsHire","After a short wait, your connection request is accepted.
+FireAll PopulateOptionsHire","经过短暂等待后, 你的连接请求被接受.
 
-$personName looks you over in eager appraisal.
+$personName 热切地打量了你一会.
 
-""Word is you might be getting into the colony business. If so, I might be of some help - you will find that my credentials are impeccable.""",,,
+""有消息说你想找些帮手? 如果是的话, 那你就来对地方了.""",,,
 ome_askSkills,PopulateOptionsHire,"$ome_hireable score:100
-!$askedSkills",,,"0:ome_askSkills:""Depends. What can you do?""",,
+!$askedSkills",,,"0:ome_askSkills:""视情况而定, 那么你能做些什么?""",,
 ome_askHire,PopulateOptionsHire,"$ome_hireable score:100
 !$isMercenary
-!CallEvent $ome_eventRef atLimit $id",,,1:ome_askHire:Offer to hire $himOrHer,,
+!CallEvent $ome_eventRef atLimit $id",,,1:ome_askHire:付费雇佣 $himOrHer,,
 ome_askHireMerc,PopulateOptionsHire,"$ome_hireable score:100
 $isMercenary",SetStoryColor ome_askHire,,1:ome_askHire:Ask $himOrHer about the contract terms,,
 ome_cantHire,PopulateOptionsHire,"$ome_hireable score:100
 !$isMercenary
 CallEvent $ome_eventRef atLimit $id
-!$ome_isAdmin",,,"0:ome_convEnd:""I can't hire on any more officers at the moment.""",,
+!$ome_isAdmin",,,"0:ome_convEnd:""目前我无法雇佣更多的军官了.""",,
 ome_cantHireAdmin,PopulateOptionsHire,"$ome_hireable score:100
 CallEvent $ome_eventRef atLimit $id
-$ome_isAdmin",,,"0:ome_convEnd:""I can't hire on any more administrators at the moment.""",,
+$ome_isAdmin",,,"0:ome_convEnd:""目前我无法聘用更多的管理员了.""",,
 ome_wontHire,PopulateOptionsHire,"$ome_hireable score:100
 !CallEvent $ome_eventRef atLimit $id",,,2:ome_convEnd:End the conversation,,
 ome_wontHireMerc,PopulateOptionsHire,"$ome_hireable score:100
 CallEvent $ome_eventRef atLimit $id
 $isMercenary",,,2:ome_convEnd:End the conversation,,
-ome_askSkillsSel,DialogOptionSelected,$option == ome_askSkills,"AddText ""You ask $personName some questions to establish where $hisOrHer skills lie.""
+ome_askSkillsSel,DialogOptionSelected,$option == ome_askSkills,"AddText ""你问了 $personName 一些问题以评估 $hisOrHer 拥有的技能.""
 CallEvent $ome_eventRef printSkills $id
 $askedSkills = true 0
 FireAll PopulateOptionsHire
@@ -1508,14 +1508,14 @@ unset $askedSkills",,,,
 ome_askSkillsSelNoSkillAdmin,DialogOptionSelected,"$option == ome_askSkills
 $ome_adminTier == 0
 $postId != mercenary
-$postId != officer_for_hire","AddText ""You ask $personName some questions to establish where $hisOrHer skills lie. It quickly becomes apparent that $heOrShe has no special talents, but is nonetheless a capable administrator, whose services can be had for a very reasonable fee.""
+$postId != officer_for_hire","AddText ""你问了 $personName 一些问题, 并了解到 $hisOrHer 似乎并没有什么特殊才能, 但你仍看出 $hisOrHer 是一位有潜力的行政官, 也可用合理的佣金将其纳入麾下.""
 $askedSkills = true 0
 FireAll PopulateOptionsHire
 unset $askedSkills",,,,
-ome_askHireSel,DialogOptionSelected,$option == ome_askHire,"AddText ""\""I'll expect a $ome_hiringBonus credit hiring bonus, and afterwards a starting salary of $ome_salary credits per month. Once the initial transfer is complete, I can be ready to board within the hour.\""""
+ome_askHireSel,DialogOptionSelected,$option == ome_askHire,"AddText ""\""我希望能立刻得到 $ome_hiringBonus 星币的佣金. 且每月底薪至少是 $ome_salary 星币. 成功雇佣后, 我将在一小时内登舰.\""""
 SetTextHighlightColors hColor hColor
 SetTextHighlights $ome_hiringBonus $ome_salary
-AddText ""You have $player.creditsStr credits available.""
+AddText ""你有 $player.creditsStr 星币可用.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr
 FireBest HireOptionSet",,,,
@@ -1528,31 +1528,31 @@ SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr
 FireBest HireOptionSet",,,,
 ome_askHireSelAdmin,DialogOptionSelected,"$option == ome_askHire
-$ome_isAdmin","AddText ""\""I'll expect a $ome_hiringBonus credit hiring bonus, and afterwards a salary of $ome_salary credits per month. Once the initial transfer is complete, I will await my assignment at your pleasure.\""""
+$ome_isAdmin","AddText ""\""我希望能立刻得到 $ome_hiringBonus 星币的佣金. 且每月底薪至少是 $ome_salary 星币. 一旦初步移交工作完成. 我将恭候指派.\""""
 SetTextHighlightColors hColor hColor
 SetTextHighlights $ome_hiringBonus $ome_salary
-AddText ""You have $player.creditsStr credits available.""
+AddText ""你有 $player.creditsStr 星币可用.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr
 FireBest HireOptionSet",,,,
-ome_hireOptionsNormal,HireOptionSet,CallEvent $ome_eventRef canAfford $id,,,"0:ome_hireYes:""Sounds good.""
-1:ome_convEnd:""I've changed my mind.""",,
+ome_hireOptionsNormal,HireOptionSet,CallEvent $ome_eventRef canAfford $id,,,"0:ome_hireYes:""听起来不错.""
+1:ome_convEnd:""还是算了吧.""",,
 ome_hireOptionsNormalMerc,HireOptionSet,"CallEvent $ome_eventRef canAfford $id
-$isMercenary","SetStoryOption ome_hireYes 1 hireMerc ui_char_spent_story_point_leadership ""Hired mercenary officer""",,"0:ome_hireYes:Accept the terms
-1:ome_convEnd:""I'll need to think about this.""",,
-ome_hireOptionsCantAfford,HireOptionSet,,,,"0:ome_convEnd:""I can't afford that at the moment.""",,
-ome_hireYesSel,DialogOptionSelected,$option == ome_hireYes,"AddText ""You cut the comm link after exchanging a few pleasantries.""
+$isMercenary","SetStoryOption ome_hireYes 1 hireMerc ui_char_spent_story_point_leadership ""雇佣兵军官已雇用""",,"0:ome_hireYes:接受条款
+1:ome_convEnd:""我需要考虑一下.""",,
+ome_hireOptionsCantAfford,HireOptionSet,,,,"0:ome_convEnd:""我暂时付不起...""",,
+ome_hireYesSel,DialogOptionSelected,$option == ome_hireYes,"AddText ""你在互相寒暄几句后, 就切断了通讯链接.""
 CallEvent $ome_eventRef hireOfficer $id
 UpdateMemory
 ShowDefaultVisual
 EndConversation",,,,
 ome_hireNoSel,DialogOptionSelected,$option == ome_convEnd,"ShowDefaultVisual
-EndConversation",You cut the comm link after exchanging a few pleasantries.,,,
+EndConversation","你在互相寒暄几句后, 就切断了通讯链接.",,,
 ome_hireNoSelJerk,DialogOptionSelected,"$option == ome_convEnd
 $player.wasJerkToMerc","ShowDefaultVisual
-EndConversation",You cut the comm link after exchanging a few hollow pleasantries.,,,
+EndConversation","你在互相寒暄几句后, 就切断了通讯链接.",,,
 ome_hireNoSel2,DialogOptionSelected,$option == ome_convEnd2,"ShowDefaultVisual
-EndConversation","You look around the bridge. The junior officers are all remarkably busy, with no-one even glancing in your direction.",,,
+EndConversation","你环顾四. 下级军官都非常忙, 甚至没有人朝你的方向看一眼.",,,
 ,,,,,,,
 # patrol stopping player w/ transponder off,,,,,,,
 tOffPatrolBegin,BeginFleetEncounter,"CaresAboutTransponder
@@ -1567,7 +1567,7 @@ MakeOtherFleetAggressive tOff false
 unset $ignorePlayerCommRequests
 $sawPlayerWithTOffCount++ 10
 $transponderOffConv = true 0
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
 OpenComms",,,,
 tOffPatrolBeginNoTalk,BeginFleetEncounter,"CaresAboutTransponder
 !$tOff_didAlready
@@ -1583,38 +1583,38 @@ MakeHostileWhileTOff tOff true 7
 $sawPlayerWithTOffCount++ 10
 $ignorePlayerCommRequests = true 0",,,,
 tOffPatrolOpenComm,OpenCommLink,"!$entity.patrolAllowTOff
-$entity.transponderOffConv score:100","AddText ""\""Running with the transponder off in $faction space is against the law. You're hereby ordered to turn your transponder on, identify yourself immediately, and submit to a cargo scan for contraband.\""""
+$entity.transponderOffConv score:100","AddText ""\""在 $faction 主权星系内关闭应答器是严重的违法行为. 请立刻开启应答器, 来证明自己的身份, 并由我们进行货物扫描.\""""
 AdjustRep $faction.id TRANSPONDER_OFF
 AdjustRepActivePerson TRANSPONDER_OFF
-SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""Talked your way out of a cargo scan""",,"0:tOff_comply:Turn the transponder on and comply
-1:avoid_scan:Talk your way out of it
-2:tOff_refuse:Refuse and cut the comm link",,
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""用你的方式摆脱了货物扫描""",,"0:tOff_comply:开启应答器并合作
+1:avoid_scan:用你的方式摆脱它
+2:tOff_refuse:拒绝并切断通讯",,
 tOffPatrolOpenCommUnknown,OpenCommLink,"!$entity.patrolAllowTOff
 $entity.transponderOffConv score:100
-!$entity.knowsWhoPlayerIs","AddText ""\""Unknown $shipOrFleet, identify yourself! Running with the transponder off in $faction space is against the law. You're hereby ordered to turn your transponder on and submit to a cargo scan.\""""
+!$entity.knowsWhoPlayerIs","AddText ""\""未知 $shipOrFleet, 亮明自己的身份! 在 $faction 所属星系内关闭应答器 是严重的违法行为. 请立刻开启应答器, 证明自己身份, 并进行货物扫描.\""""
 AdjustRep $faction.id TRANSPONDER_OFF
 AdjustRepActivePerson TRANSPONDER_OFF
-SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""Talked your way out of a cargo scan""",,"0:tOff_comply:Turn the transponder on and comply
-1:avoid_scan:Talk your way out of it
-2:tOff_refuse:Refuse and cut the comm link",,
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""用你的方式摆脱了货物扫描""",,"0:tOff_comply:开启应答器并配合扫描
+1:avoid_scan:用你的方式摆脱它
+2:tOff_refuse:拒绝并切断通讯",,
 tOffPatrolOpenCommTOn,OpenCommLink,"!$entity.patrolAllowTOff
 $entity.transponderOffConv score:100
-$player.transponderOn","AddText ""\""Running with the transponder off in $faction space is against the law. Don't think you can just turn it back on and avoid our attention - you're hereby ordered to submit to a cargo scan.\""""
+$player.transponderOn","AddText ""\""在 $faction 所属星系内关闭应答器是严重的违法行为. 别以为道个歉 然后开启应答器就可蒙混过关, 立即配合我们进行货物扫描, 同志!\""""
 AdjustRep $faction.id TRANSPONDER_OFF
 AdjustRepActivePerson TRANSPONDER_OFF
-SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""Talked your way out of a cargo scan""",,"0:tOff_comply2:Allow the scan
-1:avoid_scan:Talk your way out of it
-2:tOff_refuse:Refuse and cut the comm link",,
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""用你的方式摆脱了货物扫描""",,"0:tOff_comply2:配合进行扫描
+1:avoid_scan:用你的方式摆脱它
+2:tOff_refuse:拒绝并切断通讯",,
 tOffPatrolOpenCommNotFirstTime,OpenCommLink,"!$entity.patrolAllowTOff
 $entity.transponderOffConv score:100
 $entity.sawPlayerWithTOffCount == 2.0 score:10
-$entity.relativeStrength >= 0","AddText""\""I told you last time to keep your transponder on.\""""
+$entity.relativeStrength >= 0","AddText""\""这是最后一次警告, 开启你的应答器.\""""
 AdjustRep $faction.id TRANSPONDER_OFF
 AdjustRepActivePerson TRANSPONDER_OFF
-AddText ""The comm link is cut before you have a chance to respond.""
+AddText ""通讯链接在你未回应前就被切断了.""
 $entity.ignorePlayerCommRequests = true 0
 unset $entity.transponderOffConv
-MakeHostileWhileTOff tOff true 7",,"#0:tOff_notFirstTimeCont:Continue
+MakeHostileWhileTOff tOff true 7",,"#0:tOff_notFirstTimeCont:继续
 cutCommLinkNoText:Continue",,
 scanTalkYourWayOut,DialogOptionSelected,$option == avoid_scan,"SetNearbyFleetsVariable 5000 $faction.id $patrolAllowTOff true 10
 $entity.patrolAllowTOff = true 10
@@ -1637,36 +1637,36 @@ EndConversation",,,,
 tOffComply,DialogOptionSelected,$option == tOff_comply,"unset $entity.transponderOffConv
 unset $entity.sawPlayerTransponderOff
 ActivateAbility $player.fleetId transponder
-UpdateMemory",You issue an order to activate the transponder and wait for the cargo scan to finish.,0:tOff_scan_continue:Continue,,
+UpdateMemory","你开启了应答器, 并等待货物扫描完成.",0:tOff_scan_continue:继续,,
 tOffComply2,DialogOptionSelected,$option == tOff_comply2,"unset $entity.transponderOffConv
-unset $entity.sawPlayerTransponderOff",You wait for the cargo scan to finish.,0:tOff_scan_continue:Continue,,
-tOffCargoScan,DialogOptionSelected,$option == tOff_scan_continue,"AddText ""After a brief wait, the $faction $otherFleetName transmits the scan results.""
+unset $entity.sawPlayerTransponderOff",等待货物扫描完成.,0:tOff_scan_continue:继续,,
+tOffCargoScan,DialogOptionSelected,$option == tOff_scan_continue,"AddText ""经过短暂等待后, $faction $otherFleetName 向你发来了扫描结果.""
 CargoScan
 FireBest TOffScanResult",,,,
 tOffCargoScanHostile,DialogOptionSelected,"$option == tOff_scan_continue
 $entity.isHostile","ShowDefaultVisual
-EndConversation","However, instead of proceeding with the scan, the $faction $fleetName shuts down comms and powers up combat systems.",,,
+EndConversation",然而扫描突然终止. 且 $faction $fleetName 的舰队中出现了高能源反应.,,,
 tOffCargoScanHostileStronger,DialogOptionSelected,"$option == tOff_scan_continue
 $entity.isHostile
 $entity.relativeStrength < 0","MakeOtherFleetAggressive tOff false
 MakeOtherFleetPreventDisengage tOff false
 ShowDefaultVisual
-EndConversation","However, instead of proceeding with the scan, the $faction $fleetName shuts down comms and powers up combat systems.",,,
-tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"The $faction $personRank pauses and looks off-screen.
+EndConversation",然而扫描突然终止. 且 $faction $fleetName 的舰队中出现了高能源反应.,,,
+tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank 停了下来, 并把视线移开了屏幕.
 
-""But what about these cargo pods, which, let me check - why, they do contain illegal cargo. Not yours, are they? No? Excellent. We'll be confiscating the contents, then.""",0:tOff_podsCont:Continue,,
+""请你解释下这些货舱是怎么回事呢? 为什么它们装的是违禁品? 是不是你的? 不是? 很好, 我们之后会没收这些玩意.""",0:tOff_podsCont:继续,,
 tOffCargoScanPodsCont,DialogOptionSelected,$option == tOff_podsCont,FireBest TOffScanResult,,,,
 tOffCargoScanClean,TOffScanResult,"!$scan_contrabandFound
-!$scan_suspiciousCargoFound",,"$PersonRank $personName looks vaguely displeased.
+!$scan_suspiciousCargoFound",,"$PersonRank $personName 看上去很失望.
 
-""If I catch you running with the transponder off again, you won't get off so easily.""
+""如果再让我抓到你关着应答器晃悠, 事情就不会这么简单了.""
 
-The comm link is cut before you have a chance to respond.",0:tOff_cleanCont1:Continue,,
-#tOffCargoScanSuspicious,TOffScanResult,$scan_suspiciousCargoFound,,"While the scan finds no overt contraband, the quantity of cargo found, combined with indirect evidence of your prior black market activities, is enough to raise suspicions.
+通讯链接在你未回应前就被切断了.",0:tOff_cleanCont1:继续,,
+#tOffCargoScanSuspicious,TOffScanResult,$scan_suspiciousCargoFound,,"虽然这次扫描没有抓住你的小尾巴, 不过根据货物数量, 和你之前活跃于 黑市下的蛛丝马迹, 就足以引起对方的怀疑.
 
-It is not, however, enough to do anything about. Correspondingly, $personRank $personName looks displeased.
+很遗憾对方这次没法把你怎么样, 但是相应的, $personRank $personName 看起来非常不高兴.
 
-""I'll see you again, you can be sure of it,"" $heOrShe grinds out before cutting the comm link.",0:tOff_cleanCont1:Continue,,
+""我们会再见的, 相信我."" $heOrShe 咬着牙切断了通讯链接.",0:tOff_cleanCont1:继续,,
 tOffCargoScanBoarding1,TOffScanResult,$scan_suspiciousCargoFound,,"The scan finds no overt contraband, but there is enough suspicion of your involvement in black market activities that the patrol commander is not appeased by this.
 
 ""Prepare to receive a boarding party. We'll be conducting a very thorough, hands-on inspection.""
@@ -1682,10 +1682,10 @@ BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
 ShowDefaultVisual
 EndConversation NO_CONTINUE
 $sourceMarket.smugglingScanTimeout = true 30",,,,
-tOffCargoScanContraband,TOffScanResult,$scan_contrabandFound score:10,,"""Well, well. Just as I suspected, we've got a smuggler here. Per standard $faction procedure, you're required to eject the contraband into space, for pickup or incineration at the discretion of the patrol commander.""
+tOffCargoScanContraband,TOffScanResult,$scan_contrabandFound score:10,,"""啧啧啧. 如我所料, 又是一名走私犯. 按 $faction 治安程序, 你必须将 所有违禁品投出, 然后由巡逻员决定就地销毁还是作为证据没收.""
 
-$PersonRank $personLastName looks rather pleased, and you suspect that ""pickup"" rather than ""incineration"" might be the order of the day.","0:tOff_comply_contraband:Surrender the contraband and cut the comm link
-1:tOff_refuse:Refuse and cut the comm link",,
+$PersonRank $personLastName 看起来相当高兴, 你因此怨念地打赌这家伙 绝对会占为己有而不是就地焚毁.","0:tOff_comply_contraband:上交违禁品并切断通讯
+1:tOff_refuse:拒绝并切断通讯",,
 tOffCargoScanContrabandSurrender,DialogOptionSelected,$option == tOff_comply_contraband,"CargoScanApplyResult $scan_cargoScanResult
 MakeOtherFleetPreventDisengage tOff false
 BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
@@ -1709,31 +1709,31 @@ MakeOtherFleetPreventDisengage cargoScan true
 MakeOtherFleetAggressive tOff false
 unset $ignorePlayerCommRequests
 $cargoScanConv = true 0
-AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
 OpenComms",,,,
-cargoScanFirstComms,OpenCommLink,$entity.cargoScanConv score:100,"AddText ""\""Attention: your fleet matches the profile of a suspected smuggler posted by $market authorities. You're hereby ordered to submit to a cargo scan.\""""
-SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""Talked your way out of a cargo scan""",,"0:cargoScan_comply:Allow the scan
-1:avoid_scan:Talk your way out of it
-2:cargoScan_refuse:Refuse and cut the comm link",,
+cargoScanFirstComms,OpenCommLink,$entity.cargoScanConv score:100,"AddText ""\""注意: 你的舰队与 $market 当局记录的一个走私嫌疑犯相符. 现命令你 立刻接受我们的货船扫描!\""""
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""用你的方式摆脱了货物扫描""",,"0:cargoScan_comply:接受扫描
+1:avoid_scan:用你的方式拜托它
+2:cargoScan_refuse:拒绝并切断通讯连接",,
 ,,,,,,,
-cargoScanStart,DialogOptionSelected,$option == cargoScan_comply,"AddText ""After a brief wait, the $faction $otherFleetName transmits the scan results.""
+cargoScanStart,DialogOptionSelected,$option == cargoScan_comply,"AddText ""经过短暂等待后, $faction $otherFleetName 向你发来了扫描结果.""
 CargoScan
 FireBest CargoScanResult",,,,
-cargoScanPods,CargoScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"The $faction $personRank pauses and looks off-screen.
+cargoScanPods,CargoScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank 停了下来, 并把视线移开了屏幕.
 
-""But what about these cargo pods, which, let me check - why, they do contain illegal cargo. Not yours, are they? No? Excellent. We'll be confiscating the contents, then.""",0:scan_podsCont:Continue,,
+""请你解释下这些货舱是怎么回事呢? 为什么它们装的是违禁品? 是不是你的? 不是? 很好, 我们之后会没收这些玩意.""",0:scan_podsCont:继续,,
 cargoScanPodsCont,DialogOptionSelected,$option == scan_podsCont,FireBest CargoScanResult,,,,
 cargoScanClean,CargoScanResult,"!$scan_contrabandFound
-!$scan_suspiciousCargoFound",,"$PersonRank $personName looks vaguely displeased.
+!$scan_suspiciousCargoFound",,"$PersonRank $personName 看上去有些失望.
 
-""Well, everything looks clean this time.""
+""好吧, 看来并没有什么异常.""
 
-The comm link is cut before you have a chance to respond.",0:cargoScan_cleanCont:Continue,,
-#cargoScanSuspicious,CargoScanResult,$scan_suspiciousCargoFound,,"While the scan finds no overt contraband, the quantity of cargo found, combined with indirect evidence of your prior black market activities, is enough to raise suspicions.
+通讯链接在你未回应前就被切断了.",0:cargoScan_cleanCont:继续,,
+cargoScanSuspicious,CargoScanResult,$scan_suspiciousCargoFound,,"虽然这次扫描没有抓住你的小尾巴, 不过根据货物数量, 和你之前活跃于 黑市下的蛛丝马迹, 就足以引起对方的怀疑.
 
-It is not, however, enough to do anything about. Correspondingly, $personRank $personName looks displeased.
+很遗憾对方这次没法把你怎么样, 但是相应的, $personRank $personName 看起来非常不高兴.
 
-""I'll see you again, you can be sure of it,"" $heOrShe grinds out before cutting the comm link.",0:cargoScan_cleanCont:Continue,,
+""我们会再见的, 相信我.""  $heOrShe 咬着牙切断了通讯链接.",0:cargoScan_cleanCont:继续,,
 cargoScanBoarding1,CargoScanResult,$scan_suspiciousCargoFound,,"The scan finds no overt contraband, but there is enough suspicion of your involvement in black market activities that the patrol commander is not appeased by this.
 
 ""Prepare to receive a boarding party. We'll be conducting a very thorough, hands-on inspection.""
@@ -1755,10 +1755,10 @@ $entity.smugglingScanComplete = true 1
 $sourceMarket.smugglingScanTimeout = true 30
 ShowDefaultVisual
 EndConversation NO_CONTINUE",,,,
-cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""Well, well. Just as I suspected, we've got a smuggler here. Per standard $faction procedure, you're required to eject the contraband into space, for pickup or incineration at the discretion of the patrol commander.""
+cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""啧啧啧. 如我所料, 又是一名走私犯. 按 $faction 治安程序, 你必须将 所有违禁品投出, 然后由巡逻员决定就地销毁还是作为证据没收.""
 
-$PersonRank $personLastName looks rather pleased, and you suspect that ""pickup"" rather than ""incineration"" might be the order of the day.","0:cargoScan_comply_contraband:Surrender the contraband and cut the comm link
-1:cargoScan_refuse:Refuse and cut the comm link",,
+$PersonRank $personLastName 看起来相当高兴, 你因此怨念地打赌这家伙 绝对会占为己有而不是就地焚毁.","0:cargoScan_comply_contraband:上交违禁品并切断通讯
+1:cargoScan_refuse:拒绝并切断通讯",,
 cargoScanContrabandSurrender,DialogOptionSelected,$option == cargoScan_comply_contraband,"CargoScanApplyResult $scan_cargoScanResult
 MakeOtherFleetPreventDisengage cargoScan false
 MakeOtherFleetAggressive cargoScan false
@@ -1790,13 +1790,13 @@ EndConversation",,,,
 ise_greetingTOn,PickGreeting,"$ise_investigator
 $player.transponderOn
 !CallEvent $ise_eventRef paidBribe","ShowPersonVisual
-SetShortcut cutCommLink ""ESCAPE""","After a short wait, your connection request is accepted.
+SetShortcut cutCommLink ""ESCAPE""","经过短暂等待后, 你的连接请求被接受.
 
-$personName looks at you suspiciously.
+$personName 用怀疑的目光看了你一眼.
 
-""As I'm sure you're aware, I'm currently conducting a highly sensitive investigation, and have no time for idle chatter.""
+""你的明白, 我目前正进行一项高度敏感的调查, 我可没时间和你胡扯.""
 
-You get the feeling that you might get further if you came into port without broadcasting your identity via the transponder.",0:cutCommLink:Cut the comm link,,
+直觉告诉你关闭应答器并潜入太空港,  就会让这件事变得更简单点.",0:cutCommLink:切断通讯,,
 ise_greetingTOff,PickGreeting,"$ise_investigator
 !$player.transponderOn
 !CallEvent $ise_eventRef paidBribe","ShowPersonVisual
