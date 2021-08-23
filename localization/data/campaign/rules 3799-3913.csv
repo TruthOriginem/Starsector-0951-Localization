@@ -9,13 +9,13 @@ SITMMercAttack,SITMMercAttack,,MakeOtherFleetNoRepImpact sitm true,"""我警告�
 
 $HeOrShe 在你能做出答复之前切断了通讯连接。",cutCommLinkNoText:继续,,
 # Pather encounter afterwards,,,,,,,
-SITMPatherHail,SITMPatherHail,,$entity.ignorePlayerCommRequests = true,"""Moloch的邪恶手足!""左径分子吐了一口唾沫，""为何你胆敢插手应被忘却之事!卢德先知竟为你这样的愚者死于枉然了吗!""
+SITMPatherHail,SITMPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Moloch}的邪恶手足!""左径分子吐了一口唾沫，""为何你胆敢插手应被忘却之事!卢德先知竟为你这样的愚者死于枉然了吗!""
 
 $HeOrShe 深吸了一口气。""神圣的真空，展现你的慈悲，因为我已无法遏制怒火!""","cutCommLink2:""这自然而然就发生了，并非我愿意这么做。""
 cutCommLink:保持沉默",,
 ,,,,,,,
 # similar - Pather encounter after recovering a blueprint OR special item that the historian told the player about,,,,,,,
-HistorianPatherHail,HistorianPatherHail,,$entity.ignorePlayerCommRequests = true,"""Mammon的污秽奴仆!""左径分子啐了一口，""上帝理应已将此等邪恶从人心中抹除!而今你却出现于此，侵吞恶魔之遗产，挖掘，掠夺...掠夺亵渎之财富!""
+HistorianPatherHail,HistorianPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Mammon}的污秽奴仆!""左径分子啐了一口，""上帝理应已将此等邪恶从人心中抹除!而今你却出现于此，侵吞恶魔之遗产，挖掘，掠夺...掠夺亵渎之财富!""
 
 $HeOrShe 深吸了一口气:""卢德在上，请宽恕我的愤怒。""","cutCommLink2:""宽恕在财富面前一文不值。""
 cutCommLink:保持沉默",,
@@ -117,12 +117,12 @@ Highlight $fwt_piratePayment
 AddCommodity credits $fwt_piratePayment
 MakeOtherFleetNonHostile true
 MakeOtherFleetAvoidContact true
-unset $entity.fwt_wantsThing","你瞪着海盗，目光凶狠得就如同你正在用内置于双眼中的速子长矛在对方身上挖洞，你吐出的话击恶狠狠地敲击着对方:""你竟然敢宣称自己拥有Kanta领主的资产?""
+unset $entity.fwt_wantsThing","你瞪着海盗，目光凶狠得就如同你正在用内置于双眼中的速子长矛在对方身上挖洞，你吐出的话击恶狠狠地敲击着对方:""你竟然敢宣称自己拥有{Kanta}领主的资产?""
 
 海盗舰长体内的鲜血涌了上来，脸因为恐惧变得通红。""她!但是...繁星和...和鲜血在上。舰长，请接受我的道歉!我永远不会...她不需要知道这些琐事，对吧?请 - 请接受我微不足道的 $fwt_piratePaymentcredits 信用点，来弥补因我的愚蠢造成的耽误。"" $HeOrShe 现在几乎是在恳求，""所以，舰长。舰长，您应该是不会向别人提起这件小事的吧?""","fwt_bluffPirate1:""也许吧。""",,
-fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧地点了点头:""对，是的...当然了。"" $HeOrShe 仔细地看着你，揣测着你是否会将 $hisOrHer 罪过告诉Kanta。
+fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧地点了点头:""对，是的...当然了。"" $HeOrShe 仔细地看着你，揣测着你是否会将 $hisOrHer 罪过告诉{Kanta}。
 
-海盗舰长思索着，如果你真的上报了此事，那应该如何改变自己的名字和外貌呢?那之后，在远离任何一个名叫""Kanta""的人的外围星域当一个拾荒远征队的船员或许是明智的选择。
+海盗舰长思索着，如果你真的上报了此事，那应该如何改变自己的名字和外貌呢?那之后，在远离任何一个名叫{""Kanta""}的人的外围星域当一个拾荒远征队的船员或许是明智的选择。
 
 看出对方思考的目的后你切断了通讯，并翻起了白眼 - 对海盗舰长的懦弱。",cutCommLinkNoText:继续,,
 fwtAcceptPirates,DialogOptionSelected,$option == fwt_acceptPirates,"MakeOtherFleetNonHostile true
@@ -239,7 +239,7 @@ Highlight $entity.fwt_payment","通讯显示一开始断断续续的，过了一
 
 ""柔和的尾焰!清晰的轨道!舰长，"" $heOrShe 带着灿烂的笑容向你致意。""让我先澄清一件事:我的合同不允许我使用暴力威胁。所以我不会胁迫您，只能给您提建议。如果您不接受，"" $heOrShe 耸耸肩，""好吧，那样我就拿不到奖金了。所以请您务必考虑一下。""
 
-""我来到这里的目的呢，是代我的雇主用 $fwt_payment 信用点从您那里买一个东西。我想，"" $heOrShe 看起来有些难以启齿，“您应该知道我说的是什么。""你当然知道对方指的是 $entity.fwt_ThingDesc。
+""我来到这里的目的呢，是代我的雇主用 $fwt_payment 信用点从您那里买一个东西。我想，"" $heOrShe 看起来有些难以启齿，""您应该知道我说的是什么。""你当然知道对方指的是 $entity.fwt_ThingDesc。
 ","cutCommLink:拒绝，并关闭通讯
 fwt_acceptMerc:接受，并交出 $entity.fwt_theThing",,
 fwt_acceptMercSelNoPay,DialogOptionSelected,$option == fwt_acceptMerc,"MakeOtherFleetNonHostile true
@@ -401,7 +401,7 @@ $id == coureuse score:2","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
 FireAll PopulateOptions","在短暂的等待后，你的通讯请求被接受了。
 
-""你好，舰长，""Coureuse说，同时为没有转向你道了个歉 - 她的注意力集中在一堆闪烁的全息数据表上，""对不起，我现在太忙了。你需要什么帮助呢?""",,# voice == scientist was a little too rude -dgb,
+""你好，舰长，""{Coureuse}说，同时为没有转向你道了个歉 - 她的注意力集中在一堆闪烁的全息数据表上，""对不起，我现在太忙了。你需要什么帮助呢?""",,# voice == scientist was a little too rude -dgb,
 # Hegemony,,,,,,,
 defaultDaudGreeting,PickGreeting,$id == daud score:1000,FireAll PopulateOptions,"在看着霸主的标识好长一段时间后，一个似乎是候补军官的人接受了你发起的通讯请求。你怀疑他们甚至还没有从海军学院毕业。
 
@@ -416,13 +416,13 @@ FireAll PopulateOptions","""不好意思，最高领导人事务繁忙。""候�
 defaultDaudHolo2,DialogOptionSelected,$option == defaultDaud_holoExperience,"$gotHoloExperience = true
 $player.gotHegemonyHoloExperience = true
 AddTextSmall ""获得霸主150周年纪念活动全息体验卡带"" highlight
-FireAll PopulateOptions","""我希望你能享受霸主历史的带来的感官盛宴，""候补军官说，""从Molina上将那救英仙座星区于水火的史诗级远航，到霸主最高领导人Daud战胜速子科技和AI入侵者。""",,,
+FireAll PopulateOptions","""我希望你能享受霸主历史的带来的感官盛宴，""候补军官说，""从{Molina}上将那救英仙座星区于水火的史诗级远航，到霸主最高领导人{Daud}战胜速子科技和AI入侵者。""",,,
 ,,,,,,,
 defaultRaoGreeting,PickGreeting,$id == rao score:1000,"ShowPersonVisual
 FireAll PopulateOptions
-SetShortcut cutCommLinkPolite ""ESCAPE""","在短暂的等待中，你可以看到霸主海军的宣传海报在他们的舰队上方滚动着，然后你向Rao上将办公室发起的通讯请求被接受了。
+SetShortcut cutCommLinkPolite ""ESCAPE""","在短暂的等待中，你可以看到霸主海军的宣传海报在他们的舰队上方滚动着，然后你向{Rao}上将办公室发起的通讯请求被接受了。
 
-""所以，""在Raesvelg之围中诞生的英雄看着你，""一个自由佣兵跑到这穷乡僻巷来做什么?""",0:cutCommLinkPolite:切断通讯,,
+""所以，""在{Raesvelg}之围中诞生的英雄看着你，""一个自由佣兵跑到这穷乡僻巷来做什么?""",0:cutCommLinkPolite:切断通讯,,
 ,,,,,,,
 # Pirates,,,,,,,
 defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后，你的通讯连接请求被拒绝了。,0:cutCommLink:切断通讯,,
@@ -431,7 +431,7 @@ defaultGreetingCydonia,PickGreeting,$id == cydonia score:1000,,在短暂的等�
 # Horus Yaribay after GAATG,,,,,,,
 YaribayFollowupNotDone,PickGreeting,"$id == horus_yaribay score:1000
 $global.gaATG_returnWithDeal
-$player.metDaud",ShowPersonVisual,"""我还没有收到霸主最高领导人Daud的消息。我认为你应该继续按照我们之前的协议，用我提供的材料来进行联系。""
+$player.metDaud",ShowPersonVisual,"""我还没有收到霸主最高领导人{Daud}的消息。我认为你应该继续按照我们之前的协议，用我提供的材料来进行联系。""
 
 他用一种看起来很无情的态度打量了你一番，说道:""我会很有耐心地在这等着的。""",cutCommLink:切断通讯,,
 YaribayFollowup,PopulateOptions,"$id == horus_yaribay score:1000
@@ -439,13 +439,13 @@ YaribayFollowup,PopulateOptions,"$id == horus_yaribay score:1000
 $player.metDaud",,,"yaribay_followup1:""和我们共同的朋友联系上了吗?""",,
 YaribayFollowup1,DialogOptionSelected,"$option == yaribay_followup1
 $player.gaveDaudYaribayContact
-AddPotentialContact horus_yaribay",#Call addContacts,"""我很高兴，我已经和我们共同的朋友取得了联系。""Horus眨了眨眼，""如同所有美妙的事，享受这种通过努力取得的成果需要时间。""
+AddPotentialContact horus_yaribay",#Call addContacts,"""我很高兴，我已经和我们共同的朋友取得了联系。""{Horus}眨了眨眼，""如同所有美妙的事，享受这种通过努力取得的成果需要时间。""
 
-""看来信任你是个正确的决定。也许我们以后还会进行一些交易。啊，我之前有没有提到，尽管道德层面或许有些污点，Yaribay这个姓氏却在最新一代人身上证明着它的学术实力?好吧，让我告诉你...""
+""看来信任你是个正确的决定。也许我们以后还会进行一些交易。啊，我之前有没有提到，尽管道德层面或许有些污点，{Yaribay}这个姓氏却在最新一代人身上证明着它的学术实力?好吧，让我告诉你...""
 
-在被Yaribay后裔于Galatia学院取得的各种如传说般的成就塞满耳朵之前，你设法成功溜之大吉。",cutCommLink:切断通讯,,
+在被{Yaribay}后裔于{Galatia}学院取得的各种如传说般的成就塞满耳朵之前，你设法成功溜之大吉。",cutCommLink:切断通讯,,
 YaribayFollowup2,DialogOptionSelected,"$option == gaATG_yaribayFollowup1
-!$player.gaveDaudYaribayContact",,"""不幸的是，我还没有收到来自...我们共同的朋友的消息。""Horus皱着眉头说，""也许这只是时间问题。就像对所有美好的事物一样，我们必须得满怀期待。""",cutCommLink:切断通讯,,
+!$player.gaveDaudYaribayContact",,"""不幸的是，我还没有收到来自...我们共同的朋友的消息。""{Horus}皱着眉头说，""也许这只是时间问题。就像对所有美好的事物一样，我们必须得满怀期待。""",cutCommLink:切断通讯,,
 ,,,,,,,
 # Tri-Tachyon,,,,,,,
 defaultSunGreeting,PickGreeting,$id == sun score:1000,"#ShowPersonVisual
