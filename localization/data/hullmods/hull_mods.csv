@@ -74,7 +74,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 救援穿梭舱,recovery_shuttles,1,,,special,战机,4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.RecoveryShuttles,减少战机联队{%s}的人员战损。,减少战机击毁造成的人员战损。,graphics/hullmods/recovery_shuttles.png
 强化舱壁,reinforcedhull,0,,,"defensive, merc",防御,2500,TRUE,,,5,10,15,30,data.hullmods.ReinforcedBulkheads,增加舰船{%s}的结构值。且当该舰停机时，不会四分五裂且始终可在战后修复。,提高舰船耐久，停机的舰船总是可被修复。,graphics/hullmods/reinforced_bulkheads.png
 幅散管道扩容,fluxbreakers,2,,,"defensive, merc","特殊, 防御",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,减少{%s} 武器、引擎受到的 EMP 伤害。与此同时提高{%s} 强制幅能排散速率。,减少EMP伤害，增强强制排散。,graphics/hullmods/resistant_flux_conduits.png
-安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据舰船级别提高{%s/%s/%s}舰船战斗中的最高航速，也会对应提升加速度。零幅能加速在任何幅能水平下都能生效。幅能排散能力将直接提高至{%s}倍(这个提升包括其他插件、改装涵盖的幅能部分)。
+安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据舰船级别提高{%s/%s/%s}舰船战斗中的最高航速，也会对应提升加速度。零幅能加速在任何幅能水平下都能生效。幅能排散能力将直接提高至{%s}倍(这个提升包括其他插件、改装涵盖的幅能部分)。
 
 峰值时间将降低{%s}倍、禁用强制排散，并且所有武器射程超过{%s}单位的部分将极大衰减。
 
