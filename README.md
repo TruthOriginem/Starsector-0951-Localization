@@ -56,3 +56,4 @@
 | Enforcer                | 压迫者             | 执法者             |词不达意            |
 | SafetyOverdrive         | 安全超载           | 安全协议超驰       |词不达意            |
 | Gryphon                 | 鹰头狮             | 狮鹫               |遗留问题           |
+| Graviton Beam           | 引力子激光         | 引力子束           |词不达意           |
