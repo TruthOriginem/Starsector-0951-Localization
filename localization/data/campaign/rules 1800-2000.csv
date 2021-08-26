@@ -663,7 +663,7 @@ paPZ_gargPostLikes,DialogOptionSelected,$option == paPZ_gargPostLikes,,"{Gargoyl
 gaPZ_gargPostUsing:""{Baird}在利用我，我明白这一点。""",,
 gaPZ_gargoylePostDistraction,gaPZ_gargoylePostDistraction,,,"""你真是个绝妙的幌子, 最绝妙的!""
 
-""每一个{MILINT}军官都会把眼球瞪出他们的脑袋，盯着你流口水，而真正的演出就可以在这里开始了。当然，他们也会派人来Galatia学院刺探情报，但只要你还在外边活动，他们的目光就不可能集中到这里来。""
+""每一个{MILINT}军官都会把眼球瞪出他们的脑袋，盯着你流口水，而真正的演出就可以在这里开始了。当然，他们也会派人来{Galatia}学院刺探情报，但只要你还在外边活动，他们的目光就不可能集中到这里来。""
 
 {Gargoyle}交叉着胳膊，一副满意的表情:""那也不错，是吧?""","paPZ_gargPostNeat:""棒到了极点。""
 paPZ_gargPostNotNeat:""不，一点也不好。""",,
