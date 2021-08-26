@@ -25,7 +25,7 @@ postGAFCNewArchon1,DialogOptionSelected,$option == postGAFC_newArchonAsk1,#$aske
 
 ""你看，当地的暴民无法维持秩序，而我的家族 - {Hannan}家族 - 已经在这个停滞不前的采矿营地所供养的工业上投入了大量资金，他们决定了这该由专人负责管理。"" $HeOrShe 叹息着，交叉着 $hisOrHer 双臂，""我真幸运。""","postGAFC_newArchonAsk2:""如果你不喜欢这里，为什么不辞职呢?""
 cutCommLink:切断通讯",,
-postGAFCNewArchon2,DialogOptionSelected,$option == postGAFC_newArchonAsk2,,"$PersonName 看着你:""舰长，我敢说身处你这样的地位的人是不会明白的。我是汉南家族的一员，我承担着责任。"" $heOrShe 特别强调了""责任""这词，似乎想表达这是一种贵族义务。
+postGAFCNewArchon2,DialogOptionSelected,$option == postGAFC_newArchonAsk2,,"$PersonName 看着你:""舰长，我敢说身处你这样的地位的人是不会明白的。我是{Hannan}家族的一员，我承担着责任。"" $heOrShe 特别强调了""责任""这词，似乎想表达这是一种贵族义务。
 
 ""我将按照家族的要求完成我的工作，那之后我将会担任一个更合适的职务。或许是做什么的副部长，又或许是做一名海军将领。"" $HeOrShe 微笑着说，""当然，那只会是个开始。我有抱负，不像我的一些兄弟姐妹;而为了实现抱负，我必须做出牺牲 - 就这样。"" $PersonName 摊开 $hisOrHer 手，暗示着{Laicaille}栖息地就是所谓的""牺牲""。","postGAFC_newArchonAsk3:""这对你来说一定不好受，不论如何感谢你的服务。""
 cutCommLink:""真有意思。就这样吧，再接再厉。""(离开)",,
@@ -160,28 +160,28 @@ gaPZAskArroyoKelise,PopulateOptions,"$isPerson
 $id == arroyo
 $global.gaPZ_inProgress
 Call $global.gaPZ_ref updateData
-$gaPZ_stage == GET_KELISE_LEAD",,,gaPZ_ArroyoAskKelise:请求帮助获取关于{Kelise Astraia}的信息,,
+$gaPZ_stage == GET_KELISE_LEAD",,,gaPZ_arroyoAskKelise:请求帮助获取关于{Kelise Astraia}的信息,,
 gaPZAskArroyoKeliseSel,DialogOptionSelected,$option == gaPZ_arroyoAskKelise,,"""这问题是你自己问的还是{Baird}院长让你问的?""虽然嘴上这么说着，你却听得出来他已经认定这是{Baird}院长让你问的问题了，接着他把一只手拍在桌子上，挪开目光沉思起来，""算了，无需回答。""
 
 ""你要找一个速子科技的员工对吗?只要你知道该问谁和该怎么问，从人力资源部门获取数据并不难，更不用说拥有市政特权的情况 - 有我帮助的情况下了。""他勉强挤出一丝微笑，然后转过身来面对着你。
 
-""上次你的行动搞砸了一些东西，这让我备受打击，所以在我帮你以便让你能帮{Baird}之前，我需要你帮个小忙。""","gaPZ_ArroyoAskKelise1:""你想让我帮什么忙?""",,
+""上次你的行动搞砸了一些东西，这让我备受打击，所以在我帮你以便让你能帮{Baird}之前，我需要你帮个小忙。""","gaPZ_arroyoAskKelise1:""你想让我帮什么忙?""",,
 gaPZAskArroyoKelise1,DialogOptionSelected,$option == gaPZ_arroyoAskKelise1,,"""一件很简单的小事，只是需要一个随便什么人来完成。拿着这个。""{Arroyo}轻触了一个按键，接着一个数据传输界面覆盖了你的通信视图，看起来他正在发送一份包含一系列通讯录音的档案。
 
-""这是一系列虚假通信信息，里边提到，有一些得到了泄密的分包商试图证明我是入侵霸主在{Aztlan}的通讯中继站的密谋者之一。把这个交给海盗或者随便什么组织的一些重要，但不那么重要的人物。你可以去{Donn}那里试试，或者去{Yma}的{Qaras}。总之让他们用这些信息勒索我。""","gaPZ_ArroyoAskKelise1a:""看起来你是想让我帮你弄出一次复杂的造谣活动。""
-gaPZ_ArroyoAskKelise1b:""但你确实参与了那次密谋。""
-gaPZ_ArroyoAskKelise1c:""你为什么要泄露会对自己不利的证据?""",,
+""这是一系列虚假通信信息，里边提到，有一些得到了泄密的分包商试图证明我是入侵霸主在{Aztlan}的通讯中继站的密谋者之一。把这个交给海盗或者随便什么组织的一些重要，但不那么重要的人物。你可以去{Donn}那里试试，或者去{Yma}的{Qaras}。总之让他们用这些信息勒索我。""","gaPZ_arroyoAskKelise1a:""看起来你是想让我帮你弄出一次复杂的造谣活动。""
+gaPZ_arroyoAskKelise1b:""但你确实参与了那次密谋。""
+gaPZ_arroyoAskKelise1c:""你为什么要泄露会对自己不利的证据?""",,
 gaPZ_arroyoAskKelise1a,DialogOptionSelected,$option == gaPZ_arroyoAskKelise1a,FireBest GAPZArroyoKelise2,"""完全正确!""{Arroyo}笑道，""这会很有趣的。""",,,
 gaPZ_arroyoAskKelise1b,DialogOptionSelected,$option == gaPZ_arroyoAskKelise1b,FireBest GAPZArroyoKelise2,"""对啊，很显然。""{Arroyo}翻了翻白眼。",,,
 gaPZ_arroyoAskKelise1c,DialogOptionSelected,$option == gaPZ_arroyoAskKelise1c,FireBest GAPZArroyoKelise2,"""当然是为自己辩护。""{Arroyo}抬了抬手，眉毛扬起，等着看你什么时候才能认识到这是他的阴谋。过了一会儿，他摇摇头并叹了口气。",,,
-gaPZ_arroyoAskKelise2,GAPZArroyoKelise2,,,"""你看 - 这些都是假消息。我伪造了合同ID，把整个证据都弄得很假，甚至连一笔真实到账的付款都没有。现在霸主的间谍和那些速子科技同僚已经盯上了我，所以如果这整件事看起来就像...某个初级主管如同一只闻到血的秃鹫一般，试图弄虚作假来将我抓捕归案，并以此获得晋升，那么，整件事的真实性就出现了漏洞。不管这个漏洞有多小，我的公关团队总能找到一个突破口...你明白没?""","gaPZ_ArroyoAskKelise2a:""好，我现在明白了。""
-gaPZ_ArroyoAskKelise2b:""完全不懂，但如果你需要，我会帮你这个忙的。""
-gaPZ_ArroyoAskKelise2c:""这看起来不太像能成功的样子。""",,
+gaPZ_arroyoAskKelise2,GAPZArroyoKelise2,,,"""你看 - 这些都是假消息。我伪造了合同ID，把整个证据都弄得很假，甚至连一笔真实到账的付款都没有。现在霸主的间谍和那些速子科技同僚已经盯上了我，所以如果这整件事看起来就像...某个初级主管如同一只闻到血的秃鹫一般，试图弄虚作假来将我抓捕归案，并以此获得晋升，那么，整件事的真实性就出现了漏洞。不管这个漏洞有多小，我的公关团队总能找到一个突破口...你明白没?""","gaPZ_arroyoAskKelise2a:""好，我现在明白了。""
+gaPZ_arroyoAskKelise2b:""完全不懂，但如果你需要，我会帮你这个忙的。""
+gaPZ_arroyoAskKelise2c:""这看起来不太像能成功的样子。""",,
 gaPZ_arroyoAskKelise2a,DialogOptionSelected,$option == gaPZ_arroyoAskKelise2a,FireBest GAPZArroyoKelise3,"""太棒了，我等不及想看看你会把它丢给谁了。""",,,
 gaPZ_arroyoAskKelise2b,DialogOptionSelected,$option == gaPZ_arroyoAskKelise2b,FireBest GAPZArroyoKelise3,"""也好，你怎么想不重要，只要你能把这件事搞乱就行。""",,,
 gaPZ_arroyoAskKelise2c,DialogOptionSelected,$option == gaPZ_arroyoAskKelise2c,FireBest GAPZArroyoKelise3,"""没事的，我正在把这事弄成一个我的员工可以处理的局面，所以它越乱越好。""",,,
 GAPZArroyoKelise3,GAPZArroyoKelise3,,"$global.gaPZ_sellBlackmail = true
-Call $global.gaPZ_ref updateStage","""所以，""敲了敲他桌面的控制台上的几个键后，{Arroyo}笑了，""你已经拿到文件了，现在去找个会试着把我敲诈到一无所有的海盗来。""","paPZ_ArroyoKeliseCredits:""为我的这份工作付一些信用点怎么样?""
+Call $global.gaPZ_ref updateStage","""所以，""敲了敲他桌面的控制台上的几个键后，{Arroyo}笑了，""你已经拿到文件了，现在去找个会试着把我敲诈到一无所有的海盗来。""","paPZ_arroyoKeliseCredits:""为我的这份工作付一些信用点怎么样?""
 cutCommLink:切断通讯",,
 paPZ_arroyoKeliseCredits,DialogOptionSelected,$option == paPZ_arroyoKeliseCredits,,"{Arroyo}大笑:""在{Gargoyle}为了你的利益把我挖走之后?算了吧。再会了，舰长。等到某个吃蟑螂的土匪出现在我的通讯系统里勒索我的时候，我就把{Astraia}的资料给你。""
 
@@ -651,7 +651,7 @@ unset $global.bairdToldPlayerToKeepZig","""你的新船真够漂亮的，神秘�
 paPZ_gargPostMaybe:""也许她突然想通了什么。""
 paPZ_gargPostLikes:""我觉得她还挺喜欢我。""",,
 paPZ_gargPostWhat,DialogOptionSelected,$option == paPZ_gargPostWhat,FireBest gaPZ_gargoylePostDistraction,"{Gargoyle}耸了耸肩:""{Baird}并不是个好人，你难道还没发现这一点?""",,,
-paPZ_gargPostMaybe,DialogOptionSelected,$option == paPZ_gargPostMaybe,,"{Gargoyle}满脸狐疑地看着你:""{Baird}并不会'想通'什么。一旦她认为她自己知道你是怎样的人，她就会把你扔去做怎样的事。事已至此，你还没想明白吗?""","gaPZ_GargoylePostDistraction:""啊?想明白什么?""
+paPZ_gargPostMaybe,DialogOptionSelected,$option == paPZ_gargPostMaybe,,"{Gargoyle}满脸狐疑地看着你:""{Baird}并不会'想通'什么。一旦她认为她自己知道你是怎样的人，她就会把你扔去做怎样的事。事已至此，你还没想明白吗?""","gaPZ_gargoylePostDistraction:""啊?想明白什么?""
 gaPZ_gargPostUsing:""{Baird}在利用我，我明白这一点。""",,
 gaPZ_gargoylePostDistractionSel,DialogOptionSelected,$option == gaPZ_gargoylePostDistraction,FireBest gaPZ_gargoylePostDistraction,,,,
 gaPZ_gargPostUsing,DialogOptionSelected,$option == gaPZ_gargPostUsing,FireBest gaPZ_gargoylePostDistraction,"""太棒了太棒了!你终于明白了。再努力一段时间，也许你就能有我十六分之一灵光了。重点是 - 啊，你好烦啊，有什么事...""{Gargoyle}接听了一个什么人的通讯，思索了一阵，然后停下了动作，"" - 对。""",,,
@@ -659,11 +659,11 @@ paPZ_gargPostLikes,DialogOptionSelected,$option == paPZ_gargPostLikes,,"{Gargoyl
 
 黑客夸张地叹了口气，接着像被打晕了一样滚到了地上:""...'挺喜欢我'，卢德的AI核心在上，我甚至不能...算了，算了，集中注意力。""
 
-{Gargoyle}坐回了位子上:""{Baird}的脑袋里可没有'喜欢'这个程序，她只'决定'你对她的用途，仅此而已。事已至此，你还没想明白吗?""","gaPZ_GargoylePostDistraction:""啊?想明白什么?""
+{Gargoyle}坐回了位子上:""{Baird}的脑袋里可没有'喜欢'这个程序，她只'决定'你对她的用途，仅此而已。事已至此，你还没想明白吗?""","gaPZ_gargoylePostDistraction:""啊?想明白什么?""
 gaPZ_gargPostUsing:""{Baird}在利用我，我明白这一点。""",,
-gaPZ_gargoylePostDistraction,gaPZ_gargoylePostDistraction,,,"""你是个闪亮的笨蛋，最闪亮的!""
+gaPZ_gargoylePostDistraction,gaPZ_gargoylePostDistraction,,,"""你真是个绝妙的幌子, 最绝妙的!""
 
-""每一个{MILINT}军官都会把眼球瞪出他们的脑袋，盯着你流口水。同时真正的演出将会在这里开始，他们会马上来到{Galatia}学院 - 派出他们的次级队伍。""
+""每一个{MILINT}军官都会把眼球瞪出他们的脑袋，盯着你流口水，而真正的演出就可以在这里开始了。当然，他们也会派人来Galatia学院刺探情报，但只要你还在外边活动，他们的目光就不可能集中到这里来。""
 
 {Gargoyle}交叉着胳膊，一副满意的表情:""那也不错，是吧?""","paPZ_gargPostNeat:""棒到了极点。""
 paPZ_gargPostNotNeat:""不，一点也不好。""",,
@@ -714,7 +714,7 @@ Call $global.gaPZ_ref updateData
 $gaPZ_stage == GO_TO_RELAY_SYSTEM","ShowPersonVisual
 unset $global.gaPZ_bairdHurryUp",""" $playername ，你怎么还在这里?去跟着{Kelise Astraia}的线索，跟着{Hamatsu}号，弄明白速子科技在'Alpha站点'做了什么，然后再回到这里。""{Baird}摘下了她的眼镜，她看上去不太自然。
 
-""舰长，你要明白，你不再是一个精巧的工具了。你已经赢得了一些属于自己的名誉，我承认你的能力和成就令人印象深刻。""",gaPZ_BairdHurryUp2:继续,,
+""舰长，你要明白，你不再是一个精巧的工具了。你已经赢得了一些属于自己的名誉，我承认你的能力和成就令人印象深刻。""",gaPZ_bairdHurryUp2:继续,,
 gaPZ_bairdHurryUp2,DialogOptionSelected,$option == gaPZ_bairdHurryUp2,,"她向前倾着身子，眼眶被阴影覆盖:""你给星域中许多强大的势力留下了深刻的印象。在你身后，有一小群间谍，线人和机会主义者，他们随时准备着抓住你。""
 
 {Baird}院长又向后靠了靠，把眼镜放回原处:""伟大的计划正在酝酿，舰长，我们将会改变世界。""",cutCommLink:切断通讯,,
