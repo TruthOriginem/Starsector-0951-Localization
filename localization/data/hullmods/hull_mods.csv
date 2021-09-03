@@ -59,7 +59,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc",武器,5000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程{%s}，并且使它们在对护盾造成伤害时产生硬幅能。,降低光束武器的射程，但对护盾造成伤害时产生硬幅能。,graphics/hullmods/high_scatter_amp.png
 整合点防御 AI,pointdefenseai,3,,,"defensive, merc","武器, 防御",10000,,,,4,8,12,20,data.hullmods.IntegratedPointDefenseAI,"给予所有小型的非导弹型武器自动拦截敌方来袭导弹以及识别并无视热诱弹的能力。锁定导弹的优先级大于战机与敌舰。
 
-In addition, all point-defense weapons get the best possible target leading, regardless of combat readiness, and all damage to missiles is increased by %s. ",所有非导弹的小型武器都具备点防能力。,graphics/hullmods/integrated_point_defense_ai.png
+此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。且攻击导弹时，任何种类伤害均增加{%s}。 ",所有非导弹的小型武器都具备点防能力。,graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","武器, 防御",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",graphics/hullmods/integrated_point_defense_ai.png
@@ -74,9 +74,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 救援穿梭舱,recovery_shuttles,1,,,special,战机,4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.RecoveryShuttles,减少战机联队{%s}的人员战损。,减少战机击毁造成的人员战损。,graphics/hullmods/recovery_shuttles.png
 强化舱壁,reinforcedhull,0,,,"defensive, merc",防御,2500,TRUE,,,5,10,15,30,data.hullmods.ReinforcedBulkheads,增加舰船{%s}的结构值。且当该舰停机时，不会四分五裂且始终可在战后修复。,提高舰船耐久，停机的舰船总是可被修复。,graphics/hullmods/reinforced_bulkheads.png
 幅散管道扩容,fluxbreakers,2,,,"defensive, merc","特殊, 防御",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,减少{%s} 武器、引擎受到的 EMP 伤害。与此同时提高{%s} 强制幅能排散速率。,减少EMP伤害，增强强制排散。,graphics/hullmods/resistant_flux_conduits.png
-安全超载,safetyoverrides,0,,,"special, engines, offensive, merc","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，提高舰船战斗中的最高航速与加速度，根据舰船级别提高{%s/%s/%s}。并使零幅能加速在任何幅能水平下都能生效。幅能排散能力将直接提高至{%s}倍(这个提高包括其他船插、改装涵盖的幅能部分)。
+安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据舰船级别提高{%s/%s/%s}舰船战斗中的最高航速，也会对应提升加速度。零幅能加速在任何幅能水平下都能生效。幅能排散能力将直接提高至{%s}倍(这个提升包括其他插件、改装涵盖的幅能部分)。
 
-峰值时间将降低至{%s}倍、禁用强制排散，并且武器射程将不得超过{%s}单位。
+峰值时间将降低{%s}倍、禁用强制排散，并且所有武器射程超过{%s}单位的部分将极大衰减。
 
 无法安装在民用舰或者主力舰上。",极大的提高舰船强度，但大幅降低峰值时间。,graphics/hullmods/safety_overrides.png
 ,,,,,,,,,,,,,,,,,,
@@ -123,7 +123,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应机雷，并破坏靠近的敌舰。,战场周遭会布置大量感应水雷，并破坏靠近的敌舰。,graphics/hullmods/stealth_mines.png
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机更换时间。,战机更换速率不会下降。,graphics/hullmods/expanded_deck_crew.png
 Shield Always On,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,"Forces shield to stay on. Hidden, doesn't need description or icon.",graphics/hullmods/hardened_shields.png
-导弹工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,Periodically reloads all missile weapons.,graphics/hullmods/expanded_missile_racks.png
+导弹工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,graphics/hullmods/expanded_missile_racks.png
 屏蔽货仓,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货仓扫描，来降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,graphics/hullmods/shielded_cargo_hold.png
 打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据舰船级别，增加{%s/%s/%s/%s}从遗弃物、 舰船残骸等 打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也增加{%s}战后打捞效率。,提高打捞收益。,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使被侦测到的范围被降至为零。,降低被侦测到的范围。,graphics/hullmods/phase_field.png

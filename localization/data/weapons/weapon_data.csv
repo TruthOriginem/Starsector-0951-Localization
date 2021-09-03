@@ -26,7 +26,7 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 高斯炮,gauss,3,,5000,1200,,700,,300,3,25,,,,KINETIC,1200,,1,1,,,,,,,,1200,,,400,,,,"kinetic20, LR, remnant, rare_bp, hist1t, merc",,,,反护盾,,,,,,,,,,6
 赫菲斯托斯突击炮,hephag,1,,4000,900,,120,,5,20,20,,,,HIGH_EXPLOSIVE,120,,0,0.25,1,,0,10,2,10,,800,,,50,,,,"he18, lowtech_bp, midline_bp, merc",,,,反装甲,,,,,,,,,,7
 马克 IX 自动炮,mark9,0,,3000,900,,200,,20,10,18,,,,KINETIC,200,,0,2,4,0.1,0,15,2,10,,800,,,100,,,,"kinetic18, base_bp, merc",,,,反护盾,,,,,,,,,,7.25
-蹂躏者加农炮,devastator,1,,3500,900,,150,,40,12,20,,,,HIGH_EXPLOSIVE,75,,0,2,12,0.1,5,30,5,5,,700,,,100,,,"PD,PD_ALSO","he16, pd14, lowtech_bp, merc",,,,反战机 (范围),,,,,"由于每一枚炮弹均内置有一种不稳定引信，而导致其会在任意距离内爆炸，且距离越近威力也就越大。
+蹂躏者加农炮,devastator,1,,3500,900,,150,,40,12,20,,,,HIGH_EXPLOSIVE,75,,0,2,12,0.1,5,30,5,5,,700,,,100,,,"PD,PD_ALSO","he16, pd14, lowtech_bp, merc",,,,反战机 (范围),,,,,"每一枚炮弹均内置了不稳定引信，而导致其可能在射程距离内提前爆炸，因此距离越近威力越大。
 
 如果射程内没有敌舰，则优先瞄准来袭的导弹。",,,,,7.4
 雷神炮,mjolnir,2,0.4,6000,900,,400,200,10,25,24,,,,ENERGY,500,,0,0.75,1,,0,5,1,10,,900,,,75,,,,"energy18, he17, kinetic17, remnant, rare_bp, hist1t, merc",,,,普通,,,,,,,,,,7.5
@@ -44,11 +44,11 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 火蛇 MRM,heatseeker,1,,225,2000,,100,1500,15,30,5,,,,FRAGMENTATION,0,,0,25,1,,0,0,0,,,400,50,15,150,,,"DO_NOT_AIM, HEATSEEKER","utility13, missile0, missile_bp, merc",,,,反引擎,较快,优秀,,,,,,,TRUE,11.25
 鱼叉 MRM,harpoon,1,,200,2500,,750,,15,30,4,3,,,HIGH_EXPLOSIVE,0,,0,1,1,,0,0,0,,,300,100,12.5,150,,,DO_NOT_AIM,"missile8, strike3, missile_bp, merc",,,,终结打击,普通,普通,,,,,,,TRUE,11.5
 鱼叉 MRM (单发),harpoon_single,0,,100,2500,,750,,15,30,1,1,,,HIGH_EXPLOSIVE,0,,0,1,1,,0,0,0,,,300,100,12.5,150,,,DO_NOT_AIM,"missile6, strike1, base_bp",,,,终结打击,普通,普通,,,,,,,TRUE,11.6125
-破坏 SRM,breach,1,,200,1200,,150,,15,10,3,15,,,HIGH_EXPLOSIVE,0,,0,9,3,0.5,0,0,0,,,300,50,4.75,450,,,"DO_NOT_AIM, CONSERVE_ALL, CONSERVE_FOR_ANTI_ARMOR, DIRECT_AIM, MISSILE_SPREAD","missile7, base_bp, merc",,,,反装甲,普通,良好,,,每一发导弹在命中护甲时都会造成{%s}额外伤害。该伤害不受护甲减伤影响。,200,,,TRUE,11.7
+破舱 SRM,breach,1,,200,1200,,150,,15,10,3,15,,,HIGH_EXPLOSIVE,0,,0,9,3,0.5,0,0,0,,,300,50,4.75,450,,,"DO_NOT_AIM, CONSERVE_ALL, CONSERVE_FOR_ANTI_ARMOR, DIRECT_AIM, MISSILE_SPREAD","missile7, base_bp, merc",,,,反装甲,普通,良好,,,每一发导弹在命中护甲时都会造成{%s}额外伤害。该伤害不受护甲减伤影响。,200,,,TRUE,11.7
 赛博 SRM,sabot,1,,200,1200,,100,,15,30,4,3,,,KINETIC,0,,0,1,1,,0,0,0,0,,150,50,8,300,,,GUIDED_POOR,"missile8, strike2, missile_bp, merc",,,,反护盾,较慢,较差,,,"当命中船体或装甲时，有{%s}的概率产生打击武器与引擎的电弧, 并造成{%s}点{EMP}伤害。",25% | 400,,,TRUE,11.75
 赛博 SRM (单发),sabot_single,0,,100,1200,,100,,15,30,1,1,,,KINETIC,0,,0,1,1,,0,0,0,0,,150,50,8,300,,,"GUIDED_POOR, EXTRA_RANGE_ON_FIGHTER","missile6, strike0, base_bp",,,,反护盾,较慢,较差,,,"当命中船体或装甲时，有{%s}的概率产生打击武器与引擎的电弧, 并造成{%s}点{EMP}伤害。",25% | 400,,,TRUE,11.85
 鱼叉 MRM 发射舱,harpoonpod,1,,1200,2500,,750,,15,10,10,12,,,HIGH_EXPLOSIVE,0,,0,8.25,4,0.25,0,0,0,,,300,100,12.5,150,,,DO_NOT_AIM,"missile12, strike9, missile_bp, merc",,,,终结打击,普通,普通,,,,,,,TRUE,12
-破坏 SRM 发射舱,breachpod,1,,1200,1200,,150,,15,10,10,50,,,HIGH_EXPLOSIVE,0,,0,9,5,0.25,0,0,0,,,300,50,4.75,450,,,"DO_NOT_AIM, CONSERVE_ALL, CONSERVE_FOR_ANTI_ARMOR, DIRECT_AIM, MISSILE_SPREAD","missile13, rare_bp, merc",,,,反装甲,普通,良好,,,每一发导弹在命中护甲时都会造成{%s}额外伤害。该伤害不受护甲减伤影响。,200,,,TRUE,12.05
+破舱 SRM 发射舱,breachpod,1,,1200,1200,,150,,15,10,10,50,,,HIGH_EXPLOSIVE,0,,0,9,5,0.25,0,0,0,,,300,50,4.75,450,,,"DO_NOT_AIM, CONSERVE_ALL, CONSERVE_FOR_ANTI_ARMOR, DIRECT_AIM, MISSILE_SPREAD","missile13, rare_bp, merc",,,,反装甲,普通,良好,,,每一发导弹在命中护甲时都会造成{%s}额外伤害。该伤害不受护甲减伤影响。,200,,,TRUE,12.05
 赛博 SRM 发射舱,sabotpod,1,,1200,1200,,100,,15,10,10,12,,,KINETIC,0,,0,8.75,2,0.25,0,0,0,0,,150,50,8,300,,,GUIDED_POOR,"missile13, strike8, rare_bp, merc",,,,反护盾,较慢,较差,,,"当命中船体或装甲时，有{%s}的概率产生打击武器与引擎的电弧, 并造成{%s}点{EMP}伤害。",25% | 400,,,TRUE,12.1
 火蛇 MRM 发射舱,salamanderpod,1,,1200,2000,,100,1500,15,10,10,,,,FRAGMENTATION,0,,0,25,2,0.25,0,0,0,,,400,50,15,150,,,"DO_NOT_AIM, HEATSEEKER","utility13, missile_bp, merc",,,,反引擎,较快,优秀,,,,,,,TRUE,12.2
 歼灭者火箭发射舱,annihilatorpod,0,,1200,1500,,200,,5,30,10,100,,,HIGH_EXPLOSIVE,0,,0,0.5,1,,0,0,0,0,,400,50,3.75,50,,,,"rocket13, strike8, missile_bp, merc",,,,压制,较快,无,,,,,,,,12.3
@@ -73,7 +73,7 @@ LR PD 激光炮,lrpdlaser,2,,400,800,50,,,0,100,5,,,,ENERGY,,30,0,0.25,,,,,,,360
 瞬发 PD 激光炮 (战机型),pdburst_fighter,2,,600,500,350,,,0,100,7,3,0.25,,ENERGY,,200,0.1,0.1,0.3,0.1,,,,,10000,,,,,,,"PD,ANTI_FTR,SYSTEM","pd9, beam6",,,,点防御,,,,,,,,,,19.7
 反物质冲击波,amblaster,3,0.7,900,400,,1400,,0,30,9,20,,,ENERGY,1500,,0.25,10,,,0,0,0,0,,1000,,,100,,,"STRIKE, USE_VS_FRIGATES, GROUP_ALTERNATING","strike10, rare_bp, hist1t, merc",SR_strike_only,,,打击,,,,,,,,,,19.75
 相位长矛,phasebeam,1,,1500,600,1000,,,0,20,10,,,,ENERGY,,1200,0.25,0.5,1,4,,,,,3200,,,,,,,,"energy14, beam10, rare_bp, merc",,,,普通,,,,,,,,,,20
-引力子激光,gravitonbeam,2,,1500,1000,100,,,10,15,9,,,,KINETIC,,75,0.1,0.1,,,,,,,2400,,,,,,,,"beam12, kinetic11, LR, hightech_bp, midline_bp, merc",,,,瘫痪,,,,,引力会影响目标并缓缓将其推离原来的运功轨道。该效果实际影响较小，针对导弹或战机时才会比较明显。,,,,,21
+引力子束,gravitonbeam,2,,1500,1000,100,,,10,15,9,,,,KINETIC,,75,0.1,0.1,,,,,,,2400,,,,,,,,"beam12, kinetic11, LR, hightech_bp, midline_bp, merc",,,,瘫痪,,,,,引力会影响目标并缓缓将其推离原来的运功轨道。该效果实际影响较小，针对导弹或战机时才会比较明显。,,,,,21
 脉冲激光炮,pulselaser,1,,1200,600,,100,,0,20,10,,,,ENERGY,100,,0.333333,0,,,,,,,,1000,,,,,,,"energy13, hightech_bp, merc",,,,普通,,,,,,,,,,22
 钻探冲击波,miningblaster,0,,1000,500,,700,,0,7,10,,,,ENERGY,1200,,0,2,,,,,,,,1000,,,,,,,"energy12, base_bp",,,,普通,,,,,,,,,,22.125
 重型冲击波,heavyblaster,2,,2500,600,,500,,0,15,12,,,,ENERGY,720,,0,1,,,,,,,,1000,,,,,,,"energy14, rare_bp, hist1t, merc",,,,普通,,,,,,,,,,22.25

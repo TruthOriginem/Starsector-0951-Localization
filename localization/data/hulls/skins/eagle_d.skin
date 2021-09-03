@@ -3,7 +3,7 @@
 	"skinHullId":"eagle_d",
 	"hullName":"雄鹰 (D)",
 	"descriptionId":"eagle",
-	"descriptionPrefix":"这些在和平时期里应该除役的受损船只现在在星域内随处可见。这类船只的舰体名称通常标有一个\"D\"，表示\"受损(damaged)\"或"\有缺陷(defective)\"。".",
+	"descriptionPrefix":"这些在和平时期里应该除役的受损船只现在在星域内随处可见。这类船只的舰体名称通常标有一个\"D\"，表示\"受损(damaged)\"或\"有缺陷(defective)\"",
 	"restoreToBaseHull":true,
 	"baseValueMult":.6,
 	"spriteName":"graphics/ships/eagle/eagle_d.png",

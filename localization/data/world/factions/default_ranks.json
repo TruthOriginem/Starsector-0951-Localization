@@ -79,7 +79,7 @@
 		
 		"mercenary":{"name":"雇佣军官"},
 		"officer":{"name":"军官"},
-		"officer_for_hire":{"name":"副官（可雇佣）"}, 
+		"officer_for_hire":{"name":"副官(可雇佣)"}, 
 		
 		"investigator":{"name":"首席调查员"},
 		"agent":{"name":"探员"},
