@@ -1,7 +1,7 @@
 {
 	"baseHullId":"enforcer",
 	"skinHullId":"enforcer_d_pirates",
-	"hullName":"压迫者 (P)",
+	"hullName":"执法者 (P)",
 	"descriptionId":"enforcer",
 	"descriptionPrefix":"这艘船遭受了海盗船员的重度改装和低劣维护",
 	"tags":["pirate_bp"],
