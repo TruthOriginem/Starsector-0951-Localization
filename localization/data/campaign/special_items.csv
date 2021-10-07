@@ -21,9 +21,9 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 生物工厂胚胎,biofactory_embryo,"hist3t, pather4",艾克索达因生物科技,,120000,1000,1,EXTREME,graphics/icons/cargo/biofactory_embryo.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,lightindustry,形形色色的日用品可以培育获得，而非从流水线制造。只要为提供适当的光照、土壤和大气环境，这个发育良好的幼体就可以蓬勃生长；而这种良好的环境只有宜居星球才能提供。在人造环境中模拟这种条件的情况无一成功，全部以工厂状况恶化告终，这或许是编码在胚胎基因里的保险导致的。,155
 富勒烯线轴,fullerene_spool,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fullerene_spool.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"spaceport, megaport",一种极为坚固的纳米网编成的线，也是太空电梯的关键建材。总的来说，能够大幅提升行星地表和低轨道之间的物流效率。,160
 等离子发电机,plasma_dynamo,"hist3t, pather4",轨道工厂制造公司,,100000,1000,1,EXTREME,graphics/icons/cargo/plasma_dynamo.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,"这个带有超导体轮的等离子发电机，是一种特殊工业系统的核心组件，它能在整个星球上生成一种等离子网络。它使对气态巨行星中蕴藏的挥发物的高效率、大规模开采成为了可能。",165
-低温运算引擎,cryoarithmetic_engine,"hist3t, pather4",人之领管制科技,,200000,1000,1,EXTREME,graphics/icons/cargo/cryoarithmetic_engine.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"patrolhq, militarybase, highcommand","一台违背热力学第二定律的量子计算机。进行运算时，这台计算机非但不产生热量，反而还吸收热量。
+低温运算引擎,cryoarithmetic_engine,"hist3t, pather4",人之领管制科技,,200000,1000,1,EXTREME,graphics/icons/cargo/cryoarithmetic_engine.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"patrolhq, militarybase, highcommand","一台违背热力学第二定律的量子计算机。这台计算机进行运算时非但不产生热量，反而还吸收热量。
 
-想使用这台运算引擎，包含了行星规模级、由热管和散热片组成的吸热网络，以此源源不断向它地供应热量以维持巨量的计算。行星表面越热，这台运算引擎的也就越高。这种无与伦比的算力能够极大地提高后勤方面和战略方面的规划能力。",170
+需要由热管和散热片组成的行星规模级吸热网络源源不断向它地供应热量，才能满足它进行巨量计算所需要的要求。行星表面越热，这台运算引擎的效率也就越高。这种无与伦比的算力能够极大地提高后勤方面和战略方面的规划能力。",170
 战斗无人机复制器,drone_replicator,"hist3t, pather4",Ko 联合实业,,60000,1000,1,EXTREME,graphics/icons/cargo/combat_drone_replicator.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"grounddefenses, heavybatteries","能大量制造各种型号的作战无人机，非常适合抵抗劫掠和入侵，对行星防御和安保有极大帮助。
 
 这种无人机复制器被人之领严令禁止，甚至能追溯到""大崩塌""前数十年。因此，能在英仙座里找到一台状态良好的复制器，可以说是非常令人吃惊的。",175
@@ -52,6 +52,6 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 基础工业蓝图,industry_bp,,,,20000,1000,1,,graphics/icons/cargo/blueprint_industry.png,ui_chip_pickup,ui_industry_bp_drop,com.fs.starfarer.api.campaign.impl.items.IndustryBlueprintItemPlugin,,包含了构建行星工业设施或其他建筑所需的技术规范。,400
 ,,,,,,,,,,,,,,,
 # other items,,,,,,,,,,,,,,,
-"""双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是{Elissa Zal}基于{Scylla Coureuse}等人发展的理论而创建的第一代星门重启装置。
+"""双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是{Elissa}Zal}基于{Scylla}Coureuse}等人发展的理论而创建的第一代星门重启装置。
 
 当与超光速驱动器箱集成时，这个装置能将调谐为两个星门的独特共振特征的超波脉冲传输到星门环中。在需要大量的燃料才能产生的巨大能量被输入后，这两个星门之间的临时连接就被成功地建立起来了。舰船与舰队可以在这些星门组成的网络中自由穿梭。",0
