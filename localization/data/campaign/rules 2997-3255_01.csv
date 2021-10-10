@@ -80,7 +80,7 @@ gaProbeObjectInteractionMissing1,DialogOptionSelected,$option == gaProbe_missing
 
 稍后，在打捞队返回后，你同舰桥船员一起回顾他们的发现，看起来好像是探测器的中心被挖出了一个完美的球体，带走了大部分Galatia学院的珍贵仪器套件。
 
-随后抛出的理论。是黑洞。还是外星人;引发了一连串礼貌性的笑声，你的导航官上前解释说，理论上有可能对远处的物质进行批量的相位转移，尽管这个过程未被认为是特别经济，即使在人之领时代的末期。你的行动执行官对整个概念持怀疑态度。。",,,
+随后抛出的理论。是黑洞。还是外星人;引发了一连串礼貌性的笑声，你的导航官上前解释说，理论上有可能对远处的物质进行批量的相位转移，尽管这个过程未被认为是特别经济，即使是在人之领时代的末期。你的行动执行官对整个概念持怀疑态度。",gaProbe_missing2:继续,,
 gaProbeObjectInteractionMissing2,DialogOptionSelected,$option == gaProbe_missing2,"$global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage
 DespawnEntity",不管是什么干的，这意味着你没有一个仪器套件返回Galatia学院。你下令将这次遭遇所有遥测数据和全息影像资料附在加密的任务文件中。学者们喜欢数据，越多越好。这应该足以证明你的工作做得很到位。也许其中的奥秘会分散他们的注意力，足以让你得到报酬。,defaultLeave:离开,,
