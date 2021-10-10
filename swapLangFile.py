@@ -4,8 +4,11 @@ import shutil
 
 def main():
     print("Swap lang file, please put git project folder in the same position with 'starsector-core' folder.")
+    print("替换语言文件，务必将该项目文件夹放在“starsector-core”的同级目录中。")
     print("Modified from Originem by AnyIDElse")
-    cin = input("Enter E to use English files, other to use CN files")
+    print("Enter E to use English files, other to use CN files")
+    print("输入E还原为英文，输入其他任意字符替换为中文")
+    cin = input()
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     current_folder = dir_path.split('\\').pop()

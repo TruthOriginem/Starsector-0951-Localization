@@ -68,7 +68,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。",提高武器射程，越大的舰船收益越大。,graphics/hullmods/integrated_targeting_unit.png
 导航中继器,nav_relay,2,,,"engines, special, merc","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据舰船级别，提升你的舰队的导航评级{%s/%s/%s/%s}。
 
-导航评级会提提升你说部署舰船的最大战斗航速。",提高其他舰船在战斗时的最高航速。,graphics/hullmods/nav_relay.png
+导航评级会提高你所部署舰船的最大战斗航速。",提高其他舰船在战斗时的最高航速。,graphics/hullmods/nav_relay.png
 全角护盾发生器,adaptiveshields,3,,,"shields, defensive, merc",护盾,7000,,,,3,6,10,18,data.hullmods.OmniShieldEmitter,以减少{%s}护盾角度为代价，将前置护盾转化为全角护盾。,将前盾转化为全盾，减少护盾面积。,graphics/hullmods/omni_shield_emitter_mod.png
 作战中心,operations_center,1,,,special,特殊,5000,,,,30,30,30,30,com.fs.starfarer.api.impl.hullmods.OperationsCenter,当安装在旗舰上时，将会提高{%s}的指挥点恢复速率。,如果安装在旗舰则提高指挥点恢复速率。,graphics/hullmods/operations_center.png
 救援穿梭舱,recovery_shuttles,1,,,special,战机,4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.RecoveryShuttles,减少战机联队{%s}的人员战损。,减少战机击毁造成的人员战损。,graphics/hullmods/recovery_shuttles.png
