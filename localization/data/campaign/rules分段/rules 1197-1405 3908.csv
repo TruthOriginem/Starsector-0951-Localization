@@ -161,7 +161,7 @@ gaKAPatrolOpenComm,OpenCommLink,"$entity.gaKA_patrol score:1000
 !$entity.ignorePlayerCommRequests
 Call $global.gaKA_ref updateData",$entity.ignorePlayerCommRequests = true,"通讯噼啪作响，仿佛获得了新生，霸主{$rank}出现在了显示屏上，双眼直直地盯着你。""独立舰队的舰长! 我命令你关闭护盾，武器和驱动系统。你涉嫌窝藏一名罪犯以及破坏霸主数据安全。""
 
-{$HisOrHer}嘴唇傲慢地卷了起来: ""霸主海军陆战队即将登船，你的数据库将被查封，你的货物也将被扣押检查。你将会失去你对{$shipOrFleet}的控制权。你不能反抗，犹豫以及不服从将被认为是反抗。现在，立刻交出你的命令代码。""",gaKA_patrol1:继续,
+{$HisOrHer}嘴唇傲慢地卷了起来: ""霸主海军陆战队即将登船，你的数据库将被查封，你的货物也将被扣押检查。你将会失去你对{$shipOrFleet}的控制权。你不能反抗，犹豫以及不服从将被认为是抗命。现在，立刻交出你的命令代码。""",gaKA_patrol1:继续,
 gaKAPatrol1,DialogOptionSelected,$option == gaKA_patrol1,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","听到这些无异于星际海盗的蛮横命令后，你眨了眨眼。即使是霸主根据旧时代的人之领海军法典制定的法律，也会在这种情况下为你保留一些权力。你猜这个{$rank}过分鲁莽了，以至于在解释{$hisOrHer}命令时没按规矩来。
 
 当作出思考时，你注意到霸主{$rank}的脸变成了更深的红色，对方也许把你的沉默理解成了{""抵抗""}。事已至此，不战而退可能很难。","gaKA_patrolWarrant:""这些可是例外的搜查条款，你有搜查令吗? ""
@@ -169,13 +169,13 @@ gaKA_patrolRefuse:""我可不接受那些条款，{$rank}。""
 gaKA_patrolLie:用弥天大谎来蒙混过关
 gaKA_patrolCut:你可没时间和对面耗，切断通讯
 gaKA_patrolWeapons:将武器准备就绪",
-gaKAPatrolWarrant,DialogOptionSelected,$option == gaKA_patrolWarrant,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$ranks}瞪大了眼睛。""你没有资格提出要求，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒。""你必须关闭所有系统，接受查封和检查，以及逮捕。""
+gaKAPatrolWarrant,DialogOptionSelected,$option == gaKA_patrolWarrant,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$rank}瞪大了眼睛。""你没有资格提出要求，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒。""你必须关闭所有系统，接受查封，以及逮捕。""
 
 {$HisOrHer}眯起了眼睛: ""现在投降我可能会考虑宽大处理 - 假如你这个叛徒的话里没有一丝不服从的迹象。""","gaKA_patrolRefuse2:""你必须有合法的搜查令。""
 gaKA_patrolLie:用弥天大谎来蒙混过关
 gaKA_patrolCut:你可没时间和对面耗，切断通讯
 gaKA_patrolWeapons:将武器准备就绪",
-gaKAPatrolRefuse,DialogOptionSelected,$option == gaKA_patrolRefuse,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$ranks}瞪大了眼睛。""这不是一场谈判，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒。""你必须关闭所有系统，接受查封和检查，以及逮捕。""
+gaKAPatrolRefuse,DialogOptionSelected,$option == gaKA_patrolRefuse,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$rank}瞪大了眼睛。""这不是一场谈判，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒。""你必须关闭所有系统，接受查封，以及逮捕。""
 
 {$HisOrHer}眯起了眼睛: ""现在投降我可能会考虑宽大处理 - 假如你这个叛徒的话里没有一丝不服从的迹象。""","gaKA_patrolRefuse2:""你必须有合法的搜查令。""
 gaKA_patrolLie:用弥天大谎来蒙混过关
@@ -186,7 +186,7 @@ FireBest DialogOptionSelected",,,
 gaKAPatrolCut,DialogOptionSelected,$option == gaKA_patrolCut,"EndConversation
 MakeOtherFleetLowRepImpact gaKA true
 MakeOtherFleetGoAway false
-MakeOtherFleetImportant gaKA false","在你切断通讯的前一刻，霸主{$ranks}的眼睛瞪大了。接着画面变黑，{$hisOrHer}的咆哮随着画面的变黑变成了一片死寂。
+MakeOtherFleetImportant gaKA false","在你切断通讯的前一刻，霸主{$rank}的眼睛瞪大了。接着画面变黑，{$hisOrHer}的咆哮随着画面的变黑变成了一片死寂。
 
 ""{$PlayerSirOrMadam}，""你的战术军官报告，""他们正在展开攻击阵型。""
 
