@@ -14,7 +14,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 减少{%s}战斗中因船体结构受损而造成的船员伤亡。",提高舰船耐久，减少船员损失。,graphics/hullmods/blast_doors.png
 改装机库,converted_hangar,1,,,"special, non_phase, merc",战机,5000,,,,0,10,15,20,data.hullmods.ConvertedHangar,"将舰船的标准货仓改装成一个临时的飞行甲板。同时不可靠的简易制造车间所生产出的劣质战机底盘，以及使用大部分有轻微缺陷的零部件，而导致战机航速降低{%s}且所受伤害提高{%s}。
 
-战机联队驾驶的最低需求船员数量将提高{%s}。轰炸机的装配点成本增加{%s}，而所有其他战机则增加 {%s}。
+战机联队驾驶的最低需求船员数量将提高{%s}。轰炸机的装配点成本增加{%s}，而所有其他战机则增加{%s}。
 
 不可安装在护卫舰，相位舰和本身就拥有飞行甲板的舰船上。",给非航母舰船提供临时甲板。,graphics/hullmods/converted_hangar.png
 改装飞行甲板,converted_fighterbay,0,,,"req_spaceport, special, non_phase","战机, 后勤, 需要船坞",3000,,,,3,6,9,15,data.hullmods.ConvertedFighterBay,"将该舰内置战机的飞行甲板改造为临时的货仓，提升该舰{%s}的货仓容量。每移除一个飞行甲板就会降低{%s}最低船员需求。
@@ -59,7 +59,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc",武器,5000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程{%s}，并且使它们在对护盾造成伤害时产生硬幅能。,降低光束武器的射程，但对护盾造成伤害时产生硬幅能。,graphics/hullmods/high_scatter_amp.png
 整合点防御 AI,pointdefenseai,3,,,"defensive, merc","武器, 防御",10000,,,,4,8,12,20,data.hullmods.IntegratedPointDefenseAI,"给予所有小型的非导弹型武器自动拦截敌方来袭导弹以及识别并无视热诱弹的能力。锁定导弹的优先级大于战机与敌舰。
 
-此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。且攻击导弹时，任何种类伤害均增加{%s}。 ",所有非导弹的小型武器都具备点防能力。,graphics/hullmods/integrated_point_defense_ai.png
+此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。且对导弹造成的伤害增加{%s}。 ",所有非导弹的小型武器都具备点防能力。,graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","武器, 防御",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",graphics/hullmods/integrated_point_defense_ai.png
@@ -76,7 +76,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 幅散管道扩容,fluxbreakers,2,,,"defensive, merc","特殊, 防御",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,减少{%s} 武器、引擎受到的 EMP 伤害。与此同时提高{%s} 强制幅能排散速率。,减少EMP伤害，增强强制排散。,graphics/hullmods/resistant_flux_conduits.png
 安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据舰船级别提高{%s/%s/%s}舰船战斗中的最高航速，也会对应提升加速度。零幅能加速在任何幅能水平下都能生效。幅能排散能力将直接提高至{%s}倍(这个提升包括其他插件、改装涵盖的幅能部分)。
 
-峰值时间将降低{%s}倍、禁用强制排散，并且所有武器射程超过{%s}单位的部分将极大衰减。
+峰值时间将降低为原来的{%s}分之一、禁用强制排散，并且所有武器射程超过{%s}单位的部分将极大衰减。
 
 无法安装在民用舰或者主力舰上。",极大的提高舰船强度，但大幅降低峰值时间。,graphics/hullmods/safety_overrides.png
 ,,,,,,,,,,,,,,,,,,
@@ -108,7 +108,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 同时降低该舰{%s}的被侦测范围。 ",令引擎更不易失效，且该舰的被侦测范围降低。,graphics/hullmods/insulated_engine_assembly.png
 军事化子系统,militarized_subsystems,0,,,"req_spaceport, merc","特殊, 后勤, 需要船坞",6000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.MilitarizedSubsystems,"移除民用级船体的惩罚，并提高{%s}最大宇宙航速。
 
-减少{%s}战备恢复与部署时所消耗的补给。
+提升{%s}幅能耗散速率，并提升{%s}专为装甲减伤起效的装甲。
 
 增加{%s}最低船员需求。",消除传感器惩罚，增加最大宇宙航速，提升战斗表现，增加船员需求。,graphics/hullmods/militarized_subsystems.png
 恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc","防御, 后勤, 需要船坞",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"由辛达的工程师研发而成。降低{%s}日冕对战备值的影响力，对超空间内的风暴也有同样的作用。
@@ -161,7 +161,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 永不分离,never_detaches,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.NeverDetaches,当被破坏时，不会从主体上分离。,,graphics/hullmods/detach_never.png
 零幅能武器,no_weapon_flux,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.NoWeaponFlux,武器开火时将不产生幅能。,,
 无需开火,do_not_fire_through,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.DoNotFireThrough,其他模块上的武器会避免朝着该模块进行射击，且所有炮火均会穿过本模块而不会命中。,,
-生成碎片,shard_spawner,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShardSpawner,该舰被摧毁或停机时生成碎片。,,
+生成碎片,shard_spawner,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShardSpawner,该舰被摧毁或停机时生成欧米伽子机碎片。,,
 Do Not Back Off,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,Sets DO_NOT_BACK_OFF AIFlag,,
 ,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,
