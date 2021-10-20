@@ -1003,13 +1003,13 @@ ttwiEncounter,BeginFleetEncounter,"$ttwi_wantsItem score:1000
 !$ttwi_encounteredAlready","$ttwi_encounteredAlready = true
 FleetDesc
 HailPlayer",,,,
-ttwiOpenComm,OpenCommLink,$entity.ttwi_wantsItem score:1000,Highlight $entity.ttwi_credits,"通讯线路播放着朗朗上口的三一速子科技广告语，紧接着LOGO逐渐消失，面前显示出衣着光鲜的三一速子船长。
+ttwiOpenComm,OpenCommLink,$entity.ttwi_wantsItem score:1000,Highlight $entity.ttwi_credits,"通讯线路播放着朗朗上口的速子科技广告语，紧接着LOGO逐渐消失，面前显示出衣着光鲜的速子船长。
 
 ""你好，远行者。我可以让你对一个小小的商业建议感兴趣么?""{$HeOrShe}举起一只手，上面戴着有品位的简约闪亮戒指，""现在我知道你的货舱里有一个非常特别的技术装置。谁能说它在你到达之前就已经失踪了呢?""
 
 {$HeOrShe}微笑着，很完美。
 
-""让我为你提供{$entity。ttwi_credits}星币，把它转移到我的船上，我们都可以回家了，很充实。""","ttwi_accept:接受这个交易
+""让我为你提供{$entity.ttwi_credits}星币，把它转移到我的船上，我们都可以回家了，很充实。""","ttwi_accept:接受这个交易
 ttwi_decline:拒绝这个交易",,
 ttwi_accept,DialogOptionSelected,$option == ttwi_accept,"AddCommodity credits $entity.ttwi_credits
 AdjustRep $personFaction.id COOPERATIVE 3
