@@ -10005,7 +10005,7 @@ gaProbeObjectInteractionMissing1,DialogOptionSelected,$option == gaProbe_missing
 
 稍后，在打捞队返回后，你同舰桥船员一起回顾他们的发现，看起来好像是探测器的中心被挖出了一个完美的球体，带走了大部分Galatia学院的珍贵仪器套件。
 
-随后抛出的理论。是黑洞。还是外星人;引发了一连串礼貌性的笑声，你的导航官上前解释说，理论上有可能对远处的物质进行批量的相位转移，尽管这个过程未被认为是特别经济，即使在人之领时代的末期。你的行动执行官对整个概念持怀疑态度。",gaProbe_missing2:继续,,
+随后抛出的理论。是黑洞。还是外星人;引发了一连串礼貌性的笑声，你的导航官上前解释说，理论上有可能对远处的物质进行批量的相位转移，尽管这个过程未被认为是特别经济，即使在人之领时代的末期。你的行动执行官对整个概念持怀疑态度。。",gaProbe_missing2:继续,,
 gaProbeObjectInteractionMissing2,DialogOptionSelected,$option == gaProbe_missing2,"$global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage
 DespawnEntity",不管是什么干的，这意味着你没有一个仪器套件返回Galatia学院。你下令将这次遭遇所有遥测数据和全息影像资料附在加密的任务文件中。学者们喜欢数据，越多越好。这应该足以证明你的工作做得很到位。也许其中的奥秘会分散他们的注意力，足以让你得到报酬。,defaultLeave:离开,,
@@ -10928,13 +10928,13 @@ ttwiEncounter,BeginFleetEncounter,"$ttwi_wantsItem score:1000
 !$ttwi_encounteredAlready","$ttwi_encounteredAlready = true
 FleetDesc
 HailPlayer",,,,
-ttwiOpenComm,OpenCommLink,$entity.ttwi_wantsItem score:1000,Highlight $entity.ttwi_credits,"通讯线路播放着朗朗上口的三一速子科技广告语，紧接着LOGO逐渐消失，面前显示出衣着光鲜的三一速子船长。
+ttwiOpenComm,OpenCommLink,$entity.ttwi_wantsItem score:1000,Highlight $entity.ttwi_credits,"通讯线路播放着朗朗上口的速子科技广告语，紧接着LOGO逐渐消失，面前显示出衣着光鲜的速子船长。
 
 ""你好，远行者。我可以让你对一个小小的商业建议感兴趣么?""{$HeOrShe}举起一只手，上面戴着有品位的简约闪亮戒指，""现在我知道你的货舱里有一个非常特别的技术装置。谁能说它在你到达之前就已经失踪了呢?""
 
 {$HeOrShe}微笑着，很完美。
 
-""让我为你提供{$entity。ttwi_credits}星币，把它转移到我的船上，我们都可以回家了，很充实。""","ttwi_accept:接受这个交易
+""让我为你提供{$entity.ttwi_credits}星币，把它转移到我的船上，我们都可以回家了，很充实。""","ttwi_accept:接受这个交易
 ttwi_decline:拒绝这个交易",,
 ttwi_accept,DialogOptionSelected,$option == ttwi_accept,"AddCommodity credits $entity.ttwi_credits
 AdjustRep $personFaction.id COOPERATIVE 3
