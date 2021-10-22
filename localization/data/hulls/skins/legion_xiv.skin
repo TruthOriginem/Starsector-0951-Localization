@@ -3,7 +3,7 @@
 	"skinHullId":"legion_xiv",
 	"hullName":"军团 (XIV)",
 	"descriptionId":"legion",
-	"descriptionPrefix":"这艘舰艇根据霸权的建立者——人之领第十四舰队的规格所建造，是人之领海军\"舰队决战\"教条的第一手资料，很明显地利用了大崩溃前的工业技术进行过一系列全面的结构改良",
+	"descriptionPrefix":"这艘舰艇根据霸权的建立者——人之领第十四舰队的规格所建造，是人之领海军\"舰队决战\"教条的第一手资料，很明显地利用了大崩塌前的工业技术进行过一系列全面的结构改良",
 	#"tags":["XIV_bp"], # don't want it available for the Hegemony, it's "lost"
 	"tags":["hist3t"],
 	"tech":"第十四军团",
