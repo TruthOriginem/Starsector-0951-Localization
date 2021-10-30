@@ -451,12 +451,12 @@ FireBest OpenCommLink",你下令激活应答器并重新打开通讯链接。,,
 greetingDefaultFriendly,OpenCommLink,$faction.friendlyToPlayer,"$menuState = fleetConvMain 0
 FireAll PopulateOptions","""确认收到 AIS 代码。很高兴见到你，{$playerName}。""",,
 greetingDefaultHostileWeaker,OpenCommLink,"$entity.isHostile
-$entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""警告敌方{$shipOrFleet}：我已向附近巡逻队发出求救信号，它们很快就到。""",cutCommLink:切断通讯,
+$entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""警告敌方{$shipOrFleet}：我已向附近巡逻队发出求救信号，它们很快就到。""",cutCommLink:切断通讯链接,
 greetingDefaultHostileWeakerDefiant,OpenCommLink,"$entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"敌方的{$personRank}神情严峻，但面无惧色。""我们会跟你们拼到底。""{$heOrShe}说道。
 OR
-""该死，我们的情况不妙。""{$PersonRank}$personName}突然发现自己还在和你通话，于是迅速切断了通信。",cutCommLink:切断通讯,
+""该死，我们的情况不妙。""{$PersonRank}$personName}突然发现自己还在和你通话，于是迅速切断了通信。",cutCommLink:切断通讯链接,
 greetingDefaultHostileStronger,OpenCommLink,"$entity.isHostile
 $entity.relativeStrength >= 0",EndConversation,可能是敌方的{$personRank}觉得没有与你通话的必要，你的通讯请求没被应答。,,
 greetingDefaultNeutral,OpenCommLink,$faction.neutralToPlayer,"$menuState = fleetConvMain 0
@@ -490,18 +490,18 @@ $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""警�
 OR
 ""战前通告! 我警告，向霸主舰船开火将被视为现行暴乱! 你们将被立即追捕!""霸主{$personRank}看起来冷汗直冒，""等你们被解决掉之后，你们会被卖到星域各地的黑市里去! 我发誓!""
 OR
-""我们为了人之领和全人类的复兴而献身。""{$HeOrShe}停顿了一下，似乎欲言又止，最后切断了通讯。",cutCommLink:切断通讯,
+""我们为了人之领和全人类的复兴而献身。""{$HeOrShe}停顿了一下，似乎欲言又止，最后切断了通讯。",cutCommLink:切断通讯链接,
 greetingHegemonyHostileWeakerDefiant,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"霸主的{$personRank}神情严峻，但面无惧色。""我们会跟你们血战到底。""{$heOrShe}说道。
 OR
-""我们会奋战至死! 为了人之领! 为了全人类!"" 通讯链接就这样被切断了。",cutCommLink:切断通讯,
+""我们会奋战至死! 为了人之领! 为了全人类!"" 通讯链接就这样被切断了。",cutCommLink:切断通讯链接,
 greetingHegemonyHostileStronger,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以霸主高级统帅部的名义，命令你们立即关闭超空间驱动器与武器系统，束手就擒，通话完毕。""
 OR
-""违背霸主当局的命令将被视为叛乱行为，必须受到相应惩罚。现在立即投降，否则我们就会动用武力。""",cutCommLink:切断通讯,
+""违背霸主当局的命令将被视为叛乱行为，必须受到相应惩罚。现在立即投降，否则我们就会动用武力。""",cutCommLink:切断通讯链接,
 greetingHegemonyNeutral,OpenCommLink,"$faction.id == hegemony
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""公民们，你们的身份已被扫描识别。没有疑问的话，我们恕不奉陪。""
@@ -525,18 +525,18 @@ greetingTTHostileWeaker,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""请注意。您的船只已被扫描并且被确认与速子科技存在敌对关系。后续的利益侵害行为将被记录在案.""
 OR
-""做出任何试图阻碍或破坏这艘速子科技公司所有并运营的船只的行为都将承担法律后果。"" 这位速子公司的{$personRank}看起来很紧张，""相信我，这些法务部的家伙都不是吃素的。您真不该来招惹我的。""",cutCommLink:切断通讯,
+""做出任何试图阻碍或破坏这艘速子科技公司所有并运营的船只的行为都将承担法律后果。"" 这位速子公司的{$personRank}看起来很紧张，""相信我，这些法务部的家伙都不是吃素的。您真不该来招惹我的。""",cutCommLink:切断通讯链接,
 greetingTTHostileWeakerDefiant,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"速子科技{$personRank}神情严峻，但面无惧色。""公司条例 313.33 A节 规定，具有战斗能力的舰船必须随时随地积极地保护自己。""{$heOrShe}说道。",cutCommLink:切断通讯,
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"速子科技{$personRank}神情严峻，但面无惧色。""公司条例 313.33 A节 规定，具有战斗能力的舰船必须随时随地积极地保护自己。""{$heOrShe}说道。",cutCommLink:切断通讯链接,
 greetingTTHostileStronger,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""请注意。您的船只已被扫描并且被确认与速子科技存在敌对关系。请做好被歼灭的准备。""
 OR
 ""我谨代表速子科技公司感谢您，让我们有机会向您证明公司旗下的太空防御产品系列性能卓越。""
 OR
-""我有责任代表速子科技公司通知您，这次的交战将被记录在案。作为破坏公司全额所有财产的交战方，您将自动放弃所有股权分配和利润分红的权利。""{$personRank}咧嘴笑了笑并切断了通讯链接。",cutCommLink:切断通讯,
+""我有责任代表速子科技公司通知您，这次的交战将被记录在案。作为破坏公司全额所有财产的交战方，您将自动放弃所有股权分配和利润分红的权利。""{$personRank}咧嘴笑了笑并切断了通讯链接。",cutCommLink:切断通讯链接,
 greetingTTNeutral,OpenCommLink,"$faction.id == tritachyon
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""我很高兴代表速子科技公司通知您，我们已经扫描了您的{$shipOrFleet}，并对你们的战术装备进行了评估。请保持距离，祝您愉快。""
@@ -560,7 +560,7 @@ $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我�
 OR
 ""你们无处可逃。你将同{Cruor}上的堕落之辈一同腐朽殆尽。""
 OR
-这位辛达{$personRank}凝视着虚空。""牺牲成就使命，我以己命祭狮心。""",cutCommLink:切断通讯,
+这位辛达{$personRank}凝视着虚空。""牺牲成就使命，我以己命祭狮心。""",cutCommLink:切断通讯链接,
 greetingDiktatHostileWeakerDefiant,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
 $entity.relativeStrength < 0
@@ -568,7 +568,7 @@ $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"�
 
 ""伟业无可阻挡，无论我存亡与否。""{$HisOrHer}神情坚毅，""为了狮心!"" 
 
-通讯链接突然断开了。",cutCommLink:切断通讯,
+通讯链接突然断开了。",cutCommLink:切断通讯链接,
 greetingDiktatHostileStronger,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以辛达强权当局之名，你已被勒令熄灭引擎，关闭武器，束手就擒。如有违背，则视为挑衅侵略。以上。""
@@ -581,7 +581,7 @@ OR
 OR
 ""我们会把你们这种人从星域中根除，甚至从历史上抹杀掉你。""
 OR
-这位辛达强权{$personRank}冷笑着说，""你是恐怖分子，或是海盗，还是堕落者? 没关系，幸运的话，你会窒息在真空中。不幸的话，会被送到{Cruor}上去。""",cutCommLink:切断通讯,
+这位辛达强权{$personRank}冷笑着说，""你是恐怖分子，或是海盗，还是堕落者? 没关系，幸运的话，你会窒息在真空中。不幸的话，会被送到{Cruor}上去。""",cutCommLink:切断通讯链接,
 greetingDiktatNeutral,OpenCommLink,"$faction.id == sindrian_diktat
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""身份确认，保持距离。干扰军务将被视为叛乱行为。""
@@ -603,18 +603,18 @@ greetingLCHostileWeaker,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们遵循卢德之教义。圣人虽需历经磨难，但永恒的恩惠终将降临吾身。""
 OR
-""那就继续作恶吧，贪婪者玛门的仆从。我们大限将至，卢德将引领我们的灵魂迈向安息。""",cutCommLink:切断通讯,
+""那就继续作恶吧，贪婪者玛门的仆从。我们大限将至，卢德将引领我们的灵魂迈向安息。""",cutCommLink:切断通讯链接,
 greetingLCHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""我们遵循着卢德的教义，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。"" 这位卢德{$personRank}看起来并非在与你，而是在与{$hisOrHer}的造物主交谈。
 OR
-""你被机械伪神腐蚀得如此之深? 明智地选择你的道路吧，救赎仍为时不晚。""",cutCommLink:切断通讯,
+""你被机械伪神腐蚀得如此之深? 明智地选择你的道路吧，救赎仍为时不晚。""",cutCommLink:切断通讯链接,
 greetingLCHostileStronger,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并忏悔，以摆脱你们的科技罪业；负隅顽抗，则只有造物主圣洁的真空能给你们带来解脱。""
 OR
-""机械的奴仆们! 立即臣服并忏悔，或许你们还有机会获得救赎。否则，你唯一能获得的解脱将是造物主圣洁的真空。""",cutCommLink:切断通讯,
+""机械的奴仆们! 立即臣服并忏悔，或许你们还有机会获得救赎。否则，你唯一能获得的解脱将是造物主圣洁的真空。""",cutCommLink:切断通讯链接,
 greetingLCNeutral,OpenCommLink,"$faction.id == luddic_church
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""通告，请勿干涉我们的神圣使命。""
@@ -626,16 +626,16 @@ $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""修行者，你好。愿卢德的祝福与你常在。""",,
 greetingLPHostileWeaker,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们遵循着卢德的教义，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。""",cutCommLink:切断通讯,
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们遵循着卢德的教义，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。""",cutCommLink:切断通讯链接,
 greetingLPHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""我们遵循卢德之道，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。""
 OR
-""贪婪者玛门的奴隶! 你们无法和卢德之道抗衡! 命中注定我们将要离世，但我们迈向救赎的脚步毫不动摇。""",cutCommLink:切断通讯,
+""贪婪者玛门的奴隶! 你们无法和卢德之道抗衡! 命中注定我们将要离世，但我们迈向救赎的脚步毫不动摇。""",cutCommLink:切断通讯链接,
 greetingLPHostileStronger,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并忏悔，以摆脱你们的科技罪业；负隅顽抗，则只有造物主圣洁的真空能给你们带来解脱。""",cutCommLink:切断通讯,
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并忏悔，以摆脱你们的科技罪业；负隅顽抗，则只有造物主圣洁的真空能给你们带来解脱。""",cutCommLink:切断通讯链接,
 greetingLPNeutral,OpenCommLink,$faction.id == luddic_path,"$menuState = fleetConvMain 0
 FireAll PopulateOptions","""不要来干涉我们的神圣使命，我们正在修行卢德之道。""",,
 LPTitheCheck,BeginFleetEncounter,"$faction.id == luddic_path score:100
@@ -666,7 +666,7 @@ AddText ""通讯链接在你回应前就被切断了。""
 ShowDefaultVisual
 EndConversation","""也许你的灵魂还未被机械伪神夺走。""
 OR
-""平心而论，卢德之手刚刚引导了你。""",cutCommLink:切断通讯,
+""平心而论，卢德之手刚刚引导了你。""",cutCommLink:切断通讯链接,
 ,,,,,,
 ,,,,,,
 ,,,,,,
@@ -698,7 +698,7 @@ greetingPirateHostileWeaker,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""尊敬的指挥官，您好! 我们只是一支不起眼的联盟商队，正在返航补给。如有需要，我们将荣幸地尽一切努力协助您。""
 OR
-""我一定是不小心把自己的应答器给关掉了，我的错。不介意的话，我马上就走...""",cutCommLink:切断通讯,
+""我一定是不小心把自己的应答器给关掉了，我的错。不介意的话，我马上就走...""",cutCommLink:切断通讯链接,
 greetingPirateHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
@@ -706,7 +706,7 @@ $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"�
 OR
 {$personName}挑衅地瞪着你说，""你别想活捉我!""
 OR
-""你打得像个藻农一样菜! 少废话，多开炮!""",cutCommLink:切断通讯,
+""你打得像个藻农一样菜! 少废话，多开炮!""",cutCommLink:切断通讯链接,
 greetingPirateHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1
@@ -744,14 +744,14 @@ $entity.isHostile
 $entity.relativeStrength < 0
 $entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""你就是那个来帮霸主干脏活的打手?  那就放马过来吧!""
 OR
-""堂堂宇航员要靠偷吃的才能养活{$hisOrHer}家庭和{$hisOrHer}战友，这就是他们口中的海盗行为。如果那让我成为了一名海盗的话，我觉得这总比某些只会对凤凰徽章敬礼的蠢货要好。""",cutCommLink:切断通讯,
+""堂堂宇航员要靠偷吃的才能养活{$hisOrHer}家庭和{$hisOrHer}战友，这就是他们口中的海盗行为。如果那让我成为了一名海盗的话，我觉得这总比某些只会对凤凰徽章敬礼的蠢货要好。""",cutCommLink:切断通讯链接,
 greetingRogueMinerHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding
 $entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"叛逃矿工{$personRank}通过视讯对你比了个粗鲁的手势，然后切断了通讯。
 OR
-{$personName}带着不屈的表情唾骂到：""又来了一个帮穿着华丽制服的主子杀人越货的蠢货!""",cutCommLink:切断通讯,
+{$personName}带着不屈的表情唾骂到：""又来了一个帮穿着华丽制服的主子杀人越货的蠢货!""",cutCommLink:切断通讯链接,
 greetingRogueMinerHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0
@@ -759,7 +759,7 @@ $entity.rogueMiner == true",$entity.ignorePlayerCommRequests = true 1,"""霸主�
 OR
 ""他们应该派真正的海军来，而不是一群在太空服的吓尿了的混球。""
 OR
-""当我把你的船炸掉的时候，可别把你的脏东西弄我身上。""",cutCommLink:切断通讯,
+""当我把你的船炸掉的时候，可别把你的脏东西弄我身上。""",cutCommLink:切断通讯链接,
 greetingRogueMinerNeutral,OpenCommLink,"$faction.id == pirates
 $faction.neutralToPlayer
 $entity.rogueMiner == true","$menuState = fleetConvMain 0
@@ -827,7 +827,7 @@ OR
 
 中断
 
-""[MY-序列]. 检测到未授权的单位正在靠近, 默认启用 速子科技 防御系统 来确保自身完整性. 请接受速子科技公司由衷的祝福.""",cutCommLink:切断通讯,
+""[MY-序列]. 检测到未授权的单位正在靠近, 默认启用 速子科技 防御系统 来确保自身完整性. 请接受速子科技公司由衷的祝福.""",cutCommLink:切断通讯链接,
 greetingRemnantNeutral,OpenCommLink,"$faction.id == remnant score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""敌我识别代码 未收到 [目标不明] 无回应 // '尊贵的潜在顾客, 速子科技 温馨提示: 您的舰船 ID 未记录在 速子科技 综合空间防御系统的白名单内.
@@ -851,7 +851,7 @@ greetingDerelictFriendly,OpenCommLink,"$faction.id == derelict score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""人之领{MINEX许可}已接受，防篡改系统已被设为待命状态，将允许目标接近进行检修。""",,
 greetingDerelictHostile,OpenCommLink,"$faction.id == derelict score:1000
-$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""警告：这艘船是人之领开拓者的财产，任何方式的篡改和/或破坏或侵入信号传送，都将回以致命武力。破坏或损毁人之领开拓者的财产的财产，除了应接受人之领当地的殖民政体宪章裁决外，还将根据《MINEX创立法案》受到相应的惩处。且此种违规行为将被记录在案。""",cutCommLink:切断通讯,
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""警告：这艘船是人之领开拓者的财产，任何方式的篡改和/或破坏或侵入信号传送，都将回以致命武力。破坏或损毁人之领开拓者的财产的财产，除了应接受人之领当地的殖民政体宪章裁决外，还将根据《MINEX创立法案》受到相应的惩处。且此种违规行为将被记录在案。""",cutCommLink:切断通讯链接,
 greetingDerelictNeutral,OpenCommLink,"$faction.id == derelict score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""人之领的公民，这艘自动无人船依照任务参数设定，已经在航行过程中识别并记录了你的船只或居住地。人之领开拓者的自主船只的程序被设定为会以致命武力回应任何方式的篡改，包括破坏或侵入信号传送。破坏或损毁人之领开拓者的财产的财产，除了应接受人之领当地的殖民政体宪章裁决外，还将根据《MINEX创立法案》受到相应的惩处。""",,
@@ -1037,19 +1037,19 @@ FireBest CustomsInspectionEndPeaceful","""感谢你的配合。这将在你的�
 optionRefuseCITollPassRep,DialogOptionSelected,"$option == refuseCIToll
 $entity.repCheckResult > 0.2
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
-FireBest CustomsInspectionEndPeaceful",$personName 瞪着你，但出于某些原因没有开口与你争执。经历了几秒钟的沉默之后，你切断了通讯连接。,,
+FireBest CustomsInspectionEndPeaceful",$personName 瞪着你，但出于某些原因没有开口与你争执。经历了几秒钟的沉默之后，你切断了通讯链接。,,
 optionRefuseCIToll,DialogOptionSelected,$option == refuseCIToll,"AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
 FireBest CustomsInspectionEndHostile","""你会后悔的。""
 
-在你做出回应之前，通讯连接就被切断了。",,
+在你做出回应之前，通讯链接就被切断了。",,
 optionRefuseCIFinePassRep,DialogOptionSelected,"$option == refuseCIFine
 $entity.repCheckResult > 0.6
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_FINE
-FireBest CustomsInspectionEndPeaceful",$personName}有些诚惶诚恐地看着你，但总而言之不管出于什么原因，$heOrShe}并没有与你发生争执。经历了几秒钟的沉默后，你切断了通讯连接。,,
+FireBest CustomsInspectionEndPeaceful",$personName}有些诚惶诚恐地看着你，但总而言之不管出于什么原因，$heOrShe}并没有与你发生争执。经历了几秒钟的沉默后，你切断了通讯链接。,,
 optionRefuseCIFine,DialogOptionSelected,$option == refuseCIFine,"AdjustRep $faction.id CUSTOMS_REFUSED_FINE
 FireBest CustomsInspectionEndHostile","""你会非常后悔这个决定的。""
 
-在你做出回应之前，通讯连接就被切断了。",,
+在你做出回应之前，通讯链接就被切断了。",,
 optionCantAffordToll,DialogOptionSelected,$option == cantAffordToll,"AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD
 FireBest CustomsInspectionEndPeaceful","""那还真是不幸。你的无法缴清费用的行为将被记录在案。""",,
 optionCantAffordFine,DialogOptionSelected,$option == cantAffordFine,AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD,"""那还真是不幸。但我相信你还是打算及时交出违禁品，对吧?""","0:payCIFine:""是的，当然。""
@@ -1290,7 +1290,7 @@ addMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh
 closeMhub,DialogOptionSelected,$option == mh_close,"Call $mHub doCleanup
 FireAll PopulateOptions",,,
 convOptionLeave,PopulateOptions,"$isPerson
-!$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:切断通讯,
+!$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:切断通讯链接,
 convOptionLeavePolite,PopulateOptions,"$isPerson
 $cutCommLinkPolite","SetShortcut cutCommLinkPolit ""ESCAPE""",,100:cutCommLinkPolite:切断通讯,
 convEnd,DialogOptionSelected,$option == cutCommLink,"ShowDefaultVisual
@@ -1337,7 +1337,7 @@ SetShortcut cutCommLink ""ESCAPE""","经过短暂的等待，你的连接请求�
 
 ""为什么会有个和{$market}当局作对的人想要和我联系?""
 
-你考虑到，也许关闭应答器，在不引起任何不必要的注意的情况下回来可能是一个更好的方法。",0:cutCommLink:切断通讯,
+你考虑到，也许关闭应答器，在不引起任何不必要的注意的情况下回来可能是一个更好的方法。",0:cutCommLink:切断通讯链接,
 # MarketProcurementMission,,,,,,
 mpm_greetingNeedTOff,PickGreeting,"$mpm_isPlayerContact
 $player.transponderOn
@@ -1346,7 +1346,7 @@ SetShortcut cutCommLink ""ESCAPE""","经过短暂的等待，你的连接请求�
 
 ""什么? 一批{$mpm_commodityName}? 恐怕我不认识对这种东西感兴趣的人。""
 
-所以总的来看，亮着你的身份开着应答器大摇大摆地进入港口去和一个犯罪集团成员人物接头，或许并不是你能想到的最好的主意。",0:cutCommLink:切断通讯,
+所以总的来看，亮着你的身份开着应答器大摇大摆地进入港口去和一个犯罪集团成员人物接头，或许并不是你能想到的最好的主意。",0:cutCommLink:切断通讯链接,
 mpm_greetingEnough,PickGreeting,"$mpm_isPlayerContact
 CallEvent $mpm_eventRef hasEnough","ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。
@@ -1465,7 +1465,7 @@ $level >= 6",ShowPersonVisual,"你提交了连接请求。待机信号持续了�
 
 ""一路平安吧。""
 
-{$HeOrShe}切断了通讯连接。
+{$HeOrShe}切断了通讯链接。
 OR
 通信链路的待机画面一直在没完没了地闪烁着。你的通讯官耸了耸肩，表示它确实在正常工作。你正准备下令取消这个请求时，通讯接通了。
 

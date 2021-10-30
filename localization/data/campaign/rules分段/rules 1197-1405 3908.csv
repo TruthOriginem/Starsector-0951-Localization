@@ -190,7 +190,7 @@ MakeOtherFleetImportant gaKA false","在你切断通讯的前一刻，霸主{$ra
 
 ""{$PlayerSirOrMadam}，""你的战术军官报告，""他们正在展开攻击阵型。""
 
-你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何{""事件""}。",cutCommLink:切断通讯,
+你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何{""事件""}。",cutCommLink:切断通讯链接,
 gaKAPatrolWeapons,DialogOptionSelected,$option == gaKA_patrolWeapons,"EndConversation
 MakeOtherFleetLowRepImpact gaKA true
 MakeOtherFleetGoAway false
@@ -200,7 +200,7 @@ MakeOtherFleetImportant gaKA false","霸主{$rank}点了点头，带着冰冷的
 
 ""{$PlayerSirOrMadam}，""你的战术军官报告，""他们正在展开攻击阵型。""
 
-你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何{""事件""}。",cutCommLink:切断通讯,
+你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何{""事件""}。",cutCommLink:切断通讯链接,
 gaKAPatrolLie,DialogOptionSelected,$option == gaKA_patrolLie,,"你潇洒地行了一礼。
 
 ""{$SirOrMadam}。我得说这是一场误会。我正指挥一支特别行动队追捕一名渗透进来的恐怖分子。根据{HERMES}BLACK}命令，在行动的过程中我不被允许接入霸主的通讯网络。我上司提供的任务条件也允许我独立行动。""
@@ -226,7 +226,7 @@ EndConversation","""的确，""{$HeOrShe}说，""回去向{Rau}上将报告，�
 
 {$HeOrShe}连个招呼也不打就唐突切断了通讯，你觉得有被冒犯到。
 
-接着你回忆了一下过去，觉得当初那个在闲得无聊的夜晚，把一些注意力投入到在港口酒吧中播放的霸主纪录片上的你十分机智。",cutCommLink:切断通讯,
+接着你回忆了一下过去，觉得当初那个在闲得无聊的夜晚，把一些注意力投入到在港口酒吧中播放的霸主纪录片上的你十分机智。",cutCommLink:切断通讯链接,
 ,,,,,,
 # Returned to the Academy with Gargoyle and archive,,,,,,
 gaKAReturnToAcademy,OpenInteractionDialog,$market.gaKA_returnHere score:2000,"$global.foundGargoyle = true
@@ -235,7 +235,7 @@ ShowDefaultVisual","你的{$shipOrFleet}在排队进入空间站时被打断了;
 ""舰长，""你的通讯员报告说，""她想和你说话。""",gaKA_return1:继续,
 gaKAReturnToAcademy1,DialogOptionSelected,$option == gaKA_return1,ShowPersonVisual false baird,"{Anahita}Baird}的形象出现了。""舰长，把你的{'特别货物'}用穿梭机直接带到这个码头。""她说，与此同时收到导航指示和对接代码的提示音响了起来，""我会等着你的。""
 
-通讯连接被切断了。",gaKA_return2:继续,
+通讯链接被切断了。",gaKA_return2:继续,
 gaKAReturnToAcademy2,DialogOptionSelected,$option == gaKA_return2,,"推进器冷却时发出了咔咔声，你走下穿梭机，身后跟着{Gargoyle}。在短暂的穿梭机旅程中，黑客接二连三的提问，建议，以及对任何控制面板或触手可及的小玩意动手动脚的行为让你忍无可忍。
 
 就和之前说好的一样，{Baird}院长带着一小队蒙面警卫和高级顾问在等着你。
@@ -346,7 +346,7 @@ GAKARayanArroyo_expensesSel,DialogOptionSelected,$option == gaKA_arroyoExpenses,
 
 他举起了一根戴着金戒指的手指。""别再和我提关于{Gargoyle}的任何事，我很清楚自己并不想知道那个荒唐的破坏者在计划着什么。但我会给你报销。""他做了个鬼脸，""我会把我的发票寄给{Baird}院长，这样那个呆在象牙塔里的操偶大师就能明白她压榨我到什么程度了。""
 
-""现在我要挂了。""他关掉了通讯连接。",cutCommLinkNoText:继续,
+""现在我要挂了。""他关掉了通讯链接。",cutCommLinkNoText:继续,
 "# Gargoyle, not-in-mission greeting",,,,,,
 GargoyleDefaultGreeting,PickGreeting,$id == gargoyle score:20,"ShowPersonVisual
 FireAll PopulateOptions","你输入通讯ID，手悬停在发光的{""确认""}标志上。你的通讯技师点了点头，他已经准备好应对任何{Gargoyle}认为有趣的通讯内容了。

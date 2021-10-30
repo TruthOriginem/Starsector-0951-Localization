@@ -231,7 +231,7 @@ FireBest DialogOptionSelected","你的军需官通过通讯联系问道：""{$Pl
 gaFCZalRecordingEnd,DialogOptionSelected,$option == gaFC_zalRecordingEnd,"ShowDefaultVisual
 SetPersonHidden zal true
 SetPersonPortrait zal ""zal""
-MovePersonToMarket zal kantas_den",你断开了通讯，想知道{Elissa}Zal}到底发生了什么，还有非官方的超波通讯中继器到底是什么。似乎所有答案都可以在{Isirah}星系中找到。,cutCommLink:切断通讯,
+MovePersonToMarket zal kantas_den",你断开了通讯，想知道{Elissa}Zal}到底发生了什么，还有非官方的超波通讯中继器到底是什么。似乎所有答案都可以在{Isirah}星系中找到。,cutCommLink:切断通讯链接,
 ,,,,,,
 "# gaFC Fikenhild, Elissa Zal contact before Siyavong",,,,,,
 gaFCZalFirstGreeting_INVESTIGATE_FIKENHILD,PickGreeting,"$id == zal score:1000
@@ -413,7 +413,7 @@ GAFCFikenhildSiyavongWrapUp,DialogOptionSelected,$option == gaFC_fikenhildSiyavo
 
 Siyavong}特工拍了拍手，""我相信我们已经谈完了。你们这些人怎么说来着--'航行无阻'，船长?""","gaFC_fikenhildSiyavongWrapUp2:""等等，我还有几个问题。""
 cutCommLink:切断通讯",
-GAFCFikenhildSiyavongWrapUp2,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWrapUp2,ShowDefaultVisual,Finlay}摇了摇头，仍然微笑着。通讯线路突然断开，通讯对象变成了空白。,cutCommLink:切断通讯,
+GAFCFikenhildSiyavongWrapUp2,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWrapUp2,ShowDefaultVisual,Finlay}摇了摇头，仍然微笑着。通讯线路突然断开，通讯对象变成了空白。,cutCommLink:切断通讯链接,
 ,,,,,,
 "# talking to Finlay Siyavong wherein he stonewalls the player
 (if player has spokeOpenly with him)",,,,,,
@@ -421,7 +421,7 @@ GAFCSiyavongStonewallGreeting,PickGreeting,"$id == siyavong score:1000
 #!$global.gaFC_triedToSeeCavin score:100","ShowPersonVisual
 $metAlready = true
 #FireBest FCFikenhildSiyavongGreeting
-FireAll GAFCSiyavongStonewallGreetOptions","通讯连接在一个英仙座联盟徽章的动态图形上保持了一会儿，然后才接通。
+FireAll GAFCSiyavongStonewallGreetOptions","通讯链接在一个英仙座联盟徽章的动态图形上保持了一会儿，然后才接通。
 
 ""你好，我是波英仙座联盟舰队情报处的{Finlay}Siyavong}中尉，""{Siyavong}说，""我能帮你做什么?""",,
 GAFCSiyavongStonewallGreetOption1,GAFCSiyavongStonewallGreetOptions,$global.gaFC_inProgress,,,"gaFC_siyavongStonewallScylla:""我有几个关于{Scylla}Coureuse}的问题""",
@@ -432,7 +432,7 @@ GAFCSiyavongStonewallOption1,GAFCSiyavongStonewall,$spokeOpenly,$siyavongStonewa
 GAFCSiyavongStonewallOption2,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption2:""好吧，我知道了""",
 GAFCSiyavongStonewallOption3,GAFCSiyavongStonewall,$global.gaFC_gotIsirahLeadFromSiyavong,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption3:""{Scylla}Coureuse}，记得吗，你说过知道去哪找她。""",
 GAFCSiyavongStonewallOption4,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption4:""学者{Coureuse}，你问过关于她的事情""",
-GAFCSiyavongStonewallOption5,GAFCSiyavongStonewall,,,,cutCommLink:切断通讯,
+GAFCSiyavongStonewallOption5,GAFCSiyavongStonewall,,,,cutCommLink:切断通讯链接,
 GAFCSiyavongStonewall1,DialogOptionSelected,$siyavongStonewall,unset $siyavongStonewall,"恐怕我不知道你在说什么。""{Siyavong}看着你，以一种无懈可击的方式模拟出礼貌的、官方的态度。""如果你想报告在跨势力的犯罪，或在当地政体中涉及非本联盟成员国公民的犯罪，我可以把你转给适当的联系人。""
 
 无论你尝试什么，他都在搪塞。而且他很擅长这个。",cutCommLinkNoText:切断通讯,
@@ -564,7 +564,7 @@ MakeOtherFleetAvoidContact true
 $gafcProbe_finishedEncounter = true
 $global.gaFC_scavengerDroppedProbe = true","""你没告诉我它是个陷阱!""{$heOrShe}惊恐地喊道，""你应该告诉我的，你应该--不，我需要离开这里。我正在弹出那该死的东西。告诉他们我从来没收到过这个东西!"" 通讯器断了。
 
-你的战术官报告说，清道夫舰队正在为引擎提供动力。还有一个被打开的货舱在漂流。快速扫描后发现，里面的东西与一个不太标准的{Galatia}学院科学探测器的内部工作人员相符。",cutCommLink:切断通讯,
+你的战术官报告说，清道夫舰队正在为引擎提供动力。还有一个被打开的货舱在漂流。快速扫描后发现，里面的东西与一个不太标准的{Galatia}学院科学探测器的内部工作人员相符。",cutCommLink:切断通讯链接,
 gaFCScavengerBribe1,DialogOptionSelected,"$option == gaFC_scavengerBribe
 Call $global.gaFC_ref updateData","Highlight $gaFC_bribeCost
 DoCanAffordCheck $gaFC_bribeCost gaFC_scavengerBribe2 false","""哦，当然了。"" 拾荒者微笑着说，""时间就是金钱，不是吗? 我的账本开始以超越光速的效率做一些有趣的事情，哈哈。我相信，如果得到一些激励的话，我可以让更多的船员检查货舱...比方说{$gaFC_bribeCost}星币。""","gaFC_scavengerBribe2:""我会给你一些星币来加速这个过程。"" (贿赂)
@@ -627,7 +627,7 @@ gaFC_patherAmbushBluff1:""你说对了，我确实是摩洛克的仆人..."" (�
 cutCommLink:切断通讯",
 gaFCPatherAmbushTalk,DialogOptionSelected,$option == gaFC_patherAmbushTalk,,"""谈话就像路德的生命一样结束了! 现在看看你空洞的信仰能做什么，摩洛克的信徒!""。
 
-通讯在一片电子战的警报声中关闭了。",cutCommLink:切断通讯,
+通讯在一片电子战的警报声中关闭了。",cutCommLink:切断通讯链接,
 gaFCPatherAmbushBluff1,DialogOptionSelected,$option == gaFC_patherAmbushBluff1,,"""在你面前的是祂最伟大的作品!"" 你大喊大叫，摆出歌剧中的人物的姿态，""以前看到的任何东西都更漂亮的一件亵渎性武器!"" 
 
 你变得安静而有威胁性，靠在通讯拾音器上，几乎是咆哮着说：""我们称它为'噬魂者'，它的作用正如你所想的那样--将你纯洁的物质身体与造物主赋予你的灵魂分割，转换为一种叫日常生活的东西--这是对人类的奴役!--你变成了一个没有信仰的肉体机器。""",gaFC_patherAmbushBluff2:继续,
@@ -644,7 +644,7 @@ $entity.ignorePlayerCommRequests = true
 MakeOtherFleetNonHostile true
 MakeOtherFleetAvoidContact true","""额，舰长{$playerSirOrMadam}，""你的战术官报告说，""他们改变了方向。""
 
-你点点头，抚平了你的制服。",cutCommLink:切断通讯,
+你点点头，抚平了你的制服。",cutCommLink:切断通讯链接,
 ,,,,,,
 # gaFC Tri-Tachyon Merc ambush after probes found,,,,,,
 gaFCIsirahMercEncounter,BeginFleetEncounter,"$gaFC_isirahMerc score:1000

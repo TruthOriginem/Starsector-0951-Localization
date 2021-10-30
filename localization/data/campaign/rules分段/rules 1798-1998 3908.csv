@@ -15,7 +15,7 @@ postGAFCretiredArchon2,DialogOptionSelected,$option == postGAFC_retiredArchon2,,
 ""我输了，舰长。我不喜欢这个结局，但事实就是我的事业已经走到了尽头。你应该庆幸自己在这一切中发挥的作用很大程度上被忽视了 - 这就是我给你的忠告，你最好不要再为这事联系我了。""","cutCommLink:""我很抱歉，但我得先走了。""(切断通讯)",
 postGAFCretiredArchon1b,DialogOptionSelected,$option == postGAFC_retiredArchon1b,,"""没有。""{$HeOrShe}苦笑着说，""我不这么认为，你很幸运，{Kazeron}和{Hannan}家族都没有注意到你在这一切中扮演的角色。""
 
-""你最好不要再为此事联系我了，舰长。""",cutCommLink:切断通讯,
+""你最好不要再为此事联系我了，舰长。""",cutCommLink:切断通讯链接,
 ,,,,,,
 postGAFCNewArchon,PopulateOptions,"$tag:replacement_archon
 $postId == baseCommander
@@ -31,7 +31,7 @@ postGAFCNewArchon2,DialogOptionSelected,$option == postGAFC_newArchonAsk2,,"{$Pe
 cutCommLink:""真有意思。就这样吧，再接再厉。""(离开)",
 postGAFCNewArchon3,DialogOptionSelected,$option == postGAFC_newArchonAsk3,,"""确实呢。""{$heOrShe}惆怅地望着别处，""我正在数着日子，到了重返文化和财富的中心那一天，我就能清楚自己在这里熬了多久。""
 
-""不论如何，这里应该有值得我做的事。起码也得做个样子，不是么? 和你聊天很有意思，谢谢你，舰长。""",cutCommLink:切断通讯,
+""不论如何，这里应该有值得我做的事。起码也得做个样子，不是么? 和你聊天很有意思，谢谢你，舰长。""",cutCommLink:切断通讯链接,
 ,,,,,,
 # Project Ziggurat,,,,,,
 gaPZIntro,OpenInteractionDialog,"$id == station_galatia_academy
@@ -48,7 +48,7 @@ gaPZIntro1,DialogOptionSelected,$option == gaPZ_introCont1,BeginConversation seb
 
 ""舰长! 近况如何?""他先打了个招呼，然后结结巴巴地继续开口道，""不，抱歉，我是来向你告知 - 请求一件事的。{Baird}院长想见你一面，商量一件很重要的事。如果您能马上 - 不，在您方便时来见她一面，那就太好了。""他停下来喘了口气。""就是这样。我相信我们很快就会再度碰面的。谢谢你，再见!""
 
-你设法在{Sebestyen}异乎寻常地嘟嚷时关闭了通讯连接。",gaPZ_introCont2:继续,
+你设法在{Sebestyen}异乎寻常地嘟嚷时关闭了通讯链接。",gaPZ_introCont2:继续,
 gaPZIntro2,DialogOptionSelected,$option == gaPZ_introCont2,"EndConversation DO_NOT_FIRE
 $gaPZ_showMeetBairdOption = true
 FireBest GAPostOpen
@@ -567,10 +567,10 @@ $hamatsuSpielSaid = true","{Ibrahim}看起来很兴奋，甚至连招呼都没�
 gaRH_no:""抱歉，我想将这艘船留在我的舰队中。""",
 gaRH_yes,DialogOptionSelected,$option == gaRH_yes,#AdjustRepActivePerson COOPERATIVE 25,"{Ibrahim}的脸上笑容灿烂: ""谢谢你，舰长。如果你不介意的话我就先挂断了，毕竟我还有很多事要做。""
 
-她将手伸向断开通讯连接的按钮，在挂断前顿了一下: ""如果你需要工作，告诉我一声就好。新工作总是层出不穷，一个有能耐的舰长值得赚到更多的信用点。""",gaRH_yes2:继续,
+她将手伸向断开通讯链接的按钮，在挂断前顿了一下: ""如果你需要工作，告诉我一声就好。新工作总是层出不穷，一个有能耐的舰长值得赚到更多的信用点。""",gaRH_yes2:继续,
 gaRH_yes2,DialogOptionSelected,$option == gaRH_yes2,"Call $global.gaRH_ref transferHamatsu
 $global.gaRH_completed = true
-Call $global.gaRH_ref updateStage",,cutCommLink:切断通讯,
+Call $global.gaRH_ref updateStage",,cutCommLink:切断通讯链接,
 gaRH_no,DialogOptionSelected,$option == gaRH_no,,"她愣住了，然后盯着你开口道: ""你不会是认真的吧? 我出的价钱已经远远超过这艘破损成这样的船本身的价值了，也只有我一个人会愿意开这么高的价买下{Hamatsu}号。""说着她的手握成了拳头，看起来很紧张，""重新考虑一下吧。""","gaRH_yes:把{Hamatsu}号交给{Ibrahim}
 gaRH_no2:""我已经下定决心了，再见。""",
 gaRH_no2,DialogOptionSelected,$option == gaRH_no2,"Call $global.gaRH_ref refusedToReturn
@@ -585,7 +585,7 @@ HailPlayer",,,
 gaRHRevengeOpenComm,OpenCommLink,"$entity.gaRH_consequences score:1000
 !$entity.ignorePlayerCommRequests",$entity.ignorePlayerCommRequests = true,"""我猜您就是{$playername}舰长了。""雇佣兵指挥官沉稳的声音传来，""我的雇主很失望，因为你没有...呃...好好地重新考虑一下。""{$heOrShe}说出最后一个词时语气很怪，过了一会，你想起了自己和{Callisto Ibrahim}进行过的一次激烈谈话 - 那时你拒绝交出她的旧船 - 当时她在谈话中就用了{""重新考虑""}这个词。
 
-{$HeOrShe}就这么看着你，并在你摆出意识到了什么的表情时切断了通讯连接。",cutCommLinkNoText:继续,
+{$HeOrShe}就这么看着你，并在你摆出意识到了什么的表情时切断了通讯链接。",cutCommLinkNoText:继续,
 # gaPZ - returned to the GA to complete mission, ,,,,,
 gaPZ_return0NoZig,PickGreeting,"$gaPZ_returnHere score:1000
 !PlayerFleetHasShipWithBaseHull ziggurat
@@ -640,7 +640,7 @@ AddStoryPoints 1
 $global.gaPZ_completed = true
 Call $global.gaPZ_ref updateStage","""尽管经验不足，她依然表现得很好，尤其是在重压之下，""{Baird}自豪地说，""我们的团队付出了很大的努力才勉强跟上她的脚步。""
 
-""舰长，不久后你就会有更多事情要做了。""她微笑着，一副心满意足的样子，关闭了通讯连接。",cutCommLinkNoText:切断通讯,
+""舰长，不久后你就会有更多事情要做了。""她微笑着，一副心满意足的样子，关闭了通讯链接。",cutCommLinkNoText:切断通讯,
 # talk to Gargoyle after mission completed,,,,,,
 gaPZ_gargoylePost,PickGreeting,"$isPerson
 $id == gargoyle
@@ -717,5 +717,5 @@ unset $global.gaPZ_bairdHurryUp","""{$playername}，你怎么还在这里? 去�
 ""舰长，你要明白，你不再是一个精巧的工具了。你已经赢得了一些属于自己的名誉，我承认你的能力和成就令人印象深刻。""",gaPZ_bairdHurryUp2:继续,
 gaPZ_bairdHurryUp2,DialogOptionSelected,$option == gaPZ_bairdHurryUp2,,"她向前倾着身子，眼眶被阴影覆盖: ""你给星域中许多强大的势力留下了深刻的印象。在你身后，有一小群间谍，线人和机会主义者，他们随时准备着抓住你。""
 
-{Baird}院长又向后靠了靠，把眼镜放回原处: ""伟大的计划正在酝酿，舰长，我们将会改变世界。""",cutCommLink:切断通讯,
+{Baird}院长又向后靠了靠，把眼镜放回原处: ""伟大的计划正在酝酿，舰长，我们将会改变世界。""",cutCommLink:切断通讯链接,
 # gaPZ post encounters,,,,,,

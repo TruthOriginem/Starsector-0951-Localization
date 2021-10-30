@@ -4,10 +4,10 @@ SITMMercWarning,SITMMercWarning,,,"""不管拾荒者找到了什么，那些东�
 
 ""而你呢，为了保住自己的小命，你需要离开这里...""
 
-{$HeOrShe}沾沾自喜地说着这话，显然自信地认为这会让你转过身去，将引擎功率开到最大并落荒而逃。当你还在细细品味{$hisOrHer}那带有威胁性质的话语时，通讯连接突然被切断了。",cutCommLinkNoText:继续,
+{$HeOrShe}沾沾自喜地说着这话，显然自信地认为这会让你转过身去，将引擎功率开到最大并落荒而逃。当你还在细细品味{$hisOrHer}那带有威胁性质的话语时，通讯链接突然被切断了。",cutCommLinkNoText:继续,
 SITMMercAttack,SITMMercAttack,,MakeOtherFleetNoRepImpact sitm true,"""我警告过你，不想受苦的话就立马离开，""雇佣兵对你根本没把{$HeOrShe}的话听进去这一点感到恼火而烦躁，""现在我不得不开始攻击你，因为如果我不这么做，就没人会把我当回事了。记住了，这可是你自己造成的后果!""
 
-{$HeOrShe}在你能做出答复之前切断了通讯连接。",cutCommLinkNoText:继续,
+{$HeOrShe}在你能做出答复之前切断了通讯链接。",cutCommLinkNoText:继续,
 # Pather encounter afterwards,,,,,,
 SITMPatherHail,SITMPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Moloch}的邪恶手足!""左径分子吐了一口唾沫，""为何你胆敢插手应被忘却之事! 卢德先知竟为你这样的愚者死于枉然了吗!""
 
@@ -96,7 +96,7 @@ FireBest $entity.fwt_missionFailTrigger
 AddCommodity credits $entity.fwt_payment
 unset $entity.fwt_wantsThing","在{$HeOrShe}转移款项时，这位{$faction $personRank}看起来十分高兴。
 
-""完美! 太棒了。和你做生意十分愉快，{$playerName}。""你们寒暄了几句后，互相切断了通讯连接。",cutCommLinkNoText:继续,
+""完美! 太棒了。和你做生意十分愉快，{$playerName}。""你们寒暄了几句后，互相切断了通讯链接。",cutCommLinkNoText:继续,
 FWTDefaultFailTrigger,FWTDefaultFailTrigger,,Call $entity.fwt_ref endFailure,,,
 DFEFWTRepLossMinor,DFEFWTRepLossMinor,,Call $entity.fwt_ref repLossMinor,,,
 DFEFWTRepLossMedium,DFEFWTRepLossMedium,,Call $entity.fwt_ref repLossMedium,,,
@@ -253,7 +253,7 @@ unset $entity.fwt_wantsThing","看起来雇佣兵{$personRank}对你接受{$hisO
 
 ""十分感谢，再见。""
 
-通讯连接被断开了，你开始思考接下来该做些什么。",cutCommLinkNoText:继续,
+通讯链接被断开了，你开始思考接下来该做些什么。",cutCommLinkNoText:继续,
 fwt_acceptMercSelPay,DialogOptionSelected,"$option == fwt_acceptMerc
 $entity.fwt_payment > 0","MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
@@ -261,7 +261,7 @@ FireBest $entity.fwt_missionFailTrigger
 AddCommodity credits $entity.fwt_payment
 unset $entity.fwt_wantsThing","""那么事情就告一段落了，""雇佣兵{$personRank}说，脸上写着满满的高兴。""没有比这更令人愉快的交易了。也许今后我们还有机会再做做生意?""
 
-{$HeOrShe}笑了笑，然后切断了通讯连接。",cutCommLinkNoText:继续,
+{$HeOrShe}笑了笑，然后切断了通讯链接。",cutCommLinkNoText:继续,
 # Remnant complication,,,,,,
 fwtOpenCommRemnantAggroNoPay,OpenCommLink,"$entity.fwt_wantsThing score:1000
 $faction.id == remnant score:1000
@@ -426,15 +426,15 @@ SetShortcut cutCommLinkPolite ""ESCAPE""","在短暂的等待中，你可以看�
 ""所以，""在{Raesvelg}之围中诞生的英雄看着你，""一个自由佣兵跑到这穷乡僻巷来做什么?""",0:cutCommLinkPolite:切断通讯,
 ,,,,,,
 # Pirates,,,,,,
-defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后，你的通讯连接请求被拒绝了。,0:cutCommLink:切断通讯,
-defaultGreetingCydonia,PickGreeting,$id == cydonia score:1000,,在短暂的等待后，你的通讯连接请求被拒绝了。,0:cutCommLink:切断通讯,
+defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后，你的通讯链接请求被拒绝了。,0:cutCommLink:切断通讯链接,
+defaultGreetingCydonia,PickGreeting,$id == cydonia score:1000,,在短暂的等待后，你的通讯链接请求被拒绝了。,0:cutCommLink:切断通讯链接,
 ,,,,,,
 # Horus Yaribay after GAATG,,,,,,
 YaribayFollowupNotDone,PickGreeting,"$id == horus_yaribay score:1000
 $global.gaATG_returnWithDeal
 $player.metDaud",ShowPersonVisual,"""我还没有收到霸主最高领导人{Daud}的消息。我认为你应该继续按照我们之前的协议，用我提供的材料来进行联系。""
 
-他用一种看起来很无情的态度打量了你一番，说道: ""我会很有耐心地在这等着的。""",cutCommLink:切断通讯,
+他用一种看起来很无情的态度打量了你一番，说道: ""我会很有耐心地在这等着的。""",cutCommLink:切断通讯链接,
 YaribayFollowup,PopulateOptions,"$id == horus_yaribay score:1000
 !$global.gaATG_returnWithDeal
 $player.metDaud",,,"yaribay_followup1:""和我们共同的朋友联系上了吗?""",
@@ -444,9 +444,9 @@ AddPotentialContact horus_yaribay",AddPotentialContact,"""我很高兴，我已�
 
 ""看来信任你是个正确的决定。也许我们以后还会进行一些交易。啊，我之前有没有提到，尽管道德层面或许有些污点，{Yaribay}这个姓氏却在最新一代人身上证明着它的学术实力? 好吧，让我告诉你...""
 
-在被{Yaribay}后裔于{Galatia}学院取得的各种如传说般的成就塞满耳朵之前，你设法成功溜之大吉。",cutCommLink:切断通讯,
+在被{Yaribay}后裔于{Galatia}学院取得的各种如传说般的成就塞满耳朵之前，你设法成功溜之大吉。",cutCommLink:切断通讯链接,
 YaribayFollowup2,DialogOptionSelected,"$option == gaATG_yaribayFollowup1
-!$player.gaveDaudYaribayContact",,"""不幸的是，我还没有收到来自...我们共同的朋友的消息。""{Horus}皱着眉头说，""也许这只是时间问题。就像对所有美好的事物一样，我们必须得满怀期待。""",cutCommLink:切断通讯,
+!$player.gaveDaudYaribayContact",,"""不幸的是，我还没有收到来自...我们共同的朋友的消息。""{Horus}皱着眉头说，""也许这只是时间问题。就像对所有美好的事物一样，我们必须得满怀期待。""",cutCommLink:切断通讯链接,
 ,,,,,,
 # Tri-Tachyon,,,,,,
 defaultSunGreeting,PickGreeting,$id == sun score:1000,"#ShowPersonVisual
@@ -460,10 +460,10 @@ sunOffice_talk:""我想和{Artemisia Sun}谈谈。""
 sunOffice_human:""请让个人类接电话。""",
 sunOfficeTalk,DialogOptionSelected,$option == sunOffice_talk,,"""对不起，舰长，""模拟出来的秘书脸上荡漾出一个耀眼的微笑，情绪酝酿得恰好能传递出歉意并让你产生一丝自我怀疑 - 不，你坚定了内心。模拟程序不可能有感情。
 
-""恐怕我无法完成您的请求。""它用友好的语气说。从它的言语深处你能感受到无情的机械意志。你可以在这里乞求几天，对方却不会做出一丝一毫的让步。",cutCommLink:切断通讯,
+""恐怕我无法完成您的请求。""它用友好的语气说。从它的言语深处你能感受到无情的机械意志。你可以在这里乞求几天，对方却不会做出一丝一毫的让步。",cutCommLink:切断通讯链接,
 sunOfficeHuman,DialogOptionSelected,$option == sunOffice_human,,"""对不起，舰长，""模拟出来的秘书脸上荡漾出一个耀眼的微笑，情绪酝酿得恰好能传递出歉意并让你产生一丝自我怀疑 - 不，你坚定了内心。模拟程序不可能有感情。
 
-""恐怕我无法完成您的请求。""它用友好的语气说。从它的言语深处你能感受到无情的机械意志。你可以在这里乞求几天，对方却不会做出一丝一毫的让步。",cutCommLink:切断通讯,
+""恐怕我无法完成您的请求。""它用友好的语气说。从它的言语深处你能感受到无情的机械意志。你可以在这里乞求几天，对方却不会做出一丝一毫的让步。",cutCommLink:切断通讯链接,
 ,,,,,,
 "# Callisto Ibrahim, general",,,,,,
 defaultCallistoGreeting,PickGreeting,$id == ibrahim,"ShowPersonVisual

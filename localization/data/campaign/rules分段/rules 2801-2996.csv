@@ -82,15 +82,15 @@ gaATGpostSebestyenGetPaid3,DialogOptionSelected,$option == gaATG_postSebestyenGe
 gaATG_postSebestyenGetPaid3c:""嗯。不用谢。""",
 gaATGpostSebestyenGetPaid3b,DialogOptionSelected,$option == gaATG_postSebestyenGetPaid3b,AdjustRepActivePerson COOPERATIVE 5,"""谢... 谢谢你。我是说，是的"" 他显然脸红了。""再见。""
 
-他尝试了两次才切断了通信连接。",cutCommLink:切断通讯,
+他尝试了两次才切断了通信连接。",cutCommLink:切断通讯链接,
 gaATGpostSebestyenGetPaid3c,DialogOptionSelected,$option == gaATG_postSebestyenGetPaid3c,AdjustRepActivePerson COOPERATIVE 1,"""我，呃。当然，我不会。"" Sebestyen 见鬼地点了个头。
 
 这人可能真需要再长点见识。
 
-""一... 一路顺风。舰长，"" 他说着，并尝试了两次才切断了通讯连接。",cutCommLink:切断通讯,
+""一... 一路顺风。舰长，"" 他说着，并尝试了两次才切断了通讯链接。",cutCommLink:切断通讯链接,
 gaATGpostSebestyenGetPaid4,DialogOptionSelected,$option == gaATG_postSebestyenGetPaid4,,"""嗯，没什么事，舰长，"" 他马上说道. ""就不占用你时间了。向你问好，舰长。""
 
-他尝试了两次才切断通讯连接。",cutCommLink:切断通讯,
+他尝试了两次才切断通讯链接。",cutCommLink:切断通讯链接,
 gaATGpostSebestyenProvost,PopulateOptions,"$isPerson
 $id == sebestyen score:1000
 $global.gaATG_missionCompleted
@@ -180,7 +180,7 @@ $mh_count <= 0","SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""改天再来
 asebConvEnd,DialogOptionSelected,"$id == sebestyen score:1000
 $option == cutCommLink","ShowDefaultVisual
 EndConversation DO_NOT_FIRE
-FireAll PopulateOptions","你切断了通讯连接。",,
+FireAll PopulateOptions","你切断了通讯链接。",,
 asebMissionDeclineGeneric,DialogOptionSelected,$option == aseb_decline,"unset $aseb_givePlayerNeutrinoDetector
 Call $mHub returnToList","他看上去有些沮丧，但仍努力挤出微笑。""如果你改变主意，一定要告诉我!""
 OR

@@ -28,7 +28,7 @@ GAPZHegHub1,GAPZHegHub,Commission hasFactionCommission,,,0:gaPZ_hegHub1:利用�
 GAPZHegHub2,GAPZHegHub,,,,1:gaPZ_hegHub2:允许霸主进行扫描,
 GAPZHegHub3,GAPZHegHub,,,,2:gaPZ_hegHub3:拒绝霸主登上你的通灵塔-级舰船,
 GAPZHegHub4,GAPZHegHub,,"SetStoryOption gaPZ_hegHubVanish general ""对霸主巡逻队隐藏了 通灵塔""",,3:gaPZ_hegHubVanish:让通灵塔-级消失,
-#GAPZHegHub5,GAPZHegHub,,,,4:cutCommLink:切断通讯,
+#GAPZHegHub5,GAPZHegHub,,,,4:cutCommLink:切断通讯链接,
 gaPZ_hegHub1,DialogOptionSelected,$option == gaPZ_hegHub1,,"你打开之前静默的通讯链接，对这位霸主 {$personRank} 解释道，你签署了一份来自霸主的雇佣协议。你们为了同一个理想而奋斗，对同一个势力宣誓忠诚。如果霸主想要访问你手中的技术，那就让他们以正常的方式提出要求。
 
 让他们作为以军人的身份示人，和你面对面交谈，而不是让他们以官僚的身份，把真实意图隐藏在繁杂的规定之后。
@@ -97,7 +97,7 @@ gaPZTriTachEncounterOnlyZig,GAPZTTInitial,$entity.hasOnlyZiggurat,FireBest GAPZT
 gaPZTriTachEncounterInitialCont,GAPZTTInitialCont,,"MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
 MakeOtherFleetGoAway true","这位速子科技 {$rank} 毫无感情地盯着你。""请将此视作一次警告。""
-通讯连接被切断了。屏幕上出现了旋转的速子科技标志，同时一个合成的声音鼓励你提交关于用户体验的反馈。",cutCommLinkNoText:继续,
+通讯链接被切断了。屏幕上出现了旋转的速子科技标志，同时一个合成的声音鼓励你提交关于用户体验的反馈。",cutCommLinkNoText:继续,
 GAPZTTHub1,GAPZTTHub,!$gaPZ_ttHubSal,,,"gaPZ_ttHubSal:""你没听说过打捞权吗?""",
 GAPZTTHub2,GAPZTTHub,,,,"gaPZ_ttHubPry:""那你恐怕得从我的尸体上跨过去.""",
 GAPZTTHub3,GAPZTTHub,,,,"gaPZ_ttHubThreat:""霸主要是看到了这移动的条约违反铁王八, 会怎么想?""",
@@ -173,11 +173,11 @@ gaPZ_lcSerious:""我会认真考虑你的警告.""
 gaPZ_lcReceived:""明白了. 我要走了.""",
 gaPZ_lcWhy,DialogOptionSelected,$option == gaPZ_lcWhy,,"""就是这点事，"" 这位卢德 {$rank} 怀疑地低头看着你。""你似乎完全没有被这台机器所困扰，这让我 - 和我的骑士团 - 感到担心。我必须承认，当我看向这机器时，我只看到双子恶魔玛门和摩洛克的造物; 速子科技的空洞孩子。然而，"" {$heOrShe} 抬起一只戴着动力盔甲的手，""我不能在此作出审判。至少现在还不行。""
 
-""我会向大主教-上将汇报此事。我会为你祷告的，舰长。祝你一路顺风。""",cutCommLink:切断通讯,
+""我会向大主教-上将汇报此事。我会为你祷告的，舰长。祝你一路顺风。""",cutCommLink:切断通讯链接,
 gaPZ_lcSerious,DialogOptionSelected,$option == gaPZ_lcSerious,,"""很好，"" 这位卢德 {$rank} 点了点头。""你看起来不像是完全被机器夺去了灵魂，这让我略感安心。即便如此，我仍然担心，那个...东西，它恐怕不会带来任何好处。""
 
-""我会为你祷告的，舰长。祝你一路顺风。""",cutCommLink:切断通讯,
-gaPZ_lcReceived,DialogOptionSelected,$option == gaPZ_lcReceived,,"""我会为你祷告的，舰长，"" 这位骑士的语气略带担忧。""祝你一路顺风，不要误入恶途，不要...""",cutCommLink:切断通讯,
+""我会为你祷告的，舰长。祝你一路顺风。""",cutCommLink:切断通讯链接,
+gaPZ_lcReceived,DialogOptionSelected,$option == gaPZ_lcReceived,,"""我会为你祷告的，舰长，"" 这位骑士的语气略带担忧。""祝你一路顺风，不要误入恶途，不要...""",cutCommLink:切断通讯链接,
 # gaPZ - meet Siyavong,,,,,,
 gaPZPLEncounter,BeginFleetEncounter,"$gaPZ_persean score:1000
 !$gaPZ_encounteredAlready","$gaPZ_encounteredAlready = true
@@ -713,7 +713,7 @@ FireAll GAATGgetScannerMoreOptions","她烦闷地叹了口气，看上去非常�
 
 ""我的团队很积极，而我也- 我感谢他们的努力工作。但我的强项是理论，我不擅长把理论变成实际应用。这东西真的太... 真的太笨重了。我们的制造设备也好不到哪去! 技术人员们都尽力了，但教务长怎么也不满足。她总想着把日程加快加快再加快... 时间根本不够! 我需要更多时间来优化计算，进行更多实验，搞到更优质的部件-"" Coureuse 打了个打哈欠。""然后好好睡一觉。""
 
-她看着别处，""要是Elissa还在的话，这一切都会变得特别简单。""",cutCommLink:切断通讯,
+她看着别处，""要是Elissa还在的话，这一切都会变得特别简单。""",cutCommLink:切断通讯链接,
 gaATGgetScannerMoreOptionA,GAATGgetScannerMoreOptions,!$global.gaFC_knowElissasName,,,"gaATG_getScannerMoreA:""这个Elissa是什么人?""",
 gaATGgetScannerMoreOptionB,GAATGgetScannerMoreOptions,$global.gaFC_knowElissasName,,,"gaATG_getScannerMoreB:""Elissa Zal, 是吧? Westernesse出身?""",
 gaATGgetScannerMoreOptionC,GAATGgetScannerMoreOptions,$global.gaFC_gotZalContactFromCavin score:100,,,"gaATG_getScannerMoreC:""Elissa Zal, 呃, 是你的朋友之类的?""",
@@ -738,7 +738,7 @@ FireBest DialogOptionSelected","""对，就是她。"" Coureuse微笑，""谢谢
 她叹了口气，""我不能说太多，真的。很久之前，出过一些事，我真希望事情没有按那样发展。你明白吗? 然后Elissa就扯上了不少麻烦。不过她还是找到了个办法来... 来联系上我。这样我们就能互相说点话。我们确实也说了。"" Coureuse不再出声，她看向你的眼神好像在思考着是该信任你还是该隐瞒一些事情。
 
 她的一台显示屏发出了听起来十分紧急的警报声，打破了这沉默。",,
-gaATGgetScannerMoreOptionEnd,DialogOptionSelected,$option == gaATG_getScannerMoreEnd,,"""抱歉，舰长，我该回去工作了。我们最近在研究一种超空间波设备- 他们都在测试间里等着我呢。祝你好运。""",cutCommLink:切断通讯,
+gaATGgetScannerMoreOptionEnd,DialogOptionSelected,$option == gaATG_getScannerMoreEnd,,"""抱歉，舰长，我该回去工作了。我们最近在研究一种超空间波设备- 他们都在测试间里等着我呢。祝你好运。""",cutCommLink:切断通讯链接,
 ,,,,,,
 # gaATG contact Horus Yaribay,,,,,,
 gaATGcontactYaribayStart,PickGreeting,"$id == horus_yaribay score:1000
@@ -914,7 +914,7 @@ FireBest DialogOptionSelected","他看上去真的有些迷茫。""嗯，真是�
 gaATGsiyavongQuestioningEnd,DialogOptionSelected,$option == gaATG_siyavongQuestioningEnd,"#ShowDefaultVisual
 #EndConversation DO_NOT_FIRE","""希望你有愉快的一天，舰长，"" Siyavong说，""你们那句话是怎么说的来着? '航行无阻'，对了。"" 
 
-他切断了通讯。",cutCommLink:切断通讯,
+他切断了通讯。",cutCommLink:切断通讯链接,
 ,,,,,,
 # gaATG arrange meeting with Baikal Daud,,,,,,# (doing so w/o clearance is handled in default NPC dialogs) -dgb
 gaATGdaudMeetingSetup,PopulateOptions,"$id == daud
@@ -946,7 +946,7 @@ gaATGdaudMeetingSetupEnd,DialogOptionSelected,$option == gaATG_daudMeetingSetupE
 unset $global.gaATG_goTalkToDaud
 Call $global.gaATG_ref updateStage","在你反应过来之前，你就已经收到了一个时间，一个地点，以及一个访客密码。你检索了地图数据库，确定了你要去的这个地点是Chicomoztoc轨道上的一处海军船坞。
 
-这位军官兼秘书并没有解释为什么要在这种奇怪的地方会面。",cutCommLink:切断通讯,
+这位军官兼秘书并没有解释为什么要在这种奇怪的地方会面。",cutCommLink:切断通讯链接,
 ,,,,,,
 # gaATG Baikal Daud,,,,,,
 gaATGdaudMeetingOption,PopulateOptions,"$id == chicomoztoc score:1000
@@ -1131,22 +1131,22 @@ HailPlayer","随着你逐渐靠近霸主舰队，你的传感器操作官汇报�
 gaATGhegFleetDialog,OpenCommLink,"#$global.gaATG_inProgress
 $entity.gaATG_hegScanFleet score:1000",FireAll GAATGhegFleetDialogHub,"一位霸主 {$rank} 出现在你面前。
 
-""公民!"" {$heOrShe} 厉声说道，""这里是一处特别海军行动区域 - 远离这里，否则我们就开火了。""",cutCommLink:切断通讯,
+""公民!"" {$heOrShe} 厉声说道，""这里是一处特别海军行动区域 - 远离这里，否则我们就开火了。""",cutCommLink:切断通讯链接,
 gaATGhegFleetDialog2,OpenCommLink,"$entity.gaATG_hegScanFleet score:1000
 $ignorePlayer",,"一位霸主 {$rank} 出现在你面前。
 
-""公民!"" {$heOrShe} 厉声说道，""这里是一处特别海军行动区域 - 远离这里，否则我们就开火了。""",cutCommLink:切断通讯,
+""公民!"" {$heOrShe} 厉声说道，""这里是一处特别海军行动区域 - 远离这里，否则我们就开火了。""",cutCommLink:切断通讯链接,
 gaATGhegFleetDialog3,OpenCommLink,"$youDoTheScan
 $entity.gaATG_hegScanFleet score:1000",,"一位霸主 {$rank} 出现在你面前。
 
-""公民!"" {$heOrShe} 厉声说道，""我等着你的扫描数据呢。快去办事吧!""",cutCommLink:切断通讯,
+""公民!"" {$heOrShe} 厉声说道，""我等着你的扫描数据呢。快去办事吧!""",cutCommLink:切断通讯链接,
 gaATGhegFleetDialogHubReturn,DialogOptionSelected,$option == gaATG_hegFleetDialogHubReturn,FireAll GAATGhegFleetDialogHub,,,
 gaATGhegFleetDialogHub1,GAATGhegFleetDialogHub,Commission hasFactionCommission,,,"gaATG_hegFleetCom1:""我和霸主签有一份雇佣协议, $rank""",
 gaATGhegFleetDialogHub2,GAATGhegFleetDialogHub,!$askedWhat,,,"gaATG_hegFleetWhat1:""具体是什么特别行动?""",
 gaATGhegFleetDialogHub3,GAATGhegFleetDialogHub,!$askedMove,,,"gaATG_hegFleetMove1:""我需要你把舰队从星门附近移开.""",
 gaATGhegFleetDialogHub3b,GAATGhegFleetDialogHub,$askedMove,,,"gaATG_hegFleetMove2:""如果你不让开, 我就要使用武力了.""",
 gaATGhegFleetDialogHub4,GAATGhegFleetDialogHub,,,,"gaATG_hegFleetStory1:""没有我的帮助, 你的行动是不可能成功的.""",
-gaATGhegFleetDialogHub5,GAATGhegFleetDialogHub,,,,cutCommLink:切断通讯,
+gaATGhegFleetDialogHub5,GAATGhegFleetDialogHub,,,,cutCommLink:切断通讯链接,
 gaATGhegFleetWhat1,DialogOptionSelected,$option == gaATG_hegFleetWhat1,"$askedWhat = true 0
 FireAll GAATGhegFleetDialogHub","这位霸主 {$rank} 严肃的脸上露出了一丝惊讶的神情。
 
@@ -1185,7 +1185,7 @@ gaATGhegFleetCom5,DialogOptionSelected,$option == gaATG_hegFleetCom5,,"""常规�
 gaATGhegFleetCom6,DialogOptionSelected,$option == gaATG_hegFleetCom6,"$youDoTheScan = true
 AdjustRepActivePerson COOPERATIVE 10
 MakeOtherFleetGoAway true
-Call $global.gaATG_ref clearedHegemonyGateSendScans","""那么任务正式开始。请吧，舰长。"" 这位霸主 {$rank} 微笑着说道，随后切断了通讯。",cutCommLink:切断通讯,
+Call $global.gaATG_ref clearedHegemonyGateSendScans","""那么任务正式开始。请吧，舰长。"" 这位霸主 {$rank} 微笑着说道，随后切断了通讯。",cutCommLink:切断通讯链接,
 gaATGhegFleetStory1,DialogOptionSelected,$option == gaATG_hegFleetStory1,,"""是吗，公民? "" 你感觉{$rank}$personLastName}似乎正欲切断通讯链接。","gaATG_hegFleetStory2:""我知道关于星门扫描的事情.""",
 gaATGhegFleetStory2,DialogOptionSelected,$option == gaATG_hegFleetStory2,,"{$HeOrShe} 眨了眨眼。""我无法证实或否认你对于这项机密任务之性质的猜测。""","gaATG_hegFleetStory3:解释说你也在扫描星门
 cutCommLink:""没事了. 好好努力.""",
@@ -1206,7 +1206,7 @@ gaATGhegFleetStory5,DialogOptionSelected,$option == gaATG_hegFleetStory5,,"""常
 gaATGhegFleetStory6,DialogOptionSelected,$option == gaATG_hegFleetStory6,"$youDoTheScan = true
 AdjustRepActivePerson COOPERATIVE 10
 MakeOtherFleetGoAway true
-Call $global.gaATG_ref clearedHegemonyGateSendScans","""那么任务正式开始。请吧，舰长。"" 这位霸主 {$rank} 微笑着说道，随后切断了通讯。",cutCommLink:切断通讯,
+Call $global.gaATG_ref clearedHegemonyGateSendScans","""那么任务正式开始。请吧，舰长。"" 这位霸主 {$rank} 微笑着说道，随后切断了通讯。",cutCommLink:切断通讯链接,
 gaATGhegFleetDefeated,GAATGhegGateScanFleetDefeated,,"# call an action in GAAtTheGates to clear the gate, I suppose.
 Call $global.gaATG_ref clearedHegemonyGate",,,
 gaATGhegFleetScanTransmit,PopulateGateOptions,"$gateScanned
@@ -1292,10 +1292,10 @@ MakeOtherFleetAggressive true","这位速子科技 {$post} 注意到你的舰队
 
 ""本来不用闹得这么麻烦的，舰长，"" {$heOrShe} 说，""但我们会用你的方式来解决。""
 
-屏幕一闪，通讯连接被切断了。",cutCommLink:切断通讯,
+屏幕一闪，通讯链接被切断了。",cutCommLink:切断通讯链接,
 gaATGttScanFleet3backDown,DialogOptionSelected,$option == gaATG_ttScanFleet3backDown,,"""我想也是，"" 这位速子科技 {$post} 说道。""去找你自己的星门吧，舰长。""
 
-屏幕一闪，通讯连接被切断了。",cutCommLink:切断通讯,
+屏幕一闪，通讯链接被切断了。",cutCommLink:切断通讯链接,
 gaATGttScanFleet3weak,GAATGttScanFleetStrengthCheck,$entity.relativeStrength <= 0,"AdjustRepActivePerson INHOSPITABLE -10
 AdjustRep $personFaction.id INHOSPITABLE -2","这位速子科技 {$post} 盯着你看了一会，好像脑海里在计算着什么。你能感受到 {$hisOrHer} 那张看似冷漠的脸背后散发出的冰冷的愤怒。
 
@@ -1303,7 +1303,7 @@ AdjustRep $personFaction.id INHOSPITABLE -2","这位速子科技 {$post} 盯着�
 
 {$HeOrShe} 转过身来看着你，""我不会忘掉这件事的，舰长。速子科技公司也不会。""
 
-屏幕一闪，通讯连接被切断了。",cutCommLink:切断通讯,
+屏幕一闪，通讯链接被切断了。",cutCommLink:切断通讯链接,
 ,,,,,,
 gaATGttScanFleet4,DialogOptionSelected,$option == gaATG_ttScanFleet4,"Highlight $gaATG_ttScanCost
 DoCanAffordCheck $gaATG_ttScanCost gaATG_ttScanFleet2accept false","""我直接把数据发给你，你直接把款付给我。"" {$HeOrShe} 的笑容里透露着毫不掩饰的贪婪。
@@ -1355,7 +1355,7 @@ $player.supplies >= 25
 !$madeThreat
 !$entity.resumedVigil",,,"gaATG_luddicScan4:""作为, 呃, 卢德信仰的仆人, 我有一个提议.""",
 gaATGluddicScanHub5,GAATGluddicScanHub,!$entity.resumedVigil,,,"gaATG_luddicScan5:""离星门远点, 不然我就开火了.""",
-gaATGluddicScanHubLeave,GAATGluddicScanHub,,,,cutCommLink:切断通讯,
+gaATGluddicScanHubLeave,GAATGluddicScanHub,,,,cutCommLink:切断通讯链接,
 gaATGluddicScan1,DialogOptionSelected,$option == gaATG_luddicScan1,$did1 = true 0,"""你从没听说过? 我一定是受了祂的祝福才有幸把这美好的预言传达给你!"" 
 
 ""我们在等待卢德的归来! 我们的精神领袖，受祝姐妹Fear-not，宇宙元气赐予了她一次未卜先知的机会。在为全人类的灵魂而斗争了许多年后，卢德将结束祂超凡脱俗的流放，回到我们所在的这个地方。""
@@ -1420,7 +1420,7 @@ MakeOtherFleetGoAway true
 MakeOtherFleetAvoidContact true
 Call $global.gaATG_ref clearedLuddicGate","破旧的引擎一个接一个地呼啸着亮起来，终于，最后的掉队者也跟上了守夜者大部队的脚步。
 
-你的舰桥成员们面无表情地等待着下一步命令。",cutCommLink:切断通讯,
+你的舰桥成员们面无表情地等待着下一步命令。",cutCommLink:切断通讯链接,
 gaATGluddicFleetDefeated,GAATGluddicScanFleetDefeated,,Call $global.gaATG_ref clearedLuddicGate,,,
 ,,,,,,
 # gaATG Pirates want to extort you,,,,,,
@@ -1489,7 +1489,7 @@ Call $global.gaATG_ref clearedPirateGate
 ShowDefaultVisual
 EndConversation NO_CONTINUE","""那就来打吧!"" 海盗大喊着看向 {$hisOrHer} 船员""准备打仗!""
 
-随着海盗的电子反制系统上线，通讯连接开始闪烁，随后便被切断了。",#cutCommLink:切断通讯,
+随着海盗的电子反制系统上线，通讯链接开始闪烁，随后便被切断了。",#cutCommLink:切断通讯链接,
 ,,,,,,
 gaATGpirateFleetDefeated,GAATGpirateScanFleetDefeated,,"# call an action in GAAtTheGates to clear the gate, I suppose.
 Call $global.gaATG_ref clearedPirateGate",,,
@@ -1586,7 +1586,7 @@ gaATGscavScanHub32,GAATGscavScanHub,"!$howName
 $whyGate",,,"gaATG_scavScanDialog32:""嗯? 我可不记得跟你提起过我的名字.""",
 gaATGscavScanHub4,GAATGscavScanHub,!$askedWhoWorkingFor,,,"gaATG_scavScanDialog4:""是谁派你来的?""",
 gaATGscavScanHub11,GAATGscavScanHub,$willingToLeave,,,"gaATG_scavScanDialog11:""我需要你远离这个星门。""",
-gaATGscavScanHubCut,GAATGscavScanHub,,,,cutCommLink:切断通讯,
+gaATGscavScanHubCut,GAATGscavScanHub,,,,cutCommLink:切断通讯链接,
 gaATGscavScanDialog1,DialogOptionSelected,$option == gaATG_scavScanDialog1,"$willingToLeave = true 0
 FireAll GAATGscavScanHub","""哎呀，那可真是太糟糕了，"" {$heOrShe} 说道。一阵尴尬的沉默过后，{$heOrShe} 舔了舔嘴唇，""所以，呃。有什么我能帮上你的吗，舰长?""",,
 gaATGscavScanDialog11,DialogOptionSelected,$option == gaATG_scavScanDialog11,"$entity.ignorePlayerCommRequests = true
@@ -1594,7 +1594,7 @@ MakeOtherFleetGoAway true","一段很长的沉默。然后这位 '拾荒者' 勉
 
 ""当然，当然可以。舰长。我猜你的扫描器发现了些我们没能发现的东西，哈? 好吧，这就是所谓的运气轮流转，或许我今天就是有些点背。""
 
-""祝你航行无阻，朋友，"" {$heOrShe} 就这样结束了对话，然后伸手按下了断开通信按钮。",cutCommLink:切断通讯,
+""祝你航行无阻，朋友，"" {$heOrShe} 就这样结束了对话，然后伸手按下了断开通信按钮。",cutCommLink:切断通讯链接,
 gaATGscavScanDialog2,DialogOptionSelected,$option == gaATG_scavScanDialog2,"$cacheLie = true 0
 FireAll GAATGscavScanHub","""哦，那真是太棒了! 等我把这片区域再翻找一遍就过去。"" {$heOrShe} 紧张地笑了笑，""你是个好人，舰长。很抱歉我无以为报。""",,
 gaATGscavScanDialog21,DialogOptionSelected,$option == gaATG_scavScanDialog21,"$cacheLiePressIssue = true 0
@@ -1608,7 +1608,7 @@ MakeOtherFleetGoAway true","""啊哈哈，"" 又是那张假装出来的笑脸�
 
 ""如果你坚持如此的话，舰长，呃，那我想我们是该离开了。你没有打攻击我们的主意，我应该对此感到庆幸哈?""
 
-""祝你航行无阻，朋友，"" {$heOrShe} 颤巍巍地结束了对话，然后伸手按下了断开通信按钮。",cutCommLink:切断通讯,
+""祝你航行无阻，朋友，"" {$heOrShe} 颤巍巍地结束了对话，然后伸手按下了断开通信按钮。",cutCommLink:切断通讯链接,
 gaATGscavScanDialog3,DialogOptionSelected,$option == gaATG_scavScanDialog3,"$whyLingering = true 0
 FireAll GAATGscavScanHub","""什么? 这个史前文物? 啊哈哈。"" 你不禁注意到，{$HisOrHer} 的假笑听的太多，就变得有些刺耳了。
 
@@ -1657,10 +1657,10 @@ $global.canScanGates
 
 ""我们无论如何都得征得至高霸主Baikal Daud的同意，"" 她斩钉截铁地说道，""就算是非公开的也行，然后我们才能开始试验阶段。我们的计划能否成功，取决于我们是否在执行计划时能不受政治上的干扰。""
 
-""你办事，我放心，舰长，"" 她就这样结束了对话，你甚至没来得及在她结束通讯前吐出几个字。",cutCommLink:切断通讯,
+""你办事，我放心，舰长，"" 她就这样结束了对话，你甚至没来得及在她结束通讯前吐出几个字。",cutCommLink:切断通讯链接,
 gaATGtalkToBairdNeedDeal2,DialogOptionSelected,$option == gaATG_talkToBairdNeedDeal2,,"""我们学院一直以来最缺乏的就是这个 - 不止步于被动观测，而是利用我们的知识去改变世界的决心。现在去博得Daud的合作吧，舰长。然后我们将谱写历史。""
 
-你甚至没来得及在教务长切断通讯链接前吐出几个字。",cutCommLink:切断通讯,
+你甚至没来得及在教务长切断通讯链接前吐出几个字。",cutCommLink:切断通讯链接,
 "# Return to Baird with Daud Deal, but w/o 6 scans",,,,,,
 gaATGtalkToBairdNeedScans,PickGreeting,"$id == baird score:1000
 $global.gaATG_inProgress
@@ -1671,7 +1671,7 @@ $global.numGatesScanned < 6
 Baird 点了一下桌子上的控制台，她的眼镜上泛起一道反光。""不过超空间物理力学研究小组还没收到他们需要的六份星门扫描数据。""",gaATG_talkToBairdNeedScans2:继续,
 gaATGtalkToBairdNeedScans2,DialogOptionSelected,$option == gaATG_talkToBairdNeedScans2,,"她转过身看向你，""没有这些数据，我们就无法对{'双面神'装置}原型机进行调制。去跟Coureuse协调一下你的工作; 然后给我带来那些扫描数据。""
 
-教务长就这样切断了通讯，你甚至没找到机会插上一句话。",cutCommLink:切断通讯,
+教务长就这样切断了通讯，你甚至没找到机会插上一句话。",cutCommLink:切断通讯链接,
 # Return to Baird with Daud deal and 6 scans,,,,,,
 gaATGtalkToBairdGotScansAndDeal,PickGreeting,"$id == baird score:1000
 $global.gaATG_inProgress
@@ -1716,7 +1716,7 @@ Call $global.gaATG_ref updateStage
 
 教务长看着你说，""我们当然不能重蹈前任教务长的覆辙。还是找个安静的地方测试这设备吧。"" 她的注意力回到了全息显示屏上，""我等着你的结果，舰长。"" 
 
-Baird 关闭了通讯。",cutCommLink:切断通讯,
+Baird 关闭了通讯。",cutCommLink:切断通讯链接,
 ,,,,,,
 # gaATG talk to Coureuse about Janus prototype after receiving it,,,,,,
 gaATGaskSCJanusPrototypeStart,PopulateOptions,"$id == coureuse score:1000
@@ -1732,13 +1732,13 @@ gaATGaskSCJanusPrototype2,DialogOptionSelected,$option == gaATG_askSCJanusProtot
 她再次深呼吸，然后又重新盯着全息显示屏。",gaATG_askSCJanusPrototype3:继续,
 gaATGaskSCJanusPrototype3,DialogOptionSelected,$option == gaATG_askSCJanusPrototype3,,"""如果我完全确定这个原型装置是个，是个，是个死亡陷阱，或者是什么类似的东西的话，我是不会把它交给你的。我只能说这么多了。""
 
-她犹豫着要不要切断通讯链接。""最后，呃，祝你好运?""",cutCommLink:切断通讯,
+她犹豫着要不要切断通讯链接。""最后，呃，祝你好运?""",cutCommLink:切断通讯链接,
 "# gaATG talk to Coureuse more, and get blocked",,,,,,
 gaATGtalkToCoureuseBlocked,PickGreeting,"$id == coureuse score:1000
 $askedAboutJanusPrototype
 $global.gaATG_useJanusPrototype score:1000",,"通讯请求只是显示等待回复。'等待回复'了一分钟多后，才终于变成了'请求被拒绝'。
 
-要么Coureuse没心情和你讲话，要么就是有人不想让她讲话。",cutCommLink:切断通讯,
+要么Coureuse没心情和你讲话，要么就是有人不想让她讲话。",cutCommLink:切断通讯链接,
 ,,,"AddTextSmall ""获得双面神装置原型"" highlight
 $global.gaATG_useJanusPrototype = true
 Call $global.gaATG_ref updateStage",,,
@@ -1831,7 +1831,7 @@ Call $global.gaATG_ref updateStage","""Scylla Coureuse院士。"" 教务长的�
 
 ""现在，"" 教务长收尾道，""我得去和某位非常棘手的霸主审查员见一面，而我们还都得假装对刚才发生的小'事故'毫不知情。现在你俩给我滚出通讯频道。""
 
-通讯连接被切断了。",cutCommLink:切断通讯,
+通讯链接被终止了。",cutCommLink:切断通讯链接,
 ,,,,,,
 # GAATG get mission from Coureuse,,,,,,
 gaATGzalMissionStart,PickGreeting,"$id == coureuse score:1000
@@ -1944,12 +1944,12 @@ gaATGzalMissionMakeItUp,DialogOptionSelected,$option == gaATG_zalMissionMakeItUp
 
 黑客最先回过了神来，耸了耸肩，""祝你好运。需要什么的话就联系我们。"" 
 
-与这和蔼可亲的态度相比，院士则显得若有所思。""我，嗯，感谢你，舰长。你不会后悔帮助了Elissa的，我可以肯定。""",cutCommLink:切断通讯,
+与这和蔼可亲的态度相比，院士则显得若有所思。""我，嗯，感谢你，舰长。你不会后悔帮助了Elissa的，我可以肯定。""",cutCommLink:切断通讯链接,
 gaATGzalMissionGotPlan,DialogOptionSelected,$option == gaATG_zalMissionGotPlan,"AdjustRepActivePerson COOPERATIVE 5
 Call $global.gaATG_ref updateStage","""祝你好运，"" 黑客说道，""需要什么的话就联系我们。"" 
 
-与这和蔼可亲的态度相比，院士则显得若有所思。""谢谢你，舰长。你不会后悔帮助了Elissa的，我可以肯定。""",cutCommLink:切断通讯,
+与这和蔼可亲的态度相比，院士则显得若有所思。""谢谢你，舰长。你不会后悔帮助了Elissa的，我可以肯定。""",cutCommLink:切断通讯链接,
 gaATGzalMissionShootPlan,DialogOptionSelected,$option == gaATG_zalMissionShootPlan,Call $global.gaATG_ref updateStage,"""祝你好运，"" 黑客笑着说道，""尽量别杀那些欠我人情的人。""
 
-与这和蔼可亲的态度相比，院士则显得若有所思。""呃。请务必小心，舰长。如果Elissa受了伤，我是无法原谅我自己的。""",cutCommLink:切断通讯,
+与这和蔼可亲的态度相比，院士则显得若有所思。""呃。请务必小心，舰长。如果Elissa受了伤，我是无法原谅我自己的。""",cutCommLink:切断通讯链接,
 ,,,,,,

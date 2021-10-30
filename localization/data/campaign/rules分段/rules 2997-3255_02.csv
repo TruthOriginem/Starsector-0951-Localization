@@ -852,7 +852,7 @@ FireBest GABACheckHostilesNearbyPirate","""是的，我有你要的货，仅仅�
 gaBA_confrontPirate:""这不是一个交易该有的样子."" (对峙)
 gaBA_bluffPirate:协商一个较低的价格
 gaBA_preRaidPirate:维持与$himOrHer 交谈同时派人进行突击
-cutCommLink:切断了通讯连接",
+cutCommLink:切断了通讯链接",
 gaBADisableRaidIfNeededPirate,GABACheckHostilesNearbyPirate,HostileFleetNearbyAndAware,"SetEnabled gaBA_preRaidPirate false
 SetTooltip gaBA_preRaidPirate ""附近有一支敌对舰队正在追踪你的行动，不能执行地面任务.""",,,
 gaBAPiratePreRaid,DialogOptionSelected,$option == gaBA_preRaidPirate,,"你讨价还价，争论不休，在付款和交货的细节上再三挑剔，拖延时间。与此同时，你通过你的数据平板向你的战术执行官发出准备信号，他们已经被告知要在撤离行动中使用海军陆战队。
@@ -975,7 +975,7 @@ pwi2OpenComm,OpenCommLink,"$entity.pwi2_wantsItem score:1000
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 SetStoryOption pwi2_bluff general ""欺骗左径分子以保护 $entity.pwi2_item""","""噢，这是什么-在我面前是Moloch的仆人吗?""左径分子歌唱般的节奏说道，""忏悔吧，忏悔吧，驱逐你所携带的恶魔般的恐怖技术，你要用它在遥远的群星上作恶!""
 
-""是的，我们知道你有什么。而我们将摧毁它，要么是在你的货舱里，要么是在神圣的真空里。抉择吧。""","cutCommLink:拒绝, 关闭通讯连接
+""是的，我们知道你有什么。而我们将摧毁它，要么是在你的货舱里，要么是在神圣的真空里。抉择吧。""","cutCommLink:拒绝, 关闭通讯链接
 pwi2_bluff:虚张声势，摆脱左径分子
 pwi2_accept:接受, 并弹出技术包裹",
 pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"你摆出一副严重关切的表情，{$BrotherOrSister}，我担心你完全误解了情况。我和你是一个道上的人。正如你的所作所为，只不过我?""你把声音压低，""在阴影中""

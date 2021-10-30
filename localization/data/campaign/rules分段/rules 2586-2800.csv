@@ -197,7 +197,7 @@ MakeOtherFleetAvoidContact true","海盗看起来像是{$heOrShe}被速子长矛
 
 ""是{-}是的，舰长。当然。""{$HeOrShe}努力恢复镇定，""请接受我对于您的延误的极大的，深深的歉意。欢迎你继续上路并转{-}转达我对领主最真诚的问候。""
 
-当海盗还在试图尝试笨拙的半鞠躬时，你挂断了通讯连接。",cutCommLinkNoText:继续,
+当海盗还在试图尝试笨拙的半鞠躬时，你挂断了通讯链接。",cutCommLinkNoText:继续,
 ,,,,,,
 # talk to Baird while doing TALK_TO_KANTA or FINDING_LOKE or RETURN_TO_KANTA ,,,,,,
 gaATGtellBairdAboutKantaPlan,PopulateOptions,"$global.gaATG_gotKantaToken
@@ -265,7 +265,7 @@ gaATGEpiphanySearch1,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 gaATGEpiphanySearch2,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 !$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 兄弟的情报。""",
 gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 兄弟谈话。你能帮我吗?""",
-gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯,
+gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯链接,
 gaATGEpiphanyAskLoke,DialogOptionSelected,"$option == gaATG_epiphanyAskKidnap
 !$awkwardAskForCotton ","$entity.askedForKidnapperCotton = true
 AdjustRepActivePerson INHOSPITABLE -1
@@ -273,7 +273,7 @@ $awkwardAskForCotton = true 0","$Post}{$personLastName}的眼睛睁得大大的�
 
 ""愿左径们恩典，保护我{-}还有你{-}最好不会被调查，免得可怕迅捷的铁锤砸向我们。""{$HeOrShe}紧张地笑着，""嗯，我一定是在让你远离一些贸易舰长。愿上帝指引我们正义的道路。""
 
-$HeOrShe}切断了与你的通讯连接，仅留你在静态等待模式中。",cutCommLink:切断通讯连接,
+$HeOrShe}切断了与你的通讯链接，仅留你在静态等待模式中。",cutCommLink:切断通讯链接,
 gaATGEpiphanyAskCredits,DialogOptionSelected,"$option == gaATG_epiphanyAskCredits
 !$awkwardAskForCotton ","$entity.offeredBribeForCotton = true
 AdjustRepActivePerson INHOSPITABLE -1
@@ -281,7 +281,7 @@ $awkwardAskForCotton = true 0","""啊哈哈，""{$heOrShe}紧张地笑着。""�
 
 ""我当然会为你祈祷，舰长，让那铁锤到来的时候可以轻轻地落下，""{$heOrShe}说。""你可以看一下时间吗? 我必须停下去进行祷告了。祝福你，直到我们的道路再此相交。""
 
-$HeOrShe}突然切断了与你的通讯连接，仅留你在静态等待模式中。",cutCommLink:切断通讯连接,
+$HeOrShe}突然切断了与你的通讯链接，仅留你在静态等待模式中。",cutCommLink:切断通讯链接,
 gaATGEpiphanyAskCotton,DialogOptionSelected,"$option == gaATG_epiphanyAskCotton
 !$awkwardAskForCotton",,"$Post}{$personLastName}在回应之前仔细地看着你。
 
@@ -293,7 +293,7 @@ gaATGEpiphanyAskCotton2,DialogOptionSelected,$option == gaATG_epiphanyAskCotton2
 换句话说，航行者茶馆。在这里，像这样一个地下茶馆就能算得上是一个不错的馆子。","gaATG_epiphanyAskCottonAccept:""告诉 Cotton 我会在那里见他。""
 gaATG_epiphanyAskCottonDecline:""也许我们的道路现在还不应该交叉。""
 ",
-gaATGEpiphanyAskCottonAccept,DialogOptionSelected,$option == gaATG_epiphanyAskCottonAccept,$entity.setUpCottonMeeting = true,"$HeOrShe}点了点头，没有直视你的眼睛。""就是这样了。祝福你，舰长。""",cutCommLink:切断通讯连接,
+gaATGEpiphanyAskCottonAccept,DialogOptionSelected,$option == gaATG_epiphanyAskCottonAccept,$entity.setUpCottonMeeting = true,"$HeOrShe}点了点头，没有直视你的眼睛。""就是这样了。祝福你，舰长。""",cutCommLink:切断通讯链接,
 gaATGEpiphanyAskCottonDecline,DialogOptionSelected,$option == gaATG_epiphanyAskCottonDecline,FireAll PopulateOptions,"$HeOrShe}点了点头，没有直视你的眼睛。""也许你的道路可以带你远离这里。舰长。""",,
 ,,,,,,
 # Epiphany ask around bar,,,,,,
@@ -690,7 +690,7 @@ AdjustRepPerson coureuse COOPERATIVE 25","Coureuse 加入了通话，警觉但�
 gaATGlastReturnIntroZal,DialogOptionSelected,$option == gaATG_lastReturnIntroZal,ShowThirdPerson zal,"""你好，教务长，""Zal 说，""终于我们能说上话了。我听说过很多很多关于你的事。""
 
 这是一件小事，但你看到 Baird 首先压抑住自己的震惊，然后闪过对于未经邀请加入通讯的愤怒。",gaATG_lastIntroInvite:继续,
-gaATGlastReturnIntroInvite,DialogOptionSelected,$option == gaATG_lastIntroInvite,,"""Elissa Zal，"" Baird 说。你甚至能感受到她在通过通讯连接进行评估。""这些都非常... 令人惊讶。""她突然说到。""院士 Coureuse。Zal。我们有很多东西要谈，但首先要把那些设计图送到超空间实验室。""
+gaATGlastReturnIntroInvite,DialogOptionSelected,$option == gaATG_lastIntroInvite,,"""Elissa Zal，"" Baird 说。你甚至能感受到她在通过通讯链接进行评估。""这些都非常... 令人惊讶。""她突然说到。""院士 Coureuse。Zal。我们有很多东西要谈，但首先要把那些设计图送到超空间实验室。""
 
 ""然后，舰长，""教务长现在对你说到，""如果可以你直接来我的办公室。我们不应该进一步在通讯中讨论详情了。""",gaATG_lastReturnOffice1:继续,
 gaATGlastReturnOffice1,DialogOptionSelected,$option == gaATG_lastReturnOffice1,"HideSecondPerson

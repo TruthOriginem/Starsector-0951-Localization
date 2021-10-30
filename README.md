@@ -1,4 +1,4 @@
-﻿﻿﻿﻿# Starsector-095-Localization
+﻿﻿﻿﻿﻿# Starsector-095-Localization
 
 [TOC]
 
@@ -44,6 +44,8 @@
 
 | 英文名                  | 译名               |
 | ----------------------- | ------------------ |
+| Comm link               | 通讯链接           |
+| Cut comm link           | 切断通讯链接       |
 | credit/credits          | 星币               |
 | hegemony                | 霸主               |
 | Janus Device            | ""双面神""装置     |
@@ -63,8 +65,6 @@
 | mote                    | 光尘               |
 | Hypershunt Tap          | 超分流阀门         |
 | Coronal Hypershunt      | 星冕分流器         |
-
-
 
 
 ## 修正表

@@ -158,7 +158,7 @@ FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数
 gaFCKapteynAdminGreetAgain,PickGreeting,"$postId == administrator
 $market.id == station_kapteyn
 $wasAnnoying == true","ShowPersonVisual
-FireAll PopulateOptions","当海盗头子接受通讯连接时，{$heOrShe}看上去有些烦躁。""又是你。""",,
+FireAll PopulateOptions","当海盗头子接受通讯链接时，{$heOrShe}看上去有些烦躁。""又是你。""",,
 gaFCKapteynBotherAdministrator,PopulateOptions,"$global.gaFC_searchIsirah
 $postId == administrator
 $market.id == station_kapteyn
@@ -197,7 +197,7 @@ gaFCKapteynBossAppealFailure,DialogOptionSelected,$option == gaFC_kapteynBossApp
 
 ""就这样了，我可没期望从你那里得到什么，如果你在我的空间站上有越线的行为，我就亲自毙了你。你什么也不是，只是一个会阿谀奉承的马屁精，所以别假装我们很熟，特别是当有巡逻队在这附近嗅来嗅去的时候。""",gaFC_kapteynBossAppealFailure2:继续,
 gaFCKapteynBossAppealFailure2,DialogOptionSelected,$option == gaFC_kapteynBossAppealFailure2,"AdjustRepActivePerson INHOSPITABLE -5
-$wasAnnoying = true",海盗头子拍打着控制台挂掉了通讯，你只能对着一堆噪点干瞪眼。,cutCommLink:切断通讯,
+$wasAnnoying = true",海盗头子拍打着控制台挂掉了通讯，你只能对着一堆噪点干瞪眼。,cutCommLink:切断通讯链接,
 gaFCKapteynBossInfoDump1,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump1,,"""我从某些人那里得到了一些信息。对，这就是我的工作 - 去调查谁在{Isirah}星系里搞小动作，以及他们是为谁而行动。""
 
 {$HeOrShe}凑得离通讯设备更近了一些，轻声说道: ""听说英仙座联盟最近到处问关于一个叫{'Coureuse'}的人的问题，而这么做的原因便是霸主先开始四处这么调查。""","gaFC_kapteynBossInfoDump2:""然后呢?""",
@@ -306,7 +306,7 @@ gaFCLaicailleCommanderBother3,DialogOptionSelected,$option == gaFC_laicailleComm
 
 ""我敢肯定那会是个精彩的故事。但很遗憾，我正忙于保持这空间站和周围空域的安全，毕竟有太多的左径分子，海盗和怀揣大胆想法的自由人正伺机而动了，而英仙座联盟给我的资源实在是太有限了。如果你想帮忙，支付关税并保持通讯畅通，别惹麻烦，我会对此表示感谢，舰长。""
 
-在{$hisOrHer}的演讲结束和通讯链接终止之间几乎没有任何空档。",cutCommLink:切断通讯,
+在{$hisOrHer}的演讲结束和通讯链接终止之间几乎没有任何空档。",cutCommLink:切断通讯链接,
 # gaFC Laicaille Navarch,,,,,,
 gaFCLaicailleNavarchBother,PopulateOptions,"$postId == portmaster
 $market.id == laicaille_habitat
@@ -316,7 +316,7 @@ gaFCLaicailleNavarchBother2,DialogOptionSelected,$option == gaFC_laicailleNavarc
 cutCommLink:""呃，多谢帮忙。""",
 gaFCLaicailleNavarchBother3,DialogOptionSelected,$option == gaFC_laicailleNavarchBother3,,"{$HeOrShe}抬头看着你。""啊，当然。如果是想找人的话，我想查询空间站的公共通讯录会是个不错的主意。再见，公民。保持警惕!""
 
-在你还来得及回应之前通讯线路就中断了，你面前只剩一个旋转的英仙座联盟舰队队徽。",cutCommLink:切断通讯,
+在你还来得及回应之前通讯线路就中断了，你面前只剩一个旋转的英仙座联盟舰队队徽。",cutCommLink:切断通讯链接,
 # gaFC Laicaille Quartermaster,,,,,,
 gaFCLaicailleQuartermasterBother,PopulateOptions,"$postId == supplyOfficer
 $market.id == laicaille_habitat
@@ -332,7 +332,7 @@ FireAll PopulateOptions","{$post}看向你的眼神几乎被歉意填满...几�
 
 ""你不是和那帮人一起的，对吧? 行，你应该会自动收到报关单和关税表。现在你还有什么业务需要我帮忙的?""",,
 gaFCLaicailleQuartermasterBother4,DialogOptionSelected,$option == gaFC_laicailleQuartermasterBother4,"$askedAboutScylla = true
-AdjustRepActivePerson INHOSPITABLE -1","""不能有例外.""{$HeOrShe}直截了当地这么说着，从{$hisOrHer}那端关闭了通讯连接，你只能对着{Laicaille}栖息地的徽标干瞪眼。",cutCommLink:切断通讯,
+AdjustRepActivePerson INHOSPITABLE -1","""不能有例外.""{$HeOrShe}直截了当地这么说着，从{$hisOrHer}那端关闭了通讯链接，你只能对着{Laicaille}栖息地的徽标干瞪眼。",cutCommLink:切断通讯链接,
 # gaFC Laicaille Archon SEARCH_ISIRAH,,,,,,
 gaFCArchonFirstContact,PopulateOptions,"$postId == baseCommander
 $market.id == laicaille_habitat
@@ -345,7 +345,7 @@ gaFCArchonSearchHubOption1,gaFCArchonSearchHubOption,!$askedAboutCoureuseAgain,,
 gaFCArchonSearchHubOption2,gaFCArchonSearchHubOption,!$askedGalatiaIncident,,,"gaFC_archonAskGalatia:""你有关于{Galatia}事件的消息吗?""",
 gaFCArchonSearchHubOption3,gaFCArchonSearchHubOption,"$global.gaFC_isirahClues >= 2
 $global.gaFC_knowWhereScyllaIs",,,"gaFC_archonConfront:""我知道{Coureuse}在这空间站里，并且我有证据。""",
-gaFCArchonSearchHubOptionLeave,gaFCArchonSearchHubOption,,,,cutCommLink:切断通讯,
+gaFCArchonSearchHubOptionLeave,gaFCArchonSearchHubOption,,,,cutCommLink:切断通讯链接,
 gaFCArchonAskCoureuse,DialogOptionSelected,"$option == gaFC_archonAskCoureuse
 !$askedAboutCoureuse","FireAll gaFCArchonSearchHubOption
 $askedAboutCoureuse = true","""哦?""执政官的眼睛瞟向一边，然后又看向了你，""我想我没听说过这个人。""{$heOrShe}说，同时恢复了{$hisOrHer}那官僚式的，不耐烦的平静语调。""舰长，你应该是知道这里是有专门处理这类事情的公共通讯目录的。""",,
@@ -372,7 +372,7 @@ gaFCArchonConfrontFail,DialogOptionSelected,$option == gaFC_archonConfrontFail,,
 
 执政官按了下一个按钮，把你扔回了只能对着{Laicaille}栖息地旋转徽章发呆的排队等待模式。
 
-执政官在隐瞒一些事情，但如果没有令人信服的证据，你没法从{$himOrHer}口中套出什么信息。",cutCommLink:切断通讯,
+执政官在隐瞒一些事情，但如果没有令人信服的证据，你没法从{$himOrHer}口中套出什么信息。",cutCommLink:切断通讯链接,
 gaFCArchonConfrontStart,DialogOptionSelected,$option == gaFC_archonConfront,FireAll gaFCArchonConfrontOptions,"执政官愣住了，结结巴巴地说: ""我，呃，当然，我 - """,,
 gaFCArchonConfrontOption0,gaFCArchonConfrontOptions,"$global.gaFC_isirahClues >= 2
 $confrontsDone < 1",,是切入正题的时候了，你会向执政官揭露什么难以忽视的真相?,,
@@ -563,7 +563,7 @@ gaFCReturnToAcademy1,DialogOptionSelected,$option == gaFC_return1,ShowPersonVisu
 
 ""舰长，很高兴终于看到你回来了。把她用穿梭机直接带到这个码头。""她说，与此同时收到导航指示和对接代码的提示音响了起来，""我在那儿等你。""
 
-通讯连接被切断了。",gaFC_return2:继续,
+通讯链接被切断了。",gaFC_return2:继续,
 gaFCReturnToAcademy2,DialogOptionSelected,$option == gaFC_return2,"ShowSecondPerson coureuse
 ShowThirdPerson sebestyen","推进器冷却时发出了咔咔声，你走下穿梭机，身后跟着{Scylla Coureuse}。这位科学家在短暂的飞行中非常安静，在躲藏一段时间后，她被你带回了{Galatia}学院。
 
