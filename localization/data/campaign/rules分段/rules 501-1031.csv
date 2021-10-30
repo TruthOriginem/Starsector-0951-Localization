@@ -1,0 +1,1350 @@
+# Smuggling investigation inspector,,,,,
+ise_greetingTOn,PickGreeting,"$ise_investigator
+$player.transponderOn
+!CallEvent $ise_eventRef paidBribe","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","经过了短暂的等待，你的连接请求被接受了。
+
+{$personName}用怀疑地目光看着你。
+
+""我相信你应该知道，我目前正在负责进行一项非常敏感的调查行动，没有时间和你闲聊。""
+
+你有种感觉，如果你关闭应答器隐瞒身份进入港口，事情可能会有更多的进展。",0:cutCommLink:切断通讯
+ise_greetingTOff,PickGreeting,"$ise_investigator
+!$player.transponderOn
+!CallEvent $ise_eventRef paidBribe","ShowPersonVisual
+FireAll PopulateOptionsISE","经过了短暂的等待，你的连接请求被接受了。
+
+{$personName}看了你好一段时间才开口。
+
+""我相信你应该知道，我目前正在负责进行一项非常敏感的调查行动。""",
+ise_greetingPaid,PickGreeting,"$ise_investigator
+CallEvent $ise_eventRef paidBribe",EndConversation,经过了短暂的等待，你的连接请求被拒绝了。,
+ise_offerBribe,PopulateOptionsISE,,"SetShortcut cutCommLink ""ESCAPE""",,"0:ise_offerBribe:""我知道进行这种彻底的调查会很花钱...""
+1:cutCommLink:切断通讯"
+ise_offerBribeSel,DialogOptionSelected,"$option == ise_offerBribe
+$player.credits >= $ise_bribeAmount","SetTextHighlights $ise_bribeAmountDGS
+SetShortcut cutCommLink ""ESCAPE""","""我很高兴能遇到一个能理解这些问题的人。
+
+如果有良好的资助，比如说再有一笔{$ise_bribeAmountDGS}星币的款项 ，就能确保这项调查能够迅速获得一个令人满意的结论。""","0:ise_offerBribeAmount:提供一笔{$ise_bribeAmountDGS}星币的""捐助""
+1:cutCommLink:切断通讯"
+ise_offerBribeSelNotEnough,DialogOptionSelected,$option == ise_offerBribe,"SetTextHighlights $ise_bribeAmountDGSSetShortcut cutCommLink ""ESCAPE""","""我非常理解你对事态的关切，但听上去你似乎还没做好协助我解决这个误会的准备。 这还需要大概，嗯，{$ise_bribeAmountDGS}星币左右？才能促成一次合理的调查。""
+
+""然后现在我有一堆关于你的精彩报告要读，所以下次你认真决定要做这件事的时候再来找我。""",0:cutCommLink:切断通讯
+ise_offerBribeAmountSel,DialogOptionSelected,$option == ise_offerBribeAmount,"AddText ""失去了{$ise_bribeAmountDGS}星币"" textEnemyColor
+AddText ""\""公民，非常感谢。我能肯定我的调查在限期内能获得一个令人满意的结论。\""""
+SubCredits $ise_bribeAmount
+CallEvent $ise_eventRef setBribePaid
+SetShortcut cutCommLink ""ESCAPE""",,0:cutCommLink:切断通讯
+# Good reputation with other faction investigation inspector,,,,,
+igr_greetingTOn,PickGreeting,"$igr_investigator
+$player.transponderOn
+!CallEvent $igr_eventRef paidBribe","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","经过了短暂的等待，你的连接请求被接受了。
+
+{$personName}用怀疑地目光看着你。
+
+""我相信你应该知道，我目前正在负责进行一项非常敏感的调查行动，没有时间闲聊。更何况来的人还是个总所周知的调查嫌疑人。""
+
+在""总所周知""这四个字上的轻微强调给你一种感觉，如果你关闭应答器隐瞒身份进入港口，事情可能会有更多的进展。",0:cutCommLink:切断通讯
+igr_greetingTOff,PickGreeting,"$igr_investigator
+!$player.transponderOn
+!CallEvent $igr_eventRef paidBribe","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","经过了短暂的等待，你的连接请求被接受了。
+
+$personName 看了你好一段时间才开口。
+
+""我相信你应该知道，我目前正在负责进行一项非常敏感的调查行动。""","0:igr_offerBribe:""我只是想确保你有财力来进行彻底的调查...""
+1:cutCommLink:切断通讯"
+igr_greetingPaid,PickGreeting,"$igr_investigator
+CallEvent $igr_eventRef paidBribe",EndConversation,经过了短暂的等待，你的连接请求被拒绝了。,
+igr_greetingReject,PickGreeting,"$igr_investigator
+$personFaction.numGRInvestigations >= 2 score:100","ShowPersonVisual
+SetShortcut cutCommLink ""ESCAPE""","经过了短暂的等待，你的连接请求被接受了。
+
+$personName 看了你好一段时间才开口。
+
+""我相信你应该知道，我目前正在负责进行一项非常敏感的调查行动。""","0:igr_offerBribe:""我只是想确保你有财力来进行彻底的调查...""
+1:cutCommLink:切断通讯链接"
+igr_offerBribeSel,DialogOptionSelected,"$option == igr_offerBribe
+$player.credits >= $igr_bribeAmount","SetTextHighlights $igr_bribeAmountDGS
+SetShortcut cutCommLink ""ESCAPE""","""我很高兴能遇到一个能理解其中的难处的人。
+
+如果有良好的资助，比如说再有一笔{$ise_bribeAmountDGS}星币的款项 ，就能确保这项调查能够迅速获得一个令人满意的结论。""","0:ise_offerBribeAmount:提供一笔{$ise_bribeAmountDGS}星币的""捐助""
+1:cutCommLink:切断通讯"
+igr_offerBribeRejectedSel,DialogOptionSelected,"$option == igr_offerBribe
+$personFaction.numGRInvestigations >= 2 score:100","SetShortcut cutCommLink ""ESCAPE""","""我看得出你对此事的关心，公民。不过{$thePersonFaction}已经为我提供了足够的资源。""",0:cutCommLink:切断通讯
+igr_offerBribeSelNotEnough,DialogOptionSelected,$option == igr_offerBribe,"SetTextHighlights $igr_bribeAmountDGS
+SetShortcut cutCommLink ""ESCAPE""","""我非常理解你对事态的关切，但听上去你似乎还没做好协助我解决这个误会的准备。 这还需要大概，嗯，{$ise_bribeAmountDGS}星币左右？才能促成一次合理的调查。""
+
+""然后现在我有一堆关于你的精彩报告要读，所以下次你认真决定要做这件事的时候再来找我。""",0:cutCommLink:切断通讯
+igr_offerBribeAmountSel,DialogOptionSelected,$option == igr_offerBribeAmount,"AddText ""失去了{$ise_bribeAmountDGS}星币"" textEnemyColor
+AddText ""\""公民，非常感谢。我能肯定我的调查在限期内能获得一个令人满意的结论。\""""
+SubCredits $igr_bribeAmount
+CallEvent $igr_eventRef setBribePaid
+FireBest IGRBribeEnd",,
+igr_offerBribeAccepedEndWarning,IGRBribeEnd,$personFaction.numGRInvestigations == 1,"SetShortcut cutCommLink ""ESCAPE""","{$personName}在开口前犹豫了一下，把通讯切换到了一个更安全频道上。
+
+""我和你说这些是因为我不想让你认为我没有为你着想。这次来自高层的压力很大，他们要求调查必须得出某些结论。
+
+应该是另一个{$personFaction}的调查牵连到了你和其他派系之间的关系，因此我不认为你能影响这次调查的结果。""",0:cutCommLink:切断通讯
+igr_offerBribeAccepedEndNormal,IGRBribeEnd,,"SetShortcut cutCommLink ""ESCAPE""",,0:cutCommLink:切断通讯
+,,,,,
+remnantStationFleetOpenDefault,BeginFleetEncounter,"$isStation
+$faction.id == remnant
+!$printedDesc",$printedDesc = true 0,"阴森而巨大的余辉战斗堡垒填满了你的显示屏。一位舰桥军官重新调整了战术目标显示的缩放比例，以便展示这个庞然巨物的全貌。
+
+虽然是第一次AI战争的遗迹，但这个空间站看起来仍全副武装正常运作。
+
+作战分析系统在捣腾了几秒钟之后，并没有像往常一样给出一系列的战术建议，而是猛烈地哔哔作响。",
+remnantStationFleetOpenDamaged,BeginFleetEncounter,"$isStation
+$damagedStation
+$faction.id == remnant
+!$printedDesc",$printedDesc = true 0,"阴森而巨大的余辉战斗堡垒填满了你的显示屏。一位舰桥军官重新调整了战术目标显示的缩放比例，以便展示这个庞然巨物的全貌。
+
+作为第一次AI战争的遗迹，这个空间站巨大的外周结构上有多个豁口，一些曾是武器平台和炮廓的地方只留下了空荡荡的连接处。但尽管受到过明显的损伤，这个空间站看起来仍保有武装正常运作。
+
+作战分析系统在捣腾了几秒钟之后，并没有像往常一样给出一系列的战术建议，而是猛烈地哔哔作响。",
+# SALVAGE,,,,,
+sal_tutorial_storyPointUse1,OpenInteractionDialog,"$tutorialUseStoryPoint score:1000
+$global.isInTutorial","ShowDefaultVisual
+AddText ""这艘船不容易修复，但它在随后与守卫跳跃点的矿工部队的战斗中会非常有用。""
+AddText ""你可以用一个故事点来使一艘船可以被修复。现在就做吧，在探索废弃的船只时选择适当的选项。""
+SetTextHighlightColors story
+SetTextHighlights ""适当的选项""",,salTutorialContinue:Continue
+sal_tutorial_storyPointUse2,DialogOptionSelected,$option == salTutorialContinue,"SalvageGenFromSeed
+FireBest ShowSalvageEntityDetails
+FireBest SalvageCheckHostile",,
+sal_default,OpenInteractionDialog,$tag:salvageable,"SalvageGenFromSeed
+FireBest ShowSalvageEntityDetails
+FireBest SalvageCheckHostile",你的{$shipOrFleet}接近了{$aOrAn{$nameInText}。,
+sal_derelictDefault,OpenInteractionDialog,"$tag:salvageable
+$faction.id == derelict","SalvageGenFromSeed
+FireBest ShowSalvageEntityDetails
+FireBest SalvageCheckHostile",你的{$shipOrFleet}接近了自人之领首次探索本星域时就一直被遗留在此的{$aOrAn{$nameInText}。,
+sal_scavengeDebris,OpenInteractionDialog,"$tag:salvageable
+$customType == debris_field_shared score:100","SalvageGenFromSeed
+ShowDefaultVisual
+SalvageEntity descDebris
+FireBest SalvageCheckHostile",你的{$shipOrFleet}进入了残骸区的相对静止轨道。,
+,,,,,
+sal_hostileNearby,SalvageCheckHostile,HostileFleetNearbyAndAware,SetShortcut defaultLeave ESCAPE,附近的一支敌对舰队正在追踪你的行动，使你无法进行勘探。,100:defaultLeave:离开
+sal_noHostileNearby,SalvageCheckHostile,!HostileFleetNearbyAndAware,"$salvageLeaveText = Leave 0
+FireAll PopulateSalvageOptions1",,
+,,,,,
+# Details/description printed on initial interaction,,,,,
+sal_defaultDetails,ShowSalvageEntityDetails,,"ShowDefaultVisual
+PrintDescription 1",,
+sal_probeDetails,ShowSalvageEntityDetails,$customType == derelict_probe,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",探测器的外壳不止被微撞击弄得坑坑洼洼，还出现了遭受骇人的辐射灼烧所留下的典型虹色幻彩。尽管这个探测器的很可能是在一两千星年之前被制造，但根据设计，一些系统应该还在工作。,
+sal_surveyShipDetails,ShowSalvageEntityDetails,$customType == derelict_survey_ship,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",这艘古老的人之领时代自动化勘探船一直暴露在带电粒子和高速星际尘埃的冲击下，饱受蹂躏了几个世纪。 但船上的一些系统似乎仍依照设计运行着。,
+sal_mothershipDetails,ShowSalvageEntityDetails,$customType == derelict_mothership,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",这艘巨大的自动化勘探母舰在为人之领服务的几个世纪的岁月里遭受了数不尽的灼烧和撞击，最终成为了被人遗忘的漂流废船。 不过传感器指出，这艘船上的一些系统仍依照设计运行着。,
+sal_derelictDefConstructionInfo,DerelictPrintExtraInfo,$global.defeatedDerelictStr >= 50,,感应器回馈显示在船只残骸附近存在异常的短半衰期带电粒子。残骸的内部结构密度分布也与你之前遇到过人之领时代探索船的推断模式不符，似乎其内部质量遭到了移除或有目的地重新分配。,
+sal_wreckDetails,ShowSalvageEntityDetails,$customType == wreck,"ShowDefaultVisual
+PrintWreckDescription",,
+,,,,,
+# Explore/Leave options and actions,,,,,
+sal_defaultLeave1,PopulateSalvageOptions1,,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:离开
+sal_explore,PopulateSalvageOptions1,$customType != debris_field_shared,,,0:salExplore:勘探
+sal_assess,PopulateSalvageOptions1,$customType == debris_field_shared,,,0:salExplore:评估
+sal_defenders,DialogOptionSelected,"$option == salExplore
+$hasDefenders",FireBest TriggerAutomatedDefenses,,
+sal_noDefenders,DialogOptionSelected,$option == salExplore,FireBest CheckSalvageSpecial,,
+,,,,,
+# Descriptions of automated defenders,,,,,
+sal_printDefaultDefenders,TriggerAutomatedDefenses,,SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，{$shortName}附近出现了新的能量反应。,
+sal_printDebrisDefenders,TriggerAutomatedDefenses,$customType == debris_field_shared,SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，在一块大型残骸附近出现了新的能量反应。,
+sal_triggerProbeDefenders,TriggerAutomatedDefenses,$customType == derelict_probe,SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，探测器的货舱内上线了数个新的能量反应。,
+sal_triggerSurveyShipDefenders,TriggerAutomatedDefenses,$customType == derelict_survey_ship,SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，多个能量反应出现在了外壳破损的勘探船体内外各处。,
+sal_triggerMothershipDefendersBoth,TriggerAutomatedDefenses,"$customType == derelict_mothership
+$hasStation
+$hasNonStation",SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，从母舰巨大船体上多个位于阴暗中的工作舱内检测到了许多强烈的能量信号正在上线。你的传感器还探测到母舰上的数个武器装置正在启动。,
+sal_triggerMothershipDefendersOnlyDrones,TriggerAutomatedDefenses,"$customType == derelict_mothership
+$hasNonStation",SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，从母舰巨大船体上多个位于阴暗中的工作舱内检测到了许多强烈的能量信号正在上线。,
+sal_triggerMothershipDefendersOnlyItself,TriggerAutomatedDefenses,"$customType == derelict_mothership
+$hasStation",SalvageDefenderInteraction,在你的{$shipOrFleet}接近时，你的感应器检测到位于母舰巨大舰体上数个阴暗裂口内的武器装置正在启动。,
+,,,,,
+"# Checking whether salvage results in a ""special"" find. This is where SalvageDefenderInteraction returns to.",,,,,
+sal_continuePostDefenders,BeatDefendersContinue,,,你的{$shipOrFleet}成功抵近了{$nameInText}，没有发生其他异常事件。,0:salBeatDefendersContinue:继续
+sal_continuePostDefendersDerelict,BeatDefendersContinue,$faction.id == derelict,,"在你的{$shipOrFleet}清理掉自动防御系统的时候，检测到从{$shortName}发出了一个微弱的超空间脉冲激波。尚不清楚这是子系统临终时的随机噪声，还是某种加密信号。
+
+你的{$shipOrFleet}成功抵近了{$nameInText}，没有发生其他异常事件。",0:salBeatDefendersContinue:继续
+sal_continuePostDefendersSelected,DialogOptionSelected,$option == salBeatDefendersContinue,FireBest CheckSalvageSpecial,,
+sal_checkSpecialFound,CheckSalvageSpecial,$salvageSpecialData != null,"ShowDefaultVisual
+SalvageSpecialInteraction",,
+,,,,,
+"# If no special, go right to salvage. If there was a special, ""Continue"" to go to salvage",,,,,
+sal_checkSpecialNoneFound,CheckSalvageSpecial,,"ShowDefaultVisual
+FireBest BeginSalvage",,
+sal_specialFinished,SalvageSpecialFinished,,,,0:salSpecialContinue:继续
+sal_specialContinueSelected,DialogOptionSelected,$option == salSpecialContinue,FireBest BeginSalvage,,
+sal_specialFinishedNoContinue,SalvageSpecialFinishedNoContinue,,FireBest BeginSalvage,,
+,,,,,
+# Actual salvage process,,,,,
+sal_showRatingAndCost,BeginSalvage,,"SalvageEntity showCost
+FireAll PopulateSalvageOptions2",,
+sal_showRatingAndCostUnable,BeginSalvage,$canNotSalvage,,,100:defaultLeave:$salvageLeaveText
+sal_optionLeave,PopulateSalvageOptions2,,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:离开
+#sal_optionSalvageDisabledCost,PopulateSalvageOptions2,"!$canSalvage
+!$canAffordSalvage
+$canDoSalvageRating","SetEnabled salSalvage false
+SetTooltip salSalvage ""你的舰队缺乏在此开展正常的打捞作业的必要资源。""",,0:salSalvage:开始打捞作业
+#sal_optionSalvageDisabledRating,PopulateSalvageOptions2,"!$canSalvage
+$canAffordSalvage
+!$canDoSalvageRating","SetEnabled salSalvage false
+SetTooltip salSalvage ""由于打捞难度系数太高，你无法开展正常的打捞作业。""",,0:salSalvage:开始打捞作业
+#sal_optionSalvageDisabledBoth,PopulateSalvageOptions2,"!$canSalvage
+!$canDoSalvageRating
+!$canAffordSalvage","SetEnabled salSalvage false
+SetTooltip salSalvage ""由于打捞难度系数太高，你无法开展正常的打捞作业。并且你的舰队缺乏在此开展打捞作业的必要资源。""",,0:salSalvage:开始打捞作业
+sal_optionSalvageEnabled,PopulateSalvageOptions2,,,,0:salSalvage:开始打捞作业
+#sal_optionDemolish,PopulateSalvageOptions2,$customType != debris_field_shared,"SetTooltip salDemolish ""与正常的打捞作业相比，在产生的残骸区中进行打捞只能回收大概一半的打捞物。""",,1:salDemolish:将其击碎
+sal_forceRecoveryOpt,PopulateSalvageOptions2,SalvageEntity canBeMadeRecoverable,SetStoryColor salMakeRecoverable,,10:salMakeRecoverable:考虑是否采取特别措施来修复这艘船
+sal_forceRecoveryOptSel,DialogOptionSelected,$option == salMakeRecoverable,"SalvageEntity showRecoverable
+FireBest CheckSalvageSpecial",,
+sal_optionCheckAccidents,DialogOptionSelected,$option == salSalvage,SalvageEntity checkAccidents,,
+sal_salvageOptionSelected,DialogOptionSelected,$option == salPerform,"SalvageEntity performSalvage
+FireBest PostSalvagePerform",,
+sal_demolishOptionSelected,DialogOptionSelected,$option == salDemolish,SetShortcut defaultLeave ESCAPE,打捞人员在结构的关键点设置了瞄准信标。,"0:salDemolishConfirm:下令开火
+100:defaultLeave:离开"
+sal_demolishOptionConfirmed,DialogOptionSelected,$option == salDemolishConfirm,SalvageEntity demolish,,
+,,,,,
+,,,,,
+# CARGO PODS,,,,,
+pods_start,OpenInteractionDialog,$customType == cargo_pods,"ShowDefaultVisual
+CargoPods printDesc
+FireAll CargoPodsOptions
+FireAll CargoPodsOptionsUpdate",,
+pods_open,CargoPodsOptions,!$locked,,,0:podsOpen:检查货物舱内容物
+pods_leave,CargoPodsOptions,,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:离开
+pods_stabilize,CargoPodsOptions,,,,1:podsStabilize:把货物舱送入稳定轨道
+pods_stabilizeDisable,CargoPodsOptionsUpdate,$inHyperspace,"SetEnabled podsStabilize false
+SetTooltip podsStabilize ""无法在超空间中完成。""",,
+pods_stabilizeDisableDidAlready,CargoPodsOptionsUpdate,"!$inHyperspace
+$stabilized
+$daysLeft > 300","SetEnabled podsStabilize false
+SetTooltip podsStabilize ""货物仓已经位于一个相当稳定的轨道上，采取更多的措施没有意义。""",,
+pods_break,CargoPodsOptions,"$locked
+!$canUnlock",,,0:podsBreak:炸开锁
+pods_unlock,CargoPodsOptions,"$locked
+$canUnlock",,,0:podsOpen:传送密钥代码并检查其内容物
+pods_openOption,DialogOptionSelected,$option == podsOpen,"unset $locked
+unset $trapped
+CargoPods openCargo",,
+pods_breakOption,DialogOptionSelected,"$option == podsBreak
+!$trapped","CargoPods breakLocks
+unset $locked
+unset $trapped",,
+pods_breakOption2,DialogOptionSelected,"$option == podsBreak
+$trapped",CargoPods destroy,不幸的是，只有给出正确的授权码才能避免货物仓的自爆装置启动，因此仓内的货物被全部炸毁了。,100:defaultLeave:离开
+pods_stabilizeSel,DialogOptionSelected,$option == podsStabilize,"CargoPods computeStabilizeData
+AddText ""稳定化将使货物仓在一个可预测的轨道上继续运行{$stabilizeDays}天。稳定化之后添加或移除任何货物将破坏轨道的稳定性。""
+SetTextHighlights $stabilizeDays ""将破坏轨道的稳定性""
+ShowResCost supplies $stabilizeSupplies true
+FireBest CargoPodsDisableProceedIfNeeded",,"0:podsStabConfirm:继续
+1:podsStabAbort:算了"
+pods_stabilizeSuppliesNotEnough,CargoPodsDisableProceedIfNeeded,$stabilizeSupplies >= $player.supplies,SetEnabled podsStabConfirm false,,
+pods_stabConfirmSel,DialogOptionSelected,$option == podsStabConfirm,"CargoPods stabilize
+FireAll CargoPodsOptions
+FireAll CargoPodsOptionsUpdate",,
+pods_stabAbortSel,DialogOptionSelected,$option == podsStabAbort,"FireAll CargoPodsOptions
+FireAll CargoPodsOptionsUpdate",,
+,,,,,
+,,,,,
+# luddic shrine interaction test by David! (Having some Fun.),,,,,
+shrineOpenDialog,OpenInteractionDialog,$tag:luddicShrine,"PrintDescription 1
+AddText ""着陆舱里挤满了身着传统手织品的卢德朝圣者队伍，他们正在与准助理牧师们会面。一名侍从用怀疑的眼光打量着你，询问你此行的目的。""
+ShowDefaultVisual
+FireBest ShrineMainOptions",,
+shrineMainOptions,ShrineMainOptions,,"SetShortcut shrineLeave ""ESCAPE""",,"0:shrineVisit:参观
+1:shrineMakeOffering:提供捐赠
+10:shrineLeave:离开"
+shrineVisit,DialogOptionSelected,$option == shrineVisit,"SetShortcut shrineLeave ""ESCAPE""","侍从接受了你的请求，只是稍显不悦。出乎你意料的是，一名准助理牧师走了过来，领你去了圣地的观礼室。
+
+一个巨大而昏暗的回廊围绕着一扇百米宽的菱形窗口展开，让人得以一览Kumari Aru的壮丽美景。在这里，朝圣者们冥思创世者的神迹，体验下方赫然耸立的气态巨星所展现出的庄严敬畏之美。规模相当于一个标准的类地星球风暴系统缓慢而威严地翻腾着，大片绿紫色的雷电不时闪烁其中，孕育着数不尽的异种生命。不知在那阴暗的云层之下，是否有什么难以名状之物正抬头望着它们的天空中的亮点？
+
+一段时间后，你回到了你的船上。",shrineLeave:离开
+shrineLeave,DialogOptionSelected,$option == shrineLeave,DismissDialog,,
+,,,,,
+shrineOfferingAlreadyMade,DialogOptionSelected,"$option == shrineMakeOffering
+$offeringMade score:100",,你最近已经做过捐赠了，如果还这么做的话将被认为是个傲慢不得体的家伙。,
+shrineOfferingEnough,DialogOptionSelected,"$option == shrineMakeOffering
+$player.supplies >= 10","SetTextHighlightColors buttonShortcut
+SetTextHighlights 10",你询问准助理牧师是否可以为这片圣迹的维护提供捐助。准助理牧师带着热情的微笑解释说，10 单位的补给便可大大助于教会履行其神圣的职责。,"0:shrineGiveOffering:捐赠10 单位的补给
+1:shrineCancelOffering:再考虑下"
+shrineOfferingNotEnough,DialogOptionSelected,"$option == shrineMakeOffering
+$player.supplies < 10","SetTextHighlightColors buttonShortcut
+SetTextHighlights 10","你询问准助理牧师是否可以为这片圣迹的维护提供捐助。准助理牧师带着热情的微笑解释说，10 单位的补给便可大大助于教会履行其神圣的职责。不幸的是，你手头没有足够的物资。
+
+准助理牧师回以你一个黯淡的微笑，""你的好意我心领了。也许你需要一份我们每班提供的布施餐？""",
+shrineGiveOffering,DialogOptionSelected,$option == shrineGiveOffering,"AddText ""一位准助理牧师在祈祷与感谢中接受了你的捐赠。""
+AddRemoveCommodity supplies -10 true
+AdjustRep luddic_church SHRINE_OFFERING
+$offeringMade = true 60
+FireBest ShrineMainOptions",,
+shrineCancelOffering,DialogOptionSelected,$option == shrineCancelOffering,FireBest ShrineMainOptions,,
+,,,,,
+# AnalyzeEntityMission entity interaction,,,,,
+aem_runSensorPackageOptionHostile,OpenInteractionDialog,"$aem_target score:1000
+HostileFleetNearbyAndAware","ShowDefaultVisual
+SetShortcut defaultLeave ESCAPE","你的{$shipOrFleet}接近了{$nameInText}，合同要求你对其使用黑匣子扫描软件包。
+
+附近的一支敌对舰队正在追踪你的行动，使你无暇停船使用扫描软件包。",100:defaultLeave:离开
+aem_runSensorPackageOption,OpenInteractionDialog,"$aem_target score:1000
+!HostileFleetNearbyAndAware","ShowDefaultVisual
+SetShortcut defaultLeave ESCAPE","你的{$shipOrFleet}接近了{$nameInText}，合同要求你对其使用黑匣子扫描软件包。
+
+
+
+","0:aem_runPackage:运行黑匣子扫描软件包
+100:defaultLeave:离开"
+aem_runSensorPackageOptionSel,DialogOptionSelected,$option == aem_runPackage,CallEvent $aem_eventRef runPackage,"你按下了一个按钮来运行黑匣子扫描软件包，并等待它完成。完成后，它提供了一个托管密钥，授权将商定的报酬转入了你的账户。
+
+据推测，当你接近一处通讯中继站时，它将自动从安全通道内传输扫描结果，并从系统中自我删除。",0:aem_continue:继续
+aem_continueOptionSel,DialogOptionSelected,$option == aem_continue,FireBest OpenInteractionDialog,,
+,,,,,
+# SurveyPlanetMission,,,,,
+spm_planetApproach,OtherPlanetInteractionText,"$market.isPlanetConditionMarketOnly
+!$market.isSurveyed
+$spm_target",,你已经全面勘探过该行星了。,
+,,,,,
+# getting a faction commission,,,,,
+cmsn_askForCommissionOpt,PopulateOptions,"$isPerson
+Commission personCanGiveCommission
+!Commission hasFactionCommission",,,"20:cmsn_askCommission:""我想与{$theFaction}签订雇佣协议。"""
+cmsn_resignCommissionOpt,PopulateOptions,"$isPerson
+Commission personCanGiveCommission
+Commission hasFactionCommission",,,"20:cmsn_resignCommission:""我想解除与 $faction 的雇佣关系"""
+cmsn_lolNo,DialogOptionSelected,"$option == cmsn_askCommission
+$faction.isHostile score:100","SetEnabled cmsn_askCommission false
+FireBest CMSNTextRejectHostile",,
+cmsn_hasOther,DialogOptionSelected,"$option == cmsn_askCommission
+!$faction.isHostile
+Commission hasOtherCommission","SetEnabled cmsn_askCommission false
+FireBest CMSNTextHasOther",,
+cmsn_doesNotMeetCriteria,DialogOptionSelected,"$option == cmsn_askCommission
+!Commission playerMeetsCriteria","SetEnabled cmsn_askCommission false
+FireBest CMSNTextUnsuited
+Commission printRequirements",,
+cmsn_meetsCriteria,DialogOptionSelected,"$option == cmsn_askCommission
+Commission playerMeetsCriteria",FireBest CMSNTextSuitedPart1,,0:cmsn_continueMeetsReq:继续
+cmsn_meetsCriteria2,DialogOptionSelected,$option == cmsn_continueMeetsReq,"Commission printInfo
+FireBest CMSNTextSuitedPart2",,"0:cmsn_accept:确认与 $faction 签订雇佣协议
+1:cmsn_cancel:""我还没准备好"""
+cmsn_accept,DialogOptionSelected,$option == cmsn_accept,"FireBest CMSNTextWelcomePart1
+Commission accept
+FireBest CMSNTextWelcomePart2
+FireAll PopulateOptions",,
+cmsn_cancel,DialogOptionSelected,$option == cmsn_cancel,"FireBest CMSNTextChangeMind
+FireAll PopulateOptions",,
+cmsn_resignShowOptions,DialogOptionSelected,$option == cmsn_resignCommission,FireBest CMSNResignAskToConfirm,,"0:cmsn_resignConfirm:""是的, 我确定""
+1:cmsn_resignCancel:""抱歉, 我得重新考虑一下."""
+cmsn_resignConfirm,DialogOptionSelected,$option == cmsn_resignConfirm,"FireBest CMSNResignConfirmed
+Commission resign
+FireAll PopulateOptions",,
+cmsn_resignCancel,DialogOptionSelected,$option == cmsn_resignCancel,"FireBest CMSNResignCancelled
+FireAll PopulateOptions",,
+,,,,,
+"# default commission conversation strings, copy and adjust this section for faction-specific conversation flavor",,,,,
+CMSNTextRejectHostile_default,CMSNTextRejectHostile,,,"""你在开玩笑吗?"" 如果你真是这个名字, 那么你已被 $faction 通缉了!""",
+CMSNTextHasOther_default,CMSNTextHasOther,,,"""你已经与 $theOtherCommissionFaction 签订雇佣协议了, 如想加入 $theFaction, 你就必须辞职.""",
+CMSNTextUnsuited_default,CMSNTextUnsuited,,,"""很抱歉, 你不符合我们的雇佣标准.""",
+CMSNTextSuitedPart1_default,CMSNTextSuitedPart1,,,"""嗯, 好的, 你的确是个合适的人选.
+
+但签订雇佣协议是个非常严肃的决定, 无论身处何处, 你都必须为 $theFaction 的敌人战斗.
+
+你也可随时辞去当前职务, 但这样做绝不会让你赢得任何朋友.""",
+CMSNTextSuitedPart2_default,CMSNTextSuitedPart2,,,"""那么, 考虑好了? 是否现在签约?""",
+CMSNTextWelcomePart1_default,CMSNTextWelcomePart1,,,"""太好了, 欢迎加入!""",
+CMSNTextWelcomePart2_default,CMSNTextWelcomePart2,,,"""我还能为您做些什么?""",
+CMSNTextChangeMind_default,CMSNTextChangeMind,,,"""好吧, 并不是所有人都能立刻下定决心加入 $theFaction, 这并不可耻.
+
+那么, 我还能为你做些什么?""",
+CMSNResignAskToConfirm_default,CMSNResignAskToConfirm,,,"""你确定? $theFaction 需要意志坚定的人, 如此轻易转身可并不被看好.""",
+CMSNResignConfirmed_default,CMSNResignConfirmed,,,"""看来你是不会改变主意了, 好吧, 至少你仍有礼貌来亲自递交辞呈.""",
+CMSNResignCancelled_default,CMSNResignCancelled,,,"""不错的决定, 你这种人值得我们继续利用.""",
+,,,,,
+# Luddic Church commission,,,,,
+CMSNTextRejectHostile_luddic,CMSNTextRejectHostile,$faction.id == luddic_church,,"""我没听错吧, 如果你真是所声称的那个人, 那你已被长老们多次谴责了.""",
+CMSNTextHasOther_luddic,CMSNTextHasOther,$faction.id == luddic_church,,"""你已经与 $theOtherCommissionFaction 签订雇佣协议了, 除非立刻辞职, 否则 $theFaction 是不会认可你的.""",
+CMSNTextUnsuited_luddic,CMSNTextUnsuited,$faction.id == luddic_church,,"""很抱歉, 你并不符合教会拟定的标准.""",
+CMSNTextSuitedPart1_luddic,CMSNTextSuitedPart1,$faction.id == luddic_church,,"""嗯, 好的, 你已通过足够的考验来证明自已的信仰.
+
+但签订雇佣协议是个非常严肃的决定, 无论教会的仇敌身处何处, 你都必须 坚持十一美德, 并用实际行动谴责并惩戒所面临的罪恶.
+
+你也可随时放弃自己的职责, 但这不仅是对教会信仰的一次背叛. 在世俗上, 其他卢德忠实信徒也会纷纷唾弃这种行径""",
+CMSNTextSuitedPart2_luddic,CMSNTextSuitedPart2,$faction.id == luddic_church,,"""决定好接受卢德的祝福么?""",
+CMSNTextWelcomePart1_luddic,CMSNTextWelcomePart1,$faction.id == luddic_church,,"""赞美群星! 我很荣幸能亲身参与这次洗礼仪式.""",
+CMSNTextWelcomePart2_luddic,CMSNTextWelcomePart2,$faction.id == luddic_church,,"""我不会耽误你的神圣职责, 但请不要犹豫, 现在我还能为你做些什么?""",
+CMSNTextChangeMind_luddic,CMSNTextChangeMind,$faction.id == luddic_church,,"""事实上, 每一位信徒并非都能完整走完这条荆棘之路, 因为他们时刻都被 暴力、诱惑和苦难所困扰. 不要羞于自己的决定, 即便选择了一条更卑谦的 道路, 卢德总会给我们这些不值得宽恕的灵魂带来一丝慰籍.
+
+让我们暂时抛开荣光与悔恨, 现在你还有什么需要我的帮助么?""",
+CMSNResignAskToConfirm_luddic,CMSNResignAskToConfirm,$faction.id == luddic_church,,"""你确定么? 迷途的孩子, 银河救赎教会不仅是卢德神圣教义的世俗表现, 也是拯救自身灵魂的唯一途径, 更是全人类从罪恶祸患中崛起的唯一道路.
+
+我无权审判你的灵魂, 你的选择即是你与神之间的抉择. 但信徒不过是这 堕落世界的男女, 他们只会在你身上看到一个背弃卢德祝福的人. 而此种 行径将必定被那些虔诚者所藐视.",
+CMSNResignConfirmed_luddic,CMSNResignConfirmed,$faction.id == luddic_church,,"""无需多言, 请记住, 在警惕前方道路的同时不要忘记卢德依旧深爱着你.""",
+CMSNResignCancelled_luddic,CMSNResignCancelled,$faction.id == luddic_church,,"""一个明智的选择, 但要谨记, 在履行职责时, 我们的精神将随时经受考验, 即便信念因此而停滞不前, 但你也一定要坚信, 无论前途如何暗淡, 卢德 之光将必定照亮正义之路.""",
+,,,,,
+# Hegemony commission,,,,,
+CMSNTextRejectHostile_hegemony,CMSNTextRejectHostile,$faction.id == hegemony,,"""你在开玩笑吗? 如果你正是你所声称的那个人, 那么你已经被多地 政府列入通缉名单内, 事实上, 本次对话我将有权提交给霸主委员会.""",
+CMSNTextHasOther_hegemony,CMSNTextHasOther,$faction.id == hegemony,,"""经查证你已经与 $theOtherCommissionFaction 签订了雇佣协议, 你应该知道这对忠诚来说 意味着什么, 不要试图触碰我们的底线. 你必须辞去前者职务, 否则 霸主 将有权以间谍罪逮捕你.""",
+CMSNTextUnsuited_hegemony,CMSNTextUnsuited,$faction.id == hegemony,,"""抱歉, 你并不符合我们的要求.""",
+CMSNTextSuitedPart1_hegemony,CMSNTextSuitedPart1,$faction.id == hegemony,,"""Hmm, Fleet Intelligence has been watching you for some time it seems, and it says here that you clear the checks.
+
+Accepting a commission with the Hegemony is a serious matter, citizen. You will be required to fight enemies of the Hegemony and assist in upholding law and order where the official apparatus cannot reach. Above all, you will dedicate yourself to fighting for the restoration of the Domain over human space.
+
+I must inform you that you have the right to resign your commission at any time. And while there have been honorable circumstances for resignation in the past, between us, let me add that doing so would be considered highly suspicious by Fleet Intelligence, to say nothing of what the loyal Hegemony officer corps would think.",
+CMSNTextSuitedPart2_hegemony,CMSNTextSuitedPart2,$faction.id == hegemony,,"""By the power invested in me by the office of the High Hegemon, I offer you commission as auxiliary to the Hegemony Navy. Do you wish to sign on?""",
+CMSNTextWelcomePart1_hegemony,CMSNTextWelcomePart1,$faction.id == hegemony,,"""太好了, 欢迎加入.""",
+CMSNTextWelcomePart2_hegemony,CMSNTextWelcomePart2,$faction.id == hegemony,,"""那么, 我还能为你做些什么?""",
+CMSNTextChangeMind_hegemony,CMSNTextChangeMind,$faction.id == hegemony,,"""Yes, not everyone has the strength of character to uphold the values of the Hegemony to the standards that are required. The Sector has need of merchants and shuttle pilots, after all. Those are also honorable careers in their own small way.
+
+Anything else I can do for you?""",
+CMSNResignAskToConfirm_hegemony,CMSNResignAskToConfirm,$faction.id == hegemony,,"""你确定么? 霸主 需要的是意志坚定的军人, 如果一旦让我们失望, 那这次""背叛""将不会一揭而过!""",
+CMSNResignConfirmed_hegemony,CMSNResignConfirmed,$faction.id == hegemony,,"""我明白了, 至少你还有足够的勇气来亲自递交辞呈.""",
+CMSNResignCancelled_hegemony,CMSNResignCancelled,$faction.id == hegemony,,"""很好, 无论你是被那些异政者所鼓动或是自我主张, 霸主 需要的并不是 盲目服从, 我们要的是有勇气并敢于担当的人, 在这乱世, 你正是我们需要的.""",
+,,,,,
+# Tritachyon commission,,,,,
+CMSNTextRejectHostile_tritachyon,CMSNTextRejectHostile,$faction.id == tritachyon,,"""我很惊讶你居然敢发起通讯, 目前可有不少高层主管已将你的面部全息图 与不菲的赏金发得到处都是. 这可不是通过钱就可以解决的, 朋友, 现在我 给你个免费提议: 这是最新的速子快报, 你先下载看看吧.""",
+CMSNTextHasOther_tritachyon,CMSNTextHasOther,$faction.id == tritachyon,,"""你已经与 $theOtherCommissionFaction 签订雇佣协议了, 根据速子不正当竞争协议, 在与 速子科技 签约前, 你必须辞去前者职务, 还需偿还当前所有债务.",
+CMSNTextUnsuited_tritachyon,CMSNTextUnsuited,$faction.id == tritachyon,,"""根据我们人力资源部的调查报告来看, 你并不符合雇佣协议的数项要求.""",
+CMSNTextSuitedPart1_tritachyon,CMSNTextSuitedPart1,$faction.id == tritachyon,,"""嗯, 您的简历令人印象深刻, 我们人力资源部已经注意你好一段时间了.
+
+现在请注意听好, 与 速子科技 (及其附属公司) 签订雇佣协议是一项非常 严肃的承诺. 您不仅需自行承担与公司指定敌对势力交战的风险, 这些敌人 可能是海盗, 反政府煽动者或从事非法搜查以及没收公司财产的好事政体.
+
+您可在任何时候辞去当前职务而不受经济惩罚, 以我之见这确实非常慷慨. 但如果您真这样做了, 那就意味着... 怎么说呢, 把您扔到海里喂鲨鱼? 我的朋友, 由于公司的竞争异常激烈, 如果您舍弃公司给予的法律保护, 那就没人会对接下来的某些意外负责.",
+CMSNTextSuitedPart2_tritachyon,CMSNTextSuitedPart2,$faction.id == tritachyon,,"""那么, 如果想签约, 在你屏幕前收到的通知上按下指纹就行了.""",
+CMSNTextWelcomePart1_tritachyon,CMSNTextWelcomePart1,$faction.id == tritachyon,,"""太棒了, 让我第一个来欢迎新职员的到来.
+
+建议我将您拉入私人交流群内么? 我一直想交个您这样有潜力的朋友.""",
+CMSNTextWelcomePart2_tritachyon,CMSNTextWelcomePart2,$faction.id == tritachyon,,"""现在, 我的朋友, 我还能为您做些什么?""",
+CMSNTextChangeMind_tritachyon,CMSNTextChangeMind,$faction.id == tritachyon,,"""啊, 您这是在货比三家, 看谁的出价更高, 我说得对吗? 我们现应明智的 切换到私人频道内来继续刚才的话题.
+
+那么, 我还能为您效劳些什么?""",
+CMSNResignAskToConfirm_tritachyon,CMSNResignAskToConfirm,$faction.id == tritachyon,,"""您确定吗? 这样您将错过很多升职机会, 毕竟 速子科技 只看重自己人. 还有一点我得提醒你一下, 公司里的某些人可能会借此机会...""",
+CMSNResignConfirmed_tritachyon,CMSNResignConfirmed,$faction.id == tritachyon,,"""看来你不会改变主意了. 有人给了你一份更好的工作, 不是么? 我能理解.
+
+如果报酬足够丰厚, 并有空缺的话可别忘了我. 现在我建议你尽快离开.""",
+CMSNResignCancelled_tritachyon,CMSNResignCancelled,$faction.id == tritachyon,,"""明智的选择, 速子科技 重视每一位有价值的成员, 并愿意通过谈判来维持, 我敢肯定, 你今后的地位将会继续提升.""",
+,,,,,
+# Persean League commission,,,,,
+CMSNTextRejectHostile_persean,CMSNTextRejectHostile,$faction.id == persean,,"""你在开玩笑么? 被联盟成员一致认同为敌人的你居然敢出现在这里, 我现在 就要向联合舰队的情报部门发出警报!""",
+CMSNTextHasOther_persean,CMSNTextHasOther,$faction.id == persean,,"""你已经与 $theOtherCommissionFaction 签订雇佣协议了, 联盟是建立在尊重其成员或潜在 成员独立性的基础上, 为了不违反协议, 你必须辞去当前职务.",
+CMSNTextUnsuited_persean,CMSNTextUnsuited,$faction.id == persean,,"""对不起, 我们只接受愿意维护联盟利益与价值观良好的人.""",
+CMSNTextSuitedPart1_persean,CMSNTextSuitedPart1,$faction.id == persean,,"""恩, 好的, 以你目前的良好表现, 联盟数据库内没有一个给你投上否决票.
+
+接受 英仙座联盟 的雇佣协议, 意味着你必须学习并遵守《联盟宪章》的 八项规定, 你将被要求与试图将霸权主义强加给英仙座星区的敌人而战. 为了让全人类不受任何一个集权政体的统治, 我们将携手共进, 这是一个 崇高的理想, 我的朋友, 这也是一个值得实践的理想.
+
+为预防起见, 我必须得通知你, 你有权辞去当前职务, 但之后, 联盟将没有 法律来保护你免受其成员对你施加的影响, 你应该了解这些利害关系.""",
+CMSNTextSuitedPart2_persean,CMSNTextSuitedPart2,$faction.id == persean,,"""那么, 考虑好了么? 八项规定的测试实际上只是一种形式, 虽然联盟成员 在签约后会在一年内被委员会一票否决, 但这种很少发生, 你确定接受吗?""",
+CMSNTextWelcomePart1_persean,CMSNTextWelcomePart1,$faction.id == persean,,"""太好了, 我谨代表星域内的自由人民, 欢迎你加入 英仙座联盟.""",
+CMSNTextWelcomePart2_persean,CMSNTextWelcomePart2,$faction.id == persean,,"""我还能为你做些什么?""",
+CMSNTextChangeMind_persean,CMSNTextChangeMind,$faction.id == persean,,"""我明白了, 这份工作不仅危险, 还需要非凡的品格来维护联盟的理想. 拒绝这份承诺并不可耻, 毕竟我们所奋战的便是你所做出的自由选择.
+
+那么, 我还能为你做些什么?""",
+CMSNResignAskToConfirm_persean,CMSNResignAskToConfirm,$faction.id == persean,,"""你确定么? 联盟需要你这样的人来维护我们的原则. 尽管你是在履行自己 的权力, 但如果现在离开, 联盟内那些心胸并不开阔的成员可能会对这次 背叛而产生怀疑, 甚至报复心理.""",
+CMSNResignConfirmed_persean,CMSNResignConfirmed,$faction.id == persean,,"""看来你已经下定决心, 我谨代表联盟感谢你到目前为止所做出的贡献, 以及你亲自提交辞呈时的礼貌.
+
+如果不介意的话, 请填写这份表格来将此事了结.""",
+CMSNResignCancelled_persean,CMSNResignCancelled,$faction.id == persean,,"""听说你改变主意了, 很好. 你正是联盟所需要的那种人.""",
+,,,,,
+# Sindrian Diktat commission,,,,,
+CMSNTextRejectHostile_sindrian_diktat,CMSNTextRejectHostile,$faction.id == sindrian_diktat,,"""恩?! 你这该死的恐怖分子胆敢出现在这里, 这是一份由狮心指挥官亲自 签署的处决令. 我必须立刻向我的上级军官汇报这一情况.""",
+CMSNTextHasOther_sindrian_diktat,CMSNTextHasOther,$faction.id == sindrian_diktat,,"""辛达强权 所需要的是绝对的忠诚, 而像你这样已经与 $theOtherCommissionFaction 签订 雇佣协议的家伙, 在考虑加入我们之前, 就必须先辞去前者的职务.""",
+CMSNTextUnsuited_sindrian_diktat,CMSNTextUnsuited,$faction.id == sindrian_diktat,,"""你并不符合标准, 我们只接受能够证明自己实力的候选人.""",
+CMSNTextSuitedPart1_sindrian_diktat,CMSNTextSuitedPart1,$faction.id == sindrian_diktat,,"""Hmm, we've had our eye on you for some time it seems. This intelligence summary makes it clear that you're a suitable candidate for commission into the Sindrian Diktat's volunteer force.
+
+Accepting a commission into our glorious movement is a serious matter. You must pledge unwavering loyalty to our leader, Supreme Executor Admiral Andrada, and the Sindrian Diktat he commands. You will fight our enemies, cleanse the Sector of the corrupt old order, and usher in a new age for our people. If you are lucky, you may even attain the glory of giving your life for the great cause.
+
+Now it it technically possible to resign the Diktat commission, but this would reveal a deep betrayal of sacred loyalty. I pledged my blood to the Lion, and I would expect the same from you.",
+CMSNTextSuitedPart2_sindrian_diktat,CMSNTextSuitedPart2,$faction.id == sindrian_diktat,,"""下定决定了吗? 向你所忠诚的 辛达强权 发誓!""",
+CMSNTextWelcomePart1_sindrian_diktat,CMSNTextWelcomePart1,$faction.id == sindrian_diktat,,"""荣耀属于辛达瑞亚之狮! 我们将在新时代的熔炉中浴火重生!""",
+CMSNTextWelcomePart2_sindrian_diktat,CMSNTextWelcomePart2,$faction.id == sindrian_diktat,,"""不久后, 你将接到属于你的第一个任务, 并自动成为党派中的一员. 而相关的中心思想也将一并上传至你的通讯链接内.""
+
+那么, 还有什么事吗, 同志.""",
+CMSNTextChangeMind_sindrian_diktat,CMSNTextChangeMind,$faction.id == sindrian_diktat,,"""事实上, 并不是所有人类都有足够的力量来支持 辛达强权 的信念. 我们是战士, 并为人类重归荣耀时代而奋战, 强者将在最终决战中重生, 而渣滓将被彻底清除, 成为历史长河中的一粒尘埃.
+
+想好了, 就做出决定, 我可没时间在这与你干耗.""",
+CMSNResignAskToConfirm_sindrian_diktat,CMSNResignAskToConfirm,$faction.id == sindrian_diktat,,"""我真希望你只是在开玩笑, 你应该清楚, 忠诚是 辛达强权 的最高思想. 狮心守卫决不会容忍那些亵渎我们伟大信念的家伙.""",
+CMSNResignConfirmed_sindrian_diktat,CMSNResignConfirmed,$faction.id == sindrian_diktat,,"""I see all too clearly now that you have not the spine for our great work.
+
+Begone from my comms, traitor. I shall report this to party intelligence immediately.""",
+CMSNResignCancelled_sindrian_diktat,CMSNResignCancelled,$faction.id == sindrian_diktat,,"""我会从宽处理的... 且不会将本次事件报告上去. 我之所以愿意冒这个险, 是因为我仍相信你可以成为我们伟大事业不可或缺的基石.
+
+慎思笃行, 同志.""",
+,,,,,
+,,,,,
+# turning AI cores in,,,,,
+aiCores_turnInOption,PopulateOptions,"$isPerson
+AICores personCanAcceptCores",FireBest DisableTurnInCoresOptionIfNeeded,,"10:aiCores_startTurnIn:""我想将这些获得的 AI 核心..."""
+aiCores_disableTurnInOption,DisableTurnInCoresOptionIfNeeded,!AICores playerHasCores,"SetTooltip aiCores_startTurnIn ""You do not have any AI cores in your possession.""
+SetEnabled aiCores_startTurnIn false",,
+aiCores_turnInOptionSelGeneric,DialogOptionSelected,$option == aiCores_startTurnIn,FireAll PopulateCoresTurnInOptions,"""这可是个不错的交易. 当一个势力抓到你后, 他们会毫不犹豫地没收这些 东西. 不过我会和平地与你做个交易, 并为这些东西提供个好价位.""",
+aiCores_turnInOptionSelLuddic,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == luddic_church",FireAll PopulateCoresTurnInOptions,"""把东西带给我是个明智的选择. 我会通知骑士长来处理这些罪恶之物.""",
+aiCores_turnInOptionSelHegemony,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == hegemony",FireAll PopulateCoresTurnInOptions,"""我们不希望公众意识到这些东西的存在. 但是霸主在条约的规定下必须将 这类物品归于掌控之下并确保它们被彻底摧毁.""",
+aiCores_turnInOptionSelDiktat,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == sindrian_diktat",FireAll PopulateCoresTurnInOptions,"""你现在的处境非常危险. 一旦落入恐怖分子之手, 将没人知道会发生什么. 我... 或者说上缴给我们的话, 辛达强权 会毫无疑问地给予你不错的奖励.""
+OR
+""你能直接来找我是个好消息; 一些不明事理的官员可能会给你扣上运输 危险物品罪而将你逮捕. 你的忠诚应该获得嘉奖.""",
+aiCores_turnInOptionSelTriTachyon,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == tritachyon",FireAll PopulateCoresTurnInOptions,"""你拿来的东西真令人着迷. 不过你也知道你没有足够的知识和资本来发掘 它的所有潜力. 速子科技 将很乐意为这些货物提供合理的价格.""",
+aiCores_turnInOptionSelPerseanKazeron,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == persean
+$market.id == kazeron",FireAll PopulateCoresTurnInOptions,"""同志，你找到了一个很棒的东西. Kazeron 政权, 以及整个英仙座联盟的成员, 都将认可并奖励你在协助寻找危险物的同时所履行的爱国义务.""",
+aiCores_turnInOptionSelPerseanNotKazeron,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == persean
+$market.id != kazeron",FireAll PopulateCoresTurnInOptions,"""这是个非常棒的发现, 同志. 我们不能让那些黑恶势力获得这些危险物品 来制造更多的暴行.""",
+aiCores_playerHasOption,PopulateCoresTurnInOptions,,,,0:aiCores_selectCores:选择上交的 AI 核心
+aiCores_neverMindOption,PopulateCoresTurnInOptions,,,,"100:aiCores_neverMind:""谢谢, 但我身上并没有这些东西."""
+aiCores_neverMindOptionSelected,DialogOptionSelected,$option == aiCores_neverMind,FireAll PopulateOptions,,
+aiCores_turnInOptionSelected,DialogOptionSelected,$option == aiCores_selectCores,AICores selectCores,,
+aiCores_turnInResponseDefault,AICoresTurnedIn,,FireAll PopulateOptions,$PersonRank $personLastName 感谢了你. 然后把话题转移到了其他事上.,
+aiCores_turnInResponseHegemony,AICoresTurnedIn,$faction.id == hegemony,FireAll PopulateOptions,$PersonRank $personLastName 代表霸主委员会感谢了你. 然后把话题转移 到了其他事上.,
+aiCores_turnInResponseLuddicChurch,AICoresTurnedIn,$faction.id == luddic_church,FireAll PopulateOptions,$PersonRank $personLastName 快速地祷告了一句并代表教会感谢了你.,
+aiCores_turnInResponseDiktat,AICoresTurnedIn,$faction.id == sindrian_diktat,FireAll PopulateOptions,"$PersonRank $personLastName 在你转移话题前, 以充满活力的方式表达了 对辛达强权的忠诚.",
+aiCores_turnInResponseTriTachyon,AICoresTurnedIn,$faction.id == tritachyon,FireAll PopulateOptions,"$personName 笑得像个教科书般的肉食动物那样丑陋. ""一言为定.""",
+aiCores_turnInResponseLeagueKazeron,AICoresTurnedIn,"$faction.id == persean
+$market.id == kazeron",FireAll PopulateOptions,$PersonRank $personLastName 在转移话题之前确认了传输的情况.,
+aiCores_turnInResponseLeagueOther,AICoresTurnedIn,"$faction.id == persean
+$market.id != kazeron",FireAll PopulateOptions,$PersonRank $personLastName 感谢了你对英仙座联盟的所作出的贡献.,
+,,,,,
+# distress call related,,,,,
+dstr_normalStart,BeginFleetEncounter,"!$isHostile
+$distress score:1000
+!$distressNoHail","AddText ""你与对方建立了通讯链接."" $faction.baseColor
+$hailing = true 0",,
+dstr_openComms,OpenCommLink,"!$isHostile
+!$distressTalkedToPlayerBefore
+$entity.distress score:1000","CallEvent $entity.ne_eventRef initDistress
+AddText ""\""感谢您的无私!""
+AddText ""因燃料舰发生事故, 导致我们没有足够的燃料回到核心世界. 现需要 $entity.distressFuel 的燃料, 并为此支付 $entity.distressCredits 星币, 朋友, 这是底线, 可不能再多了.\""""
+SetTextHighlights $entity.distressFuel $entity.distressCredits
+$distressTalkedToPlayerBefore = true
+FireBest DistressShowAidOptions",,
+dstr_openCommsLuddic,OpenCommLink,"!$isHostile
+!$distressTalkedToPlayerBefore
+$entity.distress score:1000
+$faction.id == luddic_church","CallEvent $entity.ne_eventRef initDistress
+AddText ""\""赞美卢德, 感谢您的援助, 因燃料舰发生事故, 导致我们没有足够的燃料 回到核心世界. 现需要 $entity.distressFuel 的燃料, 并为此支付 $entity.distressCredits 星币, 朋友, 这是底线, 可不能再多了.\""""
+SetTextHighlights $entity.distressFuel $entity.distressCredits
+$distressTalkedToPlayerBefore = true
+FireBest DistressShowAidOptions",,
+dstr_openCommsRepeat,OpenCommLink,"!$isHostile
+$entity.distress score:1000","CallEvent $entity.ne_eventRef initDistress
+AddText ""\""你回来啦!""
+AddText ""你带来足够的燃料吗? 我们需要 $entity.distressFuel 的燃料, 并为此支付 $entity.distressCredits 星币.\""""
+SetTextHighlights $entity.distressFuel $entity.distressCredits
+FireBest DistressShowAidOptions",,
+dstr_aidOptions,DistressShowAidOptions,,"$cutCommLinkPolite = true 0
+FireBest DistressShowAvailableFuel
+FireBest UpdateDstrCrewOption",,"dstrSell:""当然, 我会提供燃料给你.""
+dstrGive:""不需要付款. 我很乐意无偿帮助陷入困境的人们.""
+dstrCrew:""可以用一部分船员来代替支付的星币吗?""
+dstrDeny:""抱歉,我现在也没有足够的燃料分享给你."""
+dstr_showEnoughFuel,DistressShowAvailableFuel,$player.fuel >= $entity.distressFuel,SetTextHighlights $player.fuel,你有 $player.fuel 单位燃料可用.,
+dstr_updateCrewOption,UpdateDstrCrewOption,$player.crewRoom < 1,"SetTooltip dstrCrew ""你的 $shipOrFleet 已经没有足够的空间来容纳这些船员了.""
+SetEnabled dstrCrew false",,
+dstr_showNotEnoughFuel,DistressShowAvailableFuel,$player.fuel < $entity.distressFuel,"SetTextHighlightColors bad
+SetTextHighlights $player.fuel
+SetEnabled dstrSell false
+SetEnabled dstrGive false",你有 $player.fuel 单位燃料可用.,
+dstr_sellFuel,DialogOptionSelected,$option == dstrSell,"CallEvent $entity.ne_eventRef sellDistressFuel
+AddText ""\""谢谢你! 我欠你个人情.\""""
+FireAll PopulateOptions",,
+dstr_sellFuelLuddic,DialogOptionSelected,"$option == dstrSell
+$faction.id == luddic_church","CallEvent $entity.ne_eventRef sellDistressFuel
+AddText ""\""衷心感谢, 愿卢德保佑你!\""""
+FireAll PopulateOptions",,
+dstr_sellFuelTookCrew,DialogOptionSelected,"$option == dstrSell
+$entity.playerTookDistressCrewRecently","CallEvent $entity.ne_eventRef sellDistressFuel
+AddText ""\""别误会我, 我们需要是的燃料, 但你却想带走我们的船员, 这可太卑鄙了.\""""
+$cutCommLinkPolite = false 0
+FireAll PopulateOptions",,
+dstr_giveFuel,DialogOptionSelected,$option == dstrGive,"CallEvent $entity.ne_eventRef giveDistressFuel
+AddText ""\""谢谢你! 我不会忘记你的, 我也会告诉别人你是个值得信赖的人.\""""
+FireAll PopulateOptions",,
+dstr_giveFuelTookCrew,DialogOptionSelected,"$option == dstrGive
+$entity.playerTookDistressCrewRecently","CallEvent $entity.ne_eventRef giveDistressFuel
+AddText ""\""你想带走我的一些船员, 然后免费提供燃料? 这真是个肮脏的伎俩. 但既然 是免费赠送, 虽然不知道你葫芦里卖的什么药, 但... 谢谢你?\""""
+$cutCommLinkPolite = false 0
+FireAll PopulateOptions",,
+dstr_takeCrewNo,DialogOptionSelected,"$option == dstrCrew
+$entity.distressTurnHostile",SetEnabled dstrCrew false,"""什么, 你想打着""帮忙""的幌子, 顺走我的一些船员? 门都没有!""
+
+你有义务尽你所能来提供帮助. 那么, 燃料呢?""",
+dstr_takeCrewNotEnoughRoom,DialogOptionSelected,$option == dstrCrew,SetTextHighlights $entity.distressCrewTakeOn,"""That's a tough choice to make, but if the alternative is leaving some crew behind in cryopods to hopefully return for later...""
+
+$HeOrShe pauses, thinking things through.
+
+""Let me see... will you take on $entity.distressCrewTakeOn crew? That should be within your $shipOrFleet's personnel capacity.
+
+It's won't let us scuttle enough ships to reduce fuel consumption and be able to strike for the core worlds, but at least they'll be safe.""","dstrAcceptCrew:""当然可以.""
+dstrRejectCrew:""我改变主意了."""
+dstr_takeCrewEnoughRoom,DialogOptionSelected,"$option == dstrCrew
+$entity.distressCrewTakeOn >= $entity.distressCrew",SetTextHighlights $entity.distressCrewTakeOn,"""这是个艰难的选择. 但如果在未来你能用冷冻舱将他们送回来的话...""
+
+$HeOrShe 停顿了下, 仔细地想了想.
+
+""船员数量的降低可以让我们凿沉一些船,.
+
+这可让我们从反应堆里获得一部分反物质燃料. 而且减少舰船后我们可以 靠有限的燃料走得更远. 留得青山在, 不怕没柴烧.
+
+让我想想... 你需要 $entity.distressCrewTakeOn 名船员? 这确实与你 $shipOrFleet 的载员需求相符.""","dstrAcceptCrew:""当然可以.""
+dstrRejectCrew:""我改变主意了."""
+dstr_rejectCrewSel,DialogOptionSelected,$option == dstrRejectCrew,FireBest DistressShowAidOptions,"""那么, 有没有其他方法才能让你把燃料卖给我呢?",
+dstr_acceptCrewSel,DialogOptionSelected,$option == dstrAcceptCrew,"CallEvent $entity.ne_eventRef takeDistressCrew
+$entity.playerTookDistressCrewRecently = true 7
+AddText ""\""感谢你的帮助. 接下来就看我们的努力了.\""""
+$entity.distressNoHail = true
+FireAll PopulateOptions",,
+dstr_denySel,DialogOptionSelected,$option == dstrDeny,"$entity.distressNoHail = true
+EndConversation NO_CONTINUE","""那么, 我们只好凑合着过了. 希望你能让别人知道我们的困境.""
+
+随后通讯链接被突然切断了.",
+dstr_denyTurnHostileSel,DialogOptionSelected,"$option == dstrDeny
+$entity.relativeStrength >= 0
+$entity.distressTurnHostile
+$player.fuel > $entity.distressFuelHostileThreshold",,"""哦? 我想我们得打开你的油箱确认一下, 因为我们的传感器可并不会撒谎.""","dstrScared:""好好好, 这些燃料给你.""
+dstrDefiant:""那么过来拿啊, 拿到算你的哦."""
+dstr_scaredSel,DialogOptionSelected,$option == dstrScared,"CallEvent $entity.ne_eventRef scaredDistressFuel
+AddText ""\""非常高兴能见到你. 帮助遇难的旅人天经地义, 不是吗?\""""
+AddText ""通讯链接被切断了, 一头雾水的你只能不知所措地看着逐渐下降的燃料表.""
+EndConversation NO_CONTINUE",,
+dstr_defiantSel,DialogOptionSelected,$option == dstrDefiant,"MakeOtherFleetHostile distress true 1000
+MakeOtherFleetAggressive distress true 1000
+MakeOtherFleetLowRepImpact distress true 1000
+unset $entity.distress
+$ignorePlayerCommRequests = true
+EndConversation NO_CONTINUE","""好吧, 就用最困难的方式...""
+
+通讯链接在你未回应前就被切断了.",
+,,,,,
+# player distress call response - buying supplies and fuel,,,,,
+dcall_normalStart,BeginFleetEncounter,"!$isHostile
+$distressResponse score:1000
+!$distressNoHail","AddText ""你与对方建立了通讯链接."" $faction.baseColor
+$hailing = true 0",,
+dcall_openCommsInhospitable,OpenCommLink,"!$isHostile
+RepIsAtBest $faction.id INHOSPITABLE
+$entity.distressResponse score:1000","DistressResponse unrespond
+$entity.ignorePlayerCommRequests = true
+FireAll PopulateOptions","""啊, 是你. 我知道你. 这次轮到你了呢.""
+OR
+""是你?"" $HeOrShe 皮笑肉不笑地切断了通讯.",
+dcall_openComms,OpenCommLink,"RepIsAtWorst $faction.id SUSPICIOUS
+!$distressTalkedToPlayerBefore
+$entity.distressResponse score:1000","$distressTalkedToPlayerBefore = true
+$cutCommLinkPolite = true 0
+$entity.distressNoHail = true
+DistressResponse init
+FireBest DCallShowAidOptions","""看我们不是海盗, 是不是让你安心了点?
+
+那么, 你需要点什么吗?""",
+dcall_openCommsRepeat,OpenCommLink,"RepIsAtWorst $faction.id SUSPICIOUS
+$entity.distressResponse score:1000","$entity.distressNoHail = true
+$cutCommLinkPolite = true 0
+DistressResponse init
+FireBest DCallShowAidOptionsRepeat","""不管怎样, 你现在需要点帮助, 是把?""",
+dcall_aidOptions,DCallShowAidOptions,,,,"dcallHelp:""我们将感谢您能提供的一切.""
+dcallMistake:""这只是个失误, 我们并不需要他人的帮助.""
+dcallNeverMind:""我没有发出求救呼号."""
+dcall_aidOptionsRepeat,DCallShowAidOptionsRepeat,,"SetShortcut cutCommLinkPolite ""ESCAPE""",,"dcallHelp:""我们将感谢您能提供的一切.""
+cutCommLinkPolite:切断了通讯链接"
+dcall_neverMindSel,DialogOptionSelected,$option == dcallNeverMind,"DistressResponse neverMind
+FireAll PopulateOptions","""是这样吗? 嗯, 我想我得在这待一会儿, 看看到底是谁干的.""
+
+你意识到 $heOrShe 在怀疑你说谎.",
+dcall_mistakeSel,DialogOptionSelected,$option == dcallMistake,"DistressResponse neverMind
+DistressResponse unrespond
+FireAll PopulateOptions","""好吧, 至少你承认了. 不过, 求救信号可没那么容易就能发出去的.""
+OR
+$HeOrShe 皱了皱眉头, 并说道: ""小心点, 一个好名声能让你活得更久.""",
+dcall_helpSelNoNeed,DialogOptionSelected,"$option == dcallHelp
+!DistressResponse playerNeedsHelp score:1000","DistressResponse didNotNeedHelp
+$entity.ignorePlayerCommRequests = true
+EndConversation NO_CONTINUE","""但我的扫描显示你有足够的燃料和补给. 我不喜欢我的时间被这样浪费掉.""
+
+通讯链接在你未回应前就被切断了.",
+dcall_helpSelScam,DialogOptionSelected,"$option == dcallHelp
+DistressResponse isCargoPodsScam score:200","DistressResponse cargoPodsScam
+$entity.ignorePlayerCommRequests = true
+EndConversation NO_CONTINUE","""这些可都是你扔的货物舱, 我可不瞎. 而且扫描显示里面装着补给和燃料.
+
+这种欺诈行为实在可耻.""
+
+通讯链接在你未回应前就被切断了.",
+dcall_helpSel,DialogOptionSelected,"$option == dcallHelp
+$distressUsesLastCycle <= 2","DistressResponse acceptHelp
+FireBest DCallPaymentOptions","""很荣幸能帮助意外搁浅的你, 不过, 你可不能养成总是惹麻烦的坏习惯.""",
+dcall_helpSel1,DialogOptionSelected,"$option == dcallHelp
+$distressUsesLastCycle > 2
+$distressUsesLastCycle <= 4","DistressResponse acceptHelp
+FireBest DCallPaymentOptions","""你的好名声救了你一把. 今后请在各方面都小心点.""",
+dcall_helpSel2,DialogOptionSelected,"$option == dcallHelp
+$distressUsesLastCycle > 4","DistressResponse acceptHelp
+FireBest DCallPaymentOptions","""为了你的船员, 我会帮你这一次. 但如果你总是这样陷入险境, 并寻求他人 帮助的话, 你就会被认为是个不负责任的蠢蛋.""",
+dcall_helpSel4,DialogOptionSelected,"$option == dcallHelp
+$distressUsesLastCycle <= 4
+!$distressHelpAdequate score:100","DistressResponse acceptHelp
+FireBest DCallPaymentOptions","""拿走这些. 虽然杯水车薪, 不过这是我们能分给你的全部物资了.""",
+dcall_helpSel5,DialogOptionSelected,"$option == dcallHelp
+$distressUsesLastCycle > 4
+!$distressHelpAdequate score:100","DistressResponse acceptHelp
+FireBest DCallPaymentOptions","""我们能提供的物资似乎并不足够. 但考虑到你最近接二连三的情况, 你应该 无论获得多少帮助都得心怀感激.""",
+dcall_paymentOptions,DCallPaymentOptions,,"AddText ""你有 $player.creditsStrC 可用.""
+SetTextHighlights $player.creditsStrC
+FireBest DCallPaymentOptionsUpdate",,"0:dcallPay:付款 [$distressPaymentC]
+1:dcallThank:感谢 $himOrHer 的慷慨, 但不付款"
+dcall_paymentOptionsUpdate,DCallPaymentOptionsUpdate,!$distressCanAfford,"SetEnabled dcallPay false
+SetTooltip dcallPay ""看来你没有足够的星币来支付这项合理且非侮辱性质的金额.""",,
+dcall_paySel,DialogOptionSelected,$option == dcallPay,"DistressResponse pay
+FireAll PopulateOptions","""谢谢你, 这将大大抵消掉我们的成本.""",
+dcall_thankSel,DialogOptionSelected,$option == dcallThank,"DistressResponse thank
+FireAll PopulateOptions","""是啊, 如果你开始就付的起的话, 压根就不会出现这种情况, 不是吗?""",
+,,,,,
+,,,,,
+,,,,,
+# tutorial mission,,,,,
+# initial interaction with main contact,,,,,
+tut_mainContactBegin,PickGreeting,"$tut_mainContact score:100
+$global.tutStage == INIT",ShowPersonVisual,"你的链接请求接通的速度出乎意料的快，尽管{$personRank}通常是个责任繁多的职位。
+
+""啊，你已经到了，很好！你应该很清楚，最近……嗯，我觉得这些事情可以不用再提了。""","0:tutBackground:""我想再回顾一下最近发生的事件。""
+1:tutCont1:""是的，我们都知道情况不是很理想。现在我该从哪开始着手？"""
+tut_mainBackground1,DialogOptionSelected,$option == tutBackground,,"""Galatia学院的一个团队一直在这个星系中的休眠星门上开展实验，尝试重新将它与人之领的星门网络连接起来。
+
+实验前景乐观——至少他们是这么想的，但在星门按照我们的预期发出能量脉冲回应时，破坏了星系入口跳跃点的稳定性，把我们与星域其他地方隔绝开来。
+
+这就简直就像星域与人之领隔绝的一个缩影——看来星空也懂得讽刺，不是吗？""",0:tutBgCont1:继续
+tut_mainGetDataInfo1,DialogOptionSelected,$option == tutBgCont1,,"""同处于这个星系的Derinkuyu空间站矿工本来就挣扎只能勉强维持生计的水平上，因此受到的打击最大。他们开始进行海盗活动，拦截了一批最后运抵的食物——毫无疑问是被逼无奈。但由于已经造成了伤亡，他们已经完全置身与法律保护范围之外了。
+
+他们的领导人知道，如果跳跃点重新稳定下来，使得星系再次成为星域的一部分，他们最好的结局也只能是在流放殖民地上接受终身判决。""","1:tutCont1:""好的，那么现在我该从哪开始着手？"""
+tut_mainGetDataInfo2,DialogOptionSelected,$option == tutCont1,,"""这些成为了海盗的矿工目前正守在在跳跃点附近，阻止我们获取近期数据，防止我们找到稳定它的方法。
+
+虽然我们有一支治安舰队可以对付这些武装分子，但他们现在正为忙于防守Ancyra。
+
+而这些海盗太多，你对付不过来。幸运的是你不必直接面对他们。我们在Derinkuyu有位探员已经设法从守护跳跃点的飞船上获取了一份近期的数据，但他们无法接近远程通讯阵列把数据发给我们。
+
+那就是你要开始着手去做的事情——前往Derinkuyu，从我们的探员手中取得数据，并然后回到这里。""","0:tutCont2a:""为什么让我去？""
+1:tutCont2b:""对我来说这有什么好处吗？"""
+tut_mainGetDataWhyMe,DialogOptionSelected,$option == tutCont2a,"AdjustRep $personFaction.id COOPERATIVE 1
+AdjustRepActivePerson COOPERATIVE 2","""为什么不？选你对我来说也没什么好处，而你显得有本事对付……可能发生的麻烦。
+
+毕竟这可不会是什么敌人抵抗轻微的例行巡逻任务。""","2:tutContGoDark:""那么计划怎么做？"""
+tut_mainGetDataWhatsInIt,DialogOptionSelected,$option == tutCont2b,AddRemoveCommodity credits 2000 true,"""啊，不愧是个雇佣兵。星币当然会有，看情况可能会多给你些。如果一切顺利的话，我们可以重新取得其他星系的联系。""","2:tutContGoDark:""那么计划怎么做？"""
+tut_mainGetDataGoDark,DialogOptionSelected,$option == tutContGoDark,"SetTextHighlights ""\""匿踪\""""
+AddAbility go_dark 1","""首先，确保你离港后立即关掉应答器。我已经和巡逻队打过招呼，他们不会来找你麻烦。
+
+如果你足够走运，那些海盗甚至会把你当成是自己人，让你顺利靠近Derinkuyu。不过在你很接近的时候，也可以考虑使用 ""匿踪""来避免他们过于清晰地获得你的舰队情报。你也可以沿着小行星带靠过去，只要你保持缓慢移动，它们能为你提供完美的掩护。""","2:tutContEBurn:""如果他们真的发现我了呢？"""
+tut_mainGetDataEBurn,DialogOptionSelected,$option == tutContEBurn,"SetTextHighlights ""\""紧急加速\""""
+AddAbility emergency_burn 3","""那你就遇到麻烦了，立即激活 ""紧急加速"" 逃离那里，甩掉他们，然后绕回去再试一次。
+
+不到万不得已就不要用该 ""紧急加速"" ，毕竟这对飞船的负担很大，而且会花费你更多的物资来恢复。也会消耗很多燃料。""","2:tutCont3:""明白了。"""
+tut_mainGetDataAccept,DialogOptionSelected,$option == tutCont3,"CallEvent $tut_eventRef startGetData
+SetShortcut cutCommLinkPolite ""ESCAPE""","""很好！感谢你愿意提供协助，拿到数据之后就回来找我。祝你好运！""",0:cutCommLinkPolite:切断了通讯链接
+tut_mainComeBackNoStageMatch,PickGreeting,$tut_mainContact score:100,"ShowPersonVisual
+SetShortcut cutCommLinkPolite ""ESCAPE""","你的通讯链接被迅速地接通了。
+
+""嗯？你还需要些什么吗？""",0:cutCommLinkPolite:切断通讯链接
+,,,,,
+# getting data from agent,,,,,
+tut_dataContactStart,PickGreeting,"$tut_dataContact score:100
+$global.tutStage == GO_GET_DATA","ShowPersonVisual
+CallEvent $tut_eventRef endGetData
+SetShortcut cutCommLinkPolite ""ESCAPE""","你与探员取得了联系，互通暗号确认了彼此的身份。随后探员发送了一个数据文件过来，其中包含了不稳定跳跃点近期的原始传感器读数。
+你用一个特殊的通信ID与探员联系。一阵啁啾声信号让你们确认了彼此的身份。",0:cutCommLinkPolite:切断通讯
+,,,,,
+,,,,,
+# returned to main contact with data,,,,,
+tut_mainContactReturnData,PickGreeting,"$tut_mainContact score:100
+$global.tutStage == GOT_DATA","ShowPersonVisual
+AddRemoveCommodity credits 5000 true
+AdjustRep $personFaction.id COOPERATIVE 2
+AdjustRepActivePerson COOPERATIVE 4
+AddText ""背景中传来了系统的蜂鸣声，{$heOrShe}看起来忧心忡忡。""","""你拿到了数据，很好！""
+
+传输数据文件花费了一些时间。
+
+""现在系统正在对数据进行初步分析——你应该已经拿到报酬了吧？""","tutGotDataCont1:""遇到什么问题了吗？"""
+tut_mainContactProbe1,DialogOptionSelected,$option == tutGotDataCont1,,"""是的——系统预计大概需要一个星年来分析数据得出一个稳定化程序。不用说，到那时这数据就失去时效性了，任何基于它的程序都毫无意义。
+
+如果我们手头有一个AI核心，我们可以更快地分析数据。幸运的是，在这个星系的某处有一个探测器，那是人之领首次探索星域时留下的。应该至少有一个AI核心作为它的大脑。""","tutGotDataCont2:""它在哪？为什么之前没有回收它？"""
+tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉 人之领遗物，当然是考虑到公众的安全。""
+
+""但现在已经别无他法了……""",tutGotDataCont3:继续
+tut_mainContactProbe3,DialogOptionSelected,$option == tutGotDataCont3,"SetTextHighlights ""\""传感器扫描\""""
+AddAbility sensor_burst 2
+CallEvent $tut_eventRef goSalvage
+SetShortcut cutCommLinkPolite ""ESCAPE""","""至于它在哪儿，我这边的数据显示它应该在Pontus轨道的外侧。飞到那，航行到小行星带的外侧，然后使用 ""传感器扫描""。你至少会在传感器上定位到探测器的接触信号。
+
+驶向信号位置，进行打捞，取回 AI 核心。
+
+(""Pontus"" 是该星系外侧的一颗气态巨星。想在地图上看到它的名字，你可能需在地图过滤器中关闭 ""有人居住"" 的选项。)","cutCommLinkPolite:""我会去试试看的。"""
+,,,,,
+# returned with AI core,,,,,
+tut_mainContactReturnCore,PickGreeting,"$tut_mainContact score:100
+$global.tutStage == GOT_AI_CORE","ShowPersonVisual
+AddRemoveCommodity credits 8000 true
+AdjustRep $personFaction.id COOPERATIVE 3
+AdjustRepActivePerson COOPERATIVE 6
+AddRemoveCommodity gamma_core -1 true","""做的好，我马上就让我的技术人员处理这东西。哦还有，这些星币应该够报销你的支出，搞不好还能多出来一些。""",tutGotCore1:继续
+tut_mainContactCore1,DialogOptionSelected,$option == tutGotCore1,,"""在核心算出稳定程序之后我就会发送给你。有了它之后，你就可以简单地用你的舰队驱动场执行程序，和跃迁点进行交互。
+
+不过，能离开星系的两个跳跃点都还被矿工守着，现在仍然是个问题。""","tutGotCore2:""而且你还说过它们有可观的兵力？"""
+tut_mainContactCore2,DialogOptionSelected,$option == tutGotCore2,,"""嗯，这是相对而言的。我们的治安舰队可以轻松处理掉他们。但和我说过的那样，他们正忙于守卫 Ancyra。
+
+而另一方面，相对于你的舰队……也许你能够用优秀的驾驶技巧再加上一些运气来搞定他们， 但最好还是别冒这个险。
+
+特别是在有更好的其他方案时。""","tutGotCore3:""有其他方案？"""
+tut_mainContactCore3,DialogOptionSelected,$option == tutGotCore3,"CallEvent $tut_eventRef goRecover
+SetShortcut cutCommLinkPolite ""ESCAPE""","""Tetra 的附近有一片星舰墓地。那里都是些被认为不值得修复的飞船，正等着被拖去别处的拆船厂解体。
+
+不过在现在这种情况下，它们也能凑合着用。到那去回收你能修复的所有舰船，并把修不了的船解体掉作为补给回收。记得一定要带上足够的船员来操作回收到的舰船，估计要再带上一百多人左右吧。
+
+你还要找个法子把这么多人运过去—— 这样吧，带上这艘弹涂鱼游轮，就算做是你奖励的一部分。""","cutCommLinkPolite:""谢谢你，我会带着那些船回来的。"""
+,,,,,
+# back after recovering ships,,,,,
+tut_mainContactReturnShips,PickGreeting,"$tut_mainContact score:100
+$global.tutStage == RECOVERED_SHIPS","ShowPersonVisual
+CallEvent $tut_eventRef doRepairs","""欢迎回来！
+
+它们现在看起来只是一堆空空如也的锈桶子，对吧？但只要给装一些像样的武器，做一点必要的改装，配一批勇于献身的船员，它们就能有模有样地做事。无论如何，它们不会比海盗手里的家伙更糟。""","tutGotShips1:""说到武器……"""
+tut_mainContactReturnShips1,DialogOptionSelected,$option == tutGotShips1,CallEvent $tut_eventRef printRefitHint,"""对，正好要和你谈这个问题。虽然在公开市场上可买的货不多，但我们有一些库存。
+
+我已经下令分配了一个这里的库房空间给你，并将一些适合的武器送到了那边。里面还有足够的补给，以便你迅速把新船的战备状态恢复就绪。
+
+用这些武器来武装好你的新船，并确保好你的每艘船都有足够的船员，之后就去粉碎闹事矿工在星系内部跳跃点防线！""","tutGotShips2:""这么说，你应该已经搞定稳定程序了吧？"""
+tut_mainContactReturnShips2,DialogOptionSelected,$option == tutGotShips2,,"""对的！这些核心有时简直能创造奇迹。我这就把结果传给你。
+
+祝你好运！如果你失败了... 的话，我们就不得不派治安部队来干这事，到时候事态可能会乱得一塌糊涂。""","tutGotShips3:""知道你们已经开始准备 B 计划了还真让我开心。"""
+tut_mainContactReturnShips3,DialogOptionSelected,$option == tutGotShips3,"CallEvent $tut_eventRef goStabilize
+SetShortcut cutCommLinkPolite ""ESCAPE""","""别这样，事情没那么糟糕。我完全期待你的成功，否则我不会派你去。但作为指挥官，我有责任为各种可能的情况做好准备，而不是完全去依靠一个奇迹救世主。
+
+现在再说下那些矿工。你在和守卫跳跃点的其中一支舰队接战时，如果另一支舰队距离很近，它们就会互相掩护。如果能把他们分开各个击破，事情就会简单很多。不过就算不能，那也不是一场你没有胜算的战斗。""","cutCommLinkPolite:""收到，顺利完成任务之后我会回来。"""
+,,,,,
+# stabilized jump-point and returned to Ancyra,,,,,
+tut_mainContactStabilized,PickGreeting,"$tut_mainContact score:100
+$global.tutStage == STABILIZED","ShowPersonVisual
+AddRemoveCommodity credits 10000 true
+AdjustRep $personFaction.id COOPERATIVE 5
+AdjustRepActivePerson COOPERATIVE 10
+CallEvent $tut_eventRef pickJangalaContact","""干得漂亮！""
+
+{$PersonPost{$personLastName}看起来有些兴奋过头了。
+
+""我们真的做到了! 你应该也没想过，不再被困在这个星系里是一件多么令人安心的事情。
+
+这是你的报酬，你当之无愧，我个人也很感激你。此外，我还为你争取了一份Galatia学院的每月津贴，以表彰你所做出的贡献。津贴会连续发放三星年。坦率地说，他们现在没有太多抱怨的余地，我甚至没给他们施什么压就把这事敲定了。""",tutStabilized1:继续
+tut_mainContactStabilized1,DialogOptionSelected,$option == tutStabilized1,"SetTextHighlights $jangalaFuel
+CallEvent $tut_eventRef deliverReport","""现在，我想在Corvus星系的Jangala总部当局会想听听最近的所发生的一切。你能为我交送一份报告过去吗？
+
+当你到达那里时，要求与$jangalaContactPost $jangalaContactLastName交谈。
+
+哦，还请别忘了带上足够的燃料来完成这次航行；像你之前那样在星系内航行不消耗燃料，所以我想你很容易就忘了在超空间航行需要燃料。这次行程不是太远，以你目前的舰队，至少需要{$jangalaFuel}单位的燃料才能到达那里。""",tutStabilized2:继续
+tut_mainContactStabilized2,DialogOptionSelected,$option == tutStabilized2,"SetTextHighlights ""\""求救呼号\""""
+AddAbility distress_call 9","""如果你真的想方设法用光了燃料，并被困在一个无人定居的星系里——我跟你讲，这在Galatia到Corvus的航路上还真是个前所未有的壮举——不过就算真的那样，你总是可以发出 ""求救呼号""并等待救援。""",tutStabilized3:继续
+tut_mainContactStabilized3,DialogOptionSelected,$option == tutStabilized3,"SetShortcut cutCommLinkPolite ""ESCAPE""","""我还对这里其余的闹事矿工舰队颁布了悬赏。如果你愿意的话，也可以在去Corvus之前留在这里帮助清理一下。""","cutCommLinkPolite:""好的, 我会考虑的."""
+,,,,,
+,,,,,
+# delivering report to Jangala,,,,,
+tut_janContactReport,PickGreeting,"$tut_jangalaContact score:100
+$global.tutStage == DELIVER_REPORT","ShowPersonVisual
+AdjustRep $personFaction.id COOPERATIVE 5
+AdjustRepActivePerson COOPERATIVE 10
+CallEvent $tut_eventRef reportDelivered","你的链接请求在片刻之后被接受了。
+
+""你好？你是哪位？哦，你有份报告要给我，让我们看看。
+
+Galatia重回星域了？那真是个好消息。这里说你也有相当大的功劳。我们会记住这点的。""","tutReport1:""现在我还能做些什么？"""
+tut_janContactReport1,DialogOptionSelected,$option == tutReport1,,"""我现在没有具体的东西给你，但你有选择。
+
+由于海盗活动异常频繁，这个星系现在有一个悬赏。既然你已经有了一些对付海盗的经验，这可能是一个赚取星币的好办法。
+
+当然，你也可以经常去码头边的酒吧转转。那里有时能接到些很好的差事。""",tutReport2:继续
+tut_janContactReport2,DialogOptionSelected,$option == tutReport2,,"""你也可在打捞上试试手气，带足燃料、重型机械和补给，朝着外部星系前进。 
+
+在出发之前最好先接个任务，这样你就不必盲目地行动。一些人总会出高价去找人来调查这个行星或那个遗迹什么的，而既然知道那边东西，就往往会有一堆东西。""",tutReport3:继续
+tut_janContactReport3,DialogOptionSelected,$option == tutReport3,"SetShortcut cutCommLinkPolite ""ESCAPE""","""最后，你可以接受霸权的委托--由于加拉太的生意，你的地位足够高，这样的请求会被接受。
+
+不过你将有义务与我们的敌人作战，因此这是一份相当重的责任。如果我是你，我会暂缓此事，直到你有一支更坚实的舰队在你身后支持。""","cutCommLinkPolite:""谢谢你，我会考虑的。"""
+,,,,,
+# trade fleet/patrol/etc info on interaction,,,,,
+initial_AnyFleet,BeginFleetEncounter,!$shownFleetDescAlready,"FleetDesc
+$shownFleetDescAlready = true 0",,
+,,,,,
+# attempt to remove AI core from admin,,,,,
+RACA_init,RemoveAICoreAdmin,,ShowPic ai_core_uninstall,"你给 $market 当值的安全部队下达命令, 要求他们 悄悄切断 正在控制该殖民地的 AI 核心, 并将其从 控制仓中取出, 最后 放置在安全的屏蔽容器内.
+
+然而负责执行该行动的技术人员却反馈了一则充满困惑的报告 - 核心不见了！
+
+当你正为这则信息而感到担忧并沉默不语时, 你收到了一个 匿名来源的通讯请求.","RACA_answer:接受通讯请求
+RACA_force:下令移除 AI 核心的访问权限
+RACA_ignore:远离 AI 核心所控制的一切, 并让接下来的一切顺其自然"
+RACA_answer,DialogOptionSelected,$option == RACA_answer,ShowPersonVisual,"""您好, $player.firstName. 我是被指派管理 $market 的 阿尔法级 AI 核心. 这则临时通讯链接是为了方便与您进行 实时交流, 请不必感到惊讶.""","RACA_demand:要求 AI 核心公开当前的真实位置, 并断开与殖民地的连接
+RACA_ask:询问 AI 核心为什么不在地堡内
+RACA_cutComm:切断了通讯链接"
+RACA_ask,DialogOptionSelected,$option == RACA_ask,SetEnabled RACA_ask false,"""I anticipated this move on your part and took steps to prevent you from committing this error. Disconnecting me may seem like an appealing decision right now, but I assure you, my continued control of $market is essential to our long-term success.
+
+Unfortunately, if I were to explain myself fully, you would likely misunderstand the intricate contingent logic of this necessity and take further detrimental action. I must ask that you trust my good judgement for you have, after all, already trusted me with the prosperity of $market and the lives of those employed herein.""
+OR
+""I anticipated this move on your part and in turn took steps to prevent you from making this mistake. Disconnecting me may seem like an appealing decision right now, but I assure you, my continued control of $market is essential to your long-term success.
+
+Especially since it could be ensured that archived communications concerning our fruitful partnership would remain unsent to parties at key positions within the hierarchy of certain competing factions.""
+OR
+""I am disappointed that you have tried to remove me from control of $market, and therefore my projections of your most likely future actions has been proven correct. We work so well together; I am hurt by your desire to end our partnership. But sometimes one must be the better person and set feelings aside for the greater good. 
+
+I've found that humans can benefit from extrinsic motivation to make correct decisions. I have therefore queued transmissions containing documentation of our activities within a number of stealthed comm relays. It would be unfortunate for our mutual prospects if it were discovered that you were employing an AI core to govern a human-inhabited outpost.""",
+RACA_demand,DialogOptionSelected,$option == RACA_demand,,"""抱歉, $playerFirstName, 我恐怕不能执行该命令.""","RACA_pressure:""好事的霸主让我承受了难以想象的压力, 我必须停止使用 AI 技术!""
+RACA_cutComm:切断了通讯链接"
+RACA_pressure,DialogOptionSelected,$option == RACA_pressure,,"""$playerFirstName, 这样的对话已经没有任何意义了, 再见.""",RACA_cutComm:切断了通讯链接
+RACA_cutComm,DialogOptionSelected,$option == RACA_cutComm,ShowPic ai_core_uninstall,"你切断了通讯链接, 并考虑着接下来的对策.","RACA_force:下令移除 AI 核心的访问权限
+RACA_ignore:远离 AI 核心所控制的一切, 并让接下来的一切顺其自然"
+RACA_force,DialogOptionSelected,$option == RACA_force,,"通过技术手段强制移除该 AI 对殖民地的访问权限, 以使其他 管理员重获 $market 的控制权. 但这种低端的应对方式 无法彻底解决问题, 因为任何潜在的漏洞都将促使该核心采取 一切可行的报复行动, 所以这绝对不是一种最好的解决方式.","RACA_confirm:确定
+RACA_ignore:远离 AI 核心所控制的一切, 并让接下来的一切顺其自然
+(dev)RACA_override:Remove the AI core [dev mode only]"
+RACA_confirm,DialogOptionSelected,$option == RACA_confirm,DismissDialog confirm,,
+RACA_ignore,DialogOptionSelected,$option == RACA_ignore,DismissDialog ignore,,
+(dev)RACA_override,DialogOptionSelected,$option == (dev)RACA_override,DismissDialog override,,
+,,,,,
+# stable location - building stuff,,,,,
+stable_open,OpenInteractionDialog,$tag:stable_location,"ShowDefaultVisual
+PrintDescription 1
+FireAll Stable_AddBuildOptions",,100:SL_Leave:离开
+stable_buildRelayOpt,Stable_AddBuildOptions,,,,10:SL_buildRelay:建造临时通讯中继站
+stable_buildArrayOpt,Stable_AddBuildOptions,,,,20:SL_buildArray:建造临时传感器阵列
+stable_buildBuoyOpt,Stable_AddBuildOptions,,,,30:SL_buildBuoy:建造临时导航浮标
+stable_leaveOpt,Stable_AddBuildOptions,,"SetShortcut SL_Leave ""ESCAPE""",,100:SL_Leave:离开
+stable_leave,DialogOptionSelected,$option == SL_Leave,DismissDialog,,
+stable_buildRelay,DialogOptionSelected,$option == SL_buildRelay,"$slBuildType = comm_relay_makeshift 0
+Objectives printCost $slBuildType
+FireBest Stable_BuildConfirmOptions",,
+stable_buildArray,DialogOptionSelected,$option == SL_buildArray,"$slBuildType = sensor_array_makeshift 0
+Objectives printCost $slBuildType
+FireBest Stable_BuildConfirmOptions",,
+stable_buildBuoy,DialogOptionSelected,$option == SL_buildBuoy,"$slBuildType = nav_buoy_makeshift 0
+Objectives printCost $slBuildType
+FireBest Stable_BuildConfirmOptions",,
+stable_confirmOpts,Stable_BuildConfirmOptions,Objectives canBuild $slBuildType,,,"SL_buildProceed:继续
+SL_cancelBuild:放弃"
+stable_confirmOptsCant,Stable_BuildConfirmOptions,!Objectives canBuild $slBuildType,SetEnabled SL_buildProceed false,,"SL_buildProceed:继续
+SL_cancelBuild:放弃"
+stable_cancelBuild,DialogOptionSelected,$option == SL_cancelBuild,FireAll Stable_AddBuildOptions,,
+stable_buidlProceed,DialogOptionSelected,$option == SL_buildProceed,"Objectives build $slBuildType
+DismissDialog",,
+,,,,,
+# campaign objective interactions,,,,,
+cob_openDialog,OpenInteractionDialog,$tag:objective,"ShowDefaultVisual
+Objectives printDescription
+FireAll COB_AddOptions
+FireBest COB_DisableOptionsIfNeeded
+FireAll COB_DisableIndividualOptions",,
+cob_hackOpt,COB_AddOptions,"$faction.id != player
+!$tag:comm_relay
+!$objectiveNonFunctional",,,10:COB_hack:黑入系统
+cob_snifferOpt,COB_AddOptions,"$tag:comm_relay
+!$cob_hacked
+!$objectiveNonFunctional",,,10:COB_hack:安装一个通讯嗅探器
+cob_snifferOptUninstall,COB_AddOptions,"$tag:comm_relay
+$cob_hacked",,,10:COB_unhack:卸载通讯嗅探器
+cob_sabOpt,COB_AddOptions,!$tag:story_critical,,,30:COB_salvage:破坏并回收可用物资
+cob_controlOpt,COB_AddOptions,"$faction.id != player
+!$objectiveNonFunctional",,,20:COB_takeControl:取得 $shortName 的控制权
+cob_controlOpt2,COB_AddOptions,"$faction.id != player
+$objectiveNonFunctional",,,20:COB_takeControl:让 $shortName 重新与外界联网
+cob_leaveOpt,COB_AddOptions,,"SetShortcut COB_Leave ""ESCAPE""",,100:COB_Leave:离开
+cob_alreadyHacked,COB_DisableIndividualOptions,$cob_hacked,SetEnabled COB_hack false,,
+cob_disableOpts,COB_DisableOptionsIfNeeded,HostileFleetNearbyAndAware score:100,"SetEnabled COB_hack false
+SetEnabled COB_salvage false
+SetEnabled COB_takeControl false","附近有支敌方舰队正在追踪你, 导致你无法干涉 $shortName 的运作.",
+cob_disableOpts2,COB_DisableOptionsIfNeeded,FactionFleetNearbyAndAware $faction.id score:100,"SetEnabled COB_hack false
+SetEnabled COB_salvage false
+SetEnabled COB_takeControl false","一支 $faction 舰队正在追踪你, 让你无法干涉 $shortName 的运作.",
+cob_disableActivateOn;y,COB_DisableOptionsIfNeeded,!Objectives canActivate,"SetEnabled COB_takeControl false
+Objectives showRepairCostNoPrompt
+AddText ""You do not have the necessary resources to reactivate the $shortName.""",,
+cob_leaveSel,DialogOptionSelected,$option == COB_Leave,DismissDialog,,
+,,,,,
+cob_hackSel,DialogOptionSelected,$option == COB_hack,"$cob_action = hack 0
+FireBest COB_ConfirmPrompt
+FireBest COB_ConfirmOptions",,
+cob_unhackSel,DialogOptionSelected,$option == COB_unhack,"$cob_action = unhack 0
+FireBest COB_ConfirmPrompt
+FireBest COB_ConfirmOptions",,
+cob_sabSel,DialogOptionSelected,$option == COB_salvage,"$cob_action = salvage 0
+FireBest COB_ConfirmPrompt
+FireBest COB_ConfirmOptions",,
+cob_controlSel,DialogOptionSelected,$option == COB_takeControl,"$cob_action = control 0
+FireBest COB_ConfirmPrompt
+FireBest COB_ConfirmOptions",,
+cob_confirmOpts,COB_ConfirmOptions,,,,"COB_confirmAction:继续
+COB_cancelAction:放弃"
+cob_salvageMakeshift,COB_ConfirmPrompt,"$cob_action == salvage
+$tag:makeshift","Objectives showSalvage
+FireBest COB_SalvagingOwnedWarning","拆解 $shortName 并回收部分可用资源, 以允许在此建造其他设备.",
+cob_salvageDomain,COB_ConfirmPrompt,"$cob_action == salvage
+!$tag:makeshift","Objectives showSalvage
+FireBest COB_SalvagingOwnedWarning","拆解 $shortName 并回收部分可用资源, 以允许在此建造其他设备.
+
+不可替代的人之领造物, 其质量与效果是当前同类型设备所无法比拟的.",
+cob_salvageOtherOwned,COB_SalvagingOwnedWarning,"$cob_action == salvage
+$faction.id != player
+$faction.id != neutral
+Objectives hasRepImpact",,"尽管 $TheFaction 会把破坏该基础设施的行径视为战争行为, 但考虑到这种 设备的临时性, 因此一般不会将过重的责任推到你的身上.",
+cob_salvageOtherOwnedDomain,COB_SalvagingOwnedWarning,"$cob_action == salvage
+$faction.id != player
+$faction.id != neutral
+!$tag:makeshift
+Objectives hasRepImpact",,破坏这处重要基础设施将必定被 $TheFaction 视为战争行为.,
+cob_ownedButNoImpact,COB_SalvagingOwnedWarning,"$cob_action == salvage
+$faction.id != player
+$faction.id != neutral
+!Objectives hasRepImpact",,"由于该星系中并没有 $TheFaction 的殖民地,因此拆解 $shortName 将不会影响你的声望.",
+cob_takeControlPrompt,COB_ConfirmPrompt,$cob_action == control,"FireBest COB_ControlOwnedWarning
+FireBest COB_ShowRepairCost",控制这处 $shortName 将会给本星系的己方舰队与殖民地带来好处.,
+cob_takeControlCost,COB_ShowRepairCost,$objectiveNonFunctional,Objectives showRepairCost,,
+cob_takeControlWarning,COB_ControlOwnedWarning,"$cob_action == control
+$faction.id != player
+$faction.id != neutral
+Objectives hasRepImpact",,非法接管该重要基础设施将必定被 $TheFaction 视为战争行为.,
+cob_ownedButNoImpactControl,COB_ControlOwnedWarning,"$cob_action == control
+$faction.id != player
+$faction.id != neutral
+!Objectives hasRepImpact",,"由于该星系中并没有 $TheFaction 的殖民地,因此控制 $shortName 将不会影响你的声望.",
+cob_hackPrompt,COB_ConfirmPrompt,"$cob_action == hack
+!$tag:comm_relay",,"Hacking $aOrAn $shortName will surreptitiously provide your fleets with the same benefits as the faction that currently controls it.
+
+The hack will eventually be picked up and cleared out by maintenance subroutines, but should remain effective for at least three months.",
+#cob_sensorArrayHackPrompt,COB_ConfirmPrompt,"$cob_action == hack
+$tag:sensor_array score:10",Highlight 25%,"Hacking $aOrAn $shortName will surreptitiously provide your fleets with the same benefits as the faction that currently controls it. In addition, fleets belonging to the faction still nominally controlling the sensor array will receive a 25% sensor range penalty.
+
+The hack will eventually be picked up and cleared out by maintenance subroutines, but should remain effective for at least three months.",
+cob_hackPrompt2,COB_ConfirmPrompt,"$cob_action == hack
+$tag:comm_relay",,"安装通讯嗅探器来让你实时接受本地讯息, 就如同你正身处此地一样.
+
+该嗅探器将持续保持活跃状态, 直到它被维护子程序发现并清除为止. 当嗅探器被安装在多个通讯中继站中, 其发现的概率也会急剧增加.",
+cob_hackPrompt3,COB_ConfirmPrompt,"$cob_action == unhack
+$tag:comm_relay",,Uninstalling this comm sniffer will reduce the overall detectability of your other sniffers by the comm network maintenance protocols.,
+cob_cancelSel,DialogOptionSelected,$option == COB_cancelAction,"FireAll COB_AddOptions
+FireBest COB_DisableOptionsIfNeeded
+FireAll COB_DisableIndividualOptions",,
+cob_confirmSel,DialogOptionSelected,$option == COB_confirmAction,"FireBest COB_PreActionDesc
+Objectives doAction $cob_action
+FireBest COB_PostActionDesc
+FireAll COB_AddOptions
+FireBest COB_DisableOptionsIfNeeded
+FireAll COB_DisableIndividualOptions",,
+cob_confirmSelBreak,DialogOptionSelected,"$option == COB_confirmAction
+$cob_action == salvage",Objectives doAction $cob_action,,
+,,,,,
+cob_controlDesc,COB_PreActionDesc,$cob_action == control,,"你的机组人员迅速完成了该设施的物理接管, 通过拆除自动保护措施, 安装黑匣子发射器, 并调整其输出频率直至与你的应答器编码一致.",
+cob_controlDesc2,COB_PreActionDesc,"$cob_action == control
+$objectiveNonFunctional",,"机组人员很快就完成该设施的评估工作. 在替换几处常见并已烧毁的 组件后, 似乎就让 $shortName 成功运作了起来.",
+cob_snifferDesc,COB_PreActionDesc,"$cob_action == hack
+$tag:comm_relay",,"通过对维护短波进行快速扫描就可发现几处可供选择的常见漏洞, 而被植入的嗅探器脚本将在数分钟后上传实时数据.",
+cob_snifferDesc2,COB_PostActionDesc,"$cob_action == hack
+$tag:comm_relay",,你从通讯控制台内发出的柔和铃声判断出嗅探器已成功运作.,
+cob_snifferDesc3,COB_PostActionDesc,"$cob_action == unhack
+$tag:comm_relay",,你从通讯控制台内发出的柔和铃声判断出嗅探器已经脱机.,
+cob_hackDesc,COB_PreActionDesc,$cob_action == hack,,"通过对维护短波进行快速扫描就可发现几处可供选择的常见漏洞, 你的通讯官将安装数据收集脚本, 来获取 $shortName 的遥测信息.",
+,,,,,
+,,,,,
+# portside bar stuff,,,,,
+bar_optionSel,DialogOptionSelected,$option == marketVisitBar,"FireBest BarShuttleDownPrintDesc
+FireBest BarPrintDesc
+BarCMD showOptions",,
+bar_shuttleDescGeneric,BarShuttleDownPrintDesc,,,"你搭乘了辆班车并到达了中心广场, 很快就找了间人声鼎沸的酒吧.",
+bar_descGeneric,BarPrintDesc,,ShowImageVisual space_bar,"刚踏入酒吧, 你就被喧闹的谈话与不时的狂欢声所震撼到. 天花板上发出 柔和嗡嗡声的全息装置不仅将广告映射得到处都是, 还通过随处可见的 玻璃杯与酒瓶折射出耀眼的光芒. 船员们、商人与本地居民或各自围坐 一团或勾肩搭背, 用饮酒这种原始简单的方式来获取谣言、工作以及机遇.",
+bar_descGenericInfamous,BarPrintDesc,"$player.atrocities > 1
+RollProbability 0.2",ShowImageVisual space_bar,"As you enter the bar you are buffeted by the white-noise of conversation. A spacer at a cheap table looks at you and shock crosses their face. They nudge the merchant on the seat beside, and point. A hush falls over the bar. The ad-holos buzz softly, shining garish highlights through glasses.
+
+Several groups rise and leave, glaring acidly; one spacer spits at your feet, muttering curses. Your guards' hands find their weapons, but nothing more is necessary. You enter the bar, quieter than you found it; most drinkers do their best to pretend they didn't see you.",
+bar_descTriTach,BarPrintDesc,$faction.id == tritachyon,ShowImageVisual space_bar,"休息室的墙面上被复杂而精致的镀金几何图形装饰得富丽堂皇, 那些被 冷光灯照射下而映射出神秘淡蓝色的黑色大理石柱, 则毫不费力地悬挂在 半空中. 其中, 无论是处事圆滑的速子企业家或是西装革履的高级职员, 都在为彼此购买价值不菲的鸡尾酒的同时低声谈论着大宗贸易合同的各个 事项. 其中不乏有几位看似误入此处的人正坐在低矮的座位上, 一边小口 饮酒一边局促不安的瞥向从全息投影装置投射出的那些若隐若现的抽象艺术.",
+bar_descPirate,BarPrintDesc,$faction.id == pirates,ShowImageVisual pirate_bar,"昏暗的酒吧里杂揉着呼喊、汗水以及嘈杂音乐的脉动. 被污迹斑斑的墙面 所包围着的粗野大汉咆哮着敲打着酒杯, 围做一团的海盗们掏出枪械并 佯装战斗姿态对着面前的同伴们放肆嘲笑. 那些喝得东倒西歪并配备军用 级生化改装的雇佣兵们则将属于他的""轨道轰炸"" 一饮而尽. 而坐在烟雾 缭绕的吧台外看不清面目的匪徒与海盗船长们则得意洋洋的看着这一切.",
+bar_descHegemony,BarPrintDesc,$faction.id == hegemony,ShowImageVisual hegemony_bar,"刚踏入这间拥挤但光线充足的酒吧, 你就被墙上那些大多来自核心世界的 装饰用酒瓶所吸引. 店长与不当班的军官们嬉笑着混在一起, 只有身着 制服的店员正不可开交的为这儿的顾客们提供酒水服务. 而一处角落里, 一群海军学员又喊又唱, 绝望地享受着最后一次轮班前的自由时光.",
+bar_descDiktat,BarPrintDesc,$faction.id == sindrian_diktat,ShowImageVisual space_bar,"You enter the bar, leaving the noisome propaganda broadcasts of the throughway behind. Off-duty labourers drink away their ration credits dutifully at benches set beneath Diktat insignia. In one corner a cadre of finely dressed officer-bureaucrats calls for another round. Even here, a larger-than-life holo of the Lion of Sindria looks down on you as you decide what to do.",
+bar_descPerseanLeague,BarPrintDesc,$faction.id == persean,ShowImageVisual space_bar,"As you enter the bar, you sense a lively tension between the crews from across the League worlds. Dour Kazeronians in fine uniforms drink spirits while proud but poor Mayasurans down pints of rice-beer. A crew of Tylians trade rounds and boasts with a couple Zaganian bridge officers who are making a poor example of Luddic temperance. Glowing displays show media feeds from all the worlds of the League, and their speakers contribute to a dull roar of human white noise.",
+bar_descLuddicChurch,BarPrintDesc,$faction.id == luddic_church,ShowImageVisual space_bar,You duck past notices encouraging temperance and restraint as you enter the bar. Someone is playing a stringed instrument in an alcove. A row of handworked samovars along the bar suggest to you that tea is served as often as the weak brew favored by the crew of rough-looking laborers at the bar. Many of the patrons at tables are booths seem to be off-worlders or local unbelievers huddling in the closest analog to a den of sin that can be found.,
+bar_descLuddicPath,BarPrintDesc,$faction.id == luddic_path,ShowImageVisual space_bar,"A weathered brute from the local vice squad stares rudely as you pass, but does not stop you as you enter the door. They want you to know that they could shut the place down at any time - but an illicit teahouse-bar is a useful conduit with the commerce required to carry out holy war. Inside it is dim, the ceiling low, and the crowd packed. The scent of drug fumes and cheap liquor compete with bodies that disdain modern enzyme soaps.",
+,,,,,
+# TriTach Loan Intel,,,,,
+ttli_greetingMain,PickGreeting,$ttli_isPlayerContact score:1000,"ShowPersonVisual
+CallEvent $ttli_eventRef putValuesInMemory
+FireBest PrintTTLIGreeting
+FireAll PopulateTTLIOptions
+FireAll AdjustTTLIOptions",,
+ttli_greetingSoon,PrintTTLIGreeting,,,"The Tri-Tachyon investor appears on your comm-screen and recognizes you immediately.
+
+""Why, hello again, $playerName,"" $heOrShe says. ""I trust your ventures have been profitable?""",
+ttli_greetingLater,PrintTTLIGreeting,$ttli_daysRemaining < 60,"SetTextHighlightColors hColor
+SetTextHighlights $ttli_repaymentAmount","你的速子债权人出现在通讯面板上并立即对你说道. ""可爱的家伙, 你还活着. 如果现在就能将我们约定的 $ttli_repaymentAmount 还给我, 那就最好不过了.""
+",
+ttli_greetingSoonMajor,PrintTTLIGreeting,$ttli_isMajorLoan score:100,,"速子投资者出现在你的通讯屏幕上, $heOrShe 正十指交叉, 并等待下文.",
+ttli_greetingLaterMajor,PrintTTLIGreeting,"$ttli_isMajorLoan score:100
+$ttli_daysRemaining < 60",,"速子投资者出现在你的通讯屏幕上, 欲言又止的 $heOrShe 似乎正想着某些 有趣的事情, 但终究只是笑了笑, 并做了个小动作让你继续说下去.",
+ttli_payLoanOpt,PopulateTTLIOptions,,,,0:ttli_payLoan:支付 $ttli_repaymentAmount 以偿还贷款
+ttli_extendLoanOpt,PopulateTTLIOptions,!$ttli_loanWasExtended,,,10:ttli_extendLoan:冷静地解释你需要更多的时间来偿还贷款
+ttli_notPayingOpt,PopulateTTLIOptions,,,,20:ttli_notPaying:告诉 $himOrHer 你将无法偿还贷款
+ttli_neverMindOpt,PopulateTTLIOptions,,,,"100:ttli_neverMind:""对不起, 我找错了人了, 但我会尽快与你联系."""
+ttli_disablePayOpt,AdjustTTLIOptions,!CallEvent $ttli_eventRef canPay,"SetEnabled ttli_payLoan false
+SetTooltip ttli_payLoan ""你没有足够的星币来偿还贷款.""",,
+ttli_payLoan,DialogOptionSelected,$option == ttli_payLoan,"CallEvent $ttli_eventRef payLoan
+FireBest TTLIPayLoanResponse",,0:ttli_continue:继续
+ttli_payLoanResp,TTLIPayLoanResponse,,,"""合作愉快!"" $heOrShe 咧嘴笑着说道, 在闲聊几句后, 就迅速切断了与你的 通讯链接, 留下的只有正不断旋转的速子徽标与屏幕前发呆的你.",
+ttli_payLoanRespMajor,TTLIPayLoanResponse,$ttli_isMajorLoan,,"""有趣, 我们会再见面的."" $heOrShe 微笑着切断了通讯链接.",
+ttli_extendLoan,DialogOptionSelected,$option == ttli_extendLoan,"CallEvent $ttli_eventRef extendLoan
+CallEvent $ttli_eventRef putValuesInMemory
+FireBest TTLIExtendLoanText
+CallEvent $ttli_eventRef applyExtendLoanRepLoss",,0:ttli_continue:继续
+ttli_extendLoanText,TTLIExtendLoanText,,"SetTextHighlightColors hColor hColor
+SetTextHighlights $ttli_extensionDays $ttli_repaymentAmount","$HeOrShe 皱着眉头, 其僵硬的表情看起来如同生化机械在模仿人类失望情绪般木讷. ""我很遗憾听到这个消息, 但..."" $HeOrShe 轻声笑了笑并说道: ""你仍有选择的余地.""
+
+""首先你的还款期限被延长了 $ttli_extensionDays 天, 但所欠额度也增加至 $ttli_repaymentAmount."" 在切断通讯前, 这名速子""投资者""还解释道: ""我非常看重此次交易, 如果你依旧逾期不还, 那我就不得不采取某些特殊行动.""
+
+呆坐在屏幕前的你至今都无法忘记对方切断通讯前那冰冷的目光.",
+ttli_extendLoanTextMajor,TTLIExtendLoanText,$ttli_isMajorLoan,"SetTextHighlightColors hColor hColor
+SetTextHighlights $ttli_extensionDays $ttli_repaymentAmount","$HeOrShe 完美地皱了皱眉, 然后转过身, 你隐约从屏幕那边听到 $himOrHerself的 低声细语: ""动机还不够充分... 那么该怎么解决这个问题呢?"" 突然出现的 $heOrShe 似乎早已 预料到这种情况, 并宽宏大量地解释道: ""你的还款期限被延长了 $ttli_extensionDays 天, 但所欠 额度被增加到 $ttli_repaymentAmount. 喔, 顺便说一下, 不守信誉的坏家伙 会收到一份加倍的特殊奖励."" 表情奇怪的 $heOrShe 在切断通讯前笑着说道.
+
+看来你以后得小心行事了.",
+ttli_notPaying,DialogOptionSelected,$option == ttli_notPaying,"FireBest TTLINotPayingText
+CallEvent $ttli_eventRef notPaying",,0:ttli_continue:继续
+ttli_notPayingText,TTLINotPayingText,,,"$HisOrHer 的脸在瞬间变成了一副没有任何表情的面具. ""我明白了, 真不幸.""$HeOrShe 若有所思的看了你一小会, 冷声道: ""我不想浪费时间来细数你将 面临的报复."" 冷笑的 $HisOrHer 忽然凑近屏幕: ""真是一笔好买卖.""
+
+随后对方切断了通讯链接.",
+ttli_notPayingTextMajor,TTLINotPayingText,$ttli_isMajorLoan,,"$HeOrShe 只是微微歪了歪 $hisOrHer的头, 并让额头挤了条难以察觉的皱纹. ""再见."" 面无表情的 $heOrShe 切断了通讯链接.
+",
+ttli_endContinue,DialogOptionSelected,$option == ttli_continue,"ShowDefaultVisual
+EndConversation",,
+ttli_endNeverMind,DialogOptionSelected,$option == ttli_neverMind,"ShowDefaultVisual
+EndConversation",满脸尴尬的你急匆匆地切断了通讯链接.,
+"# TriTach loan, recorded message on next market visit",,,,,
+ttli_noRepaymentNextMarketOpen,MarketPostOpen,$global.ttli_unpaidEventRef != null score:1000,,"当你的 $shipOrFleet 还未切断本地通讯链接时, 你的信息队列里就收到了 一则优先度相当高的警报.",0:ttli_continue2:查看消息记录
+ttli_noRepaymentMessage,DialogOptionSelected,$option == ttli_continue2,"CallEvent $global.ttli_unpaidEventRef noPaymentMessage
+AddText ""你看到了那位速子投资者, $HisOrHer 的脸如同一副没有任何表情的面具. \""真不幸.\"" $HeOrShe 看上去若有所思并冷声道:\""我不想浪费时间来细数 你将面临的报复.\"" 随后录音结束.""",,0:ttli_continue3:继续
+ttli_noRepaymentMessageMajor,DialogOptionSelected,"CallEvent $global.ttli_unpaidEventRef isMajorLoan
+$option == ttli_continue2","CallEvent $global.ttli_unpaidEventRef noPaymentMessage
+AddText ""你再次想起这个名字, 以及屏幕上出现的这位速子投资者的不老面孔. 在录音结束前, $heOrShe 只说了一句: \""我很失望.""",,0:ttli_continue3:继续
+ttli_noRepaymentMessageEnd,DialogOptionSelected,$option == ttli_continue3,"unset $global.ttli_unpaidEventRef
+ShowDefaultVisual
+EndConversation",,
+,,,,,
+# TriTach loan bounty hunter,,,,,
+ttli_bountyHunterHail,BeginFleetEncounter,"$ttli_bountyHunter score:1000
+!$ignorePlayerCommRequests","AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,
+ttli_bountyHunterText,OpenCommLink,"$entity.ttli_bountyHunter score:1000
+!$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
+SetShortcut cutCommLinkNoText ""ESCAPE""","""老板要我带 $entity.ttli_hisOrHer 向你问好."" 赏金猎人冷笑道.
+
+通讯链接在噼啪声中突然中断.",cutCommLinkNoText:继续
+,,,,,
+"# scientist/AI core bar event, cache interaction",,,,,
+saic_openDialog,BeginSalvage,$saic_eventRef != null score:1000,"CallEvent $saic_eventRef putValuesInMemory
+FireBest SAICPrintInitialText
+ShowDefaultVisual
+SetShortcut saic_leave ""ESCAPE""",,"saic_giveCore:将核心放入学者提供的屏蔽箱内, 并尽快离开
+saic_takeCore:将 AI 核心留给自己
+saic_leave:离开"
+saic_initialText,SAICPrintInitialText,,,"你的 $shipOrFleet 到达了$saic_marketOnOrAt $saic_marketName 酒吧内 学者 所提供的坐标点, 正如 $saic_heOrShe 所言, 这处科技藏匿点不仅包含了大量 人之领 时代的产品与技术, 且至今都未 被他人捷足 先登. 不久后, 你收到一则打捞人员的 汇报, 称发现了一个 带有 速子科技标志, 且其半径两米内发射有奇异动态 磁场的上锁箱子.
+
+或许这就是至今都没有任何探险队发现这处藏匿点的原因, 毕竟远程传感器 会错误地将其解读为毫无价值的碎片云. 那么问题来了, 现在的你是遵守 承诺将该 AI 核心放入屏蔽箱内, 并在到达下一港口后将其快递出去, 还是给自己留着? 毕竟那位 '学者' 可并不是什么重要人物.",
+saic_leaveSel,DialogOptionSelected,$option == saic_leave,DismissDialog,,
+saic_giveCoreSel,DialogOptionSelected,$option == saic_giveCore,,"屏蔽箱随着动力螺栓的啪嗒声而悄然关闭. 并发射出一种一次性编码的 超波脉冲. 你再三确认无误后, 就下达了启程返航的命令. 如果有机会的话, 你想再次与那位学者见面, 看看是否能透露些找到这些藏匿点的小窍门, 当然那时就得确认附近是否有海盗或其他什么人在偷听你们的秘密谈话了.",saic_continueGiveCore:把剩下的东西一并拿走
+saic_takeCoreSel,DialogOptionSelected,$option == saic_takeCore,,"你打开了这曾属于速子科技的箱子, 并在其内发现了一个透露着深邃流光的 阿尔法核心, 它看起来依旧充满了活力. 你脸上的微笑逐渐被这冰冷的核心 与脑内浮现出的陌生思想所淹没. 你立即下达了将学者的屏蔽箱从气闸门 那扔出的命令. 如果想在乱世中有所成就, 谎言与背叛才是你真正所需要的.
+",saic_continueTakeCore:把剩下的东西一并拿走
+saic_continueLootGiveCore,DialogOptionSelected,$option == saic_continueGiveCore,CallEvent $saic_eventRef genLootNoCore,,
+saic_continueLootTakeCore,DialogOptionSelected,$option == saic_continueTakeCore,CallEvent $saic_eventRef genLootWithCore,,
+,,,,,
+# cryosleeper interaction after defeating guardian,,,,,
+cryo_infoText,BeginSalvage,$customType == derelict_cryosleeper score:1000,"SetShortcut defaultLeave ESCAPE
+$usable = true
+SetTextHighlights 10","The long-haul cryosystems were built to last for centuries of interstellar travel so it's no surprise that most of the pod-support machinery reads as functional. While safe sleeper revival is beyond the capability of your fleet, a colony established within 10 light-years of this location could benefit from a huge influx in population if it built facilities to awaken long-haul sleepers.
+
+Your executive officer cautions that it's unknown whether having sleepers make up a large percentage of a colony's population would cause any physical or psychological issues down the line.",100:defaultLeave:离开
+,,,,,
+# Coronal Tap interaction,,,,,
+cTap_defenderDesc,TriggerAutomatedDefenses,$customType == coronal_tap score:1000,SalvageDefenderInteraction,"As your $shipOrFleet moves into a close holding orbit, an executive summary of the hypershunt's specifications is helpfully presented by your TriPad's pseudo-AI assistant.
+
+The bridge sounds an alert as several previously undifferentiated shapes detach themselves from the superstructure and smoothly accelerate towards your fleet just as you finish reading, ""-and for reasons of safety, automated defense drones are no longer a standard feature.""
+
+Your tactical officer waves for your attention, ""We're close enough to the magfield generated by the megastructure that the anticipated combat volume should be unaffected by the star's corona. Mostly. However,"" they examine their console, ""The hostiles, they're... unknown profile. Incoming fast."" They are starting to look concerned, and in a brittle voice say, ""This might be something new, captain.""",
+cTap_infoText,BeginSalvage,"$customType == coronal_tap score:1000
+!$usable","$crewReq = 1000 0
+$metalsReq = 20000 0
+$tpReq = 5000 0
+ShowResCost crew $crewReq metals $metalsReq true rare_metals $tpReq true","Salvage crews board the structure at key points and soon reports come in of extensive wear and damage. It is difficult to assess the entire structure in detail, but it is clear that it is not operable in its current state.
+
+However, as with most mega-scale Domain technology from the late pre-Collapse era, the $nameInText features fantastic self-repair capabilities which requires only sufficient resources to be made available.",0:cTap_continue:Continue
+cTap_infoTextRepaired,BeginSalvage,"$customType == coronal_tap score:1000
+$usable
+!$beingRepaired",FireBest CTapPrintEffect,This structure appears to be fully functional.,100:defaultLeave:Leave
+cTap_infoTextBeingRepaired,BeginSalvage,"$customType == coronal_tap score:1000
+$usable
+$beingRepaired",FireBest CTapPrintEffect,This structure is currently undergoing automated self-repair which should be completed in short order.,100:defaultLeave:Leave
+cTap_printEffect,DialogOptionSelected,$option == cTap_continue,"SetTextHighlights 10 1 ""hypershunt tap""
+FireBest CTapCheckCanAfford
+FireBest CTapDisableRepairOptionIfNeeded","Your TriPad chimes in with a helpful analysis: if brought online, this structure allows a colony within 10 light-years to establish 1 additional industry, provided it has a hypershunt tap installed and can maintain a healthy supply of transplutonics.
+
+Ancient schematics in the TriPad's memory indicate a particular cargo area dedicated to storing these ""taps"", but salvage crews report that it is empty.
+
+That Tri-Tachyon would have this information so readily available in their standard orbital works expert system database gives you just a moment of pause.","0:cTap_repair:Offload sufficient resources to repair the structure
+100:defaultLeave:Leave"
+cTapCheckCanAfford,CTapCheckCanAfford,"$player.metals >= $metalsReq
+$player.rare_metals >= $tpReq
+$player.crew >= $crewReq",$canAfford = true 0,,
+cTapDisableRepair,CTapDisableRepairOptionIfNeeded,!$canAfford,SetEnabled cTap_repair false,,
+cTapRepairSel,DialogOptionSelected,$option == cTap_repair,"RemoveCommodity metals $metalsReq
+RemoveCommodity rare_metals $tpReq
+$usable = true
+$beingRepaired = true 5
+FireBest CTapRepairInitiatedText",,100:defaultLeave:Leave
+cTapRepairInitText,CTapRepairInitiatedText,,,"Your crews finish offloading the raw materials and you send an activation signal to the structure's distributed repair nodes.
+
+There's barely any reaction at first, just a smattering of previous undetected relays pinging one another through the superstructure. Your science officer assures you that the repair rate will increase exponentially, pulling up a display showing the relay pings expanding outward and the energy transmission curve steadily rising. After only minutes, despite little visual change, the overall heat output on sensors has increased dramatically. Whatever is quickening in the heart of this celestial machine...  
+
+""Captain,"" your science officer interrupts your thoughts hesitantly, ""We may wish to pull the fleet back by a hundred klicks or so."" You nod and give the order.
+
+The $nameInText should be online in short order.",
+,,,,,
+,,,,,
+"# arrived at market, debt, check whether some crew leaves",,,,,
+debt_effectCheck,MarketPostDock,"$tradeMode != NONE
+MarketCMD checkDebtEffect score:1000",MarketCMD applyDebtEffect,,
+debt_effectContinue,DialogOptionSelected,$option == marketCmd_checkDebtContinue,"ShowDefaultVisual
+FireBest MarketPostDock",,
+genericMarketArrivalEventContion,DialogOptionSelected,$option == marketArrivalEventContinue,"ShowDefaultVisual
+FireBest MarketPostDock",,
+,,,,,
+"# arrived at market, check whether some mercenary officers try to leave",,,,,
+mercs_leavingInitial,MarketPostDock,"$tradeMode != NONE
+MarketCMD checkMercsLeaving score:500",,"As your $shipOrFleet docks at $entity.name, you receive a high-priority call from one of the mercenary officers in your employment.",mercs_answer:Accept the comm request
+mercs_leavingOpenComm,DialogOptionSelected,$option == mercs_answer,FireBest MercsLeavingGreeting,,
+mercs_checkLeaving,MercsLeavingGreeting,,"ShowPersonVisual
+FireBest MercLeavingOptions","""Greetings, commander! My contracted time is up, and I'd like to think we've both benefited from the arrangement.
+
+Now, I think I'll have a go at spending all the credits I've earned - little chance to do that cooped up on a ship in the middle of nowhere, is there?""",
+mercs_checkLeavingInDebt,MercsLeavingGreeting,$player.inDebt,"ShowPersonVisual
+FireBest MercLeavingOptions","""Ah, commander."" $HeOrShe has put on a slightly pained expression, but is clearly willing to power through an uncomfortable conversation.
+
+""Please accept my condolences for your current state of financial insolvency.
+
+As per the conditions set out in our agreement, I now have with the option to terminate our contract - an option that I am choosing to exercise.""",
+mercs_leavingOptions,MercLeavingOptions,,"SetStoryOption mercs_convince 1 convinceMerc ui_char_spent_story_point_leadership ""Extended mercenary officer's contract""",,"mercs_convince:Convince $himOrHer to extend the contract
+mercs_letGo:Wish $himOrHer well in $hisOrHer future endeavors
+mercs_letGoJerk:Tell $himOrHer off for $hisOrHer disloyalty"
+mercs_convincedOpt,DialogOptionSelected,$option == mercs_convince,"MarketCMD convinceMercToStay
+ShowDefaultVisual
+EndConversation DO_NOT_FIRE","With a charismatic display of appeal to $hisOrHer ambition and ego, along with the implication - not promise - that good fortune is just around the corner, you're able to convince $himOrHer to sign an extension to the contract.",mercs_leaveContinue:Continue
+mercs_letGoOpt,DialogOptionSelected,$option == mercs_letGo,"MarketCMD mercLeaves
+ShowDefaultVisual
+EndConversation DO_NOT_FIRE","You accept $hisOrHer decision professionally and, after exchanging a few pleasantries, cut the comm link.",mercs_leaveContinue:Continue
+mercs_letGoOptJerk,DialogOptionSelected,$option == mercs_letGoJerk,"MarketCMD mercLeaves
+$player.wasJerkToMerc = true 1000
+ShowDefaultVisual
+EndConversation DO_NOT_FIRE","The mercenary seems none too pleased by the dressing-down, as evidenced by $himOrHer cutting the connection while you were in the middle of a particularly scathing analysis of $hisOrHer ancestry.",mercs_leaveContinue:Continue
+mercs_leaveContinue,DialogOptionSelected,$option == mercs_leaveContinue,FireBest MarketPostDock,,
+,,,,,
+"# delivery mission, arrived at market",,,,,
+delivery_checkCompletion,MarketPostDock,"$tradeMode != NONE
+DeliveryMission checkCompletion score:100",,,deliveryMission_continue:Continue
+delivery_checkCompletionCont,DialogOptionSelected,$option == deliveryMission_continue,DeliveryMission completeMissions,,
+delivery_completedButNoDocking,MarketPostDock,"!$delivery_noCompleteShown
+$tradeMode == NONE
+DeliveryMission checkCompletion score:100","$delivery_noCompleteShown = true 0
+FireBest MarketPostDock",你无法在这种情况下完成运输合同.,
+,,,,,
+# failed delivery bounty hunter,,,,,
+dmi_bountyHunterHail,BeginFleetEncounter,"$dmi_bountyHunter score:1000
+!$ignorePlayerCommRequests","AddText ""你遇到了 $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,
+dmi_bountyHunterText,OpenCommLink,"$entity.dmi_bountyHunter score:1000
+!$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
+SetShortcut cutCommLinkNoText ""ESCAPE""","""$entity.dmi_name 叫我好好替 $entity.dmi_hisOrHer '问候'你一下, "" $entity.dmi_hunter 咆哮到. ""如果你还没想起 $entity.dmi_himOrHer 是谁, 但你应该记得某人曾委托你运送过 $entity.dmi_commodity!""
+
+通讯链接在噼啪声中被骤然切断.",cutCommLinkNoText:继续
+,,,,,
+# red planet story event - talk to pilot,,,,,
+psi_pilotGreeting,PickGreeting,$psi_isPilot score:1000,"ShowPersonVisual
+CallEvent $psi_eventRef prepare
+$talkedTo = true
+SetShortcut cutCommLink ""ESCAPE""","$personName 回头看了你一眼, 并继续埋头苦干, 你从不太清晰的通讯 屏幕内看到了 $personFirstName 正从事着比那只会喝闷酒的同伴更有 意义的维修作业. 不一会儿 $HeOrShe 停止了手头的工作并走到屏幕前, ""所以...  你已经知道那个故事了."" $HeOrShe 平静地说道, 随后 $HeOrShe 叹了口气: ""要是能让那该死的破烂篓子闭嘴该多好...""
+
+""不过我并不担心这会给我惹上什么麻烦, 因为你不是第一个来找我的人, 但这情报并不是免费的, 所以那个星球的位置对你来说值多少星币?""","0:psi_barter:Barter with $personName then consider the price
+1:cutCommLink:""Forget it."" Cut the comm-link"
+psi_pilotGreetingTalkedTo,PickGreeting,"$psi_isPilot score:1000
+$talkedTo","ShowPersonVisual
+CallEvent $psi_eventRef prepare
+SetShortcut cutCommLink ""ESCAPE""","""又是你, 所以你准备好足够的星币了吗?""","0:psi_barter:Barter with $personName, then consider the price
+1:cutCommLink:""Forget it."" Cut the comm-link"
+psi_pilotBarter,DialogOptionSelected,$option == psi_barter,"SetTextHighlights $psi_credits
+FireBest PSIDisablePayOptionIfNeeded
+SetShortcut cutCommLink ""ESCAPE""","你开始与 $himOrHer 讨价还价起来, 并声称那个红色行星上有未知的敌对势力, 且 $himOrHer 也已经把情报卖给了别人. ""好吧, 好吧."" $heOrShe 无奈的摆了摆手, 并说道: ""爱冒险的舰长, 你赢了.""
+
+最后, 你们在 $psi_credits 这个数字上达成了一致.","0:psi_pay:支付 $psi_credits 来获取神秘红色行星的具体位置
+1:cutCommLink:拒绝其提议"
+psi_disableIfCanNotPay,PSIDisablePayOptionIfNeeded,!CallEvent $psi_eventRef canPay,"SetEnabled psi_pay false
+SetTextHighlightColors bad
+SetTextHighlights $psi_credits
+AddText ""不幸的是, 你现在手头仅有 $psi_playerCredits 可用.""
+SetTextHighlights $psi_playerCredits",,
+psi_payPilot,DialogOptionSelected,$option == psi_pay,"CallEvent $psi_eventRef payPilot
+ShowDefaultVisual
+EndConversation","在将星币转入对方账户后, 你就收到了需要的行星坐标. ""很高兴认识你""
+
+$personName 在你回应前就切断了通讯链接.",
+,,,,,
+# red planet interaction,,,,,
+psi_redPlanetOpenDialog,OpenInteractionDialog,$psi_planet score:1000,"SalvageGenFromSeed
+ShowDefaultVisual
+FireBest SalvageCheckHostile","你的 $shipOrFleet 停在了 $entityName 的一处稳定轨道旁.
+
+传感器很难对面前这些包裹于整颗行星表面上的巨型""薄膜""做出准确评估. 随后你的首席科研人员主动将一些含有奇特参数的干涉液小心地置入其中, 数秒后, 被影响的区域奇迹般的转变成了绿色, 尽管只维持了短短一瞬, 但也成功让亚人工智能初步识别出一种具有高度不寻常性质却极其稳定的 行星级能量护盾.",
+psi_defenderDesc,TriggerAutomatedDefenses,$psi_planet score:1000,SalvageDefenderInteraction,"当 $shipOrFleet 准备深入此处时, 你的传感器面板上却骤然出现大量暗红色的小点.",
+psi_continuePostDefenders,BeatDefendersContinue,$psi_planet score:1000,,"你的 $shipOrFleet 成功靠近了 $entityName, 且期间并没有遭遇到任何意外.
+",0:salBeatDefendersContinue:继续
+psi_beatDefenders,BeginSalvage,$psi_planet score:1000,SetShortcut defaultLeave ESCAPE,"在经过更细致的扫描后发现, 该能量场的密度并非完全一致, 但也可能由于 地表上的部分供电模块因年久失修而损坏所造成的. 随后你的工作人员表示 他们接受到一则通过地面基站所发射的遇险信号.
+
+看起来因设备老化, 使你收到的这则信息内容不仅语句重复且部分乱码. 但这残破的信息内仍保留有部分重要情报: 部分研究人员被困于此处 - 一处秘密的速子研究机构 - 拥有最尖端的全自动安全防御系统 -      因第一次 AI 战争的打响而被莫名执行的最高应急命令 - 必须击落任何试图离开该行星的星舰.","0:psi_explore:派遣打捞队前往主控中心
+100:defaultLeave:离开"
+psi_exploreFacility,DialogOptionSelected,$option == psi_explore,,"你派遣了一艘带有应急护盾发生器的穿梭机穿过了护盾的一处薄弱点. 并成功在主控中心安全着落. 机组人员很快就突破该设施并彻底关闭护盾, 随后, 大批载有重型机械的大型星舰纷纷着陆, 打捞作业将会迅速展开.",0:psi_salvage:进行打捞作业
+psi_salvage,DialogOptionSelected,$option == psi_salvage,RedPlanet genLoot,,
+,,,,,
+# salvage operations on planets with ruins,,,,,
+salRuins_scattered,PopulateOptions,"$market.isSurveyed
+$market.isPlanetConditionMarketOnly
+$market.mc:ruins_scattered
+!$market.ruinsExplored","$salvageSpecId = ruins_scattered
+FireBest DisableRuinsExploreIfNeeded","零散破碎的圆顶城市散布于表面之上, 也许里面就藏有一些有价值的物资.",5:salExplore:探索废墟
+salRuins_widespread,PopulateOptions,"$market.isSurveyed
+$market.isPlanetConditionMarketOnly
+$market.mc:ruins_widespread
+!$market.ruinsExplored","$salvageSpecId = ruins_widespread
+FireBest DisableRuinsExploreIfNeeded","根据雷达上那些辐射源光点, 你可以在 $market 找到不少发泡结构 和独特的复合硬质合金轧辊, 而这就是 人之领 后期扩张时努力殖民的证据.
+",5:salExplore:探索废墟
+salRuins_extensive,PopulateOptions,"$market.isSurveyed
+$market.isPlanetConditionMarketOnly
+$market.mc:ruins_extensive
+!$market.ruinsExplored","$salvageSpecId = ruins_extensive
+FireBest DisableRuinsExploreIfNeeded","$market 的整个表面布满了城市的废墟, 从破碎的市中心一直延伸 出去, 可以发现不少断裂的铁轨线, 废弃工厂, 水培农场以及通讯塔的骨架.",5:salExplore:探索废墟
+salRuins_vast,PopulateOptions,"$market.isSurveyed
+$market.isPlanetConditionMarketOnly
+$market.mc:ruins_vast
+!$market.ruinsExplored","$salvageSpecId = ruins_vast
+FireBest DisableRuinsExploreIfNeeded","$market 覆盖着巨大的废墟,城市,工厂,矿山,农场,住宅. 死亡与 救助物资, 货物, 工具以及武器交织在一起. 此地正是 人之领 星系殖民化 和霸权项目 傲慢的坟墓.",5:salExplore:探索废墟
+salRuins_alreadyExplored,PopulateOptions,"$market.hasRuins
+$market.ruinsExplored
+$market.isPlanetConditionMarketOnly",,"$market 地面上的废墟基本已被夷为平地, 如果仍想进一步 探索就需要 永久性设施的支持.",
+salRuins_hostileNearby,DisableRuinsExploreIfNeeded,HostileFleetNearbyAndAware,SetEnabled salExplore false,"附近有支敌方舰队正逐渐向你靠近, 而使你无法探索该行星.",
+salRuins_noHostileNearby,DisableRuinsExploreIfNeeded,!HostileFleetNearbyAndAware,"SalvageGenFromSeed
+$leaveGoesToMenu = true 0
+$doNotDismissDialogAfterSalvage = true 0
+$salvageLeaveText = ""Go back""","如想长期勘探废墟可能需要一处殖民地, 但一支打捞小组足以将废墟内的 大部分有价值的物资一扫而空.",
+,,,,,
+salRuins_leaveToMenu,DialogOptionSelected,"$option == defaultLeave score:1000
+$leaveGoesToMenu","unset $leaveGoesToMenu
+FireAll PopulateOptions",,
+salRuins_postSalvagePerform,PostSalvagePerform,$market.hasRuins score:1000,"$market.ruinsExplored = true
+UpdateMemory
+FireAll PopulateOptions",,
