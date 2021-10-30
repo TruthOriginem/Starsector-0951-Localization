@@ -65,7 +65,7 @@ gaATGkantaMeeting1,DialogOptionSelected,$option == gaATG_kantaMeeting1,,"小个�
 
 他脖子僵硬地点了点头，微微一鞠躬，在法廷前对你说:""你有一个 Kanta 家族 Nashyan 的标志，她是家族外围的人! 但 Nashyan 并没有给你这个标志{-}我核查过了。""
 
-现在卫兵们做出反应，放下了武器，不再对准你。 ",gaATG_kantaMeeting2:继续,
+现在卫兵们做出反应，放下了武器，不再对准你。",gaATG_kantaMeeting2:继续,
 gaATGkantaMeeting2,DialogOptionSelected,$option == gaATG_kantaMeeting2,,"Kanta 抬起一只戴着手套的胳膊强调，又说道:""我们知道家族是安全的，所以我们不会要你的命，至少今天不会。""
 
 ""你很幸运，""医生微笑着小声说道，然后大声说，""伟大的领主很想知道，为什么一个小偷敢在强大的 Kanta 前露脸? 领主会用艺术性的方法纠正那些错误地认为可以从她那里偷走东西的人。""
@@ -159,7 +159,7 @@ AdjustRepPerson zal COOPERATIVE 20","在一个突击穿梭机的舱室里，你�
 
 ""我想我应该感谢你，舰长，""她说着，从脸上擦去了一层薄薄的碳灰。
 
-""你的进攻让一切毁得多么彻底。至少我们救出了-""她尖锐地看向了两个陆战队员，他们在她后面拖着一个密封的箱子，""注意那个东西！它会拯救我们所有人。""
+""你的进攻让一切毁得多么彻底。至少我们救出了-""她尖锐地看向了两个陆战队员，他们在她后面拖着一个密封的箱子，""注意那个东西! 它会拯救我们所有人。""
 
 你的副官打断了进来，""舰长，我们有麻烦了。""","gaATG_kantaRaidFinished3:""报告。""",
 gaATGkantaRaidFinished3,DialogOptionSelected,$option == gaATG_kantaRaidFinished3,,"当你冲回舰桥的时候大量的信息通过通讯终端涌来。
@@ -193,7 +193,7 @@ gaATGWorkingForKanta1,DialogOptionSelected,$option == gaVIP_informPirate,,"你�
 
 你利用这段时间冷静地解释你自己已经得到了领主 Kanta 的一项任务，去找回她的宠物克隆人 Loke。如果他们能尽可能保证你的任务成功，那也会最符合他们的利益。想象一下如果 Kanta 听说你在践行她的意志时被分心了，她会怎么想。",gaVIP_informPirate2:继续,
 gaATGWorkingForKanta2,DialogOptionSelected,$option == gaVIP_informPirate2,"MakeOtherFleetNonHostile gaATG true
-MakeOtherFleetAvoidContact true","海盗看起来像是{$heOrShe}被速子长矛击中了一样。 
+MakeOtherFleetAvoidContact true","海盗看起来像是{$heOrShe}被速子长矛击中了一样。
 
 ""是{-}是的，舰长。当然。""{$HeOrShe}努力恢复镇定，""请接受我对于您的延误的极大的，深深的歉意。欢迎你继续上路并转{-}转达我对领主最真诚的问候。""
 
@@ -265,7 +265,7 @@ gaATGEpiphanySearch1,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 gaATGEpiphanySearch2,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 !$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 兄弟的情报。""",
 gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 兄弟谈话。你能帮我吗?""",
-gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯连接,
+gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯,
 gaATGEpiphanyAskLoke,DialogOptionSelected,"$option == gaATG_epiphanyAskKidnap
 !$awkwardAskForCotton ","$entity.askedForKidnapperCotton = true
 AdjustRepActivePerson INHOSPITABLE -1
@@ -360,7 +360,7 @@ $setUpCottonMeeting","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
 BarCMD playAmbience
 AddText ""当你走进茶馆时，店主吸引了你的目光，她放下一个玻璃杯，紧张地靠近你。""
-AddText ""\""求你听我说，\"" 她说。 \""我和他以及他的人没有任何关系。你...你不能在这里拒绝他们，舰长。\""""
+AddText ""\""求你听我说，\"" 她说。\""我和他以及他的人没有任何关系。你...你不能在这里拒绝他们，舰长。\""""
 AddText ""她无意中朝着一个桌子瞥了一眼，那里坐着几个穿着某个采矿协会制服的打手。他们都密切关注着你。\""后面的房间。他在等着。我- 我今天什么都没看见。\""""",,"gaATG_meetCottonStart2:去后面的房间
 gaATG_meetCottonAvoid:不去后面的房间",
 gaATGmeetCottonAvoid,DialogOptionSelected,$option == gaATG_meetCottonAvoid,"AddBarEvent gaATG_meetCottonStart2 ""去后面的房间见一见 Cotton 兄弟。"" ""左径打手们明显在公然盯着你看，他们满满的几杯茶就要凉了。""
@@ -563,7 +563,7 @@ AdjustRepPerson kanta VENGEFUL -20
 EndConversation DO_NOT_FIRE
 HideSecondPerson
 HideThirdPerson
-BeginConversation zal true true","Zal 的图像闪烁着，然后稳定了下来。 
+BeginConversation zal true true","Zal 的图像闪烁着，然后稳定了下来。
 
 ""我擅自将 Gargoyle 的一个小把戏注入到他们的网络中。""她得意地笑着。""你介意我登船吗? 他们过不了多久就会发出信号。这附近很快就会被海盗包围，更不用说隐形空雷网络了。""","gaATG_returnLokeZal3:""打开舱门，动作快点。""",
 gaATGreturnLokeZal3,DialogOptionSelected,$option == gaATG_returnLokeZal3,"AddTextSmall ""'已营救' Elissa Zal"" highlight
@@ -715,10 +715,10 @@ Baird 双手合拢，盯着影像，又敲击着手指，似乎在释放能量�
 教务长的注意力回到了她周围的世界。""Scylla 在哪? 她确保拿到设计图后应该到这里来报告的。""",gaATG_lastReturnWhereAreThey:继续,
 gaATGlastReturnWhereAreThey,DialogOptionSelected,$option == gaATG_lastReturnWhereAreThey,,"她在控制台桌面上敲击着一把钥匙，声音中带着一丝愤怒""Sebestyen。让 Coureuse 和-}对，和 Zal。送她们进来""她摇了摇头，给你一个{'看看我们要处理什么事'}的表情。
 
-在她要转身离开时，通讯器发出了响声。她转过来，""怎么了，Alviss? ... 她在不在空间站? 别结结巴巴的了，说是或是不是。 ... 我知道了。""
+在她要转身离开时，通讯器发出了响声。她转过来，""怎么了，Alviss? ... 她在不在空间站? 别结结巴巴的了，说是或是不是。... 我知道了。""
 
 她轻敲着通讯器，胜利的表情消失了。",gaATG_lastReturnWhereAreThey2:继续,
-gaATGlastReturnWhereAreThey2,DialogOptionSelected,$option == gaATG_lastReturnWhereAreThey2,,"""警卫，给我找到院士 Scylla Coureuse。以及她的-}以及 Elissa Zal。 ... 是的，马上。最高优先级。""
+gaATGlastReturnWhereAreThey2,DialogOptionSelected,$option == gaATG_lastReturnWhereAreThey2,,"""警卫，给我找到院士 Scylla Coureuse。以及她的-}以及 Elissa Zal。... 是的，马上。最高优先级。""
 
 又敲了一下，""以及给我找那个无聊的黑客。是的，我是说 Gargoyle。不，就在通讯中。""","gaATG_lastReturnGargoyle1:继续
 gaATG_lastReturnGargoyle1b:趁着你还可以的时候偷偷喝一杯胜利的喜悦",

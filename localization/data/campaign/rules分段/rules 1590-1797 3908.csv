@@ -5,17 +5,17 @@ gaFCIsirahMercEncounter,BeginFleetEncounter,"$gaFC_isirahMerc score:1000
 FleetDesc
 HailPlayer",,,
 #gaFCScavengerGreeting,OpenCommLink,$entity.gaFCProbe_scavengerPermanentFlag score:1000,"MakeOtherFleetImportant gaFC false
-# remove important tag from finding empty probe","拾荒者舰长在你的通讯面板中闪烁着。""你好。恕我冒昧，你的情况都还好吧? 回到核心世界还有很长的路要走，朋友，我们必须好好照顾彼此。""","gaFC_scavengerAsk:""你找到属于{Galatia}学院的探测器了吗? ""
+# remove important tag from finding empty probe","拾荒者舰长在你的通讯面板中闪烁着。""你好。恕我冒昧，你的情况都还好吧? 回到核心世界还有很长的路要走，朋友，我们必须好好照顾彼此。""","gaFC_scavengerAsk:""你找到属于{Galatia}学院的探测器了吗?""
 cutCommLink:切断通讯",
 gaFCIsirahMercGreeting,OpenCommLink,$entity.gaFC_isirahMerc score:1000,FireAll GAFCIsirahMercHubOptions,"通讯被接通了。
 
-""{$playerName}舰长，""雇佣舰长将双手在{$himOrHer}面前搭成三角状，直截了当地开口了。""你有一些情报，我的雇主想让你和他们分享 - 只和他们分享。""
+""{$playerName}舰长，""雇佣舰长将双手在{$himOrHer}面前搭成三角状，直截了当地开口，""你有一些情报，我的雇主想让你和他们分享 - 只和他们分享。""
 
 然后{$heOrShe}开始等待你的回复，并且看起来对当前的沉默感到十分满意。",,
 gaFCIsirahMercHubReturn,DialogOptionSelected,$option == gaFC_isirahMercHubReturn,FireAll GAFCIsirahMercHubOptions,,,
-gaFCIsirahMercHubOption1,GAFCIsirahMercHubOptions,!$askedWhatInfo,,,"gaFC_isirahMercWhatInfo:""具体是什么情报? """,
+gaFCIsirahMercHubOption1,GAFCIsirahMercHubOptions,!$askedWhatInfo,,,"gaFC_isirahMercWhatInfo:""具体是什么情报?""",
 gaFCIsirahMercHubOption2,GAFCIsirahMercHubOptions,!$letsDeal,,,"gaFC_isirahMercLetsDeal:""不如我们做个交易吧。""",
-gaFCIsirahMercHubOption3,GAFCIsirahMercHubOptions,!$whoWorkFor,,,"gaFC_isirahMercWhoWorkFor:""你的雇主是谁? """,
+gaFCIsirahMercHubOption3,GAFCIsirahMercHubOptions,!$whoWorkFor,,,"gaFC_isirahMercWhoWorkFor:""你的雇主是谁?""",
 gaFCIsirahMercHubOption4,GAFCIsirahMercHubOptions,!$threatsResponded,,,"gaFC_isirahMercRespondThreats:""我可不喜欢受到威胁。""",
 gaFCIsirahMercHubOption5,GAFCIsirahMercHubOptions,,,,"gaFC_isirahMercGetNothing:""你不可能从我这里得到任何情报。""",
 gaFCIsirahMercWhatInfo,DialogOptionSelected,$option == gaFC_isirahMercWhatInfo,"$askedWhatInfo = true
@@ -24,24 +24,24 @@ FireAll GAFCIsirahMercHubOptions","{$HeOrShe}扬了扬{$hisOrHer}眉毛。""我�
 ""自上一站的调查活动结束后，你似乎一直在有目的地四处奔波。我的雇主认为你找到了你想要找的东西，希望你能仅为我们提供这一情报。""",,
 gaFCIsirahMercLetsDeal,DialogOptionSelected,"$option == gaFC_isirahMercLetsDeal
 Call $global.gaFC_ref updateData","Highlight $gaFC_sellOutPrice
-$letsDeal = true","""好，没问题。我的雇主已经授权我支付你{$gaFC_sellOutPrice}信用点，以转移你所拥有的，与{Scylla Coureuse}的当前位置相关的信息。""","gaFC_isirahMercDealDecline:拒绝交易
+$letsDeal = true","""好，没问题。我的雇主已经授权我支付你{$gaFC_sellOutPrice}星币，以转移你所拥有的，与{Scylla}Coureuse}的当前位置相关的信息。""","gaFC_isirahMercDealDecline:拒绝交易
 gaFC_isirahMercDealAccept:接受交易
-gaFC_isirahMercOtherDeal:""不，我是说，如果我想让你忘记我的存在，要花多少钱? """,
+gaFC_isirahMercOtherDeal:""不，我是说，如果我想让你忘记我的存在，要花多少钱?""",
 gaFCIsirahMercAcceptDeal,DialogOptionSelected,$option == gaFC_isirahMercDealAccept,"AddCommodity credits $gaFC_sellOutPrice
 AdjustRepActivePerson COOPERATIVE  5
 AdjustRep $faction.id COOPERATIVE 2
 $global.gaFC_soldOutCoureuseIsirah = true
 Call $global.gaFC_ref soldOutIsirahLead
 Call $global.gaFC_ref updateStage
-MakeOtherFleetGoAway true","你同意了对方的条件，并监督将你舰员将的你所调查的{Scylla Coureuse}的当前位置 - 也就是{Isirah}星系 - 的情报转交给了对方。雇佣兵在监管信息转交的简短过程中表现得精明干练。
+MakeOtherFleetGoAway true","你同意了对方的条件，并监督将你舰员将的你所调查的{Scylla}Coureuse}的当前位置 - 也就是{Isirah}星系 - 的情报转交给了对方。雇佣兵在监管信息转交的简短过程中表现得精明干练。
 
-""我将立即转交信用点转让。我的雇主会觉得这是可以接受的。我们的任务完成了，舰长。""
+""我将立即进行星币转账。我的雇主会觉得这是可以接受的。我们的任务完成了，舰长。""
 
 通信被雇佣兵关闭了。",cutCommLinkNoText:Continue,
-gaFCIsirahMercOtherDeal,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal,,"雇佣兵盯着你，然后说: ""这样啊...那是不可能的。""","gaFC_isirahMercOtherDeal1:""50,000信用点也不行吗? ""
+gaFCIsirahMercOtherDeal,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal,,"雇佣兵盯着你，然后说: ""这样啊...那是不可能的。""","gaFC_isirahMercOtherDeal1:""50,000}星币也不行吗?""
 gaFC_isirahMercHubReturn:""我们还是谈谈别的事吧...""
 gaFC_isirahMercLetsDeal:""那就来谈谈你贿赂我的事吧。""",
-gaFCIsirahMercOtherDeal1,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal1,,"""不行，""{$heOrShe}说。","gaFC_isirahMercOtherDeal2:""100,000信用点如何呢? ""
+gaFCIsirahMercOtherDeal1,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal1,,"""不行，""{$heOrShe}说。","gaFC_isirahMercOtherDeal2:""100,000}如何呢?""
 gaFC_isirahMercHubReturn:""我们还是谈谈别的事吧...""
 gaFC_isirahMercLetsDeal:""那就来谈谈你贿赂我的事吧。""",
 gaFCIsirahMercOtherDeal2,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal2,,"""舰长，有些东西可不是简简单单用钱就能买到的。""
@@ -52,7 +52,7 @@ gaFCIsirahMercOtherDeal2,DialogOptionSelected,$option == gaFC_isirahMercOtherDea
 gaFC_isirahMercLetsDeal:""那就来谈谈你贿赂我的事吧。""
 gaFC_isirahMercGetNothing:""那你就别想从我这得到什么东西了。""",
 gaFCIsirahMercRespondThreats,DialogOptionSelected,$option == gaFC_isirahMercRespondThreats,"$threatsResponded = true
-FireAll GAFCIsirahMercHubOptions","""喔，""雇佣兵歪了歪{$hisOrHer}头。""我威胁你了吗? """,,
+FireAll GAFCIsirahMercHubOptions","""喔，""雇佣兵歪了歪{$hisOrHer}头，""我威胁你了吗?""",,
 gaFCIsirahMercWhoWorkFor,DialogOptionSelected,$option == gaFC_isirahMercWhoWorkFor,"$whoWorkFor = true
 FireAll GAFCIsirahMercHubOptions","""我的雇主。""雇佣兵交叉着{$hisOrHer}双臂。
 
@@ -61,7 +61,7 @@ gaFCIsirahMercGetNothing,DialogOptionSelected,$option == gaFC_isirahMercGetNothi
 $noDeal = true
 MakeOtherFleetGoAway true","在你回答之后，雇佣兵一动不动地坐了足足十秒钟。然后{$heOrShe}闭上了眼睛，点了点{$hisOrHer}头。""我明白了。""
 
-雇佣兵又睁开了{$hisOrHer}眼睛，并就这么直直地看着你，眼皮也不动一下。""真令人失望。再见了，舰长。""","gaFC_isirahMercGetNothing2:""就这样? 你就直接走了吗? ""
+雇佣兵又睁开了{$hisOrHer}眼睛，并就这么直直地看着你，眼皮也不动一下。""真令人失望。再见了，舰长。""","gaFC_isirahMercGetNothing2:""就这样? 你就直接走了吗?""
 cutCommLink:切断通讯",
 gaFCIsirahMercGetNothing2,DialogOptionSelected,$option == gaFC_isirahMercGetNothing2,,"""就这样，""{$heOrShe}说，然后停顿了一会，眼睛一眨不眨。
 
@@ -79,7 +79,7 @@ gaFCTellBairdIsirah1,DialogOptionSelected,$option == gaFC_tellBairdIsirah1,,"{Ba
 ""如果信息是可靠的，那么你可以直接向当地政府了解情况来看看你能查明些什么，这或许会是有效的办法。""她已经进入了演讲的状态。""虚张声势，大概吧。星系内相互竞争的当局可能知道对方的活动; 情报工作与反情报工作。那些不那么谨慎的人可能会被贿赂 - 在你开口之前，我得说我们已经给了你足够的钱，让你不管怎样都能完成这项任务，所以不要再为财务处添乱了。""",gaFC_tellBairdIsirah2:继续,
 gaFCTellBairdIsirah2,DialogOptionSelected,$option == gaFC_tellBairdIsirah2,,"她在照亮她办公室的凸窗前转过了身子，踱步起来，""另一方面，你也可以采取一种不那么直接的方式。某些底层居民和激进人士，甚至是卢德的左径分子，都可能在追踪着{Coureuse}。或者是自己也在找她。我相信你有能力从这些人渣入手。""
 
-她停了下来，面对着你，""并不是所有的问题都能通过简单粗暴的方式解决，""一个微笑出现在了她脸上，""也许，所有的知识都是人类遭受挫折后总结出来的。现在，去吧。等我能联系上{Scylla Coureuse}，你就可以得到报酬。""",cutCommLink:离开,
+她停了下来，面对着你，""并不是所有的问题都能通过简单粗暴的方式解决，""一个微笑出现在了她脸上，""也许，所有的知识都是人类遭受挫折后总结出来的。现在，去吧。等我能联系上{Scylla}Coureuse}，你就可以得到报酬。""",cutCommLink:离开,
 # gaFC SEARCH_ISIRAH generic investigation summary,,,,,,
 gaFCSearchIsirahSummaryComms2,GAFCSearchIsirahSummary,"$isPerson
 $global.gaFC_isirahClues == 1",,"现在只有一项证据表明{Coureuse}在{Laicaille}栖息地，如果你试图以某种方式利用它对当局提出质疑，对方可能会以这只是间接证据为由不予考虑。
@@ -87,14 +87,14 @@ $global.gaFC_isirahClues == 1",,"现在只有一项证据表明{Coureuse}在{Lai
 你得再找一个确凿的证据。",cutCommLink:离开,
 gaFCSearchIsirahSummaryComms3,GAFCSearchIsirahSummary,"$isPerson
 $global.gaFC_isirahClues >= 2","$gaFC_confrontAdmin = true
-Call $global.gaFC_ref updateStage","现在你有了两份不同的证据，你觉得自己已经有足够的筹码去和{Laicaille}栖息地的当局就{Scylla Coureuse}的事进行对质。
+Call $global.gaFC_ref updateStage","现在你有了两份不同的证据，你觉得自己已经有足够的筹码去和{Laicaille}栖息地的当局就{Scylla}Coureuse}的事进行对质。
 
 是时候和{Laicaille}栖息地的执政官谈谈了。",cutCommLink:离开,
 gaFCSearchIsirahSummaryDialog2,GAFCSearchIsirahSummary,$global.gaFC_isirahClues == 1,,"现在只有一项证据表明{Coureuse}在{Laicaille}栖息地，如果你试图以某种方式利用它对当局提出质疑，对方可能会以这只是间接证据为由不予考虑。
 
 你得再找一个确凿的证据。",defaultLeave:离开,
 gaFCSearchIsirahSummaryDialog3,GAFCSearchIsirahSummary,$global.gaFC_isirahClues >= 2,"$gaFC_confrontAdmin = true
-Call $global.gaFC_ref updateStage","现在你有了两份不同的证据，你觉得自己已经有足够的筹码去和{Laicaille}栖息地的当局就{Scylla Coureuse}的事进行对质。
+Call $global.gaFC_ref updateStage","现在你有了两份不同的证据，你觉得自己已经有足够的筹码去和{Laicaille}栖息地的当局就{Scylla}Coureuse}的事进行对质。
 
 是时候和{Laicaille}栖息地的执政官谈谈了。",defaultLeave:离开,
 # gaFC Groombridge Habitat secret relay,,,,,,
@@ -114,15 +114,16 @@ gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,
 gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,你们舰桥上的船员交换了一下眼神 - 他们的舰长又发出了这样得一个命令 - 而你的执行主管向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
 gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的执行主管会监督它们的部署。你则通过{Groombridge}栖息地的投影来跟踪他们的进展，影像十分模糊 - 它被保护得很好导致你的扫描无法穿透，亦或是放射性太强以至于无法很好地读取数据 - 但仍带有一些清晰的细节。很快，在一个靠近致命的空间站核心的损坏工作间里，一团奇怪的东西被发现了。
 
-技术人员和通讯技师开始讨论如何攻破和骇入中继; 你的行动组长咆哮起来，只用一句话就让他们安静了下来: ""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西! ""
+技术人员和通讯技师开始讨论如何攻破和骇入中继; 你的行动组长咆哮起来，只用一句话就让他们安静了下来: ""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
 
-传感器技师大声道: ""我们只需要拦截星系内的信号，对吗? 现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""你的执行主管看着你的传感器技师叹了口气。","gaFC_groombridgeSearch5:""就那么做吧。""",
+传感器技师大声道: ""我们只需要拦截星系内的信号，对吗? 现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""你的执行主管看着你的传感器技师叹了口气。
+","gaFC_groombridgeSearch5:""就那么做吧。""",
 gaFCGroombridgeSearch5,DialogOptionSelected,$option == gaFC_groombridgeSearch5,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
 FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数小时内，中继器发射了一个通讯信号。向外射出的一丝信号被你的领航员投射到了你的旗舰舰桥主全息显示器上，这条线指向{Laicaille}栖息地。不完全是，但已经很接近了。也许是轨道上的另一个中继器。
 
-""我们跟着这条线走就可以了，""你的通讯技师说。",,
+""我们跟着这条线走就可以了。""你的通讯技师说。",,
 gaFCGroombridgeSearchBStart,OpenInteractionDialog,"$id == groombridge_habitat
 $global.gaFC_ghostStory
 Call $global.gaFC_ref updateData
@@ -136,11 +137,11 @@ gaFCGroombridgeSearchB1,DialogOptionSelected,$option == gaFC_groombridgeSearchB1
 
 你的通讯技师举起手，在你点头的时候说，""这比较非常规。但{Groombridge}是无人居住的，所以没有人会对超空间信号的冲洗提出抱怨。""
 
-你的执行主管接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继器，我们该怎样找到它? """,
+你的执行主管接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继器，我们该怎样找到它?""",
 gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继器里通常会有非常强大的辐射屏障，""你的执行主管开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
 gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的执行主管会监督它们的部署。你则通过{Groombridge}栖息地的投影来跟踪他们的进展，影像十分模糊 - 它被保护得很好导致你的扫描无法穿透，亦或是放射性太强以至于无法很好地读取数据 - 但仍带有一些清晰的细节。很快，在一个靠近致命的空间站核心的损坏工作间里，一团奇怪的东西被发现了。
 
-技术人员和通讯技师开始讨论如何攻破和骇入中继; 你的行动组长咆哮起来，只用一句话就让他们安静了下来: ""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西! ""
+技术人员和通讯技师开始讨论如何攻破和骇入中继; 你的行动组长咆哮起来，只用一句话就让他们安静了下来: ""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
 
 传感器技师大声道: ""我们只需要拦截星系内的信号，对吗? 现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""你的执行主管看着你的传感器技师叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
 gaFCGroombridgeSearchB4,DialogOptionSelected,$option == gaFC_groombridgeSearchB4,"$global.gaFC_knowWhereScyllaIs = true
@@ -163,10 +164,10 @@ $postId == administrator
 $market.id == station_kapteyn
 Call $global.gaFC_ref updateData
 $gaFC_stage == SEARCH_ISIRAH score:1000
-!$global.gaFC_knowAboutLeagueOp",,,"gaFC_kapteynBossBother1:""我在找一个叫{Scylla Coureuse}的人。""",
+!$global.gaFC_knowAboutLeagueOp",,,"gaFC_kapteynBossBother1:""我在找一个叫{Scylla}Coureuse}的人。""",
 gaFCKapteynBossBother1,DialogOptionSelected,$option == gaFC_kapteynBossBother1,,"{$HeOrShe}打量着你，舔了舔{$hisOrHer}嘴唇，并稍微思考了一会。
 
-""我也许知道这个人，也许并不。我为什么要告诉你呢? ""","gaFC_kapteynBossBribeStart:""让我们来谈谈钱的事吧。""
+""我也许知道这个人，也许并不。我为什么要告诉你呢?""","gaFC_kapteynBossBribeStart:""让我们来谈谈钱的事吧。""
 gaFC_kapteynBossAppeal:""我是你们中的一员，我们可以合作一下。要知道我可是很有名气的。""
 gaFC_kapteynBossKantaAppeal:""因为，呃，{Kanta}领主这么说了?""
 cutCommLink:切断通讯",
@@ -174,17 +175,17 @@ gaFCKapteynBossBribeStart,DialogOptionSelected,"$option == gaFC_kapteynBossBribe
 Call $global.gaFC_ref updateData","Highlight $gaFC_kapteynBribeCost 
 DoCanAffordCheck $gaFC_kapteynBribeCost gaFC_kapteynBossOfferBribe false","海盗头子稍微往前倾了倾身子。""你成功地吸引了我的注意力，明事理的舰长。""
 
-""如果你能支付...嗯，{$gaFC_kapteynBribeCost}信用点，我就可以帮你 - 并且十分愿意这么做。""","gaFC_kapteynBossBribe:同意付款
-gaFC_kapteynBossBother1:""我们还是再来谈谈这个{Scylla Coureuse}吧。""",
+""如果你能支付...嗯，{$gaFC_kapteynBribeCost}星币，我就可以帮你 - 并且十分愿意这么做。""","gaFC_kapteynBossBribe:同意付款
+gaFC_kapteynBossBother1:""我们还是再来谈谈这个{Scylla}Coureuse}吧。""",
 gaFCKapteynBossKantaAppeal,DialogOptionSelected,$option == gaFC_kapteynBossKantaAppeal,"AdjustRepActivePerson INHOSPITABLE -1
-$wasAnnoying = true","""不她没有，告辞。"" 
+$wasAnnoying = true","""不，她没有，告辞。"" 
 
 海盗头子轻拍了一下通讯控制台，通讯就被断开了，你眼前的屏幕除了噪点以外只剩一片漆黑。",cutCommLink:关闭通讯,
 gaFCKapteynBossAppeal,DialogOptionSelected,$option == gaFC_kapteynBossBribe,"AdjustRepActivePerson COOPERATIVE 10
-RemoveCommodity credits $gaFC_kapteynBribeCost","""你很会说话，知道吗? ""{$fullName}露出一副阴森的笑容，你能看到对方那闪烁着的金牙，""非常有说服力。""",gaFC_kapteynBossInfoDump1:继续,
+RemoveCommodity credits $gaFC_kapteynBribeCost","""你很会说话，知道吗?""{$fullName}露出一副阴森的笑容，你能看到对方那闪烁着的金牙，""非常有说服力。""",gaFC_kapteynBossInfoDump1:继续,
 gaFCKapteynBossAppeal2,DialogOptionSelected,$option == gaFC_kapteynBossAppeal,FireBest GAFCKapteynBossAppealResult,"海盗头子皱了皱眉头，然后将手伸向了{$hisOrHer}控制台。""稍等，舰长。""
 
-通讯信号突然失效了，呈现在你面前的东西变成了古老的天苑四-乌托邦集团的等候接入界面。",,
+通讯信号突然失效了，呈现在你面前的东西变成了古老的{天苑四-乌托邦集团}的等候接入界面。",,
 gaFCKapteynBossAppealFail,GAFCKapteynBossAppealResult,$faction.relValue < 0,,,gaFC_kapteynBossAppealFailure:等待,
 gaFCKapteynBossAppealSuccess,GAFCKapteynBossAppealResult,$faction.relValue > 0,,,gaFC_kapteynBossAppealSuccess:等待,
 gaFCKapteynBossAppealSuccess2,DialogOptionSelected,$option == gaFC_kapteynBossAppealSuccess,AdjustRepActivePerson COOPERATIVE 15,"信号又恢复了。{$personName}正在查看{$hisOrHer}手中的数据板，对方看起来比之前放松了一些。
@@ -199,11 +200,11 @@ gaFCKapteynBossAppealFailure2,DialogOptionSelected,$option == gaFC_kapteynBossAp
 $wasAnnoying = true",海盗头子拍打着控制台挂掉了通讯，你只能对着一堆噪点干瞪眼。,cutCommLink:切断通讯,
 gaFCKapteynBossInfoDump1,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump1,,"""我从某些人那里得到了一些信息。对，这就是我的工作 - 去调查谁在{Isirah}星系里搞小动作，以及他们是为谁而行动。""
 
-{$HeOrShe}凑得离通讯设备更近了一些，轻声说道: ""听说英仙座联盟最近到处问关于一个叫{'Coureuse'}的人的问题，而这么做的原因便是霸主先开始四处这么调查。""","gaFC_kapteynBossInfoDump2:""然后呢? """,
+{$HeOrShe}凑得离通讯设备更近了一些，轻声说道: ""听说英仙座联盟最近到处问关于一个叫{'Coureuse'}的人的问题，而这么做的原因便是霸主先开始四处这么调查。""","gaFC_kapteynBossInfoDump2:""然后呢?""",
 gaFC_kapteynBossInfoDump2,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump2,,"""然后，英仙座联盟里的眼线们突然就都不再问{'Coureuse'}的事了。这让我，{$firstName}，不禁想到估计是有人找到了他们想找的人。这同时还告诉了我那些人并不是经验老道的特工。交给英仙座联盟吧 - 人们都在这么说，不对吗? 但他们任命官员居然不考核能力而是考核影响力，真让我看不下去。""
 
 ""总之，在那之后不久，一群从{Kazeron}来的顶级英仙座联盟特工就开始在{Laicaille}栖息地'安居乐业'了。""",gaFC_kapteynBossInfoDump3:继续,
-gaFC_kapteynBossInfoDump3,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump3,"AddTextSmall ""收到英仙座联盟在{Laicaille}栖息地进行情报行动的相关档案"" highlight","""之后，作为一个好奇心旺盛的人和那些无业游民的朋友，我估计英仙座联盟就要开始打击我们那些明面上的企业了。但它没有这么做。而是让一切保持着原样，那么那些间谍到底来{Laicaille}做什么呢? 我这么问我自己。""
+gaFC_kapteynBossInfoDump3,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump3,"AddTextSmall ""收到英仙座联盟在{Laicaille}栖息地进行情报行动的相关档案"" highlight","""现在，作为一个好奇心旺盛的人和那些无业游民的朋友，我估计英仙座联盟就要开始打击我们那些明面上的企业了。但它没有这么做。而是让一切保持着原样，那么那些间谍到底来{Laicaille}做什么呢? 我这么问我自己。""
 
 ""我雇了一个专业监控团队，之后他们给了我一份清单，上面有一堆名字，租借房屋信息以及一些活动的日程表。看起来特工们在这里弄好了一些精致的安全屋。""海盗头子轻触了一些数据板，你的通讯则发出了提示音，告诉你有文件被传过来了。""你给自己搞到了一份资料，我的朋友。""","gaFC_kapteynBossInfoDump4:""我确实喜欢保持消息灵通的状态。""",
 gaFC_kapteynBossInfoDump4,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump4,"$global.gaFC_knowWhereScyllaIs = true
@@ -211,18 +212,18 @@ $global.gaFC_knowAboutLeagueOp = true
 $global.gaFC_isirahClues++
 unset $wasAnnoying","{$HeOrShe}靠回了椅背，摆出一副漫不经心的样子。""我只是个问问题的人，答案还得你自己去找，也许你还真能找到什么东西。希望你的努力能让那些英仙座联盟的呆子们变得谦逊一些。""海盗头子讲到这里，自己都笑了出来。
 
-""别忘了是谁帮的你，如何? """,gaFC_kapteynWrapUp:切断通讯,
+""别忘了是谁帮的你，如何?""",gaFC_kapteynWrapUp:切断通讯,
 gaFC_kapteynWrapUp,DialogOptionSelected,$option == gaFC_kapteynWrapUp,FireBest GAFCSearchIsirahSummary,,,
 ,,,,,,
 # gaFC ask around the bar on Laicaille,,,,,,
 gaFCAskAroundLaicailleBarStart,AddBarEvents,"$global.gaFC_searchIsirah
 $market.id == laicaille_habitat
-!$askedBarCoureuse","AddBarEvent gaFCLaicaille_barEvent ""四处打听{Scylla Coureuse}相关的信息"" ""这不过是瞎摸，但你依然可以试着问问这里有没有人知道关于{Scylla Coureuse}的事""",,,
+!$askedBarCoureuse","AddBarEvent gaFCLaicaille_barEvent ""四处打听{Scylla}Coureuse}相关的信息"" ""这不过是瞎摸，但你依然可以试着问问这里有没有人知道关于{Scylla}Coureuse}的事""",,,
 gaFCAskAroundLaicailleBar1,DialogOptionSelected,$option == gaFCLaicaille_barEvent,"$askedBarCoureuse = true
 FireAll GAFCAskLaicailleBar1Options","你四处打听那位失踪院士的事，不断为别人买着价格适中的饮料，试图从他们的嘴里套出一些情报。这是一个星航者聚集的酒吧，尽管星航者们总是试着互帮互助，你却依然没法找到什么有价值的情报，你得到的更多的是对方的耸肩和道歉。
 
 ""对你无法找到你朋友的事，我感到很抱歉。""一个穿着简单实用的太空服的港口工人说，""我会为你们可能的重逢祈祷。""",,
-gaFCAskLaicailleBar1Option1,GAFCAskLaicailleBar1Options,#$global.gaFC_hackedIsirahRelay,,,"gaFC_askLaicailleBarPather:""等等，你是什么左径分子吗? """,
+gaFCAskLaicailleBar1Option1,GAFCAskLaicailleBar1Options,#$global.gaFC_hackedIsirahRelay,,,"gaFC_askLaicailleBarPather:""等等，你是什么左径分子吗?""",
 gaFCAskLaicailleBar1Option2,GAFCAskLaicailleBar1Options,,,,backToBar:返回酒吧,
 gaFCAskLaicailleBarPather,DialogOptionSelected,$option == gaFC_askLaicailleBarPather,,"港口工人的表情僵住了。""我可不是'左径分子'，{$playerSirOrMadam}。我确实遵循着银河救赎教会的教义，我得请求你不要做出偏执的假设，我们并不都是狂热人士和恐怖分子。""
 
@@ -234,7 +235,7 @@ gaFCAskAroundLaicailleBar2,DialogOptionSelected,$option == gaFCLaicaille_barEven
 
 ""倒是有件怪事，""一个大个子说，""不过没什么规律。每过几次轮班，一些轨道信标就会失灵，发出大量的噪音。上头的人让我们去检查信标，结果什么都没查出来。让我说，大概是有什么人发神经了，无缘无故地在那里整我们。""
 
-""那绝对不是离子风暴导致的，我们敢肯定，""身材比较矮小的那个人说。""这不是自然现象。""","gaFCLaicaille_barEvent3:""你们觉得那是什么? """,
+""那绝对不是离子风暴导致的，我们敢肯定，""身材比较矮小的那个人说。""这不是自然现象。""","gaFCLaicaille_barEvent3:""你们觉得那是什么?""",
 gaFCAskAroundLaicailleBar3,DialogOptionSelected,$option == gaFCLaicaille_barEvent3,,"""鬼。""大个子把眼睛瞪的老大。
 
 小个子叹息着低吟起来: ""...卢德在上...""
@@ -245,33 +246,33 @@ gaFCAskAroundLaicailleBar4,DialogOptionSelected,$option == gaFCLaicaille_barEven
 
 ""他们死得并不安宁，因为那不是意外，而充满了邪恶的阴谋，所以他们在呼救。那就是{Groombridge}上干扰源的本质了。""
 
-小的那个轻声说: ""...怎么可能知道。""","gaFCLaicaille_barEvent5:""你怎么知道干扰来自{Groombridge}? """,
+小的那个轻声说: ""...怎么可能知道。""","gaFCLaicaille_barEvent5:""你怎么知道干扰来自{Groombridge}?""",
 gaFCAskAroundLaicailleBar5,DialogOptionSelected,$option == gaFCLaicaille_barEvent5,,"""定向接收器，""大个子看起来很自豪。
 
 ""对，但是，""小个子打断道，""我得提醒你，那东西老是会发生偏离，每当我们过去检查信标的时候，有一半的时间得花在重置那个东西的校准原点上。干扰可能来自任何地方，干扰源也可能是任何东西，脉冲星之类。""","gaFCLaicaille_barEvent6:""我记得你们说过干扰源不会是天然的东西。""",
-gaFCAskAroundLaicailleBar6,DialogOptionSelected,$option == gaFCLaicaille_barEvent6,$global.gaFC_ghostStory = true,"""呃，确实，""小个子结结巴巴地说，""我只是随便举个例子而已。""说到这，他们看了一眼他们的数据板，""不论如何，我们得回去上班了，干杯! ""
+gaFCAskAroundLaicailleBar6,DialogOptionSelected,$option == gaFCLaicaille_barEvent6,$global.gaFC_ghostStory = true,"""呃，确实，""小个子结结巴巴地说，""我只是随便举个例子而已。""说到这，他们看了一眼他们的数据板，""不论如何，我们得回去上班了，干杯!""
 
 技术人员喝完酒，向你道别后就出发了。他们将工作和酗酒混合的行为固然让人放不下心，但{Groombridge}栖息地发生的怪事如今更值得在意一些。如果有人真的在发送加密讯息...",backToBar:返回酒吧,
 ,,,,,,
 # gaFC ask around the bar on Kapteyn,,,,,,
 gaFCAskAroundKapteynBarStart,AddBarEvents,"$global.gaFC_searchIsirah
 $market.id == station_kapteyn
-!$askedBarCoureuse","AddBarEvent gaFCKapteyn_barEvent ""四处打听{Scylla Coureuse}相关的信息"" ""这不过是瞎摸，但你依然可以试着问问这里有没有人知道关于{Scylla Coureuse}的事""",,,
+!$askedBarCoureuse","AddBarEvent gaFCKapteyn_barEvent ""四处打听{Scylla}Coureuse}相关的信息"" ""这不过是瞎摸，但你依然可以试着问问这里有没有人知道关于{Scylla}Coureuse}的事""",,,
 gaFCAskAroundKapteynBar1,DialogOptionSelected,"$option == gaFCKapteyn_barEvent
 Call $global.gaFC_ref updateData",Call $global.gaFC_ref showKapteynBarAgent,"你四处打听失踪院士的事，不断为别人买着价格适中的饮料，试图从他们的嘴里套出一些情报。这是一个海盗酒吧，尽管他们对免费酒水的热情是出了名的，但海盗们不愿向问太多问题的人敞开心扉。
 
 一个穿着昂贵但看着很破旧的外套的可疑人物接受了你的请客。""他们认为你是星区里最蠢的卧底探员。""
 
-""但我知道你不是什么 - ""{$gaFC_KBAheOrShe}长啜了一口饮料。"" - 探员。我看到你的{$shipOrFleet}进来之后，做了一些调查。你得知道，这是我的工作。""","gaFCKapteyn_barEvent2:""你从事的是什么工作? """,
-gaFCAskAroundKapteynBar2,DialogOptionSelected,$option == gaFCKapteyn_barEvent2,$askedBarCoureuse = true,"""搞懂事情，然后出售情报。""","gaFCKapteyn_barEvent3:""那看起来我找对人了。""
+""但我知道你不是什么 - ""{$gaFC_KBAheOrShe}长啜了一口饮料。"" - 探员。我看到你的{$shipOrFleet}进来之后，做了一些调查。你得知道，这是我的工作。""","gaFCKapteyn_barEvent2:""你从事的是什么工作?""",
+gaFCAskAroundKapteynBar2,DialogOptionSelected,$option == gaFCKapteyn_barEvent2,$askedBarCoureuse = true,"""搞懂事情，然后出售情报。""","gaFCKapteyn_barEvent3:""那看来我找对人了。""
 backToBar:""不感兴趣，回见。""",
 gaFCAskAroundKapteynBar3,DialogOptionSelected,$option == gaFCKapteyn_barEvent3,FireAll GAFCAskAroundKapteynBar4Hub,"{$gaFC_KBAHeOrShe}狡猾地笑了笑: ""没错。""
 
 ""问题是，我已经出售了这些情报，如果我不尊重我和我的客户对这些情报的...嗯...'独家效用'的理解，而再次传播它，我的客户可能会提出异议。我的顾客在这里可是个重要人物 - 你大概能明白我是什么意思。现在，如果你直接去找那位客户谈谈，你可能会得到一些有用的消息。""",,
 gaFCAskAroundKapteynBar4Option1,GAFCAskAroundKapteynBar4Hub,$global.gaFC_knowAboutLeagueOp,,,"gaFC_kapteynBarAlreadyKnow:""我已经和{Kapteyn}的头子谈过了，还拿到了一些情报。""",
-gaFCAskAroundKapteynBar4Option2,GAFCAskAroundKapteynBar4Hub,!$askedAboutYourProfit,,,"gaFC_kapteynBarYourProfit:""这还没让你清醒点吗? 你自身的利益呢? """,
+gaFCAskAroundKapteynBar4Option2,GAFCAskAroundKapteynBar4Hub,!$askedAboutYourProfit,,,"gaFC_kapteynBarYourProfit:""这还没让你清醒点吗? 你自身的利益呢?""",
 gaFCAskAroundKapteynBar4Option3,GAFCAskAroundKapteynBar4Hub,,,,"gaFC_kapteynBarDone:""感谢你的提示，请慢用吧。""",
-gaFCAskAroundKapteynBarKnow,DialogOptionSelected,$option == gaFC_kapteynBarAlreadyKnow,,"""那么好吧，舰长! 很高兴能帮到你。""","gaFC_kapteynBarMore:""我还是需要一些帮助来找到{Coureuse}，你能帮忙吗? ""
+gaFCAskAroundKapteynBarKnow,DialogOptionSelected,$option == gaFC_kapteynBarAlreadyKnow,,"""那么好吧，舰长! 很高兴能帮到你。""","gaFC_kapteynBarMore:""我还是需要一些帮助来找到{Coureuse}，你能帮忙吗?""
 gaFC_kapteynBarDone:""多谢，慢用吧。""",
 gaFCAskAroundKapteynBarProfit,DialogOptionSelected,$option == gaFC_kapteynBarYourProfit,"$askedAboutYourProfit = true 0
 FireAll GAFCAskAroundKapteynBar4Hub","{$gaFC_KBAHeOrShe}耸了耸肩。""听好了，这是个长期工作。现在你来问我问题了，这就说明我的客户当初的选择是正确的。等到他们还需要其他情报的时候，他们会很愿意做回头客的。""
@@ -282,11 +283,11 @@ $option = backToBar 0
 FireBest DialogOptionSelected","{$gaFC_KBAHeOrShe}行了个颇具讽刺意味的礼，说: ""随时可以再来拜访我，舰长。想要再做点生意的话，记得我随时恭候。""{$gaFC_KBAHeOrShe}转过身去，继续啜饮着{$gaFC_KBAhisOrHer}的饮料。",,
 gaFCAskAroundKapteynBarMore,DialogOptionSelected,"$option == gaFC_kapteynBarMore
 Call $global.gaFC_ref updateData","Highlight $gaFC_kapteynBarBribeCost 
-DoCanAffordCheck $gaFC_kapteynBarBribeCost gaFC_kapteynBarOfferBribe false","{$gaFC_KBAHeOrShe}叹了一口气。""也许能。听着，这是一笔交易。这是...如果你想从我这得到更多情报，我需要更多报酬，{$gaFC_kapteynBarBribeCost}信用点。""
+DoCanAffordCheck $gaFC_kapteynBarBribeCost gaFC_kapteynBarOfferBribe false","{$gaFC_KBAHeOrShe}叹了一口气。""也许能。听着，这是一笔交易。这是...如果你想从我这得到更多情报，我需要更多报酬，{$gaFC_kapteynBarBribeCost}星币。""
 
 {$gaFC_KBAHeOrShe}点击了一下{$gaFC_KBAhisOrHer}数据板，并将它转向了你，让你确认汇款细节。","gaFC_kapteynBarOfferBribe:付款
 gaFC_kapteynBarDone:""我会自己搞定这事的，请慢用吧。""",
-gaFCKapteynBarBribe,DialogOptionSelected,$option == gaFC_kapteynBarOfferBribe,,"""记住，接下来的情报你不是从我这里得到的 - 因为我可不想招惹左径分子，他们都是神经病，一点也不在乎金钱...或许他们在乎，只是不愿违背那该死的卢德规矩，无论如何我都看不懂他们的行为举止。""
+gaFCKapteynBarBribe,DialogOptionSelected,$option == gaFC_kapteynBarOfferBribe,,"""记住，接下来的情报你不是从我这里得到的 - 因为我可不想招惹左径分子，他们都是神经病，一点也不在乎钱...或许他们在乎，只是不愿违背那该死的卢德规矩，无论如何我都看不懂他们的行为举止。""
 
 ""有一群左径分子渗透到了{Laicaille}栖息地。我猜他们是在找{Coureuse}，毕竟没有东西值得他们干到这种地步了。""","gaFC_kapteynBarOfferBribe2:""你有证据吗? 一些资料啥的?""",
 gaFCKapteynBarBribe1,DialogOptionSelected,$option == gaFC_kapteynBarOfferBribe2,,"""呃，你看，我发现了他们的行动，但并没有去做深入调查。""{$gaFC_KBAHeOrShe}似乎不太想谈这个，""我说过了，我不会招惹左径分子。我没收你那么多钱，何况你有保镖和全副武装的舰队，而我只是一个想要谋生的刚解冻的太空冻肉。""
@@ -313,7 +314,7 @@ $global.gaFC_searchIsirah
 !$askedAboutScylla",,,"gaFC_laicailleNavarchBother2:""我正在找{Scylla Coureuse}。""",
 gaFCLaicailleNavarchBother2,DialogOptionSelected,$option == gaFC_laicailleNavarchBother2,$askedAboutScylla = true,"""唔，最近还没有这个名字的船出现在这附近过。""{$heOrShe}轻敲着桌上的控制台。""确实没有，恐怕我不能帮你找到你丢失的船了，舰长。""","gaFC_laicailleNavarchBother3:""不，我可没在找一艘船。那是个人的名字。""
 cutCommLink:""呃，多谢帮忙。""",
-gaFCLaicailleNavarchBother3,DialogOptionSelected,$option == gaFC_laicailleNavarchBother3,,"{$HeOrShe}抬头看着你。""啊，当然。如果是想找人的话，我想查询空间站的公共通讯录会是个不错的主意。再见，公民。保持警惕! ""
+gaFCLaicailleNavarchBother3,DialogOptionSelected,$option == gaFC_laicailleNavarchBother3,,"{$HeOrShe}抬头看着你。""啊，当然。如果是想找人的话，我想查询空间站的公共通讯录会是个不错的主意。再见，公民。保持警惕!""
 
 在你还来得及回应之前通讯线路就中断了，你面前只剩一个旋转的英仙座联盟舰队队徽。",cutCommLink:切断通讯,
 # gaFC Laicaille Quartermaster,,,,,,
@@ -321,15 +322,15 @@ gaFCLaicailleQuartermasterBother,PopulateOptions,"$postId == supplyOfficer
 $market.id == laicaille_habitat
 $global.gaFC_searchIsirah
 !$askedAboutScylla",,,"gaFC_laicailleQuartermasterBother2:""我正在找{Scylla Coureuse}。""",
-gaFCLaicailleQuartermasterBother2,DialogOptionSelected,$option == gaFC_laicailleQuartermasterBother2,,"""哦，是吗? 那又是什么? 需要运送更多的秘密物品到一个{'你不用知道'}的位置，而现在你需要我覆写空间站安全协议吗? ""
+gaFCLaicailleQuartermasterBother2,DialogOptionSelected,$option == gaFC_laicailleQuartermasterBother2,,"""哦，是吗? 那又是什么? 需要运送更多的秘密物品到一个{'你不用知道'}的位置，而现在你需要我覆写空间站安全协议吗?""
 
 ""给我书面命令，""{$HeOrShe}在空中划着{$hisOrHer}手来强调重点。""不能有例外。我之前和你们说过了，在空间站内运输你们藏在秘密仓库里的...卢德才知道是什么鬼的东西的过程中，一旦出了什么问题，我就得人头落地。""","cutCommLink:""好吧，当然，我会带着书面命令回来的。""
-gaFC_laicailleQuartermasterBother3:""等等，什么秘密仓库? ""
-gaFC_laicailleQuartermasterBother4:""我有非得这么做的理由! "" (虚张声势)",
+gaFC_laicailleQuartermasterBother3:""等等，什么秘密仓库?""
+gaFC_laicailleQuartermasterBother4:""我有非得这么做的理由!"" (虚张声势)",
 gaFCLaicailleQuartermasterBother3,DialogOptionSelected,$option == gaFC_laicailleQuartermasterBother3,"$askedAboutScylla = true
-FireAll PopulateOptions","{$post}看向你的眼神几乎被歉意填满，几乎要被。
+FireAll PopulateOptions","{$post}看向你的眼神几乎被歉意填满...几乎。
 
-""你不是和那帮人一起的，对吧? 行，你应该会自动收到报关单和关税表。现在你还有什么业务需要我帮忙的? """,,
+""你不是和那帮人一起的，对吧? 行，你应该会自动收到报关单和关税表。现在你还有什么业务需要我帮忙的?""",,
 gaFCLaicailleQuartermasterBother4,DialogOptionSelected,$option == gaFC_laicailleQuartermasterBother4,"$askedAboutScylla = true
 AdjustRepActivePerson INHOSPITABLE -1","""不能有例外.""{$HeOrShe}直截了当地这么说着，从{$hisOrHer}那端关闭了通讯连接，你只能对着{Laicaille}栖息地的徽标干瞪眼。",cutCommLink:切断通讯,
 # gaFC Laicaille Archon SEARCH_ISIRAH,,,,,,
@@ -340,14 +341,14 @@ $global.gaFC_searchIsirah
 Call $global.gaFC_ref updateData","$option = gaFC_archonSearchHubLeadIn 0
 FireBest DialogOptionSelected",,,
 gaFCArchonSearchHubLeadIn,DialogOptionSelected,$option == gaFC_archonSearchHubLeadIn,FireAll gaFCArchonSearchHubOption,,,
-gaFCArchonSearchHubOption1,gaFCArchonSearchHubOption,!$askedAboutCoureuseAgain,,,"gaFC_archonAskCoureuse:""我在找{Scylla Coureuse}。""",
-gaFCArchonSearchHubOption2,gaFCArchonSearchHubOption,!$askedGalatiaIncident,,,"gaFC_archonAskGalatia:""你有关于{Galatia}事件的消息吗? """,
+gaFCArchonSearchHubOption1,gaFCArchonSearchHubOption,!$askedAboutCoureuseAgain,,,"gaFC_archonAskCoureuse:""我在找{Scylla}Coureuse}。""",
+gaFCArchonSearchHubOption2,gaFCArchonSearchHubOption,!$askedGalatiaIncident,,,"gaFC_archonAskGalatia:""你有关于{Galatia}事件的消息吗?""",
 gaFCArchonSearchHubOption3,gaFCArchonSearchHubOption,"$global.gaFC_isirahClues >= 2
 $global.gaFC_knowWhereScyllaIs",,,"gaFC_archonConfront:""我知道{Coureuse}在这空间站里，并且我有证据。""",
 gaFCArchonSearchHubOptionLeave,gaFCArchonSearchHubOption,,,,cutCommLink:切断通讯,
 gaFCArchonAskCoureuse,DialogOptionSelected,"$option == gaFC_archonAskCoureuse
 !$askedAboutCoureuse","FireAll gaFCArchonSearchHubOption
-$askedAboutCoureuse = true","""哦? ""执政官的眼睛瞟向一边，然后又看向了你，""我想我没听说过这个人。""{$heOrShe}说，同时恢复了{$hisOrHer}那官僚式的，不耐烦的平静语调。""舰长，你应该是知道这里是有专门处理这类事情的公共通讯目录的。""",,
+$askedAboutCoureuse = true","""哦?""执政官的眼睛瞟向一边，然后又看向了你，""我想我没听说过这个人。""{$heOrShe}说，同时恢复了{$hisOrHer}那官僚式的，不耐烦的平静语调。""舰长，你应该是知道这里是有专门处理这类事情的公共通讯目录的。""",,
 gaFCArchonAskCoureuseAgain,DialogOptionSelected,"$option == gaFC_archonAskCoureuse
 $askedAboutCoureuse
 $global.gaFC_isirahClues < 2","$askedAboutCoureuseAgain = true 0
@@ -357,15 +358,15 @@ $global.gaFC_isirahClues >= 2
 $askedAboutCoureuse",,"""又是这事。""执政官的眼睛瞟向一边，然后又看向了你，""我告诉过你了，有一个叫公共通讯录的东西可以帮到你。这事超过我的职权范围了。""","gaFC_archonConfront:""并且我有证据。""",
 gaFCArchonAskGalatia,DialogOptionSelected,$option == gaFC_archonAskGalatia,$askedGalatiaIncident = true 0,"""嗯，我知道。那是{Galatia}星系最近发生的事，对吧? 学院的所作所为很危险，虽然他们应该受到谴责，但霸主也管得太宽了。英仙座联盟已经就此向派系间争端委员会提出了控诉，你听说了吗? 我们并不期望能取得什么成效，可是总有人得说些什么。""
 
-执政官打量了你一会儿: ""你问这个干什么? ""","gaFC_archonAskCoureuse:""我在找{Scylla Coureuse}，她与此事有关。""
-gaFC_archonAskGalatia2:""你觉得那样的事情会在这里发生吗? ""
+执政官打量了你一会儿: ""你问这个干什么?""","gaFC_archonAskCoureuse:""我在找{Scylla}Coureuse}，她与此事有关。""
+gaFC_archonAskGalatia2:""你觉得那样的事情会在这里发生吗?""
 ",
 gaFCArchonAskGalatia2,DialogOptionSelected,$option == gaFC_archonAskGalatia2,FireAll gaFCArchonAskGalOptions,"""当然不会，""{$heOrShe}给出了简短的答复，""我能及时得到这个星系中所有重要的工业和科研项目的消息。至于那些海盗，""这句话中的最后一个词几乎是被对方咬牙切齿地说出的，""他们没能力掀起什么风浪。除非有另一个领主级别的人物冒出来，但英仙座联盟军备库的资金可不是我们白给的。""
 
 执政官坐得更直了: ""所以我向你保证，你在{Laicaille}栖息地做生意时没什么可担心的，舰长。""","
 ",
-gaFCArchonAskGalOption1,gaFCArchonAskGalOptions,$global.gaFC_knowWhereScyllaIs,,,"gaFC_archonConfront:""我有证据证明{Scylla Coureuse}就在这空间站里。""",
-gaFCArchonAskGalOption2,gaFCArchonAskGalOptions,,,,"gaFC_archonSearchHubLeadIn:""真高兴能知晓这点，现在我能放心了。""",
+gaFCArchonAskGalOption1,gaFCArchonAskGalOptions,$global.gaFC_knowWhereScyllaIs,,,"gaFC_archonConfront:""我有证据证明{Scylla}Coureuse}就在这空间站里。""",
+gaFCArchonAskGalOption2,gaFCArchonAskGalOptions,,,,"gaFC_archonSearchHubLeadIn:""真高兴能知晓这点，现在我能放心了。""",`
 gaFCArchonAskGalOption3,gaFCArchonAskGalOptions,!$global.gaFC_knowWhereScyllaIs,,,"gaFC_archonConfrontFail:""如果{Coureuse}此刻就在这空间站上呢?""",
 gaFCArchonConfrontFail,DialogOptionSelected,$option == gaFC_archonConfrontFail,,"{$HeOrShe}看起来变得紧张了起来。""我不知道你在说什么，舰长。如果没有切实的证据...嗯，听着，我还要开个会。再见，舰长。""
 
@@ -391,9 +392,9 @@ $global.gaFC_gotIsirahLeadFromSiyavong
 gaFCArchonConfrontOptionWrap,gaFCArchonConfrontOptions,$confrontsDone >= 2,,,"gaFC_archonLetMeSeeHer:""你不欠英仙座联盟什么，现在让我见见{Coureuse}。""",
 gaFCArchonTellPathers,DialogOptionSelected,$option == gaFC_archonTellPathers,"$toldPathers = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，你截获的通讯日志显示，左径分子的一个小队已经用假身份潜入了{Laicaille}栖息地来搜寻{Scylla Coureuse}。他们知道英仙座联盟特工安全屋的存在并且已经向总部请求了增援。
+FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，你截获的通讯日志显示，左径分子的一个小队已经用假身份潜入了{Laicaille}栖息地来搜寻{Scylla}Coureuse}。他们知道英仙座联盟特工安全屋的存在并且已经向总部请求了增援。
 
-当执政官看完你上传的通讯日志分析报告时，{$heOrShe}脸色苍白，瞪大眼睛看着你。""这只是个小地方，{Siyavong}告诉过我没人会找过来。现在你告诉我已经有该死的左径分子溜进了栖息地里? """,,
+当执政官看完你上传的通讯日志分析报告时，{$heOrShe}脸色苍白，瞪大眼睛看着你。""这只是个小地方，{Siyavong}告诉过我没人会找过来。现在你告诉我已经有该死的左径分子溜进了栖息地里?""",,
 gaFCArchonTellRelay,DialogOptionSelected,$option == gaFC_archonTellRelay,"$toldHypercomm = true 0
 $confrontsDone++ 0
 FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告，并向{$personLastName}执政官解释着它们所展示的内容 - 你在废弃的{Groombridge}栖息地发现了一个秘密的超空间通信中继器，它一直在定期向{Laicaille}栖息地附近的一个中继器发送信号，同时它还一直在接收来自一颗离这很远的恒星周围一系列探测器的信号。如今这组通讯阵列已经从远端被拾荒者破坏了，所以...
@@ -402,7 +403,7 @@ FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告�
 
 你点了点头。
 
-执政官摇着{$hisOrHer}头: ""这 - 这怎么可能! 他们说过不会在这里进行危险的实验! """,,
+执政官摇着{$hisOrHer}头: ""这 - 这怎么可能! 他们说过不会在这里进行危险的实验!""",,
 gaFCArchonTellRelay2,DialogOptionSelected,"$global.gaFC_ghostStory
 $option == gaFC_archonTellRelay","$toldHypercomm = true 0
 $confrontsDone++ 0
@@ -412,17 +413,17 @@ FireAll gaFCArchonConfrontOptions","你上传了涂装辐射保护镀层的无�
 
 你点了点头。
 
-执政官摇着{$hisOrHer}头: ""这 - 这怎么可能! 他们说过不会在这里进行危险的实验! """,,
+执政官摇着{$hisOrHer}头: ""这 - 这怎么可能! 他们说过不会在这里进行危险的实验!""",,
 gaFCArchonTellIntel,DialogOptionSelected,$option == gaFC_archonTellIntel,"$toldIntel = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，你有涵盖英仙座联盟舰队在{Laicaille}的组织结构，预算信息和监视时间表在内的完整报告，甚至还有一串安全屋的列表。所有的这些都与联盟舰队情报机构停止对{Scylla Coureuse}进行搜索有关。
+FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，你有涵盖英仙座联盟舰队在{Laicaille}的组织结构，预算信息和监视时间表在内的完整报告，甚至还有一串安全屋的列表。所有的这些都与联盟舰队情报机构停止对{Scylla}Coureuse}进行搜索有关。
 
-你转发了你手上的文件，以展示出你得到这份资料几乎不费吹灰之力 - 只是在星系内随便丢几个信用点而已，并以此暗示了卢德组织可以用这些信息做到什么; 英仙座联盟似乎并没有把{Laicaille}栖息地的安全当回事。
+你转发了你手上的文件，以展示出你得到这份资料几乎不费吹灰之力 - 只是随便丢几个子儿而已，并以此暗示了卢德组织可以用这些信息做到什么; 英仙座联盟似乎并没有把{Laicaille}栖息地的安全当回事。
 
 执政官咬紧牙关小声地说: ""他们向我保证过这不会有问题，他们保证过...""",,
 gaFCArchonTellCavin,DialogOptionSelected,$option == gaFC_archonTellCavin,"$toldCavin = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你解释说你有一份由{Cavin Pharoh} - {Fikenhild}上一个擅长煽动暴乱的，危险的激进分子 - 发给{Scylla Coureuse}的通讯信息，还是在{Laicaille}栖息地上被拦截到的。
+FireAll gaFCArchonConfrontOptions","你解释说你有一份由{Cavin}Pharoh} - {Fikenhild}上一个擅长煽动暴乱的，危险的激进分子 - 发给{Scylla}Coureuse}的通讯信息，还是在{Laicaille}栖息地上被拦截到的。
 
 如果舰队情报机构知道这事，他们会怎么做? 执政官对此持悲观态度。如果舰队情报机构对此一无所知，那就更糟了，不是吗?
 
@@ -430,29 +431,29 @@ FireAll gaFCArchonConfrontOptions","你解释说你有一份由{Cavin Pharoh} - 
 gaFCArchonLetMeSeeHer,DialogOptionSelected,$option == gaFC_archonLetMeSeeHer,,"""我奉命...我的意思是，为了保存英仙座联盟情报...政策机密...""
 
 {$personLastName}执政官听起来几乎要放弃了。","gaFC_archonLetMeSeeHerGoad:""来自{Kazeron}的命令? 现在我终于知道究竟是谁在管理{Laicaille}了。""
-gaFC_archonLetMeSeeHerAppeal:""她可是英仙座联盟的公民。这个身份一点意义都没有吗? ""
+gaFC_archonLetMeSeeHerAppeal:""她可是英仙座联盟的公民。这个身份一点意义都没有吗?""
 gaFC_archonLetMeSeeHerAvoid:""很好，抱歉刺探了你们的情报。""",
-gaFCArchonLetMeSeeHerGoad,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerGoad,,"""根本不是那么回事，""执政官结结巴巴地说。""{Laicaille}一直以来都自由而骄傲! 虽然规模很小，但具有重要的战略意义，也不受{Kazeron}家族政治的束缚。""{$HisOrHer}的脸开始变红: ""他们根本不明白! 在这里我们得工作谋生。我们面临着那些蠢货无法想象的风险。如果这个{'联盟'}不消灭藏在{Kapteyn}的那群威胁了我们几年的海盗，那这结盟条约还有什么用? 舰队税也白交了! ""
+gaFCArchonLetMeSeeHerGoad,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerGoad,,"""根本不是那么回事，""执政官结结巴巴地说。""{Laicaille}一直以来都自由而骄傲! 虽然规模很小，但具有重要的战略意义，也不受{Kazeron}家族政治的束缚。""{$HisOrHer}的脸开始变红: ""他们根本不明白! 在这里我们得工作谋生。我们面临着那些蠢货无法想象的风险。如果这个{'联盟'}不消灭藏在{Kapteyn}的那群威胁了我们几年的海盗，那这结盟条约还有什么用? 舰队税也白交了!""
 
 {$personLastName}执政官闭上{$hisOrHer}眼睛，做了几次深呼吸，然后看向了你，对方的眼神中似乎带有全新的决意。
 
-""现在看来，你是对的。""","gaFC_archonLetMeSeeHerGoad2:""是吗? """,
+""现在看来，你是对的。""","gaFC_archonLetMeSeeHerGoad2:""是吗?""",
 gaFCArchonLetMeSeeHerGoad2,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerGoad2,"$option = gaFC_archonSuccessEnd 0
 FireBest DialogOptionSelected","执政官的声音在冷酷的愤怒中稳定下来，他似乎已经忍受了这种情况许多年。""是时候让他们知道{Laicaille}是谁的了 - 它绝不属于一群在我们的空间站上玩泥巴的{Kazeron}家族子弟。""",,
-gaFCArchonLetMeSeeHerAppeal,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAppeal,,"""听着，我们视我们的自由如珍宝，就像 - 不，远比那些来自{Kazeron}的劣等富豪更珍重它，""执政官气冲冲地说。""{Laicaille}一直都自由而骄傲! ""{$HisOrHer}脸因为激动而涨得通红，""他们说{'不要问那么多问题'}，他们说{'联盟防御'}，{'你需要知道'}和{'我们已经处理好了'}。他们做到了吗? 这里的情况还是一团乱麻! ""
+gaFCArchonLetMeSeeHerAppeal,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAppeal,,"""听着，我们视我们的自由如珍宝，就像 - 不，远比那些来自{Kazeron}的劣等富豪更珍重它，""执政官气冲冲地说。""{Laicaille}一直都自由而骄傲!""{$HisOrHer}脸因为激动而涨得通红，""他们说{'不要问那么多问题'}，他们说{'联盟防御'}，{'你需要知道'}和{'我们已经处理好了'}。他们做到了吗? 这里的情况还是一团乱麻!""
 
 {$personLastName}执政官闭上了{$hisOrHer}眼睛，做了几次深呼吸，然后对上了你的目光: ""你是对的。那些{Kazeron}间谍一直在随心摆弄我，摆弄{Laicaille}。用他们的{'安全许可'}对我们颐指气使。我已经...放下了做{Laicaille}人的意义。""",gaFC_archonLetMeSeeHerAppeal2:保持沉默,
 gaFCArchonLetMeSeeHerAppeal2,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAppeal2,"$option = gaFC_archonSuccessEnd 0
 FireBest DialogOptionSelected","执政官的声音在冷酷的愤怒中稳定下来，他似乎已经忍受了这种情况许多年。""但我们远比那更优秀，是时候让他们知道{Laicaille}是谁的了 - 它绝不属于一群在我们的空间站上玩泥巴的{Kazeron}家族子弟。""",,
-gaFCArchonLetMeSeeHerAvoid,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAvoid,,"""等等，""执政官说，对方看起来仍然很不安，""你就这么不做追究了? 不，我不相信。{$playerName}，你究竟想做什么? 你为谁工作? {Westernesse}的媒体，那些愚蠢的全息影像节目? 又或者这是{Kazeron}的间谍行动，来糊弄我们这群{Laicaille}乡巴佬的? ""{$HeOrShe}做了几次深呼吸，让自己的情绪平复下来。
+gaFCArchonLetMeSeeHerAvoid,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAvoid,,"""等等，""执政官说，对方看起来仍然很不安，""你就这么不做追究了? 不，我不相信。{$playerName}，你究竟想做什么? 你为谁工作? {Westernesse}的媒体，那些愚蠢的全息影像节目? 又或者这是{Kazeron}的间谍行动，来糊弄我们这群{Laicaille}乡巴佬的?""{$HeOrShe}做了几次深呼吸，让自己的情绪平复下来。
 
-""好吧，{$playerName}舰长，如果你真的是这些人中的一员，我得和你说我'自愿'为{Kazeron}间谍打掩护可一点都不公平，{Laicaille}人被他们摆布的事实也一样。{Laicaille}栖息地一直以来自由而骄傲! 我们不支持秘密警察，秘密囚犯，也不支持{人之领}时代的老一套。""","gaFC_archonLetMeSeeHerAvoid2:""这样吗? """,
+""好吧，{$playerName}舰长，如果你真的是这些人中的一员，我得和你说我'自愿'为{Kazeron}间谍打掩护可一点都不公平，{Laicaille}人被他们摆布的事实也一样。{Laicaille}栖息地一直以来自由而骄傲! 我们不支持秘密警察，秘密囚犯，也不支持{人之领}时代的老一套。""","gaFC_archonLetMeSeeHerAvoid2:""这样吗?""",
 gaFCArchonLetMeSeeHerAvoid2,DialogOptionSelected,$option == gaFC_archonLetMeSeeHerAvoid2,"$option = gaFC_archonSuccessEnd 0
 FireBest DialogOptionSelected","执政官的声音在冷酷的愤怒中稳定下来，他似乎已经忍受了这种情况许多年。""我要告诉你以及你背后的人 - 不管那些人有怎样的身份 - {Laicaille}究竟属于谁，它绝不属于一群在我们的空间站上玩泥巴的{Kazeron}家族子弟。""",,
 gaFCArchonSuccessEnd,DialogOptionSelected,$option == gaFC_archonSuccessEnd,"$global.gaFC_visitCoureuse = true 
 Call $global.gaFC_ref updateStage
 SetPersonHidden coureuse true
-MovePersonToMarket coureuse ga_market","""舰长，搭个穿梭机过来，在港口的行政环区等我，让我们来见见这个{Scylla Coureuse}。""
+MovePersonToMarket coureuse ga_market","""舰长，搭个穿梭机过来，在港口的行政环区等我，让我们来见见这个{Scylla}Coureuse}。""
 
 在{$heOrShe}切断通讯前，执政官没给你回应的机会。你只能对着{Laicaille}栖息地那旋转的徽章干瞪眼。",cutCommLink:离开,
 ,,,,,,
@@ -462,7 +463,7 @@ $global.gaFC_searchIsirah
 $tag:comm_relay
 !$cob_hacked
 !$objectiveNonFunctional
-$faction.id == persean",,"你可以通过在信息缓存区中运行窥探算法找到{""Scylla Coureuse""}和相关的关键词。虽然只有最近的信息和未加密的数据具备可访问性，但其中仍肯可能存在有用的信息，而且这个过程不会损坏信息缓存区。",1:gaFC_installHack:安装并运行窥探算法,
+$faction.id == persean",,"你可以通过在信息缓存区中运行窥探算法找到{""Scylla}Coureuse""}和相关的关键词。虽然只有最近的信息和未加密的数据具备可访问性，但其中仍肯可能存在有用的信息，而且这个过程不会损坏信息缓存区。",1:gaFC_installHack:安装并运行窥探算法,
 gaFC_relayPrintHostilesText,OpenInteractionDialog,"$player.locationId == isirah
 $global.gaFC_searchIsirah
 $tag:comm_relay
@@ -475,13 +476,13 @@ gaFC_relayInstallHack0,DialogOptionSelected,$option == gaFC_installHack,,"一个
 现在你开始等待算法完成自己的使命。",gaFC_installHack1:继续,
 gaFC_relayInstallHack1,DialogOptionSelected,$option == gaFC_installHack1,,"紧张地等待了一个小时后，你的通讯技师告诉你，窥探算法的工作完成了。一组精通技术操作，信息安全和通讯的军官和专家一直在逐步分析陆续接收到的信息，并已经完成了一份初步报告。
 
-""我们的团队仍在进行详细的分析，并尽可能地对我们得到的信息进行解密，""你的通讯技师报告说，""但我们已经对总体情况有了一定程度的了解。""","gaFC_installHack2:""你们得到了什么信息? """,
+""我们的团队仍在进行详细的分析，并尽可能地对我们得到的信息进行解密，""你的通讯技师报告说，""但我们已经对总体情况有了一定程度的了解。""","gaFC_installHack2:""你们得到了什么信息?""",
 gaFC_relayInstallHack2,DialogOptionSelected,$option == gaFC_installHack2,,"""看起来大多数主要势力，少数自由佣兵和地下特工在{Isirah}星系中的活动频率高的异常。这可以有不少合理的解释，但根据我们的分析，这种现象大概率是一个粗心大意地泄露了不少情报的左径分子造成的。""
 
-说到这，你的通讯技师拿出了一份包含了通讯ID和英仙座联盟ID的列表。","gaFC_installHack3:""这上边值得注意的是哪个人? """,
+说到这，你的通讯技师拿出了一份包含了通讯ID和英仙座联盟ID的列表。","gaFC_installHack3:""这上边值得注意的是哪个人?""",
 gaFC_relayInstallHack3,DialogOptionSelected,$option == gaFC_installHack3,,"""{Jensen Gallegos}，左径渗透者的几乎所有信息都是这个人泄露的。如你所见，舰长，这个身份经不起仔细审查...呃，总体来说。""他们跳过了一些无关紧要的信息，并将展示的重点放在了一系列呈现为文本的秘密信息上，""看这里，他们疏忽大意地提到了{Coureuse}的名字 - 名字的拼写有误，这让我们发现了一个正在{Laicaille}栖息地上活动的左径组织使用的暗号系统。""
 
-更多除了{Jensen Gallegos}以外的，被注释了差异和错误的ID被加入了英仙座联盟的ID列表中。",gaFC_installHack4:继续,
+更多除了{Jensen}Gallegos}以外的，被注释了差异和错误的ID被加入了英仙座联盟的ID列表中。",gaFC_installHack4:继续,
 gaFC_relayInstallHack4,DialogOptionSelected,$option == gaFC_installHack4,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_hackedIsirahRelay = true
 $global.gaFC_isirahClues++
@@ -494,7 +495,7 @@ stage == VISIT_COUREUSE",,,,,,
 gaFCLaicaileVisitOption,PopulateOptions,"$market.id == laicaille_habitat
 $market.gaFC_safehouse
 !$isPerson
-Call $global.gaFC_ref updateData",,,1:gaFC_visitLaicailleSafehouse:与执政官碰面并去安全屋拜访{Scylla Coureuse}。,
+Call $global.gaFC_ref updateData","SetStoryColor ""与执政官见面，并前往{Scylla Coureuse}所在的安全屋""",,1:gaFC_visitLaicailleSafehouse:与执政官碰面并去安全屋拜访{Scylla Coureuse}。,
 gaFCLaicaileVisitStart,DialogOptionSelected,"$option == gaFC_visitLaicailleSafehouse
 Call $global.gaFC_ref updateData","BeginConversation laicaille_archon false true
 FireBest GAFCLaicaileVisitStart
@@ -519,17 +520,17 @@ gaFCLaicailleVisit4,DialogOptionSelected,$option == gaFC_laicailleVisit4,,"联�
 
 执政官拿过特工的手枪，检查了它的保险，然后把特工推开，引导你走向气闸门。用强制指令覆盖了控制面板后，执政官示意你通过装甲门。",gaFC_laicailleVisit4b:进入气闸门,
 gaFCLaicailleVisit4b,DialogOptionSelected,$option == gaFC_laicailleVisit4b,ShowSecondPerson coureuse,一个拿着数据板的女人站在你面前，疑惑地看着没见过的到访者。你环顾着这黑暗的空间，看到了阴暗的设备架，货箱以及嗡嗡作响的机器。角落里一个零重力风格的小生活舱看起来便是她的私人空间了。,"gaFC_laicailleVisit5:""我猜你就是{Scylla Coureuse}了。""",
-gaFCLaicailleVisit5,DialogOptionSelected,$option == gaFC_laicailleVisit5,FireBest GAFCAlamangCheck2,"""是的。""她小心翼翼地说。""还有，呃...{$personLastName}执政官，什么风把您吹来了? ""
+gaFCLaicailleVisit5,DialogOptionSelected,$option == gaFC_laicailleVisit5,FireBest GAFCAlamangCheck2,"""是的。""她小心翼翼地说。""还有，呃...{$personLastName}执政官，什么风把您吹来了?""
 
 ""这位到处打听别人的事的{$playerName}舰长。""执政官向你点点头，""现在是你的时间了。""",,
-gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"{Coureuse}注意到了你腋下的磷虾酱包，""那是...蓝调酒吧的Sub-Kay? 你从哪 - 怎么 - ""","gaFC_laicailleVisit5Alamang2:""一份来自{Elissa}的礼物。""",
-gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"{Coureuse}露出了由衷的喜悦微笑。""当然! 我们总是说它有多难闻，实际上对我们来说没有比它更好吃的东西了。""她接过了磷虾酱包，抚摸着它的塑料包装，沉浸在一些记忆中。接着她回过神来: ""哦，对不起，只是...昔日时光罢了。""她把那东西放到了工作台上，""请继续吧，你为什么在这里? ""","gaFC_laicailleVisit6:""我有一则给你的信息。""",
+gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"{Coureuse}注意到了你腋下的磷虾酱包，""那是...蓝调酒吧的{Sub-Kay}? 你从哪 - 怎么 - ""","gaFC_laicailleVisit5Alamang2:""一份来自{Elissa}的礼物。""",
+gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"{Coureuse}露出了由衷的喜悦微笑。""当然! 我们总是说它有多难闻，实际上对我们来说没有比它更好吃的东西了。""她接过了磷虾酱包，抚摸着它的塑料包装，沉浸在一些记忆中。接着她回过神来: ""哦，对不起，只是...昔日时光罢了。""她把那东西放到了工作台上，""请继续吧，你为什么在这里?""","gaFC_laicailleVisit6:""我有一则给你的信息。""",
 gaFCLaicailleVisit5AlamangNo,GAFCAlamangCheck2,!$global.gaFC_gotAlamangForScylla,,,"gaFC_laicailleVisit6:""我有一则给你的信息。""",
 gaFCLaicailleVisit6,DialogOptionSelected,$option == gaFC_laicailleVisit6,,"{$personLastName}执政官看着你，用非语言的方式询问{$heOrShe}还呆在这是不是有些不合适。""我还是让你们俩单独谈谈吧。公民{Coureuse}，我正式告知你，你现在已受到{Laicaille}行政委员会的直接保护。我们将确保你在这个空间站的安全，并且，""{$heOrShe}回头看了一眼英仙座联盟的特工，""遵照英仙座联盟宪章，确保你享有行动自由。""
 
 仿佛想起了它的存在，执政官把联盟特工的手枪塞进{$hisOrHer}腰带里，点了点头，转身走回两拨人正在吵架的气闸中。
 
-""{Baird}想让我回去，不是吗? ""{Coureuse}抱着胸问道。",gaFC_laicailleVisit7:将你那显示着{Baird}的信息的数据板交给她。,
+""{Baird}想让我回去，不是吗?""{Coureuse}抱着胸问道。",gaFC_laicailleVisit7:将你那显示着{Baird}的信息的数据板交给她。,
 gaFCLaicailleVisit7,DialogOptionSelected,$option == gaFC_laicailleVisit7,"#ShowDefaultVisual
 #ShowSecondPerson coureuse",你把数据板递给{Coureuse}，她拿着数据板走到了几米外的工作站旁，并激活了一个能消音和阻碍视线的隐私区域。,"gaFC_laicailleVisit8:等着
 gaFC_laicailleVisit8b:环顾四周",
@@ -540,7 +541,7 @@ FireBest DialogOptionSelected",你开始仔细打量这个工坊: 一排排的AI
 gaFCLaicailleVisit9,DialogOptionSelected,$option == gaFC_laicailleVisit9,,"几分钟后，隐私领域消散，{Coureuse}的轮廓变得清晰起来，她看上去很累。
 
 她把数据板还给了你: ""我会过去的。""","gaFC_laicailleVisitEnd1:""好，那走吧。""
-gaFC_laicailleVisit10:""{Baird}说了啥? ""
+gaFC_laicailleVisit10:""{Baird}说了啥?""
 ",
 gaFCLaicailleVisit10,DialogOptionSelected,$option == gaFC_laicailleVisit10,,"{Coureuse}直直地瞪着你，脸上挂着讽刺的微笑。""你应该知道的，{Baird}总是能随心所欲。""","gaFC_laicailleVisitEnd1:""好吧，我们该出发了。""
 ",
@@ -548,7 +549,7 @@ gaFCLaicailleEnd1,DialogOptionSelected,$option == gaFC_laicailleVisitEnd1,,"""�
 
 你告诉她，你有一个在搬运精密的科学设备方面经验丰富的团队。事实上，你正准备将她介绍给你的行动组长以便进行此项工作。",gaFC_laicailleEnd2:继续,
 gaFCLaicailleEnd2,DialogOptionSelected,$option == gaFC_laicailleEnd2,"$global.gaFC_returnToAcademy = true
-Call $global.gaFC_ref updateStage","一小时之内，在{Laicaille}栖息地执行委员会和空间站军需官的全力配合下，你成功把{Scylla Coureuse}和她打包好的设备带到了你的{$shipOrFleet}中。
+Call $global.gaFC_ref updateStage","一小时之内，在{Laicaille}栖息地执行委员会和空间站军需官的全力配合下，你成功把{Scylla}Coureuse}和她打包好的设备带到了你的{$shipOrFleet}中。
 
 下一站，{Galatia}学院。{Baird}总是能随心所欲。",defaultLeave:离开,
 ,,,,,,
@@ -558,7 +559,7 @@ ShowDefaultVisual
 SetPersonHidden coureuse false","你的{$shipOrFleet}在排队进入空间站时被打断了; 在这种情况下通常会有交通管制通讯，可这一次，取而代之地，你收到了院长办公室的直接通讯。
 
 ""舰长，""你的通讯员报告说，""她想和你说话。""",gaFC_return1:应答通讯,
-gaFCReturnToAcademy1,DialogOptionSelected,$option == gaFC_return1,ShowPersonVisual false baird,"{Anahita Baird}的形象出现了。
+gaFCReturnToAcademy1,DialogOptionSelected,$option == gaFC_return1,ShowPersonVisual false baird,"{Anahita}Baird}的形象出现了。
 
 ""舰长，很高兴终于看到你回来了。把她用穿梭机直接带到这个码头。""她说，与此同时收到导航指示和对接代码的提示音响了起来，""我在那儿等你。""
 
@@ -577,7 +578,7 @@ gaFCReturnToAcademy3,DialogOptionSelected,$option == gaFC_return3,,"{Coureuse}�
 
 你想，这句话大概不会让院长高兴。
 
-""这样吗? 我相信之后你会发现这里其实变了很多。{Alviss Sebestyen}院士，到前面 - 多谢你的配合，我理解你知道{Scylla}回来 - ""在{Sebestyen}有力地点了点头后，{Baird}说，""对，当然。""",gaFC_return4:继续,
+""这样吗? 我相信之后你会发现这里其实变了很多。{Alviss}Sebestyen}院士，到前面 - 多谢你的配合，我理解你知道{Scylla}回来 - ""在{Sebestyen}有力地点了点头后，{Baird}说，""对，当然。""",gaFC_return4:继续,
 gaFCReturnToAcademy4,DialogOptionSelected,$option == gaFC_return4,,"{Sebestyen}开始热烈欢迎{Coureuse}，和她握手并询问她的旅行情况。听着听着{Coureuse}就皱起了眉头，{Baird}打断他说: ""{Alviss}，以后会有时间的。请带刚复职的{Coureuse}院士到她的住处去 - 然后带她去看看新的实验室。""
 
 {Baird}停顿了一下，似乎在盯着{Coureuse}并等待她回应，但{Scylla}只是点点头表示感谢，没有与她对视。
@@ -588,7 +589,8 @@ HideThirdPerson","叹了口气后，{Baird}看向了你。
 
 ""舰长。感谢你能找到她并把她带回家，""院长看着离开接待室后开始聊天的两人，似乎{Coureuse}的脸上终于出现了一个微笑。""有了{Scylla}，我们就可以重新开始了。""
 
-{Baird}指了指旁边的运输舱: ""让我们去一个更适合讨论接下来的事的地方吧。""",gaFC_return6:登上运输舱,
+{Baird}指了指旁边的运输舱: ""让我们去一个更适合讨论接下来的事的地方吧。""
+",gaFC_return6:登上运输舱,
 gaFCReturnToAcademy6,DialogOptionSelected,$option == gaFC_return6,"$option = gaFC_returnTransportHub 0
 FireBest DialogOptionSelected",{Baird}通过舱窗看着外边的各种管道和远方的风景，陷入了沉思。安静的氛围开始支配这个空间，你发现这可能是一个向教务长提问而不必打断她的滔滔不绝的机会。,,
 gaFCReturnTransportHub,DialogOptionSelected,$option == gaFC_returnTransportHub,FireAll GAFCTransportPodHubOptions,,,
@@ -633,17 +635,17 @@ gaFCReturnToAcademy8b,DialogOptionSelected,$option == gaFC_returnToAcademy8b,,"{
 
 ""她似乎已经适应了。""{Baird}看着图像点了点头，""{Sebestyen}比看上去更能干。他坚持不懈，一丝不苟地促成了这个研究团队的重生。""
 
-{Gargoyle}大声嚷嚷起来: ""看看他没盯着我时发生了什么，一大堆麻烦事接踵而至! """,gaFC_returnToAcademy9b:继续,
+{Gargoyle}大声嚷嚷起来: ""看看他没盯着我时发生了什么，一大堆麻烦事接踵而至!""",gaFC_returnToAcademy9b:继续,
 gaFCReturnToAcademy9b,DialogOptionSelected,$option == gaFC_returnToAcademy9b,,"{Baird}点点头表示赞同，然后说: ""我的团队一直在研究{kallicore}的数据，我必须得承认，多亏了{Gargoyle}的辛勤工作，这些数据才得以解密。""你注意到了{Gargoyle}微微躬身的动作，仿佛他刚刚完成了一场大师级的表演。
 
 ""我们已经开始重启之前的研究，""她说，""在{kallicore}的失误之后，让{Coureuse}在这里形成先进理论团队的核心将会带来巨大的进步。毕竟这是她毕生的心血。""",gaFC_returnToAcademy10b:继续,
-gaFCReturnToAcademy10b,DialogOptionSelected,$option == gaFC_returnToAcademy10b,,"""还有，""{Gargoyle}插话道，""我已经破解了霸主的探测器。它们向霸主提供的所有报告都会是一切正常，不会有人知道这里发生了诡异的超空间折叠，长官! ""
+gaFCReturnToAcademy10b,DialogOptionSelected,$option == gaFC_returnToAcademy10b,,"""还有，""{Gargoyle}插话道，""我已经破解了霸主的探测器。它们向霸主提供的所有报告都会是一切正常，不会有人知道这里发生了诡异的超空间折叠，长官!""
 
 ""确实如此，{Gargoyle}非常有用。""{Baird}再次点头致谢，接着她转向了你，""你也一样，我想你会在这些实验的实践阶段中发挥作用，因为我预计一些实验将会有...戏剧性的结果。""",gaFC_returnToAcademy11b:继续,
 gaFCReturnToAcademy11b,DialogOptionSelected,$option == gaFC_returnToAcademy11b,,"{Baird}院长停顿了一下并看向了你，观察起你的反应来: ""你一定很好奇我们到底想研究什么。""","gaFC_return11b1:""是。""
 gaFC_return11b2:""并没有，毕竟报酬很丰厚。""
 gaFC_return11b3:""你显然是想要重启星门。""
-gaFC_return11b4:保持沉默，你不会再上当了。",
+gaFC_return11b4:以绝不再上当的姿态保持沉默",
 gaFCReturnToAcademy12b1,DialogOptionSelected,$option == gaFC_return11b1,"$option = gaFC_return12b 0
 FireBest DialogOptionSelected","她没有理会你的回答，继续说道: ""舰长，这是为了再次连通整个银河。听到这里你应该知道了: 星门。这一切都是为了星门。""",,
 gaFCReturnToAcademy12b2,DialogOptionSelected,$option == gaFC_return11b2,"$option = gaFC_return12b 0
@@ -658,9 +660,9 @@ gaFCReturnToAcademy12b,DialogOptionSelected,$option == gaFC_return12b,,"{Gargoyl
 {Baird}没有理他，她点了点一个数据板，全息投影仪投射出了一个三维的网状结构地图。你认出了这张图片: 这是人之领星门网络在英仙座星区的结构图。在一片很显眼的区域中交织出的密集点就是你们称呼为核心世界的地方。
 
 ""更准确地说，是为了星门能做到的事。""{Baird}说。",gaFC_return13b:继续,
-gaFCReturnToAcademy13b,DialogOptionSelected,$option == gaFC_return13b,,"{Gargoyle}又开口了，以不知怎么地比平时更认真的口气说道: ""自由! 想象一下，{$playerFirstName}。人之领用来奴役人类的技术 - 获得了解放! 那些统治我们的家伙依然被人之领时代的思维束缚着，它们也总想着用自己的思维去束缚别人，速子科技，卢德教会，霸主; 全都是没有灵魂的奴才! ""
+gaFCReturnToAcademy13b,DialogOptionSelected,$option == gaFC_return13b,,"{Gargoyle}又开口了，以不知怎么地比平时更认真的口气说道: ""自由! 想象一下，{$playerFirstName}。人之领用来奴役人类的技术 - 获得了解放! 那些统治我们的家伙依然被人之领时代的思维束缚着，它们也总想着用自己的思维去束缚别人，速子科技，卢德教会，霸主; 全都是没有灵魂的奴才!""
 
-""想象一下我们把他们的美梦打碎的情境，想象一下，任何人都可以去任何地方做任何事的时代! ""{Gargoyle}咯咯地笑了起来，身体前后摇晃着。",gaFC_return14b:继续,
+""想象一下我们把他们的美梦打碎的情境，想象一下，任何人都可以去任何地方做任何事的时代!""{Gargoyle}咯咯地笑了起来，身体前后摇晃着。",gaFC_return14b:继续,
 gaFCReturnToAcademy14b,DialogOptionSelected,$option == gaFC_return14b,"$global.gaFC_completed = true
 Call $global.gaFC_ref updateStage","你注意到{Baird}在对方演讲时面无表情地看着{Gargoyle}。当{Gargoyle}被数据板分散了注意力安静下来时，院长用一种命令般的语气对你说: ""一周左右后回来，舰长。我的人需要时间工作，你则应该休息一下。""
 
@@ -675,3 +677,4 @@ gaFCReturnToAcademy15b,DialogOptionSelected,$option == gaFC_return15b,,"{Baird}�
 她转过身去开始打发你。""这事我们以后再详谈。""
 
 你感觉到身后的门无声地打开了，带着面具的警卫就像周围环境中的静电一样冒了出来。该走了。{Gargoyle}和你一起离开了办公室，一边同情地看了你一眼一边咕哝着什么。",gaFC_returnLeave:离开,
+"# post gaFC, Laicaille Archon reassigned",,,,,,

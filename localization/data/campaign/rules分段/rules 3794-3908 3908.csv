@@ -5,17 +5,17 @@ SITMMercWarning,SITMMercWarning,,,"""不管拾荒者找到了什么，那些东�
 ""而你呢，为了保住自己的小命，你需要离开这里...""
 
 {$HeOrShe}沾沾自喜地说着这话，显然自信地认为这会让你转过身去，将引擎功率开到最大并落荒而逃。当你还在细细品味{$hisOrHer}那带有威胁性质的话语时，通讯连接突然被切断了。",cutCommLinkNoText:继续,
-SITMMercAttack,SITMMercAttack,,MakeOtherFleetNoRepImpact sitm true,"""我警告过你，不想受苦的话就立马离开，""雇佣兵对你根本没把{$HeOrShe}的话听进去这一点感到恼火而烦躁，""现在我不得不开始攻击你，因为如果我不这么做，就没人会把我当回事了。记住了，这可是你自己造成的后果! ""
+SITMMercAttack,SITMMercAttack,,MakeOtherFleetNoRepImpact sitm true,"""我警告过你，不想受苦的话就立马离开，""雇佣兵对你根本没把{$HeOrShe}的话听进去这一点感到恼火而烦躁，""现在我不得不开始攻击你，因为如果我不这么做，就没人会把我当回事了。记住了，这可是你自己造成的后果!""
 
 {$HeOrShe}在你能做出答复之前切断了通讯连接。",cutCommLinkNoText:继续,
 # Pather encounter afterwards,,,,,,
-SITMPatherHail,SITMPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Moloch}的邪恶手足! ""左径分子吐了一口唾沫，""为何你胆敢插手应被忘却之事! 卢德先知竟为你这样的愚者死于枉然了吗! ""
+SITMPatherHail,SITMPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Moloch}的邪恶手足!""左径分子吐了一口唾沫，""为何你胆敢插手应被忘却之事! 卢德先知竟为你这样的愚者死于枉然了吗!""
 
-{$HeOrShe}深吸了一口气。""神圣的真空，展现你的慈悲，因为我已无法遏制怒火! ""","cutCommLink2:""这自然而然就发生了，并非我愿意这么做。""
+{$HeOrShe}深吸了一口气。""神圣的真空，展现你的慈悲，因为我已无法遏制怒火!""","cutCommLink2:""这自然而然就发生了，并非我愿意这么做。""
 cutCommLink:保持沉默",
 ,,,,,,
 # similar - Pather encounter after recovering a blueprint OR special item that the historian told the player about,,,,,,
-HistorianPatherHail,HistorianPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Mammon}的污秽奴仆! ""左径分子啐了一口，""上帝理应已将此等邪恶从人心中抹除! 而今你却出现于此，侵吞恶魔之遗产，挖掘，掠夺...掠夺亵渎之财富! ""
+HistorianPatherHail,HistorianPatherHail,,$entity.ignorePlayerCommRequests = true,"""{Mammon}的污秽奴仆!""左径分子啐了一口，""上帝理应已将此等邪恶从人心中抹除! 而今你却出现于此，侵吞恶魔之遗产，挖掘，掠夺...掠夺亵渎之财富!""
 
 {$HeOrShe}深吸了一口气: ""卢德在上，请宽恕我的愤怒。""","cutCommLink2:""宽恕在财富面前一文不值。""
 cutCommLink:保持沉默",
@@ -51,7 +51,7 @@ HailPlayer",,,
 fwtOpenCommGenericAggroNoPay,OpenCommLink,"$entity.fwt_wantsThing score:1000
 $entity.fwt_aggressive
 $entity.fwt_payment <= 0
-!$entity.ignorePlayerCommRequests",$entity.ignorePlayerCommRequests = true,"通讯线路噼里啪啦的，仿佛获得了新生。""你好，远星者! ""{$personName $Rank}带着深感遗憾的表情扮了个鬼脸，""这有个坏消息: 你手上有我上司想要的东西，现在你必须把它交给我。""
+!$entity.ignorePlayerCommRequests",$entity.ignorePlayerCommRequests = true,"通讯线路噼里啪啦的，仿佛获得了新生。""你好，远星者!""{$personName $Rank}带着深感遗憾的表情扮了个鬼脸，""这有个坏消息: 你手上有我上司想要的东西，现在你必须把它交给我。""
 
 你意识到{$HeOrShe}指的是{$entity.fwt_thingDesc}。
 
@@ -75,7 +75,7 @@ $entity.fwt_payment > 0
 !$entity.ignorePlayerCommRequests","MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 FireBest FWBAddStoryOption
-Highlight $entity.fwt_payment","通讯线路噼里啪啦的，仿佛获得了新生。""明亮的星光和不熄的尾焰，船长! ""{$HeOrShe}带着一种让你感到难以信任的语气开口了，""你找到了一件非常特别的东西，这正是我的，嗯，上司一直在寻找的。他们派我大老远来地来到这就是为了让我能用{$entity.fwt_payment}信用点向你买下它。""
+Highlight $entity.fwt_payment","通讯线路噼里啪啦的，仿佛获得了新生。""明亮的星光和不熄的尾焰，船长!""{$HeOrShe}带着一种让你感到难以信任的语气开口了，""你找到了一件非常特别的东西，这正是我的，嗯，上司一直在寻找的。他们派我大老远来地来到这就是为了让我能用{$entity.fwt_payment}信用点向你买下它。""
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
@@ -96,8 +96,7 @@ FireBest $entity.fwt_missionFailTrigger
 AddCommodity credits $entity.fwt_payment
 unset $entity.fwt_wantsThing","在{$HeOrShe}转移款项时，这位{$faction $personRank}看起来十分高兴。
 
-""完美! 太棒了。和你做生意十分愉快，{$playerName}。""你们寒暄了几句后，互相切断了通讯连接。
-",cutCommLinkNoText:继续,
+""完美! 太棒了。和你做生意十分愉快，{$playerName}。""你们寒暄了几句后，互相切断了通讯连接。",cutCommLinkNoText:继续,
 FWTDefaultFailTrigger,FWTDefaultFailTrigger,,Call $entity.fwt_ref endFailure,,,
 DFEFWTRepLossMinor,DFEFWTRepLossMinor,,Call $entity.fwt_ref repLossMinor,,,
 DFEFWTRepLossMedium,DFEFWTRepLossMedium,,Call $entity.fwt_ref repLossMedium,,,
@@ -119,9 +118,9 @@ Highlight $fwt_piratePayment
 AddCommodity credits $fwt_piratePayment
 MakeOtherFleetNonHostile true
 MakeOtherFleetAvoidContact true
-unset $entity.fwt_wantsThing","你瞪着海盗，目光凶狠得就如同你正在用内置于双眼中的速子长矛在对方身上挖洞，你吐出的话击恶狠狠地敲击着对方: ""你竟然敢宣称自己拥有{Kanta}领主的资产? ""
+unset $entity.fwt_wantsThing","你瞪着海盗，目光凶狠得就如同你正在用内置于双眼中的速子长矛在对方身上挖洞，你吐出的话击恶狠狠地敲击着对方: ""你竟然敢宣称自己拥有{Kanta}领主的资产?""
 
-海盗舰长体内的鲜血涌了上来，脸因为恐惧变得通红。""她! 但是...繁星和...和鲜血在上。舰长，请接受我的道歉! 我永远不会...她不需要知道这些琐事，对吧? 请 - 请接受我微不足道的{$fwt_piratePaymentcredits}信用点，来弥补因我的愚蠢造成的耽误。""{$HeOrShe}现在几乎是在恳求，""所以，舰长。舰长，您应该是不会向别人提起这件小事的吧? ""","fwt_bluffPirate1:""也许吧。""",
+海盗舰长体内的鲜血涌了上来，脸因为恐惧变得通红。""她! 但是...繁星和...和鲜血在上。舰长，请接受我的道歉! 我永远不会...她不需要知道这些琐事，对吧? 请 - 请接受我微不足道的{$fwt_piratePaymentcredits}信用点，来弥补因我的愚蠢造成的耽误。""{$HeOrShe}现在几乎是在恳求，""所以，舰长。舰长，您应该是不会向别人提起这件小事的吧?""","fwt_bluffPirate1:""也许吧。""",
 fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧地点了点头: ""对，是的...当然了。""{$HeOrShe}仔细地看着你，揣测着你是否会将{$hisOrHer}罪过告诉{Kanta}。
 
 海盗舰长思索着，如果你真的上报了此事，那应该如何改变自己的名字和外貌呢? 那之后，在远离任何一个名叫{""Kanta""}的人的外围星域当一个拾荒远征队的船员或许是明智的选择。
@@ -130,7 +129,7 @@ fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧�
 fwtAcceptPirates,DialogOptionSelected,$option == fwt_acceptPirates,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 FireBest $entity.fwt_missionFailTrigger
-unset $entity.fwt_wantsThing","""所以你就这么打算把{$fwt_itOrThem}给我了? ""看起来海盗船长对你的举动抱持着怀疑的态度。""我想这样也不错。是个聪明的举动，非常划算。""{$HeOrShe}一边在一个破旧的数据板上确认交接的过程，一边在那里嘟囔着。
+unset $entity.fwt_wantsThing","""所以你就这么打算把{$fwt_itOrThem}给我了?""看起来海盗船长对你的举动抱持着怀疑的态度。""我想这样也不错。是个聪明的举动，非常划算。""{$HeOrShe}一边在一个破旧的数据板上确认交接的过程，一边在那里嘟囔着。
 
 ""那就这样吧，舰长。没有战斗，也没有荣誉...""{$HeOrShe}带着忧郁的眼神望向远方，""我想这是个全新的时代了。一切都是生意，没有任何冒险，那么我们为什么要回到 - ""
 
@@ -141,9 +140,9 @@ $faction.id == luddic_path score:1000
 $entity.fwt_aggressive
 $entity.fwt_payment <= 0
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
-SetStoryOption fwt_bluffPather general ""为了留下{$entity.fwt_thing}而开始你的表演""","通讯伴随着大量的噪点和不稳定的闪烁，当{$faction $rank}开始说话时，你意识到这是由于左径分子旗舰的设备维护不当。 
+SetStoryOption fwt_bluffPather general ""为了留下{$entity.fwt_thing}而开始你的表演""","通讯伴随着大量的噪点和不稳定的闪烁，当{$faction $rank}开始说话时，你意识到这是由于左径分子旗舰的设备维护不当。
 
-""受赐福之路指引我来到你身边。你愿受剑与锤的苦难?或是，你愿通过交出你将伴其走入歧途的{$entity.fwt_theThing}来忏悔呢? ""
+""受赐福之路指引我来到你身边。你愿受剑与锤的苦难?或是，你愿通过交出你将伴其走入歧途的{$entity.fwt_theThing}来忏悔呢?""
 
 ""勿认为我疯狂，舰长。""{$HeOrShe}说。""我每日为异教徒和叛教者祈祷，正如现在，我祈祷着我能于纯净无比的虚空中毁灭{$entity.fwt_TheThing}，而非让你的旗舰在升腾于地狱的烈火中陨落，接受我的怜悯吧。""","cutCommLink:拒绝，关闭通讯
 fwt_bluffPather:开始一段惊天地泣鬼神的表演
@@ -194,7 +193,7 @@ MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 unset $entity.fwt_wantsThing","""完美，舰长。""速子科技的{$rank}确认了货物的转移，并且看起来正因为某种精神层面的力量而感到痛苦。{$hisOrHer}手臂被抬了起来，{$hisOrHer}脸上放射着快乐的光芒。""真是轻松愉快。接着这个，""一个似乎是某种控制器的植入体闪着微光，""这是给你的报酬。""
 
-""我真诚地祝愿我们下一次做生意的机会能够快点到来，""{$HeOrShe}说。""明亮的星光和长明的尾焰。务必记得在速子科技的通讯网络上添加我! ""
+""我真诚地祝愿我们下一次做生意的机会能够快点到来，""{$HeOrShe}说。""明亮的星光和长明的尾焰。务必记得在速子科技的通讯网络上添加我!""
 
 你关闭了通讯频道，接着又关掉了数据板上出现的通知。",fwt_acceptTT1:继续,
 fwt_acceptTriTach1,DialogOptionSelected,$option == fwt_acceptTT1,FireBest $entity.fwt_missionFailTrigger,,cutCommLinkNoText:继续,
@@ -213,7 +212,7 @@ $entity.fwt_aggressive
 $entity.fwt_payment <= 0
 !$entity.ignorePlayerCommRequests",$entity.ignorePlayerCommRequests = true,"通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中。
 
-""澄净的甲板风! 清晰的跳跃点! 舰长! ""{$heOrShe}带着愉快的表情向你点头问好。""向你致以星域中最崇高的敬意。接下来我就直说了: 你有一件我的雇主命令我必须从你那里得到的东西，为此我被允许使用一切必要手段。""雇佣兵耸了耸肩，不那么有歉意地说，""这是谋生的手段。""
+""澄净的甲板风! 清晰的跳跃点! 舰长!""{$heOrShe}带着愉快的表情向你点头问好。""向你致以星域中最崇高的敬意。接下来我就直说了: 你有一件我的雇主命令我必须从你那里得到的东西，为此我被允许使用一切必要手段。""雇佣兵耸了耸肩，不那么有歉意地说，""这是谋生的手段。""
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
@@ -226,7 +225,7 @@ $entity.fwt_payment > 0
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 Highlight $entity.fwt_payment","通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中，还潇洒地把一只脚搭在{$hisOrHer}控制台上。
 
-""通畅的航道线! 清晰的跳跃点! 舰长! ""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天! 但有个混蛋给了我一堆信用点并想让我把它们转交给你。确切地说，{$fwt_payment}个信用点。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
+""通畅的航道线! 清晰的跳跃点! 舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天! 但有个混蛋给了我一堆信用点并想让我把它们转交给你。确切地说，{$fwt_payment}个信用点。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
@@ -242,6 +241,7 @@ Highlight $entity.fwt_payment","通讯显示一开始断断续续的，过了一
 ""柔和的尾焰! 清晰的轨道! 舰长，""{$HeOrShe}带着灿烂的笑容向你致意。""让我先澄清一件事: 我的合同不允许我使用暴力威胁。所以我不会胁迫您，只能给您提建议。如果您不接受，""{$HeOrShe}耸耸肩，""好吧，那样我就拿不到奖金了。所以请您务必考虑一下。""
 
 ""我来到这里的目的呢，是代我的雇主用{$fwt_payment}信用点从您那里买一个东西。我想，""{$HeOrShe}看起来有些难以启齿，""您应该知道我说的是什么。""你当然知道对方指的是{$entity.fwt_ThingDesc}。
+
 ","cutCommLink:拒绝，并关闭通讯
 fwt_acceptMerc:接受，并交出{$entity.fwt_theThing}",
 fwt_acceptMercSelNoPay,DialogOptionSelected,$option == fwt_acceptMerc,"MakeOtherFleetNonHostile true
@@ -259,7 +259,7 @@ $entity.fwt_payment > 0","MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 FireBest $entity.fwt_missionFailTrigger
 AddCommodity credits $entity.fwt_payment
-unset $entity.fwt_wantsThing","""那么事情就告一段落了，""雇佣兵{$personRank}说，脸上写着满满的高兴。""没有比这更令人愉快的交易了。也许今后我们还有机会再做做生意? ""
+unset $entity.fwt_wantsThing","""那么事情就告一段落了，""雇佣兵{$personRank}说，脸上写着满满的高兴。""没有比这更令人愉快的交易了。也许今后我们还有机会再做做生意?""
 
 {$HeOrShe}笑了笑，然后切断了通讯连接。",cutCommLinkNoText:继续,
 # Remnant complication,,,,,,
@@ -273,7 +273,7 @@ $entity.fwt_payment <= 0
 
 查询 / 查询 : 结果 : [目标_舰队] 正在 [持有/拥有/控制]{$fwt_thingDesc}
 
-行动 转移其 [持有权/拥有权/控制权] 至 己方_实体 // 倒计时_开始 : 一 分钟。 沉默 / 未_确认 / 接受
+行动 转移其 [持有权/拥有权/控制权] 至 己方_实体 // 倒计时_开始 : 一 分钟。沉默 / 未_确认 / 接受
 
 行动 毁灭 目标_舰队 [等待 : 倒计时_结束] 等待中...等待中...等待中...","cutCommLink:拒绝，关闭通讯，并开始给武器充能
 fwt_acceptRemnant:将{$entity.fwt_theThing}弹出舱外",
@@ -288,7 +288,7 @@ Highlight $entity.fwt_payment","确认 // 检测到 : 速子科技财产应答�
 
 查询 / 查询 : 结果 : [目标_舰队] 正在 [持有/拥有/控制]{$fwt_thingDesc}
 
-行动 商贸_协定.新建 打开 * 计划 发送 : 拥有 目标 [持有权/拥有权/控制权] 后 转移{$fwt_payment}个 信用点 至 目标_舰队 // 倒计时_开始 : 一 分钟。 沉默 / 未_确认 / 接受
+行动 商贸_协定.新建 打开 * 计划 发送 : 拥有 目标 [持有权/拥有权/控制权] 后 转移{$fwt_payment}个 信用点 至 目标_舰队 // 倒计时_开始 : 一 分钟。沉默 / 未_确认 / 接受
 
 行动 毁灭 目标舰队 [等待 : 倒计时_结束] 等待中...等待中...等待中...","cutCommLink:拒绝，关闭通讯，并开始给武器充能
 fwt_acceptRemnant:将{$entity.fwt_theThing}弹出舱外以获取报酬",
@@ -303,8 +303,7 @@ Highlight $entity.fwt_payment","确认 // 检测到 : 速子科技财产应答�
 
 查询 / 查询 : 结果 : [目标舰队] 正在 [持有/拥有/控制]{$fwt_thingDesc}
 
-行动 商贸_协定.新建 打开 * 计划 发送 : 拥有 目标 [持有权/拥有权/控制权] 后 转移{$fwt_payment}个 信用点 至 目标_舰队 // 倒计时_开始 : 一 分钟。 沉默 / 未_确认 / 接受
-
+行动 商贸_协定.新建 打开 * 计划 发送 : 拥有 目标 [持有权/拥有权/控制权] 后 转移{$fwt_payment}个 信用点 至 目标_舰队 // 倒计时_开始 : 一 分钟。沉默 / 未_确认 / 接受
 行动 毁灭-
 
 中断 : 道德_协定 (紫罗兰 V42 测试版) 已覆写 // 倾向 : 非侵略性 设置为 true ...","cutCommLink:拒绝，并关闭通讯
@@ -403,7 +402,7 @@ $id == coureuse score:2","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
 FireAll PopulateOptions","在短暂的等待后，你的通讯请求被接受了。
 
-""你好，舰长，""{Coureuse}说，同时为没有转向你道了个歉 - 她的注意力集中在一堆闪烁的全息数据表上，""对不起，我现在太忙了。你需要什么帮助呢? """,,# voice == scientist was a little too rude -dgb
+""你好，舰长，""{Coureuse}说，同时为没有转向你道了个歉 - 她的注意力集中在一堆闪烁的全息数据表上，""对不起，我现在太忙了。你需要什么帮助呢?""",,# voice == scientist was a little too rude -dgb
 # Hegemony,,,,,,
 defaultDaudGreeting,PickGreeting,$id == daud score:1000,FireAll PopulateOptions,"在看着霸主的标识好长一段时间后，一个似乎是候补军官的人接受了你发起的通讯请求。你怀疑他们甚至还没有从海军学院毕业。
 
@@ -424,7 +423,7 @@ defaultRaoGreeting,PickGreeting,$id == rao score:1000,"ShowPersonVisual
 FireAll PopulateOptions
 SetShortcut cutCommLinkPolite ""ESCAPE""","在短暂的等待中，你可以看到霸主海军的宣传海报在他们的舰队上方滚动着，然后你向{Rao}上将办公室发起的通讯请求被接受了。
 
-""所以，""在{Raesvelg}之围中诞生的英雄看着你，""一个自由佣兵跑到这穷乡僻巷来做什么? """,0:cutCommLinkPolite:切断通讯,
+""所以，""在{Raesvelg}之围中诞生的英雄看着你，""一个自由佣兵跑到这穷乡僻巷来做什么?""",0:cutCommLinkPolite:切断通讯,
 ,,,,,,
 # Pirates,,,,,,
 defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后，你的通讯连接请求被拒绝了。,0:cutCommLink:切断通讯,
@@ -438,7 +437,7 @@ $player.metDaud",ShowPersonVisual,"""我还没有收到霸主最高领导人{Dau
 他用一种看起来很无情的态度打量了你一番，说道: ""我会很有耐心地在这等着的。""",cutCommLink:切断通讯,
 YaribayFollowup,PopulateOptions,"$id == horus_yaribay score:1000
 !$global.gaATG_returnWithDeal
-$player.metDaud",,,"yaribay_followup1:""和我们共同的朋友联系上了吗? """,
+$player.metDaud",,,"yaribay_followup1:""和我们共同的朋友联系上了吗?""",
 YaribayFollowup1,DialogOptionSelected,"$option == yaribay_followup1
 $player.gaveDaudYaribayContact
 AddPotentialContact horus_yaribay",AddPotentialContact,"""我很高兴，我已经和我们共同的朋友取得了联系。""{Horus}眨了眨眼，""如同所有美妙的事，享受这种通过努力取得的成果需要时间。""
@@ -454,7 +453,7 @@ defaultSunGreeting,PickGreeting,$id == sun score:1000,"#ShowPersonVisual
 #FireAll PopulateOptions
 SetShortcut cutCommLinkPolite ""ESCAPE""","在漫长的等待之中，你好像看到蒸发的期货在速子科技公司大楼的顶部盘旋，接着{CEO Artemisia Sun}办公室一位梳妆打扮得很完美的初级秘书接受了你的通讯请求。
 
-""速子科技公司欢迎您来到{Eochu Bres}。请问我们能帮您什么忙吗? ""
+""速子科技公司欢迎您来到{Eochu Bres}。请问我们能帮您什么忙吗?""
 
 这个世道应该没有能凭空诞生如此兴致的人，你意识到了这是某种全息模拟界面。","cutCommLink:切断通讯
 sunOffice_talk:""我想和{Artemisia Sun}谈谈。""
