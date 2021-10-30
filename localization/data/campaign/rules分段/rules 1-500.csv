@@ -1712,3 +1712,69 @@ unset $ignorePlayerCommRequests
 $cargoScanConv = true 0
 AddText ""你被{$faction}$otherShipOrFleet}呼叫了。"" $faction.baseColor
 OpenComms",,,
+cargoScanFirstComms,OpenCommLink,$entity.cargoScanConv score:100,"AddText ""\""注意：你的舰队特征与市场当局公布的走私嫌疑人资料相吻合。特此命令你接受货物扫描。\""""
+SetStoryOption avoid_scan 1 avoidCargoScan ui_char_spent_story_point ""说服对方以避免货物扫描""",,"0:cargoScan_comply:允许扫描
+1:avoid_scan:说服对方
+2:cargoScan_refuse:拒绝并切断通讯",
+,,,,,,
+cargoScanStart,DialogOptionSelected,$option == cargoScan_comply,"AddText ""经过短暂等待后。{$faction{$otherFleetName} 向你发来了扫描结果。""
+CargoScan
+FireBest CargoScanResult",,,
+cargoScanPods,CargoScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"{$faction{$personRank}停了下来, 并把视线移开了屏幕.
+
+""请你解释下这些货舱是怎么回事呢? 为什么它们装的是违禁品? 是不是你的? 不是? 很好, 我们之后会没收这些玩意.""",0:scan_podsCont:继续,
+cargoScanPodsCont,DialogOptionSelected,$option == scan_podsCont,FireBest CargoScanResult,,,
+cargoScanClean,CargoScanResult,"!$scan_contrabandFound
+!$scan_suspiciousCargoFound",,"{$PersonRank{$personName}看上去有些失望。
+
+""好吧, 看来并没有什么异常。""
+
+通讯链接在你有机会回话之前就被切断了。",0:cargoScan_cleanCont:继续,
+#cargoScanSuspicious,CargoScanResult,$scan_suspiciousCargoFound,,"虽然扫描没有发现明显的违禁品，但根据发现的货物数量，加上你以前参与黑市活动的间接证据，已经足以遭人怀疑。
+
+然而这还不足以对你采取任何行动。因此，{$personRank{$personName}看起来非常不愉快。
+
+""我会再来找你的，你可以先记好了。""在切断通讯联系之前，{$heOrShe}咬得牙痒痒地说。",0:cargoScan_cleanCont:继续,
+cargoScanBoarding1,CargoScanResult,$scan_suspiciousCargoFound,,"扫描没有发现公开的违禁品，但对由于你参与黑市活动的嫌疑充分，巡逻队指挥官对此并未善罢甘休。
+
+""准备好迎接一个登船小组。我们要亲自动手进行一次非常彻底的检查。""
+
+你认为在这次""彻底""的检查过程中，检查人员很可能会对你的船只的战备造成一些还算勉强可以接受的少量损害。","0:cargoScan_comply_boarding:Comply and prepare for an inspection
+1:cargoScan_refuse:Refuse and cut the comm link",
+cargoScanBoarding2,DialogOptionSelected,$option == cargoScan_comply_boarding,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30","情况和你预计得差不多，你的几艘船报告说在作战能力上受到了轻微但令人不快的损失。幸运的是，检查人员似乎更热衷于制造 ""意外 ""损害，而不是去实际寻找违禁品，因此他们没有发现有问题货物。",cutCommLinkNoText:Continue,
+cargoScanClean2,DialogOptionSelected,$option == cargoScan_cleanCont,"MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+ShowDefaultVisual
+EndConversation NO_CONTINUE",,,
+cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""很好很好。正如我所料，我们在这里逮到了个走私犯。遵照{$faction}的标准流程，你必须将违禁品释放到太空中，由巡逻队指挥官决定是拾取还是焚毁。""
+
+{$PersonRank{$personLastName}看上去相当高兴，让你觉得今天的命令应该是""拾取 ""而不是""焚毁""。","0:cargoScan_comply_contraband:上交违禁品并切断通讯
+1:cargoScan_refuse:拒绝并切断通讯",
+cargoScanContrabandSurrender,DialogOptionSelected,$option == cargoScan_comply_contraband,"CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage cargoScan false
+MakeOtherFleetAggressive cargoScan false
+unset $entity.pursuePlayer_smugglingScan
+unset $entity.cargoScanConv
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+ShowDefaultVisual
+EndConversation",,,
+cargoScanRefuse,DialogOptionSelected,$option == cargoScan_refuse,"$entity.ignorePlayerCommRequests = true 0
+unset $entity.cargoScanConv
+unset $entity.pursuePlayer_smugglingScan
+$entity.smugglingScanComplete = true 1
+$sourceMarket.smugglingScanTimeout = true 30
+AdjustRep $faction.id CARGO_SCAN_REFUSE
+AdjustRepActivePerson CARGO_SCAN_REFUSE
+ShowDefaultVisual
+EndConversation",,,
