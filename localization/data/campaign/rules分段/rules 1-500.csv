@@ -269,7 +269,7 @@ $player.transponderOn
 !$faction.c:allowsTransponderOffTrade
 !$market.mc:free_market
 RepIsAtBest $faction.id INHOSPITABLE","$tradeMode = NONE 0
-FireBest MarketPostDock","鉴于 $TheFactionLong 与你处于 $relAdjective 关系，港务局拒绝了你的入港许可。
+FireBest MarketPostDock","鉴于{$TheFactionLong}与你处于{$relAdjective}关系，港务局拒绝了你的入港许可。
 
 不过关闭应答器的话...倒是可能与这儿的地下组织取得联系。",,
 marketPostOpenNoTradeHostile,MarketPostOpen,"$hasMarket
@@ -285,7 +285,7 @@ FireBest MarketPostDock",你最近在{$market}附近采取的行动已经引起�
 marketPostOpenNoTradeOffOpen,MarketPostOpen,"$hasMarket
 $player.transponderOn
 RepIsAtBest $faction.id INHOSPITABLE score:10","$tradeMode = NONE 0
-FireBest MarketPostDock","鉴于 $TheFactionLong 与你处于 $relAdjective 关系，港务局拒绝了你的入港许可.。
+FireBest MarketPostDock","鉴于{$TheFactionLong}与你处于{$relAdjective}关系，港务局拒绝了你的入港许可.。
 
 对方拒绝的理由相当敷衍，你觉得只需关闭应答器就可轻松混入。",,
 marketPostOpenToOffPatrols,MarketPostOpen,"$hasMarket
@@ -1429,7 +1429,7 @@ FireAll PopulateOptionsHire","你的连接请求被迅速接受。
 
 {$personName}上下打量了你一番。你觉得{$heOrShe}说不定能猜透你的星币余额，偏差不超过百。
 
-""如果你正在寻找一个经验丰富的自由职业军官的话，那正巧，我也在找一个客户，不过仅限临时雇佣。我的要价比较高，但把你的船交给那些没什么经验的家伙会更加赔钱。""
+""如果你正在寻找一个经验丰富的自由职业军官的话，那正巧，我也在找一个客户，不过仅限临时雇佣。我的要价很高，但把你的船交给那些经验不足的家伙会更加赔钱。""
 OR
 你的通讯请求被迅速接受。
 
@@ -1658,7 +1658,7 @@ tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFoun
 ""但外面这些货物舱呢，让我检查一下--为什么，它们居然装有非法货物? 这些应该不是你的吧? 对吧? 很好。那么我们将没收这些货物。""",0:tOff_podsCont:继续,
 tOffCargoScanPodsCont,DialogOptionSelected,$option == tOff_podsCont,FireBest TOffScanResult,,,
 tOffCargoScanClean,TOffScanResult,"!$scan_contrabandFound
-!$scan_suspiciousCargoFound",,"{$PersonRank{$personName}看上去很失望.
+!$scan_suspiciousCargoFound",,"$PersonRank{$personName}看上去很失望.
 
 ""如果再让我抓到你关着应答器晃悠, 事情就不会这么简单了.""
 
