@@ -1,3 +1,4 @@
+id,trigger,conditions,script,text,options,notes
 # Smuggling investigation inspector,,,,,
 ise_greetingTOn,PickGreeting,"$ise_investigator
 $player.transponderOn
@@ -772,8 +773,10 @@ AddText ""背景中传来了系统的蜂鸣声，{$heOrShe}看起来忧心忡忡
 tut_mainContactProbe1,DialogOptionSelected,$option == tutGotDataCont1,,"""是的——系统预计大概需要一个星年来分析数据得出一个稳定化程序。不用说，到那时这数据就失去时效性了，任何基于它的程序都毫无意义。
 
 如果我们手头有一个AI核心，我们可以更快地分析数据。幸运的是，在这个星系的某处有一个探测器，那是人之领首次探索星域时留下的。应该至少有一个AI核心作为它的大脑。""","tutGotDataCont2:""它在哪？为什么之前没有回收它？"""
-tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉 人之领遗物，当然是考虑到公众的安全。""
-
+tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉 人之领遗物，当然是考虑到公众的安全。""
+
+
+
 ""但现在已经别无他法了……""",tutGotDataCont3:继续
 tut_mainContactProbe3,DialogOptionSelected,$option == tutGotDataCont3,"SetTextHighlights ""\""传感器扫描\""""
 AddAbility sensor_burst 2
@@ -866,7 +869,8 @@ tut_janContactReport1,DialogOptionSelected,$option == tutReport1,,"""我现在�
 当然，你也可以经常去码头边的酒吧转转。那里有时能接到些很好的差事。""",tutReport2:继续
 tut_janContactReport2,DialogOptionSelected,$option == tutReport2,,"""你也可在打捞上试试手气，带足燃料、重型机械和补给，朝着外部星系前进。 
 
-在出发之前最好先接个任务，这样你就不必盲目地行动。一些人总会出高价去找人来调查这个行星或那个遗迹什么的，而既然知道那边东西，就往往会有一堆东西。""",tutReport3:继续
+在出发之前最好先接个任务，这样你就不必盲目地行动。一些人总会出高价去找人来调查这个行星或那个遗迹什么的，而既然知道那边东西，就往往会有一堆东西。
+""",tutReport3:继续
 tut_janContactReport3,DialogOptionSelected,$option == tutReport3,"SetShortcut cutCommLinkPolite ""ESCAPE""","""最后，你可以接受霸权的委托--由于加拉太的生意，你的地位足够高，这样的请求会被接受。
 
 不过你将有义务与我们的敌人作战，因此这是一份相当重的责任。如果我是你，我会暂缓此事，直到你有一支更坚实的舰队在你身后支持。""","cutCommLinkPolite:""谢谢你，我会考虑的。"""
