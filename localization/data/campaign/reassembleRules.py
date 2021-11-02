@@ -1,6 +1,9 @@
 import os
 import pandas as pd
 
+# 由于某些见鬼的原因，需要把rules里的某些未知字符，例如 ’ ‘ “ ”改掉(这几个编码是有问题的)
+# 用windows 1252编码打开rules，然后通过中文键盘的单引号双引号来替换
+
 rules_folder = "rules分段"
 origin_rule_file = "rules.csv"
 target_rule_file = "rules汉化校对测试样本(手动替换以测试).csv"
@@ -23,7 +26,7 @@ for root, sub_folders, filenames in os.walk(rules_folder):
                     except:
                         pass
             print("该分段聚集完成")
-origin_rule_df.to_csv(target_rule_file)
+origin_rule_df.to_csv(target_rule_file, encoding="utf-8")
 for key, value in repeat_counting.items():
     if value > 1:
         print(key+"存在"+str(value-1)+"个重复段")

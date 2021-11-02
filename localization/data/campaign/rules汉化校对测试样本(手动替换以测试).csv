@@ -3271,11 +3271,11 @@ FireBest GAHegOfficerInteraction",,,
 gaOpenDialogDuringTutorialStart,GAPostOpen,"$global.isInTutorial
 !$global.tutMadeContactAtAncyra score:1000","ShowDefaultVisual
 SetTextHighlights ""Ancyra""
-SetShortcut defaultLeave ESCAPE","As you approach the stark torus-hulls of Galatia Academy Station, your request to the automated docking queue is unexpectedly denied by a Hegemony-coded comm response. It’s odd that the Hegemony navy is controlling the docking procedures of this independent station.
+SetShortcut defaultLeave ESCAPE","As you approach the stark torus-hulls of Galatia Academy Station, your request to the automated docking queue is unexpectedly denied by a Hegemony-coded comm response. It's odd that the Hegemony navy is controlling the docking procedures of this independent station.
 
-Your primary bridge display shows an active view of a matrix of anti-ship batteries tracking your progress. Your tactical officer nods for your attention then activates a sub-display with a close-in view: a Valkyrie-class troop transport and its escorts are emplaced across the primary landing bay. They clearly don’t want visitors.
+Your primary bridge display shows an active view of a matrix of anti-ship batteries tracking your progress. Your tactical officer nods for your attention then activates a sub-display with a close-in view: a Valkyrie-class troop transport and its escorts are emplaced across the primary landing bay. They clearly don't want visitors.
 
-You should report to Ancyra to find out what’s going on.",100:defaultLeave:Leave,
+You should report to Ancyra to find out what's going on.",100:defaultLeave:Leave,
 gaOpenDialogDuringTutorial,GAHegOfficerInteraction,"$global.isInTutorial
 !$doneFirstVisit",$doneFirstVisit = true,"As you approach the stark white torus-hulls of Galatia Academy Station, your request to the automated docking queue is denied. After a moment, the comms link opens unexpectedly to a Hegemony sigil. Encryption kicks in, and your viewscreen cuts to a harried-looking Hegemony lieutenant using a handheld comms unit.  
 
@@ -3283,7 +3283,7 @@ gaOpenDialogDuringTutorial,GAHegOfficerInteraction,"$global.isInTutorial
 
 An adjutant leans into frame and whispers something in $hisOrHer ear.
 
-""So you’re the freelancer my CO on Ancyra got to help us out."" $HeOrShe relaxes $hisOrHer tone somewhat, ""I'm Lieutenant $personName. We're carrying out the investigation into who screwed up here while you take care of the problem out there. And I wish you luck, captain, because if you don't solve this it's going to get ugly.”","0:gaDuringTutorialMoreInfo1:""What's going on here?""
+""So you're the freelancer my CO on Ancyra got to help us out."" $HeOrShe relaxes $hisOrHer tone somewhat, ""I'm Lieutenant $personName. We're carrying out the investigation into who screwed up here while you take care of the problem out there. And I wish you luck, captain, because if you don't solve this it's going to get ugly.""","0:gaDuringTutorialMoreInfo1:""What's going on here?""
 100:defaultLeave:Thank the officer and sign off.",
 gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreInfo1,,"$HeOrShe considers whether to answer your question.
 
@@ -3327,7 +3327,7 @@ FireBest GAAgentGreeting
 FireAll PopulateOptions","The stark white hulls of Galatia Academy Station crawl past in slow, magisterial rotation; the ivory tower looms before you. Your request to the docking queue is approved. Your comms officer helpfully mutes the chirpy, automated vid-feed presenting a bowdlerized history of the Galatia Academy and its role in providing education and research to the Persean Sector while remaining above political influence.
 
 The landing promenade is filled with modest civilian transports, a few high-end personal craft, and, at the far end, a row of freighters offloading supplies. A junior academy agent greets you in a landing lounge with promotional paraphernalia in hand.",,
-gaScholarshipPitch,GAAgentGreeting,!$heardScholarshipPitch,,"“Greetings, captain. Perhaps you are an alumni? Have you considered donating to a scholarship trust with the Academy?”",,
+gaScholarshipPitch,GAAgentGreeting,!$heardScholarshipPitch,,"""Greetings, captain. Perhaps you are an alumni? Have you considered donating to a scholarship trust with the Academy?""",,
 gaScholarshipPitchRepeat,GAAgentGreeting,$heardScholarshipPitch,,"The agent smiles brightly. ""Have you given some thought to setting up that scholarship fund with the Academy?""",,
 gaAddOptionMeetProvost,PopulateOptions,"$id == station_galatia_academy
 !$metProvost",,,1:gaRequestMeeting:Request a meeting with the provost,
@@ -3380,8 +3380,8 @@ Call $global.gaIntro_ref updateStage","The academy agent makes a quiet request t
 
 The comms unit chimes softly.
 
-""Yes? ... Really? I mean, yes, we’ll come up immediately."" The agent turns to you, ""Provost Baird will see you. Right now. Please follow me, captain.""",0:gaRequestMeeting1:Follow the junior academy agent,
-gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"You are led through a discreet secure-access door to a series of passages that bypass the public concourses. You are brought to a travel-lift which activates at the academy agent’s presence and step inside at the agent's encouraging nod.
+""Yes? ... Really? I mean, yes, we'll come up immediately."" The agent turns to you, ""Provost Baird will see you. Right now. Please follow me, captain.""",0:gaRequestMeeting1:Follow the junior academy agent,
+gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"You are led through a discreet secure-access door to a series of passages that bypass the public concourses. You are brought to a travel-lift which activates at the academy agent's presence and step inside at the agent's encouraging nod.
 
 The lift pod is wrapped by diamond-matrix through which you can watch the canyon-like sweep of plazas pass by, filled with crowds of students, academics, and technicians. Raising your gaze, you see that the pod is approaching a tiered substructure which seems to hang over the curve of the station interior. The pod slows and you shuffle to adjust to the local grav-effect field gradient. You must be near the core of Galatia Station.",0:gaRequestMeeting2:Continue,
 gaRequestMeeting2,DialogOptionSelected,$option == gaRequestMeeting2,,"A guard wearing a mirrored faceplate dismisses the junior agent and ushers you through the first doors to an antechamber filled with small groups of people who are presumably waiting to meet with the provost. They have perfect hair and perfect skin unmarred by the radiation or burns that mark a spacer. Those cybernetics you can spot are consciously stylish adornments rather than crude augments. Many have brought their young progeny with them; the stench of wealth and influence is palpable.
@@ -3393,7 +3393,7 @@ $option = gaRequestMeeting3 0
 FireBest DialogOptionSelected",,,
 gaRequestMeeting3,DialogOptionSelected,$option == gaRequestMeeting3,BeginConversation baird true true,"You enter the office as the doors close silently behind you. Provost Anahita Baird turns to acknowledge your entrance while concluding a call via her desk tablet. 
 
-Ancient wooden shelves for real, paper books gleam darkly in subdued light emanating tastefully from nowhere. The shelves are only half-stocked from crates scattered around the office. A brass orrery of the Galatia system adorns a plinth in the center of a seating cluster. Parchments mounted behind the provost’s desk display intimidating intellectual rankings, their seals of authenticity softly glowing.
+Ancient wooden shelves for real, paper books gleam darkly in subdued light emanating tastefully from nowhere. The shelves are only half-stocked from crates scattered around the office. A brass orrery of the Galatia system adorns a plinth in the center of a seating cluster. Parchments mounted behind the provost's desk display intimidating intellectual rankings, their seals of authenticity softly glowing.
 
 ""I apologize for the mess,"" she says, having noted your examination. ""I've only just moved office.""",0:gaRequestMeeting4:Continue,
 gaRequestMeeting4,DialogOptionSelected,$option == gaRequestMeeting4,$theQuestionWasRhetorical = true 0,"Before you speak she raises a hand.
@@ -3448,7 +3448,7 @@ SetPersonHidden baird false
 SetPersonHidden sebestyen false
 BeginMission gaTTS","""I see."" 
 
-The provost's tone seems to suggest that you've answered her question incorrectly. ""There are other visionary space captains out there, I’m sure, who would be interested in extremely profitable work. Nonetheless, consider my offer carefully. Perhaps after some thought you will see just how reasonable it is.""
+The provost's tone seems to suggest that you've answered her question incorrectly. ""There are other visionary space captains out there, I'm sure, who would be interested in extremely profitable work. Nonetheless, consider my offer carefully. Perhaps after some thought you will see just how reasonable it is.""
 
 She turns away, to her desk console, and activates some display which casts cool light over her face. ""After you have time to properly consider my offer, contact my assistant, Academician Sebestyen. Someone will give you his comm ID.""
 
