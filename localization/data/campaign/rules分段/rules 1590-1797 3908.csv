@@ -24,7 +24,7 @@ FireAll GAFCIsirahMercHubOptions","{$HeOrShe}扬了扬{$hisOrHer}眉毛。""我�
 ""自上一站的调查活动结束后，你似乎一直在有目的地四处奔波。我的雇主认为你找到了你想要找的东西，希望你能仅为我们提供这一情报。""",,
 gaFCIsirahMercLetsDeal,DialogOptionSelected,"$option == gaFC_isirahMercLetsDeal
 Call $global.gaFC_ref updateData","Highlight $gaFC_sellOutPrice
-$letsDeal = true","""好，没问题。我的雇主已经授权我支付你{$gaFC_sellOutPrice}信用点，以转移你所拥有的，与{Scylla Coureuse}的当前位置相关的信息。""","gaFC_isirahMercDealDecline:拒绝交易
+$letsDeal = true","""好，没问题。我的雇主已经授权我支付你{$gaFC_sellOutPrice}信用点，以转移你所拥有的，与{Scylla Coureuse}的当前位置相关的信息。""","gaFC_isirahMercGetNothing:拒绝交易
 gaFC_isirahMercDealAccept:接受交易
 gaFC_isirahMercOtherDeal:""不，我是说，如果我想让你忘记我的存在，要花多少钱? """,
 gaFCIsirahMercAcceptDeal,DialogOptionSelected,$option == gaFC_isirahMercDealAccept,"AddCommodity credits $gaFC_sellOutPrice
@@ -37,7 +37,7 @@ MakeOtherFleetGoAway true","你同意了对方的条件，并监督将你舰员�
 
 ""我将立即转交信用点转让。我的雇主会觉得这是可以接受的。我们的任务完成了，舰长。""
 
-通信被雇佣兵关闭了。",cutCommLinkNoText:Continue,
+通信被雇佣兵关闭了。",cutCommLinkNoText:继续,
 gaFCIsirahMercOtherDeal,DialogOptionSelected,$option == gaFC_isirahMercOtherDeal,,"雇佣兵盯着你，然后说: ""这样啊...那是不可能的。""","gaFC_isirahMercOtherDeal1:""50,000信用点也不行吗? ""
 gaFC_isirahMercHubReturn:""我们还是谈谈别的事吧...""
 gaFC_isirahMercLetsDeal:""那就来谈谈你贿赂我的事吧。""",
