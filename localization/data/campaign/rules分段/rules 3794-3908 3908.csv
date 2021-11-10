@@ -67,7 +67,7 @@ Highlight $entity.fwt_payment","""繁星在上，舰长。很遗憾地告诉你�
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
-{$HeOrShe}吐出一口气: ""还不错，对吧? 你的辛苦是有回报的，毕竟我的上司提供的信用点可不少。""{$HeOrShe}懒洋洋地在{$hisOrHer}控制台上按着什么东西，然后抬起头补充道: ""想到要和你开战，我还真有点害怕。""","cutCommLink:拒绝，关闭通讯，并开始给武器充能
+{$HeOrShe}吐出一口气: ""还不错，对吧? 你的辛苦是有回报的，毕竟我的上司提供的信用点可不少。""{$HeOrShe}懒洋洋地在{$hisOrHer的}控制台上按着什么东西，然后抬起头补充道: ""想到要和你开战，我还真有点害怕。""","cutCommLink:拒绝，关闭通讯，并开始给武器充能
 fwt_accept:交出{$entity.fwt_theThing}并获取报酬",
 fwtOpenCommGenericNoAggroPay,OpenCommLink,"$entity.fwt_wantsThing score:1000
 !$entity.fwt_aggressive
@@ -84,7 +84,7 @@ fwt_accept:接受交易, 交出{$entity.fwt_theThing}",
 fwt_acceptSelNoPay,DialogOptionSelected,$option == fwt_accept,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 FireBest $entity.fwt_missionFailTrigger
-unset $entity.fwt_wantsThing","{$faction $personRank}对你竟然接受了{$hisOrHer}条件感到非常惊讶。
+unset $entity.fwt_wantsThing","{$faction $personRank}对你竟然接受了{$hisOrHer的}条件感到非常惊讶。
 
 ""嗯，非常好。""{$HeOrShe}点了点头，""一个出乎意料，但十分明智的决定。""{$HeOrShe}似乎不确定这时候还该说些什么，于是耸了耸肩并断开了通讯。
 
@@ -121,7 +121,7 @@ MakeOtherFleetAvoidContact true
 unset $entity.fwt_wantsThing","你瞪着海盗，目光凶狠得就如同你正在用内置于双眼中的速子长矛在对方身上挖洞，你吐出的话击恶狠狠地敲击着对方: ""你竟然敢宣称自己拥有{Kanta}领主的资产?""
 
 海盗舰长体内的鲜血涌了上来，脸因为恐惧变得通红。""她! 但是...繁星和...和鲜血在上。舰长，请接受我的道歉! 我永远不会...她不需要知道这些琐事，对吧? 请 - 请接受我微不足道的{$fwt_piratePaymentcredits}信用点，来弥补因我的愚蠢造成的耽误。""{$HeOrShe}现在几乎是在恳求，""所以，舰长。舰长，您应该是不会向别人提起这件小事的吧?""","fwt_bluffPirate1:""也许吧。""",
-fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧地点了点头: ""对，是的...当然了。""{$HeOrShe}仔细地看着你，揣测着你是否会将{$hisOrHer}罪过告诉{Kanta}。
+fwtPirateBluff1,DialogOptionSelected,$option == fwt_bluffPirate1,,"海盗恐惧地点了点头: ""对，是的...当然了。""{$HeOrShe}仔细地看着你，揣测着你是否会将{$hisOrHer的}罪过告诉{Kanta}。
 
 海盗舰长思索着，如果你真的上报了此事，那应该如何改变自己的名字和外貌呢? 那之后，在远离任何一个名叫{""Kanta""}的人的外围星域当一个拾荒远征队的船员或许是明智的选择。
 
@@ -147,7 +147,7 @@ SetStoryOption fwt_bluffPather general ""为了留下{$entity.fwt_thing}而开�
 ""勿认为我疯狂，舰长。""{$HeOrShe}说。""我每日为异教徒和叛教者祈祷，正如现在，我祈祷着我能于纯净无比的虚空中毁灭{$entity.fwt_TheThing}，而非让你的旗舰在升腾于地狱的烈火中陨落，接受我的怜悯吧。""","cutCommLink:拒绝，关闭通讯
 fwt_bluffPather:开始一段惊天地泣鬼神的表演
 fwt_acceptPather:接受建议，并交出{$entity.fwt_theThing}",
-fwtBluffPather,DialogOptionSelected,$option == fwt_bluffPather,,"你接受了{$hisOrHer}言语的价值 - 表面上接受了，这令左径分子感到十分震惊。说真的，{$HeOrShe}有为你祈祷过吗?
+fwtBluffPather,DialogOptionSelected,$option == fwt_bluffPather,,"你接受了{$hisOrHer的}言语的价值 - 表面上接受了，这令左径分子感到十分震惊。说真的，{$HeOrShe}有为你祈祷过吗?
 
 你绘声绘色地向左径分子解释了你是如何堕入罪恶的道路，如今又是如何被拯救的。你边说边点着头，脸上的表情十分严肃深沉，能让对方看出你内心的纠结。
 
@@ -160,7 +160,7 @@ fwtBluffPather1,DialogOptionSelected,$option == fwt_bluffPather1,,"在下属惊�
 fwtBluffPather2,DialogOptionSelected,$option == fwt_bluffPather2,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 AdjustRep $personFaction.id COOPERATIVE 5
-unset $entity.fwt_wantsThing","""现在，""{$HeOrShe}合上{$hisOrHer}眼睛吟诵着，""我们作出祈祷。""
+unset $entity.fwt_wantsThing","""现在，""{$HeOrShe}合上{$hisOrHer的}眼睛吟诵着，""我们作出祈祷。""
 
 左径舰长念叨着经典的卢德祷文，乞求宽恕，将对神的造物的摧残降到最低限度之类。
 
@@ -169,9 +169,9 @@ fwt_acceptPather,DialogOptionSelected,$option == fwt_acceptPather,"MakeOtherFlee
 MakeOtherFleetGoAway true
 AdjustRep $personFaction.id COOPERATIVE 1
 FireBest $entity.fwt_missionFailTrigger
-unset $entity.fwt_wantsThing","当你接受{$hisOrHer}的条件时，{$rank}庄严地点点头。你下令将{$fwt_theThing}弹射到太空中。接着左径分子把它炸成了一团奇异的粒子。
+unset $entity.fwt_wantsThing","当你接受{$hisOrHer的}条件时，{$rank}庄严地点点头。你下令将{$fwt_theThing}弹射到太空中。接着左径分子把它炸成了一团奇异的粒子。
 
-""现在，""{$HeOrShe}合上{$hisOrHer}眼睛吟诵着，""我们作出祈祷。""
+""现在，""{$HeOrShe}合上{$hisOrHer的}眼睛吟诵着，""我们作出祈祷。""
 
 左径舰长念叨着经典的卢德祷文，乞求宽恕，将对神的造物的摧残降到最低限度之类。
 
@@ -191,14 +191,14 @@ fwt_acceptTriTach,DialogOptionSelected,$option == fwt_acceptTT,"AddCommodity cre
 AdjustRep $personFaction.id COOPERATIVE 3
 MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
-unset $entity.fwt_wantsThing","""完美，舰长。""速子科技的{$rank}确认了货物的转移，并且看起来正因为某种精神层面的力量而感到痛苦。{$hisOrHer}手臂被抬了起来，{$hisOrHer}脸上放射着快乐的光芒。""真是轻松愉快。接着这个，""一个似乎是某种控制器的植入体闪着微光，""这是给你的报酬。""
+unset $entity.fwt_wantsThing","""完美，舰长。""速子科技的{$rank}确认了货物的转移，并且看起来正因为某种精神层面的力量而感到痛苦。{$hisOrHer的}手臂被抬了起来，{$hisOrHer的}脸上放射着快乐的光芒。""真是轻松愉快。接着这个，""一个似乎是某种控制器的植入体闪着微光，""这是给你的报酬。""
 
 ""我真诚地祝愿我们下一次做生意的机会能够快点到来，""{$HeOrShe}说。""明亮的星光和长明的尾焰。务必记得在速子科技的通讯网络上添加我!""
 
 你关闭了通讯频道，接着又关掉了数据板上出现的通知。",fwt_acceptTT1:继续,
 fwt_acceptTriTach1,DialogOptionSelected,$option == fwt_acceptTT1,FireBest $entity.fwt_missionFailTrigger,,cutCommLinkNoText:继续,
 fwt_decline,DialogOptionSelected,$option == fwt_declineTT,"MakeOtherFleetNonHostile true
-MakeOtherFleetGoAway true","""啊。""速子科技{$rank}脸上完美的微笑消失了。你能在{$hisOrHer}眼睛里捕捉到某种控制器闪烁的微光，但是你不能确定{$HeOrShe}在做什么。
+MakeOtherFleetGoAway true","""啊。""速子科技{$rank}脸上完美的微笑消失了。你能在{$hisOrHer的}眼睛里捕捉到某种控制器闪烁的微光，但是你不能确定{$HeOrShe}在做什么。
 
 ""我明白了，""{$HeOrShe}说。""这是一个被错失的机会。我真诚地相信，下次您会看到我的建议的有效性。在那之前，只有明亮的星光和长明的尾焰。""
 
@@ -216,14 +216,14 @@ $entity.fwt_payment <= 0
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
-""我给你一分钟考虑一下。如果我必须得因为一点小事毁了你的旗舰，那就太可惜了。""然后{$HeOrShe}靠回了{$hisOrHer}椅子上，哼着什么给{$himOrHerself}听。","cutCommLink:拒绝，关闭通讯，并开始给武器充能
+""我给你一分钟考虑一下。如果我必须得因为一点小事毁了你的旗舰，那就太可惜了。""然后{$HeOrShe}靠回了{$hisOrHer的}椅子上，哼着什么给{$himOrHerself}听。","cutCommLink:拒绝，关闭通讯，并开始给武器充能
 fwt_acceptMerc:接受提议，并交出{$entity.fwt_theThing}",
 fwtOpenCommMercAggroPay,OpenCommLink,"$entity.fwt_wantsThing score:1000
 $entity.fwt_originalFaction == mercenary score:1000
 $entity.fwt_aggressive
 $entity.fwt_payment > 0
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
-Highlight $entity.fwt_payment","通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中，还潇洒地把一只脚搭在{$hisOrHer}控制台上。
+Highlight $entity.fwt_payment","通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中，还潇洒地把一只脚搭在{$hisOrHer的}控制台上。
 
 ""通畅的航道线! 清晰的跳跃点! 舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天! 但有个混蛋给了我一堆信用点并想让我把它们转交给你。确切地说，{$fwt_payment}个信用点。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
 
@@ -247,7 +247,7 @@ fwt_acceptMerc:接受，并交出{$entity.fwt_theThing}",
 fwt_acceptMercSelNoPay,DialogOptionSelected,$option == fwt_acceptMerc,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 FireBest $entity.fwt_missionFailTrigger
-unset $entity.fwt_wantsThing","看起来雇佣兵{$personRank}对你接受{$hisOrHer}条件感到有些惊讶。
+unset $entity.fwt_wantsThing","看起来雇佣兵{$personRank}对你接受{$hisOrHer的}条件感到有些惊讶。
 
 ""真是意外之喜，舰长。这一次你让事情进行的十分顺利。要是每个人都能展现出这样的合作诚意就好了。""有那么一阵子{$HeOrShe}似乎在脑海中构架出了那样一个美好的世界，然后摇了摇{$hisOrHer}头。
 
