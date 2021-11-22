@@ -12339,10 +12339,10 @@ CBPather2LuddicChurch,CBPatherOfferDesc,$personFaction.id == luddic_church,Highl
 ""鉴于以先知之名犯下的滔天罪行和异端行为，教会对这次处决给予了宽容，并提供{$bcb_reward}星币作为奖励。我们需要你在{$bcb_days}天内完成这个任务。你接受吗?""",,
 CBDeserter,CBDeserterOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""如果我有一支舰队的话，我会亲自搞定这个人。""{$heOrShe}脸上露出的表情好像{$heOrShe}刚吃了一些酸到了极点的东西，""{$bcb_targetName}是一个叛徒，来自{$thePersonFaction}的逃兵，我们必须让后人引以为戒。现在我们知道{$bcb_targetHeOrShe}藏在{$bcb_systemName}中，距离这里{$bcb_dist}光年。""
 
-""奖励是{$bcb_reward}星币，任务需要在{bcb_days}天内完成。你准备好了吗?""",,
+""奖励是{$bcb_reward}星币，任务需要在{$bcb_days}天内完成。你准备好了吗?""",,
 CBDeserterSoldier,CBDeserterOfferDesc,$voice == soldier,Highlight $bcb_dist $bcb_reward $bcb_days,"""我承认，如果我还在指挥舰队，我会很乐意承担这个任务。逃兵，叛变者，""{$heOrShe}冷笑道，""随你怎么称呼这玩意儿，{$thePersonFaction}的叛徒就藏在{$bcb_systemName}里，离这里{$bcb_dist}光年。""
 
-""奖励是{$bcb_reward}星币，任务需要在{bcb_days}天内完成。准备好干掉这个叛徒了吗?""",,
+""奖励是{$bcb_reward}星币，任务需要在{$bcb_days}天内完成。准备好干掉这个叛徒了吗?""",,
 CBDeserterFaithful,CBDeserterOfferDesc,$voice == faithful,Highlight $bcb_dist $bcb_days $bcb_reward,"""这项任务令我心神不宁。""{$Rank $personName}看起来更像是生气而非烦恼，{$HeOrShe}深吸了一口气，""我必须祈求宽恕; 愤怒不利于保持精神健康。""
 
 ""让我继续说明。我们被背叛了; {$thePersonFaction}的叛徒偷了船并开始散播叛乱。我们得到可靠情报，{$bcb_targetHeOrShe}藏在{$bcb_systemName}中，距离这里{$bcb_dist}光年，对方似乎正等待着某种碰头。""
