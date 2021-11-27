@@ -85,7 +85,7 @@ gaProbeObjectInteractionMissing2,DialogOptionSelected,$option == gaProbe_missing
 Call $global.gaProbe_ref updateStage
 DespawnEntity",不管是什么干的，这意味着你没有一个仪器套件返回{Galatia}学院。你下令将这次遭遇所有遥测数据和全息影像资料附在加密的任务文件中。学者们喜欢数据，越多越好。这应该足以证明你的工作做得很到位。也许其中的奥秘会分散他们的注意力，足以让你得到报酬。,defaultLeave:离开,
 ,,,,,,
-# returned to {Sebestyen},,,,,,
+# returned to Sebestyen,,,,,,
 gaProbeMissionReturn,PickGreeting,"$gaProbe_returnHere score:1000
 Call $global.gaProbe_ref updateData
 $gaProbe_variation != IT_BLEW_UP
@@ -251,7 +251,7 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 ""那么你有兴趣么?""","aseb_accept:接受
 aseb_decline:拒绝",
 gaVIPBlurbMissionTextKanta,DialogOptionSelected,"$option == gaVIP_start
-$gaVIP_variation == Kanta",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
+$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
 
 院士似乎意识到了这个任务的内容，突然，""那是。。。那个{Kanta}，是他吗? ，噢，哇，好，是的，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任，不管是谁，我是说。""
 
@@ -280,7 +280,7 @@ AdjustRepPerson $gaVIP_VIP COOPERATIVE 5
 AdjustRep $gaVIP_VIP_faction COOPERATIVE 1",,marketArrivalEventContinue:继续,
 gaVIP_checkCompletionKanta,DialogOptionSelected,"$option == gaVIP_completeDelivery0
 $tradeMode != NONE
-$gaVIP_variation == Kanta",,"他们一直在等着你。交通管制部门为你提供了一条穿过隐形机雷场的路线，以进入{$gaVIP_marketName}站内。很快，你就接收到了来自{Kanta}家族的一位严厉老板的通讯信号，为你指示了一个给{$gaVIP_subjectRelation}引渡的位置。
+$gaVIP_variation == KANTA",,"他们一直在等着你。交通管制部门为你提供了一条穿过隐形机雷场的路线，以进入{$gaVIP_marketName}站内。很快，你就接收到了来自{Kanta}家族的一位严厉老板的通讯信号，为你指示了一个给{$gaVIP_subjectRelation}引渡的位置。
 
 在走下运输艇之前，这位年轻的学生回头对你说话。",gaVIP_completeDelivery:继续,
 GAVIPStudentComment1,GAVIPStudentComment,,,"""回家路真的没完没了，我完全不能理解为什么在超空间风暴警告期间我要被限制在宿舍里。不过，我相信我已经学到了一些东西。比如，你知道，有关于我自己? 谢谢你，船长。""",,
@@ -444,11 +444,11 @@ FireBest DialogOptionSelected",,,
 gaVIPMercDecidesNonHostile,DialogOptionSelected,$option == gaVIP_mercDecides,"$option = gaVIP_mercRefuse 0
 FireBest DialogOptionSelected",,,
 "# betrayed Kanta, fleet that shows up",,,,,,
-gaVIPRevengeEncounter,BeginFleetEncounter,"$gaVIP_KantaConsequences score:1000
+gaVIPRevengeEncounter,BeginFleetEncounter,"$gaVIP_kantaConsequences score:1000
 !$gaVIP_encounteredAlready","$gaVIP_encounteredAlready = true
 FleetDesc
 HailPlayer",,,
-gaVIPRevengeOpenComm,OpenCommLink,"$entity.gaVIP_KantaConsequences score:1000
+gaVIPRevengeOpenComm,OpenCommLink,"$entity.gaVIP_kantaConsequences score:1000
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 FireBest GAVIPRevSetStoryOption","""我猜你是船长{$playerName}，""雇佣兵指挥官冷冷地说到。{$HeOrShe}当然知道你是谁。
 ""军阀{Kanta}向你问好。""
@@ -950,7 +950,11 @@ SetStoryOption pwi_bluff general ""欺骗海盗以保护 $entity.pwi_item""","�
 {$HeOrShe}假装在深思，""现在，以我的想法，你要做出明智的决定，把这个漂亮的小饰品送给我们，还是在我把你的{$shipOrFleet}炸上天，然后你死在真空里?现在就下决定吧!""","cutCommLink:拒绝, 切断通讯
 pwi_bluff:虚张声势，摆脱海盗
 pwi_accept:接受, 并弹出技术包裹",
-pwiBluff,DialogOptionSelected,$option == pwi_bluff,$player.kantaBluffs++,"你紧盯着海盗就像看着双联速子长矛，，然后你说到""不，它属于{Kanta}领主。""
+pwiBluff,DialogOptionSelected,$option == pwi_bluff,"$player.kantaBluffs++
+Highlight $entity.pwi_credits
+AddCommodity credits $entity.pwi_credits
+MakeOtherFleetNonHostile true
+MakeOtherFleetAvoidContact true","你紧盯着海盗就像看着双联速子长矛，，然后你说到""不，它属于{Kanta}领主。""
 
 鲜血从海盗船长的脸上淌出来。""她'但是。。。群星和鲜血。船长，请接受我的道歉。我永远不会妨碍我们，我们的赞助人，还有好的，请接受{$entity。pwi_credits}星币作为耽搁的补偿。""{$HeOrShe}几乎是在恳求。""还有，也别计较这件小事。好吧?""","pwi_bluff1:""我们拭目以待.""",
 pwiBluff1,DialogOptionSelected,$option == pwi_bluff1,,海盗阴沉地点了点头，在中等距离外凝视着，仿佛在盘算着{$himOrHer}会因为违抗{Kanta}的意志而受到什么惩罚。你收到这个提示后就终止了通讯，对整个谄媚的表演翻白眼。,cutCommLinkNoText:继续,
