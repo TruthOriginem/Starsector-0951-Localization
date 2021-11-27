@@ -251,12 +251,12 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 ""那么你有兴趣么?""","aseb_accept:接受
 aseb_decline:拒绝",
 gaVIPBlurbMissionTextKanta,DialogOptionSelected,"$option == gaVIP_start
-$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的ti。""
+$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的tian。""
 
 院士似乎意识到了这个任务的内容，突然，""那是。。。那个{Kanta}，是他吗? ，噢，哇，好，是的，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任，不管是谁，我是说。""
 
 {Sebestyen}隔着一些距离摆出了一副严肃的表情，""对于能够代表教育和知识的我来说很自豪，不管是你，还是来自何处的任何人。""","gaVIP_briefingCont:不予置评, 让他讲完。",
-gaVIPBlurbMissionTextKanta2,DialogOptionSelected,$option == gaVIP_briefingCont,SetTextHighlights $gaVIP_timeLimit $gaVIP_reward,"他摇了摇头，转身回到数据平板面前，""那呢-对了，所以这个{$gaVIP_subjectRelation}的{$gaVIP_KantaRelationFirstName}{Kanta}-我想知道他们与。。。有多大关系。呃，别在意--他们是{Kanta}下属的某个人，我们已经获授权了一笔酬金，嗷，这可比平常的费用要多!，{$gaVIP_reward}星币。这可太好了，对吧?""
+gaVIPBlurbMissionTextKanta2,DialogOptionSelected,$option == gaVIP_briefingCont,SetTextHighlights $gaVIP_timeLimit $gaVIP_reward,"他摇了摇头，转身回到数据平板面前，""那呢-对了，所以这个{$gaVIP_subjectRelation}的{$gaVIP_kantaRelationFirstName}{Kanta}-我想知道他们与。。。有多大关系。呃，别在意--他们是{Kanta}下属的某个人，我们已经获授权了一笔酬金，嗷，这可比平常的费用要多!，{$gaVIP_reward}星币。这可太好了，对吧?""
 
 ""只是-""他头扭向自己的肩膀看过去，然后轻声说道,""-那边的人要小心为妙，明白?""","aseb_accept:接受
 aseb_decline:拒绝",
@@ -757,7 +757,7 @@ AddRaidObjective genericIcon ""从 $gaBA_contactName 那回收 $gaBA_item "" MIN
 FireBest GABACheckHostilesNearby","""让我们做出决定。赶紧。我听说在这一带有骑士活动，我不愿接受他们的盘问。把{$gaBA_costHigh}星币转到我的通讯ID卡上，我就会把包裹交由你保管。""","gaBA_acceptPather:接受并支付 $gaBA_costHigh 星币
 gaBA_confrontPather:""这不是一个交易该有的样子."" (对峙)
 gaBA_bluffPather:虚张声势以压低价格
-gaBA_preRaid:维持与{{$himOrHer}}交谈同时派人进行突击
+gaBA_preRaid:维持与 $himOrHer 交谈同时派人进行突击
 cutCommLink:切断通讯",
 gaBADisableRaidIfNeeded,GABACheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled gaBA_preRaid false
 SetTooltip gaBA_preRaid ""附近有一支敌对舰队正在追踪你的行动，不能执行地面任务.""",,,
@@ -851,7 +851,7 @@ AddRaidObjective genericIcon ""Recover $gaBA_item from $gaBA_contactName"" MINIM
 FireBest GABACheckHostilesNearbyPirate","""是的，我有你要的货，仅仅，啊哈，{$gaBA_costHigh}星币为小发现者一点报酬，我就能给把它交由你保管。""","gaBA_acceptPirate:接受并支付 $gaBA_costHigh 星币
 gaBA_confrontPirate:""这不是一个交易该有的样子."" (对峙)
 gaBA_bluffPirate:协商一个较低的价格
-gaBA_preRaidPirate:维持与{$himOrHer} 交谈同时派人进行突击
+gaBA_preRaidPirate:维持与 $himOrHer 交谈同时派人进行突击
 cutCommLink:切断了通讯链接",
 gaBADisableRaidIfNeededPirate,GABACheckHostilesNearbyPirate,HostileFleetNearbyAndAware,"SetEnabled gaBA_preRaidPirate false
 SetTooltip gaBA_preRaidPirate ""附近有一支敌对舰队正在追踪你的行动，不能执行地面任务.""",,,
