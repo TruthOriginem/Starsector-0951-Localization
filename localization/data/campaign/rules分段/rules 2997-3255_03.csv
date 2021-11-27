@@ -305,8 +305,8 @@ SetStoryOption gaVIP_pirateBluff 1 gaVIP_pirateBluff general ""让海盗相信�
 
 ""没有人会被伤害，这只是一个简单的绑架和勒索干活，我们毕竟都是文明人。不值得为了某个贵族的花哨的公子而送掉小名，不好吗?""","gaVIP_pirateRefuse:拒绝
 gaVIP_pirateAgree:同意放弃VIP客户
-gaVIP_pirateDemand:""只有你支付$gaVIP_piratePayment 星币 才放人. 预支.""
-gaVIP_pirateBluff:说你是为{Kanta} 军阀工作，吓唬海盗",
+gaVIP_pirateDemand:""你得先给我$gaVIP_piratePayment 星币我才会放人. 而且得预支.""
+gaVIP_pirateBluff:说你是为 Kanta 军阀工作，吓唬海盗",
 gaVIPPirateRefuse,DialogOptionSelected,$option == gaVIP_pirateRefuse,,"在你拒绝{$HeOrShe}开出的条件时，海盗船长给了你一个冷冷的皱眉。
 
 ""意料之中。""{$HeOrShe}他说，""我们在这场盛大戏剧里都有自己的角色。""{$HeOrShe}转身离开你，""给火炮充能，引擎全速前进!""{$HeOrShe}回头再看向你，脸上带着狂妄的笑容，""我的好船长，我会在路德最很黑暗的地狱里和你见面!""
