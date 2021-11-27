@@ -250,13 +250,13 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 
 ""那么你有兴趣么?""","aseb_accept:接受
 aseb_decline:拒绝",
-gaVIPBlurbMissionText{Kanta},DialogOptionSelected,"$option == gaVIP_start
+gaVIPBlurbMissionTextKanta,DialogOptionSelected,"$option == gaVIP_start
 $gaVIP_variation == Kanta",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
 
 院士似乎意识到了这个任务的内容，突然，""那是。。。那个{Kanta}，是他吗? ，噢，哇，好，是的，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任，不管是谁，我是说。""
 
 {Sebestyen}隔着一些距离摆出了一副严肃的表情，""对于能够代表教育和知识的我来说很自豪，不管是你，还是来自何处的任何人。""","gaVIP_briefingCont:不予置评, 让他讲完。",
-gaVIPBlurbMissionText{Kanta}2,DialogOptionSelected,$option == gaVIP_briefingCont,SetTextHighlights $gaVIP_timeLimit $gaVIP_reward,"他摇了摇头，转身回到数据平板面前，""那呢-对了，所以这个{$gaVIP_subjectRelation}的{$gaVIP_KantaRelationFirstName}{Kanta}-我想知道他们与。。。有多大关系。呃，别在意--他们是{Kanta}下属的某个人，我们已经获授权了一笔酬金，嗷，这可比平常的费用要多!，{$gaVIP_reward}星币。这可太好了，对吧?""
+gaVIPBlurbMissionTextKanta2,DialogOptionSelected,$option == gaVIP_briefingCont,SetTextHighlights $gaVIP_timeLimit $gaVIP_reward,"他摇了摇头，转身回到数据平板面前，""那呢-对了，所以这个{$gaVIP_subjectRelation}的{$gaVIP_KantaRelationFirstName}{Kanta}-我想知道他们与。。。有多大关系。呃，别在意--他们是{Kanta}下属的某个人，我们已经获授权了一笔酬金，嗷，这可比平常的费用要多!，{$gaVIP_reward}星币。这可太好了，对吧?""
 
 ""只是-""他头扭向自己的肩膀看过去，然后轻声说道,""-那边的人要小心为妙，明白?""","aseb_accept:接受
 aseb_decline:拒绝",
@@ -278,7 +278,7 @@ $global.gaVIP_delivered = true
 Call $global.gaVIP_ref updateStage
 AdjustRepPerson $gaVIP_VIP COOPERATIVE 5
 AdjustRep $gaVIP_VIP_faction COOPERATIVE 1",,marketArrivalEventContinue:继续,
-gaVIP_checkCompletion{Kanta},DialogOptionSelected,"$option == gaVIP_completeDelivery0
+gaVIP_checkCompletionKanta,DialogOptionSelected,"$option == gaVIP_completeDelivery0
 $tradeMode != NONE
 $gaVIP_variation == Kanta",,"他们一直在等着你。交通管制部门为你提供了一条穿过隐形机雷场的路线，以进入{$gaVIP_marketName}站内。很快，你就接收到了来自{Kanta}家族的一位严厉老板的通讯信号，为你指示了一个给{$gaVIP_subjectRelation}引渡的位置。
 
@@ -672,7 +672,7 @@ FireAll PopulateOptions","-然后劈里啪啦地响起来，""战术指挥部，
 首席研究员对救援行动表示感谢，但拒绝解释为什么AI核心会在他们的基地活动。你只得到""我承担全部责任""的重复声明。
 
 除了把所有东西都送回{Galatia}学院，在这里没有什么可以做的。",,
-# returned to {Sebestyen},,,,,,
+# returned to Sebestyen,,,,,,
 gaOpMissionReturnDestroyed,PickGreeting,"$gaOp_returnHere score:1000
 Call $global.gaOp_ref updateData
 $gaOp_destroyed
