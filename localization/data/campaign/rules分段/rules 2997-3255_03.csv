@@ -251,7 +251,7 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 ""那么你有兴趣么?""","aseb_accept:接受
 aseb_decline:拒绝",
 gaVIPBlurbMissionText{Kanta},DialogOptionSelected,"$option == gaVIP_start
-$gaVIP_variation == {Kanta}",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
+$gaVIP_variation == Kanta",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
 
 院士似乎意识到了这个任务的内容，突然，""那是。。。那个{Kanta}，是他吗? ，噢，哇，好，是的，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任，不管是谁，我是说。""
 
@@ -280,7 +280,7 @@ AdjustRepPerson $gaVIP_VIP COOPERATIVE 5
 AdjustRep $gaVIP_VIP_faction COOPERATIVE 1",,marketArrivalEventContinue:继续,
 gaVIP_checkCompletion{Kanta},DialogOptionSelected,"$option == gaVIP_completeDelivery0
 $tradeMode != NONE
-$gaVIP_variation == {Kanta}",,"他们一直在等着你。交通管制部门为你提供了一条穿过隐形机雷场的路线，以进入{$gaVIP_marketName}站内。很快，你就接收到了来自{Kanta}家族的一位严厉老板的通讯信号，为你指示了一个给{$gaVIP_subjectRelation}引渡的位置。
+$gaVIP_variation == Kanta",,"他们一直在等着你。交通管制部门为你提供了一条穿过隐形机雷场的路线，以进入{$gaVIP_marketName}站内。很快，你就接收到了来自{Kanta}家族的一位严厉老板的通讯信号，为你指示了一个给{$gaVIP_subjectRelation}引渡的位置。
 
 在走下运输艇之前，这位年轻的学生回头对你说话。",gaVIP_completeDelivery:继续,
 GAVIPStudentComment1,GAVIPStudentComment,,,"""回家路真的没完没了，我完全不能理解为什么在超空间风暴警告期间我要被限制在宿舍里。不过，我相信我已经学到了一些东西。比如，你知道，有关于我自己? 谢谢你，船长。""",,
@@ -297,7 +297,7 @@ HailPlayer",,,
 gaVIPPirateOpenComm,OpenCommLink,"$entity.gaVIP_pirate score:1000
 !$entity.ignorePlayerCommRequests
 Call $global.gaVIP_ref updateData","$entity.ignorePlayerCommRequests = true
-SetStoryOption gaVIP_pirateBluff 1 gaVIP_pirateBluff general ""让海盗相信你是在为{Kanta}工作""","当通讯线路闪烁着清晰的光芒时，海盗船长大步走入视野。
+SetStoryOption gaVIP_pirateBluff 1 gaVIP_pirateBluff general ""让海盗相信你是在为Kanta工作""","当通讯线路闪烁着清晰的光芒时，海盗船长大步走入视野。
 
 ""船长! 你这么着急么?""{$HeOrShe}戏虐地说道。""让我们就一件小事谈一谈。""{$HeOrShe}靠过来，你几乎可以闻到刺鼻的汗水和炮火烧焦的味道。""我们是来这接你的这位非常特别的小乘客的。""
 
@@ -334,7 +334,7 @@ FireBest GAVIPGaveVIPToPirate","海盗再次笑了起来，{$hisOrHer}摇了摇�
 gaVIPPirateDemandPaymentNo,DialogOptionSelected,$option == gaVIP_pirateDemandNo,,"海盗看起来还是翻脸不认人，吸了口气，估计是想说些过激的话来回应你的闭门羹，但你在他们开口之前就切断了通讯。
 
 你下令战备进入高度警戒。从此刻开始，是战斗还是逃跑。",cutCommLinkNoText:继续,
-gaVIPPirateBluff,DialogOptionSelected,$option == gaVIP_pirateBluff,$player.{Kanta}Bluffs++,"海盗听到这个消息，就像被一发炼狱炮点炸了一样。
+gaVIPPirateBluff,DialogOptionSelected,$option == gaVIP_pirateBluff,$player.kantaBluffs++,"海盗听到这个消息，就像被一发炼狱炮点炸了一样。
 
 你利用这个机会，冷静地解释道你是怎样运送{Kanta}军阀的一个珍贵的至亲，如果能尽一切可能助力任务成功，那可是再好不过了。
 ",gaVIP_pirateBluff1:继续,
@@ -363,7 +363,7 @@ gaVIPMercOption2,VIPMercOptions,!$askedWhatAuthority,,,"1:gaVIP_mercWhatAuthorit
 gaVIPMercOption3,VIPMercOptions,!$askedOrElse,,,"2:gaVIP_mercOrElse:""不然的话，会如何?""",
 gaVIPMercOption4,VIPMercOptions,,,,3:gaVIP_mercRefuse:拒绝,
 gaVIPMercOption5,VIPMercOptions,,,,4:gaVIP_mercAgree:同意交出VIP,
-gaVIPMercOption6,VIPMercOptions,,"SetStoryOption gaVIP_mercSendFake 1 gaVIP_mercSendFake general ""欺骗雇佣兵他试图绑架{Kanta}的亲属""",,5:gaVIP_mercSendFake:给他送一个假的，骗取雇佣兵的信任,
+gaVIPMercOption6,VIPMercOptions,,"SetStoryOption gaVIP_mercSendFake 1 gaVIP_mercSendFake general ""欺骗雇佣兵他试图绑架Kanta的亲属""",,5:gaVIP_mercSendFake:给他送一个假的，骗取雇佣兵的信任,
 gaVIPMercOption1Sel,DialogOptionSelected,$option == gaVIP_mercWhatCrime,$askedWhatCrime = true 0,"雇佣兵的眼神瞥向一边，{$hisOrHer}下巴紧紧咬住。{$HeOrShe}显然他不喜欢被质疑。
 
 ""这无关紧要。他们是{Kanta}海盗团伙的同伙，需要接受审问。{Kanta}帮是无数谋杀和恐怖行动的幕后黑手，这一点你很清楚。","gaVIP_mercHub:""所以他们没有犯罪，明白了""",
@@ -443,12 +443,12 @@ $askedOrElse = true 0
 FireBest DialogOptionSelected",,,
 gaVIPMercDecidesNonHostile,DialogOptionSelected,$option == gaVIP_mercDecides,"$option = gaVIP_mercRefuse 0
 FireBest DialogOptionSelected",,,
-"# betrayed {Kanta}, fleet that shows up",,,,,,
-gaVIPRevengeEncounter,BeginFleetEncounter,"$gaVIP_{Kanta}Consequences score:1000
+"# betrayed Kanta, fleet that shows up",,,,,,
+gaVIPRevengeEncounter,BeginFleetEncounter,"$gaVIP_KantaConsequences score:1000
 !$gaVIP_encounteredAlready","$gaVIP_encounteredAlready = true
 FleetDesc
 HailPlayer",,,
-gaVIPRevengeOpenComm,OpenCommLink,"$entity.gaVIP_{Kanta}Consequences score:1000
+gaVIPRevengeOpenComm,OpenCommLink,"$entity.gaVIP_KantaConsequences score:1000
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 FireBest GAVIPRevSetStoryOption","""我猜你是船长{$playerName}，""雇佣兵指挥官冷冷地说到。{$HeOrShe}当然知道你是谁。
 ""军阀{Kanta}向你问好。""
@@ -458,13 +458,13 @@ gaVIP_revTrick:""很好, 你来了.""
 cutCommLink2:""我会送你下地狱. 等你下去了记得给我占个位置.""
 cutCommLink:一言不发，切断通讯",
 gaVIPRevengeStoryWeaker,GAVIPRevSetStoryOption,$entity.relativeStrength > 0,SetStoryColor gaVIP_revTrick,,,
-gaVIPRevengeStoryNotWeaker,GAVIPRevSetStoryOption,$entity.relativeStrength <= 0,"SetStoryOption gaVIP_revTrick 1 gaVIP_revTrick general ""欺骗雇佣兵说他是{Kanta}派他来将你灭口的""",,,
+gaVIPRevengeStoryNotWeaker,GAVIPRevSetStoryOption,$entity.relativeStrength <= 0,"SetStoryOption gaVIP_revTrick 1 gaVIP_revTrick general ""欺骗雇佣兵说他是Kanta派他来将你灭口的""",,,
 gaVIPRevengeWhy,DialogOptionSelected,$option == gaVIP_revWhy,,"雇佣兵指挥官看起来真的很是愤慨，举起一直手制止了你，你还想也许是下令进行攻击。
 
 ""你出卖了{Kanta}一个亲戚。但是""-{$HeOrShe}磨磨唧唧地说着，显然是有什么难处-""你是不是忘了? 在整个星域，一定没有比你更蠢的了。""
 
 在你有机会回应之前，通讯链接就已经被关闭了。",cutCommLinkNoText:继续,
-gaVIPRevengeTrick,DialogOptionSelected,$option == gaVIP_revTrick,$player.{Kanta}Bluffs++,"{$HeOrShe}被你的反应吓了一跳，挣扎着试图重新掌握主动权，""不，你要成为一个例子。""
+gaVIPRevengeTrick,DialogOptionSelected,$option == gaVIP_revTrick,$player.kantaBluffs++,"{$HeOrShe}被你的反应吓了一跳，挣扎着试图重新掌握主动权，""不，你要成为一个例子。""
 
 你打断了他的话，并解释说你在为{Kanta}工作-深度卧底。没有她的明确指示，谁会愚蠢到出卖军阀的亲属? 你甚至都不会想去猜测他们如何激怒军阀的，但如果没有一个强而有力的领袖在，{Kanta}家族会是什么样子? 
 
@@ -921,7 +921,7 @@ gaBAPirateBluff3c,DialogOptionSelected,$option == gaBA_bluffPirate3c,"RemoveComm
 $global.gaBA_needToReturn = true
 Call $global.gaBA_ref updateStage",你终止了信号，混乱的通讯路线出现故障并逐渐变黑。,cutCommLinkNoText:继续,
 ,,,,,,
-# returned with item to {Sebestyen},,,,,,
+# returned with item to Sebestyen,,,,,,
 gaBAMissionReturn,PickGreeting,"$gaBA_returnHere score:1000
 Call $global.gaBA_ref updateData
 FireBest ASEBMissionReturn","ShowPersonVisual
@@ -950,11 +950,7 @@ SetStoryOption pwi_bluff general ""欺骗海盗以保护 $entity.pwi_item""","�
 {$HeOrShe}假装在深思，""现在，以我的想法，你要做出明智的决定，把这个漂亮的小饰品送给我们，还是在我把你的{$shipOrFleet}炸上天，然后你死在真空里?现在就下决定吧!""","cutCommLink:拒绝, 切断通讯
 pwi_bluff:虚张声势，摆脱海盗
 pwi_accept:接受, 并弹出技术包裹",
-pwiBluff,DialogOptionSelected,$option == pwi_bluff,"$player.{Kanta}Bluffs++
-Highlight $entity.pwi_credits
-AddCommodity credits $entity.pwi_credits
-MakeOtherFleetNonHostile true
-MakeOtherFleetAvoidContact true","你紧盯着海盗就像看着双联速子长矛，，然后你说到""不，它属于{Kanta}领主。""
+pwiBluff,DialogOptionSelected,$option == pwi_bluff,$player.kantaBluffs++,"你紧盯着海盗就像看着双联速子长矛，，然后你说到""不，它属于{Kanta}领主。""
 
 鲜血从海盗船长的脸上淌出来。""她'但是。。。群星和鲜血。船长，请接受我的道歉。我永远不会妨碍我们，我们的赞助人，还有好的，请接受{$entity。pwi_credits}星币作为耽搁的补偿。""{$HeOrShe}几乎是在恳求。""还有，也别计较这件小事。好吧?""","pwi_bluff1:""我们拭目以待.""",
 pwiBluff1,DialogOptionSelected,$option == pwi_bluff1,,海盗阴沉地点了点头，在中等距离外凝视着，仿佛在盘算着{$himOrHer}会因为违抗{Kanta}的意志而受到什么惩罚。你收到这个提示后就终止了通讯，对整个谄媚的表演翻白眼。,cutCommLinkNoText:继续,
