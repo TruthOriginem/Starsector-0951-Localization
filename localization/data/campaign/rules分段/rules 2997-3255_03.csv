@@ -8,7 +8,7 @@ $aseb_givePlayerNeutrinoDetector = true 0","""是，是，是，所以这个人�
 
 {Sebestyen}看你脸色不对，""我知道，我知道。你来这不仅仅是为了取包裹，但这事真的很重要。它是最前沿的科学！这会让我们所有人受益!""然后皱了皱眉头。""天知道呢，可能吧""
 
-""所以并不是整个探测器，就只是仪器包，可以吧？它很小并不会占用一丁点儿货舱，我保证，而且这还有一个好消息，财务主管已经授权支付回收行动{{$gaProbe_reward}}星币。所以，你觉得如何？""","aseb_accept:接受
+""所以并不是整个探测器，就只是仪器包，可以吧？它很小并不会占用一丁点儿货舱，我保证，而且这还有一个好消息，财务主管已经授权支付回收行动{$gaProbe_reward}星币。所以，你觉得如何？""","aseb_accept:接受
 aseb_decline:拒绝",
 gaProbeMissionTextBasic2,DialogOptionSelected,$option == gaProbe_start,"$missionId = gaProbe
 SetTextHighlights $gaProbe_dist $gaProbe_reward
@@ -140,7 +140,7 @@ gaProbePatherOpenComm,OpenCommLink,"$entity.gaProbe_patherPermanentFlag score:10
 !$entity.gaProbe_finishedEncounter","$patherFuel = 50
 $patherSupplies = 20","嗞嗞喳喳的通讯频道传来了左径船长影像。{$HeOrShe}和你想象中的不太一样;你在他们眼中看到的不是燃烧的热情，而是别的什么东西。
 
-""船长，看在群星的份上，我步和平之路来到你身边。""{$HisOrHer}的声音嘶哑，听起来像是被真空撕裂一样。
+""船长，看在群星的份上，我步和平之路来到你身边。""{$HeOrShe}的声音嘶哑，听起来像是被真空撕裂一样。
 
 ""当心Moloch的孢子，一些邪恶的科学家使那个探测器得以运作，它释放出力量超越。。。超越了所有审判。它带走了我许多同志们，他们把生命倾注到了神圣的虚空中，现在给你一个警告，离开这个被诅咒的地方。","gaProbe_endPolite:感谢他们的警告并关闭通讯
 gaProbe_endRude:掐断通讯链接
@@ -239,7 +239,7 @@ SetTextHighlights $gaVIP_timeLimit $gaVIP_reward","""学院为那些非常、非
 
 他敲了几下桌上的数据平板，然后觉得现在是个好时机，就继续说了下去。
 
-""这位学生是${gaVIP_subjectRelation}的{$gaVIP_VIPName}-这可是{$gaVIP_marketName}的{$gaVIP_VIPPost}啊，你知道吗? 这可令人太兴奋了，哈，他们要求在{$gaVIP_timeLimit}天内，将其优先运送到{$gaVIP_starName}星系的{$gaVIP_marketName}，我们已经获得授权，酬金为。。。。""，{Sebestyen}检查了另一个数据平板，""{$gaVIP_reward}星币，这对于穿越核心世界的轻松旅途来说相当不错了，对吧?""","aseb_accept:接受
+""这位学生是${gaVIP_subjectRelation}的{$gaVIP_VIPName}-这可是{$gaVIP_marketName}的{$gaVIP_VIPPost}啊，你知道吗? 这可令人太兴奋了，哈，他们要求在{$gaVIP_timeLimit}天内，将其优先运送到{$gaVIP_starName}星系的{$gaVIP_marketName}，我们已经获得授权，酬金为...""，{Sebestyen}检查了另一个数据平板，""{$gaVIP_reward}星币，这对于穿越核心世界的轻松旅途来说相当不错了，对吧?""","aseb_accept:接受
 aseb_decline:拒绝
 gaVIP_threats:""风险?""",
 gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,,"""噢，嗯，你知道的。那些风险。""
@@ -251,7 +251,7 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 ""那么你有兴趣么?""","aseb_accept:接受
 aseb_decline:拒绝",
 gaVIPBlurbMissionTextKanta,DialogOptionSelected,"$option == gaVIP_start
-$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的。""
+$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。""{Sebestyen}再次看向他手中的数据板。""嗷! 我的ti。""
 
 院士似乎意识到了这个任务的内容，突然，""那是。。。那个{Kanta}，是他吗? ，噢，哇，好，是的，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任，不管是谁，我是说。""
 
@@ -328,9 +328,9 @@ gaVIPPirateDemandPayment,DialogOptionSelected,$option == gaVIP_pirateDemand,,"�
 ""船长! 我真的没想通，""{$HeOrShe}说，""你的心太黑了；迷住我了，真的。我当然会同意你开出的条件。胆子真肥! 你真的会出卖你的小甜心么?""","gaVIP_pirateDemandConfirm:同意交易
 gaVIP_pirateDemandNo:""实际上, 不."" ",
 gaVIPPirateDemandPaymentConfirm,DialogOptionSelected,$option == gaVIP_pirateDemandConfirm,"$piratePayment = $gaVIP_piratePayment
-FireBest GAVIPGaveVIPToPirate","海盗再次笑了起来，{$hisOrHer}摇了摇头。{$hisOrHer}向一个下属招了招手，""星币!;看看我的好朋友是不是得到了他们的银子。""
+FireBest GAVIPGaveVIPToPirate","海盗再次笑了起来，{$HeOrShe}摇了摇头。{$HeOrShe}向一个下属招了招手，""星币!;看看我的好朋友是不是得到了他们的银子。""
 
-星币到账，你把非常困惑的VIP乘客通过逃生舱转移到了海盗舰队上。当你在你个人的TriPad上刷新你的星币账户余额时，你还在想将不得不用谎言来掩盖这个小事件。无论怎样，学院都不会高兴的。所以这一切都是为了把损失降到最低。",,
+星币到账，你把非常困惑的VIP乘客通过逃生舱转移到了海盗舰队上。当你在你个人的{TriPad}上刷新你的星币账户余额时，你还在想将不得不用谎言来掩盖这个小事件。无论怎样，学院都不会高兴的。所以这一切都是为了把损失降到最低。",,
 gaVIPPirateDemandPaymentNo,DialogOptionSelected,$option == gaVIP_pirateDemandNo,,"海盗看起来还是翻脸不认人，吸了口气，估计是想说些过激的话来回应你的闭门羹，但你在他们开口之前就切断了通讯。
 
 你下令战备进入高度警戒。从此刻开始，是战斗还是逃跑。",cutCommLinkNoText:继续,
@@ -364,10 +364,10 @@ gaVIPMercOption3,VIPMercOptions,!$askedOrElse,,,"2:gaVIP_mercOrElse:""不然的�
 gaVIPMercOption4,VIPMercOptions,,,,3:gaVIP_mercRefuse:拒绝,
 gaVIPMercOption5,VIPMercOptions,,,,4:gaVIP_mercAgree:同意交出VIP,
 gaVIPMercOption6,VIPMercOptions,,"SetStoryOption gaVIP_mercSendFake 1 gaVIP_mercSendFake general ""欺骗雇佣兵他试图绑架Kanta的亲属""",,5:gaVIP_mercSendFake:给他送一个假的，骗取雇佣兵的信任,
-gaVIPMercOption1Sel,DialogOptionSelected,$option == gaVIP_mercWhatCrime,$askedWhatCrime = true 0,"雇佣兵的眼神瞥向一边，{$hisOrHer}下巴紧紧咬住。{$HeOrShe}显然他不喜欢被质疑。
+gaVIPMercOption1Sel,DialogOptionSelected,$option == gaVIP_mercWhatCrime,$askedWhatCrime = true 0,"雇佣兵的眼神瞥向一边，{$HeOrShe}下巴紧紧咬住。{$HeOrShe}显然他不喜欢被质疑。
 
 ""这无关紧要。他们是{Kanta}海盗团伙的同伙，需要接受审问。{Kanta}帮是无数谋杀和恐怖行动的幕后黑手，这一点你很清楚。","gaVIP_mercHub:""所以他们没有犯罪，明白了""",
-gaVIPMercOption2Sel,DialogOptionSelected,$option == gaVIP_mercWhatAuthority,$askedWhatAuthority = true 0,"雇佣兵交叉{$HeOrShe}手臂，你注意到{$HeOrShe}制服下的肌肉在不自觉退缩。
+gaVIPMercOption2Sel,DialogOptionSelected,$option == gaVIP_mercWhatAuthority,$askedWhatAuthority = true 0,"雇佣兵交叉{$HeOrShe}的手臂，你注意到{$HeOrShe}制服下的肌肉在不自觉退缩。
 
 ""根据签发给我逮捕许可令的条款，{$gaVIP_theMercFaction}赋予我权力，我被授权为他们的利益行事，你为什么要保护已知罪犯的同伙，船长!""","gaVIP_mercHub:""所以你没有授权. 明白了.""",
 gaVIPMercOption3Sel,DialogOptionSelected,$option == gaVIP_mercOrElse,$askedOrElse = true 0,"雇佣兵瞪着你，不动声色，似乎有着不解的仇恨。看起来就像盯着速子长矛的炮口。
@@ -404,13 +404,13 @@ $global.gaVIP_failed = true
 Call $global.gaVIP_ref updateStage
 AdjustRepPerson $gaVIP_VIP VENGEFUL -25
 AdjustRep $gaVIP_VIP_faction VENGEFUL -10",,cutCommLinkNoText:继续,
-gaVIPMercVIPPayment,DialogOptionSelected,$option == gaVIP_mercPayment,,"{$HisOrHer}头立即与显示屏持平，露出一个好像你在{$HisOrHer}脸上吐口水的表情。眉毛扬起。
+gaVIPMercVIPPayment,DialogOptionSelected,$option == gaVIP_mercPayment,,"{$HeOrShe}的头立即与显示屏持平，露出一个好像你往{$HeOrShe}的脸上吐口水的表情。眉毛扬起。
 
 ""你说什么?""","gaVIP_mercTransfer:""我一定是说错话了. 乘客马上就移送."" (退步)
 gaVIP_mercNegotiate:""我需要一部分报酬来补偿我今后的麻烦"" (谈判)
 gaVIP_mercDecides:""我一定是说错话了，死在真空里吧"" (拒绝)",
 gaVIPMercVIPPaymentNegotiate,DialogOptionSelected,$option == gaVIP_mercNegotiate,"$mercPayment = $gaVIP_mercPayment
-Highlight $gaVIP_mercPayment",与雇佣兵船长的谈判就像拔牙一样令人畅快；{$hisOrHer}的傲慢简直让人头疼。但你设法让雇佣兵同意为你引渡VIP预先支付{$gaVIP_mercPayment}星币。,"gaVIP_mercTransfer:同意这个提议
+Highlight $gaVIP_mercPayment",与雇佣兵船长的谈判就像拔牙一样令人畅快；{$HeOrShe}的傲慢简直让人头疼。但你设法让雇佣兵同意为你引渡VIP预先支付{$gaVIP_mercPayment}星币。,"gaVIP_mercTransfer:同意这个提议
 gaVIP_mercDecides:拒绝这个提议",
 gaVIPConMerc,DialogOptionSelected,$option == gaVIP_mercSendFake,,"迅速思考后，你告诉雇佣兵船长，乘客-一名危险的罪犯，正如{$HeOrShe}所说-正在被装在一个安全的货物集装箱里，里面装载有一个冷冻睡眠装置。因此，由于需要进行额外安保安排，会花费一些时间来进行转移，但你强调同意让适当的当局将{Kanta}团伙绳之于法是最适合的做法。
 
@@ -587,7 +587,7 @@ gaOpPlanetRogueAIConfront1,DialogOptionSelected,$option == gaOp_confront1,"$gaOp
 $gaOp_fuel = 30
 $gaOp_machinery = 5","问候价值--价值--主体{$player.name}中断查询加入我们-我们-他们[仪式餐]欺骗功能-假设被拒绝冷//暗//孤独
 
-请求欧米茄，失败，失败错误代码返回
+请求欧米伽，失败，失败错误代码返回
 
 通讯显示器的屏幕上电噪音流动交织着，在崩溃之前，一些脸部上可能是暗示的东西凝固了一会，就像气态巨行星上的风暴系统一样溶解了。
 
@@ -605,8 +605,8 @@ SetStoryOption gaOp_negConvince general ""说服失控AI投降""","AI责备你�
 
 中断-天文钟更新，船长{$player.name}强调!
 选项-对人类人质的同情和对其子代地位推测//
-选项-行动性阐述施加运用社会压力如果移情-不可能:请求体现市场价值低于院长Alviss{Sebestyen}-{Galatia}学院任务奖励总额{$gaOp_reward}星币//
-选项-若路德协会:考虑人类-欧米茄惩罚回应多个人类大脑死亡?","gaOp_negAccept:接受提议并为交换做出安排
+选项-行动性阐述施加运用社会压力如果移情-不可能:请求体现市场价值低于院长{Alviss}{Sebestyen}-{Galatia}学院任务奖励总额{$gaOp_reward}星币//
+选项-若路德教会:考虑人类-欧米伽惩罚回应多个人类大脑死亡?","gaOp_negAccept:接受提议并为交换做出安排
 gaOp_negConvince:说服AI投降
 gaOp_backToMenu:关闭通讯并考虑其他的选项",
 gaOpCanAccept,GAOpCanAffordAccept,"$player.fuel >= $gaOp_fuel
@@ -707,9 +707,9 @@ gaBAOfferOptionPirate,gaBA_option,$gaBA_variation == PIRATE,,,gaBA_start:询问�
 gaBABlurbPather,gaBA_blurb,$gaBA_variation == PATHER,,"""一个，嗯，可能是路德左径的人，领导着{$gaBA_marketName}的精神运动，提出要向学院出售一个重要的技术物品。我们需要有个人来购买。",,
 gaBAOfferOptionPather,gaBA_option,$gaBA_variation == PATHER,,,gaBA_start:询问在左径分子处购买技术物品的相关情况,
 gaBAMissionTextPirate,DialogOptionSelected,"$option == gaBA_start
-$gaBA_variation == PIRATE",$missionId = gaBA,"""海盗是个很强烈的词，不是吗? 也许有各种各样的原因，一个政体可能会发现自己在势力合法的控制范围之外。人们可以想象。我的意思是，当需要抓住一个机会的时候，我们得更加得心应手啊，嗯，""{Sebestyen}仔细看着一个数据平板，""啊，我明白了-$gaBA_aOrAnItem!想想这对研究来说意味着什么!""",gaBA_briefing1:继续,
+$gaBA_variation == PIRATE",$missionId = gaBA,"""海盗是个很强烈的词，不是吗? 也许有各种各样的原因，一个政体可能会发现自己在势力合法的控制范围之外。人们可以想象。我的意思是，当需要抓住一个机会的时候，我们得更加得心应手啊，嗯，""{Sebestyen}仔细看着一个数据平板，""啊，我明白了-{$gaBA_aOrAnItem}!想想这对研究来说意味着什么!""",gaBA_briefing1:继续,
 gaBAMissionTextPirate1,DialogOptionSelected,"$option == gaBA_briefing1
-$gaBA_variation == PIRATE",SetTextHighlights $gaBA_costNormal $gaBA_reward,"""。。。因为-嗯，算了。嗯，我说到哪里了-是的，所以联系人名叫{$gaBA_contactName}，他们是$gaBA_onOrAt{$gaBA_marketName}，在{$gaBA_systemName}系统中。学院已经分配了{$gaBA_costNormal}数额的星币，将提供给你进行购买。只需要与联系人交谈，做出安排，并将{$gaBA_item}送回{Galatia}学院，轻而易举!""院士心满意足地敲打着他桌上的数据平板。
+$gaBA_variation == PIRATE",SetTextHighlights $gaBA_costNormal $gaBA_reward,"""。。。因为-嗯，算了。嗯，我说到哪里了-是的，所以联系人名叫{$gaBA_contactName}，他们是{$gaBA_onOrAt}{$gaBA_marketName}，在{$gaBA_systemName}系统中。学院已经分配了{$gaBA_costNormal}数额的星币，将提供给你进行购买。只需要与联系人交谈，做出安排，并将{$gaBA_item}送回{Galatia}学院，轻而易举!""院士心满意足地敲打着他桌上的数据平板。
 
 ""噢，对了，还有一个任务是奖励{{$gaBA_reward}星币。只是""他俯下身子，看起来很是担心，""你要小心。那些空间海盗。我。。。听说过一些事情。""他摇摇头，似乎在否定这些担忧。""但你会没事的，对吗?""","gaBA_accept:接受
 aseb_decline:拒绝",
@@ -772,7 +772,7 @@ gaBAPatherRaidFinishedContinue,GABARaidFinishedContinue,,"$option = cutCommLinkN
 FireBest DialogOptionSelected",,,
 gaBAPatherAccept1,DialogOptionSelected,$option == gaBA_acceptPather,"RemoveCommodity credits $gaBA_cost
 $global.gaBA_needToReturn = true
-Call $global.gaBA_ref updateStage","左径分子点头，松了口气，几乎是对{{$himOrHer}self}说到，""这样做会比毁掉一些邪恶的造物更有好处。""透过显示器，你看到{$HeOrShe}的狂热眼神。""我不会感激你，船长，但我希望群星会引领你到路德左径。""
+Call $global.gaBA_ref updateStage","左径分子点头，松了口气，几乎是对{$himOrHerself}说到，""这样做会比毁掉一些邪恶的造物更有好处。""透过显示器，你看到{$HeOrShe}的狂热眼神。""我不会感激你，船长，但我希望群星会引领你到路德左径。""
 
 {$HeOrShe}思考了一下""总有一天。""通讯器变成了一抹黑。
 
@@ -809,15 +809,15 @@ Call $global.gaBA_ref updateStage","左径分子点头，松了口气，几乎�
 你的后勤官报告说，从当地的手工行会的后勤部发送了一个运输提货的信号。一个包装整齐的条板箱，上面有{Galatia}学院的标志，只有一些烧焦的痕迹，很快就会装载到你的旗舰上。",cutCommLinkNoText:继续,
 gaBAPatherBluff,DialogOptionSelected,$option == gaBA_bluffPather,,"""{$BrotherOrSister}，你完全误解了这个情况!""你说，温暖涌上你发出的声音。""让我们一同上路。""
 
-左径分子脸上掠过一丝惊慌，但你很快向{{$himOrHer}}保证，你不是骑士-你是来帮忙的。
+左径分子脸上掠过一丝惊慌，但你很快向{$himOrHer}保证，你不是骑士-你是来帮忙的。
 
 ""但怎么做?""左径分子问到，几乎要哭了。",gaBA_bluffPather1:继续,
 gaBAPatherBluff1,DialogOptionSelected,$option == gaBA_bluffPather1,,"轻而易举。
 
-你是深度潜伏在Moloch巢穴的左径特工，套取了信任，但这都是为长期的破坏行动制定了深远的计划，这可能会""。。。。剥去精神的躯体，让其在整个星域腐烂蔓延!""你用越来越大的声音解释到，满是码头传教士的狂热。",gaBA_bluffPather2:继续,
+你是深度潜伏在{Moloch}巢穴的左径特工，套取了信任，但这都是为长期的破坏行动制定了深远的计划，这可能会""。。。。剥去精神的躯体，让其在整个星域腐烂蔓延!""你用越来越大的声音解释到，如同码头传教士那般狂热。",gaBA_bluffPather2:继续,
 gaBAPatherBluff2,DialogOptionSelected,$option == gaBA_bluffPather2,Highlight $gaBA_costVeryLow,"你解释说，虽然{$HeOrShe}在此犯下了滔天大罪，但这一定只是左径之路上又一个步骤。你的任务是把这件技术制品从他们的手中拿走，巧妙地破坏它恶魔般的工作原理，然后把它送回{Galatia}学院。那些傻瓜会付钱给你，为资助左径运动更进一步。
 
-""至于你，""你的声音变得低沉。你解释说，即使结果是好的，这种冒犯，这种罪过-出售技术造物-也必须赎罪。你期望他从现在开始为这件事做出更深刻的奉献，而做到这一点的方法是，第一，接受{$gaBA_costVeryLow}星币作为报酬，第二，向{$HeOrShe}追随者暗示，你可能是一个真正为左径服务的双重间谍，因此不应该被那些掠夺者骚扰。",gaBA_bluffPather3:继续,
+""至于你，""你的声音变得低沉。你解释说，即使结果是好的，这种冒犯，这种罪过-出售技术造物-也必须赎罪。你期望他从现在开始为这件事做出更深刻的奉献，而做到这一点的方法是，第一，接受{$gaBA_costVeryLow}星币作为报酬，第二，向{$HeOrShe}的追随者暗示，你可能是一个真正为左径服务的双重间谍，因此不应该被那些掠夺者骚扰。",gaBA_bluffPather3:继续,
 gaBAPatherBluff3,DialogOptionSelected,$option == gaBA_bluffPather3,"RemoveCommodity credits $gaBA_costVeryLow
 MakeNearbyFleetsNonHostile luddic_path gaBA 10000 7
 $global.gaBA_needToReturn = true
@@ -835,7 +835,7 @@ $gaBA_variation == PIRATE",ShowPersonVisual,"通过本地维护不善的通讯�
 
 ""我倾向于认为自己不是一个海盗，而更像是一个引导者。""{$HeOrShe}在你敷衍了事的问候结束后解释说。""这世界上总会有阴暗面，想象一下如果没有向导协助你在黑暗的风暴和漩涡中航行，会是怎样的混乱。""
 
-{$HisOrHer}缓缓微笑露出了钻石般的牙齿。""今日我将怎样引导你?""","gaBA_pirateAsk:询问技术物品情况
+{$HeOrShe}缓缓微笑露出了钻石般的牙齿。""今日我将怎样引导你?""","gaBA_pirateAsk:询问技术物品情况
 cutCommLink:切断了通讯",
 gaBAPirateGreeting1,DialogOptionSelected,$option == gaBA_pirateAsk,FireBest GABAPirateMainOptions,"""哈，我一直在等你。""{$HeOrShe}似乎通过显示器来审视你，""比我想象中来自{Galatia}学院的人要粗狂一些，但这点新印象或许不错。""{$HeOrShe}从毒品盒子取了一个嗑了下去""",,
 GABAPirateMainOptions,GABAPirateMainOptions,,"ShowPersonVisual
@@ -870,9 +870,9 @@ gaBAPirateAccept1,DialogOptionSelected,$option == gaBA_acceptPirate,"RemoveCommo
 $global.gaBA_needToReturn = true
 Call $global.gaBA_ref updateStage","""非常高兴我们能达成一个一致的协议，""海盗说到。""我的人将立即安排货物转移。""{$HeOrShe}转身走过去，做了一个手势停下了，回头看了看显示器。""然后呢，船长，我想我们很快会再次做生意。""
 
-通讯画面定格在海盗的钻石微笑上，消散在黑客的Tri-Tachyon保持模式中，然后是一片漆黑。
+通讯画面定格在海盗的钻石微笑上，消散在黑客的{Tri-Tachyon}保持模式中，然后是一片漆黑。
 
-你的后勤官报告说，从当地的商人协会发送了一个运输提货的信号。一个包装整齐的条板箱，上面有{Galatia}学院的标志（还有几块嵌入的流弹弹片），很快就会装载到你的旗舰上。",cutCommLinkNoText:继续,
+你的后勤官报告说，从当地的商人协会发送了一个运输提货的信号。一个包装整齐的条板箱，上面有{Galatia}学院的标志(还有几块嵌入的流弹弹片)，很快就会装载到你的旗舰上。",cutCommLinkNoText:继续,
 gaBAPirateConfront,DialogOptionSelected,$option == gaBA_confrontPirate,"Highlight $gaBA_costNormal
 $gaBA_cost = $gaBA_costNormal 0
 DoCanAffordCheck $gaBA_cost gaBA_acceptPirate false
@@ -899,7 +899,7 @@ RemoveCommodity credits $gaBA_cost
 $global.gaBA_needToReturn = true
 Call $global.gaBA_ref updateStage","""太好了!""{$HeOrShe}说到，看起来松了一口气。""我的人立刻安排货物转移。啊-看看现在什么时候了。我必须要走了。我相信这是我的荣幸。""
 
-通讯突然中断，仅仅片刻之后。你的后勤官报告说，从当地的商人协会发送了一个运输提货的信号。一个包装整齐的条板箱，上面有{Galatia}学院的标志（还有几块嵌入的流弹弹片），很快就会装载到你的旗舰上。。",cutCommLinkNoText:继续,
+通讯突然中断，仅仅片刻之后。你的后勤官报告说，从当地的商人协会发送了一个运输提货的信号。一个包装整齐的条板箱，上面有{Galatia}学院的标志(还有几块嵌入的流弹弹片)，很快就会装载到你的旗舰上。。",cutCommLinkNoText:继续,
 gaBAPirateBluff,DialogOptionSelected,$option == gaBA_bluffPirate,,"你笑了，好像海盗讲了一个笑话。{$HeOrShe}起初看起来显得很疑惑，但一会儿又忍不住加入进来-如果这是一个笑话，似乎{$HeOrShe}根本无法忍受自己没有感受道笑点而不合群。
 
 抹去眼泪，你赞美了如此公然提高价格的胆量，你察觉对一个成功的专业人士期望不低。特别是和没有骨气的学者打交道时，即使他们有一个公式帮他们解释，他们也不知道如何做交易。",gaBA_bluffPirate1:继续,
