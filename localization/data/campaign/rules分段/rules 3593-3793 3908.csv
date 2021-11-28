@@ -461,7 +461,7 @@ hijackBlurbBar,hijack_blurbBar,,,一个穿着动力盔甲内衬，长相彪悍�
 hijackOfferOptionBar,hijack_optionBar,,,,hijack_startBar:和穿着动力装甲内衬长相彪悍的{$hijack_manOrWoman}谈谈,
 hijackOfferTextBar,DialogOptionSelected,$option == hijack_startBar,$missionId = hijack,"你走了过去，面对对方那令人生畏的目光依然保持着冷静。带着一股刺鼻酒味的{$hijack_manOrWoman}看到你的镇定后笑了起来，邀请你坐在{$heOrShe的}身边。""我喜欢你，""{$heOrShe}大声说，但被酒吧里的人无视了，""你不是个胆小鬼!""
 
-你的这位新朋友一直在夸夸其谈，但你惊讶地发现{$heOrShe}实际上比{$heOrShe}看上去要聪明得多，因为{$heOrSh}在{$hisOrHer的}吹嘘中插入了一些探寻你背景和能力的尖锐问题。
+你的这位新朋友一直在夸夸其谈，但你惊讶地发现{$heOrShe}实际上比{$heOrShe}看上去要聪明得多，因为{$heOrShe}在{$hisOrHer的}吹嘘中插入了一些探寻你背景和能力的尖锐问题。
 
 {$heOrShe}放轻了嗓门，但始终用{$hisOrHer的}眼睛警戒着四周: ""我可是很有水准的，舰长。而你能进退有度，这让我很欣赏你。不知道你是否愿意和我一起干一票。""{$HeOrShe}微笑起来，炫耀着钛制的牙齿。""想知道更多细节吗?""","hijack_startBar2:""说吧。""
 contact_declineBarNoContinue:拒绝",
