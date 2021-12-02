@@ -96,8 +96,7 @@
     "text_column_names": [
       "name",
       "designation",
-      "tech/manufacturer",
-      "short"
+      "tech/manufacturer"
     ]
   },
   {
@@ -116,7 +115,7 @@
   },
   {
     "path": "data/strings/descriptions.csv",
-    "id_column_name": "id",
+    "id_column_name": ["id", "type"],
     "text_column_names": [
       "text1",
       "text2"
