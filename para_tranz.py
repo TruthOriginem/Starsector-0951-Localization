@@ -1,11 +1,12 @@
 import dataclasses
 import json
 import logging
+import re
 from csv import DictReader, DictWriter
 from dataclasses import dataclass
 from pathlib import Path
 
-from typing import Set, Dict, Tuple, List
+from typing import Set, Dict, Tuple, List, Union
 
 logging.basicConfig()
 logging.root.setLevel(logging.NOTSET)
@@ -58,7 +59,8 @@ class CsvFile(DataFile):
     def __init__(self, path: Path, id_column_name: str, text_column_names: Set[str],
                  original_path: Path = None, translation_path: Path = None):
         super().__init__(path, original_path, translation_path)
-        self.id_column_name = id_column_name  # csv 中作为 id 的列名
+        # csv 中作为 id 的列名
+        self.id_column_name = id_column_name  # type:Union[str, List[str]]
         self.text_column_names = text_column_names  # 包含要翻译文本的列名
 
         self.column_names = []
@@ -69,6 +71,8 @@ class CsvFile(DataFile):
         self.translation_id_data = {}
 
         self.load_original_and_translation_data()
+
+        self.validate()
 
     def load_original_and_translation_data(self) -> None:
         self.column_names, self.original_data, self.original_id_data = self.load_csv(
@@ -82,6 +86,17 @@ class CsvFile(DataFile):
                 self.id_column_name)
             logger.info(
                 f'从 {relative_path(self.translation_path)} 中加载了 {len(self.translation_data)} 行译文数据，其中未被注释且不为空的行数为 {len(self.translation_id_data)}')
+
+    def validate(self):
+        # 检查指定的id列和文字列在游戏文件中是否存在
+        if (type(self.id_column_name) == str and self.id_column_name not in self.column_names) and (
+                not set(self.id_column_name).issubset(set(self.column_names))):
+            raise ValueError(
+                f'从 {self.path} 中未找到指定的id列 "{self.id_column_name}"，请检查配置文件中的设置。可用的列包括： {self.column_names}')
+        if not set(self.text_column_names).issubset(set(self.column_names)):
+            raise ValueError(
+                f'从 {self.path} 中未找到指定的文字列 {self.text_column_names}，请检查配置文件中的设置。可用的列包括： {self.column_names}')
+        # 检查原文与译文数量是否匹配
         if len(self.original_data) != len(self.translation_data):
             logger.warning(
                 f'文件 {relative_path(self.path)} 所加载的原文与译文数据量不匹配：加载原文 {len(self.original_data)} 条，译文 {len(self.translation_data)} 条')
@@ -108,10 +123,9 @@ class CsvFile(DataFile):
 
     def update_strings(self, strings: Set[String]) -> None:
         for s in strings:
-            key = s.key  # type:str
-            column = key.split('$')[-1]
-            if key in self.translation_id_data:
-                self.translation_id_data[key][
+            _, id, column = re.split('[#$]', s.key)
+            if id in self.translation_id_data:
+                self.translation_id_data[id][
                     column] = s.translation if s.translation else s.original
 
     def update_strings_from_json(self) -> None:
@@ -147,14 +161,18 @@ class CsvFile(DataFile):
             writer.writerows(self.translation_data)
 
     @staticmethod
-    def load_csv(path: Path, id_column_name: str) -> Tuple[List[str], List[Dict], Dict[str, Dict]]:
+    def load_csv(path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
+        List[str], List[Dict], Dict[str, Dict]]:
         data = []
         id_data = {}
         with open(path, 'r', errors='ignore') as csv_file:
             rows = list(DictReader(csv_file))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
-                row_id = row[id_column_name]  # type:str
+                if type(id_column_name) == str:
+                    row_id = row[id_column_name]  # type:str
+                else:  # 存在多个 id column
+                    row_id = str(tuple([row[id] for id in id_column_name]))  # type:str
                 first_column = row[columns[0]]
                 # 只在 id-row mapping 中存储不为空且没有被注释的行
                 if first_column and not first_column[0] == '#':
