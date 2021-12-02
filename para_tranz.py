@@ -2,7 +2,8 @@ import dataclasses
 import json
 import logging
 import re
-from csv import DictReader, DictWriter
+from _csv import writer
+from csv import DictReader, reader
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -131,10 +132,13 @@ class CsvFile(DataFile):
     def update_strings_from_json(self) -> None:
         if self.para_tranz_path.exists():
             strings = set()
-            with open(self.para_tranz_path, 'r') as f:
+            with open(self.para_tranz_path, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)  # type:List[Dict]
-                for d in data:
-                    strings.add(String(d['key'], d['original'], d.get('translation', '')))
+            for d in data:
+                # ParaTranz 下载的文件把 \n 转义成了 \\n，需要转回来
+                original = d['original'].replace('\\n', '\n')
+                translation = d.get('translation', '').replace('\\n', '\n')
+                strings.add(String(d['key'], original, translation))
             self.update_strings(strings)
             logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
@@ -155,17 +159,32 @@ class CsvFile(DataFile):
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
 
     def save_translation_data(self) -> None:
+        with open(self.translation_path, 'r', newline='') as f:
+            csv = reader(f)
+            real_column_names = csv.__next__()
+
+        # 由于部分csv包含多个空列，在用DictReader读取时会被丢弃，为了与源文件保持一致，在此根据原文件重新添加
+        real_column_index = {col: real_column_names.index(col) for col in self.column_names if col}
+
+        rows = [real_column_names]
+
+        for dict_row in self.translation_data:
+            row = ['' for _ in range(len(real_column_names))]
+            for col, value in dict_row.items():
+                if col:
+                    row[real_column_index[col]] = value
+            rows.append(row)
         with open(self.translation_path, 'w', newline='') as f:
-            writer = DictWriter(f, fieldnames=self.column_names, lineterminator='\r\n')
-            writer.writeheader()
-            writer.writerows(self.translation_data)
+            writer(f).writerows(rows)
 
     @staticmethod
     def load_csv(path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
         List[str], List[Dict], Dict[str, Dict]]:
         data = []
         id_data = {}
-        with open(path, 'r', errors='ignore') as csv_file:
+        with open(path, 'r', errors="surrogateescape") as csv_file:
+            old_next = csv_file.__next__
+            csv_file.__next__ = lambda: replace_weird_chars(old_next())
             rows = list(DictReader(csv_file))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
@@ -211,6 +230,12 @@ def paratranz_to_csv():
         file.update_strings_from_json()
         file.save_translation_data()
     logger.info('ParaTranz 词条导入到译文数据完成')
+
+
+# From processWithWiredChars.py
+def replace_weird_chars(s: str) -> str:
+    return s.replace('\udc94', '""').replace('\udc93', '""').replace('\udc92', "'").replace(
+        '\udc85', '...')
 
 
 if __name__ == '__main__':
