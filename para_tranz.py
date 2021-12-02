@@ -183,9 +183,8 @@ class CsvFile(DataFile):
         data = []
         id_data = {}
         with open(path, 'r', errors="surrogateescape") as csv_file:
-            old_next = csv_file.__next__
-            csv_file.__next__ = lambda: replace_weird_chars(old_next())
-            rows = list(DictReader(csv_file))
+            csv_lines = [replace_weird_chars(l) for l in csv_file]
+            rows = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
                 if type(id_column_name) == str:
