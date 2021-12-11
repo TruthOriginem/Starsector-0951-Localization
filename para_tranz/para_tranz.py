@@ -10,16 +10,23 @@ from pathlib import Path
 from typing import Set, Dict, Tuple, List, Union
 
 # 设置日志输出
-logging.basicConfig()
 logging.root.setLevel(logging.NOTSET)
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.NOTSET)
+logger = logging.getLogger('ParaTranz.py')
+
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter("[%(name)s][%(levelname)s] %(message)s")
+
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
 # 设置游戏原文，译文和Paratranz数据文件路径
-PROJECT_DIRECTORY = Path(__file__).parent
+PROJECT_DIRECTORY = Path(__file__).parent.parent
 ORIGINAL_PATH = PROJECT_DIRECTORY / 'original'
 TRANSLATION_PATH = PROJECT_DIRECTORY / 'localization'
-PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz'
+PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'output'
+CONFIG_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 
 
 # 尝试计算相对于根目录的位置
@@ -256,7 +263,7 @@ def load_csv_files() -> List[CsvFile]:
     ]
     """
     logger.info('开始读取游戏原文与译文数据')
-    with open(PROJECT_DIRECTORY / 'para_tranz_map.json') as f:
+    with open(CONFIG_PATH) as f:
         d = json.load(f)
     files = [CsvFile(**mapping) for mapping in d]
     logger.info('游戏原文与译文数据读取完成')
@@ -290,7 +297,7 @@ if __name__ == '__main__':
     print('2 - 将 ParaTranz 词条写回汉化文件')
 
     while True:
-        option = int(input('请输入选项：'))
+        option = int(input('请输入选项数字：'))
         if option == 1:
             csv_to_paratranz()
             break
@@ -299,3 +306,5 @@ if __name__ == '__main__':
             break
         else:
             print('无效选项！')
+
+    input('程序执行完毕，请按任意键退出')
