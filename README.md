@@ -1,4 +1,4 @@
-﻿# Starsector-095-Localization
+﻿﻿﻿# Starsector-095-Localization
 
 ## Python环境: 3.8.5
 | 文件                                  | 作用                                                        |
@@ -32,33 +32,34 @@
   * 英文地名也应当类似地使用`{}`包括，且括号的两侧不应该出现额外空格，例如`前往{Galatia}学院接受任务。`
   * 需要强调的英文词组或短句也一样，例如`发送你的{PID}到目标处。`
   * 此外，**所有以`$`为开头的token必须以`{}`包括，以避免潜在的BUG**，例如`这将花费{$cost}星币。`
+  * `{}`包括**必须以`}`作为结尾闭合，否则将产生过长字符串捅穿屏幕的问题**。在`{}`闭合的情况下，此类问题目前不再发生。
 
 ## 译名表
 在这里放置统一译名。
 
-| 英文名                  | 译名               |
-| ----------------------- | ------------------ |
-| Comm link               | 通讯链接           |
-| Cut comm link           | 切断通讯链接       |
-| credit/credits          | 星币               |
-| hegemony                | 霸主               |
-| Janus Device            | ""双面神""装置     |
-| [REDACTED]              | [数据删除]         |
-| Nav Buoy                | 导航浮标           |
-| Sensor Jammer           | 传感干扰器         |
-| Sensor Array            | 传感器阵列         |
-| Comm Relay              | 通讯中继站         |
-| Probe                   | 探测器             |
-| Warning Beacon          | 警告航标           |
-| Fusion Lamp             | 聚变射灯           |
-| Yellow Star             | 黄矮星             |
-| Orange Star             | 橙矮星             |
-| Contacts                | 联络人             |
-| Galatia Academy         | Galatia 学院       |
-| Galatia Academy Station | Galatia 学院空间站 |
-| mote                    | 光尘               |
-| Hypershunt Tap          | 超分流阀门         |
-| Coronal Hypershunt      | 星冕分流器         |
+| 英文名                  | 译名               | 注释                       |
+| ----------------------- | ------------------ | -------------------------- |
+| Comm link               | 通讯链接           | 请注意`链接`和`连接`的区别 |
+| Cut comm link           | 切断通讯链接       | 同上                       |
+| credit/credits          | 星币               | 请不要翻译成信用           |
+| hegemony                | 霸主               | 请不要翻译成霸权主义       |
+| Janus Device            | ""双面神""装置     |                            |
+| [REDACTED]              | [数据删除]         |                            |
+| Nav Buoy                | 导航浮标           |                            |
+| Sensor Jammer           | 传感干扰器         |                            |
+| Sensor Array            | 传感器阵列         |                            |
+| Comm Relay              | 通讯中继站         |                            |
+| Probe                   | 探测器             |                            |
+| Warning Beacon          | 警告航标           |                            |
+| Fusion Lamp             | 聚变射灯           |                            |
+| Yellow Star             | 黄矮星             |                            |
+| Orange Star             | 橙矮星             |                            |
+| Contacts                | 联络人             |                            |
+| Galatia Academy         | Galatia 学院       | 在rules等地请适当加上`{}`  |
+| Galatia Academy Station | Galatia 学院空间站 |                            |
+| mote                    | 光尘               |                            |
+| Hypershunt Tap          | 超分流阀门         |                            |
+| Coronal Hypershunt      | 星冕分流器         |                            |
 
 
 ## 修正表

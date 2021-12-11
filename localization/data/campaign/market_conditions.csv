@@ -69,7 +69,7 @@ $commoditySummary",graphics/icons/markets/trade_disruption.png,1100
 失控的 AI 核心,rogue_ai_core,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RogueAICore,"$market}内正运行着一个处于失控状态且抱有恶意的{AI}核心，除了保全自身以外，它的长期计划与抱负将不得而知。
 
 至少，因对它可能采取的行动而随时保持着的警惕心，也让日常行动的效率降低，并为令人担忧的谣言创造了肥沃的土壤。",graphics/icons/markets/rogue_ai.png,1200
-AI 管理员(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AICoreAdmin,Hiddenconditiontotrackwhenthecorebecomesun-removable.Doesnotneedanicon.,graphics/icons/markets/rogue_ai.png,1000
+AI 管理员(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AICoreAdmin,隐藏的特性，用于AI核心机制检测。,graphics/icons/markets/rogue_ai.png,1000
 海盗袭击,pirate_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity,"有迹象表名，该星系的舰队与殖民地将成为海盗袭击的目标。无论是港口检查员因迫于压力而选择视而不见，到货物清单的不一致，以及其他犯罪活动增加，都预示着这儿已不再太平。
 
 海盗很可能在附近的星系设有基地。",graphics/icons/markets/pirate_activity.png,1300
@@ -79,7 +79,7 @@ AI 管理员(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 贸易中断,shipping_disruption,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ShippingDisruption,,graphics/icons/markets/trade_disruption.png,1000
 ,,,,,,,
 # misc,,,,,,,
-通讯中继站(隐藏),comm_relay,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition,Hiddencondition;doesnotneedicon.,,
+通讯中继站(隐藏),comm_relay,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition,隐藏的特性。,,
 ,,,,,,,
 ,,,,,,,
 # procgen conditions,,,,,,,
