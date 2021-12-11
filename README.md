@@ -8,7 +8,7 @@
 | swapLangFile.py       | 用来更替汉化文件和英文文件的脚本。                                                       |
 | FindDifference.py     | 查找不同版本之间的差异。                                                                 |
 | variant_name_map.json | 装配名映射文件，英文名对应汉化名，可后继继续更新。                                       |
-| para_tranz.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](para_tranz/docs/tut_admin.md)   |
+| para_tranz.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](para_tranz/docs/readme.md)   |
 
 ## 文件夹内容
 
