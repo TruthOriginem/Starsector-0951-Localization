@@ -1,0 +1,167 @@
+{
+    "bounds": [
+        41,
+        44,
+        40,
+        -43,
+        -39,
+        -30,
+        -39,
+        32
+    ],
+    "builtInMods": [
+        "phasefield",
+        "delicate"
+    ],
+    "center": [
+        46,
+        45
+    ],
+    "collisionRadius": 76,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -45,
+                16
+            ],
+            "style": "LOW_TECH",
+            "width": 7
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -45,
+                -15
+            ],
+            "style": "LOW_TECH",
+            "width": 7
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -42,
+                28
+            ],
+            "style": "LOW_TECH",
+            "width": 7
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -42,
+                -27
+            ],
+            "style": "LOW_TECH",
+            "width": 7
+        }
+    ],
+    "height": 92,
+    "hullId": "gremlin",
+    "hullName": "Gremlin",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 72,
+    "spriteName": "graphics/ships/phase/gremlin.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 20,
+            "arc": 180,
+            "id": "WS 000",
+            "locations": [
+                22,
+                31
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -20,
+            "arc": 180,
+            "id": "WS 001",
+            "locations": [
+                22,
+                -31
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                42,
+                17
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                42,
+                -18
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                42,
+                -4
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 130,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                -20,
+                29
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 230,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                -21,
+                -28
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 92
+}
