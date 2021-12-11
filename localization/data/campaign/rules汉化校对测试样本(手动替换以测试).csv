@@ -6504,7 +6504,11 @@ gaPZHegemonyEncounterComm,OpenCommLink,"$entity.gaPZ_hegemony score:1000
 !$entity.ignorePlayerCommRequests
 ZigguratCMD updateData","$entity.ignorePlayerCommRequests = true
 FireBest GAPZHegInitial",,,
-gaPZHegemonyEncounterStandard,GAPZHegInitial,,,你命令 {$zigguratShipName} 躲进相位空间，利用光尘产生系统所使用的古怪原理，将被动幅能排散至更高维度的空间中。如此的行动只能在战场外达成，因为这样做需要让包括生命维持在内的大部分系统保持在最低功率下运转。,gaPZ_heg1:考虑接下来该怎么做,
+gaPZHegemonyEncounterStandard,GAPZHegInitial,,,"""根据星历81年颁布的《星际过境协定》，请接受我们对-"" 这位霸主 {$personRank} 垂下眼睛看了看什么东西，""-对 {$zigguratShipName} 进行的例行安全检查。""
+
+{$personLastName}$PersonRank} 直直地看着你，面无表情地说道，""我们不希望看到因这艘未经认证的舰船自由过境而在霸主星域内引发任何意外事故。""
+
+说着如此赤裸裸的谎话，居然还能如此从容。",gaPZ_heg1:考虑接下来该怎么做,
 gaPZHegemonyEncounterNoZig,GAPZHegInitial,!$entity.hasZiggurat,FireBest GAPZHegInitialCont,"""你好，舰长,"" 这位霸主 {$personRank} 用清脆的声音说道。"" 我们的长程传感器最近探测到，你的舰队中有一艘来源非常神秘的舰船。""",,
 gaPZHegemonyEncounterOnlyZig,GAPZHegInitial,$entity.hasOnlyZiggurat,FireBest GAPZHegInitialCont,"""你好，舰长，"" 这位霸主 {$personRank} 用清脆的声音说道。"" 我们的传感器探测到一艘来源未知的舰船。"" ",,
 gaPZHegemonyEncounterInitialCont,GAPZHegInitialCont,,"MakeOtherFleetNonHostile gaPZ true
@@ -6540,11 +6544,7 @@ MakeOtherFleetImportant gaPZ false
 MakeOtherFleetGoAway true","你的战术官解除了点防御系统，并允许扫描小组的穿梭机着舰。你通过显示屏看到霸主的技术人员走进气闸，在数据板上划了一下，接着便回到了穿梭机上。
 
 ""谢谢你在这次调查中的合作，舰长。没有发现任何问题，你可以走了。"" {$personName}$PersonRank} 挤出一个细微而讽刺的笑容，说了一句 ""为了人之领"" 并切断了通讯。",cutCommLinkNoText:继续,
-gaPZ_hegHub1c,DialogOptionSelected,$option == gaPZ_hegHub1c,FireAll GAPZHegHub,"""根据星历81年颁布的《星际过境协定》，请接受我们对-"" 这位霸主 {$personRank} 垂下眼睛看了看什么东西，""-对 {$zigguratShipName} 进行的例行安全检查。""
-
-{$personLastName}$PersonRank} 直直地看着你，面无表情地说道，""我们不希望看到因这艘未经认证的舰船自由过境而在霸主星域内引发任何意外事故。""
-
-说着如此赤裸裸的谎话，居然还能如此从容。",,
+gaPZ_hegHub1c,DialogOptionSelected,$option == gaPZ_hegHub1c,FireAll GAPZHegHub,"这位霸主 {$personRank} 叹了口气，揉了揉 {$hisOrHer} 额头，好像这件事让 {$himOrHer} 头很痛一样。""我是想与你合作，舰长。但我不能为了你拿我的职业生涯冒险。""",,
 gaPZ_hegHub2,DialogOptionSelected,$option == gaPZ_hegHub2,,"这位霸主 {$personRank} 生硬地同意了你花了很长时间才作出的的回复。扫描和你预想中的差不多枯燥且冗长，你知道这是霸主官僚们常用的手段，他们几乎能跟你耗上的时间，就等着你的行动出现失误。
 
 但你并没有作出失误的决定。你的内部安全人员坚决地阻止扫描小组进入正常视察范围之外的地方，扫描小组 - 他们接到的命令明显是来测试你的极限 - 也不得不放弃他们的计划。",gaPZ_hegHub2a:等待扫描结束,
@@ -6627,7 +6627,9 @@ MakeOtherFleetGoAway true","你认为，这艘船上使用的科技明显违反�
 现在还只是假如。
 
 ""我们会再见的，"" 这位 {$rank} 嘟哝道。通讯被切断了，只剩下一个速子科技标志。",cutCommLinkNoText:继续,
-gaPZ_ttHubPay,DialogOptionSelected,$option == gaPZ_ttHubPay,Highlight $entity.ttZigBuyPrice,"这位速子科技 {$rank} 笑了起来，""总算谈到生意了，舰长。"" {$HeOrShe} 迅速查看了一下TriPad，说道 ""我很乐意提供 {$entity.ttZigBuyPrice} 星币，作为协助回收{TTS{Xenorphica}过程中的一笔'咨询费'。""","gaPZ_ttHubPayAccept:接受
+gaPZ_ttHubPay,DialogOptionSelected,$option == gaPZ_ttHubPay,Highlight $entity.ttZigBuyPrice,"这位速子科技 {$rank} 笑了起来，""总算谈到生意了，舰长。""
+
+{$HeOrShe} 迅速查看了一下TriPad，说道 ""我很乐意提供{$entity.ttZigBuyPrice} 星币，作为协助回收{TTS{Xenorphica}过程中的一笔'咨询费'。""","gaPZ_ttHubPayAccept:接受
 gaPZ_ttHubPayDecline:拒绝",
 gaPZ_ttHubPayDecline,DialogOptionSelected,$option == gaPZ_ttHubPayDecline,FireAll GAPZTTHub,,,
 gaPZ_ttHubPayAccept,DialogOptionSelected,$option == gaPZ_ttHubPayAccept,"AdjustRep tritachyon COOPERATIVE 15
@@ -6636,9 +6638,9 @@ RemoveShip $entity.zigguratMember
 AddShipToOtherFleet $entity.zigguratMember
 MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
-MakeOtherFleetGoAway true","这位速子科技 {$rank} 笑了起来，""总算谈到生意了，舰长。""
+MakeOtherFleetGoAway true","你示意同意以后，这位速子科技军官看起来欣喜若狂。 {$HeOrShe} 把这笔巨款转到了你的账户里。作为交换，你交出了 {通灵塔-级} 船体的指挥代码。
 
-{$HeOrShe} 迅速查看了一下TriPad，说道 ""我很乐意提供{$entity.ttZigBuyPrice} 星币，作为协助回收{TTS{Xenorphica}过程中的一笔'咨询费'。""",cutCommLinkNoText:继续,
+{$Rank}$PersonName} 目光越过 {$hisOrHer} TriPad看向你，""当然，我们相信您会谨慎对待这件事情，"" 然后露出一个轻浮的微笑：""和您做生意真是愉快，舰长。""",cutCommLinkNoText:继续,
 gaPZ_ttHubAccept,DialogOptionSelected,$option == gaPZ_ttHubAccept,"Highlight $entity.ttZigLowBuyPrice
 AdjustRep tritachyon COOPERATIVE 30
 AddCredits $entity.ttZigLowBuyPrice
