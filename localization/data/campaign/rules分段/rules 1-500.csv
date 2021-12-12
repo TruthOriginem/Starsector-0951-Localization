@@ -131,12 +131,12 @@ gateLeaveOpt,PopulateGateOptions,,,,100:defaultLeave:离开,
 # Gate scan count during gaATG,,,,,,
 ,,,,,,
 gaATGgateScanSummaryLuddic,GAATGGateScanSummary,$GAATGluddicPostScan score:1000,"Call $global.gaATG_ref luddicGateFleetMoveBack
-unset $GAATGluddicPostScan",,gaATG_gateScanSummaryLuddic2:Continue,"# this step is to add a ""Continue"" to break up the huge block of text."
-gaATGgateScanSummaryLuddic2,DialogOptionSelected,$option == gaATG_gateScanSummaryLuddic2,FireBest GAATGGateScanSummary,"You personally see off the party of Luddic faithful who maintained vigil from your flagship. Their fleet is returning; their collective devotion uninterrupted.
+unset $GAATGluddicPostScan",,gaATG_gateScanSummaryLuddic2:继续,"# this step is to add a ""Continue"" to break up the huge block of text."
+gaATGgateScanSummaryLuddic2,DialogOptionSelected,$option == gaATG_gateScanSummaryLuddic2,FireBest GAATGGateScanSummary,"你亲自目送走了之前仍对你的旗舰保持警戒的卢德克信徒队伍。他们的舰队平安返回，他们的集体朝拜没有受到干扰。
 
-""Blessings of Ludd upon you, captain,"" says their leader. ""I shall speak well of you to the Prophet Returned.""
+""愿卢德祝福您，船长。""他们的领队说到，""我会在归来先知面前美言您几句的。""
 
-You know to nod in acceptance without raising any theological questions, and give a polite wave as their shuttle leaves the bay.",,
+你知道这时最好别提出任何神学方面问题，只需要点头表示接受，并在他们的穿梭机离开机库时礼貌地挥手致意就好。",,
 gaATGgateScanEndCheck1,GAATGGateScanSummary,"Call $global.gaATG_ref updateData
 $global.numGatesScanned == 6","$global.gaATG_scannedSixGates = true
 Call $global.gaATG_ref updateStage
