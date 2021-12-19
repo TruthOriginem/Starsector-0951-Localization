@@ -43,12 +43,10 @@ class String:
     key: str
     original: str
     translation: str
+    stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为已校对
 
     def as_dict(self) -> Dict:
         d = dataclasses.asdict(self)
-        # 如果翻译为空，则不导出该值
-        if not self.translation:
-            d.pop('translation')
         return d
 
 
@@ -129,19 +127,25 @@ class CsvFile(DataFile):
             first_column = row[list(row.keys())[0]]
             if first_column and not first_column[0] == '#':  # 只导出不为空且没有被注释行内的词条
                 for col in self.text_column_names:
-                    key = f'{self.path.stem}#{row_id}${col}'  # 词条的id由 文件名-行id-列名 组成
+                    key = f'{self.path.name}#{row_id}${col}'  # 词条的id由 文件名-行id-列名 组成
                     original = row[col]
                     translation = ''
+                    stage = 1
                     if row_id in self.translation_id_data:
                         translation = self.translation_id_data[row_id][col]
                         # 如果尚未翻译（不包含中文），则将翻译结果设置为空
                         if not contains_chinese(translation):
                             translation = ''
-                    strings.add(String(key, original, translation))
+                            stage = 0
+                        # 特殊规则：如果rules.csv里的script列中不包含'"'（双引号），则视为已翻译
+                        if (self.path.name == 'rules.csv') and (col == 'script') and (
+                                '"' not in original):
+                            stage = 1
+                    strings.add(String(key, original, translation, stage))
         return strings
 
     # 将数据转换为 ParaTranz 词条数据对象，并保存到json文件中
-    def save_strings_json(self, ensure_ascii=False) -> None:
+    def save_strings_json(self, ensure_ascii=False, indent=4) -> None:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
         self.para_tranz_path.parent.mkdir(parents=True, exist_ok=True)
@@ -149,7 +153,7 @@ class CsvFile(DataFile):
             data = []
             for string in strings:
                 data.append(string.as_dict())
-            json.dump(data, f, ensure_ascii=ensure_ascii)
+            json.dump(data, f, ensure_ascii=ensure_ascii, indent=indent)
 
         logger.info(
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
@@ -236,6 +240,7 @@ def contains_chinese(s: str) -> bool:
         if '\u4e00' <= _char <= '\u9fa5':
             return True
     return False
+
 
 def load_csv_files() -> List[CsvFile]:
     """
