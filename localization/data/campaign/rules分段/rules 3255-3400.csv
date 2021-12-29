@@ -1,0 +1,510 @@
+id,trigger,conditions,script,text,options,notes
+# GA - ransom researcher,,,,,,
+gaRRBlurbPirate,gaRR_blurb,$gaRR_variation == PIRATE,,"""一位来自{$gaRR_department}部门的重要科学家，在进行研究时被来自{$gaRR_marketName}的海盗给...嗯...给绑架了。我们已经谈妥了赎金的金额，现在需要有个人去接他们回来。""
+",,
+gaRROfferOptionPirate,gaRR_option,$gaRR_variation == PIRATE,,,gaRR_start:询问关于被绑架科学家的更多信息,
+gaRRBlurbChurch,gaRR_blurb,$gaRR_variation == CHURCH,,"""一位来自{$gaRR_department}部门的重要科学家，在进行研究时被来自{$gaRR_marketName}的卢德教会的人给...嗯...给囚禁了。我们需要派个人去交那个...什一税，他们才肯放人。""
+",,
+gaRROfferOptionChurch,gaRR_option,$gaRR_variation == CHURCH,,,gaRR_start:询问关于被囚禁科学家的更多信息,
+gaRRMissionTextPirate,DialogOptionSelected,"$option == gaRR_start
+$gaRR_variation == PIRATE",$missionId = gaRR,"""呃，现在的情况是{$gaRR_department}部门的科学家{$gaRR_researcherName}在核心星域外执行科研任务时被...被海盗给绑架了。核心星域外简直太危险了，""说到这里，{Sebestyen}显得十分不安，""那些海盗啊，太空战斗啊，食人者啊，还有陨石啊什么的"" 他颤抖着说到 ""简直太吓人了，太恐怖了。""","gaRR_cannibals:""食人者？""
+gaRR_briefing1:""海盗？""",
+gaRRMissionTextPirateCannibals,DialogOptionSelected,$option == gaRR_cannibals,,"""哦，那是在远离核心星域的地方发生的绝望传说。虽然未经证实，各种来源说法不一，但真实情况的记录很可能已经被销毁了。事情是这样的，在船员们用完了最后的补给后，船长就...""
+
+
+学者猛然意识到他所说的已经有些跑题了。他重新拿起他的数据平板，眯起眼睛说到，""呃，我们刚才谈到哪了？""","gaRR_briefing1:""那些海盗""",
+gaRRMissionTextPirate1,DialogOptionSelected,"$option == gaRR_briefing1
+$gaRR_variation == PIRATE",SetTextHighlights $gaRR_costNormal $gaRR_reward,"""哦对，那些海盗把学者{$gaRR_researcherName}给绑走了。他们知道{Galatia}学院肯定不会对自己人坐视不管，""说到这，他稍微松了口气，""并且会支付合理数额的赎金。这次，他们想要{$gaRR_costNormal}星币作为赎金。我们会把这笔钱交给你，并由你支付给海盗方面的联络人，呃，那个叫{$gaRR_contactName}的。你可以在{$gaRR_marketName}找到他们。""
+
+""我们会提供给你他们的通讯加密码，而你要做的就是设法嵌入该港口，联系{$gaRR_contactName}，并支付赎金。最后，在把学者{$gaRR_researcherName}送回到{Galatia}学院后，会支付给你{$gaRR_reward}星币作为报酬。","gaRR_briefing2:""如果我能不付赎金就把学者救出来，那这赎金我能自己留着吗?""",
+gaRRMissionTextPirate2,DialogOptionSelected,"$option == gaRR_briefing2
+$gaRR_variation == PIRATE",,"""呃这个..."" 你的主意让{Sebestyen}显得有些慌乱，""呃，老天啊，我得查一下。""
+
+从突然出现在他脸上的反光来看，{Sebestyen}已经在平板上划拉出了一大坨法律条文，就算是滚动着快速阅读也花了他一分多钟的时间。
+
+""好吧，理论上来说""，他笑得很灿烂，""这些资金是'根据回收附录A中所列项目之所需，向受雇者'——也就是你——'所发放的行动资金'。所以，如果你能在不使用这些资金的情况下完成任务，你就可以留下这笔额外的钱。呃，希望你不是通过，呃...那种方法来...呃""{Sebestyen}显得很不舒服，他闭上了眼睛并深吸了一口气。","gaRR_briefing3:""不用担心，我挺擅长通过谈判来解决问题的""",
+gaRRMissionTextPirate3,DialogOptionSelected,"$option == gaRR_briefing3
+$gaRR_variation == PIRATE",,"学者{Sebestyen}抬起头来，显然对此感到欣慰。""那么，你同意接下这项任务?""","gaRR_accept:接受
+aseb_decline:拒绝",
+gaRRMissionTextChurch,DialogOptionSelected,"$option == gaRR_start
+$gaRR_variation == CHURCH",$missionId = gaRR,"""呃，现在的情况是{$gaRR_department}部门的科学家{$gaRR_researcherName}在核心星域外执行科研任务时，在卢德...呃我是说银河救赎教会的巡逻区域内，被卢德骑士团给绑...呃给拦截了。
+
+""这些骑士团的人，呃""{Sebestyen}组织了下语言，""在执行某些法规方面相当地热情。也就咱俩这样说说，他们对于法规的理解，顶多就是半瓶子醋的水平，所以可能会有这种...误会发生。我们，也就是学院的{$gaRR_department}部门所进行的这个项目，已经获得了在科研站经营教堂的主教的首肯。""",gaRR_briefing1:继续,
+gaRRMissionTextChurch1,DialogOptionSelected,"$option == gaRR_briefing1
+$gaRR_variation == CHURCH",SetTextHighlights $gaRR_costNormal $gaRR_reward,"""所以...呃...我们也不确定哪个环节出了问题。这可能是教会内部的...呃，部门间的冲突?""{Sebestyen}说完后，再次看向他的平板。
+
+""哦对!我们需要派一名代表——也就是你——去到{$gaRR_marketName}那里，与卢德骑士团的代表进行交涉。""呃，他们暗示说只要给出{$gaRR_costNormal}星币的十分之一就足以让交涉变得顺利。财务部会预支给你这笔资金，而执行任务本身的酬劳则是{$gaRR_reward}星币。","gaRR_accept:接受
+aseb_decline:拒绝
+gaRR_briefing2:""如果我能不花钱就把学者救出来，那这钱我能自己留着吗?""",
+gaRRMissionTextChurch2,DialogOptionSelected,"$option == gaRR_briefing2
+$gaRR_variation == CHURCH",,"""呃这个..."" 你的主意让{Sebestyen}显得有些慌乱，""呃，老天啊，我得查一下。""
+
+从突然出现在他脸上的反光来看，{Sebestyen}已经在平板上划拉出了一大坨法律条文，就算是滚动着快速阅读也花了他一分多钟的时间。
+
+""好吧，理论上来说""，他笑得很灿烂，""这些资金是'根据回收附录A中所列项目之所需，向受雇者'——也就是你——'所发放的行动资金'。所以，如果你能在不使用这些资金的情况下完成任务，你就可以留下这笔额外的钱。呃，希望你不是通过，呃...那种方法来...呃""{Sebestyen}显得很不舒服，他闭上了眼睛并深吸了一口气。","gaRR_briefing3:""不用担心，我挺擅长通过谈判来解决问题的""",
+gaRRMissionTextChurch3,DialogOptionSelected,"$option == gaRR_briefing3
+$gaRR_variation == CHURCH",,"学者{Sebestyen}抬起头来，显然对此感到欣慰。""那么，你同意接下这项任务?""","gaRR_accept:接受
+aseb_decline:拒绝",
+gaRRMissionAccept,DialogOptionSelected,$option == gaRR_accept,"AddCredits $gaRR_costNormal
+$option = aseb_accept 0
+FireBest DialogOptionSelected",,,
+,,,,,,
+# talking to contact for researcher ransom - Knight of Ludd version,,,,,,
+gaRRChurchGreeting,PickGreeting,"$gaRR_contact score:1000
+Call $global.gaRR_ref updateData
+$gaRR_variation == CHURCH",ShowPersonVisual,"通讯接通后，一位身披手工织物，佩戴着木制骑士指挥官标志的卢德骑士出现了。""愿卢德保佑你，""{$heOrShe}说到。虽然目光中带着明显的怀疑，但{$HeOrShe}还是保持了尊重的语气。
+
+""我可以为您效劳吗，{$playerBrotherOrSister}?""","gaRR_churchAsk:询问一位与{Galatia}学院有关的囚犯的事
+cutCommLink:切断通讯连接",
+gaRRChurchGreeting1,DialogOptionSelected,$option == gaRR_churchAsk,ShowPersonVisual,"""啊，你是学院来的人。或者说，是他们雇你来的，是这样吗?""{$HeOrShe}瞥了你一眼，""看来我说对了。""
+
+""首先，我向您保证，您所指的这个人在骑士团受到了很好的对待；但考虑到他的罪行，他的行动范围被限制在一间来宾宿舍内，并且对其在使用科技方面的特权...进行了限制。""
+
+团长把由某种真的纸张制成的笔记本翻了一页，继续阅读。""我看到这里说，学者在被捕时携带了许多的...装置，即他们所谓的'科研设备'。这些设备已经被销毁了。""{$HeOrShe}抬头观察了下你的反应，然后自己点了点头。",gaRR_churchCont1:继续,
+gaRRChurchGreeting2,DialogOptionSelected,$option == gaRR_churchCont1,"SetStoryOption gaRR_negotiateChurch general ""劝说卢德骑士在不收赎金的情况下释放研究人员""
+DoCanAffordCheck $gaRR_costNormal gaRR_acceptChurch false","""我能理解保持我们所属势力之间关系稳定的必要性，""{$heOrShe}说到，""教会母堂在给我们的命令中强调过这一点。因此，星系主教已经同意，如果您能对教会进行一笔慷慨的捐赠，那么便可以省略通常针对囚犯的处理程序。""
+
+""想必您已经带来了学院的银子?""{$HeOrShe}露出了狡黠的微笑。","gaRR_acceptChurch:支付{$gaRR_costNormal}星币以使他们释放学者
+gaRR_negotiateChurch:通过谈判来免除费用
+cutCommLink:切断通信连接",
+gaRRChurchAccept1,DialogOptionSelected,$option == gaRR_acceptChurch,"RemoveCommodity credits $gaRR_costNormal
+$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage","骑士长点点头。""你可以把星币打给港口的交易商。只需要告诉他们这笔钱是要交给骑士团的就行。""
+
+你点点头，并示意你的后勤人员去处理这笔交易。
+
+""现在就剩下你们这不听话的学者了，""{$heOrShe}叹息道。""我们将立即把他们护送到对外开放的大厅那里，以便你来接收。""",gaRR_acceptChurch1:继续,
+gaRRChurchAccept2,DialogOptionSelected,$option == gaRR_acceptChurch1,,"骑士长合上了{$hisOrHer}的笔记本。""那我们的事情就算是办完了。""说完后，{$heOrShe}停顿了一下，似乎在考虑接下来的发言。
+
+""我会为你祈祷，舰长。另外，也希望您能告诉学院的人，让他们以后更加...小心一些。愿群星指引你的道路。""",gaRR_acceptChurch2:继续,
+gaRRChurchAccept3,DialogOptionSelected,$option == gaRR_acceptChurch2,#Call $global.gaRR_ref showResearcher,"你派了一艘穿梭机去接被释放的学者，他们看起来气色不错。一上船，在远离了那些忧郁的卢德骑士后，他们就开始痛苦地抱怨科研数据的丢失——""那些狂热分子砸了我的新TriPad。简直野蛮至极!而且不是我瞎编，下边的这些卢德骑士估计都不洗澡的。""
+
+你礼貌性地点点头，示意你的安全主管护送学者们到他们的宿舍，这样就可以在回{Galatia}学院的漫长旅途中避开他们。",gaRR_acceptChurch3:继续,
+gaRRChurchAccept4,DialogOptionSelected,$option == gaRR_acceptChurch3,"ShowDefaultVisual
+EndConversation NO_CONTINUE",,,
+gaRRChurchBluff,DialogOptionSelected,$option == gaRR_negotiateChurch,,"""我亲爱的{$BrotherOrSister}啊，""你开口道，带着一股子你曾经在公共大厅里遇见的，不知道从哪冒出来的传教士的腔调，""也许你并不完全赞同这样的行为。""
+
+你轻轻抬起手，温和地阻止了骑士长{$himOrHer}对你多管闲事的指责。你随后解释道，你清楚你无权指摘教会的行为，但作为同样追寻着卢德之道的同胞，你对这种上级命令和神赐予的良知之间的矛盾感同身受...
+
+你娓娓道来，与骑士长{$personLastName}套着近乎，而他则在倾
+听的同时频频点头。真的，你解释道，肮脏的世俗事务已经玷污了先知卢德所描绘的那绝美的精神旅途，这无疑是一种悲哀——但这腐化堕落的现实就是如此。",gaRR_negotiateChurch1:继续,
+gaRRChurchBluff1,DialogOptionSelected,$option == gaRR_negotiateChurch1,,"""正是，{$playerFirstName}，正是如此。我——我是说对于我们——以及任何的卢德教众来说都是这样：我们都抱有崇高的理想，那超然的荣耀驱使着我们，使我们得以超越这世间的——""{$HeOrShe}使劲比划着""一切!不过，要在这凡世行使哪怕一点点的权力，就不得不在这精神上有所妥协。我曾以为，得到这个职位，便有了行善所需的权力，但事与愿违。""{$HeOrShe}深深叹了口气，目光转向一边。
+
+""善与恶总是如影相随。每次在做现在这种事的时候，我都感觉所作的恶在侵蚀着我的灵魂。虽然每次只有一点点，但日积月累，谁又知道我如今变成了什么东西?当我最终回到群星的怀抱，我还是当初那个心里怀有神赐予的光芒的人吗?还是那个受神启示而发誓成为卢德骑士的{$manOrWoman}吗?""
+
+""抑或是我将带着一本账簿离去，上面写满了我因懦弱而做出的妥协?这账簿实在是太重，重到足以压垮我的灵魂。""{$heOrShe}终于下定了决心，脸色也变得坚毅起来。",gaRR_negotiateChurch2:继续,
+gaRRChurchBluff2,DialogOptionSelected,$option == gaRR_negotiateChurch2,,"骑士手臂一扫，将那纸质笔记本从{$hisOrHer}的桌子上扫了下去。这种对待珍贵手工制品的态度让你不禁一颤。""听好了，舰长：我绝不会放任这窃窃私语般的靡靡之音侵蚀我的灵魂，使我渐渐陷入精神上的死亡。卢德难道不就是为此而献身的吗?!""
+
+骑士{$lastName}直视着你，{$hisOrHer}的眼神里燃起了熊熊烈火。
+
+""带上这个学者。告诉他们卢德教会释放了他们，告诉他们我们的仁慈，以及，即使在看起来最为迷惘的人身上，也能找到那神圣的东西。""他站了起来，按下了一个破旧的控制台上的按键。这个控制台在他之前的激怒中幸免于难。
+
+""愿卢德祝福你，$playerName。现在，我得去忙点别的了。""通讯链接关闭了。",gaRR_negotiateChurch3:继续,
+gaRRChurchBluff3,DialogOptionSelected,$option == gaRR_negotiateChurch3,"$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage","对于这种通过温和的谎言来劝人改邪归正这事，你的感受难以言表。你的后勤负责人清了清嗓子，并向主显示屏示意——刚刚收到来自穿梭机港口的乘客接应请求：正是那群迷途的学者。
+
+
+
+一架穿梭机被派去，把惊魂未定的学者接了回来。接下来就是将他们送回{Galatia}学院了。",cutCommLinkNoText:继续,
+,,,,,,
+# talking to contact - researcher ransom pirate version,,,,,,
+gaRRPirateGreeting,PickGreeting,"$gaRR_contact score:1000
+Call $global.gaRR_ref updateData
+$gaRR_variation == PIRATE","ShowPersonVisual
+FireBest GARRPirateMainOptions","通过当地那缺乏维护的本地网络，通讯链接艰难地建立了起来。好几秒以后，那东拼西凑的解密插件才终于把你要找的海盗的脸显示了出来，画面时断时续。
+
+你敷衍地打了个招呼，而海盗也是一副皮笑肉不笑的样子。""啊，你就是来找那学院走丢的小孩的吧。很高兴，终于不用再听他们问那些个，""海盗翻起了白眼，""那些个问题了!哪来那么多问题!""",,
+GARRPirateMainOptions,GARRPirateMainOptions,,"ShowPersonVisual
+SetStoryOption gaRR_bluffPirate general ""忽悠海盗，以更便宜的价格赎回研究人员""
+Highlight $gaRR_costHigh
+$gaRR_cost = $gaRR_costHigh 0
+DoCanAffordCheck $gaRR_costHigh gaRR_acceptPirate false
+DoCanAffordCheck $gaRR_costVeryLow gaRR_bluffPirate
+$entity.raidDifficulty = $gaRR_raidDifficulty 0
+$entity.raidGoBackTrigger = GARRPirateMainOptions 0
+$entity.raidContinueTrigger = GARRRaidFinishedContinuePirate 0
+AddRaidObjective genericIcon ""从{$gaRR_contactName}手里营救被绑架的学者"" MINIMAL 2000 GARRRaidFinishedPirate
+FireBest GARRCheckHostilesNearbyPirate","海盗拍了拍手，对你露出七鳃鳗般渴望的笑容。""你把我的钱带来了，对吧?{$gaRR_costHigh}星币，打我通讯号上，然后你就可以把您的大科学家接走了。""","gaRR_acceptPirate:接受坐地起价，支付{$gaRR_costHigh}星币
+gaRR_confrontPirate:""当初可不是这样谈的。""（对抗）
+gaRR_bluffPirate:协商一个更低的价格
+gaRR_preRaidPirate:趁着{$himOrHer}说话的功夫派陆战队去抢人
+cutCommLink:切断通讯链接",
+gaRRDisableRaidIfNeededPirate,GARRCheckHostilesNearbyPirate,HostileFleetNearbyAndAware,"SetEnabled gaRR_preRaidPirate false
+SetTooltip gaRR_preRaidPirate ""附近有一支敌对舰队正在追踪你的行动，不能执行地面任务。""",,,
+gaRRPiratePreRaid,DialogOptionSelected,$option == gaRR_preRaidPirate,,"你和海盗讨价还价，斤斤计较，在付款和交货细节上争论不休，以此来拖延时间。在说话的同时，你通过手上的数据平板给你的战术官发出了准备出击的信号。他们已经被告知要参与一次人质解救任务。
+
+不管对面的海盗犯下了什么罪行，在当地政府的地盘上掀起一场火拼，无疑会大大影响你在这里的声誉。
+",mktRaidNonMarket:继续,
+gaRRPirateRaidFinishedPirate,GARRRaidFinishedPirate,,"$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage","先是一声重击，随后一声爆炸从海盗那边传来，通讯链接的图像顿时变得模糊不清。{$HeOrShe}回过头来看着你，眼睛里充满了愤怒与恐慌，""你这狡猾的克隆体——""
+
+通讯器暗了下来。当你在平板上切换到来自陆战队的战术信息时，行动成功的讯息正好传来。",,
+gaRRPirateRaidFinishedContinuePirate,GARRRaidFinishedContinuePirate,,"$option = cutCommLinkNoText 0
+FireBest DialogOptionSelected",,,
+gaRRPirateAccept1,DialogOptionSelected,$option == gaRR_acceptPirate,"RemoveCommodity credits $gaRR_cost
+$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage","海盗的手指在他的数据平板上上下滑动，确认了钱款到账。
+
+""不错，很不错，""{$heOrShe}头也不抬地说，""你的朋友们我给您装到小盒里了。""
+
+通讯被切断了。
+
+你的后勤官报告，说收到了来自一个似乎已经废弃的装卸港口的提货请求。当你派出穿梭机去取回那个板条箱时，你担心最坏的情况已经发生。最终，你从箱子里找到了一位很不爽的{Galatia}学院学者，以及一个小型生命维持装置。只要给他吃点东西，洗个澡，休息一下，他就会没事的。",cutCommLinkNoText:继续,
+gaRRPirateConfront,DialogOptionSelected,$option == gaRR_confrontPirate,"Highlight $gaRR_costNormal
+$gaRR_cost = $gaRR_costNormal 0
+DoCanAffordCheck $gaRR_cost gaRR_acceptPirate false
+FireBest GARRCheckCanThreatenPirate
+FireBest GARRCheckHostilesNearbyPirate","海盗{$personLastName}向后退了半步，一副很受伤的样子。""唉不是...舰长，舰长啊，您是头一回干这事吗?肯定是头一回吧。""海盗故意长长地叹了口气。
+
+""看得出来，你迟早得因此惹上麻烦。我没空教你这里的行事准则，并且要是你以后还是这种作风的话，""{$heOrShe}望着你，冷笑道，""那你估计还得被痛苦地教育个挺长时间的。""
+
+""算了，我认了。{$gaRR_costNormal}星币这个价就行，我无所谓了。赶紧把这个叽喳怪叫的秃头领走吧，我可谢谢您了。""","gaRR_acceptPirate:同意并支付{$gaRR_costNormal}星币的赎金
+cutCommLinkNoText:拒绝并切断通讯链接
+gaRR_preRaidPirate:拒绝，但追踪信号的来源以便陆战队发起突击
+gaRR_threatenPirate:""再低点，不然我就顺着网线把你的组成物质轰杀至渣。""（威胁）",
+GARRCheckCanThreatenPirate,GARRCheckCanThreatenPirate,$player.maxCombatHullSize < 4,"SetEnabled gaRR_threatenPirate false
+SetTooltip gaRR_threatenPirate ""需要你的舰队有一艘非民用的主力舰。""",,,
+gaRRPirateThreaten,DialogOptionSelected,$option == gaRR_threatenPirate,"Highlight $gaRR_costVeryLow
+$gaRR_cost = $gaRR_costVeryLow 0
+DoCanAffordCheck $gaRR_cost gaRR_acceptPirate2 false","海盗的眼睛瞪大了。{$HeOrShe}迅速瞥了一眼屏幕外的人，轻轻摇了摇头，然后把{$HeOrShe}的注意力重新集中到你身上。
+
+""粗鄙。真是粗鄙。你敢拿这个威胁我?在我的地盘上?""海盗来回跳着脚，""你不知道我认识谁。我认识的海盗大佬能把你嚼成碎末。你想象不到我在给谁干活。""
+
+""{$gaRR_costVeryLow}星币，如果这个价你也出不起的话，那我还不如直接把自己扔出气闸算了，至少还能死有全尸。我的老板可没这么仁慈。""","gaRR_acceptPirate2:同意并支付更低的{$gaRR_costVeryLow}星币赎金
+cutCommLinkNoText:拒绝并切断通讯链接
+gaRR_preRaidPirate:拒绝，但追踪信号的来源以便陆战队发起突击",
+gaRRPirateAccept2,DialogOptionSelected,$option == gaRR_acceptPirate2,"AdjustRep $personFaction.id VENGEFUL -3
+RemoveCommodity credits $gaRR_cost
+$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage","海盗的手指在他的数据平板上上下滑动，确认了钱款到账。
+
+""不错，很不错，""{$heOrShe}头也不抬地说，""你的朋友们我给您装到小盒里了。""
+
+通讯被切断了。
+
+你的后勤官报告，说收到了来自一个似乎已经废弃的装卸港口的提货请求。当你派出穿梭机去取回那个板条箱时，你担心最坏的情况已经发生。最终，你从箱子里找到了一位很不爽的{Galatia}学院学者，以及一个小型生命维持装置。只要给他吃点东西，洗个澡，休息一下，他就会没事的。",cutCommLinkNoText:继续,
+gaRRPirateBluff,DialogOptionSelected,$option == gaRR_bluffPirate,,"你笑了，仿佛海盗讲了一个搞笑的笑话。{$HeOrShe}起初看起来很困惑，之后便因为理解不了你的笑点而开始变得愤怒而厌烦。
+
+擦掉笑出来的眼泪，你对{$HeOrShe}如此明目张胆的涨价行为进行了赞扬，并提到自己不应当低估{$HeOrShe}这种太空渣滓的无情程度，尤其是与这些光鲜亮丽的学者，们打交道时。一旦失去了手上的数据平板，这些学者就找不着北了。
+",gaRR_bluffPirate1:继续,
+gaRRPirateBluff1,DialogOptionSelected,$option == gaRR_bluffPirate1,Highlight $gaRR_costVeryLow,"""当然，我和你，属于完全不同的两种生物，""你解释道，并露出一个无情地微笑。
+
+{$HeOrShe}很快意识到，作为一股新兴力量的领袖，为了势力的壮大，你将不惜一切代价。因此，如果还想在日后与你相处，而不是被分别扔到气闸舱里等死的话，保持良好的合作关系是他们唯一的选择。
+
+作为共建美好明天的第一步，降低赎金到一个合理的值，比如{$gaRR_costVeryLow}星币就是一个很自然地选择了。你解释说，虽然金钱的交换象征着彼此的互信，但要价太高在'我们未来作为商业伙伴的情况下，'明显不是一个明智的选择。",gaRR_bluffPirate2:继续,
+gaRRPirateBluff2,DialogOptionSelected,$option == gaRR_bluffPirate2,Highlight $gaRR_costVeryLow,"你下令向这个受惊的小海盗支付{$gaRR_costVeryLow}星币，而他则死死盯着手中的破解版数据平板，直到确认汇入的星币到账。
+
+你的后勤官报告，说收到了来自一个似乎已经废弃的装卸港口的提货请求。当你派出穿梭机去取回那个板条箱时，你担心最坏的情况已经发生。最终，你从箱子里找到了一位很不爽的{Galatia}学院学者，以及一个小型生命维持装置。只要给他吃点东西，洗个澡，休息一下，他就会没事的。
+
+看到被绑架的学者还活着，海盗松了一口气。他说到：""舰长，我——""",gaRR_bluffPirate3c:继续,
+gaRRPirateBluff3c,DialogOptionSelected,$option == gaRR_bluffPirate3c,"RemoveCommodity credits $gaRR_costVeryLow
+$global.gaRR_needToReturn = true
+Call $global.gaRR_ref updateStage",你背过身去，轻轻一点切断了通讯链接。,cutCommLinkNoText:继续,
+,,,,,,
+# returned with researcher to Sebestyen,,,,,,
+gaRRMissionReturn,PickGreeting,"$gaRR_returnHere score:1000
+Call $global.gaRR_ref updateData
+FireBest ASEBMissionReturn","ShowPersonVisual
+$global.gaRR_completed = true
+Call $global.gaRR_ref updateStage","""哦，舰长!学院的{$gaRR_department}部门想让我转达他们对你送还那个叫...呃，那个学者，反正你也不记得名字吧，但他们都非常高兴能回来继续他们的那个...什么项目。好吧，我就不该说这句话。""
+
+{Sebestyen}尴尬地环顾四周，然后清了清嗓子道：""相信我，他们非常高兴。而这都是你的功劳。干得不错！""",contact_pickAnotherGreeting:继续,
+"# failed gaRR mission, owe credits to GA",,,,,,
+gaRRMissionReturnPlayerOwes,PickGreeting,"$global.gaRR_playerOwes score:1000
+$player.credits >= $global.gaRR_failedCredits","RemoveCommodity credits $global.gaRR_failedCredits
+unset $global.gaRR_playerOwes
+unset $global.gaRR_failedCredits","""啊，呃，舰长。""{Sebestyen}尴尬地对你结吧了几下子。""这个，呃，财务办公室联系了我，要收回用于支付赎金的资金。他们说事情已经解决了?""",contact_pickAnotherGreeting:继续,
+,,,,,,
+# GA - Transverse Jump,,,,,,
+gaTJBlurb,gaTJ_blurb,,,"""教务长{Baird}提出了一个请求，请求前往一处...呃...戒备森严的速子科技秘密据点，并接回一名...嗯...科研人员。在你统一接受任务以前，因为某些原因，""{Sebestyen}尴尬地抬起头来看着你，""我不能告诉你该据点的具体位置。""",,
+gaTJOfferOption,gaTJ_option,,,,gaTJ_start:询问关于前往速子科技秘密据点接人的事,
+gaTJMissionText,DialogOptionSelected,$option == gaTJ_start,$missionId = gaTJ,"""好的，没问题!""{Sebestyen}紧张地清了几次嗓子，将桌上的数据平板摆正。""教务长说在你接受任务前，我不应该...呃是不能告诉你目标所在的星系位置。所以我先介绍点别的方面。""
+
+""这项任务需要...谨慎行事。想必你也知道，在核心星域外，有很多理论上无人占有的星系。如果某个政体希望占领某处，他们必须获得来自人之领的特许，相当于给予人之领对此地的管辖权。当然，在人之领消失后，霸主已经自诩为其继承者，并开始行使人之领的权力...""",gaTJ_briefing1:继续,
+gaTJMissionText1,DialogOptionSelected,$option == gaTJ_briefing1,,"{Sebestyen}注意到你有点走神。
+
+""不好意思，舰长。我其实是想说，速子科技认为这个地方不属于...任何人的管辖范围，因此他们有权建立...呃那种秘密研究基地，并有自卫的权利。霸主对此颇有微词。""
+
+""因此，""{Sebestyen}把眼睛紧闭了片刻，""他们聘请了这些雇佣兵，朝着一切靠近的物体开火。太恐怖了!""","gaTJ_briefing2:""懂了，需要小心那些雇佣兵。那么任务的具体内容呢？""",
+gaTJMissionText2,DialogOptionSelected,$option == gaTJ_briefing2,,"""哦，我正要说这个呢。前任教务长{Tomas Kallichore}与速子科技之间有紧密的合作关系。实际上，他们共同参与了许多激动人心的研究，而且...哦对，说回到这次的任务上：一位{Galatia}学院的学者现在仍然驻扎在速子的一处秘密基地中，而现在...教务长{Baird}希望把这个人带回来。
+
+""但从法律的角度来说，这位学者从一开始就不应该出现在那里。这整件事都是在保密的状态下进行的。""{Sebestyen}看上去对这错综复杂的政治逻辑感到有些头疼，""因此速子他们不太愿意...配合此事。你明白了吗?""","gaTJ_briefing3:""所以你想让我从速子的秘密基地绑走一名研究员?""",
+gaTJMissionText3,DialogOptionSelected,$option == gaTJ_briefing3,SetTextHighlights $gaTJ_reward,"""不不不，这可不是绑架!""{Sebesyten}听了你的话感觉很不自在，""研究员自己也想回家，{$gaTJ_heOrShe}设法送出了一些消息，因此我们安排了这场行动。""
+
+他环顾四周，说道，""拜托了，可别跟别人说是我告诉你的这些事。呃，如果你愿意帮忙的话，教务长{Baird}说你可以拿到{$gaTJ_reward}星币作为奖励。如果你同意，我可以给你提供更多的有关信息。""","gaTJ_accept:接受
+aseb_decline:拒绝",
+gaTJMissionText4,DialogOptionSelected,$option == gaTJ_accept,,"""太好了，""学者{Sebestyen}看起来松了口气，""那个研究基地位于{$gaTJ_systemName}星系中的{$gaTJ_planetName}星球上，距此{$gaTJ_dist}光年。""
+
+""你需要避开那些，呃，佣兵巡逻队。我们相信他们会把守所有的跳跃点。所以如果你想安全地进入星系，你可以找一个大的重力井来跳进去。然后前往秘密研究基地的所在地，用我提供的加密频率来联系学者{$gaTJ_researcherName}。{$gaTJ_HeOrShe}应该能暂时关闭基地的安全系统，提供足够的时间来让{$gaTJ_HeOrShe}登上飞船。""",gaTJ_briefing5:继续,
+gaTJMissionText5,DialogOptionSelected,$option == gaTJ_briefing5,"SetTextHighlights ""横轴跳跃""
+FireBest gaTJ_briefing5response","{Sebestyen}看起来有些焦虑，他又看了看他的数据平板，说道，""其实有一种可以不通过跳跃点就返回超空间的办法。""
+
+他抬头看着你，也许在想你是不是觉得他疯了。""我真的没开玩笑。在之前的那场...呃...大事故中，霸主逮捕了许多我们顶尖的超空间研究人员。这其中就有学者{Scylla Coureuse}。她正在研究一种理论，并几乎找到了一种类似于横轴跳跃的理论应用。这种方法可以让飞船从正常空间直接进入超空间。""
+
+他放下了数据平板，看起来还是忧心忡忡，""理论上是这样的。""",,
+gaTJMissionText5reponse1,gaTJ_briefing5response,$player.ability:fracture_jump,,,"gaTJ_briefingHaveTJ:""哦，其实我已经掌握你说的这个方法了。""",
+gaTJMissionText5reponse2,gaTJ_briefing5response,,,,"gaTJ_briefing6:""听起来还挺有用的。"" ",
+gaTJMissionTextHaveTJ1,DialogOptionSelected,$option == gaTJ_briefingHaveTJ,,"""你已经——啥?""听到你的回答，{Sebestyen}大为震撼。
+
+""我想...当然...确实有类似的传言和轶闻...呃如果不介意的话，你能提供些你舰队的导航日志以供参考吗?其中的数据想必会很有价值，而且，呃...""","gaTJ_briefingTJDataYes:""我的领航员会提供你所需要的数据。""
+gaTJ_briefingTJDataNo:""我觉得我们现在没空干这事。""
+",
+gaTJMissionTextHaveTJyes,DialogOptionSelected,$option == gaTJ_briefingTJDataYes,,"""太好了，""他微笑着说，""这下子我们就可以证实这个——呃对了，你还有正事要做。我们刚才在说什么来着...""",gaTJ_briefing6:继续,
+gaTJMissionTextHaveTJno,DialogOptionSelected,$option == gaTJ_briefingTJDataNo,,"""呃，""他看起来有些尴尬。""好吧。我们刚才在说什么来着...""",gaTJ_briefing6:继续,
+gaTJMissionText6,DialogOptionSelected,$option == gaTJ_briefing6,"Call $mHub accept $missionId
+Call $mHub returnToList","学者{Sebestyen}直了直身子，""哦对!我将会把完成任务所需的信息悉数传给你，舰长。祝你好运。""
+
+他把手上的数据平板放下，又拿了起来，补充道，""也请您一定注意安全。""",,
+,,,,,,
+# gaTJ planet interactions,,,,,,
+gaTJPlanetInteraction,OpenInteractionDialog,"$gaTJ_targetPlanet score:1000
+Call $global.gaTJ_ref updateData","ShowDefaultVisual
+FireBest GATJPlanetInteraction","你的{$shipOrFleet}靠近了{$entityName}。从外面完全看不出来这是一处速子科技的研究基地。
+
+""舰长，""负责传感器的副官示意你注意一簇来自于南半球的中微子源。""要不是我们知道要找什么，肯定就不会注意到这个了。""",,
+gaTJPrintHostilesText,GATJAdjustOptions,HostileFleetNearbyAndAware,"SetEnabled mktRaidNonMarket false
+SetEnabled gaTJ_get false",附近有一支敌对舰队正在追踪你的行动，因此不能执行救援任务。,,
+gaTJStandardPlanetInteraction,GATJPlanetInteraction,,FireBest GATJAdjustOptions,,"gaTJ_contact:使用{Sebestyen}提供的频率发送一道编码
+defaultLeave:离开",
+gaTJPlanetContact,DialogOptionSelected,$option == gaTJ_contact,Call $global.gaTJ_ref showResearcher,"顿时，屏幕上出现了一张紧张的面孔，满脸是汗。""繁星在上啊，""{$gaTJ_heOrShe}感叹道，""没想到你真的能来!我是学者{$gaTJ_researcherName}，我已经准备好跑路了，立马就走。""
+
+{$gaTJ_HeOrShe}神经兮兮的笑了起来，""从很久以前开始，这破地方就已经啥也不剩了。我已经把基地里所有的档案拷了一份，而且，""{$gaTJ_heOrShe}咧开嘴，举起一张小小的数据芯片，""也拿到了教务长{Baird}所渴望的小秘密。我弄的EMP马上就要爆炸了，所以一会看到了别慌。我在一座有电磁屏蔽的港口里藏了一架穿梭机，一会轨道上见。别忘了——""
+
+{$gaTJ_himOrHer}身后响起一阵疯狂的警报声。学者回头望去，骂道，""我去它卢德的——""
+
+信号中断了。
+
+",gaTJ_contact2:继续,
+gaTJPlanetContact2,DialogOptionSelected,$option == gaTJ_contact2,ShowDefaultVisual,"在舰桥的星球全息投影上，EMP像闪光弹般瞬间爆炸。所有的基地顿时进入了高度警戒状态。你紧张地等待着{Baird}的这位线人的消息。
+
+""在那!""你的战术官喊道。
+
+舰桥上的影像不断放大，聚焦在一个堪堪进入低轨道的微弱能量源上——一架微型货运穿梭机，甚至连个封闭的驾驶舱都没有。扫描到的影像上，勉强能看到一名穿着宇航服的身影，坐在穿梭机轻盈的骨架上，被几个羸弱的推进器推着前往预定的会合点。",gaTJ_contact3:继续,
+gaTJPlanetContact3,DialogOptionSelected,$option == gaTJ_contact3,"Call $global.gaTJ_ref showResearcher
+SetTextHighlights ""横轴跳跃""
+$global.gaTJ_needToReturn = true
+Call $global.gaTJ_ref updateStage
+FireBest gaTJ_planetContact4response","一支太空行动小组将逃出生天的学者领进了一间简报室。""舰长，""{$gaTJ_heOrShe}说到，眼里充满了惊慌，""我们的时间不多了，他们在通讯被瘫痪之前就发出了一道警报。不过我拿到了这个，""{$gaTJ_heOrShe}从太空服上的一个小兜里摸出一张数据芯片，正是{$gaTJ_heOrShe}之前提到的那张。
+
+""这里面是一个软件补丁，可以破解并修改超空间驱动力场的控制程序。之后，您就可以随时下令，使用横轴跳跃这一技术，从普通空间跳入超空间，""{$gaTJ_researcherName}的眼中闪过一丝狂躁，""任何时候都可以。""",,
+gaTJPlanetContact4response1,gaTJ_planetContact4response,$player.ability:fracture_jump,"SetTextHighlights ""Transverse Jump""",,"gaTJ_haveTJ:""用不着，我已经知道横轴跳跃的方法了。""",
+gaTJPlanetContact4response2,gaTJ_planetContact4response,,,,"gaTJ_takeChip:接过数据芯片
+gaTJ_NN:""我们用不着这个。""
+",
+gaTJPlanetContactHaveTJ,DialogOptionSelected,$option == gaTJ_haveTJ,"SetTextHighlights ""Transverse Jump""
+Call $global.gaTJ_ref triggerMercFleets
+# do this anyway so re-speccing out of Navigation doesn't lose it
+AddAbility fracture_jump","""你已经...啥?""{$gaTJ_researcherName}一头雾水地看着你。""我倒是听说过一些类似的传言，但我以为只是水手们编的故事罢了。在使用手动控制的情况下，你不可能把超光速驱动场调节得那么精确。但凡有一点误差，你就会...""
+
+{$gaTJ_HeOrShe}大摇其头，绝望地认为自己的救命恩人，竟是一位脑子被船上主反应堆辐射坏了的疯子。
+
+你从{$gaTJ_researcherName}颤抖的手中接过了数据芯片，打算送给教务长{Baird}这她想要的东西。你命令将学者送至宿舍——并对其保持监视——而你回到舰桥，考虑着是应该直接横轴跳跃进超空间，还是用老办法来对付那些雇佣兵。",defaultLeave:离开,
+gaTJPlanetContactTakeChip,DialogOptionSelected,$option == gaTJ_takeChip,,"你从这逃出生天之人颤抖的手中接过了数据芯片。
+
+""好，好，""{$gaTJ_researcherName}说道，""用这个我们就可以跑路了。舰长，这些个速子佣兵可不是普通的海盗，他们很有钱，""{$gaTJ_heOrShe}打了个哆嗦，""也很残忍。他们开着你能用钱买到的最好的船。您一定得带咱们逃出这里。""
+
+你命令将学者送至宿舍——并对其保持监视——而你自己回到了舰桥上。",gaTJ_investigateChip:调查数据芯片的内容,
+gaTJPlanetContactTakeNN,DialogOptionSelected,$option == gaTJ_NN,,"逃出生天之人的脸上掠过一丝恐惧的神色，""舰长!但你必须这样做。求您了，收下吧。""{$gaTJ_heOrShe}凑了过来，想要把数据芯片硬塞给你。你的保镖掏出了随身携带的武器，{$gaTJ_heOrShe}立马站住了。
+
+""这些速子佣兵——他们马上就回来找你了，""{$gaTJ_researcherName}恳求道。""他们可不会跟你谈判的，舰长，您得带我们立马跑路。""
+
+你挥挥手叫保镖退下，接过了数据芯片。教务长{Baird}对这个很感兴趣，所以里面肯定有什么好东西。你命令将学者送至宿舍——并对其保持监视——而你自己回到了舰桥上。",gaTJ_investigateChip:调查数据芯片的内容,
+gaTJinvestigateChip,DialogOptionSelected,$option == gaTJ_investigateChip,,"在你的{$shipOrFleet}准备脱离轨道时，你把那张数据芯片插入了一个安全的终端机，想看看上面到底有什么东西，使教务长{Baird}不惜让你冒生命危险也要拿到。当然，芯片上的内容经过了加密，而常规的反入侵机制破解工具拿它毫无办法。虽然这种通用的破解方法很少能起作用，但仍然值得尝试一下。
+
+你稍作思考，便输入了之前{Sebestyen}给你的，用于联系这位'研究员'的通讯安全频率。加密的数据包被解开了，里面是一段简短的程序代码。这段代码似乎需要与一套标准的人之领超光速驱动场控制核心进行交互才能发挥作用。你把你的领航员叫了过来，以提供参考意见。",gaTJ_investigateChip2:继续,
+gaTJinvestigateChip2,DialogOptionSelected,$option == gaTJ_investigateChip2,"Call $global.gaTJ_ref triggerMercFleets
+AddAbility fracture_jump","""这个程序似乎会对超光速驱动场进行一些'微调'，""领航员解释道。""如果这个程序的功能真的如那位研究员所说，那就可以在飞船周围，创造一种类似于跳跃点的模拟效果。""领航员的声音中透出难掩的兴奋。""从理论上来说，整个舰队都可以从任何地方...直接跃入超空间!""
+
+你对这一结论并不感到惊讶，只是对导航员提供的见解表示了感谢。
+
+""嗯，好的，舰长""导航员有点猜不透你的想法，""$PlayerSirOrMadam，那我就先回我的岗位了，随时听候您的命令。""
+
+保险起见，你把数据芯片里的信息也上传了一份到你的自己的TriPad上。",defaultLeave:离开,
+# return to Sebestyen,,,,,,
+gaTJMissionReturn,PickGreeting,"$gaTJ_needToReturn score:1000
+Call $global.gaTJ_ref updateData
+FireBest ASEBMissionReturn",ShowPersonVisual,"""舰长!感谢你把那个——""{Sebestyen}愣了一下，然后压低声音说道，""把那个...啊那个研究员送回来。教务长{Baird}一定会很高兴的。她现在正在忙着重启那个超空间——呃，好吧，我不该泄露这个事。估计等他们准备好了以后，才会发一个适当的声明来公开这件事。""",gaTJ_finish:继续,
+gaTJReturnFinish,DialogOptionSelected,$option == gaTJ_finish,"$global.gaTJ_completed = true
+Call $global.gaTJ_ref updateStage",,contact_pickAnotherGreeting:继续,
+,,,,,,
+,,,,,,
+# NPC reactions - different greetings based on things the player has done. Usually one-time or with a delay before they can happen again.,,,,,,
+#reactionOpenCommLinkCont,DialogOptionSelected,$option == reactionCommCont,FireBest OpenCommLink,,,
+#reactionGreetingCont,DialogOptionSelected,$option == reactionGreetingCont,FireBest PickGreeting,,,
+#reactionPlayerKnowsTJComms,OpenCommLink,"$global.gaTJ_completed score:1000
+!$reactedPlayerKnowsTJ
+!$entity.ignorePlayerCommRequests
+RollProbability 0.1",$reactedPlayerKnowsTJ = true 90,Fleet commander of some sort mentioning something about Transverse Jump.,reactionCommCont:Continue,
+#reactionPlayerKnowsTJGreeting,PickGreeting,"$global.gaTJ_completed score:1000
+!$reactedPlayerKnowsTJ
+RollProbability 0.1",$reactedPlayerKnowsTJ = true 90,Planet-based person mentioning something about Transverse Jump.,reactionGreetingCont:Continue,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+"# fusion lamp color changing, just because",,,,,,
+fusionLampBeginPlayer,OpenInteractionDialog,"$customType == fusion_lamp score:1000
+$faction.id == player","ShowDefaultVisual
+FireBest FusionLampMainOptions","你的通讯官建立了与聚变射灯控制装置之间的连接，并将终端界面切换到了你的显示屏上。
+
+""欢迎您，[客户姓名]!以下是由轨道工厂制造公司生产的[产品名称]的光谱频率设置选项。如果您需要客服人员的协助，请联系[通讯ID已失效]。""",,
+fusionLampBeginNonPlayer,OpenInteractionDialog,"$customType == fusion_lamp score:1000
+$faction.id != player",ShowDefaultVisual,"你的通讯员尝试与聚变射灯的控制终端建立连接，但终端已经被保护了起来。每次登陆失败后，界面都会自动跳转，开始播放轨道工厂制造公司等离子发电机的广告。
+
+画面上，一堆奢华到离谱的复古风格玻璃家具中间，躺着一位有着古铜色皮肤的健壮靓仔。背后，好几个太阳缓缓落下，在地平线处的水面上闪耀着光芒。伴随着昂扬上升的乐声，太阳的光辉充满了屏幕。随后，乐声渐弱，轨道工厂制造公司独特的O形商标逐渐显现在屏幕上。
+
+你关闭了视频信号。",100:defaultLeave:离开,
+fusionLampMainOptions,FusionLampMainOptions,,,,"0:fusionLamp_changeColor:调整聚变射灯的可见光发光波长范围
+1:fusionLamp_help:帮助
+100:defaultLeave:离开",
+fusionLampHelp,DialogOptionSelected,$option == fusionLamp_help,,"""请咨询您的轨道工厂制造公司聚变射灯非AI专家系统手册智能助理(tm)，以获取更多关于轨道聚变射灯产品(tm)的配置指南和其它工业或军事应用。""
+
+听到""军事应用""这几个字，你不禁心头一紧，但信息里并未给出更多的解释，更不用说你手头根本没有那个什么""轨道工厂制造公司聚变射灯非AI专家系统手册智能助理(tm)""。",,
+fusionLampColorOptions,DialogOptionSelected,$option == fusionLamp_changeColor,SetShortcut fusionLamp_goBack ESCAPE,"请享受我们提供给您的多种可选颜色，以保证您的[殖民者/雇员/客户/其它人员]的舒适和健康。
+
+经过片刻的沉思，你决定将颜色设置为...","0:fusionLamp_orange:出厂默认的橘色
+1:fusionLamp_red:不祥的红色，就像{Askonia}
+2:fusionLamp_blue:光化学反应的蓝色，就像{Isirah}
+3:fusionLamp_white:炙热的白色，就像{Hybrasil}
+4:fusionLamp_yellow:舒适的黄色，就像{Corvus}
+5:fusionLamp_green:平静的绿色，啥也不像
+6:fusionLamp_goBack:返回",
+fusionLampOrange,DialogOptionSelected,$option == fusionLamp_orange,"unset $core_lampGlowColor
+unset $core_lampLightColor
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampRed,DialogOptionSelected,$option == fusionLamp_red,"SetColor $core_lampGlowColor 255,50,50,255
+SetColor $core_lampLightColor 255,50,50,255
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampBlue,DialogOptionSelected,$option == fusionLamp_blue,"SetColor $core_lampGlowColor 210,230,255,255
+SetColor $core_lampLightColor 210,230,255,255
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampWhite,DialogOptionSelected,$option == fusionLamp_white,"SetColor $core_lampGlowColor 245,250,255,255
+SetColor $core_lampLightColor 245,250,255,255
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampYellow,DialogOptionSelected,$option == fusionLamp_yellow,"SetColor $core_lampGlowColor 255,225,125,255
+SetColor $core_lampLightColor 255,225,125,255
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampGreen,DialogOptionSelected,$option == fusionLamp_green,"SetColor $core_lampGlowColor 100,255,100,255
+SetColor $core_lampLightColor 100,255,100,255
+FireBest FusionLampMainOptions",感谢您使用轨道工厂制造公司颜色选择器(tm)!,,
+fusionLampGoBack,DialogOptionSelected,$option == fusionLamp_goBack,FireBest FusionLampMainOptions,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+# contact missions,,,,,,
+contactDefaultGreeting,PickGreeting,MissionHubCMD hasHub,"ShowPersonVisual
+FireAll PopulateOptions","""很高兴见到你，舰长。""{$personName}说道。
+OR
+""您好，舰长。""{$personName}说，""想谈点生意吗?""",,
+contactGreetingSoldier,PickGreeting,"MissionHubCMD hasHub
+$voice == soldier","ShowPersonVisual
+FireAll PopulateOptions","""这里是{$personName}，""{$heOrShe}干脆地说道，""通讯链接已建立。""
+OR
+""通讯已建立，我是{$personName}。你有什么事?""
+OR
+""链接已建立。说明你的来意。""",,
+contactGreetingFaithful,PickGreeting,"MissionHubCMD hasHub
+$voice == faithful","ShowPersonVisual
+FireAll PopulateOptions","""愿祂保佑你，""{$heOrShe}说道，彰显着{$hisOrHer}的信仰。
+OR
+""卢德保佑着你，舰长。""
+OR
+""看来是神意引领我们再次相见，舰长。""",,
+contactGreetingSpacer,PickGreeting,"MissionHubCMD hasHub
+$voice == spacer","ShowPersonVisual
+FireAll PopulateOptions","""宁好啊，""{$personName}说，""有活吗?""
+OR
+""星光闪亮，引擎穿梭，船长，""{$personName}说道。",,
+contactGreetingAristo,PickGreeting,"MissionHubCMD hasHub
+$voice == aristo","ShowPersonVisual
+FireAll PopulateOptions","""哦，是我们的太空舰长，真令人高兴""{$personName}说道，""与您交流总是很有意思。""",,
+contactGreetingOfficial,PickGreeting,"MissionHubCMD hasHub
+$voice == official","ShowPersonVisual
+FireAll PopulateOptions","""又一次向您问好，""{$personName}拿出一个数据平板，说道，""让我看下我今天的日程安排，然后我们就可以开始了。""",,
+contactGreetingBusiness,PickGreeting,"MissionHubCMD hasHub
+$voice == business","ShowPersonVisual
+FireAll PopulateOptions","""你回来了，真是太好了，""{$personName}说。""让我们来谈谈生意吧，怎么样？""
+OR
+""又来光顾了?相信我们一定可以合作赚大钱的。""
+OR
+""舰长!见到你真高兴。我手头正好有些不错的商业机会。""",,
+contactGreetingScientist,PickGreeting,"MissionHubCMD hasHub
+$voice == scientist","ShowPersonVisual
+FireAll PopulateOptions","""向您致敬，舰长!嗯稍等，让我找下我的笔记，""{$heOrShe}划拉着手头的数据平板。""啊，找到了。""
+OR
+""向您问好!""{$heOrShe}说道，随后停下来打量着你，""我应当期待您的到来吗?""",,
+contactGreetingVillain,PickGreeting,"MissionHubCMD hasHub
+$voice == villain","ShowPersonVisual
+FireAll PopulateOptions","""你还真活着回来了，""{$personName}说，""不错。""
+OR
+""啊，{$playerName}，这么快就回来了?我肯定能给你找到点活干。""
+OR
+""我手头有些绝妙的机会，我估计你就是死也想拿到，""{$heOrShe}笑着说道。",,
+contactGreetingPather,PickGreeting,"MissionHubCMD hasHub
+$voice == pather","ShowPersonVisual
+FireAll PopulateOptions","""看来卢德的圣途又一次引导你来到了我这里，{$playerName}。""{$personName}说道。
+OR
+""我们神圣的旅途再次相会，舰长。""{$HeOrShe}虔诚地颔首片刻。",,
+,,,,,,
+contactOpenMHOptionText,UpdateMHOpenOptionText,,"#SetOptionText mh_open ""询问可提供的任务""",,,
+contactMHOpenText,MHOpenText,,FireBest ContactPreMissionListText,"{$HeOrShe}看起来若有所思，""给我一点时间...""
+OR
+""我看看...""{$heOrShe}在数据平板上点了几下。
+OR
+{$personName}点了点头，滚动着全息显示屏上的内容。屏幕发出的光在{$hisOrHer}的脸上闪烁着。",,
+contactNoMissions,ContactPreMissionListText,$mh_count <= 0,,"""不好意思，现在暂时没什么活计。""
+OR
+""目前所有事情都办妥了，下次再来吧。""
+OR
+""不，现在没什么好做的。下次来应该会有些任务给你。""",,
+contactNoMissionsSuspended,ContactPreMissionListText,"$mh_count <= 0
+$mHub_contactSuspended",,"""我们已经好一阵子没联系了；所以我手头没什么任务给你。""
+OR
+""我其实有点惊讶你还会和我联系。想必你也能理解，我确实没有什么任务可以给你。""
+OR
+""说实话，我没想到你还能回来，所以我手头没给你留什么任务。""",,
+contactOneMission,ContactPreMissionListText,"$mh_count == 1
+$mh_firstInlineBlurb != null",$mh_doNotPrintBlurbs = true 0,"""只有这一个任务，你想接就可以接。""
+OR
+""就是这样，你有兴趣吗？""",,
+contactMultipleMissionsPre,ContactPreMissionListText,$mh_count > 1,,,,
+contactMultipleMissionsPost,MHPostMissionListText,$mh_count > 1,,"""所以，怎么样?""
+OR
+""这些有你感兴趣的吗?""
+OR
+""就是这些了。有什么想法吗?""
+OR
+""对其中哪一个有兴趣吗?""
+OR
+""任务清单上就是这些。觉得自己能做哪个的话可以告诉我。""",,
+contactAddMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""Not right now.""",
+contactAddMhubCloseOptionNothing,AddMHCloseOption,$mh_count <= 0,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""Maybe next time.""",
+contactConvEnd,DialogOptionSelected,"$option == cutCommLink
+MissionHubCMD hasHub score:100","ShowDefaultVisual
+EndConversation DO_NOT_FIRE
+FireAll PopulateOptions",你切断了通讯链接。,,
+contactMissionAcceptGeneric,DialogOptionSelected,$option == contact_accept,"FireBest ContactPrintAcceptText
+Call $mHub accept $missionId
+FireBest ContactPostAccept
+Call $mHub returnToList",,,
+contactMissionAcceptGenericNT,DialogOptionSelected,$option == contact_acceptNoText,"Call $mHub accept $missionId
+FireBest ContactPostAccept
+Call $mHub returnToList",,,
+contactMissionDeclineGeneric,DialogOptionSelected,$option == contact_decline,"ShowPersonVisual
+FireBest ContactPrintDeclineText
+Call $mHub returnToList",,,
+contactMissionAcceptGenericBar,DialogOptionSelected,$option == contact_acceptBar,"FireBest ContactPrintAcceptText
+BarCMD accept $missionId
+FireBest ContactPostAccept
+BarCMD returnFromEvent true",,,
+contactMissionAcceptGenericBarNT,DialogOptionSelected,$option == contact_acceptBarNoText,"BarCMD accept $missionId
+FireBest ContactPostAccept
+BarCMD returnFromEvent false",,,
