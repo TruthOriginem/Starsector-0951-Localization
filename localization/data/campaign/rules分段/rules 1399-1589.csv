@@ -646,22 +646,3 @@ MakeOtherFleetAvoidContact true","""额，舰长{$playerSirOrMadam}，""你的�
 
 你点点头，抚平了你的制服。",cutCommLink:切断通讯链接,
 ,,,,,,
-# gaFC Tri-Tachyon Merc ambush after probes found,,,,,,
-gaFCIsirahMercEncounter,BeginFleetEncounter,"$gaFC_isirahMerc score:1000
-!$encounteredAlready","$encounteredAlready = true
-FleetDesc
-HailPlayer",,,
-#gaFCScavengerGreeting,OpenCommLink,$entity.gaFCProbe_scavengerPermanentFlag score:1000,"MakeOtherFleetImportant gaFC false
-# remove important tag from finding empty probe","拾荒者舰长在你的通讯面板中闪烁着。""你好。恕我冒昧，你的情况都还好吧? 回到核心世界还有很长的路要走，朋友，我们必须好好照顾彼此。""","gaFC_scavengerAsk:""你找到属于{Galatia}学院的探测器了吗?""
-cutCommLink:切断通讯",
-gaFCIsirahMercGreeting,OpenCommLink,$entity.gaFC_isirahMerc score:1000,FireAll GAFCIsirahMercHubOptions,"通讯被接通了。
-
-""{$playerName}舰长，""雇佣舰长将双手在{$himOrHer}面前搭成三角状，直截了当地开口，""你有一些情报，我的雇主想让你和他们分享 - 只和他们分享。""
-
-然后{$heOrShe}开始等待你的回复，并且看起来对当前的沉默感到十分满意。",,
-gaFCIsirahMercHubReturn,DialogOptionSelected,$option == gaFC_isirahMercHubReturn,FireAll GAFCIsirahMercHubOptions,,,
-gaFCIsirahMercHubOption1,GAFCIsirahMercHubOptions,!$askedWhatInfo,,,"gaFC_isirahMercWhatInfo:""具体是什么情报?""",
-gaFCIsirahMercHubOption2,GAFCIsirahMercHubOptions,!$letsDeal,,,"gaFC_isirahMercLetsDeal:""不如我们做个交易吧。""",
-gaFCIsirahMercHubOption3,GAFCIsirahMercHubOptions,!$whoWorkFor,,,"gaFC_isirahMercWhoWorkFor:""你的雇主是谁?""",
-gaFCIsirahMercHubOption4,GAFCIsirahMercHubOptions,!$threatsResponded,,,"gaFC_isirahMercRespondThreats:""我可不喜欢受到威胁。""",
-gaFCIsirahMercHubOption5,GAFCIsirahMercHubOptions,,,,"gaFC_isirahMercGetNothing:""你不可能从我这里得到任何情报。""",

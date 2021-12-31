@@ -692,7 +692,7 @@ FireBest ASEBMissionReturn",ShowPersonVisual,"{Sebestyen}看起来很紧张。""
 
 ""我们，嗯，你的任务文件有点问题。看起来，""他的目光集中在你显示器外的某个东西-不，某个人-上。
 
-他想对方点了点头，然后把注意力转回到你身上。""所有的数据都被不可修复地删除了。我不得不强调，学院认为这件事是高度机密的，而且，""他开始调出一个数据平板，""所有的知识产权，新方法，专利设备及在执行这项任务过程中观察到的其他事物都被视为高度机密。""",gaOp_returnedCont:继续,
+他向对方点了点头，然后把注意力转回到你身上。""所有的数据都被不可修复地删除了。我不得不强调，学院认为这件事是高度机密的，而且，""他开始调出一个数据平板，""所有的知识产权，新方法，专利设备及在执行这项任务过程中观察到的其他事物都被视为高度机密。""",gaOp_returnedCont:继续,
 gaOpMissionReturnRogueAI1,DialogOptionSelected,$option == gaOp_returnedCont,"Call $global.gaOp_ref doubleReward
 $global.gaOp_completed = true
 Call $global.gaOp_ref updateStage","""然而，""他轻咳一声，""学院认可你的特殊业务，特别是你在这件事上的谨慎。所以书记认为适合将你的任务报酬翻倍。""

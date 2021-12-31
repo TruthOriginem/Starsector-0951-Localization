@@ -332,7 +332,8 @@ Commission printRequirements",,,
 cmsn_meetsCriteria,DialogOptionSelected,"$option == cmsn_askCommission
 Commission playerMeetsCriteria",FireBest CMSNTextSuitedPart1,,0:cmsn_continueMeetsReq:继续,
 cmsn_meetsCriteria2,DialogOptionSelected,$option == cmsn_continueMeetsReq,"Commission printInfo
-FireBest CMSNTextSuitedPart2",,"0:cmsn_accept:确认与{$faction}签订雇佣协议，担任军职
+FireBest CMSNTextSuitedPart2",,"0:cmsn_accept:确认与{$faction}签订雇佣协议
+，担任军职
 1:cmsn_cancel:""我可能还没有完全做好准备。""",
 cmsn_accept,DialogOptionSelected,$option == cmsn_accept,"FireBest CMSNTextWelcomePart1
 Commission accept
@@ -395,7 +396,8 @@ CMSNTextUnsuited_hegemony,CMSNTextUnsuited,$faction.id == hegemony,,"""你不符
 CMSNTextSuitedPart1_hegemony,CMSNTextSuitedPart1,$faction.id == hegemony,,"""嗯，舰队情报部似乎已经观察你有一段时间了，这里说你通过了审查。
 
 接受霸主的委任是一件很严肃的事情，公民。你将被要求与霸主的敌人作战，并在官方机构管辖范围之外的地区里协助维护法律和秩序。最重要的是，你将致力于在全人类的宇宙空间中复兴人之领而战。
-
+
+
 我不得不告知你，你有权在任何时候辞去你的职务。虽然以前也曾有过体面辞职的情况，但算是我私下和你讲，辞职会被舰队情报部门认为是非常可疑的行为，更别提那些忠诚的霸主军官们会怎么想了。""",,
 CMSNTextSuitedPart2_hegemony,CMSNTextSuitedPart2,$faction.id == hegemony,,"""根据高级霸主部门的授权，我向你提出委任，作为霸权海军的外援军官就职。你愿意签约吗？""",,
 CMSNTextWelcomePart1_hegemony,CMSNTextWelcomePart1,$faction.id == hegemony,,"""很好。欢迎服役! """,,
@@ -469,8 +471,10 @@ CMSNTextChangeMind_sindrian_diktat,CMSNTextChangeMind,$faction.id == sindrian_di
 
 如果你适合服役，那你就必须选择在最终决战里站在哪一边。认真考虑一下吧。""",,
 CMSNResignAskToConfirm_sindrian_diktat,CMSNResignAskToConfirm,$faction.id == sindrian_diktat,,"""我希望你知道这不是什么能开玩笑的事情。你应该很清楚，忠诚是辛达强权的最高思想。狮心统帅不会容忍那些对我们的伟大运动缺乏钢铁般信念的人。""",,
-CMSNResignConfirmed_sindrian_diktat,CMSNResignConfirmed,$faction.id == sindrian_diktat,,"""我算是看清你了，你没有能担当我们伟大事业的骨气。
-
+CMSNResignConfirmed_sindrian_diktat,CMSNResignConfirmed,$faction.id == sindrian_diktat,,"""我算是看清你了，你没有能担当我们伟大事业的骨气。
+
+
+
 滚出我的通讯器! 叛徒! 我会立刻向党的情报部门汇报。""",,
 CMSNResignCancelled_sindrian_diktat,CMSNResignCancelled,$faction.id == sindrian_diktat,,"""我会从宽处理，不会把这…对形势的严重误判上报上去。我之所以冒这个险，是因为我依然相信你可以成为我们伟大事业的一部分。
 
@@ -722,7 +726,7 @@ tut_mainBackground1,DialogOptionSelected,$option == tutBackground,,"""Galatia学
 实验前景乐观——至少他们是这么想的，但在星门按照我们的预期发出能量脉冲回应时，破坏了星系入口跳跃点的稳定性，把我们与星域其他地方隔绝开来。
 
 这就简直就像星域与人之领隔绝的一个缩影——看来星空也懂得讽刺，不是吗？""",0:tutBgCont1:继续,
-tut_mainGetDataInfo1,DialogOptionSelected,$option == tutBgCont1,,"""同处于这个星系的Derinkuyu空间站矿工本来就挣扎只能勉强维持生计的水平上，因此受到的打击最大。他们开始进行海盗活动，拦截了一批最后运抵的食物——毫无疑问是被逼无奈。但由于已经造成了伤亡，他们已经完全置身与法律保护范围之外了。
+tut_mainGetDataInfo1,DialogOptionSelected,$option == tutBgCont1,,"""同处于这个星系的Derinkuyu空间站矿工本来就挣扎只能勉强维持生计的水平上，因此受到的打击最大。他们开始进行海盗活动，拦截了一批最后运抵的食物——毫无疑问是被逼无奈。但由于已经造成了伤亡，他们已经完全置身于法律保护范围之外了。
 
 他们的领导人知道，如果跳跃点重新稳定下来，使得星系再次成为星域的一部分，他们最好的结局也只能是在流放殖民地上接受终身判决。""","1:tutCont1:""好的，那么现在我该从哪开始着手？""",
 tut_mainGetDataInfo2,DialogOptionSelected,$option == tutCont1,,"""这些成为了海盗的矿工目前正守在在跳跃点附近，阻止我们获取近期数据，防止我们找到稳定它的方法。
@@ -775,8 +779,10 @@ AddText ""背景中传来了系统的蜂鸣声，{$heOrShe}看起来忧心忡忡
 tut_mainContactProbe1,DialogOptionSelected,$option == tutGotDataCont1,,"""是的——系统预计大概需要一个星年来分析数据得出一个稳定化程序。不用说，到那时这数据就失去时效性了，任何基于它的程序都毫无意义。
 
 如果我们手头有一个AI核心，我们可以更快地分析数据。幸运的是，在这个星系的某处有一个探测器，那是人之领首次探索星域时留下的。应该至少有一个AI核心作为它的大脑。""","tutGotDataCont2:""它在哪？为什么之前没有回收它？""",
-tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉 人之领遗物，当然是考虑到公众的安全。""
-
+tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉 人之领遗物，当然是考虑到公众的安全。""
+
+
+
 ""但现在已经别无他法了……""",tutGotDataCont3:继续,
 tut_mainContactProbe3,DialogOptionSelected,$option == tutGotDataCont3,"SetTextHighlights ""\""传感器扫描\""""
 AddAbility sensor_burst 2
@@ -869,7 +875,8 @@ tut_janContactReport1,DialogOptionSelected,$option == tutReport1,,"""我暂时�
 当然，你也可以经常去码头边的酒吧转转。那里有时能接到些很好的差事。""",tutReport2:继续,
 tut_janContactReport2,DialogOptionSelected,$option == tutReport2,,"""你也可在打捞上试试手气，带足燃料、重型机械和补给，朝着外部星系前进。 
 
-在出发之前最好先接个任务，这样你就不必盲目地行动。一些人总会出高价去找人来调查这个行星或那个遗迹什么的，而既然知道那边东西，就往往会有一堆东西。""",tutReport3:继续,
+在出发之前最好先接个任务，这样你就不必盲目地行动。一些人总会出高价去找人来调查这个行星或那个遗迹什么的，而既然知道那边东西，就往往会有一堆东西。
+""",tutReport3:继续,
 tut_janContactReport3,DialogOptionSelected,$option == tutReport3,"SetShortcut cutCommLinkPolite ""ESCAPE""","""最后，你可以选择签订协议，在霸主担任军职。你在Galatia事件中的活跃已经为你积累了足够的声望，这样的请求应该会被接受。
 
 不过你将有义务与我们的敌人作战，因此这是一份相当重的责任。如果我是你，我会暂缓此事，直到你有一支更坚实的舰队在你身后支持。""","cutCommLinkPolite:""谢谢你，我会考虑的。""",
@@ -1058,7 +1065,7 @@ cob_hackDesc,COB_PreActionDesc,$cob_action == hack,,在维护短波上进行快�
 bar_optionSel,DialogOptionSelected,$option == marketVisitBar,"FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
 BarCMD showOptions",,,
-bar_shuttleDescGeneric,BarShuttleDownPrintDesc,,,你搭乘穿梭机来到主港区内，很快就找到了一家看起来不错店。,,
+bar_shuttleDescGeneric,BarShuttleDownPrintDesc,,,你搭乘穿梭机来到主港区内，很快就找到了一家看起来不错的店。,,
 bar_descGeneric,BarPrintDesc,,ShowImageVisual space_bar,刚踏入酒吧，由欢声笑语组成嘈杂与喧嚣立即扑面而来。天花板上的全息广告装置发出柔和的嗡嗡声，将艳俗的广告铺撒在杯盏交错之间。太空船员四处跟生意人和当地人打成一片，用酒水换取流言、工作和机遇。,,
 bar_descGenericInfamous,BarPrintDesc,"$player.atrocities > 1
 RollProbability 0.2",ShowImageVisual space_bar,"刚踏入酒吧，谈话的喧嚣立即扑面而来。坐在便宜台面后的太空人看到了你，脸上止不住地掠过一丝震惊。他和同伴推了推坐在一旁的商人，还指了指你。一片寂静开始在酒吧里蔓延开来，只有全息广告装置依旧轻声作响，在杯盏之间投射着艳俗的广告。
@@ -1284,7 +1291,8 @@ SetShortcut cutCommLink ""ESCAPE""","""哦，你又来了，准备好谈价钱�
 psi_pilotBarter,DialogOptionSelected,$option == psi_barter,"SetTextHighlights $psi_credits
 FireBest PSIDisablePayOptionIfNeeded
 SetShortcut cutCommLink ""ESCAPE""","你开始向{$heOrShe}杀价，指出红色行星那边已经有敌对势力守着——至少据说如此，还有{$heOrShe}应该已经把这情报卖给过其他人了。""对的，对的，""{$heOrShe}接口到，""但我可很了解你们这些太空船长是什么人，你们就是喜欢这种神秘的东西。我们都很清楚，你瞒不住这种兴趣。""Y
-
+
+
 最终飞行员拿那份情报对你开价{$psi_credits}。","0:psi_pay:支付{$psi_credits}来获取神秘红色行星的具体位置
 1:cutCommLink:拒绝其开价",
 psi_disableIfCanNotPay,PSIDisablePayOptionIfNeeded,!CallEvent $psi_eventRef canPay,"SetEnabled psi_pay false

@@ -725,23 +725,3 @@ gaATG_lastReturnGargoyle1b:趁着你还可以的时候偷偷喝一杯胜利的�
 gaATGlastReturnGargoyle1b,DialogOptionSelected,$option == gaATG_lastReturnGargoyle1b,,"由于 Baird 的注意力完全集中在其他地方，并且越来越激烈，你给自己倒了一杯酒，品味酒气，小抿一口。是一种白兰地。从瓶子上判断{-}恒星反射镜的风格化弧线在天体上方，是 Eventide。
 
 一瓶佳酿; 微妙，有力，出乎意料。你开始怀疑这可能是接下来这一天最精彩的部分了。",gaATG_lastReturnGargoyle1:继续,
-gaATGlastReturnGargoyle1,DialogOptionSelected,$option == gaATG_lastReturnGargoyle1,ShowSecondPerson gargoyle,"Gargoyle 的脸出现了，投影在宽大的桌面上。""她们在哪，""Baird 要求道，""就像卢德的七层地狱那样，如果你对我撒谎，我就把你一块一块地卖给速子科技。""
-
-黑客十分冷静。盯着舱壁上发出嘶嘶声的裂缝{-}它可能开裂而让舱内变为真空。""我不知道，""Gargoyle 从容地说。""我没有帮助她们...从某种程度上说。尽管我可能这么做了，但她们没有说她们的目的。我只是简单地... 提供了她们要求的工具。代码，程序。以及建议。""
-
-""所以你帮了她们!""Baird 喊道。""我给你提供保护，要求至高无上的霸主忽略你的罪行，结果你用背叛来回报我?""",gaATG_lastReturnGargoyle2:继续,
-gaATGlastReturnGargoyle2,DialogOptionSelected,$option == gaATG_lastReturnGargoyle2,,"Gargoyle 抬起一只手，""不，你- 你看，我承认我怀疑了一些东西，但是我没有问。你曾经给我明确的指示，让我满足 Scylla 的任何要求，任何。""
-
-你能看出黑客正在压抑着淘气的微笑，""我有录音。{'Coureuse 说什么就做什么。'}，你说的，{'我不希望你再问什么无聊的问题。'}我相信你就是这么说的。""",gaATG_bairdBetrayal1:继续,
-gaATGbairdBetrayal1,DialogOptionSelected,$option == gaATG_bairdBetrayal1,HideSecondPerson,"Baird 用手猛捶控制台，终止了连接。
-
-她的个人通讯器响了一下，然后又响了一下。她拿了起来。""讲。""",gaATG_bairdBetrayal2:继续,
-gaATGbairdBetrayal2,DialogOptionSelected,$option == gaATG_bairdBetrayal2,,"她听了一会儿，然后没有回复就挂断了通讯。
-
-她的手在颤抖，她摘下眼镜，你听到了小声的断裂声。",gaATG_bairdBetrayal3:继续,
-gaATGbairdBetrayal3,DialogOptionSelected,$option == gaATG_bairdBetrayal3,,"她转过身，身体僵硬。
-
-""你也要伤害我吗，舰长?""",gaATG_bairdEndingHub:继续,
-gaATGbairdEndingHub,DialogOptionSelected,$option == gaATG_bairdEndingHub,FireAll GAATGBairdEndingHubOptions,"Baird 凝视着窗外，破损的眼镜在手中晃来晃去。
-
-一座开启的星门，你的{$shipOrFleet}从倾泻着的无底洞般超空间旋涡中胜利地飞行。全息投影出的这一画面正在缓慢安静地旋转。",,

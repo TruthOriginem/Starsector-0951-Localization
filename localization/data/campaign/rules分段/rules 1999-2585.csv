@@ -986,7 +986,7 @@ gaATGdaudMeeting5,DialogOptionSelected,$option == gaATG_daudMeeting5,,"Rivas 带
 
 终于,你们来到了一处实用主义的前厅。墙边满是紧急太空服锁柜，灭火装备和安全告示牌。墙上有个菱形条纹的窗户，它的另一边，是一座封闭的太空码头 - 一艘崭新的{雄鹰-级{巡洋舰}停靠在那里，装饰有飘扬的彩带和一条霸主横幅的起重机悬在舰首之上。",gaATG_daudMeeting6:继续,
 gaATGdaudMeeting6,DialogOptionSelected,$option == gaATG_daudMeeting6,"BeginConversation daud false true
-$player.metDaud = true","Rivas走到一半，原本挡在他的大块头后面的正式至高霸主Baikal Daud。他坐在一个简单的小折凳上，华丽的制服外套挂在一边的衣帽架上。他旁边嘴里念念有词的是一位造型师和一名顾问。
+$player.metDaud = true","Rivas走到一旁，显露出原本挡在他的大块头后面的正式至高霸主Baikal Daud。他坐在一个简单的小折凳上，华丽的制服外套挂在一边的衣帽架上。他旁边嘴里念念有词的是一位造型师和一名顾问。
 
 Daud冷淡地观察着你。然后他一边保持着眼神接触，一边命令他的随行人员道: ""给我们腾点空间。五分钟就够了。"" 
 

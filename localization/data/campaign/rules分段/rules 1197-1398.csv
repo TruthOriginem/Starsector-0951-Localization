@@ -269,7 +269,7 @@ FireAll GAKABairdHub","Baird}看了看你，扬了扬眉毛，然后又别过了
 ""特别迷人，""她面无表情地说。""我已经任教二十年了，舰长。我见过更差劲的人。""",,
 gaKAReturnToAcademy7,DialogOptionSelected,$option == gaKA_return7,,"在一片寂静中，你几乎可以听到{Baird}脑子转动的声音。
 
-运输舱在刹车的杂音中停下了，你能感觉到重力场发生的微妙变化。走下运输舱后，你注意到这似乎是一个后门，让{Baird}不用经过了已经被满是{不习惯被告知他们需要等待的重要人物}所填满的等候室。",gaKA_return8:继续,
+运输舱在刹车的杂音中停下了，你能感觉到重力场发生的微妙变化。走下运输舱后，你注意到这似乎是一个后门，让{Baird}不用经过已经被满是{不习惯被告知他们需要等待的重要人物}所填满的等候室。",gaKA_return8:继续,
 gaKAReturnToAcademy8NoCoureuse,DialogOptionSelected,"!$global.foundCoureuse
 $option == gaKA_return8",,"你跟着{Baird}院长走进她的办公室，之后门悄悄地关上了。她边检查着收到的信息，边示意你在她的办公桌前坐下。
 
@@ -732,17 +732,3 @@ gaFCFikenhildAdonyaC,DialogOptionSelected,$option == gaFC_fikenhildAdonyaC,$glob
 gaFCFikenhildAdonyaLeave,DialogOptionSelected,$option == gaFC_fikenhildAdonyaLeave,ShowDefaultVisual,"完成了你来这里的目的后，你在离开的时候向{Adonya}Coureuse}道歉，向她保证你会找到{Scylla}并确保她的安全。并且如果有任何新的线索，你绝对会告诉她。
 
 门在你身后轻轻地关上了，耳朵远离了全息影像无休止的低语和{Adonya}滔滔不绝的追问。当伸手去拿数据板时，你发现手里还拿着一杯放凉了的茶。离开之前，你小心翼翼地把它放到了门前。",gaFC_visitFikenhild:返回交通枢纽,
-"# gaFC Fikenhild, Bione Lata",,,,,,
-gaFCFikenhildBione1,DialogOptionSelected,$option == gaFC_visitB,$visitedB = true,"你乘坐电车到了{Kay-arco}的郊区，这是一座宏大的半潜式的生态设施，众多浮动都市形成的网络就这么挤在它底端。电车的单轨在阳光下闪耀着光，笔直向地平线延申，就像安装在挂载点上的速子长矛射穿了星云。
-
-当电车冲破了云层，你感觉到了因为减速产生的微妙拉力与反引力场效应之间的对抗，你到达了你的目的地:}一个模块化的郊区聚集地。你瞥了一眼你的}TriPad，想起了这个地方的名字，""Seabank}Oasis""。",gaFC_fikenhildBione2:继续,
-gaFCFikenhildBione2,DialogOptionSelected,$option == gaFC_fikenhildBione2,"ShowPersonVisual true bione_lata
-FireAll GAFCQuestionBioneAgentName true","在一个外院的门口你嗡嗡得按动着门铃，墙顶半透明玻璃条中露出了一丝绿色的草坪。在短暂的延迟之后，通讯板被激活了，一个看起来很疲惫的女人出现在全息图中。你询问她是不是{Bione}Lata，是否介意回答一些关于{Scylla}Coureuse}的问题。
-
-她看了看身后，然后压低声音回答。""是的，不是已经有人来问过她了吗?}就像我说的，我已经很多年没有见过{Scylla}了。听着，我不想再花很多时间回答这种问题。""",,
-GAFCQuestionBioneAgentName1,GAFCQuestionBioneAgentName,,,,"0:gaFC_fikenhildBioneA:""你能告诉我关于{Scylla}本人的情况吗""",
-GAFCQuestionBioneAgentName2,GAFCQuestionBioneAgentName,,,,"10:gaFC_fikenhildBioneB:""是谁在之前拜访你问这些问题的""",
-GAFCQuestionBioneAgentName3,GAFCQuestionBioneAgentName,$global.gaFC_knowFinlaysName,,,"20:gaFC_fikenhildBioneC:""告诉我这个与你谈话的{'Finlay特工'}的信息""",
-GAFCQuestionBioneAgentName4,GAFCQuestionBioneAgentName,!$global.gaFC_knowFinlaysName,,,"
-
-30:gaFC_fikenhildBioneD:确保周围的人把你的行为看在了眼里",

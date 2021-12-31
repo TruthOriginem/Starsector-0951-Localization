@@ -609,7 +609,7 @@ FireAll GAFCTransportPodHubOptions","{Baird}看了你很长时间。你认为你
 {Baird}转过身，凝视着前方，下巴绷得紧紧的。",,
 gaFCReturnHubNothing,DialogOptionSelected,$option == gaFC_returnHubNothing,,"在一片寂静中，你几乎可以听到{Baird}脑子转动的声音。
 
-运输舱在刹车的杂音中停下了，你能感觉到重力场发生的微妙变化。走下运输舱后，你注意到这似乎是一个后门，让{Baird}不用经过了已经被满是{不习惯被告知他们需要等待的重要人物}所填满的等候室。",gaFC_returnToAcademy7:继续,
+运输舱在刹车的杂音中停下了，你能感觉到重力场发生的微妙变化。走下运输舱后，你注意到这似乎是一个后门，让{Baird}不用经过已经被满是{不习惯被告知他们需要等待的重要人物}所填满的等候室。",gaFC_returnToAcademy7:继续,
 gaFCReturnToAcademy7a,DialogOptionSelected,"$option == gaFC_returnToAcademy7
 !$global.foundGargoyle",,"你跟着{Baird}院长走进她的办公室，之后门悄悄地关上了。她边检查着收到的信息，边示意你在她的办公桌前坐下。
 

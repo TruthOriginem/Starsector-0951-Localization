@@ -18,7 +18,7 @@ gaATGbairdBetrayal2,DialogOptionSelected,$option == gaATG_bairdBetrayal2,,"
 她的手在颤抖，摘下了眼镜。你听到了小小的咔哒声。",gaATG_bairdBetrayal3:继续,
 gaATGbairdBetrayal3,DialogOptionSelected,$option == gaATG_bairdBetrayal3,,"她转身离开，身体僵硬。
 
-""能给我一把刀吗，舰长?""",gaATG_bairdEndingHub:继续,
+""你也要背叛我吗，舰长?""",gaATG_bairdEndingHub:继续,
 gaATGbairdEndingHub,DialogOptionSelected,$option == gaATG_bairdEndingHub,FireAll GAATGBairdEndingHubOptions,"Baird盯着窗外，损坏的眼镜挂在手上晃着。
 
 一扇打开的星门里，你的 $shipOrFleet 正从星门巨大的级联超漩涡中昂扬地飞出。这副景象正在全息投影中缓慢安静地旋转着。",,
