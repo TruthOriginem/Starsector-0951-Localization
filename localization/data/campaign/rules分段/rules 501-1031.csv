@@ -332,8 +332,7 @@ Commission printRequirements",,,
 cmsn_meetsCriteria,DialogOptionSelected,"$option == cmsn_askCommission
 Commission playerMeetsCriteria",FireBest CMSNTextSuitedPart1,,0:cmsn_continueMeetsReq:继续,
 cmsn_meetsCriteria2,DialogOptionSelected,$option == cmsn_continueMeetsReq,"Commission printInfo
-FireBest CMSNTextSuitedPart2",,"0:cmsn_accept:确认与{$faction}签订雇佣协议
-，担任军职
+FireBest CMSNTextSuitedPart2",,"0:cmsn_accept:确认与{$faction}签订雇佣协议，担任军职
 1:cmsn_cancel:""我可能还没有完全做好准备。""",
 cmsn_accept,DialogOptionSelected,$option == cmsn_accept,"FireBest CMSNTextWelcomePart1
 Commission accept
