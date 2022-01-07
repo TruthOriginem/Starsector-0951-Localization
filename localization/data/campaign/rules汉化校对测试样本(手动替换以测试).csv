@@ -7233,7 +7233,7 @@ $global.numGatesScanned = 0","""呃。Baird教务长嘱咐我不要说出去，"
 
 她没有想太多，眼睛看向一边，轻声说道，"" 我们把它称为""双面神""装置。我承认现在给它起名还为时尚早，但是超物理学小组对此兴奋得不得了，"" 她无奈地耸了耸肩。""也不好拦住他们。""
 
-""唉，要是-"" Coureuse 注意到显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了, 该去扫描几个星们了.""
+""唉，要是-"" Coureuse 注意到显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了, 该去扫描几个星门了.""
 gaATG_getScannerMore:""你刚才是不是想说什么?""",
 gaATGgetScannerMore,DialogOptionSelected,$option == gaATG_getScannerMore,"#FireBest GAATGgetScannerMoreOptions
 FireAll GAATGgetScannerMoreOptions","她烦闷地叹了口气，看上去非常疲惫不堪。
@@ -10206,7 +10206,7 @@ SetTextHighlights $gaVIP_timeLimit $gaVIP_reward","""学院为那些非常、非
 
 他敲了几下桌上的数据平板，然后觉得现在是个好时机，就继续说了下去。
 
-""这位学生是${gaVIP_subjectRelation}的{$gaVIP_VIPName}-这可是{$gaVIP_marketName}的{$gaVIP_VIPPost}啊，你知道吗? 这可令人太兴奋了，哈，他们要求在{$gaVIP_timeLimit}天内，将其优先运送到{$gaVIP_starName}星系的{$gaVIP_marketName}，我们已经获得授权，酬金为...""，{Sebestyen}检查了另一个数据平板，""{$gaVIP_reward}星币，这对于穿越核心世界的轻松旅途来说相当不错了，对吧?""","aseb_accept:接受
+""这位学生是{$gaVIP_subjectRelation}的{$gaVIP_VIPName}-这可是{$gaVIP_marketName}的{$gaVIP_VIPPost}啊，你知道吗? 这可令人太兴奋了，哈，他们要求在{$gaVIP_timeLimit}天内，将其优先运送到{$gaVIP_starName}星系的{$gaVIP_marketName}，我们已经获得授权，酬金为...""，{Sebestyen}检查了另一个数据平板，""{$gaVIP_reward}星币，这对于穿越核心世界的轻松旅途来说相当不错了，对吧?""","aseb_accept:接受
 aseb_decline:拒绝
 gaVIP_threats:""风险?""",
 gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,,"""噢，嗯，你知道的。那些风险。""
