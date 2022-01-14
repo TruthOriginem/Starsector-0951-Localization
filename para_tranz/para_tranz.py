@@ -1,6 +1,7 @@
 import dataclasses
 import json
 import logging
+import pprint
 import re
 from _csv import writer
 from csv import DictReader, reader
@@ -37,16 +38,23 @@ def relative_path(path: Path) -> Path:
         return path
 
 
-# 用于表示词条的数据结构，创建后为只读
-@dataclass(frozen=True)
+# 用于表示词条的数据结构
+@dataclass
 class String:
     key: str
     original: str
     translation: str
     stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为已校对
+    context: str = ''  # 词条的备注信息
+
+    def __post_init__(self):
+        self.original = self.original.replace('/n', '\n')
+        self.translation = self.translation.replace('/n', '\n')
 
     def as_dict(self) -> Dict:
         d = dataclasses.asdict(self)
+        d['original'] = self.original.replace('\n', '/n')
+        d['translation'] = self.translation.replace('\n', '/n')
         return d
 
 
@@ -121,28 +129,41 @@ class CsvFile(DataFile):
                 f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文在去数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条')
 
     # 将数据转换为 ParaTranz 词条数据对象
-    def get_strings(self) -> Set[String]:
-        strings = set()
+    def get_strings(self) -> List[String]:
+        strings = []
         for row_id, row in self.original_id_data.items():
+
+            # 只导出不为空且没有被注释行内的词条
             first_column = row[list(row.keys())[0]]
-            if first_column and not first_column[0] == '#':  # 只导出不为空且没有被注释行内的词条
-                for col in self.text_column_names:
-                    key = f'{self.path.name}#{row_id}${col}'  # 词条的id由 文件名-行id-列名 组成
-                    original = row[col]
-                    translation = ''
+            if not first_column or first_column[0] == '#':
+                continue
+
+            context = self.generate_row_context(row)
+            for col in self.text_column_names:
+                key = f'{self.path.name}#{row_id}${col}'  # 词条的id由 文件名-行id-列名 组成
+                original = row[col]
+                translation = ''
+                stage = 0
+                if row_id in self.translation_id_data:
+                    translation = self.translation_id_data[row_id][col]
                     stage = 1
-                    if row_id in self.translation_id_data:
-                        translation = self.translation_id_data[row_id][col]
-                        # 如果尚未翻译（不包含中文），则将翻译结果设置为空
-                        if not contains_chinese(translation):
-                            translation = ''
-                            stage = 0
-                        # 特殊规则：如果rules.csv里的script列中不包含'"'（双引号），则视为已翻译
-                        if (self.path.name == 'rules.csv') and (col == 'script') and (
-                                '"' not in original):
-                            stage = 1
-                    strings.add(String(key, original, translation, stage))
+                # 特殊规则：如果rules.csv里的script列中不包含'"'（双引号），则视为已翻译
+                if (self.path.name == 'rules.csv') and (col == 'script') and (
+                        '"' not in original):
+                    stage = 1
+                # 如果尚未翻译（不包含中文），则设定为未翻译
+                elif not contains_chinese(translation):
+                    translation = ''
+                    stage = 0
+
+                strings.append(String(key, original, translation, stage, context))
         return strings
+
+    # 根据行ID，生成该行的词条上下文内容，用于辅助翻译
+    def generate_row_context(self, row: dict) -> str:
+        row_num = self.original_data.index(row)
+
+        return f"提取自 {self.path.name} 第 {row_num + 1} 行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
 
     # 将数据转换为 ParaTranz 词条数据对象，并保存到json文件中
     def save_strings_json(self, ensure_ascii=False, indent=4) -> None:
@@ -159,24 +180,27 @@ class CsvFile(DataFile):
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
 
     # 将传入的 ParaTranz 词条数据对象中的译文数据合并到现有数据中
-    def update_strings(self, strings: Set[String]) -> None:
+    def update_strings(self, strings: List[String]) -> None:
         for s in strings:
             _, id, column = re.split('[#$]', s.key)
             if id in self.translation_id_data:
-                self.translation_id_data[id][
-                    column] = s.translation if s.translation else s.original
-
+                if s.translation:
+                    self.translation_id_data[id][column] = s.translation
+                elif not contains_chinese(self.translation_id_data[id][column]):
+                    self.translation_id_data[id][column] = s.original
+                else:
+                    logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行已被翻译，'
+                                   f'但更新的译文数据未翻译该词条，保持原始翻译不变')
+            else:
+                logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条')
     # 从json文件读取 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings_from_json(self) -> None:
         if self.para_tranz_path.exists():
-            strings = set()
+            strings = []
             with open(self.para_tranz_path, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)  # type:List[Dict]
             for d in data:
-                # ParaTranz 下载的文件把 \n 转义成了 \\n，需要转回来
-                original = d['original'].replace('\\n', '\n')
-                translation = d.get('translation', '').replace('\\n', '\n')
-                strings.add(String(d['key'], original, translation))
+                strings.append(String(d['key'], d['original'], d.get('translation', '')))
             self.update_strings(strings)
             logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
@@ -198,6 +222,8 @@ class CsvFile(DataFile):
             row = ['' for _ in range(len(real_column_names))]
             for col, value in dict_row.items():
                 if col:
+                    # 将csv行内换行的\n替换为\r\n以避免csv写入时整个文件变成\n换行(LF)的问题
+                    value = value.replace('\n', '\r\n')
                     row[real_column_index[col]] = value
             rows.append(row)
         with open(self.translation_path, 'w', newline='') as f:
@@ -223,6 +249,14 @@ class CsvFile(DataFile):
                     row_id = row[id_column_name]  # type:str
                 else:  # 存在多个 id column
                     row_id = str(tuple([row[id] for id in id_column_name]))  # type:str
+
+                # 检查行内数据长度是否与文件一致
+                for col in row:
+                    if row[col] is None:
+                        row[col] = ''
+                        logger.warning(
+                            f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 内的值数量不够，可能是缺少逗号')
+
                 first_column = row[columns[0]]
                 # 只在 id-row mapping 中存储不为空且没有被注释的行
                 if first_column and not first_column[0] == '#':
@@ -291,15 +325,17 @@ def paratranz_to_csv():
 # From processWithWiredChars.py
 # 由于游戏原文文件中可能存在以Windows-1252格式编码的字符（如前后双引号等），所以需要进行转换
 def replace_weird_chars(s: str) -> str:
-    return s.replace('\udc94', '""').replace('\udc93', '""').replace('\udc92', "'").replace(
-        '\udc85', '...')
+    return s.replace('\udc94', '""') \
+        .replace('\udc93', '""') \
+        .replace('\udc92', "'") \
+        .replace('\udc85', '...')
 
 
 if __name__ == '__main__':
     print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
     print('请选择您要进行的操作：')
     print('1 - 从原始和汉化文件导出 ParaTranz 词条')
-    print('2 - 将 ParaTranz 词条写回汉化文件')
+    print('2 - 将 ParaTranz 词条写回汉化文件(localization)')
 
     while True:
         option = int(input('请输入选项数字：'))
