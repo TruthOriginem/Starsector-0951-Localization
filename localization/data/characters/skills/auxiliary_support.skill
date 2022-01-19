@@ -3,7 +3,7 @@
 	"governingAptitude":"leadership",
 	"compressHullmods":false,
 	"scope":"CUSTOM",
-	"scopeStr":"所有安装军事化子系统的舰船",
+	"scopeStr":"所有安装 军事化子系统 的舰船",
 	"effectGroups":[
 		{
 			"requiredSkillLevel":1,

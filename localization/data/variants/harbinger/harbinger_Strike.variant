@@ -15,21 +15,23 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 001": "heavyblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyblaster",
                 "WS 002": "ionpulser",
                 "WS 003": "ionpulser"
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "pdburst"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 005": "pdburst"}
+            "weapons": {
+                "WS 004": "pdburst",
+                "WS 005": "pdburst"
+            }
         }
     ]
 }

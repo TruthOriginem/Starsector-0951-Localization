@@ -1,14 +1,15 @@
 {
     "displayName": "火箭",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 6,
     "fluxVents": 30,
     "hullId": "dominator",
     "hullMods": [
         "heavyarmor",
-        "dedicated_targeting_core"
+        "dedicated_targeting_core",
+        "ballistic_rangefinder"
     ],
     "permaMods": [],
-    "quality": 0.25,
+    "sMods": [],
     "variantId": "dominator_Outdated",
     "weaponGroups": [
         {

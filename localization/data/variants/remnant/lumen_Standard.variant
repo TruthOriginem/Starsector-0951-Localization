@@ -1,6 +1,6 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "lumen",

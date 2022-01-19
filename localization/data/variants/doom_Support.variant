@@ -1,7 +1,7 @@
 {
     "displayName": "支援",
     "fluxCapacitors": 0,
-    "fluxVents": 23,
+    "fluxVents": 17,
     "goalVariant": true,
     "hullId": "doom",
     "hullMods": [
@@ -26,8 +26,8 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 001": "pilum",
-                "WS 002": "pilum"
+                "WS 001": "harpoonpod",
+                "WS 002": "harpoonpod"
             }
         },
         {

@@ -75,7 +75,7 @@ public class Askonia {
 		// And now, the outer system.
 			system.addRingBand(star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3570, 220f, null, null);
 			system.addRingBand(star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3660, 226f, null, null);
-		system.addAsteroidBelt(star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "陨河");
+		system.addAsteroidBelt(star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "小行星带");
 		
 	// Salus system
 		PlanetAPI a2 = system.addPlanet("salus", star, "Salus", "gas_giant", 230, 350, 7500, 250);
@@ -90,7 +90,7 @@ public class Askonia {
 			a2a.setInteractionImage("illustrations", "desert_moons_ruins");
 			a2a.setCustomDescriptionId("planet_cruor");
 			
-			system.addAsteroidBelt(a2, 50, 1100, 128, 40, 80, Terrain.ASTEROID_BELT, "Opis 陨石带");
+			system.addAsteroidBelt(a2, 50, 1100, 128, 40, 80, Terrain.ASTEROID_BELT, "Opis 小行星带");
 			system.addRingBand(a2, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 1100, 40f);
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 1120, 50f);
 			//system.addRingBand(a2, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 1100, 80f);
@@ -145,7 +145,7 @@ public class Askonia {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Salus L4 陨石区")); // null for default name
+						"Salus L4 小行星带")); // null for default name
 			
 			SectorEntityToken salusL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -155,7 +155,7 @@ public class Askonia {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Salus L5 陨石区")); // null for default name
+						"Salus L5 小行星带")); // null for default name
 			
 			salusL4.setCircularOrbit(star, 230 + 60, 7500, 250);
 			salusL5.setCircularOrbit(star, 230 - 60, 7500, 250);

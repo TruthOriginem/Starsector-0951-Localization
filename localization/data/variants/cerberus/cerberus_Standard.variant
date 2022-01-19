@@ -1,6 +1,6 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 2,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "cerberus",

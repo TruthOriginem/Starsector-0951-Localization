@@ -69,7 +69,7 @@ public class Canaan {
 		gad.getSpec().setPlanetColor(new Color(245,255,195,255));
 		gad.applySpecChanges();
 		
-		system.addRingBand(gad, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 400, 30, null, null);
+		system.addRingBand(gad, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 400, 30, Terrain.RING, null);
 		
 			PlanetAPI asher = system.addPlanet("asher", gad, "Asher", "barren-desert", 0, 100, 1000, 40);
 			asher.getSpec().setTilt( 190f );
@@ -90,13 +90,13 @@ public class Canaan {
 					45, // max asteroid count
 					4f, // min asteroid radius 
 					12f, // max asteroid radius
-					"Gad L5 陨石区")); // null for default name
+					"Gad L5 小行星带")); // null for default name
 		
 		gadL5.setCircularOrbit(canaan_star, 180 - 60, 6500, 350);
 		
 		// Lagrangrian gate - embedd in some lovely asteroids? - L4 is ahead
 		SectorEntityToken gate1 = system.addCustomEntity("canaan_gate", // unique id
-				 "Canaan 之门", // name - if null, defaultName from custom_entities.json will be used
+				 "Gate 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		gate1.setCircularOrbit(system.getEntityById("canaan"), 180 + 60, 6500, 350);
@@ -109,7 +109,7 @@ public class Canaan {
 					45, // max asteroid count
 					4f, // min asteroid radius 
 					12f, // max asteroid radius
-					"Gad L4 陨石区")); // null for default name
+					"Gad L4 小行星带")); // null for default name
 		
 		gadL4.setCircularOrbit(canaan_star, 180+60, 6500, 350);
 			

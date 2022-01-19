@@ -5,6 +5,7 @@
     "hullId": "module_hightech_hangar",
     "hullMods": ["fluxbreakers"],
     "permaMods": [],
+    "sMods": [],
     "variantId": "module_hightech_hangar_Standard",
     "weaponGroups": [
         {

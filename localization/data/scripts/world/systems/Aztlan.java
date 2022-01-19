@@ -39,7 +39,7 @@ public class Aztlan {
 		
 		
 		system.addRingBand(aztlan_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3100, 70f, null, null);
-		system.addAsteroidBelt(aztlan_star, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "Ciltetl 陨石带");
+		system.addAsteroidBelt(aztlan_star, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "Ciltetl 小行星带");
 		
 	// Chicomoztoc & friends
 		PlanetAPI aztlan2 = system.addPlanet("chicomoztoc", aztlan_star, "Chicomoztoc", "barren-desert", 60, 200, 4200, 300);

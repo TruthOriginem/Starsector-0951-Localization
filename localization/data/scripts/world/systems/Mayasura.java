@@ -97,7 +97,7 @@ public class Mayasura {
 			SectorEntityToken mayasura_stable1 = system.addCustomEntity(null, null, "sensor_array_makeshift", Factions.PIRATES);
 			mayasura_stable1.setCircularOrbitPointingDown(mayasura_star, 180, 3800, 183);
 			
-		system.addAsteroidBelt(mayasura_star, 90, 4300, 200, 140, 180, Terrain.ASTEROID_BELT, "Danavas 陨石带");
+		system.addAsteroidBelt(mayasura_star, 90, 4300, 200, 140, 180, Terrain.ASTEROID_BELT, "Danavas 小行星带");
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 4360, 160f);
 		
 		
@@ -145,7 +145,7 @@ public class Mayasura {
 		
 		
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 5100, 100f);
-		system.addAsteroidBelt(mayasura_star, 120, 5130, 300, 200, 300, Terrain.ASTEROID_BELT, "Daitya 陨石带");
+		system.addAsteroidBelt(mayasura_star, 120, 5130, 300, 200, 300, Terrain.ASTEROID_BELT, "Daitya 小行星带");
 		
 		
 		PlanetAPI mayasura_e = system.addPlanet("diti", mayasura_star, "Diti", "ice_giant", 270, 240, 6200, 290);
@@ -178,7 +178,7 @@ public class Mayasura {
 		SectorEntityToken mayasura_stable2 = system.addCustomEntity(null, null, "stable_location", Factions.NEUTRAL);
 		mayasura_stable2.setCircularOrbitPointingDown(mayasura_star, 90, 6200, 290);
 		
-		system.addAsteroidBelt(mayasura_star, 150, 7500, 400, 370, 430, Terrain.ASTEROID_BELT, "Takshaka 陨石带");
+		system.addAsteroidBelt(mayasura_star, 150, 7500, 400, 370, 430, Terrain.ASTEROID_BELT, "Takshaka 小行星带");
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 7520, 400f);
 		
 		system.autogenerateHyperspaceJumpPoints(true, true);

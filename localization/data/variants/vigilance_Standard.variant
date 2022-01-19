@@ -1,11 +1,10 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 0,
-    "fluxVents": 8,
+    "fluxCapacitors": 5,
+    "fluxVents": 7,
     "goalVariant": true,
     "hullId": "vigilance",
     "hullMods": [
-        "fluxdistributor",
         "missleracks",
         "eccm"
     ],
@@ -16,7 +15,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "pulselaser"}
+            "weapons": {"WS 001": "heavyac"}
         },
         {
             "autofire": false,

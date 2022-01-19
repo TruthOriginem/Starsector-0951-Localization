@@ -1,6 +1,6 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 15,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "aurora",
@@ -10,7 +10,7 @@
         "missleracks"
     ],
     "permaMods": [],
-    "quality": 1,
+    "sMods": [],
     "variantId": "aurora_Strike",
     "weaponGroups": [
         {

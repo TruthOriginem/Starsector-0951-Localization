@@ -53,10 +53,13 @@ public class SurveyingEquipment extends BaseLogisticsHullMod {
 		Color bad = Misc.getNegativeHighlightColor();
 		
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
-		int machinery = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.HEAVY_MACHINERY), 0);
-		int supplies = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.SUPPLIES), 0);
+		int machinery = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.HEAVY_MACHINERY), 0, ship);
+		int supplies = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.SUPPLIES), 0, ship);
 		
-		tooltip.addPara("当前舰队勘探设备的总和使得勘探补给消耗降低 %s，重型机械需求降低 %s .", 
+		
+		
+		tooltip.addPara("当前舰队勘探设备的总和使得勘探补给消耗降低}%s，"
+				+ "重型机械需求降低}%s。", 
 				opad, h,
 				"" + supplies,
 				"" + machinery

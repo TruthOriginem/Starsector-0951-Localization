@@ -6,7 +6,7 @@
     "hullId": "wolf",
     "hullMods": ["fluxdistributor"],
     "permaMods": [],
-    "quality": 0.75,
+    "sMods": [],
     "variantId": "wolf_Assault",
     "weaponGroups": [
         {
@@ -25,8 +25,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 001": "ioncannon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "ioncannon",
                 "WS 002": "pdlaser",
                 "WS 003": "pdlaser"
             }

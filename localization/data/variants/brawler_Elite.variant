@@ -1,6 +1,6 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "brawler",
@@ -9,6 +9,7 @@
         "targetingunit"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "brawler_Elite",
     "weaponGroups": [
         {

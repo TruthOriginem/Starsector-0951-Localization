@@ -27,6 +27,8 @@ public class ECCMPackage extends BaseHullMod {
 	public static final float MISSILE_TURN_ACCEL_BONUS = 150f;
 	
 	public static final float EW_PENALTY_MULT = 0.5f;
+	public static final float EW_PENALTY_REDUCTION = 5f;
+	//public static final float MAX_EW_PENALTY_MOD = 5f;
 	
 	public static final float ECCM_CHANCE = 0.5f;
 	public static final float GUIDANCE_IMPROVEMENT = 1f;
@@ -48,6 +50,9 @@ public class ECCMPackage extends BaseHullMod {
 		
 		
 		stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, EW_PENALTY_MULT);
+		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyFlat(id, -EW_PENALTY_REDUCTION);
+		
+		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD).modifyFlat(id, -MAX_EW_PENALTY_MOD);
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
@@ -55,6 +60,7 @@ public class ECCMPackage extends BaseHullMod {
 		if (index == 1) return "" + (int) (MISSILE_SPEED_BONUS) + "%";
 		if (index == 2) return "" + (int) (MISSILE_RATE_BONUS) + "%";
 		if (index == 3) return "" + (int) ((1f - EW_PENALTY_MULT) * 100f) + "%";
+		//if (index == 3) return "" + (int) EW_PENALTY_REDUCTION + "";
 		return null;
 	}
 

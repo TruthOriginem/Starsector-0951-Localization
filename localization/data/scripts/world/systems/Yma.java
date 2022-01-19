@@ -130,7 +130,7 @@ public class Yma {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Chupi Orco L4 陨石区")); // null for default name
+						"Chupi Orco L4 小行星带")); // null for default name
 			
 			SectorEntityToken chupi_orcoL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -140,7 +140,7 @@ public class Yma {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Chupi Orco L5 陨石区")); // null for default name
+						"Chupi Orco L5 小行星带")); // null for default name
 			
 			chupi_orcoL4.setCircularOrbit(yma_star, 45 + 60, 7300, 450);
 			chupi_orcoL5.setCircularOrbit(yma_star, 45 - 60, 7300, 450);
@@ -195,11 +195,11 @@ public class Yma {
 		// Warawara trojans
 		SectorEntityToken warawaraL4 = system.addTerrain(Terrain.ASTEROID_FIELD, 
 				new AsteroidFieldParams(500f, 700f,	30,	40, 4f,	24f, 
-				"Warawara Orco L4 陨石区")); 
+				"Warawara Orco L4 小行星带")); 
 		
 		SectorEntityToken warawaraL5 = system.addTerrain(Terrain.ASTEROID_FIELD, 
 				new AsteroidFieldParams(500f, 700f,	30,	40, 4f,	24f, 
-						"Warawara Orco L5 陨石区")); 
+						"Warawara Orco L5 小行星带")); 
 		
 		warawaraL4.setCircularOrbit(yma_star, 270-60, 12500, 800);
 		warawaraL5.setCircularOrbit(yma_star, 270+60, 12500, 800);

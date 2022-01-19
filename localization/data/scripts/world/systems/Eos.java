@@ -68,7 +68,7 @@ public class Eos {
 						15, // max asteroid count
 						4f, // min asteroid radius 
 						12f, // max asteroid radius
-						"Cherubim 陨石区")); // null for default name
+						"Cherubim 小行星带")); // null for default name
 			
 			SectorEntityToken phaosphorosL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -78,7 +78,7 @@ public class Eos {
 						15, // max asteroid count
 						4f, // min asteroid radius 
 						12f, // max asteroid radius
-						"Seraphim 陨石区")); // null for default name
+						"Seraphim 小行星带")); // null for default name
 			
 			phaosphorosL4.setCircularOrbit(star, 240 + 60, 2300, 40);
 			phaosphorosL5.setCircularOrbit(star, 240 - 60, 2300, 40);
@@ -115,7 +115,7 @@ public class Eos {
 			
 		// Asteroids - "The Pilgrims"
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 5980, 205f, null, null);
-		system.addAsteroidBelt(star, 150, 6000, 250, 150, 250, Terrain.ASTEROID_BELT, "朝圣者陨石带");
+		system.addAsteroidBelt(star, 150, 6000, 250, 150, 250, Terrain.ASTEROID_BELT, "朝圣者小行星带");
 			
 		PlanetAPI eos3 = system.addPlanet("hesperus", star, "Hesperus", "rocky_ice", 0, 150, 7400, 200);
 		eos3.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
