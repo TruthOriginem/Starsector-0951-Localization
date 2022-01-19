@@ -22,7 +22,7 @@ def getSSjsonString(file_path):
 
 
 # 在这里更改抓取装配文件夹的目录
-source_variants_path = "095-RC15 data/data/variants"
+source_variants_path = "original/data/variants"
 # 在这里更改更新目标装配文件夹的目录
 target_variants_path = "localization/data/variants"
 # 装配映射的文件
