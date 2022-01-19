@@ -49,7 +49,6 @@
   },
   {
     "path": "data/campaign/rules.csv",
-    "translation_path": "data/campaign/rules汉化校对测试样本(手动替换以测试).csv",
     "id_column_name": "id",
     "text_column_names": [
       "script",
