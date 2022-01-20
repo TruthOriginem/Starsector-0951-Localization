@@ -27,6 +27,6 @@ public class HardenedSubsystems extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "该舰的战备值(CR)不会衰减";
+		return "该舰的战备值 (CR) 不会衰减";
 	}
 }

@@ -48,7 +48,7 @@ public class FrontShieldEmitter extends BaseHullMod {
 		}
 		
 		if (ship.getVariant().getHullMods().contains("adaptiveshields")) {
-			return "与全角护盾发生器冲突";
+			return "不兼容于 全角护盾发生器";
 		}
 		
 		return null;

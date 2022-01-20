@@ -1,11 +1,12 @@
 {
     "displayName": "巡逻",
-    "fluxCapacitors": 3,
-    "fluxVents": 10,
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
     "hullId": "vigilance",
     "hullMods": [
+        "fluxdistributor",
         "missleracks",
-        "fluxdistributor"
+        "eccm"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,12 +15,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "phasebeam"}
+            "weapons": {"WS 001": "heavyac"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 002": "sabotpod"}
+            "weapons": {"WS 002": "breachpod"}
         }
     ]
 }

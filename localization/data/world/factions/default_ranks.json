@@ -32,6 +32,7 @@
 		"sister":{"name":"姐妹"},
 		"terrorist":{"name":"恐怖分子"},
 		"clone":{"name":"克隆体"},
+		
 	},
 	
 	"posts":{
@@ -49,8 +50,8 @@
 		"supplyManager":{"name":"后勤经理"},
 		"medicalSupplier":{"name":"医疗供应商"},
 		
-		"administrator":{"name":"管理员"},
-		"freeAdmin":{"name":"自由管理员"},
+		"administrator":{"name":"行政官"},
+		"freeAdmin":{"name":"自由行政官"},
 		
 		"guildMaster":{"name":"公会首领"},
 		"communeLeader":{"name":"社区领导人"},
@@ -97,6 +98,8 @@
 		"warlord":{"name":"军阀"},
 		"unknown":{"name":"身份不明"},
 		"aristocrat":{"name":"贵族"},
+		
+		"synodSubcurate":{"name":"教会副牧师"},
 	},
 }
 

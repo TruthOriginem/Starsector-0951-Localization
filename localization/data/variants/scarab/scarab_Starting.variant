@@ -1,6 +1,6 @@
 {
     "displayName": "客制",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 6,
     "fluxVents": 10,
     "hullId": "scarab",
     "hullMods": [
@@ -8,7 +8,7 @@
         "fluxdistributor"
     ],
     "permaMods": [],
-    "quality": 1,
+    "sMods": [],
     "variantId": "scarab_Starting",
     "weaponGroups": [
         {

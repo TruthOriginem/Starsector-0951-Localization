@@ -1,6 +1,6 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 11,
     "fluxVents": 20,
     "hullId": "enforcer_d_pirates",
     "hullMods": [

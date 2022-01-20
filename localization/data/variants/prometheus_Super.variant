@@ -1,7 +1,7 @@
 {
     "displayName": "超级",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 21,
     "goalVariant": true,
     "hullId": "prometheus",
     "hullMods": [

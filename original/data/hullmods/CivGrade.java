@@ -30,7 +30,7 @@ public class CivGrade extends BaseHullMod {
 
 	@Override
 	public boolean affectsOPCosts() {
-		return true;
+		return false;
 	}
 
 

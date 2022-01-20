@@ -113,7 +113,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L4 陨石区")); // null for default name
+						"Penelope L4 小行星带")); // null for default name
 			
 			SectorEntityToken penelopeL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -123,7 +123,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L5 陨石区")); // null for default name
+						"Penelope L5 小行星带")); // null for default name
 			
 			penelopeL4.setCircularOrbit(penelope_star, 230 + 60, 9500, 450);
 			penelopeL5.setCircularOrbit(penelope_star, 230 - 60, 9500, 450);
@@ -161,7 +161,7 @@ public class Penelope {
 		// Asteroid belt.
 //		system.addRingBand(penelope_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 13750, 345f, Terrain.ASTEROID_BELT, null);
 //		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "The Cyclopeans");
-		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "Cyclopeans 陨石带");
+		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "Cyclopeans 小行星带");
 		system.addRingBand(penelope_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 13750, 345f, null, null);
 
 		// Ismara : mass driven volatiles, looted

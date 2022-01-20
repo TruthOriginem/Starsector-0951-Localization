@@ -1,6 +1,6 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 15,
+    "fluxCapacitors": 25,
     "fluxVents": 30,
     "hullId": "dominator_xiv",
     "hullMods": [
@@ -9,7 +9,7 @@
         "targetingunit"
     ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "dominator_XIV_Elite",
     "weaponGroups": [
         {

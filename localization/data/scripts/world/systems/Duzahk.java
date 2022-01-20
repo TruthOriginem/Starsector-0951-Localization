@@ -133,7 +133,7 @@ public class Duzahk {
 		
 		// Asteroid belt!
 		system.addRingBand(duzahk_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 2420, 34f, null, null);
-		system.addAsteroidBelt(duzahk_star, 50, 2400, 100, 30, 40, Terrain.ASTEROID_BELT, "Daevas 陨石带");
+		system.addAsteroidBelt(duzahk_star, 50, 2400, 100, 30, 40, Terrain.ASTEROID_BELT, "Daevas 小行星带");
 		
 		//system.addRingBand(duzahk_star, "misc", "rings3", 256, 2, new Color(255,245,235,255), 256, 2500, 90f);
 		//system.addRingBand(duzahk_star, "misc", "rings4", 512f, 1, new Color(235,38,8,145), 512f, 2500, 90f);
@@ -150,7 +150,7 @@ public class Duzahk {
 		
 		// Druj Relay - L5 (behind)
 		//SectorEntityToken druj_relay = system.addCustomEntity("druj_relay", // unique id
-		//		 "Druj Relay", // name - if null, defaultName from custom_entities.json will be used
+		//		 "Druj 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 		//		 "comm_relay", // type of object, defined in custom_entities.json
 		//		 "pirates"); // faction
 		//druj_relay.setCircularOrbitPointingDown( duzahk_star, 130 - 60, 4200, 135);

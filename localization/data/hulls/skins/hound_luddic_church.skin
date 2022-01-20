@@ -4,7 +4,7 @@
 	"hullName":"猎犬 (LC)",
 	"descriptionId":"hound",
 	"spriteName":"graphics/ships/hound/hound_luddic_church.png",
-	"descriptionPrefix":"这艘船涂装有卢德教会的标记。除了外观之外，船只系统并没有接受任何修改",
+	"descriptionPrefix":"舰除了涂装有}卢德教会}的标志以外，其船只系统并未受到任何修改 ",
 	"tags":["LC_bp"],
 	"tech":"卢德教会",
 	"removeWeaponSlots":[], 		# ids

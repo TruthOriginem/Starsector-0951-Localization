@@ -1,6 +1,6 @@
 {
     "displayName": "支援",
-    "fluxCapacitors": 21,
+    "fluxCapacitors": 14,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "dominator",
@@ -9,14 +9,15 @@
         "fluxdistributor"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "dominator_Support",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 012": "mark9",
-                "WS 013": "mark9"
+                "WS 012": "gauss",
+                "WS 013": "gauss"
             }
         },
         {
@@ -33,9 +34,13 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "lightag",
-                "WS 004": "lightag",
                 "WS 005": "lightag"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "lightneedler"}
         },
         {
             "autofire": true,

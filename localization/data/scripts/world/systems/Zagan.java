@@ -43,7 +43,7 @@ public class Zagan {
 		geburah.applySpecChanges();
 		
 		
-		system.addAsteroidBelt(zagan_star, 90, 3650, 500, 150, 300, Terrain.ASTEROID_BELT,  "失落浅滩 陨石带");
+		system.addAsteroidBelt(zagan_star, 90, 3650, 500, 150, 300, Terrain.ASTEROID_BELT,  "失落浅滩 小行星带");
 		system.addRingBand(zagan_star, "misc", "rings_asteroids0", 256f, 3, Color.white, 256f, 3600, 295f, null, null);
 		system.addRingBand(zagan_star, "misc", "rings_dust0", 256f, 3, Color.white, 256f, 3720, 305f, null, null);
 		

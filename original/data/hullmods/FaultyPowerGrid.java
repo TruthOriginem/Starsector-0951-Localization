@@ -12,8 +12,8 @@ public class FaultyPowerGrid extends BaseHullMod {
 
 	public static final float PROFILE_PERCENT = 50f;
 	
-	private static final float CAPACITY_MULT = 0.8f;
-	private static final float DISSIPATION_MULT = 0.8f;
+	private static final float CAPACITY_MULT = 0.85f;
+	private static final float DISSIPATION_MULT = 0.85f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);

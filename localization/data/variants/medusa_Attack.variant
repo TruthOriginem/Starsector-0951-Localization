@@ -1,7 +1,7 @@
 {
     "displayName": "进攻",
-    "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxCapacitors": 3,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "medusa",
     "hullMods": [

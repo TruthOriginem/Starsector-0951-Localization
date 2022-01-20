@@ -44,20 +44,27 @@
 		},
 		"hulls":{
 			"falcon_p":0.5, # it's pretty good, so make it more rare
+			"venture":0.3, # it's pretty annoying en masse, so, ditto
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
 		"tags":["base_bp", "pirate_bp", "pirates"],
 		"hulls":[
+			"vanguard_pirates",
+			"manticore_pirates",
 			"falcon_p",
+			"eradicator_pirates",
 			"atlas2",
 		],
 	},
 	"knownShips":{
 		"tags":["base_bp", "pirate_bp", "pirates"],
 		"hulls":[
+			"vanguard_pirates",
+			"manticore_pirates",
 			"falcon_p",
+			"eradicator_pirates",
 			"atlas2",
 		],
 	},
@@ -106,8 +113,7 @@
 			"heavyarmor",
 			"insulatedengine",
 			"fluxbreakers",
-			"escort_package",
-			"assault_package",
+			"shield_shunt",
 		],
 	},
 	"factionDoctrine":{
@@ -147,38 +153,40 @@
 	},
 	"portraits":{
 		"standard_male":[
+			"graphics/portraits/portrait_pirate02.png",
+			"graphics/portraits/portrait_pirate03.png",
 			"graphics/portraits/portrait_mercenary01.png",
 			"graphics/portraits/portrait_mercenary03.png",
 			"graphics/portraits/portrait_mercenary04.png",
-			"graphics/portraits/portrait_mercenary06.png",
+			"graphics/portraits/portrait_mercenary06.png",	
 			"graphics/portraits/portrait12.png",
 			"graphics/portraits/portrait15.png",
 			"graphics/portraits/portrait17.png",
 			"graphics/portraits/portrait18.png",
 			"graphics/portraits/portrait20.png",
-			"graphics/portraits/portrait_pirate02.png",
-			"graphics/portraits/portrait_pirate03.png",
 			"graphics/portraits/portrait33.png",
 			"graphics/portraits/portrait36.png",
 			"graphics/portraits/portrait40.png",
 		],
 		"standard_female":[
+			"graphics/portraits/portrait_pirate01.png",
+			"graphics/portraits/portrait_pirate04.png",
+			"graphics/portraits/portrait_pirate05.png",
 			"graphics/portraits/portrait_mercenary02.png",
 			"graphics/portraits/portrait_mercenary05.png",
 			"graphics/portraits/portrait_mercenary07.png",
+			"graphics/portraits/portrait_mercenary08.png",
 			"graphics/portraits/portrait14.png",
 			"graphics/portraits/portrait16.png",
 			"graphics/portraits/portrait21.png",
 			"graphics/portraits/portrait22.png",
 			"graphics/portraits/portrait24.png",
 			"graphics/portraits/portrait29.png",
-			"graphics/portraits/portrait_pirate01.png",
 			"graphics/portraits/portrait32.png",
 			"graphics/portraits/portrait37.png",
 			"graphics/portraits/portrait39.png",
 			"graphics/portraits/portrait42.png",
-			"graphics/portraits/portrait_pirate04.png",
-			"graphics/portraits/portrait_pirate05.png",
+
 		],
 	},
 	"ranks":{

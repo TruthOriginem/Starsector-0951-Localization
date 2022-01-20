@@ -8,7 +8,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.hullmods.CompromisedStructure;
 
 public class CompromisedArmor extends BaseHullMod {
-	public static final float ARMOR_PENALTY_MULT = 0.7f;
+	public static final float ARMOR_PENALTY_MULT = 0.8f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);

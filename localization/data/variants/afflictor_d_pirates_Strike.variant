@@ -1,24 +1,20 @@
 {
     "displayName": "打击",
     "fluxCapacitors": 10,
-    "fluxVents": 9,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "afflictor_d_pirates",
-    "hullMods": [
-        "fluxdistributor",
-        "fluxcoil",
-        "fluxbreakers"
-    ],
+    "hullMods": ["fluxdistributor"],
     "permaMods": [],
-    "quality": 0.75,
+    "sMods": [],
     "variantId": "afflictor_d_pirates_Strike",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 002": "hammer",
-                "WS 003": "hammer"
+                "WS 002": "amblaster",
+                "WS 003": "amblaster"
             }
         },
         {

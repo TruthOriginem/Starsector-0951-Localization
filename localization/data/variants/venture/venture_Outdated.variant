@@ -1,12 +1,16 @@
 {
     "displayName": "火箭",
-    "fluxCapacitors": 10,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 6,
     "goalVariant": true,
     "hullId": "venture",
-    "hullMods": ["heavyarmor"],
+    "hullMods": [
+        "heavyarmor",
+        "missleracks",
+        "targetingunit"
+    ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "venture_Outdated",
     "weaponGroups": [
         {
@@ -26,17 +30,17 @@
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "miningblaster"}
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 003": "heavyac"
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "flak",
-                "WS 003": "flak"
-            }
+            "weapons": {"WS 002": "miningblaster"}
         }
     ],
     "wings": []

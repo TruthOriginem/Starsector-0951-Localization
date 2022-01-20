@@ -19,7 +19,7 @@ name,id,demand class,base price,export value,price variability,utility,origin,ta
 毒品,drugs,drugs,200,1500,3,1,,expensive,1000,1,graphics/icons/cargo/recdrugs.png,ui_cargo_drugs,ui_cargo_drugs_drop,3,2.5,200,400,HIGH,80000,0.75,,
 重型武器,hand_weapons,hand_weapons,500,500,3,1,,military,1000,1,graphics/icons/cargo/heavyweapons.png,ui_cargo_handweapons,ui_cargo_handweapons_drop,2,2.6,100,200,HIGH,100000,1,,
 奢侈品,luxury_goods,luxury_goods,100,500,3,1,,"luxury, expensive",1000,1,graphics/icons/cargo/luxurygoods.png,ui_cargo_luxury,ui_cargo_luxury_drop,1,2.7,200,500,,50000,1,,
-蓝龙虾,lobster,luxury_goods,,,,1,volturn,"exotic, luxury, expensive",1000,1,graphics/icons/cargo/lobster.png,ui_cargo_luxury,ui_cargo_luxury_drop,1.1,2.8,200,500,,,1,,
+蓝龙虾,lobster,luxury_goods,,,,1,volturn,"exotic, luxury, expensive",1000,1,graphics/icons/cargo/lobster.png,ui_cargo_volturn_lobster,ui_cargo_volturn_lobster_drop,1.1,2.8,200,500,,,1,,
 ,,,,,,,,,,,,,,,,,,,,,,
 船体 & 武器,ships,ships,100,300,3,1,,meta,1000,1,graphics/ships/hound/hound_base.png,,,10,4,200,200,,,1,,
 ,,,,,,,,,,,,,,,,,,,,,,

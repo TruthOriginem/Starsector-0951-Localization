@@ -1,6 +1,6 @@
 {
-    "displayName": "近程援护",
-    "fluxCapacitors": 6,
+    "displayName": "密接支援",
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "hullId": "lasher_d",
     "hullMods": [
@@ -9,7 +9,7 @@
         "auxiliarythrusters"
     ],
     "permaMods": [],
-    "quality": 0,
+    "sMods": [],
     "variantId": "lasher_d_CS",
     "weaponGroups": [
         {

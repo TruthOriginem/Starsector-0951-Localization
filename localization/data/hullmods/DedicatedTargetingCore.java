@@ -43,10 +43,10 @@ public class DedicatedTargetingCore extends BaseHullMod {
 			return "只能安装在巡洋舰与主力舰上";
 		}
 		if (ship.getVariant().getHullMods().contains("targetingunit")) {
-			return "与目标定位系统冲突";
+			return "不兼容于 目标定位系统";
 		}
 		if (ship.getVariant().getHullMods().contains("advancedcore")) {
-			return "与先进目标定位核心冲突";
+			return "不兼容于 先进目标定位核心";
 		}
 		
 		return null;

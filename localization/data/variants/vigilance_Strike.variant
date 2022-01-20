@@ -1,6 +1,6 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 6,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "vigilance",
@@ -17,7 +17,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "ionbeam"}
+            "weapons": {"WS 001": "heavyneedler"}
         }
     ]
 }
