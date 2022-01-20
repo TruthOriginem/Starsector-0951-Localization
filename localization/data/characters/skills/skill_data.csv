@@ -37,7 +37,7 @@ electronic_warfare,电子对抗,1040,3,"错误. 401 // 连接被拒绝 [是否�
 fighter_uplink,战机传讯,1050,3,"那些开战机的老粗总是吹嘘着他们的传奇，但他们只不过是我手中长矛的矛尖罢了。","霸主海军 Jensulte 准将于 c82",,TRUE,,carrier,graphics/icons/skills/fighter_uplink.png,
 flux_regulation,幅能调节,1060,4,"警告：通过改变这些设置，用户将视为放弃速子科技对于因此造成的设备损伤、人员受伤、人员死亡或其它未知后果的所有责任。您仍要继续吗?","速子科技 标准证书",,TRUE,,,graphics/icons/skills/flux_dynamics.png,
 phase_corps,相位兵团,1070,4,"速子科技每天都在试图撬开神圣的造物，每一次的亵渎都带来了对全人类的诅咒。我们的道路是艰险的。我们的道路是痛苦的。我们应该以信仰为凭对抗他们，只因救赎存于末日审判之中。","卢德左径恐怖分子 Livewell Cotton 于 c205.2.12 的布道",,TRUE,,,graphics/icons/skills/phase_corps.png,
-special_modifications,特殊改装,1080,5,"那些人之领设计师?噢，他们的设计确实百世流传，当然没错。但看看那些舒适化设计，你就能知道设计师不太敢将真的把它们的性能推到极限。","独立工程师 Luna Hexagen 于 Agreus city",,,,,graphics/icons/skills/special_modifications.png,
+special_modifications,特殊改装,1080,5,"那些人之领设计师?噢，他们的设计确实百世流传，当然没错。但看看那些舒适化设计，你就能知道设计师不太敢真的把它们的性能推到极限。","独立工程师 Luna Hexagen 于 Agreus city",,,,,graphics/icons/skills/special_modifications.png,
 automated_ships,无人战舰,1090,5,[数据删除],霸主通信安全协议,,,,,graphics/icons/skills/automated_ships.png,
 ,,,,,,,,,,,
 # INDUSTRY,,,,,,,,,,,

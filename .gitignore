@@ -1,5 +1,6 @@
-para_tranz/*
-!para_tranz/placeholder
+# 忽略 para_tranz 输出的数据文件
+para_tranz/output/*
+!para_tranz/output/placeholder
 
 # Python 对应的 gitignore 规则
 # https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore

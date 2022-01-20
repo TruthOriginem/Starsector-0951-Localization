@@ -1,0 +1,734 @@
+id,trigger,conditions,script,text,options,notes
+"# Gargoyle, initial conversation",,,,,,
+gaKAGargoyleGreeting,PickGreeting,"$id == gargoyle
+$gaKA_contact score:1000",ShowPersonVisual,"连接本地网络后，你输入{Gargoyle}的通讯ID并发起了通讯请求。你看了看你的通讯员，他们点头回应，表示做好了行动的准备。
+
+你执行命令的瞬间，电子战控制台像在星云中穿梭的舰队那样闪亮发光。通信技师冷静地施展技巧，在导航，传感器和工程站点的协调下，与信息安全网络博弈起来。
+
+仅仅半分钟后，电子战的风暴结束，警报也停止了，你的主屏幕从迷人而支离破碎的电子战场变成了一张神态夸张，顽皮地向你咧嘴笑着的脸。",gaKA_gargoyleCont1:继续,
+gaKAGargoyleGreeting1,DialogOptionSelected,$option == gaKA_gargoyleCont1,,"""看来你是有备而来啊!""{Gargoyle}以过于肉麻的语气非常不正经地说，接着他转向了想象中的观众，""开飞船的家伙们集齐了足够的智慧来对付我小小的{'欢迎仪式'}!""{Gargoyle}从镜头里跳了回来，为你鼓掌，""干得好!""
+
+""看起来你已经知道我是谁了。告诉我，为什么{Rayan}会把我的号码给你?}礼物?}贿赂?}乞求?}他终于惹上了那个吸血的傀儡军政府的麻烦了吗?}在逃避法律的制裁，需要销声匿迹?""
+
+""你认识新朋友的时候总是那样垮着个脸吗?""","gaKA_gargoyleCont2:""有份工作给你，我听说你是最棒的。""",
+gaKAGargoyleGreeting2,DialogOptionSelected,$option == gaKA_gargoyleCont2,,"""工作?}呃，不。""{Gargoyle}夸张地说，""如果我有{'工作'}过一天，你就可以把我扔到气闸然后把那个气闸扔进黑洞里了。""
+
+黑客漫不经心地说:}""不过...我还听着呢。因为你说我是最棒的，我也确实是。但我不确定你到底知不知道我是做什么的。""
+
+一只嵌满了数据接口的手在你眼前挥了挥，接着你的屏幕被各种新闻片段填满了——工业设施关闭，可疑的破坏行动，数据库被黑入，政治通讯泄露，信用点缺失，幽灵舰队。",gaKA_gargoyleCont3:继续,
+gaKAGargoyleGreeting3,DialogOptionSelected,$option == gaKA_gargoyleCont3,,"""我做的，""{Gargoyle}又一次坐直了，并且终于严肃了气来，""是施展魔法。""
+
+""机构，政体，战舰，舰队，霸主!}卢德教会!}还有那超他妈有钱的速子科技!}这些都是由人组成的机器，而这些人不了解他们自己组成的机器。""他换上了一种嘲弄的语气，""其他人也一样，细想一下。这些神圣的大集合体只不过是场巨大的骗局!""
+
+""但我，""{Gargoyle}敲了敲头戴式的数据端口，""我能理解。简单地说，""屏幕上伸出了一根戳着你的手指，""戳戳这里，然后是这，最后是那里，这一切就会化为泡影。让事情在错误的时间朝正确的方向发展，强者就会变成一个悲哀的笑话。一阵风，一个花哨的屁，一个破碎的薄壳。明白了吗?""","gaKA_gargoyleYes:""嗯，我也这么认为。""
+gaKA_gargoyleNotReally:""没有听懂。""
+gaKA_gargoyleCanYou:""你能黑进霸主部门的数据库吗?""",
+gaKAGargoyleYes,DialogOptionSelected,$option == gaKA_gargoyleYes,,"Gargoyle}目瞪口呆地盯着你。""不你根本没听明白，你只是在装模作样，因为你觉得你不能在你的手下面前丢了面子。""
+
+Gargoyle}转过身去:}""我为什么要自找麻烦?}开你的飞船去吧，$playerFirstName}舰长。噼啪嘣! 接招吧，太空海盗! 简单，直接，朴实， 毫无艺术感。""
+
+他夸张地叹了口气，""真是浪费时间。我们为什么要聊这个，还聊了这么久?""","gaKA_gargoyleCanYou:""你能黑进霸主一个部门的数据库吗?""",
+gaKAGargoyleNotReally,DialogOptionSelected,$option == gaKA_gargoyleNotReally,,"Gargoyle}双手托着下巴，绝望地凝视着你。""我浪费了好多时间在你身上，$playerFirstName。 我在努力，真的。 给我点事做。 好吗? 否则我可能会把自己冻上那么一千年。 也许那之后会发生点趣事。""","gaKA_gargoyleCanYou:""你能黑进霸主部门的数据库吗?""",
+gaKAGargoyleCanYou,DialogOptionSelected,$option == gaKA_gargoyleCanYou,,"""太棒了!""{Gargoyle}大叫着坐了起来，""真是个辉煌的计划，简直是霓虹灯般的黑!}哪一个部门?}还是所有部门一起?""遮阳板和网络插件开始闪烁。","gaKA_gargoyleExplain:""别激动——事实上，就一个。""}(解释任务)",
+gaKAGargoyleExplain,DialogOptionSelected,$option == gaKA_gargoyleExplain,,"你向{Gargoyle}解释起任务目标来——Kallichore}档案，前院长{Tomas}Kallichore}的个人数据，霸主的技术部门在超空间实验出了问题之后从{Galatia}学院夺走了它。
+
+你还用避免暗示雇佣关系的外交用语解释说，Rayan}Arroyo}将为行动提供资金。",gaKA_gargoyleCont4:继续,
+gaKAGargoyleCont4,DialogOptionSelected,$option == gaKA_gargoyleCont4,,在你说话的时候，显示着{Gargoyle}的通讯界面充满了写了一半的什么清单，参考面板和代码片段。黑客在一个又一个的鬼主意间跳跃着，权衡着各种各样的可能事件，他总是能领先你的话几步——但也会走偏。视觉上的混乱有点让人分心。,"gaKA_gargoyleCont5:""你需要点时间来理清思路?""
+gaKA_gargoyleCont5a:""这任务有完成的可能性吗?""",
+gaKAGargoyleCont5a,DialogOptionSelected,$option == gaKA_gargoyleCont5a,"$option = gaKA_gargoyleCont5 0
+FireBest DialogOptionSelected",,,
+gaKAGargoyleCont5,DialogOptionSelected,$option == gaKA_gargoyleCont5,,"""这可能很难。我得给几个朋友寄些钱来让他们帮忙搞点事情。嗯...我们真要那么拼命?{Rayan}在买零食...我想我们得全力以赴了，没错。""
+
+""好，现在情况是这样的——我的朋友会给你做一个小玩意儿，在你到达{Magec}星系的{Nova}Maxios}时那东西就该准备好了。拿上它，然后用你花里胡哨的航行技巧或者什么其他的手段把它装到{Aztlan}星系内霸主的通信中继器上。""
+
+""安装的方法并不难掌握，你船上任何一个技术人员应该都能搞定。""",gaKA_gargoyleCont6:继续,
+gaKAGargoyleCont6,DialogOptionSelected,$option == gaKA_gargoyleCont6,,"""然后就进入重点啦:}破解霸主的加密系统。我打算把几年前就掌握的一个小漏洞留到现在用。""{Gargoyle}早早地展示了胜利的气势，然后坐了回去，""多么辉煌!""
+
+""啊，继续。所以，在通讯中继上安装了黑客装置后回来这里，当我给你一份解密数据的副本时你就可以亲自感谢我了。Rayan}老伙计有我的愿望单。""黑客按了一下按钮，""现在——""",gaKA_gargoyleCont7:继续,
+gaKAGargoyleCont7,DialogOptionSelected,$option == gaKA_gargoyleCont7,,"黑客又按下了一个按钮，Nova}Maxios}主轨道环附近一个小型存储设施的地址以及一个特定存储单元的号码被发到了你的数据平板上。""它来咯。""{Gargoyle}笑着说，似乎在暗示这不是在开玩笑。
+
+""在这一切准备好之前，我还有很多事情要做，所以去吧!}当我们完成任务时，COMSEC}会大发雷霆的，哈哈!""
+
+Gargoyle}看向了另一个显示器并将注意力转移到了那之上，接着通讯线路断开了，网络增强器开始以越来越快的速度闪烁起来。",gaKA_gargoyleCont8:继续,
+gaKAGargoyleCont8,DialogOptionSelected,$option == gaKA_gargoyleCont8,"ShowDefaultVisual
+$global.gaKA_getHackHardware = true
+Call $global.gaKA_ref updateStage",,cutCommLinkNoText:继续,
+# Nova Maxios - getting the hardware,,,,,,
+gaKANewMaxiosOption,PopulateOptions,"$hasMarket
+$market.id == new_maxios
+$menuState == main
+$market.gaKA_getHack",#SetOptionColor gaKA_visitChalet highlight,,3:gaKA_visitStorage:乘坐穿梭机去到{Gargoyle}的存储单元,
+gaKANewMaxiosVisit0,DialogOptionSelected,$option == gaKA_visitStorage,,你乘坐穿梭机来到了太空港的大厅，身后跟着一堆保镖和技术人员。接待室的天花板很低，老式的荧光灯闪烁着。但{New}Maxios}人对他们的临时政府感到自豪;}一些当地人注意到你们正看着一个滴落的生命维持管道，微笑着互相推搡。,gaKA_visitStorage0:继续,
+gaKANewMaxiosVisit0b,DialogOptionSelected,$option == gaKA_visitStorage0,,"Gargoyle}给你的地址将你带到了一个破旧的物流轨道环区，看起来这里的常客是不定期货船和各种走私者。你向年轻的接待员询问{Gargoyle}给你的储存单元号具体位置在哪里。
+
+""呃，喔对了，想必您就是...R.Boring}舰长?""店员紧张地斜视着柜台终端——你保持着无可挑剔的镇定，没有因为{Gargoyle}的这个小玩笑动摇，""几分钟前我刚被告知你会来这里取货。请走这边。""",gaKA_visitStorage1:继续,
+gaKANewMaxiosVisit1,DialogOptionSelected,$option == gaKA_visitStorage1,"ShowPersonVisual true clone_loke
+$player.metCloneLoke = true","接待员领着你穿过后门——一扇浅色的隔板门——然后他僵住了:}一个穿着单调的灰色制服的苍白男人就站在门后，如同黑暗中的一个灰点。
+
+""{Loke}先生，""接待员结结巴巴地说，""我没想到，呃，如果有人告诉我——""
+
+那个人——你猜他就是{Loke}先生——温和地微笑着:}""我来给舰长带路。""
+
+Loke}没有再理会接待员，而把注意力转移到了你身上，依旧面带微笑。他冲你点了点头，转身走进了门后的黑暗中。",gaKA_visitStorage2:跟上去,
+gaKANewMaxiosVisit2,DialogOptionSelected,$option == gaKA_visitStorage2,,"Loke}先生带你经过一排排密封的存储单元，进入了一个巨大的装货港。有着有机化合物味道的什么东西在泄漏着。
+
+Loke}仍然温和地微笑着，他停下了脚步并挥手打开了一个储物柜。他轻声对你说:}""当听到这个消息时，Jorien}告诉我她觉得很有趣。她要我来确保你拿到{Gargoyle}让{Elissa}给你做的东西。""
+
+他用湿润的眼睛看着存储单元，""这肯定是个好东西。""","gaKA_visitStorage3:""这些人都是谁?""
+gaKA_visitStorage3a:""多谢了...我想我该这么说。""",
+gaKANewMaxiosVisit3a,DialogOptionSelected,$option == gaKA_visitStorage3a,"$option = gaKA_visitStorage3 0
+FireBest DialogOptionSelected",,,
+gaKANewMaxiosVisit3,DialogOptionSelected,$option == gaKA_visitStorage3,ShowDefaultVisual,"他没有回答，而是恭敬地点头，说了声}""再见""，然后走进了仓库的阴影里。
+
+你摇了摇头，把注意力转向存储单元，里面只有一个标准货箱。你示意技术人员上前，于是他们提着各种扫描仪凑了过去;}你可不想成为{Gargoyle}的又一个}""笑话""。",gaKA_visitStorage4:继续,
+gaKANewMaxiosVisit4,DialogOptionSelected,$option == gaKA_visitStorage4,,"首席技术人员开始汇报:}""能量源，异常的中微子。还有，嗯，轻微的超波相位失真?""
+
+技术人员组不约而同地后退了一步，毕竟超波相位技术声名狼藉，而且从没人知道它能在这么小的空间里保持稳定。
+
+一个小时后，当你在附近的一家咖啡馆喝完第二杯热饮时，你的数据平板上传来了技术人员告知安全的消息，上边还附着结论，尽管这个设备很奇怪——似乎是某种手工制作的一次性超波发射器——它应该不会立即构成危险。
+
+你下令把它搬到你的旗舰上。",gaKA_visitStorage5:继续,
+gaKANewMaxiosVisit5,DialogOptionSelected,$option == gaKA_visitStorage5,"AddStoryPoints 1
+$global.gaKA_installHack = true
+Call $global.gaKA_ref updateStage","搭乘返回{$shipOrFleet}的穿梭机时，你思考着将这个设备安装到{Aztlan}超波中继器上而不被霸主巡逻队发现的方法。一支小而快的舰队就能做到，或者相位舰船，它们的相位场可以降低被探测的范围。运气好的话，你也可以碰到巡逻队轮班的时刻...
+
+对讲器噼里啪啦地响了起来:}""舰长，我们到了。""",gaKA_visitStorage6:继续,
+gaKANewMaxiosVisit6,DialogOptionSelected,$option == gaKA_visitStorage6,FireAll PopulateOptions,,,
+# Hacking Aztlan Relay,,,,,,
+gaKA_relayPrintHostilesText,OpenInteractionDialog,"$id == aztlan_relay
+$gaKA_installHack score:1000
+IsSeenByAnyFleet",ShowDefaultVisual,你的{$shipOrFleet}刚刚被一支附近的舰队探测到——亦或是正在被其追逐，这使得秘密安装黑客装置不可能实现。,defaultLeave:离开,
+gaKA_relayObjectInteraction,OpenInteractionDialog,"$id == aztlan_relay
+$gaKA_installHack score:1000",ShowDefaultVisual,你的{$shipOrFleet}接近了}$name。,"daKA_installHack:在{Aztlan}的中继站上安装{Gargoyle}的黑客装置
+defaultLeave:离开",
+gaKA_relayInstallHack0,DialogOptionSelected,$option == daKA_installHack,,"你向行动组长下达了命令，他则低声叮嘱了精心挑选的资深打捞技师一些注意事项，接着后者搭乘着货运无人机到达了中继站。
+
+整个行动都按照事先规划好的迅速进行完毕。技师用有着低电磁信号的工具进行了几次快速切割，移除了部分舱壁，将{Gargoyle}的装置固定到位。安装在底盘上寄生微型无人机则完成了联接的关键部分——主要是接入光纤线路。最后，舱壁被密封完成，队员们随着货运无人机的冷气体推进器启动开始了撤退，就如他们来时一样安静。",daKA_installHack1:继续,
+gaKA_relayInstallHack1,DialogOptionSelected,$option == daKA_installHack1,,"很快，你的通讯技师收到了一个短脉冲信号，这证明{Gargoyle}的装置已经开始正常运作。
+
+哪怕是不将{Gargoyle}那漫不经心的态度纳入考量范围，你的通讯和技术官员依然推测这样的入侵很快会被发现。趁你还没被抓个现行，马上逃走会是个正确的选择。",daKA_installHack2:继续,
+gaKA_relayInstallHack2,DialogOptionSelected,$option == daKA_installHack2,"$global.gaKA_retrieveArchive = true
+Call $global.gaKA_ref updateStage","你在想，霸主会不会利用黑客装置反向追踪到{Gargoyle}的藏身处。速子科技不太可能迅速回应霸主的调查申请，只是这不意味着调查行动不会以{""非官方""}的方式进行——或许那种机密行动也不能用""调查""一词来形容了。
+
+你应该尽快从{Gargoyle}那里取得档案。",defaultLeave:离开,
+"# Gargoyle, retrieving archive",,,,,,
+gaKAGargoyle2Greeting,PickGreeting,"$id == gargoyle
+$gaKA_contactRetrieve score:1000","ShowPersonVisual
+FireAll GAKAGargoyleHub","你输入{Gargoyle}的通讯ID并向你的通讯技师点了点头，他已经准备好应对任何{Gargoyle}认为有趣的通讯内容了。
+
+显示器立马显示出了一张熟悉的脸，但上边挂着一种陌生的表情:}恐惧。
+
+""舰长，你得带我上你的船离开这里，我被他们抓到了。但在那之前，我已经完成了工作，太不可思议了。""{Gargoyle}紧张地笑了，""这是第二次{AI}战争以来最伟大的数据盗窃!"" 
+
+黑客似乎已经意识到了情况的严重性:}""我认为——他们这次非常...极度...完全不高兴。这里已经不安全了。带我去...{Galatia}学院?{Anahita}能把我藏起来的，对吧?}看在我付出了这么多的面子上，她必须得这么做。""",,
+gaKAGargoyle2WhoIsAfterYou,GAKAGargoyleHub,!$askedWho,,,"gaKA_gargoyleWhoIsAfterYou:""等等，你被谁发现了?""",
+gaKAGargoyle2DoYouHaveArchive,GAKAGargoyleHub,!$askedDoYouHave,,,"gaKA_gargoyleDoYouHave:""你拿到{Kallichore}档案了?""",
+gaKAGargoyle2WhatIfIJustLeaveYou,GAKAGargoyleHub,!$askedWhatIf,,,"gaKA_gargoyleWhatIf:""如果我就这么把你扔下呢?""",
+gaKAGargoyle2OrderAShuttle,GAKAGargoyleHub,,,,gaKA_gargoyleOrderShuttle:派出一艘穿梭机去接{Gargoyle},
+gaKAGargoyle2WhoIsAfterYouSel,DialogOptionSelected,$option == gaKA_gargoyleWhoIsAfterYou,"$askedWho = true 0
+FireAll GAKAGargoyleHub","""就是——我——所有人!""
+
+""让我来数数我的新朋友，""{Gargoyle}开始捻着手指，""首先是霸主，SOMSEC}想派谁来就派谁来。我估计官方追捕行动会引发外交纠纷，所以来的很可能是刺客——会直接杀掉我的那种。接着是速子科技，至少被霸主的鲁莽反应惊醒后他们也会派人来。还有左径分子，霸主就像个筛子一样把这事泄露给了所有的卢德小朋友们，他们会爱死这个情报的。""
+
+""我的好舰长，让我给你总结一下:}在...喔...两三天的时间内，这个地方会因为这件事开始一场交火，随便哪个在广场上买面条的人都可能变成一个刺客或间谍。""",,
+gaKAGargoyle2DoYouHaveArchiveSel,DialogOptionSelected,$option == gaKA_gargoyleDoYouHave,"$askedDoYouHave = true 0
+FireAll GAKAGargoyleHub","""没时间了!}但是——""{Gargoyle}得意地笑着说，""我知道你想干什么。别担心，我把它锁得很好，用我的小技巧加密还备份了。如果你能找到它，哪怕是用阿尔法核心来破解它也要花费不少时间，更何况你还不知道它在哪。""
+
+""如果我们把你们正在密谋的一切都透露给坏蛋霸主，Anahita}教授就不会有什么时间了。所以，来接我的穿梭机呢?""",,
+gaKAGargoyle2WhatIfIJustLeaveYouSel,DialogOptionSelected,$option == gaKA_gargoyleWhatIf,"$askedWhatIf = true 0
+FireAll GAKAGargoyleHub","Gargoyle}的声音变冷了:}""那样你就得不到你想要的档案了，$playerName 舰长。因为我把它锁得很好，还做了备份。 顺便说一句，我掌握了包括{Rayan}Arroyo 以及你老板{Anahita}Baird 在内各种人的情报! 你当然也有份，舰长。 当霸主最高领导人在全星区新闻频道上看到你让我黑掉他们宝贵的技术部门时，他会大发雷霆的。""
+
+黑客的笑容中没有一丝温度，""要么带上我，要么你会失去一切，舰长。""",,
+gaKAGargoyle2OrderAShuttleSel,DialogOptionSelected,$option == gaKA_gargoyleOrderShuttle,"$global.gaKA_returnToAcademy = true
+Call $global.gaKA_ref updateStage","Gargoyle}点了点头，""那样就好，舰长。我来收收我的小东西。""
+
+你的穿梭机并没有收到交通管制员的质询;}看起来他们还不知道发生了什么，大概吧。
+
+你下令将{Gargoyle}关到离舰桥很远的地方，来避免他干扰你的通讯技师观察周围可疑的动静。
+
+""舰长，""你的战术技师叫住了你，""霸主舰队来了。""
+
+该溜了。",gaKA_gargoyleOrderShuttle2:继续,
+gaKAGargoyle2OrderAShuttleSel2,DialogOptionSelected,$option == gaKA_gargoyleOrderShuttle2,"EndConversation NO_CONTINUE
+DismissDialog",,,
+# Conversation with patrol that intercepts you after you leave Magec,,,,,,
+gaKAPatrolEncounter,BeginFleetEncounter,"$gaKA_patrol score:1000
+!$gaKA_encounteredAlready
+Call $global.gaKA_ref updateData","$gaKA_encounteredAlready = true
+FleetDesc
+HailPlayer",,,
+gaKAPatrolOpenComm,OpenCommLink,"$entity.gaKA_patrol score:1000
+!$entity.ignorePlayerCommRequests
+Call $global.gaKA_ref updateData",$entity.ignorePlayerCommRequests = true,"通讯噼啪作响，仿佛获得了新生，霸主{$rank}出现在了显示屏上，双眼直直地盯着你。""独立舰队的舰长!}我命令你关闭护盾，武器和驱动系统。你涉嫌窝藏一名罪犯以及破坏霸主数据安全。""
+
+$HisOrHer的}嘴唇傲慢地卷了起来:}""霸主海军陆战队即将登船，你的数据库将被查封，你的货物也将被扣押检查。你将会失去你对{$shipOrFleet}的控制权。犹豫以及不服从将被认为是抗命。现在，立刻交出你的命令代码。""",gaKA_patrol1:继续,
+gaKAPatrol1,DialogOptionSelected,$option == gaKA_patrol1,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","听到这些无异于星际海盗的蛮横命令后，你眨了眨眼。即使是霸主根据旧时代的人之领海军法典制定的法律，也会在这种情况下为你保留一些权力。你猜这个{$rank}过分鲁莽了，以至于在解释{$hisOrHer的}命令时没按规矩来。
+
+当作出思考时，你注意到霸主{$rank}的脸变成了更深的红色，对方也许把你的沉默理解成了}""抵抗""。事已至此，不战而退可能很难。","gaKA_patrolWarrant:""这些可是例外的搜查条款，你有搜查令吗?""
+gaKA_patrolRefuse:""我可不接受那些条款，$rank。""
+gaKA_patrolLie:用弥天大谎来蒙混过关
+gaKA_patrolCut:你可没时间和对面耗，切断通讯
+gaKA_patrolWeapons:将武器准备就绪",
+gaKAPatrolWarrant,DialogOptionSelected,$option == gaKA_patrolWarrant,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$ranks}瞪大了眼睛。""你没有资格提出要求，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒，""你必须关闭所有系统，接受查封和检查，以及逮捕。""
+
+$heOrShe}眯起了眼睛:}""现在投降我可能会考虑宽大处理——如果你这个叛徒的话里没有丝毫不服从的迹象。""","gaKA_patrolRefuse2:""你必须有合法的搜查令。""
+gaKA_patrolLie:用弥天大谎来蒙混过关
+gaKA_patrolCut:你可没时间和对面耗，切断通讯
+gaKA_patrolWeapons:将武器准备就绪",
+gaKAPatrolRefuse,DialogOptionSelected,$option == gaKA_patrolRefuse,"SetStoryOption gaKA_patrolLie general ""说服霸主巡逻队你没有参与到对技术部的黑客攻击中""","霸主{$ranks}瞪大了眼睛。""这不是一场谈判，舰长。""{$heOrShe}几乎要抑制不住自己的愤怒。""你必须关闭所有系统，接受查封以及逮捕。""
+
+$heOrShe}眯起了眼睛:}""现在投降我可能会考虑宽大处理——假如你这个叛徒的话里没有丝毫不服从的迹象。""","gaKA_patrolRefuse2:""你必须有合法的搜查令。""
+gaKA_patrolLie:用弥天大谎来蒙混过关
+gaKA_patrolCut:你可没时间和对面耗，切断通讯
+gaKA_patrolWeapons:将武器准备就绪",
+gaKAPatrolRefuse2,DialogOptionSelected,$option == gaKA_patrolRefuse2,"$option = gaKA_patrolWeapons 0
+FireBest DialogOptionSelected",,,
+gaKAPatrolCut,DialogOptionSelected,$option == gaKA_patrolCut,"EndConversation
+MakeOtherFleetLowRepImpact gaKA true
+MakeOtherFleetGoAway false
+MakeOtherFleetImportant gaKA false","在你切断通讯的前一刻，霸主{$ranks}的眼睛瞪大了。接着画面变黑，$hisOrHer的}咆哮随着画面的变黑变成了一片死寂。
+
+""$PlayerSirOrMadam，""你的战术军官报告，""他们正在展开攻击阵型。""
+
+你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何}""事件""。",cutCommLink:切断通讯链接,
+gaKAPatrolWeapons,DialogOptionSelected,$option == gaKA_patrolWeapons,"EndConversation
+MakeOtherFleetLowRepImpact gaKA true
+MakeOtherFleetGoAway false
+MakeOtherFleetImportant gaKA false","霸主{$rank}点了点头，带着冰冷的仇恨说:}""你正式暴露了自己作为反动分子和恐怖分子的身份，我从一开始就知道。""
+
+在尖锐的爆鸣声中，通讯中断了。
+
+""$PlayerSirOrMadam，""你的战术军官报告，""他们正在展开攻击阵型。""
+
+你想，这已经严重违反了星区中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主更有可能掩盖接下来发生的任何}""事件""。",cutCommLink:切断通讯链接,
+gaKAPatrolLie,DialogOptionSelected,$option == gaKA_patrolLie,,"你潇洒地行了一礼。
+
+""$SirOrMadam。我得说这是一场误会。我正指挥一支特别行动队追捕一名渗透进来的恐怖分子。根据{HERMES}BLACK}命令，在行动的过程中我不被允许接入霸主的通讯网络。我上司提供的任务条件也允许我独立行动。""
+
+""$SirOrMadam。""你补充道，因为你觉得这样做是对的。",gaKA_patrolLie2:继续,
+gaKAPatrolLie2,DialogOptionSelected,$option == gaKA_patrolLie2,,"当你自信地说出听起来合情合理的霸主行话时，$HeOrShe}看起来一脸狐疑。霸主{$rank}盯着你问道:}""舰长，你为谁服务?}你的上司是谁?""
+
+不能犹豫了。","gaKA_patrolLie3:""{Orcus}Rau}上将，Ragnar}舰队司令。""",
+gaKAPatrolLie3,DialogOptionSelected,$option == gaKA_patrolLie3,,"霸主{$rank}的表情没什么变化。是时候来点锦上添花了。
+
+""他根据{Chicomoztoc}协议将我的舰队作为军事辅助部队纳入了指挥，""你解释道，""所以我不得不把一整箱钚后元素留在{Raesvelg}的港口中。""
+
+""$SirOrMadam。""你又补了这么一句。",gaKA_patrolLie4:继续,
+gaKAPatrolLie4,DialogOptionSelected,$option == gaKA_patrolLie4,,"这似乎有效果了，你注意到{$rank}的态度在不知不觉中软化了下来。
+
+""{Rau}上将总是会做出一些突破底线的事，不是吗?}这很不正常，舰长，我会向上级汇报的，现在，""{$heOrShe}抬了抬下巴，""专业人士将接管这场追捕，发送你观察到的任务目标最后的通讯信息和行动路线。""
+
+你带着适当的失望情绪悄悄命令你的导航和通讯技师弄出一些可信的东西来，他们即兴发挥的速度令人钦佩。你看着}$Rank，注意到{$personLastName}瞥了一眼自己的控制台后 露出了满意的表情。","gaKA_patrolLie5:""祝你好运，$SirOrMadam。""",
+gaKAPatrolLie5,DialogOptionSelected,$option == gaKA_patrolLie5,"MakeOtherFleetHostile gaKA false
+MakeOtherFleetGoAway true
+MakeOtherFleetImportant gaKA false
+EndConversation","""的确，""{$HeOrShe}说，""回去向{Rau}上将报告，建议他不要聪明反被聪明误，把常规行动搞得乱七八糟。""
+
+$HeOrShe}连个招呼也不打就唐突切断了通讯，你觉得有被冒犯到。
+
+接着你回忆了一下过去，觉得当初那个在港口酒吧中度过闲得无聊的夜晚时，把一些注意力投入到霸主纪录片上的你十分机智。",cutCommLink:切断通讯链接,
+,,,,,,
+# Returned to the Academy with Gargoyle and archive,,,,,,
+gaKAReturnToAcademy,OpenInteractionDialog,$market.gaKA_returnHere score:2000,"$global.foundGargoyle = true
+ShowDefaultVisual","你的{$shipOrFleet}在排队进入空间站时被打断了;}在这种情况下通常会有交通管制通讯，可这一次，取而代之地，你收到了院长办公室的直接通讯。
+
+""舰长，""你的通讯员报告说，""她想和你说话。""",gaKA_return1:继续,
+gaKAReturnToAcademy1,DialogOptionSelected,$option == gaKA_return1,ShowPersonVisual false baird,"Anahita}Baird}的形象出现了。""舰长，把你的{'特别货物'}用穿梭机直接带到这个码头。""她说，与此同时收到导航指示和对接代码的提示音响了起来，""我会等着你的。""
+
+通讯链接被切断了。",gaKA_return2:继续,
+gaKAReturnToAcademy2,DialogOptionSelected,$option == gaKA_return2,,"推进器冷却时发出了咔咔声，你走下穿梭机，身后跟着}Gargoyle。在短暂的穿梭机旅程中，黑客接二连三的提问，建议，以及对任何控制面板或触手可及的小玩意动手动脚的行为让你忍无可忍。
+
+就和之前说好的一样，Baird}院长带着一小队蒙面警卫和高级顾问在等着你。
+
+""所以这便是{Gargoyle}了，""她说。",gaKA_return3:继续,
+gaKAReturnToAcademy3,DialogOptionSelected,$option == gaKA_return3,ShowSecondPerson gargoyle,"""Anahita，我们终于见面了!""{Gargoyle}隆重地鞠了个躬。""我很荣幸接受您的邀请来{Galatia}学院任教，""然后他站直了，面带微笑，环顾四周。""我的课程应该是什么呢?}举办派对，剧院安保工作，也许还有如何凭个人引发足以导致第三次{AI}战争的猥亵事件?""
+
+Baird}不带情绪地笑了笑，然后示意她们那一撮人中的一位上前。",gaKA_return4:继续,
+gaKAReturnToAcademy4,DialogOptionSelected,$option == gaKA_return4,ShowThirdPerson sebestyen,"""Gargoyle，来见见{Alviss}Sebestyen}院士，""{Baird}用一种放在霸主战舰舰桥上也没有违和感的语气说。""现在，Alviss，请慷慨地带{Gargoyle}去我们准备好的客房。""
+
+她看向了你，显然相信{Sebestyen}能处理好局面。
+
+""舰长，我们的客人让事情变得复杂了一些，但是...""她转身看向离开接待室的两人，Gargoyle}表面上配合着{Sebestyen}结结巴巴的建议，实际上似乎一心想着让这位院士手忙脚乱。",gaKA_return5:继续,
+gaKAReturnToAcademy5,DialogOptionSelected,$option == gaKA_return5,"HideSecondPerson
+HideThirdPerson","""看来，除了{Kallichore}档案之外，我还获得了另一项宝贵资产。当然是由于您的主动，舰长，我是不会忘记这一点的，但是——""她环视了一下周围，挥挥手让警卫和顾问们离开了。
+
+Baird}指了指旁边的运输舱:}""让我们去一个更适合讨论接下来的事的地方吧。""",gaKA_return6:继续,
+gaKAReturnToAcademy6,DialogOptionSelected,$option == gaKA_return6,FireAll GAKABairdHub,Baird}通过舱窗看着外边的各种管道和远方的风景，陷入了沉思。安静的氛围开始支配这个空间，你发现这可能是一个向教务长提问而不必打断她的滔滔不绝的机会。,,
+GAKABairdHubA,GAKABairdHub,!$gaKA_returnWhatWillHegDo,,,"gaKA_returnWhatWillHegDo:""如果霸主发现你收留了这个黑客，你该怎么办?""",
+GAKABairdHubB,GAKABairdHub,!$gaKA_returnThinkOfGargoyle ,,,"gaKA_returnThinkOfGargoyle:""你觉得{Gargoyle}是个怎样的人?""",
+GAKABairdHubC,GAKABairdHub,,,,gaKA_return7:什么也不说,
+GAKABairdHubASel,DialogOptionSelected,$option == gaKA_returnWhatWillHegDo,"$gaKA_returnWhatWillHegDo = true 0
+FireAll GAKABairdHub","Baird}看了看你，然后又别过了头。""当然，他们已经开始怀疑我了。""
+
+""{Galatia}学院将对原始数据的查封提出上诉，并要求归还基本的科学研究材料——即使在旧时代人之领的法律下，这也是合规的。'这种数据泄露只能证明限制基础研究的危险，因为这样会使一些让人讨厌的家伙们在缺乏舆论监督的情况下私自探索它们'。""
+
+""我欣然带着讽刺的意味去提出上诉，这是一场公关战争，没有顾忌的余地。我会表现得如同他们对我的想象那般愤世嫉俗，他们则会对此深信不疑，因为我的表现不是表演。""当{Baird}做出解释时，你从她对这种阴谋和反阴谋的描述中感受到了她的满足感。""然而，隐藏于那之下的，""她继续说道，""是我们的真实目的。一旦他们对此有所察觉，那将成为切实的证据。""",,
+GAKABairdHubBSel,DialogOptionSelected,$option == gaKA_returnThinkOfGargoyle,"$gaKA_returnThinkOfGargoyle = true 0
+FireAll GAKABairdHub","Baird}看了看你，扬了扬眉毛，然后又别过了头。
+
+""特别迷人，""她面无表情地说。""我已经任教二十年了，舰长。我见过更差劲的人。""",,
+gaKAReturnToAcademy7,DialogOptionSelected,$option == gaKA_return7,,"在一片寂静中，你几乎可以听到{Baird}脑子转动的声音。
+
+运输舱在刹车的杂音中停下了，你能感觉到重力场发生的微妙变化。走下运输舱后，你注意到这似乎是一个后门，让{Baird}不用经过已经被满是{不习惯被告知他们需要等待的重要人物}所填满的等候室。",gaKA_return8:继续,
+gaKAReturnToAcademy8NoCoureuse,DialogOptionSelected,"!$global.foundCoureuse
+$option == gaKA_return8",,"你跟着{Baird}院长走进她的办公室，之后门悄悄地关上了。她边检查着收到的信息，边示意你在她的办公桌前坐下。
+
+""啊，不错。""{Baird}把数据平板滑到了你面前让你查看;}这是一份{Gargoyle}的行程资料，包括对{Kallichore}档案的解密的时间表。
+
+""{Sebestyen}比看上去更能干。你也知道，他既执着又一丝不苟。""",gaKA_return9a:继续,
+gaKAReturnToAcademy9a,DialogOptionSelected,$option == gaKA_return9a,,"她指了指数据平板:}""我们应该能在大约一周内解密档案。诚然，这些研究数据的价值不可忽视，但我们仍然需要将理论付诸实践的手段，也就是}Coureuse。""
+
+""注意，她并不只是一个独特的天才，""{Baird}说，话中带着一种反常的不确定性。""我们可以找到其他候选人来领导研究团队，但研究和培训...不，我没给这一步留这么多时间。我们需要{Scylla}Coureuse。""",gaKA_return10a:继续,
+gaKAReturnToAcademy10a,DialogOptionSelected,$option == gaKA_return10a,"$global.gaKA_completed = true
+Call $global.gaKA_ref updateStage","""尽快找到她，舰长。""{Baird}说，她转过身去开始打发你。""我们以后再多谈谈我正在为之努力的东西。""
+
+你感觉到身后的门无声地打开了，带着面具的警卫就像周围环境中的静电一样冒了出来。该走了。",gaKA_returnLeave:离开,
+gaKAReturnToAcademyReturnLeave,DialogOptionSelected,$option == gaKA_returnLeave,"ShowDefaultVisual
+FireAll PopulateOptions",,,
+gaKAReturnToAcademy8Coureuse,DialogOptionSelected,"$global.foundCoureuse
+$option == gaKA_return8",ShowSecondPerson coureuse,"当你进入{Baird}的办公室时，你注意到{Scylla}Coureuse}正在休息区等候着。她一边点头致意，一边收起便携式工作台。
+
+""啊，Scylla，好。""{Baird}走到桌子后面，轻敲几个键启动了全息投影仪。一份{Gargoyle}的行程资料出现了，其中包括对{Kallichore}档案的解密的时间表。{Baird}示意你看向画面，""{Sebestyen}比看上去更能干，他既执着又一丝不苟。""
+
+Coureuse}大声说道:}""在组建新团队时，他帮了我很大的忙。""",gaKA_return9b:继续,
+gaKAReturnToAcademy9b,DialogOptionSelected,$option == gaKA_return9b,,"Baird}点点头表示认同，Coureuse}继续道:}""看起来我们在大约一周内就能完全解密这份档案。我也许能重新开始我以前的一些研究，当然这取决于我们最先获得的资料是什么。""
+
+Coureuse}看向了你:}""{Galatia}的跳跃点实验——实验的方法并不是我期望的。但是{Tomas}院长说时间太——""
+
+Baird}打断道:}""院士，你不需要为自己辩解。舰长明白当我们进入实验阶段时，你们会准备好一切合理的预防措施。事实上，$playerHeOrShe}存在会对这些实验的推进有很大的帮助。""",gaKA_return10b:继续,
+gaKAReturnToAcademy10b,DialogOptionSelected,$option == gaKA_return10b,,"Baird}院长停顿了一下，看向你，观察你对她和{Coureuse}所说的话的反应。""舰长，你一定很想知道这一切是为了什么。""","gaKA_return11b1:""是的。""
+gaKA_return11b2:""不尽然，毕竟报酬不错。""
+gaKA_return11b3:以绝不再上当的姿态保持沉默",
+gaKAReturnToAcademy11b1,DialogOptionSelected,$option == gaKA_return11b1,"$option = gaKA_return11b 0
+FireBest DialogOptionSelected",,,
+gaKAReturnToAcademy11b2,DialogOptionSelected,$option == gaKA_return11b2,"$option = gaKA_return11b 0
+FireBest DialogOptionSelected",,,
+gaKAReturnToAcademy11b3,DialogOptionSelected,$option == gaKA_return11b3,"$option = gaKA_return11b 0
+FireBest DialogOptionSelected",,,
+gaKAReturnToAcademy11b,DialogOptionSelected,$option == gaKA_return11b,,"她没有理会你的回应，继续说道:}""舰长，这是为了再次连通整个银河。听到这里你应该知道了:}星门。这一切都是为了星门。""
+
+Baird}点了点一个数据平板，全息投影仪投射出了一个三维的网状结构地图。你认出了这张图片:}这是人之领星门网络在英仙座星区的结构图。在一片很显眼的区域中交织出的密集点就是你们称呼为核心世界的地方。
+
+""更准确地说，是为了星门能做到的事。""{Baird}说。",gaKA_return12b:继续,
+gaKAReturnToAcademy12b,DialogOptionSelected,$option == gaKA_return12b,,"Coureuse}的声音又一次放大:}""这关乎自由!}那是人之领曾经用以主宰人性的东西，我们可以逃离这个残酷的小世界。我们仍然生活在他们的阴影下，我的意思是——霸主仍然生活在他们的阴影下，速子科技和卢德教会也是如此，没有人真正逃出去过。""
+
+Scylla}Coureuse}看向了缓缓旋转的星门网络示意图，""但也许我们可以，我们所有人。""",gaKA_return13b:继续,
+gaKAReturnToAcademy13b,DialogOptionSelected,$option == gaKA_return13b,"$global.gaKA_completed = true
+Call $global.gaKA_ref updateStage","你注意到{Baird}在对方演讲时面无表情地看着}Coureuse。作为对此的总结，院长用一种命令般的语气对你说:}""一周左右后回来，舰长。我的人需要时间工作，你则应该休息一下。但要保持低调，自你在{Aztlan}搞出一些动静后，各方势力都焦躁不安。""
+
+Baird}看向了桌上的控制台，在浏览信息时她脸上阴晴不定。""就这样，舰长，还有}Scylla。""","gaKA_returnIntentions:""我想谈谈你对这项科技的意图。""
+gaKA_returnLeave:离开",
+gaKAReturnToAcademyIntentions,DialogOptionSelected,$option == gaKA_returnIntentions,,"Baird}又看向了你，""这可不是什么}'科技'，舰长，只是可能性。可能性再大也只是可能性而已。""
+
+她转过身去开始打发你。""这事我们以后再详谈。""{Coureuse}则在拿起她的便携工作台时同情地看了看你。
+
+你感觉到身后的门无声地打开了，带着面具的警卫就像周围环境中的静电一样冒了出来。该走了。",gaKA_returnLeave:离开,
+# Various bits of off-the-main-mission chain text for the Kallichore Archive characters,,,,,,
+"# Arroyo, custom contact conversation after this previous part has been played",,,,,,
+RayanArroyoDefaultGreeting,PickGreeting,$id == arroyo score:20,"ShowPersonVisual
+FireAll PopulateOptions","你发出了通讯请求，某种速子科技分部的商标在通讯得到应答前缓缓地转了半圈。
+
+""这里是}Arroyo，你是哪位?""{Rayan}Arroyo}不以为然地看着你，他的目光就像在一艘豪华的星舰上寻找着划痕。
+OR
+""你带来的最好是好消息。""{Rayan}Arroyo}不以为然地看着你，""记得提醒我带你去买一套合适的西装，我认识一个能把西装做得很好看的人。""
+OR
+""这里是}Arroyo，有话快说。""{Rayan}Arroyo}看到是你，皱了皱眉。""喔，是你。这次又有什么事?""",,
+# Talk to Rayan Arroyo re. Gargoyle after first contact,,,,,,
+GAKARayanArroyo_GET_HACK_HARDWARE,PopulateOptions,"$id == arroyo
+Call $global.gaKA_ref updateData
+$gaKA_stage == GET_HACK_HARDWARE score:1000",,,"10:gaKA_arroyoExpenses:""我已经找到了}Gargoyle，不过有一笔开支，现在我来找你报销了。""",
+GAKARayanArroyo_INSTALL_HACK,PopulateOptions,"$id == arroyo
+Call $global.gaKA_ref updateData
+$gaKA_stage == INSTALL_HACK score:1000",,,"10:gaKA_arroyoExpenses:""我已经找到了}Gargoyle，不过有一笔开支，现在我来找你报销了。""",
+GAKARayanArroyo_expensesSel,DialogOptionSelected,$option == gaKA_arroyoExpenses,,"听到你这么说后{Arroyo}的脸变得更黑了。
+
+""明白了。""他说到。
+
+他举起了一根戴着金戒指的手指。""别再和我提关于{Gargoyle}的任何事，我很清楚自己并不想知道那个荒唐的破坏者在计划着什么。但我会给你报销。""他做了个鬼脸，""我会把我的发票寄给{Baird}院长，这样那个呆在象牙塔里的操偶大师就能明白她压榨我到什么程度了。""
+
+""现在我要挂了。""他关掉了通讯链接。",cutCommLinkNoText:继续,
+"# Gargoyle, not-in-mission greeting",,,,,,
+GargoyleDefaultGreeting,PickGreeting,$id == gargoyle score:20,"ShowPersonVisual
+FireAll PopulateOptions","你输入通讯ID，手悬停在发光的{""确认""}标志上。你的通讯技师点了点头，他已经准备好应对任何{Gargoyle}认为有趣的通讯内容了。
+
+你的主屏幕从迷人而支离破碎的电子战场变成了一张神态夸张，顽皮地向你咧嘴笑着的脸。""啊，$playerFirstName}! 你回来是为了找些有趣的事情做吗? 我有各种各样的好主意。""",,
+"# Talk to Gargoyle after asked to get hack device, but haven't done it",,,,,,
+GAKAGargoyleGreeting_GET_HACK_HARDWARE,PickGreeting,"$id == gargoyle
+Call $global.gaKA_ref updateData
+$gaKA_stage == GET_HACK_HARDWARE score:1000",ShowPersonVisual,"你输入通讯ID，手悬停在发光的{""确认""}标志上。你的通讯技师点了点头，他已经准备好应对任何{Gargoyle}认为有趣的通讯内容了。
+
+你的主屏幕从迷人而支离破碎的电子战场变成了一张神态夸张，顽皮地向你咧嘴笑着的脸。""喔，$playerFirstName，你找不到{Nova}Maxios 了? 让我帮帮你吧，我会给你一张婴儿都能看懂的星际地图。"" 
+
+你的个人平板响起了轻柔的铃声。
+
+""读下去，读下去。找到{'M开头的Magec'。你能搞明白的!}我相信你。""{Gargoyle}转过身去并挥手示意你离开，接着你的通讯链接自动断开了。",cutCommLinkNoText:继续,
+"# Talk to Gargoyle after got transmitter, not installed",,,,,,
+GAKAGargoyleGreeting_INSTALL_HACK,PickGreeting,"$id == gargoyle
+Call $global.gaKA_ref updateData
+$gaKA_stage == INSTALL_HACK score:1000",ShowPersonVisual,"你输入通讯ID，手悬停在发光的{""确认""}标志上。你的通讯技师点了点头，他已经准备好应对任何{Gargoyle}认为有趣的通讯内容了。
+
+你的主屏幕上显示出了一张神态夸张，顽皮地向你咧嘴笑着的脸，没有发生任何意外。""啊，$playerFirstName 舰长! 你一定是忘了我简单的提示。""
+
+{Gargoyle}数着手指，""第一步，收集设备。你做到了，万岁!}第二步，把它安装在位于{Aztlan}星系的——现在注意了，也许你该让你愁眉紧锁的通讯员做个备忘录——Aztlan}中继器里。第三步，回到我这里来拿你宝贵的数据档案。""
+
+黑客用剩下的两根手指粗鲁地朝你挥了挥。""事情就是这样。再见，我现在很忙。""
+
+你的通讯链接自动断开了。",cutCommLinkNoText:继续,
+"# Baird, various mid-mission comments",,,,,,
+GAKABairdGreeting_GET_HACK_HARDWARE,PopulateOptions,"$id == baird
+Call $global.gaKA_ref updateData
+$gaKA_stage == GET_HACK_HARDWARE score:1000",,,10:gaKA_tellBaird1:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继器的计划,
+GAKABairdGreeting_GET_HACK_HARDWARE_Sel,DialogOptionSelected,$option == gaKA_tellBaird1,,"Baird}院长耐心地听着你的解释。当你说完时，她等了一会儿，然后干脆地说:}""舰长，我只需要你完成任务，不需要知道你的每一步行动，如果这个{'Gargoyle'}是我久仰大名的那个，那么我们得到{Kallichore}档案的可能性就很大了。""
+
+""你的行动方针很明显:}帮助黑客，用任何必要的手段，不惜任何代价。""她的语气就像失望的老师，""你肯定不需要我来告诉你这些。""",cutCommLink:继续,
+GAKABairdGreeting_INSTALL_HACK,PopulateOptions,"$id == baird
+Call $global.gaKA_ref updateData
+$gaKA_stage == INSTALL_HACK score:1000",,,10:gaKA_tellBaird2:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继器的计划,
+GAKABairdGreeting_INSTALL_HACK_Sel,DialogOptionSelected,$option == gaKA_tellBaird2,,"Baird}院长耐心地听着你的解释。当你说完时，她等了一会儿，然后干脆地说:}""舰长，我只需要你完成任务，不需要知道你的每一步行动。""
+
+""你的行动方针很明显:}帮助黑客，用任何必要的手段，不惜任何代价。""{Baird}看向了她桌上的显示屏，检查着她的日程表。看起来你可以走了。
+
+你伸手想切断通讯，这时她补充道，""把这个黑客设备的规格参数发到我的办公室，我很感兴趣。""",cutCommLink:继续,
+GAKABairdGreeting_RETREIVE_ARCHIVE,PopulateOptions,"$id == baird
+!$gaKA_bairdAlreadyYelledAtYou
+Call $global.gaKA_ref updateData
+$gaKA_stage == RETREIVE_ARCHIVE score:1000",,,10:gaKA_tellBaird3:告诉{Baird}黑客装置已经安装完成了,
+GAKABairdGreeting_RETREIVE_ARCHIVE_Sel,DialogOptionSelected,$option == gaKA_tellBaird3,"AdjustRepActivePerson INHOSPITABLE -5
+$gaKA_bairdAlreadyYelledAtYou = true 10","""你安装了黑客装置，回来之前却没有从{Gargoyle}那里拿到解密的{Kallichore}档案?""{Baird}摘下眼镜站起身来，她平时的冷静消失得无影无踪，""现在快去!}抢在别人之前拿到档案!}你还等什么，快走!""",cutCommLink:继续,
+"# talk to Scylla Coureuse, any time after she's at the academy",,,,,,
+gaKA_coureuseBairdOpt,PopulateOptions,"$id == coureuse score:1000
+$global.gaKA_missionCompleted
+!$askedAboutBaird",,,"gaKA_courBaird:""你觉得{Baird}可信吗?""",
+gaKA_coureuseGargoyleOpt,PopulateOptions,"$id == coureuse score:1000
+$global.gaKA_missionCompleted
+!$askedAboutGargoyle",,,"gaKA_courGarg:""{Gargoyle}有帮什么忙吗?""",
+gaKA_coureuseBairdOptSel,DialogOptionSelected,$option == gaKA_courBaird,$askedAboutBaird = true,"她看了你一会儿，叹了口气:}""你知道她可能在窃听，对吧?}她知道我的感受，我不会假装我很信任她。我不太喜欢她的目标和她的工作方式。但其他人都更糟糕。""
+
+""不论怎么说，她都是个...高效的人，这比其它的选项要好。""","gaKA_courBaird2:""其他选项?""",
+gaKA_coureuseBairdOptSel2,DialogOptionSelected,$option == gaKA_courBaird2,FireAll PopulateOptions,"""我不知道，""她说，""为霸主制造武器?}让星区崩溃到超空间航行以前的水平?}为了速子科技折腾AI?}我做不到。更别提卢德教会了。""
+
+Coureuse}笑了，""把我送去尼姑庵吧，也许那样都没那么糟。""",,
+gaKA_coureuseGargoyleOptSel,DialogOptionSelected,$option == gaKA_courGarg,"$askedAboutGargoyle = true
+FireAll PopulateOptions","""哦，当然有，""她笑着说，""你能从{Gargoyle}那里找到，呃，全新的观点。面对一些猜想时，我们已经在不知不觉间形成了去解决它们的小组织。还有，嗯，还有技术层面上的东西，比如代码。这——呃，有点奇怪，传统意义上的团队合作基本上是不可能的。但如果我们能为{Gargoyle}找到一个独立的小项目，它可能会被处理得很好。""
+
+""谢谢你做的一切。没有你的话，事情可能会往很糟糕的方向发展。""",,
+,,,,,,
+# various post-gaKA mission complications/conversations,,,,,,
+# Tri-Tachyon fixer encounter,,,,,,
+gaKA_triTachyonVisitEvent,DialogOptionSelected,"$faction.id == tritachyon
+$global.gaKA_triTachyonVisit score:1000
+$option == marketVisitBar","unset $global.gaKA_triTachyonVisit
+FireBest BarShuttleDownPrintDesc
+FireBest BarPrintDesc
+BarCMD playAmbience",,gaKA_ttContinue:继续,
+gaKA_ttContinueSel,DialogOptionSelected,$option == gaKA_ttContinue,"SaveCurrentVisual
+BeginConversation tt_fixer false true
+# so that the text can use person tokens - otherwise, text is added before the script runs
+FireBest GAKA_TTStart",,,
+GAKA_TTStart,GAKA_TTStart,,,"当你扫视人群寻找潜在的工作机会时，穿着一尘不染的速子科技高管服装的{$manOrWoman}神不知鬼不觉地出现在了你面前。
+
+""$playerName，我们很高兴看到您的到来。 速子科技公司十分重视您对当地经济的贡献，"" $heOrShe 边握着你的手边露出了完美的微笑。
+
+""我们能换个地方吗?}我想讨论一件特殊的事...公司业务。""","gaKA_ttAsk:问问发生什么事了
+gaKA_ttFollow:跟上速子科技特工",
+gaKA_ttAskSel,DialogOptionSelected,$option == gaKA_ttAsk,,"不知怎么的，速子科技特工的笑容变得更加灿烂而完美。""我们只想搞清一些事情，您并没有陷入麻烦中。""
+
+""请，""{$heOrShe}拉开了窗帘，窗帘下是一个你之前根本没有注意到的私人客座，""我们可以为您提供免费茶点。""","gaKA_ttFollow:跟上特工
+gaKA_ttLeave:""谢谢，但是不用。我这就要走了。""",
+gaKA_ttLeaveSel,DialogOptionSelected,$option == gaKA_ttLeave,"AdjustRep tritachyon INHOSPITABLE -5
+AdjustRepActivePerson INHOSPITABLE -10","完美的微笑抽搐了一会，然后变得更灿烂了。
+
+""我相信我们还会再见面的，$playerName 舰长。"" $heOrShe 带着虚假的兴致说道，""我谨代表速子科技感谢您的来访。""",gaKA_ttLeaveCont:继续,
+gaKA_ttLeaveContSel,DialogOptionSelected,$option == gaKA_ttLeaveCont,"EndConversation DO_NOT_FIRE
+BarCMD leaveBar",,,
+gaKA_ttLeaveSel2,DialogOptionSelected,$option == gaKA_ttLeaveToBar,,"你离开了桌子，饮料都没碰一下。速子科技特工的眼睛跟着你，脸上不带一丝笑意。
+
+当转身想要离开时，你感觉到脖子后面传来了刺痛感。",gaKA_ttGoBackToBarCont:继续,
+gaKA_ttGoBackToBarContSel,DialogOptionSelected,$option == gaKA_ttGoBackToBarCont,"EndConversation DO_NOT_FIRE
+RestoreSavedVisual
+BarCMD showOptions",,,
+gaKA_ttFollowSel,DialogOptionSelected,$option == gaKA_ttFollow,,"你漫不经心地从菜单上点昂贵的饮料，几秒钟内它就出现在了你面前。
+
+特工注意到了你的惊讶，解释说:}""每个顾客在享受我们的产品时，我们都会建立速子口味档案。将购买饮料的时间和其他特定的生理信号联系起来，并以此——""{$heOrShe}举了举{$hisOrHer的}手以示歉意，""我有时会失控，这是我的服务热情。""
+
+你明白他想表达什么:}你正在被监视着。
+
+""我们是来谈你的事的。""特工用手轻轻地指了指你，""不是我的事。""","gaKA_ttBusiness:""我的什么事?""
+gaKA_ttAppreciate:""我可不喜欢被监视。""",
+gaKA_ttBusinessSel,DialogOptionSelected,$option == gaKA_ttBusiness,,"""最近发生了一起事故，Aztlan}中继站被瘫痪了。对于{HEGCOM}来说有这样的，呃，历史，是非常尴尬的。而随着这种尴尬而来的会是过激反应的倾向——考虑到他们对速子科技的偏见，那会是对我们的过激反应。现在，我们认为不愉快的{AI}战争已经过去了，还有生意要做呢。""
+
+特工的笑容消失了，语气变得冰冷起来:}""我们的股东可能会损失很多。我们不能允许紧张局势被...冒险行为激化。""{$HisOrHer的}眼睛眯了起来，""我也没指望{Galatia}的现任院长能在她的岗位上呆多久。考虑一下你愿意和谁合作。""","gaKA_ttOffer:""你是在给我开价吗?""
+gaKA_ttAppreciate:""我可不喜欢被监视。""
+gaKA_ttLeaveToBar:""知道了。谢谢你的饮料。""}(离开)",
+gaKA_ttOfferSel,DialogOptionSelected,$option == gaKA_ttOffer,,"接下来的很长一段时间对方都没有做出任何回应。然后特工的微笑又出现了。
+
+""我很高兴您能接受这个建议，""{$heOrShe}说，然后站了起来。""我敢肯定公司会和您保持联络的。谢谢您的时间，$playerName。 我相信您会继续尊重我们在速子科技的领地 以及其他地方培育的 商业友好环境。""
+
+速子科技特工消失在阴影中。你看着你那杯没碰过的饮料，一个气泡缓缓地上升，并在触及液面时破裂了。",gaKA_ttLeaveToBar:返回酒吧,
+gaKA_ttAppreciateSel,DialogOptionSelected,$option == gaKA_ttAppreciate,,"特工又一次露出了{$heOrShe}那完美的微笑。
+
+""进入速子科技领地的行为表明您已经同意了某些条款和条件，您明白我在说什么。此外，""{$heOrShe}维持着微笑。""考虑到一直以来的伙伴关系，我认为您了解的远不止于此。""","gaKA_ttNothing:保持沉默
+gaKA_ttBaird:""这是关于{Baird}和{Galatia}学院的事?}还是{Gargoyle}?}又或者{Arroyo}?""
+gaKA_ttLeaveToBar:""知道了。谢谢你的饮料。""}(离开)",
+gaKA_ttNothingSel,DialogOptionSelected,$option == gaKA_ttNothing,,"$HeOrShe}站了起来，用{$hisOrHer的}眼睛俯视着你:}""速子科技公司感谢您的合作，并祝您一路平安。我相信您会继续尊重我们在速子科技的领地以及其他地方培育的商业友好环境。""
+
+速子科技特工消失在阴影中。你看着你那杯没碰过的饮料，一个气泡缓缓地上升，并在触及液面时破裂了。",gaKA_ttLeaveToBar:返回酒吧,
+gaKA_ttBairdSel,DialogOptionSelected,$option == gaKA_ttBaird,AdjustRepActivePerson INHOSPITABLE -5,"特工看上去很紧张，$hisOrHer的}淡定消失无踪，东张西望起来，让你感觉四处都有眼线。
+
+""够了，舰长。""{$heOrShe}把声音提高了一些，打断了你的话，""我想我们都说完了。""{$HeOrShe}站了起来，用{$hisOrHer的}眼睛俯视着你:}""速子科技公司感谢您的合作，并祝您一路平安。""
+
+速子科技特工消失在阴影中。你看着你那杯没碰过的饮料，一个气泡缓缓地上升，并在触及液面时破裂了。",gaKA_ttLeaveToBar:返回酒吧,
+# Hegemony agent encounter,,,,,,
+gaKA_hegemonyVisitEvent,DialogOptionSelected,"$faction.id == hegemony
+$global.gaKA_hegemonyVisit score:1000
+$option == marketVisitBar","unset $global.gaKA_hegemonyVisit
+FireBest BarShuttleDownPrintDesc
+FireBest BarPrintDesc
+BarCMD playAmbience",,gaKA_hegContinue:继续,
+gaKA_hegContinueSel,DialogOptionSelected,$option == gaKA_hegContinue,"BeginConversation heg_agent false true
+# so that the text can use person tokens - otherwise, text is added before the script runs
+FireBest GAKA_HegStart",,,
+GAKA_HegStart,GAKA_HegStart,,,"你开始扫视人群，寻找线索。当环视房间时，你注意到了一个穿着霸主制服的}$manOrWoman。$HeOrShe}在{$hisOrHer的}胸前抬起了手，同时对{$HeOrShe}身边穿着制服的民事官员说了些什么。
+
+你转过身去寻找隐藏的出口，却看到更多的霸主特工出现了—— 看他们的姿势，你猜测他们用小型武器瞄准了你的保镖，你的保镖也以同样的方式做出回应。",gaKA_hegContinue1:继续,
+gaKA_hegContinueSel1,DialogOptionSelected,$option == gaKA_hegContinue1,,"在正门，你看到了闪烁的近红外瞄准激光束，顺着光束你可以看到轻型战术外骨骼的剪影。当顾客们意识到正在发生不寻常的事情时，房间里的谈话声消失了，留下的只有全息影像发出的噪音。当你带着在太空战斗中磨练出来的直觉来处理这种情况时，时间的流动好像放缓了。
+
+顾客们以一种非常随意的方式离开了酒吧，低着头，好像他们突然想起来自己还有一个会议要参加，已经来不及喝完他们的饮料了。",gaKA_hegContinue2:继续,
+gaKA_hegContinueSel2,DialogOptionSelected,$option == gaKA_hegContinue2,,"""我为这混乱的状况道歉，$playerName 舰长。""霸主军官一边接近一边说道。$HeOrShe 有一口流利的 Eventide 学院口音，看起来是那里 最优秀的人之一。
+
+""这是规矩。""{$heOrShe}假装听天由命地说。你感觉到一群沉默的霸主特工在你身后伺机而动。霸主军官示意他们稍安勿躁，然后说:}""我们坐下来谈谈吧。让霸主请你喝一杯，那很不错，对吧?""
+
+在这件事上你似乎别无选择。在了解情况之前，你最好配合一下。",gaKA_hegContinue3:继续,
+gaKA_hegContinueSel3,DialogOptionSelected,$option == gaKA_hegContinue3,"$gaKA_goonsFirstVersion = true 0
+FireAll GAKAHegAgentHub","酒保满头大汗，把两杯酒放在你们之间的桌子上，匆匆走开了。
+
+""我相信你已经听说了{Aztlan}星系最近发生的不愉快的事，对吧?}这场数据泄露是一件可怕的事情。你是学历史的吗，舰长?}如果是的话你会明白这是可能引发战争的，所以我们非常想确保我们的调查是...结论性的。""
+
+""我们知道当时你的{$shipOrFleet}就在附近——当然，""{$heOrShe}愉快地笑了，""我并不是在指控你。我只是在想你应该会有一些爱国精神，就如任何一个遵纪守法的好公民一样，愿意报告你是否有...看到任何东西。""",,
+gaKA_hegDidntSeeOpt,GAKAHegAgentHub,!$gaKA_hegDidntSee,,,"gaKA_hegDidntSee:""我确定当时没看到任何东西，阁下。""",
+gaKA_hegHackedOpt,GAKAHegAgentHub,!$gaKA_hegHacked,,,"gaKA_hegHacked:""被你发现了。正是我黑入了{Aztlan}中继站。""",
+gaKA_hegGoonsOpt,GAKAHegAgentHub,"!$gaKA_hegGoons
+$gaKA_goonsFirstVersion",unset $gaKA_goonsFirstVersion,,"gaKA_hegGoons:""爱国精神，是吧?}只是这样的话那群打手是怎么回事?""",
+gaKA_hegGoonsOpt2,GAKAHegAgentHub,"!$gaKA_hegGoons
+!$gaKA_goonsFirstVersion",,,"gaKA_hegGoons:""那群打手是怎么回事?""",
+gaKA_hegTriTachOpt,GAKAHegAgentHub,"!$gaKA_hegTriTach
+$gaKA_hegShowTTOpt",unset $gaKA_hegShowTTOpt,,"gaKA_hegTriTach:""看起来速子科技又一次打败了你们。""",
+gaKA_hegArrestOpt,GAKAHegAgentHub,!$gaKA_hegArrest,,,"gaKA_hegArrest:""我被逮捕了吗?}没有的话我可以走了吗?""",
+gaKA_hegDidntSeeSel,DialogOptionSelected,$option == gaKA_hegDidntSee,"$gaKA_hegDidntSee = true 0
+FireAll GAKAHegAgentHub","""的确，""{$heOrShe}皱起眉头盯着你。""如果我们检查一下你的传感器日志，也许会发现一些你忽视掉的东西。""
+
+但这需要搜查令，而搜查令需要非常明确的不法行为证据。霸主当然可以凌驾于任何条件之上，他们也可以制造条件，但你知道他们的官僚机构行动缓慢。
+
+""你见过或者听说过任何叫{'Gargoyle'}的人吗?}你知道，提供信息可是有大量报酬的。""",,
+gaKA_hegHackedSel,DialogOptionSelected,$option == gaKA_hegHacked,"$gaKA_hegHacked = true 0
+$gaKA_hegShowTTOpt = true
+FireAll GAKAHegAgentHub","霸主军官皱了皱眉头。""我可不是来对严重的安全漏洞开玩笑的，舰长。我知道你名声在外，那让你十分值得关注。在霸主开始认真对待你之前，你最好低调一些。""",,
+gaKA_hegGoonsSel,DialogOptionSelected,$option == gaKA_hegGoons,"$gaKA_hegGoons = true 0
+FireAll GAKAHegAgentHub","霸主官员假笑了一下，然后对着{$hisOrHer的}袖口说了一句什么。你注意到填满房间的霸主特工消失了。""请原谅我们。我的一些...同事们对我们的会议形式提出了一些不同的建议，我也只能妥协。""
+
+$HeOrShe}自然地看了看你:}""我主张的是非正式的聊天，舰长。那样对我对你对霸主都有好处。""",,
+gaKA_hegTriTachSel,DialogOptionSelected,$option == gaKA_hegTriTach,"AdjustRep hegemony INHOSPITABLE -5
+AdjustRepActivePerson INHOSPITABLE -10","$HeOrShe}对着{$hisOrHer的}袖口说了句什么。你听到了{""浪费时间""}这样的话。
+
+霸主官员突然站了起来，撞到桌子并让一些没喝过的饮料洒了出来。""滚出这个酒吧。如果我们发现你与另一起{'神秘事件'}有关，我向你保证，我们不会再这么仁慈了。""
+
+$HeOrShe}怒气冲冲地走出了前门，酒保则面无表情地看了你一眼。","gaKA_hegLeaveSorry:""我很抱歉。""
+gaKA_hegJustLeave:径直离去",
+gaKA_hegArrestSel,DialogOptionSelected,$option == gaKA_hegArrest,"AdjustRep hegemony INHOSPITABLE -5
+AdjustRepActivePerson INHOSPITABLE -5","""你没有被捕，公民，""{$heOrShe}如此承认道，但官员的脸随着逐渐涌上的怒火变得僵硬起来，""你知道，我只是想让谈话轻松一点。霸主确保了整个星区的安全——人们能自由地贸易，生活以及生存。与霸主过去所面临的情况相比，现在是轻松的时期。舰长，不要在这里树敌。""
+
+霸主官员突然站了起来，撞到桌子并让一些没喝的饮料洒了出来。""如果我们发现你与另一起{'神秘事件'}有关，我向你保证，我们不会再这么仁慈了。把这当作官方警告吧。""
+
+$HeOrShe}大步走出了前门，酒保则面无表情地看了你一眼。","gaKA_hegLeaveSorry:""我很抱歉。""
+gaKA_hegJustLeave:径直离去",
+gaKA_hegLeaveSorrySel,DialogOptionSelected,$option == gaKA_hegLeaveSorry,,酒保缓缓摇了摇头。今天的生意没了，没什么好说的。,gaKA_hegJustLeave:离开酒吧,
+gaKA_hegJustLeaveSel,DialogOptionSelected,$option == gaKA_hegJustLeave,"EndConversation DO_NOT_FIRE
+BarCMD leaveBar",,,
+,,,,,,
+,,,,,,
+"# Finding Coureuse story mission, aka gaFC",,,,,,
+# switch mission tracks with Baird,,,,,,
+GAFCBairdGreeting_INVESTIGATE_FIKENHILD,PopulateOptions,"$id == baird
+Call $global.gaFC_ref updateData
+$gaFC_stage == INVESTIGATE_FIKENHILD score:1000
+!$global.gaFC_switchedPaths",,,10:gaFC_BairdSwitchToProbes:告诉{Baird}你想改变寻找{Coureuse}的方法,
+GAFCBairdSwitchToProbes,DialogOptionSelected,$option == gaFC_BairdSwitchToProbes,,"""哦?""你从{Baird}的语气中听不出她的态度，就好像她的决断正处于无法确定的量子叠加态一般，""如果你想改变你处理这事的方法，确保这是你的最终决定，舰长。""","gaFC_BairdSwitchToProbesFinal:""我想用探索的方法来处理这事。""
+gaFC_BairdSwitchNeverMind:""当我没说。""
+",
+GAFCBairdSwitchToProbesFinal,DialogOptionSelected,$option == gaFC_BairdSwitchToProbesFinal,"$global.gaFC_switchedPaths = true
+$global.gaFC_pickedBranchProbes = true
+Call $global.gaFC_ref updateStage
+FireAll PopulateOptions","""很好，""她说，""那就走探索的路吧。我会确保你能得到执行调整后的任务所需的资料。""
+
+Baird}把目光投向了她桌上的显示屏，读着什么东西。""舰长，我猜你没别的事了吧?""",,
+GAFCBairdGreeting_FOLLOW_THE_EXPERIMENTS,PopulateOptions,"$id == baird
+Call $global.gaFC_ref updateData
+$gaFC_stage == FOLLOW_THE_EXPERIMENTS score:1000
+!$global.gaFC_switchedPaths",,,10:gaFC_BairdSwitchToFikenhild:告诉{Baird}你想改变寻找{Coureuse}的方法,
+GAFCBairdSwitchToFikenhild,DialogOptionSelected,$option == gaFC_BairdSwitchToFikenhild,,"""哦?""你从{Baird}的语气中听不出她的态度，就好像她的决断正处于无法确定的量子叠加态一般，""如果你想改变你处理这事的方法，确保这是你的最终决定，舰长。""","gaFC_BairdSwitchToFikenhildFinal:""我想用外交谈话的方法来处理这事。""
+gaFC_BairdSwitchNeverMind:""当我没说。""
+",
+GAFCBairdSwitchToFikenhildFinal,DialogOptionSelected,$option == gaFC_BairdSwitchToFikenhildFinal,"$global.gaFC_switchedPaths = true
+$global.gaFC_pickedBranchFikenhild = true
+Call $global.gaFC_ref updateStage
+FireAll PopulateOptions","""很好，""她说，""那就走外交谈话的路吧。我会确保你能得到执行调整后的任务所需的资料。""
+
+Baird}把目光投向了她桌上的显示屏，读着什么东西。""舰长，我猜你没别的事了吧?""",,
+GAFCBairdSwitchNeverMind,DialogOptionSelected,$option == gaFC_BairdSwitchNeverMind,FireAll PopulateOptions,,,
+,,,,,,
+# gaFC Fikenhild investigation,,,,,,
+gaFCFikenhildOption,PopulateOptions,"$market.id == fikenhild
+$market.gaFC_coureuseInvestigation
+!$visitedC
+!$isPerson
+Call $global.gaFC_ref updateData",,,2:gaFC_visitFikenhild:搭乘穿梭机到地面上并寻找和{Coureuse}有关联的人。,
+gaFCFikenhildVisit,DialogOptionSelected,$option == gaFC_visitFikenhild,FireBest GAFCFikenhildVisitIntro,,,
+gaFCFikenhildVisit_stageA,GAFCFikenhildVisitIntro,!$visitedA,"Highlight ""Adonya Coureuse""
+$option = gaFC_fikenhildHub 0
+FireBest DialogOptionSelected","在波光粼粼的海面上，你的穿梭机穿过风暴云柱，航向了}""Kay-arco""，Fikenhild}的巨型生态理想城。你开始回顾{Baird}给出的与{Coureuse}有关联的人的名单，穿梭机上的阻尼力场将进入大气层的噪音减小到了耳语一般的程度。
+
+Adonya}Coureuse}是目标依然在世的家人，对方住在一个退休人员区。
+
+从她开始调查应该是合理的。",,
+gaFCFikenhildVisit_stageB,GAFCFikenhildVisitIntro,"$visitedA
+!$visitedB","Highlight ""Bione Lata""
+$option = gaFC_fikenhildHub 0
+FireBest DialogOptionSelected","你开始回顾{Baird}给出的与{Coureuse}有关联并住在{Fikenhild}上的人的名单。
+
+Bione}Lata}是目标的一位{""儿时玩伴""，住在一个远郊社区。
+
+也许她对{Scylla}Coureuse}早期的个人交际网络了解得更多。至少任何其他顺着类似线索进行追查的特工都应该联系过}Bione。",,
+gaFCFikenhildVisit_stageC,GAFCFikenhildVisitIntro,"$visitedB
+!$visitedC","Highlight ""Cavin Pharoh""
+$option = gaFC_fikenhildHub 0
+FireBest DialogOptionSelected","你开始回顾{Baird}给出的与{Coureuse}有关联并住在{Fikenhild}上的人的名单。
+
+Cavin}Pharoh}的档案里有一部分是关于下城区激进分子在某个艺术合作社举办的活动的。
+
+他似乎是那种惯于躲避当局的人。也许他，或者他认识的什么人在帮{Coureuse。你在{Cavin}的协会中浏览一些被认为是艺术品的小全息图，你通过其中的内容判断，当地的{DomSec}可能已经将{Cavin}列为追捕对象了。",,
+gaFCFikenhildVisit_over,GAFCFikenhildVisitIntro,$visitedC,"$option = gaFC_fikenhildHub 0
+FireBest DialogOptionSelected",你开始回顾{Baird}给出的与{Coureuse}有关联的人的名单。看来你已经将最有可能的线索调查完毕了。不过，你又有了有力的新线索可以追查。,,
+gaFCFikenhildHub,DialogOptionSelected,$option == gaFC_fikenhildHub,FireAll FCFikenhildHubOptions,你在交通枢纽驻足了一会，考虑着下一步该怎么走。,,
+gaFCFikenhildHubOption1,FCFikenhildHubOptions,"!$visitedA
+$global.gaFC_pickedBranchFikenhild",,,0:gaFC_visitA:拜访住在上城区的{Adonya}Coureuse。,
+gaFCFikenhildHubOption2,FCFikenhildHubOptions,"$visitedA
+!$visitedB
+$global.gaFC_pickedBranchFikenhild",,,1:gaFC_visitB:拜访远郊的{Bione}Lata。,
+gaFCFikenhildHubOption3,FCFikenhildHubOptions,"$visitedB
+!$visitedC
+$global.gaFC_pickedBranchFikenhild",,,2:gaFC_visitC:拜访位于下城区的{Cavin}Pharoh。,
+gaFCFikenhildHubOption6,FCFikenhildHubOptions,"$global.gaFC_pickedBranchFikenhild
+!$visitedC",,,10:gaFC_fikenhildLeaveEarly:返回穿梭机,
+gaFCFikenhildHubOption6b,FCFikenhildHubOptions,"$global.gaFC_pickedBranchFikenhild
+$visitedC
+#$global.gaFC_knowSiyavongContact 
+#$global.gaFC_gotZalContactFromCavin ",,,10:gaFC_fikenhildLeaveDone:返回穿梭机,
+gaFCFikenhildHubOption7,FCFikenhildHubOptions,!$global.gaFC_pickedBranchFikenhild,,,11:defaultLeave:离开,
+gaFCFikenhildLeaveEarly,DialogOptionSelected,$option == gaFC_fikenhildLeaveEarly,"$menuState = main 0
+FireAll PopulateOptions","在返回穿梭机的路上你复习了{Baird}给你提供的信息以及你自己的笔记。在质询平民这方面你并不太熟练——也许调查一下{Scylla}或她身边的人仍在{$gaFC_starName}星系中使用的探针，会发现更多详细的线索。
+
+你想起{Baird}院长告诉过你，如果你想要改变寻找{Scylla}Coureuse}的方式的话需要先知会她。",,
+gaFCFikenhildLeaveDone,DialogOptionSelected,$option == gaFC_fikenhildLeaveDone,"$menuState = main 0
+FireAll PopulateOptions","你返回了你的穿梭机，思考着你找到的线索。你感觉到你想要的答案已经近在咫尺。
+
+你停下了不耐烦地轻敲数据平板的动作;}通讯目录依然显示在屏幕上。",,
+,,,,,,
+# bother the administrator of Fikenhild,,,,,,
+gaFCFikenhildBotherAdministrator,PopulateOptions,"$postId == administrator
+$market.gaFC_coureuseInvestigation
+!$askedAboutCoureuse",,,"gaFC_fikenhildBotherA:""我在找{Scylla}Coureuse。""",
+gaFCFikenhildBotherCommander,PopulateOptions,"$postId == stationCommander
+$market.gaFC_coureuseInvestigation
+!$askedAboutCoureuse",,,"gaFC_fikenhildBotherB:""我在找{Scylla}Coureuse。""",
+gaFCFikenhildBotherA,DialogOptionSelected,$option == gaFC_fikenhildBotherA,"$askedAboutCoureuse = true
+$global.gaFC_beingConspicuous++
+AdjustRepActivePerson INHOSPITABLE -1
+FireAll PopulateOptions","""我没有叫这个名字的同事。""{$HeOrShe}看起来很生气。
+
+""我接听你的电话是因为促进与主要个体商户的星际贸易属于我的职权范围。如果你只是想找通讯ID，我建议你去找公共搜索终端。""
+
+""现在，你有什么真正的业务要谈吗?""",,
+gaFCFikenhildBotherB,DialogOptionSelected,$option == gaFC_fikenhildBotherB,"$askedAboutCoureuse = true
+$global.gaFC_beingConspicuous++
+AdjustRepActivePerson INHOSPITABLE -1
+FireAll PopulateOptions","""我并不知道那是谁。""{$HeOrShe}看起来被惹恼了，""因为我不是通讯目录。""
+
+""我来这里是为了协调英仙座联盟的民事和军事资产，以确保{Fikenhild}及本星系的安全得到保障。如果你有任何与这些问题有关的业务需要讨论，我将很乐意提供帮助。""
+
+$HeOrShe}听起来不是特别高兴，但你的外交直觉告诉你最好不要指出这一点。",,
+,,,,,,
+# ask around the bar on Fikenhild,,,,,,
+gaFCAskAroundFikenhildBarStart,AddBarEvents,"$market.id == fikenhild
+!$askedBarCoureuse
+$market.gaFC_coureuseInvestigation","AddBarEvent gaFCfikenhild_barEvent ""四处打听{Scylla}Coureuse}相关的信息"" ""这不过是瞎摸，但你依然可以试着问问这里有没有人知道关于{Scylla}Coureuse}的事""",,,
+gaFCAskAroundFikenhildBar1,DialogOptionSelected,$option == gaFCfikenhild_barEvent,"$askedBarCoureuse = true
+$global.gaFC_beingConspicuous++","你四处打听那位失踪院士的事，不断为别人买着价格适中的饮料，试图从他们的嘴里套出一些情报。这是一个太空船员聚集的酒吧，尽管太空船员们总是试着互帮互助，你却依然没法找到什么有价值的情报，你得到的更多的是对方的耸肩和道歉。
+
+一个老太空船员接过了你的饮料:}""院士，是吗?}如果你想调查不久前在{Galatia}发生的事，我建议你把话说清楚。当时霸主很快就介入了。表面上说想要搞清楚跳跃点的问题，但我听说这事的背后还有个人工智能，就像...在操纵着一切。""","backToBar:找个借口溜走
+gaFCfikenhild_barEvent2:""一个不为人知的{AI}正在策划入侵核心星区?""",
+gaFCAskAroundFikenhildBar2,DialogOptionSelected,$option == gaFCfikenhild_barEvent2,,"太空船员眨了眨眼，深深地喝了一口，然后用更小的音量开口了。""是啊，你看，如果他们有能力关闭跳跃点，他们现在需要做的就只是打开星门，砰!""
+
+对方一拳砸在桌子上，弄得几个空瓶子晃来晃去。
+
+""入侵舰队!}他们已经为此准备了两百年。看，这都说得通了——在星门关闭的那一刻，卢德的家伙们都消失了，你知道这意味着什么吗?""","backToBar:找个借口溜走
+gaFCfikenhild_barEvent3:""卢德和{AI}搞在了一起?""",
+gaFCAskAroundFikenhildBar3,DialogOptionSelected,$option == gaFCfikenhild_barEvent3,,"太空船员又喝了一口，接着说:}""正是如此，时机太完美了，明白吗?}卢德和他们一起开始了这一切，鼓吹我们应该抛弃我们的科技。你明白了吗?""
+
+太空船员有些不安地环顾四周，然后低下头，说话的声音已经几乎是耳语了。
+
+""他们在为入侵我们做准备。我们关停了他们的工厂，船只，武器然后又到工厂，""对方转着一根手指，向你展示着这个可怕的循环。""你明白了?}因为你——如果你仔细思考，那种{'卢德从未被全息影像捕捉到'}的说法，至少我是明白了一些东西。卢德就是一个人工智能，是那群人工智能之一。它们让我们误入歧途。你知道这意味着什么吗?""","backToBar:找个借口溜走
+gaFCfikenhild_barEvent4:""领导人们其实都是机器人?""",
+gaFCAskAroundFikenhildBar4,DialogOptionSelected,$option == gaFCfikenhild_barEvent4,,太空船员又喝了一大口，喝光了杯子里的酒，然后带着期待的目光看着你。,"backToBar:找个借口溜走
+gaFCfikenhild_barEvent5:继续给太空船员买酒",
+gaFCAskAroundFikenhildBar5,DialogOptionSelected,$option == gaFCfikenhild_barEvent5,,"酒保注意到了你，转了转眼珠，""噢，你听到的故事可是无比真实的，我敢打赌。""然后转向太空船员。""你!}我跟你说过，不交钱就别想喝酒。我不允许你到处乱讲你的疯狂故事来打扰已经付了钱的客人。滚出去!""
+
+白发苍苍的太空船员给了你一个带着歉意的微笑，敬了个礼，然后摇摇晃晃地溜走了。",backToBar:返回酒吧,
+,,,,,,
+"# gaFC Fikenhild, Adonya Coureuse",,,,,,
+gaFCFikenhildAdonya1,DialogOptionSelected,$option == gaFC_visitA,$visitedA = true,"你驻足了一会，欣赏着{Kay-arco}交通网络上那些眼花缭乱的标识，耸了耸肩，等着你的个人平板规划好去{Adonya}Coureuse}住所的最佳路线。
+
+你搭乘环道快车前往大都会的远郊，巨大的生态建筑在你眼前闪过;}在海洋下方工作的工人们搭乘着小型载客电梯踏上了回家的路途，电梯中充斥着他们身上的汗味和机油味;{Kay-arco}建筑中高塔的一部分从你眼前晃过，成千上万的窗户在阳光的照耀下闪闪发光。",gaFC_fikenhildAdonya2:继续,
+gaFCFikenhildAdonya2,DialogOptionSelected,$option == gaFC_fikenhildAdonya2,ShowPersonVisual true adonya_coureuse,"你跟着个人平板的提示穿过了一个有着层叠住宅的中心区，走过了挤满退休人员和精心照料植物的安静的广场，来到了{Adonya}Coureuse}住所的大门前。
+
+你按下了门铃，还没来得及说出来访的理由，就被邀请进去了。
+
+Adonya}对有客人来访一事非常高兴，在你还不知道发生了什么事情并做出拒绝之前，对方已经把一杯晾好的茶塞到了你手里。",gaFC_fikenhildAdonya3:继续,
+gaFCFikenhildAdonya3,DialogOptionSelected,$option == gaFC_fikenhildAdonya3,,"你刚提到她的女儿，Adonya}就滔滔不绝起来。""这女孩太聪明了，可对她来说这不是好事。就像她父亲一样。""{Adonya}回忆了一下过往并摇了摇头，但谈起{Scylla}时她还是一脸骄傲。""上次来访的人说他们的问题就到这里，他们难道一无所获?}但是看看你!""她带着赞赏的目光看着你的制服，""你也是太空舰队上来的人吧?""
+
+你设法避免回答这个问题;{Adonya}将{Westernesse}国王主持庭审的全息影像音量调低了些，但这不妨碍她在对画面中的诉讼程序评头论足和询问你的私人问题之间轻松切换:}你没有道出自己的确切年龄，也没说自己结婚与否，只是承认自己确实在指挥一支太空}$shipOrFleet。她似乎并不介意你含糊不清的回答。
+
+你终于抓住了问出你想问的问题的机会。","gaFC_fikenhildAdonyaA:""在我之前打听{Scylla}消息的是谁?""
+gaFC_fikenhildAdonyaB:""你知道{Scylla}在哪吗?""
+gaFC_fikenhildAdonyaC:确保你的行动被可能存在的间谍看到",
+gaFCFikenhildAdonyaA,DialogOptionSelected,$option == gaFC_fikenhildAdonyaA,$global.gaFC_knowFinlaysName = true,"Adonya}继续看着与{Westernesse}有关的丑闻。""那人是联盟舰队来的——又或者是{DomSec?}你们这些人总是把自己的身份信息搞得模糊不清。这就是那个新国王——一开始让人印象深刻，但如果你只取悦当地人，Kazeron}的大人物总会能抓住你的把柄，这就是我的猜测。再让这丑闻发酵一个星期，大家都会意识到}'Adonya说的是对的'。""
+
+""对了，他叫什么名字来着...Finlay}什么的?}他留下了一个通讯芯片，以防我有其他问题。我有打过去，但得到的只是自动回复，你敢信?}所以我把它扔了。让他亲自道歉吧。""她微笑着说，""我更喜欢你一些。""
+
+你愉快地点了点头。一个叫{Finlay}的探员，可能为英仙座联盟的情报机构工作。十分有趣。
+",gaFC_fikenhildAdonyaLeave:该走了,
+gaFCFikenhildAdonyaB,DialogOptionSelected,$option == gaFC_fikenhildAdonyaB,,"你等着噪音平息下来，然后以稍大的音量问出了你的问题。{Adonya}在把注意力投回全息影像前瞥了你一眼。{Westernesse}的国王正在对一群水生生物学家发表长篇大论。
+
+""这与政治有关，不是吗?""过了一会儿，Adonya}说。""{Scylla}终于惹上了大麻烦。我不止一次和她说{Cavin}是个灾星，但她说那只是{'艺术的东西'。我可能只是个唠叨的母亲，但我不笨。""她对着全息影像比了个表示强烈情绪的手势，茶从她的茶杯中溅了出来，""或许我应该狠狠地教训她一顿，那或许残忍，但至少没有人会在愚蠢的街头打斗中死去。""
+
+她叹了口气，""要是{Scylla}和{Elissa}安顿下来就好了，满足于小打小闹就好，不会弄出太大的风浪。之前我就和她父亲说过一次，他也很明智地听了我的建议。""
+","gaFC_fikenhildAdonyaB2:""{Elissa}是谁?""",
+gaFCFikenhildAdonyaB2,DialogOptionSelected,$option == gaFC_fikenhildAdonyaB2,$global.gaFC_knowElissasName = true,"""啊，你们这些衣着光鲜的间谍还没搞清那是谁?""{Adonya}看起来乐了，她笑着放下了茶，""现在你还得找个老太太帮忙?}别担心，我会告诉你的，舰长。""
+ 
+""{Elissa}Zal，是个好女孩。她本来会是{Scylla}一生的挚友。但是，""她摇了摇头，""{Galatia}学院先发来了邀请。由院长提供全额奖学金。{Sikar}很激动;}他的小科学家得到了他从未得到的机会。""
+
+她的话音渐低，脸上带着悲伤的表情。","gaFC_fikenhildAdonyaB3:""你有{Elissa}Zal}的通讯ID吗?""",
+gaFCFikenhildAdonyaB3,DialogOptionSelected,$option == gaFC_fikenhildAdonyaB3,,"""哦，让我想想，""{Adonya}说。""不...我记不起来了，已经过去了这么多年。""她向你投来了一个狡黠的微笑，""但我们可以问问。""
+
+""速子管家，""她大声说。随着{Westernesse}国王的影片被调至静音，可以提供服务的提示音从全息娱乐机器上传了出来。""请给我{Elissa}Zal}的通讯ID。""
+
+""正在搜索，""速子管家说，然后停顿了片刻，""本星系中找不到{Elissa}Zal。""
+
+Adonya}看起来很失望，喃喃着{""愚蠢的东西""。她又看了看你，""亲爱的，你还要喝茶吗?""
+
+看起来你该走了，你悄悄把{""Elissa}Zal""}这个名字加到了值得留意的人的名单上。",gaFC_fikenhildAdonyaLeave:该走了,
+gaFCFikenhildAdonyaC,DialogOptionSelected,$option == gaFC_fikenhildAdonyaC,$global.gaFC_beingConspicuous++,"你以对这住所阳台景观的称赞打断了{Adonya}对国王一个{""脑袋进水了的""}顾问的批评。{Adonya}上钩了，邀请你到户外喝茶。你踏入了阳台中，感受着拂面的海风，全息影像的音量降低到了几乎听不清的程度。
+
+对面的塔楼上有着成排的阳台和窗户。井然有序地排着队的无人机嗡嗡作响，忙着递送包裹或打扫卫生。{Adonya}解释说，与其他大厦相比，这一栋的租约条款很优厚，她还问你是否考虑过退休后去}Fikenhild。你微笑着点头，转来转去，以便让可能在拍摄的成百上千个摄像头拍下你的照片。如果真有人在监视，他们肯定会知道你来过这里。",gaFC_fikenhildAdonyaLeave:该走了,
+gaFCFikenhildAdonyaLeave,DialogOptionSelected,$option == gaFC_fikenhildAdonyaLeave,ShowDefaultVisual,"完成了你来这里的目的后，你在离开的时候向{Adonya}Coureuse}道歉，向她保证你会找到{Scylla}并确保她的安全。并且如果有任何新的线索，你绝对会告诉她。
+
+门在你身后轻轻地关上了，耳朵远离了全息影像无休止的低语和{Adonya}滔滔不绝的追问。当伸手去拿数据平板时，你发现手里还拿着一杯放凉了的茶。离开之前，你小心翼翼地把它放到了门前。",gaFC_visitFikenhild:返回交通枢纽,
