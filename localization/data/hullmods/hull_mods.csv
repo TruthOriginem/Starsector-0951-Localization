@@ -2,7 +2,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 敏捷护盾,advancedshieldemitter,0,,,"defensive, shields, merc",护盾,3000,,,,3,6,9,15,data.hullmods.AcceleratedShieldEmitter,提高舰船护盾}%s}的展开速度以及}%s}的转向速度。,提高护盾转速及展开速度.,graphics/hullmods/accelerated_shields.png
 自适应相位线圈,adaptive_coils,2,,,"phase, merc",相位,5000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AdaptivePhaseCoils,"当舰船的硬幅能水平上升时，相位线圈与正常空间保持连接的能力也会逐渐下降，并迫使线圈需更努力的获得其牵引力，从而导致最高航速大大降低。
 
-由于该修改能让线圈处理更高水平的硬幅能，从而让航速将至最低的硬幅能阈值提高}%s。相较于其他未修改的标准线圈来说，标准版硬幅能在}%s}时航速就会降至最低，而修改版则需}%s}才会降至最低。",降低硬幅能水平对最高航速的惩罚.,graphics/hullmods/phase_field.png
+由于该调整能让线圈处理更高水平的硬幅能，从而让航速将至最低的硬幅能阈值提高}%s。相较于其他未经处理的标准线圈来说，标准版硬幅能在}%s}时航速就会降至最低，而调整版则需}%s}才会降至最低。",降低硬幅能水平对最高航速的惩罚.,graphics/hullmods/phase_field.png
 先进光学器件,advancedoptics,2,,,"offensive, merc",武器,1000,,,,5,10,15,25,data.hullmods.AdvancedOptics,提高光束武器}%s}的射程，但会降低其}%s}转向速度，兼容于目标定位系统。,提高光束武器射程.,graphics/hullmods/advanced_optics.png
 高级炮塔陀螺仪,turretgyros,0,,,"defensive, merc",武器,2500,,,,2,4,6,10,data.hullmods.AdvancedTurretGyros,提高所有炮台}%s}的转向速度。,提高炮台的转向速度.,graphics/hullmods/advanced_turret_gyros.png
 炮塔装甲,armoredweapons,0,,,"defensive, merc","武器, 防御",2500,TRUE,,,3,6,9,15,data.hullmods.ArmoredWeapons,提高}%s}武器的耐久度，并降低}%s}的后坐力，但降低}%s}的转向速度。同时提高}%s}的船体装甲。,"令武器更难下线, 并降低后坐力.",graphics/hullmods/armored_weapon_emplacements.png
@@ -25,9 +25,9 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 最多可降低}%s}的船员需求。",将内置的飞行甲板改为临时货仓.,graphics/hullmods/converted_fighter_bay.png
 专注型目标锁定核心,dedicated_targeting_core,0,,,"offensive, merc",武器,2500,TRUE,,,0,0,15,25,data.hullmods.DedicatedTargetingCore,"提高实弹和能量武器射程，巡洋舰提高}%s，主力舰提高}%s。
 
-不能安装在护卫和驱逐上，也无法与 目标定位系统 同时工作。
+不能安装在护卫和驱逐上，也无法与{目标定位系统}同时工作。
 
-除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。",提高实弹和能量武器的射程.,graphics/hullmods/targeting_core.png
+除了一些特化的装配，绝大多数的战斗舰船都会选择安装{目标定位系统}而非}专注型目标锁定核心。",提高实弹和能量武器的射程.,graphics/hullmods/targeting_core.png
 电子反制组件,eccm,2,,,"offensive, defensive, merc",武器,2500,,,,5,8,15,20,data.hullmods.ECCMPackage,"降低}%s}导弹被电子反制或热诱弹拦截的概率。
 
 由计算机提供优化算法的导弹提升了}%s}的飞行速度以及}%s}的机动性。追踪能力亦得到了加强。  
@@ -66,7 +66,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",graphics/hullmods/integrated_point_defense_ai.png
 目标定位系统,targetingunit,3,,,"offensive, merc",武器,10000,,,,4,8,15,25,data.hullmods.IntegratedTargetingUnit,"根据舰船级别，提高实弹和能量武器}%s/%s/%s/%s}射程。}}不兼容于 专注型目标锁定核心。
 
-除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。","提高武器射程, 越大的舰船收益越大.",graphics/hullmods/integrated_targeting_unit.png
+除了一些特化的装配，绝大多数的战斗舰船都会选择安装{目标定位系统}而非}专注型目标锁定核心。","提高武器射程, 越大的舰船收益越大.",graphics/hullmods/integrated_targeting_unit.png
 导航中继器,nav_relay,2,,,"engines, special, merc","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据舰船级别，提高}%s/%s/%s/%s}的舰队导航评级。
 
 导航评级会提高你所部署舰船的最高航速。",提高其他舰船在战斗时的最高航速.,graphics/hullmods/nav_relay.png
