@@ -87,9 +87,9 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 ,,,,,,,
 ,,,,,,,
 散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,"在}""大崩塌""}之前，此地只不过被}人之领}的伟大项目轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",graphics/icons/markets/ruins_scattered.png,100
-普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,根据雷达上那些辐射源光点，你可以在此地找到不少发泡结构和独特的复合硬质合金轧辊，而这就是{人之领}后扩张时期努力殖民的证据。,graphics/icons/markets/ruins_widespread.png,100
+普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,根据雷达上那些辐射源光点，你可以在此地找到不少发泡结构和独特的复合硬质合金轧辊，而这就是}人之领}后扩张时期努力殖民的证据。,graphics/icons/markets/ruins_widespread.png,100
 大量的废墟,ruins_extensive,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的整个表面布满了城市的废墟，从破碎的市中心一直延伸出去，可以发现不少断裂的铁轨线，废弃工厂，水培农场以及通讯塔的骨架。,graphics/icons/markets/ruins_extensive.png,100
-巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地覆盖着巨大的废墟、城市、工厂、矿山、农场、住宅。死亡与救助物资、货物、工具以及武器交织在一起。此地正是{人之领}星系殖民化和霸权项目傲慢的坟墓。,graphics/icons/markets/ruins_vast.png,100
+巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地覆盖着巨大的废墟、城市、工厂、矿山、农场、住宅。死亡与救助物资、货物、工具以及武器交织在一起。此地正是}人之领}星系殖民化和霸权项目傲慢的坟墓。,graphics/icons/markets/ruins_vast.png,100
 ,,,,,,,
 ,,,,,,,
 寒冷,cold,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地因较低的表面温度而需要专业的设备来进行安全操作，且生命维持与基础设施也是必不可少的。,graphics/icons/markets/cold.png,25
