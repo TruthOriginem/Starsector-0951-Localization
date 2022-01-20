@@ -14,7 +14,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 废弃空间站,abandoned_station,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AbandonedStation,这处空间站已经遭到废弃。,graphics/icons/markets/abandoned.png,130
 家庭手工业,cottage_industry,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CottageIndustry,此地拥有以低技术和密集型劳动力为基础的轻工业。有机燃料与材料需求提高，提供手工制造的日用品，虽然低效但十分令人着迷。,graphics/icons/markets/cottage_industry.png,230
 前哨站,outpost,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Outpost,此地更像是一处守备站或是一艘战舰，具备一整套严苛的指挥结构。这样做尽管提高了稳定性，但需要一些人员来处理内部安全事务。,graphics/icons/markets/outpost.png,130
-卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,如果此地是由{卢德教会}掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。,graphics/icons/markets/luddic_majority.png,142
+卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,如果此地是由}卢德教会}掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。,graphics/icons/markets/luddic_majority.png,142
 感应雷区,stealth_minefields,,TRUE,com.fs.starfarer.api.impl.campaign.econ.StealthMinefields,此地的感应雷区不仅能抵御外敌入侵，也能为来访的外来商人提供了安全保障。稳定性提高。,graphics/icons/markets/stealth_mines.png,510
 地区首府,regional_capital,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RegionalCapital,一处控制安全以及后勤的主要行政中心。稳定性提高。,graphics/icons/markets/capital.png,500
 自由港,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,当地港务局不仅对所交易的商品没有任何明文规定。且相当宽松的移民管制，也让大量外来人口纷纷涌入此地，尽管某些人的移民性质非常可疑。正因如此，这也导致部分势力以不信任的态度看待着该殖民地。,graphics/icons/markets/free_port.png,141
@@ -86,7 +86,7 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 宜居,habitable,TRUE,,com.fs.starfarer.api.impl.campaign.econ.Habitable,人类能够在无需保护的情况下生存于此地的地表之上。,graphics/icons/markets/habitable.png,21
 ,,,,,,,
 ,,,,,,,
-散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,"在{""大崩塌""}之前，此地只不过被{人之领}的伟大项目轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",graphics/icons/markets/ruins_scattered.png,100
+散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,"在}""大崩塌""}之前，此地只不过被}人之领}的伟大项目轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",graphics/icons/markets/ruins_scattered.png,100
 普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,根据雷达上那些辐射源光点，你可以在此地找到不少发泡结构和独特的复合硬质合金轧辊，而这就是{人之领}后扩张时期努力殖民的证据。,graphics/icons/markets/ruins_widespread.png,100
 大量的废墟,ruins_extensive,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的整个表面布满了城市的废墟，从破碎的市中心一直延伸出去，可以发现不少断裂的铁轨线，废弃工厂，水培农场以及通讯塔的骨架。,graphics/icons/markets/ruins_extensive.png,100
 巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地覆盖着巨大的废墟、城市、工厂、矿山、农场、住宅。死亡与救助物资、货物、工具以及武器交织在一起。此地正是{人之领}星系殖民化和霸权项目傲慢的坟墓。,graphics/icons/markets/ruins_vast.png,100
