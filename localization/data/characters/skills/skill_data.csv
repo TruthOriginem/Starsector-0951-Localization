@@ -6,8 +6,8 @@ combat_endurance,战斗耐力,20,1,0,,"通过灾难，十四军团得以成长�
 通过责任，人性得以永存。",Kali Molina 海军上将 - [霸主宣言] c49,TRUE,,,,graphics/icons/skills/combat_endurance3.png,
 impact_mitigation,冲击缓解,30,2,0,,舰船的机动导致了斜向冲击角度的产生，并将弹体冲击力完全分散到泡沫金属层中。不幸的是，因为产生震荡的时机过于刁钻，船员{York}在日常运输重型机械的过程中发生了悲剧。,关于发生于 c120.03.08 的 Thule 小规模冲突，海军都统 Zhou 提交的行动后检视报告,TRUE,,,,graphics/icons/skills/impact_mitigation.png,
 damage_control,损伤管制,40,2,0,,从}Kazeron}的伟大锻炉中诞生，这艘船无疑是同类中的翘楚。我们应该珍惜这份礼物，只因其立于我们的家园和那些将要终结我们的生活方式的人之间。,海军都统 Tethys 于 PLS Astelene Key 出航仪式的讲话,TRUE,,,,graphics/icons/skills/damage_control2.png,
-field_modulation,相场调制,50,2,0,,"很少有人具有我认为的""主动调音""的天赋。我发现音乐家才是最好的外勤人员。",Ardis Soloman，将泄露的数据提交给 COMSEC 的修订算法时,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
-point_defense,点防专精,60,3,0,,"我？我对那种什么激光可不感冒。是，乱七八糟的灯光秀是很好看啊，但没什么能比火神炮阵列的贫铀弹之壁更能阻挡那些飞过来的""小亮点""了。","""下层甲板的英雄""，连载于霸主通讯",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
+field_modulation,相场调制,50,2,0,,"很少有人具有我认为的}""主动调音""}的天赋。我发现音乐家才是最好的外勤人员。",Ardis Soloman，将泄露的数据提交给 COMSEC 的修订算法时,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
+point_defense,点防专精,60,3,0,,"我？我对那种什么激光可不感冒。是，乱七八糟的灯光秀是很好看啊，但没什么能比火神炮阵列的贫铀弹之壁更能阻挡那些飞过来的}""小亮点""}了。","""下层甲板的英雄""，连载于霸主通讯",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
 target_analysis,目标解析,70,4,0,,机械协助下的人脑有能力在冲突的传感器数据和矛盾的战术指导中分析出有效方案，目标定位计算机永远无法独立代替一位战士。,"""太空战斗，第二十二卷 卷末""，来自 人之领第十四军团图书馆",TRUE,,,,graphics/icons/skills/target_analysis2.png,
 ballistic_mastery,实弹大师,80,4,0,,"是什么阻止了速子的阴谋? (大炮!)
 是什么被老卢德忘在脑后? (大炮!)
@@ -26,7 +26,7 @@ carrier_group,航母集群,550,3,0,,统计数据告诉我们他们会在完成�
 officer_training,军官训练,560,4,3,,他们或许是一群放不上台面的佣兵、走私犯、海盗，但如果你给予他们值得为之而战的事物，那我认为他们一定能还你一个惊喜。,海军都统 Nurul Park 对于 Cibolan 海军整合后的评论,,TRUE,,,graphics/icons/skills/officer_training.png,
 officer_management,军官管理,570,4,3,,战斗前景很残酷，所以我向佣兵船长们许诺了两倍的奖金。在经历伤亡后我只需要给活下来的一半人结算，一切都是算好的。,Carson Kang，速子科技 Valhalla 分舰队主管,,TRUE,,,graphics/icons/skills/officer_management.png,
 best_of_the_best,万里挑一,580,5,4,2,Artemisia，我们所拥有的，是那些你没法买到的东西。,Orcus Rao，在结束第二次 AI 战争的谈判中 (未证实),,TRUE,,,graphics/icons/skills/best_of_the_best.png,
-support_doctrine,辅助学说,590,5,4,2,不是每个学员都拥有出色的天赋或技能，甚至其两个脑细胞都很难揉在一起，但通过磨练与辐射，他们终将在秩序与纪律下毕业。,未署名的评论者，出自 Coatl 学院职员，COMSEC 档案馆,,TRUE,,,graphics/icons/skills/space_ops.png,
+support_doctrine,辅助学说,590,5,4,2,不是每个学员都拥有出色的天赋或技能，有的脑子甚至还不怎么灵光，但倘若穿凿炼狱历尽辐射，他们终将在秩序与纪律下毕业。,未署名的评论者，出自 Coatl 学院职员，COMSEC 档案馆,,TRUE,,,graphics/icons/skills/space_ops.png,
 force_concentration,力量集中,590,5,4,2,当我在我选择的时间和地点取得胜利时，历史将免除我牺牲一两个星球的责任。,海军上将 Andrada，给霸主执行委员会的致辞,,TRUE,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
 ,,,,,,,,,,,,,
 # TECHNOLOGY,,,,,,,,,,,,,
@@ -34,14 +34,14 @@ navigation,精准导航,1000,1,0,0,只要在上面花了足够的时间，这就
 sensors,传感探测,1010,1,0,0,我看见你了，小鱼儿!,ISS Green Flash 号的通讯缓存，恢复于 Beta Zuma B 的轨道上,,,,,graphics/icons/skills/sensors.png,
 gunnery_implants,火控植入,1020,2,1,0,长时间后人可能会难以区分一般的感官感觉和经过植入物调整的现实，心理健康保全员应该基于以下标准周期性地检查炮手是否患有植入物解离性障碍...},一个新的领导力框架：霸主军官手册,TRUE,,,,graphics/icons/skills/gunnery_implants.png,
 energy_weapon_mastery,能量大师,1030,2,1,0,天使之眼被发现于微不足道之地，上帝在创世时就将其藏于斯，由此其秘为无知及残酷者所揭，放出可怖及炙热之怒。我们哀叹,卢德圣典,TRUE,,,energy_weapons,graphics/icons/skills/energy_weapon_mastery.png,
-electronic_warfare,电子对抗,1040,4,2,0,"错误. 401 // 连接被拒绝 [是否重试？]
-错误. 401 // 连接被拒绝 [是否重试？]
-错误. 401 // 连接被拒绝 [是否重试？]",Celadon Immeasurable，阿尔法,,TRUE,,,graphics/icons/skills/EW.png,
-flux_regulation,幅能调节,1060,4,2,0,警告：通过改变这些设置，用户将视为放弃速子科技对于因此造成的设备损伤、人员受伤、人员死亡或其它未知后果的所有责任。您仍要继续吗？,速子科技 标准证书,,TRUE,,,graphics/icons/skills/flux_dynamics.png,
+electronic_warfare,电子对抗,1040,4,2,0,"错误. 401 // 连接被拒绝 [是否重试?]
+错误. 401 // 连接被拒绝 [是否重试?]
+错误. 401 // 连接被拒绝 [是否重试?]",Celadon Immeasurable，阿尔法,,TRUE,,,graphics/icons/skills/EW.png,
+flux_regulation,幅能调节,1060,4,2,0,警告：通过改变这些设置，用户将视为放弃速子科技对因此造成的设备损伤、人员受伤、人员死亡或其它未知后果的所有责任。您仍要继续吗？,速子科技 标准证书,,TRUE,,,graphics/icons/skills/flux_dynamics.png,
 cybernetic_augmentation,模控增强,1075,4,2,0,不要听信伦理委员会里那些哭闹的卢德份子的话。它的排斥率可远远不及传言所暗示的那样严重。,"Wyatt Cydonia ""博士"" (化名)，COMSEC 拦截员",,TRUE,,,graphics/icons/skills/cybernetic_augmentation.png,
 phase_corps,相位兵团,1070,4,2,0,速子科技每天都在试图撬开神圣的造物，每一次的亵渎都带来了对全人类的诅咒。我们的道路是艰险的。我们的道路是痛苦的。我们应该以信仰为凭对抗他们，只因救赎存于末日审判之中。,卢德左径恐怖分子 Livewell Cotton 于 c205.2.12 的布道,,TRUE,,,graphics/icons/skills/phase_corps.png,
 special_modifications,特殊改装,1080,5,,,那些人之领设计师？噢，他们的设计确实百世流传，当然没错。但看看那些舒适化设计，你就知道那些设计师可不太敢把它们的性能推到极限。,独立工程师 Luna Hexagen 于 Agreus city,,,,"npc_only, deprecated",graphics/icons/skills/special_modifications.png,
-neural_link,神经链接,1080,5,4,2,为什么舰长必须要和他们的舰船一起沉没？速子科技公司从不会浪费顶级人才。,"运营副总裁 Nereid De Jong 在 ""赫克特项目"" 揭幕仪式上的致辞",,,,,graphics/icons/skills/neural_link.png,
+neural_link,神经链接,1080,5,4,2,为什么舰长必须要和他们的舰船一起沉没？速子科技公司从不浪费顶级人才。,"运营副总裁 Nereid De Jong 在 ""赫克特项目"" 揭幕仪式上的致辞",,,,,graphics/icons/skills/neural_link.png,
 automated_ships,无人战舰,1090,5,4,2,[数据删除],霸主通信安全协议,,,,,graphics/icons/skills/automated_ships.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
@@ -50,13 +50,13 @@ bulk_transport,大宗物流,1500,1,0,,就像不能摆脱引力一样，人无法
 salvaging,打捞作业,1510,1,0,,"这让我感觉自己非常渺小，就像是在失落神使的城市里搜刮的虫豸一样。
 但这也使我富有。",Zion Hurst，Asher 打捞工会的熟练工,,,,,graphics/icons/skills/salvaging.png,
 field_repairs,现场维修,1520,1,0,,20光年内没有一艘船的船体不印着海盗标志。能带我们脱离此地的只有我们自己的技术，以及那片残骸场里能找到的任何东西。,Callisto Ibrahim，探索日志 c202.10.15,,,,,graphics/icons/skills/field_repairs.png,
-ordnance_expert,军械专家,1530,3,1,,弱者只会畏惧杀戮机器的力量，而强者则会本能地认识到它的美丽。,最高行政官语录,TRUE,,,,graphics/icons/skills/ordnance_expert2.png,
-polarized_armor,极化装甲,1540,3,1,,"您知道吗?}""大崩塌""前的手册说过永远不要这么做...}不，我不知道。但据我所知，到目前为止还没有遇到任何问题。",工程主管 Kasi Thea-Radiative，出自隐蔽式全息采访,TRUE,,,,graphics/icons/skills/polarized_armor.png,
+ordnance_expert,军械专家,1530,3,1,,弱者只会畏惧杀戮机器的力量，而强者则会本能地认识到它的美。,最高行政官语录,TRUE,,,,graphics/icons/skills/ordnance_expert2.png,
+polarized_armor,极化装甲,1540,3,1,,"""大崩塌""}前传下来的手册说千万不要这么做...}啊，我对此没什么看法。但我目前还没遇到啥问题。",工程主管 Kasi Thea-Radiative，出自隐蔽式全息采访,TRUE,,,,graphics/icons/skills/polarized_armor.png,
 containment_procedures,密闭流程,1550,4,2,,封口查三遍，死神不来见。,太空舰长俗语,,,,,graphics/icons/skills/containment_procedures.png,
 makeshift_equipment,临时设备,1560,4,2,,我们好像把备用的丢在轨道了，不过没事...}(滋滋声)...}看好了啊}——,"""H"" 探索小队的领袖 Jericho Wheeler 的音频备份转录",,,,,graphics/icons/skills/makeshift_equipment.png,
 industrial_planning,工业规划,1570,4,2,,一个荒芜但具有潜力的星球，位置便于成为}Magec}的文化和工业中心，我们的模型预计在开发}Guayota}行星环的资源上将需要大量投资。,"速子科技策略发展备忘录，""大崩塌"" 前",,,TRUE,,graphics/icons/skills/industrial_planning.png,
 derelict_contingent,废船舰队,1590,5,4,2,那些漂亮星舰里的高管和提督们觉得我们是一堆垃圾，一旦战局不妙就会抛下我们。既然这片星区是我们建立起来的，那我们也有资格将它毁灭。,不知名的海盗煽动者，出自霸主情报部监视报告,,TRUE,,player_only,graphics/icons/skills/derelict_contingent.png,
-hull_restoration,船体修复,1580,5,4,2,没有什么破烂船体能阻止一名真正的太空船员回家。,Sol Secondshift，资深打捞员,,,,,graphics/icons/skills/recovery_ops.png,
+hull_restoration,船体修复,1580,5,4,2,再破烂的船体也不能阻止一名真正的太空船员视之为家。,Sol Secondshift，资深打捞员,,,,,graphics/icons/skills/recovery_ops.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
@@ -64,7 +64,7 @@ hull_restoration,船体修复,1580,5,4,2,没有什么破烂船体能阻止一名
 # Misc non-player,,,,,,,,,,,,,
 omega_ecm,欧米伽级电子战,10000,0,,,,,,,,npc_only,graphics/icons/skills/EW.png,
 hypercognition,极化认知,10001,0,,,"一台拥有无限可能的机器可将每一份数据，每个人的想法以组合再组和的方式合成出无数的变体。只需提问，就可得到合适答案。 
-然而，我发现自己并不满足于被愚弄的证明了一个如此宏大的命题。","""通往 Gilead 的漫长之路"" 作者: 匿名",,,TRUE,"npc_only, ai_core_only",graphics/icons/skills/hypercognition.png,
+然而，我发现自己并不满足于被愚弄地证明了一个如此宏大的命题。","""通往 Gilead 的漫长之路"" 作者: 匿名",,,TRUE,"npc_only, ai_core_only",graphics/icons/skills/hypercognition.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
