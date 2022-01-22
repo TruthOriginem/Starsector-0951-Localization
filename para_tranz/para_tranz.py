@@ -48,14 +48,13 @@ class String:
     context: str = ''  # 词条的备注信息
 
     def __post_init__(self):
-        self.original = self.original.replace('/n', '\n')
-        self.translation = self.translation.replace('/n', '\n')
+        # 如果从 ParaTranz 输出的 json 导入，则需要将\\n替换回\n
+        # 本程序输出的 json 不应包含 \\n，原文中的\\n使用^n替代
+        self.original = self.original.replace('\\n', '\n')
+        self.translation = self.translation.replace('\\n', '\n')
 
     def as_dict(self) -> Dict:
-        d = dataclasses.asdict(self)
-        d['original'] = self.original.replace('\n', '/n')
-        d['translation'] = self.translation.replace('\n', '/n')
-        return d
+        return dataclasses.asdict(self)
 
 
 # 用于表示游戏原文、译文文件的抽象类
@@ -224,7 +223,8 @@ class CsvFile(DataFile):
             for col, value in dict_row.items():
                 if col:
                     # 将csv行内换行的\n替换为\r\n以避免csv写入时整个文件变成\n换行(LF)的问题
-                    value = value.replace('\n', '\r\n')
+                    # 将读取csv时使用的^n替换回\\n
+                    value = value.replace('^n', '\\n').replace('\n', '\r\n')
                     row[real_column_index[col]] = value
             rows.append(row)
         with open(self.translation_path, 'w', newline='', encoding='utf-8') as f:
@@ -242,7 +242,8 @@ class CsvFile(DataFile):
         data = []
         id_data = {}
         with open(path, 'r', errors="surrogateescape", encoding='utf-8') as csv_file:
-            csv_lines = [replace_weird_chars(l) for l in csv_file]
+            # 替换不可识别的字符，并将原文中的 \n 转换为 ^n，以与csv中的直接换行进行区分
+            csv_lines = [replace_weird_chars(l).replace('\\n', '^n') for l in csv_file]
             rows = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
