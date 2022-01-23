@@ -708,7 +708,7 @@ $global.numGatesScanned = 0","""呃。Baird教务长嘱咐我不要说出去，"
 
 她没有想太多，眼睛看向一边，轻声说道，"" 我们把它称为""双面神""装置。我承认现在给它起名还为时尚早，但是超物理学小组对此兴奋得不得了，"" 她无奈地耸了耸肩。""也不好拦住他们。""
 
-""唉，要是-"" Coureuse 注意到显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了, 该去扫描几个星们了.""
+""唉，要是-"" Coureuse 注意到显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了, 该去扫描几个星门了.""
 gaATG_getScannerMore:""你刚才是不是想说什么?""",
 gaATGgetScannerMore,DialogOptionSelected,$option == gaATG_getScannerMore,"#FireBest GAATGgetScannerMoreOptions
 FireAll GAATGgetScannerMoreOptions","她烦闷地叹了口气，看上去非常疲惫不堪。
