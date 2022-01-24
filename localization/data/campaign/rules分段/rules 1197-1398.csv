@@ -359,7 +359,7 @@ $gaKA_stage == GET_HACK_HARDWARE score:1000",ShowPersonVisual,"你输入通讯ID
 
 你的主屏幕从迷人而支离破碎的电子战场变成了一张神态夸张，顽皮地向你咧嘴笑着的脸。""喔，$playerFirstName，你找不到{Nova}Maxios 了? 让我帮帮你吧，我会给你一张婴儿都能看懂的星际地图。"" 
 
-你的个人平板响起了轻柔的铃声。
+你的{TriPad}响起了轻柔的铃声。
 
 ""读下去，读下去。找到{'M开头的Magec'。你能搞明白的!}我相信你。""{Gargoyle}转过身去并挥手示意你离开，接着你的通讯链接自动断开了。",cutCommLinkNoText:继续,
 "# Talk to Gargoyle after got transmitter, not installed",,,,,,
@@ -685,10 +685,10 @@ gaFCAskAroundFikenhildBar5,DialogOptionSelected,$option == gaFCfikenhild_barEven
 白发苍苍的太空船员给了你一个带着歉意的微笑，敬了个礼，然后摇摇晃晃地溜走了。",backToBar:返回酒吧,
 ,,,,,,
 "# gaFC Fikenhild, Adonya Coureuse",,,,,,
-gaFCFikenhildAdonya1,DialogOptionSelected,$option == gaFC_visitA,$visitedA = true,"你驻足了一会，欣赏着{Kay-arco}交通网络上那些眼花缭乱的标识，耸了耸肩，等着你的个人平板规划好去{Adonya}Coureuse}住所的最佳路线。
+gaFCFikenhildAdonya1,DialogOptionSelected,$option == gaFC_visitA,$visitedA = true,"你驻足了一会，欣赏着{Kay-arco}交通网络上那些眼花缭乱的标识，耸了耸肩，等着你的{TriPad}规划好去{Adonya}Coureuse}住所的最佳路线。
 
 你搭乘环道快车前往大都会的远郊，巨大的生态建筑在你眼前闪过;}在海洋下方工作的工人们搭乘着小型载客电梯踏上了回家的路途，电梯中充斥着他们身上的汗味和机油味;{Kay-arco}建筑中高塔的一部分从你眼前晃过，成千上万的窗户在阳光的照耀下闪闪发光。",gaFC_fikenhildAdonya2:继续,
-gaFCFikenhildAdonya2,DialogOptionSelected,$option == gaFC_fikenhildAdonya2,ShowPersonVisual true adonya_coureuse,"你跟着个人平板的提示穿过了一个有着层叠住宅的中心区，走过了挤满退休人员和精心照料植物的安静的广场，来到了{Adonya}Coureuse}住所的大门前。
+gaFCFikenhildAdonya2,DialogOptionSelected,$option == gaFC_fikenhildAdonya2,ShowPersonVisual true adonya_coureuse,"你跟着{TriPad}的提示穿过了一个有着层叠住宅的中心区，走过了挤满退休人员和精心照料植物的安静的广场，来到了{Adonya}Coureuse}住所的大门前。
 
 你按下了门铃，还没来得及说出来访的理由，就被邀请进去了。
 

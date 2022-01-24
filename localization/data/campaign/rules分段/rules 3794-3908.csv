@@ -247,7 +247,7 @@ MakeOtherFleetGoAway true
 FireBest $entity.fwt_missionFailTrigger
 unset $entity.fwt_wantsThing","看起来雇佣兵{$personRank}对你接受{$hisOrHer的}条件感到有些惊讶。
 
-""真是意外之喜，舰长。这一次你让事情进行的十分顺利。要是每个人都能展现出这样的合作诚意就好了。""有那么一阵子{$HeOrShe}似乎在脑海中构架出了那样一个美好的世界，然后摇了摇{$hisOrHer}头。
+""真是意外之喜，舰长。这一次你让事情进行的十分顺利。要是每个人都能展现出这样的合作诚意就好了。""有那么一阵子{$HeOrShe}似乎在脑海中构架出了那样一个美好的世界，然后摇了摇{$hisOrHer的}头。
 
 ""十分感谢，再见。""
 

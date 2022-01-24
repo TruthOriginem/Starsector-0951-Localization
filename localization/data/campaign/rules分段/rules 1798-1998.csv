@@ -25,9 +25,9 @@ postGAFCNewArchon1,DialogOptionSelected,$option == postGAFC_newArchonAsk1,#$aske
 
 ""你看，当地的暴民无法维持秩序，而我的家族——Hannan}家族——已经在这个停滞不前的采矿营地所供养的工业上投入了大量资金，他们决定了这该由专人负责管理。""{$HeOrShe}叹息着，交叉着[$hisOrHer的}双臂，""我真幸运。""","postGAFC_newArchonAsk2:""如果你不喜欢这里，为什么不辞职呢?""
 cutCommLink:切断通讯",
-postGAFCNewArchon2,DialogOptionSelected,$option == postGAFC_newArchonAsk2,,"$PersonName}看着你: ""舰长，我敢说身处你这样的地位的人 是不会明白的。我是 Hannan 家族的一员，我承担着责任。"" $heOrShe 特别强调了 ""责任"" 这词，似乎想说这是一种贵族义务。
+postGAFCNewArchon2,DialogOptionSelected,$option == postGAFC_newArchonAsk2,,"$PersonName 看着你: ""舰长，我敢说身处你这样的地位的人 是不会明白的。我是 Hannan 家族的一员，我承担着责任。"" $heOrShe 特别强调了 ""责任"" 这词，似乎想说这是一种贵族义务。
 
-""我将按照家族的要求完成我的工作，那之后我将会担任一个更合适的职务。或许是做什么的副部长，又或许是做一名海军将领。""{$HeOrShe}微笑着说，""当然，那只会是个开始。我有理想，不像我的一些兄弟姐妹;}而为了实现理想，我必须做出牺牲——就这样。"" $PersonName 摊开 $hisOrHer的 手，暗示着 Laicaille 栖息地就是所谓的 ""牺牲"" 。","postGAFC_newArchonAsk3:""这对你来说一定不好受，不论如何感谢你的服务。""
+""我将按照家族的要求 完成我的工作，那之后 我将会担任一个 更合适的职务。或许是 做什么的副部长，又或许是 做一名海军将领。"" $HeOrShe 微笑着说，""当然，那只会 是个开始。我有理想，不像我的 一些兄弟姐妹; 而为了 实现理想，我必须 做出牺牲——就这样。"" $PersonName 摊开 $hisOrHer的 手，暗示着 Laicaille 栖息地就是所谓的 ""牺牲"" 。","postGAFC_newArchonAsk3:""这对你来说一定不好受，不论如何感谢你的服务。""
 cutCommLink:""真有意思。就这样吧，再接再厉。""}(离开)",
 postGAFCNewArchon3,DialogOptionSelected,$option == postGAFC_newArchonAsk3,,"""确实。""{$heOrShe}惆怅地望着别处，""我正在数着日子，到了重返文化和财富的中心那一天，我就能清楚自己在这里熬了多久。""
 
@@ -221,7 +221,7 @@ gaPZSellFakes1b,DialogOptionSelected,$option == gaPZSellFakes1b,"AddCredits $gaP
 $global.gaPZ_soldBlackmail = true
 Call $global.gaPZ_ref updateStage","数据传输完成后，你看到海盗在{$hisOrHer的}数据平板上浏览着勒索证据，$hisOrHer的}脸上还带着饥渴的表情，""这是...哦，太棒了，等他们看到的时候，会——""{$heOrShe}似乎注意到你还在看着，""我想我们做了一笔好买卖，舰长。不过咱们别再提这件事了，你会同意的对吧?""
 
-$personName}切断了通讯——小心翼翼地切断了通讯。",cutCommLinkNoText:切断通讯,
+$personName 切断了 通讯——小心翼翼地 切断了通讯。",cutCommLinkNoText:切断通讯,
 gaPZSellFakes2,DialogOptionSelected,$option == gaPZSellFakes2,"$global.gaPZ_soldBlackmail = true
 Call $global.gaPZ_ref updateStage","在传输数据时，你并没有花费太多精力去装出害怕的样子;}毕竟，你有你的尊严。
 
@@ -241,7 +241,7 @@ gaPZSellFakes3c,DialogOptionSelected,$option == gaPZSellFakes3c,"AddCredits $gaP
 $global.gaPZ_soldBlackmail = true
 Call $global.gaPZ_ref updateStage","数据传输完成后，你看到海盗在{$hisOrHer的}数据平板上浏览着勒索证据，$hisOrHer的}脸上还带着饥渴的表情，""这是...哦，太棒了，等他们看到的时候，会——""{$heOrShe}似乎注意到你还在看着，""我想我们做了一笔好买卖，舰长。不过咱们别再提这件事了，你会同意的对吧?""
 
-$personName}切断了通讯——小心翼翼地切断了通讯。",cutCommLinkNoText:继续,
+$personName 切断了 通讯——小心翼翼地 切断了通讯。",cutCommLinkNoText:继续,
 # returned to Arroyo after selling the fakes,,,,,,
 gaPZReturnToArroyo,PickGreeting,"$isPerson
 $id == arroyo
@@ -297,9 +297,9 @@ gaPZ_adminAstraia1,DialogOptionSelected,$option == gaPZ_adminAstraia1,,"你询�
 你想起来他手边放着的显示屏上有着你净资产的数据，不难推测{$heOrShe}似乎在等你出价，这么看来这个所谓的{""隐私准则""}十分的灵活。","gaPZ_adminAstraia2a:""这只是普通的商业合作，不是吗?}让我在速子科技的通讯网络上添加一下你...""
 gaPZ_adminAstraia3a:""也许一些慷慨的小费会让事情顺利些?""
 cutCommLink:找个借口关闭通讯链接",
-gaPZ_adminAstraia2a,DialogOptionSelected,$option == gaPZ_adminAstraia2a,,"你激活了你的个人数据平板，并进入了速子科技乏味的专业服务网络。当你和 $personName 进行闲聊时，你找到了 $hisOrHer的 公共档案，将 $himOrHer 添加为了合作伙伴，并将 能找到的评级全都打到了 最高级别。
+gaPZ_adminAstraia2a,DialogOptionSelected,$option == gaPZ_adminAstraia2a,,"你激活了你的 个人数据平板，并进入了 速子科技 乏味的专业服务网络。当你和 $personName 进行闲聊时，你找到了 $hisOrHer的 公共档案，将 $himOrHer 添加为了合作伙伴，并将 能找到的评级全都打到了 最高级别。
 
-""喔，舰长，您真是太慷慨了，"" $personName 说，""既然我们 已经是官方合作伙伴了，我非常愿意 就您感兴趣的前雇员问题 提供快速咨询服务...虽然 我的费用并不低。""
+""喔，舰长，您真是太慷慨了，"" $personName 说，""既然我们 已经是官方合作伙伴了，我非常愿意 就您感兴趣的 前雇员问题 提供快速咨询服务...虽然 我的费用并不低。""
 
 说得好听，其实这就是贿赂，你俩心知肚明。","gaPZ_adminAstraia3a:""当然，那么费用是...?""
 cutCommLink:找个借口关闭通讯链接",
@@ -307,7 +307,7 @@ gaPZ_adminAstraia3a,DialogOptionSelected,$option == gaPZ_adminAstraia3a,"Highlig
 DoCanAffordCheck $gaPZ_culannBribe gaPZ_adminAstraia4a","""{$gaPZ_CulannBribe}个星币，通过这个{UID}预付到我的账户。""当你的数据平板发出轻柔的响声提醒你收到付款所需要的账户信息时，管理员说道。$personName}恢复了 灿烂的笑容，等待你的回复。","gaPZ_adminAstraia4a:支付}""服务费用""
 gaPZ_adminAstraia4aNeg:""从各方面考虑，你不会认为...""}(讨价还价)
 cutCommLink:找个借口关闭通讯链接",
-gaPZ_adminAstraia4aNeg,DialogOptionSelected,$option == gaPZ_adminAstraia4aNeg,,"$personName}在你还没来得及 完整地说出谈判开场白之前 就打断了你: ""舰长，我的收费 已经相当低廉了，这是考虑到 我们特殊的商业合作关系 而做出的折扣。"" 微笑还在，但 $hisOrHer的 眼睛告诉你，再说些不相干的话， 你就该出局了。","gaPZ_adminAstraia4a:支付}""服务费用""
+gaPZ_adminAstraia4aNeg,DialogOptionSelected,$option == gaPZ_adminAstraia4aNeg,,"$personName 在你还没来得及 完整地说出 谈判开场白之前 就打断了你: ""舰长，我的收费 已经相当低廉了，这是考虑到 我们特殊的商业合作关系 而做出的折扣。"" 微笑还在，但 $hisOrHer的 眼睛告诉你，再说些不相干的话， 你就该出局了。","gaPZ_adminAstraia4a:支付}""服务费用""
 cutCommLink:找个借口关闭通讯链接",
 gaPZ_adminAstraia4a,DialogOptionSelected,$option == gaPZ_adminAstraia4a,AddCredits -$gaPZ_culannBribe,"""太棒了，""当你看到{$hisOrHer的}眼睛读着转账确认时，管理员说，""让我调出{Kelise}Astraia}的档案...啊，在这儿。""{$heOrShe}的话语带着一瞬的迟疑。
 
@@ -340,7 +340,7 @@ gaPZKnightOpenComm,OpenCommLink,"$entity.gaPZ_rogueKnight score:1000
 Call $global.gaPZ_ref updateData","$entity.ignorePlayerCommRequests = true
 $player.gaPZ_metRogueKnight = true","通讯先是闪烁了一会，然后稳定下来，一个卢德骑士严肃的脸出现在你的面前，上边还点缀着全息通讯噪点。
 
-""你在这里，就像{Cotton}修士所说的，""{$heOrShe}说，""现在我见到 $playername ，右执 卢德的锤，左仗 卢德的剑。 你会忏悔，离开误入的歧途， 走向卢德赐福的路吗?""
+""你在这里，就像 Cotton 修士 所说的，"" $heOrShe 说，""现在我见到 $playername ，右执 卢德的锤，左仗 卢德的剑。 你会忏悔，离开误入的 歧途，走向 卢德赐福的路吗?""
 
 {$hisOrHer的}话语背后似乎有一些难以抑制的期待，就像多年来累积的愤怒凝聚成的一股更加纯净的力量。","gaPZ_rk1:""哈?}你哪位?""
 gaPZ_rkFollowPath:""我当悔过，应主之号召。""

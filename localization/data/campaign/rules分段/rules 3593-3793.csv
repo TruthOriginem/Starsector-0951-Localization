@@ -47,7 +47,7 @@ FireBest DialogOptionSelected
 unset $extr_skipBarIntercept",,,
 extr_barPickUp,DialogOptionSelected,$option == extr_pickUp,"SetStoryOption extr_storyOption general ""与对方协商和平移交目标""
 Highlight $extr_storyCost
-DoCanAffordCheck $extr_storyCost extr_storyOption false","你接受了通讯请求。一个声音从你个人平板的静态显示器中发出。
+DoCanAffordCheck $extr_storyCost extr_storyOption false","你接受了通讯请求。一个声音从你{TriPad}的静态显示器中发出。
 
 ""$playerName 舰长。我知道 你来这里的真正原因，我相信 我们可以私下解决这个问题， 但出于政治考虑， 我必须保持匿名。""
 
@@ -110,7 +110,7 @@ Call $extr_ref updateData
 $extr_variation == LUDDIC_PATH_BASE
 FireBest GenericMissionReturn","ShowPersonVisual
 $extr_completed = true
-Call $extr_ref updateStage","""干得好，舰长，""{$faction}$rank}说，""我必须承认，我根本没有料到我们的特工能被安全救出。左径分子...跟他们的战斗总是如此残酷。""{$HeOrShe}摇着{$hisOrHer}头。
+Call $extr_ref updateStage","""干得好，舰长，""{$faction}$rank}说，""我必须承认，我根本没有料到我们的特工能被安全救出。左径分子...跟他们的战斗总是如此残酷。""{$HeOrShe}摇着{$hisOrHer的}头。
 
 ""情报人员告诉我，我们的特工提供的信息可以让我们找到大量渗透进来的左径分子。我不会透露细节，但你知道这意味着什么。我想我不必强调你救了多少人的命。""",contact_pickAnotherGreeting:继续,
 ,,,,,,
@@ -126,7 +126,7 @@ mcbOfferTextBar,DialogOptionSelected,$option == mcb_startBar,"$missionId = mcb
 $option = mcb_showOptionsBar 0
 FireBest DialogOptionSelected","你走过去，{$rank}$personLastName}敷衍地点了点头。""舰长，""{$heOrShe}带着公事公办的语气说。
 
-""这里有几项任务要处理，""{$heOrShe}低下头，滚动着{$hisOrHer}数据平板。一杯没加糖的黑咖啡正放在{$hisOrHer}手边的桌子上晾着。""你能胜任怎么样的工作?""",,
+""这里有几项任务要处理，""{$heOrShe}低下头，用手在{$hisOrHer的}数据平板上划动着。一杯没加糖的黑咖啡正放在{$hisOrHer}手边的桌子上晾着。""你能胜任怎么样的工作?""",,
 mcbLowSel,DialogOptionSelected,$option == mcb_low,"$mcb_difficulty = LOW 0
 FireBest MCBShowBounty",,,
 mcbNormalSel,DialogOptionSelected,$option == mcb_normal,"$mcb_difficulty = NORMAL 0
@@ -157,7 +157,7 @@ CBPirate,CBPirateOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"$HeOrShe}
 ""奖励是{$bcb_reward}星币，你有{$bcb_days}天来完成这项工作，如何?""",,
 CBPirateAristo,CBPirateOfferDescAristo,$voice == aristo,Highlight $bcb_dist $bcb_reward $bcb_days,"$HeOrShe}点了点其中一个条目，列出了它的详细信息。全息通缉令上的那张脸正对你皱着眉头，
 
-""这应该是某种海盗。""{$PersonName}让 $hisOrHer 眼睛投射出一种 要生啖其肉的目光，"" $bcb_TargetHeOrShe 从我这里偷了东西， 这完全不可接受。"" $HeOrShe 向后靠了靠，一副无所谓的样子: ""当然，丢了点星币 无关紧要。重要的是 这种抢劫行为 传递的信息。我们不能让海盗 从合法拥有者那里 偷走辛苦挣来的财富。""
+""这应该是某种海盗。"" $PersonName 让 $hisOrHer的 眼睛投射出一种 要生啖其肉的目光，"" $bcb_TargetHeOrShe 从我这里偷了东西， 这完全不可接受。"" $HeOrShe 向后靠了靠，一副无所谓的样子: ""当然，丢了点星币 无关紧要。重要的是 这种抢劫行为 传递的信息。我们不能让海盗 从合法拥有者那里 偷走辛苦挣来的财富。""
 
 ""目标藏在{$bcb_systemName}中，那离这里{$bcb_dist}光年远。搞定目标后我会给你{$bcb_reward}星币，时限是}$bcb_days。我们达成共识没?""",,
 CBPather1,CBPatherOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""啊，这有份工作，""{$heOrShe}拿出一份案件档案。""卢德左径特工。跟几起爆炸，海盗之类的案子有关。{$bcb_TargetHeOrShe}藏在{$bcb_systemName}星系中，$bcb_dist}光年远。""
@@ -211,7 +211,7 @@ $personLastName}$Rank}调出了一副共享显示的图像，在大量的{[数�
 ""霸主最终决定做点什么——以非官方手段。也就是雇用像你这样的特工，""{$heOrShe}说，但语气中透出对方认为这是海军该处理的事。""奖励是{$bcb_reward}星币，考虑到了危险和你的慎重。你将有{$bcb_days}天来搞定它。""",,
 CBRemnantStation2,CBRemnantStationOfferDesc,$personFaction.id == luddic_church,Highlight $bcb_dist $bcb_reward $bcb_days,"""这是最令人不安的事情，""{$heOrShe}说着比了个代表卢德之锤的手势。""我们从一个远行的勘探者那里收到消息，说有一个余辉空间站——术语应该是}'Nexus'——正在{$bcb_systemName}中运作着，那离这里{$bcb_dist}光年。骑士团派去的远程侦察队证实了这一点。""
 
-""这种{'Nexus'}可以追溯到{AI}圣战时代。霸主认为清理它们{'成本太高'}了。""{$HeOrShe}抬起头，似乎想要引述什么，""恶将取胜，只当善因缺乏勇气，因饥肠辘辘，因四肢乏力而踌躇不前。"" $personName $Rank 重新将 $hisOrHer的 目光投向了你，那之中 充满了热情。""但教会 不能坐视不管。""
+""这种 'Nexus' 可以追溯到 AI 圣战时代。霸主认为 清理它们 '成本太高' 了。"" $HeOrShe 抬起头，似乎想要 引述什么，""恶将取胜，只当善 因缺乏勇气，因饥肠辘辘，因四肢乏力 而踌躇不前。"" $personName $Rank 重新将 $hisOrHer的 目光投向了你，那之中 充满了热情。""但教会 不能坐视不管。""
         
 ""我们没有霸主那样的舰队，而这...在对抗那些人造恶魔的战斗中，向我们摇摆不定的盟友展示我们站在道德的制高点上是不明智的。因此，教会在充分考虑风险和你的谨慎的情况下，向你提供{$bcb_reward}星币，并希望你能在{$bcb_days}内完成这个任务。""",,
 CBRemnantStation3,CBRemnantStationOfferDesc,$personFaction.id == luddic_path,Highlight $bcb_dist $bcb_reward $bcb_days,"""我们的一名卧底探员发现了霸主隐藏已久的记录。他们向大众隐瞒了一个能正常运转的余辉空间站的存在，用速子叛教者的话来说那叫}'Nexus'，它位于{$bcb_systemName}中，距离我们{$bcb_dist}光年。""
@@ -219,7 +219,7 @@ CBRemnantStation3,CBRemnantStationOfferDesc,$personFaction.id == luddic_path,Hig
 ""自伟大的{AI}圣战以来，如此腐败的堡垒一直矗立在那里，这在上帝的眼中是一种亵渎。霸主隐藏它们的存在的原因我们不得而知，但是，"" $personName $rank 带着 更大的热情 说道，""这正是 我们从神圣真空中 清除这些机器恶魔的 正义之路。""
         
 ""要是我能带领一支舰队去完成这项任务就好了 - 唉，仍在圣途中航行的战舰已经为数不多了，而要集结兵力去攻下这样一个目标会带来...不必要的关注。所以，我们舍弃了我们的荣耀，给你{$bcb_reward}星币来完成这个神圣的任务 - 在{$bcb_days}天之内，只因善者停歇之时，邪恶蠢蠢欲动。你愿意接受吗?""",,
-CBEnemyStation,CBEnemyStationOfferDesc,,Highlight $bcb_reward $bcb_dist $bcb_days,"""我们需要拿下一个敌方空间站，""{$heOrShe}用手指轻敲了几下{$hisOrHer}数据平板，看着你。""这是一项艰巨的任务，""{$heOrShe}平静地说，""但也会有相应的报酬，$bcb_reward}星币。""
+CBEnemyStation,CBEnemyStationOfferDesc,,Highlight $bcb_reward $bcb_dist $bcb_days,"""我们需要拿下一个敌方空间站，""{$heOrShe}用手指轻敲了几下{$hisOrHer的}数据平板，看着你。""这是一项艰巨的任务，""{$heOrShe}平静地说，""但也会有相应的报酬，$bcb_reward}星币。""
 
 $personName $Rank 向你展示了位于 $bcb_systemName 中的 $bcb_fleetName。"" 位于 $bcb_dist 光年外，我们希望 任务能在 $bcb_days 内完成，这样 我们的...其他工作 可以继续进行。 你不必担心那些事，只要 专注于这项任务， 就能得到报酬。你觉得 你能行吗?""",,
 ,,,,,,
@@ -267,7 +267,7 @@ $HeOrShe}拿出了一份内部海关检查命令，并附上舰队处置报告�
 
 ""给你的报酬是{$bcb_reward}星币。任务得在他们进行检查之前完成，时间很紧，你最多只有{$bcb_days}天，然后他们就会过去。听起来怎么样?""",,
 CBPatrol,CBPatrolOfferDesc,,"SetTextHighlightColors $bcb_patrolFactionColor h h h
-Highlight $bcb_patrolFaction $bcb_dist $bcb_reward $bcb_days","""看看这个大好人。""{$HeOrShe}调出了一个身穿制服的军官的全息影像。""太正直和诚实了，不知道什么时候该妥协一点，好让每个人都过的轻松些。拿钱，睁一只眼闭一只眼，不伤害不该伤害的人，对吧?"" $personName 对着固执的守法者 摇了摇 $hisOrHer的 头。
+Highlight $bcb_patrolFaction $bcb_dist $bcb_reward $bcb_days","""看看这个大好人。"" $HeOrShe 调出了一个 身穿制服的 军官的全息影像。""太 正直和诚实了，不知道 什么时候该妥协一点，好 让每个人都过的 轻松些。拿钱，睁一只眼 闭一只眼，不伤害 不该伤害的人，对吧?"" $personName 对着固执的守法者 摇了摇 $hisOrHer的 头。
 
 ""$bcb_TargetHeOrShe}正指挥着{$bcb_patrolFaction}巡逻舰队，在{$bcb_dist}光年之外{$bcb_systemName}星系的 $bcb_targetMarketName 上活动着，你能 在那里找到 $bcb_targetHimOrHer，不在的话 可以去看看 附近的跳跃点，或者是 附近的 轨道战略资产，通信中继站 等等。""
 
@@ -291,7 +291,7 @@ ShowRemainingCapacity $smug_commodityId","当你走近时，那个{$smug_manOrWo
 
 ""你，舰长。果然，诚实的人你一眼就能看出来!""{$HeOrShe}歪嘴笑了笑，""快看，""{$heOrShe}把闪烁的数据平板递到了你的手中: 那是一个货物清单，大部分是低档建筑材料，存储在另一个星系的仓库里。
 
-$HeOrShe}靠了过来，轻声解释着 数据平板上的内容，""你帮我把 $smug_quantity 个单位的 $smug_commodityName 运送到 $smug_marketName，仅在 $smug_dist 光年外， 很近。然后我会付你 $smug_reward 星币。 不涉及当局， 没有检查， 没有关税。很容易到手 的一笔钱，对吧?""","contact_acceptBar:接受
+$HeOrShe 靠了过来，轻声 解释着 数据平板上 的内容，""你帮我把 $smug_quantity 个单位的 $smug_commodityName 运送到 $smug_marketName，仅在 $smug_dist 光年外， 很近。然后我会付你 $smug_reward 星币。 不涉及当局， 没有检查， 没有关税。很容易到手 的一笔钱，对吧?""","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 smugOfferTextContact,DialogOptionSelected,$option == smug_start,"$missionId = smug
 SetTextHighlights $smug_quantity $smug_dist $smug_reward
@@ -401,7 +401,7 @@ $HeOrShe}拿起杯子喝了一点透明的饮料，然后轻触了几下{$hisOrH
 一只手拿着玻璃杯，$faction}$rank}又操作了几下{$hisOrHer的}数据平板，然后将它滑向了你。屏幕上显示着驻军人数，布防状况之类详细的情报。你查看了报告后估计你需要大约{$tabo_fuel}燃料来进行轰炸。$rank}注视着你，当你抬头时，对方扬起眉毛。""接这任务吗?""","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 taboOfferTextContact,DialogOptionSelected,$option == tabo_start,"$missionId = tabo
-Highlight $tabo_dist $tabo_reward $tabo_fuel","""我奉命雇佣一支非正规舰队，对 $tabo_dist 光年外的 $tabo_marketName 进行战术轰炸。我们知道你以前的工作 都完成得很出色， 也因此相信你 能出色地完成 这项任务，"" $heOrShe 说，""我们还 拨出了 $tabo_reward 星币 来作为你的酬劳。""
+Highlight $tabo_dist $tabo_reward $tabo_fuel","""我奉命 雇佣一支 非正规舰队，对 $tabo_dist 光年外的 $tabo_marketName 进行战术轰炸。我们知道你以前的工作 都完成得很出色， 也因此相信你 能出色地完成 这项任务，"" $heOrShe 说，""我们还 拨出了 $tabo_reward 星币 来作为你的酬劳。""
 
 $HeOrShe}轻触{$hisOrHer的}数据平板，共享的情报信息出现在了你的显示器上。你简要地浏览着情报，根据任务参数估计你需要大约{$tabo_fuel}燃料来执行轰炸任务。
 
@@ -478,7 +478,7 @@ SetTextHighlights $hijack_price","""在一个守卫薄弱的轨道船坞里，�
 contact_decline:拒绝",
 hijackBarLookAtFreighter,DialogOptionSelected,$option == hijack_lookBar,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1
-FireBest HijackNotEnoughMarines","$hijack_manOrWoman}在{$hijack_hisOrHer}的破旧个人平板上轻触了几下，目标舰船的相关数据就出现在了上面。""不错的船，不是吗?""","hijack_op1:同意
+FireBest HijackNotEnoughMarines","$hijack_manOrWoman}在{$hijack_hisOrHer}的破旧{TriPad}上轻触了几下，目标舰船的相关数据就出现在了上面。""不错的船，不是吗?""","hijack_op1:同意
 contact_declineBarNoContinue:拒绝",
 hijackLookAtFreighter,DialogOptionSelected,$option == hijack_look,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1
@@ -491,7 +491,7 @@ hijackOperation1,DialogOptionSelected,$option == hijack_op1,,"让两支队伍乘
 hijackOperation2,DialogOptionSelected,$option == hijack_op2,"RemoveCommodity credits $hijack_price
 AddShip $hijack_member
 Call $hijack_ref repSuccess
-Call $hijack_ref addContacts",你在全息影像上看到 $personName 正透过 $hisOrHer的 数据平板 咧嘴笑着，$himOrHerself 拉动了 手动对接释放器。 你的新船 从机库夹具中 挣脱了出来，它 全副武装的新船员们 在主电源上线时 操作起了舰桥控制台。,hijack_op3:继续,
+Call $hijack_ref addContacts",你在全息影像上 看到 $personName 正透过 $hisOrHer的 数据平板 咧嘴笑着，$himOrHerself 拉动了 手动对接释放器。 你的新船 从机库夹具中 挣脱了出来，它 全副武装的新船员们 在主电源上线时 操作起了舰桥控制台。,hijack_op3:继续,
 hijackOperation3Bar,DialogOptionSelected,"$option == hijack_op3
 $hijack_barEvent",,"你回到酒吧，与 $personName 畅饮着 对方喜欢用来庆祝 的烈酒。
 
@@ -516,7 +516,7 @@ contact_declineBarNoContinue:拒绝",
 jabrOfferTextContact1,DialogOptionSelected,$option == jabr_start,"$missionId = jabr
 Highlight $jabr_dist $jabr_reward $jabr_marines","""任务是从 $jabr_dist 光年外的 $jabr_marketName 上 释放目标。不留痕迹 会更好，但 事情脱离控制 也是没办法的。 任务完成后，$jabr_reward 星币 会被打进 你的账户。""
 
-""我怀疑他们已经做好了对突袭的准备，所以我想办法搞到了这个。""{$HeOrShe}按了按个人平板，你的数据平板上收到了地面防御设施以及驻军部署的详细报告。在快速浏览之后，你估计你需要{$jabr_marines}名陆战队员才能完成这次任务。","contact_accept:接受
+""我怀疑他们已经做好了对突袭的准备，所以我想办法搞到了这个。""{$HeOrShe}按了按{TriPad}，你的数据平板上收到了地面防御设施以及驻军部署的详细报告。在快速浏览之后，你估计你需要{$jabr_marines}名陆战队员才能完成这次任务。","contact_accept:接受
 contact_decline:拒绝",
 # interaction with target market,,,,,,
 jabrOpenMarket1,OpenInteractionDialog,"$market.jabr_target score:1000
@@ -536,7 +536,7 @@ DoCanAffordCheck $jabr_storyCost jabr_storyOptionBar false","你走近那位面�
 
 ""可供选择的手段很多，$playerName，"" 对方唐突 而刻意地 这么说道。""并非 每个人的所求 都完全一致的。有些人 心中十分不满， 但出于礼貌 而没有大声说出来。"" 对方的目光 闪过了门口，然后 投向了全息显示屏上 有关 $jabr_marketName 上领导干部 的新闻。
 
-""也许你会喜欢我手上的东西? ""对方长长地啜饮了一口，""这东西挺贵的，因为还有其他人也非常想得到它。价格是{$jabr_storyCost}星币。""","jabr_storyOptionBar:贿赂微笑的顾客以获得囚犯
+""也许你会喜欢我手上的东西?""对方长长地啜饮了一口，""这东西挺贵的，因为还有其他人也非常想得到它。价格是{$jabr_storyCost}星币。""","jabr_storyOptionBar:贿赂微笑的顾客以获得囚犯
 jabr_backToBar:返回酒吧",
 jabr_barStoryOptionFromBar,DialogOptionSelected,$option == jabr_storyOptionBar,"RemoveCommodity credits $jabr_storyCost
 $market.jabr_needToReturn = true
@@ -555,7 +555,7 @@ jabrMissionReturn1,PickGreeting,"$jabr_returnHere score:1000
 Call $jabr_ref updateData
 FireBest GenericMissionReturn","ShowPersonVisual
 $jabr_completed = true
-Call $jabr_ref updateStage",你个人平板的铃声响起，通知你你的首席安全官已经交出了囚犯，对方现在自由了，也许吧。,contact_pickAnotherGreeting:继续,
+Call $jabr_ref updateStage",你{TriPad}的铃声响起，通知你你的首席安全官已经交出了囚犯，对方现在自由了，也许吧。,contact_pickAnotherGreeting:继续,
 ,,,,,,
 # Dead Drop mission,,,,,,
 ddroBlurb1,ddro_blurb,,,"""我需要递送一个包裹，目的地必须保密。很简单的任务。""",,
@@ -567,7 +567,7 @@ Highlight $ddro_dist $ddro_reward","$ddro_manOrWoman}注意到了你的接近。
 
 ""让我给你件任何一个脑袋被辐射烤焦的太空船员都能做到的简单工作吧。""{$heOrShe}耸了耸肩，""但遗憾的是，很多人就是不能按照指示去做，落得个被丢出气闸的下场。""{$HeOrShe}笑了起来，好像这是个很棒的笑话。
 
-""将东西送到{$ddro_systemName}，那距离这里{$ddro_dist}光年。""{$HeOrShe}从{$hisOrHer的}外套里翻出一个个人平板，上边显示着那{$ddro_aOrAnThing}。""就这玩意儿。奖励是{$ddro_reward}星币。交货的时候不要让人看见，也不要走漏风声。""","contact_acceptBar:接受
+""将东西送到{$ddro_systemName}，那距离这里{$ddro_dist}光年。""{$HeOrShe}从{$hisOrHer的}外套里翻出一个{TriPad}，上边显示着那{$ddro_aOrAnThing}。""就这玩意儿。奖励是{$ddro_reward}星币。交货的时候不要让人看见，也不要走漏风声。""","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 ddroOfferTextContact1,DialogOptionSelected,$option == ddro_start,"$missionId = ddro
 Highlight $ddro_dist $ddro_reward","$PersonName 沉默着看了你 一会儿，然后 点了点头，似乎 很满意。
@@ -602,7 +602,7 @@ DoCanAffordCheck $sitm_price sitm_contact_acceptBar","""我在庆祝!""{$HeOrShe
 
 $HeOrShe}在太空船员们尖叫时喝下了饮料，然后看向你。""你看起来像是航行经验丰富的人，""{$heOrShe}又一次压低了{$hisOrHer的}声音。我知道{$sitm_aOrAnItem}的位置，花{$sitm_price}星币你也能知道。只要带着你的{$shipOrFleet}过去，你就能拿走它。我也想去，但我不太喜欢在深空中航行的感觉。""
 
-$HeOrShe}轻敲着{$hisOrHer}的空饮料杯，目光寻找着酒保。""感兴趣吗?""{$heOrShe}漫不经心地问道。","sitm_contact_acceptBar:接受
+$HeOrShe}轻敲着{$hisOrHer的}空饮料杯，目光寻找着酒保。""感兴趣吗?""{$heOrShe}漫不经心地问道。","sitm_contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 sitmContactMissionAcceptBar,DialogOptionSelected,$option == sitm_contact_acceptBar,"BarCMD accept $missionId
 FireBest ContactPostAccept

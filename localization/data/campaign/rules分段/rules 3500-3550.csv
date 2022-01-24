@@ -1,0 +1,151 @@
+id,trigger,conditions,script,text,options,notes
+cpmOfferOptionUW,cpm_option,$cpm_underworld,,,cpm_start:询问关于供应{$cpm_commodityName}的事,
+cpmBlurbBarUW,cpm_blurbBar,$cpm_underworld,,一个{$cpm_manOrWoman}独自坐在私人隔间里，隔间旁站着神经紧绷的保镖。他们的姿态让隔间蒙上了不祥的氛围。,,
+cpmOfferOptionBarUW,cpm_optionBar,$cpm_underworld,,,cpm_startBar:接近坐在隔间里的}$cpm_manOrWoman,
+cpmOfferTextBarUW,DialogOptionSelected,"$option == cpm_startBar
+$cpm_underworld","$missionId = cpm
+","你走近私人隔间，尽力通过姿态展示自己既重要又有人脉。这似乎奏效了;{$cpm_manOrWoman}向{$hisOrHer的}保镖挥了挥手，以示可以让你与{$himOrHer}进行会谈。
+
+""是 $playerName 舰长，不对吗?"" $HeOrShe 给 $himOrHerself 倒了一杯 桌子中央那 昂贵的 某种饮料。 ""我的 线人 说了很多 关于你的事。"" $hisOrHer 扬了扬 眉毛， ""你的成就，你的功绩。 我钦佩你 对力量的 追求。 别急着 否认，"" $heOrShe 边说 边摇晃着 杯子，"" 你做得 很好，这就是 我愿意 与你谈话 的原因。""
+
+$heOrShe}喝光了{$hisOrHer}杯中的饮料，然后说:}""我非常希望有能与你共事的机会。""","cpm_startBar2:继续
+contact_declineBarNoContinue:拒绝",
+cpmOfferTextBarUW2,DialogOptionSelected,"$option == cpm_startBar2
+$cpm_underworld","SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment
+","""我需要 一位 殖民地管理者 稳定供给 $cpm_needed 单位的 $cpm_commodityName ，不惜 一切 代价。""  
+
+""不惜一切代价。""{$HeOrShe}把{$hisOrHer的}杯子砸在桌子上以强调这一点。
+
+""我的组织 希望 能在 $cpm_missionCycles 星历年内 实现 第一次交付。 一旦 合同成立， 我会在 $cpm_contractCycles 星历年内 每月 向你支付 $cpm_monthlyPayment 星币，总计 $cpm_totalPayment 星币。""
+
+$HeOrShe 倒满了 两杯饮料。 ""合同成立 只需要 你的 口头答应。"" $HeOrShe 露出了 令人 不寒而栗的 微笑，还 推了推 眼镜。 ""这次合作 将为 我们双方 带来 巨大的 利润，$playerName。""","contact_acceptBar:接受
+contact_declineBarNoContinue:拒绝",
+cpmOfferTextContactUW,DialogOptionSelected,"$option == cpm_start
+$cpm_underworld","$missionId = cpm
+SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment","""我需要 一位 殖民地管理者 稳定供给 $cpm_needed 单位的 $cpm_commodityName ，不惜 一切 代价。 我的组织 希望 能在 $cpm_missionCycles 星历年内 实现 第一次交付。 一旦 合同成立， 我会 每月 向你支付 $cpm_monthlyPayment 星币， 我们的 合同 将持续 $cpm_contractCycles 星历年 ，你 将得到 总计 $cpm_totalPayment 星币。""
+
+""合同成立 只需要 你的 口头答应。"" $HeOrShe 说道， ""我们 可以成为 很好的 合作伙伴， $playerName， 谁 会反对 这样的 伙伴关系 呢?"" $HeOrShe 露出了 令人 不寒而栗的 微笑。","contact_accept:接受
+contact_decline:拒绝",
+# possible pirate encounter,,,,,,
+CPMPirateHail,CPMPirateHail,,$entity.ignorePlayerCommRequests = true,"""$playerName 舰长。"" 出现在 通讯显示屏上 的 海盗 $personRank 看起来 歉意十足。 ""我 会找上你 是因为 你 牵涉进了 一起 巨额的 $cpm_commodityName 运输中。 一个 匿名竞争者 想要传递 一条信息， 当然， 只是 传递给 雇佣你 的人， 你 则很快就会 殒命。 不过 出于 职业道德， 我想 我应该 让你死得 明白些。""
+
+""我想说，其实这也不坏。""{$heOrShe}耸了耸肩，""我会得到非常不错的报酬，足够让我享受不错的退休生活了。""{$HeOrShe}带着渴望的眼神叹了口气，然后训斥似的竖起了一根手指，""对了，我这任务是完成后才能收款的，所以我不可能拿着两份钱远走高飞，别想收买我。""","cutCommLink2:""我为你感到高兴，真的。""
+cutCommLink:沉默不语",
+,,,,,,
+,,,,,,
+# custom production - player orders stuff from contact,,,,,,
+cpcBlurb1,cpc_blurb,$cpc_trade,,"""由于有人取消订单，现在有几个纳米锻炉处于空闲状态。我可以为你安排一些订单;}舰船，武器，有什么要求你说就好。""",,
+cpcOfferOption1,cpc_option,$cpc_trade,,,cpc_start:询问有关纳米锻炉订单的事。,
+cpcBlurb2,cpc_blurb,$cpc_military,,"""由于战略前景的转变，海军取消了一些纳米锻炉生产订单——还留下了需要填补的预算缺口。我们可以为你安排生产军用级的产品，只要你支付费用。""",,
+cpcOfferOption2,cpc_option,$cpc_military,,,cpc_start:询问有关纳米锻炉军工订单的事。,
+cpcBlurb4,cpc_blurb,$cpc_armsDealer,,"""我的一些，呃，朋友获得了军用级舰船和武器的供应机会。我可以把你也算进去。""",,
+cpcOfferOption4,cpc_option,$cpc_armsDealer,,,cpc_start:询问有关军品供应的事,
+cpcBlurbBar1,cpc_blurbBar,$cpc_trade,,一个衣着考究的{$cpc_manOrWoman}看起来正在{TriPad}上争论着有关取消的纳米锻炉生产订单的事，似乎还提到了要尽快填补生产空缺。,,
+cpcOfferOptionBar1,cpc_optionBar,$cpc_trade,,,cpc_startBar:和那个需要出售生产机会的{$cpc_manOrWoman}谈谈,
+cpcBlurbBar2,cpc_blurbBar,$cpc_military,,在一张私人餐桌上，穿着制服的{$cpc_manOrWoman}正在向另一位顾客抱怨，说军械部门取消了一些纳米锻炉生产订单——还留下了需要填补的预算缺口。,,
+cpcOfferOptionBar2,cpc_optionBar,$cpc_military,,,cpc_startBar:向穿着制服的{$cpc_manOrWoman}提出可以将空余的军工生产机会卖给你,
+cpcBlurbBar4,cpc_blurbBar,$cpc_armsDealer,,被保镖环绕的烟雾缭绕的隔间里坐着一个}$cpc_manOrWoman，你认出此人是个臭名昭著的黑市军火商。,,
+cpcOfferOptionBar4,cpc_optionBar,$cpc_armsDealer,,,cpc_startBar:和军火商谈谈购买非法武器的事,
+cpcOfferTextContact1,DialogOptionSelected,"$option == cpc_start
+$cpc_trade","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","""空闲部分 可以负担 价值为 至多 $cpc_maxCapacity 星币 的生产需求， 我可以 让你以 $cpc_costPercent 的 基础成本 使用它们，十分合理。 当然， 蓝图 需要 由你自己 提供。""
+
+$HeOrShe}露出了一个放贷人似的笑容:}""机不可失，舰长。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
+contact_decline:拒绝",
+cpcOfferTextBar1,DialogOptionSelected,"$option == cpc_startBar
+$cpc_trade","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","当你走近时，衣着光鲜的{$manOrWoman}突然终止了通讯，察觉到你接近后，对方用评估似的目光看着你。
+
+""我想是你是个舰队指挥吧，""{$heOrShe}说着，让出了一个座位。""我猜你已经听到了我的会话内容，所以我应该不用浪费时间来陈述条件了。""
+
+""你有需求; 战舰， 武器 之类。 我可以 提供至多 $cpc_maxCapacity 星币 的纳米锻炉 生产需求， 并且 以 $cpc_costPercent 的 基础成本 来提交 你的订单。 当然， 你必须 提供 你自己的 蓝图。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
+contact_declineBarNoContinue:拒绝",
+cpcOfferTextContact2,DialogOptionSelected,"$option == cpc_start
+$cpc_military","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","""舰长， 我 不是来 推销的， 所以 我只会 简单地 说明条件，决定权 在你。 价值为 至多 $cpc_maxCapacity 星币的 生产需求， 使用金额 为 $cpc_costPercent 的 生产 基础成本， 交货 会在 $cpc_days 天内 完成。 你 买下 使用权后 ， 可以 提供 自己的 蓝图， 也能 以我的名义 下单， 即 用我的 蓝图。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
+cpc_pickContactBP:看看他们有什么蓝图
+contact_decline:拒绝",
+cpcOfferTextBar2,DialogOptionSelected,"$option == cpc_startBar
+$cpc_military","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","当你接近时，另一个人摇摇头，站了起来，试着敬了个礼后就离开了。
+
+$personRank}对你翻翻白眼后让了个座。""看起来你对我们的生产空余有兴趣，舰长。""{$heOrShe}开门见山。
+
+""推销东西 有损 我的尊严， 所以 我就 简单地 陈述条件 好了， 决定权 在你。 价值为 至多 $cpc_maxCapacity 星币的 生产需求， 使用金额 为 $cpc_costPercent 的 生产 基础成本， 交货 会在 $cpc_days 天内 完成。 你 买下 使用权后， 可以 提供 自己的 蓝图， 也能以 我的名义 下单， 即 用我的 蓝图。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
+cpc_pickContactBP:看看他们有什么蓝图
+contact_declineBarNoContinue:拒绝",
+cpcOfferTextContact4,DialogOptionSelected,"$option == cpc_start
+$cpc_armsDealer","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","""我的 供应者 可以提供 价值至多 $cpc_maxCapacity 星币的 稀有舰船 或 武器 生产机会， 你 这样的 收藏家 不会想 错过的。 当然， 定制生产的 成本 不低， 还有 中间商费用 以及 给官僚的 ..."" $heOrShe 顿了顿， 思考着 说辞， ""... 让他们 把精力 放在 别的事情上 的费用， 这么说 你能懂吧。 对了， 交货 预计 会在 $cpc_days 天内 完成。""
+
+""这是笔 不错的交易 —— 费用仅为 $cpc_costPercent 的 生产成本。 只要 你开口， 我就可以 立刻 给你一份 我们 整理好的 清单。""","cpc_pickContactBP:从清单中做出选择
+contact_decline:拒绝",
+cpcOfferTextBar4,DialogOptionSelected,"$option == cpc_startBar
+$cpc_armsDealer","$missionId = cpc
+SetTextHighlights $cpc_maxCapacity $cpc_costPercent
+DoCanAffordCheck 0 cpc_pickPlayerBP false","当你走近时，保镖们的注意力就像战舰上的目标锁定阵列一样朝你集中过来——军火商则用{$hisOrHer的}手打了个响指制止了他们。  
+
+""你一定知道我是谁，我也知道你为什么会过来，""{$heOrShe}说。""让我们像朋友一样谈谈吧。""军火商靠了过来，同时用私人立场笼罩了隔间，大幅降低了外界的声音的传入。由于空气流动变缓，时髦毒品棒上释放的烟雾开始逐步填充私人立场。
+ 
+""我可以 提供 价值为 至多 $cpc_maxCapacity 星币的 舰船 和 武器 生产需求， 所需金额 为 $cpc_costPercent 的 基础成本， 同时 我保证 交货 会在 $cpc_days 天内 完成。""
+
+$HeOrShe}把一个看上去就久经沙场的{TriPad}沿桌子滑了过来，""先看看也无妨。""","cpc_pickContactBP:看看{TriPad}里有什么
+contact_declineBarNoContinue:拒绝",
+,,,,,,
+cpcPickPlayerBP,DialogOptionSelected,$option == cpc_pickPlayerBP,Call $cpc_ref pickPlayerBP,,,
+cpcPickContactBP,DialogOptionSelected,$option == cpc_pickContactBP,Call $cpc_ref pickContactBP,,,
+cpcBPPicked,CPCBlueprintsPicked,,"$option = contact_accept 0
+FireBest DialogOptionSelected
+Call $cpc_ref repSuccess
+Call $cpc_ref addContacts",,,
+cpcBPPickedBar,CPCBlueprintsPicked,$cpc_barEvent,"$option = contact_acceptBar 0
+FireBest DialogOptionSelected
+Call $cpc_ref repSuccess
+Call $cpc_ref addContacts",,,
+,,,,,,
+# bounty on pirate fleets in a system with a pirate base / on the base itself,,,,,,
+psbBlurb,psb_blurb,,,"""当地的海盗活动猖獗，这正在削减商业活动利润。如果你能干掉一些，我们愿意提供奖励。""
+OR
+""当地海盗活动有所增加，我对官方的无所作为十分不满。我决定向那些值得信赖的人提供一笔赏金，只要他们能帮助解决这个问题。""
+OR
+""海盗在附近建立了一个基地，他们的袭击对生意很不利。如果你帮我们处理他们，我可以支付赏金。""",,
+psbOfferOption,psb_option,,,,psb_start:问问关于海盗舰队的特别赏金的事,
+psbBlurbBar,psb_blurbBar,,,一名{$psb_manOrWoman}对着新闻直播指指点点，向一名身穿当地海军巡逻队制服的军官就海盗袭击增加的事滔滔不绝。,,
+psbOfferOptionBar,psb_optionBar,,,,psb_startBar:和那个滔滔不绝的{$psb_manOrWoman}谈谈,
+psbOfferTextContact,DialogOptionSelected,$option == psb_start,"$missionId = psb
+SetTextHighlights $psb_dist $psb_baseBounty $psb_days","""条款是这样的，"" $heOrShe 说，""在 $psb_dist 光年外的 $psb_systemName 星系里 摧毁 海盗舰船 将 能得到 奖金。 每 摧毁 或 停机 一艘护卫舰 $psb_baseBounty 星币， 奖金 随船级增大 而增加 —— 请查阅 我转发的 附录 A 。赏金 将会持续 $psb_days 天。""
+ 
+$HeOrShe}停顿了片刻，$hisOrHer的}脸上掠过一丝阴暗，然后重新摆出了通常的职业姿态:}""我会很乐意看到你把他们消灭，舰长。""","contact_accept:接受
+contact_decline:拒绝",
+psbOfferTextBar,DialogOptionSelected,$option == psb_startBar,$missionId = psb,"你吸引了被猖獗的海盗活动激怒的{$psb_manOrWoman}的注意——那是星系内商贸的著名人物，$heOrShe}则称自己不过是个小小的}$personRank，只是对{""让人觉得巡逻队相较与海盗作战更热衷于收税""}的官方的不作为而感到十分失望。
+
+你点头，在对方滔滔不绝时表现出一副很关心的样子，这{$manOrWoman}的注意力就完全集中在你身上了。
+
+巡逻队员感激地看了你一眼，拿起了自己的酒，快步走向酒吧僻静的角落里。",psb_startBar2:继续,
+psbOfferTextBar2,DialogOptionSelected,$option == psb_startBar2,SetTextHighlights $psb_dist $psb_baseBounty $psb_days,"""你 是个 星舰舰长， 对吧? 我 来告诉你 我在 想什么， "" $personName 说着， 示意你 坐下。
+
+""我 和几个 关心此事的 同行 一起筹集了 一笔资金，对 $psb_dist 光年之外 $psb_systemName 星系里 或 附近的 海盗 发起悬赏。 赏金为 每艘护卫舰 $psb_baseBounty 星币， 摧毁 更大的 船体 将获得 更多奖金。 这持续 $psb_days 天 的赏金 应该能给 海盗 释放 足够强烈的 讯息， 并且，"" $heOrShe 四处张望， 似乎 要找出 巡逻队员 去了哪， 大声 嚷嚷道，"" —— 还能 指点指点 那些 关税掠夺者 如何 对付 海盗!""
+
+""你怎么看，舰长?""","contact_acceptBar:接受
+contact_declineBarNoContinue:拒绝",
+,,,,,,
+# surplus ship hull,,,,,,
+sShipBlurb,sShip_blurb,,,"""我这有艘多余的}$sShip_hullSize，军用船体，质量上乘。有兴趣吗?""",,
+sShipOfferOption,sShip_option,,,,sShip_start:问问关于那艘{$sShip_hullSize}的事,
+sShipBlurbBar,sShip_blurbBar,,,佩戴着{$sShip_rank}徽章的军官独自坐在私人客座里，冲着显示某种船体规格的数据平板直皱眉，饮料都没碰一下。,,
+sShipOfferOptionBar,sShip_optionBar,,,,sShip_startBar:和坐在私人客座里的{$sShip_rank}谈谈,
+sShipOfferTextBar,DialogOptionSelected,$option == sShip_startBar,"$missionId = sShip
+SetTextHighlights $sShip_price","""请坐。我猜是个星舰指挥?""{$HeOrShe}看到你对猜测的认同后点了点头，""再好不过。点些什么，我们来谈谈。""
+
+$HeOrShe}将数据板滑向你，""我们在港口那有一艘多的{$sShip_hullClass}$sShip_hullSize。完美的船体，良好的服役记录。就这么凿沉它是一种耻辱。""
+
+$HeOrShe 以 军官对军官 一般的 坚定目光 看着你。 ""支付 $sShip_price 星币， 我 就可以 把它 给你。""","sShip_lookBar:在数据平板上浏览船体数据
+contact_declineBarNoContinue:拒绝",
+sShipOfferTextContact,DialogOptionSelected,$option == sShip_start,"$missionId = sShip
+SetTextHighlights $sShip_price","""那 是艘 状态良好的 $sShip_hullClass $sShip_hullSize。 找到 另一个买家 不难，但 我想 先给你 开价 —— 你 出 $sShip_price 星币 就可以 买下 这艘船。""","sShip_look:询问舰船的细节
+contact_decline:拒绝",
