@@ -52,7 +52,7 @@ gaFCIsirahMercOtherDeal2,DialogOptionSelected,$option == gaFC_isirahMercOtherDea
 gaFC_isirahMercLetsDeal:""那就来谈谈你贿赂我的事吧。""
 gaFC_isirahMercGetNothing:""那你就别想从我这得到什么东西了。""",
 gaFCIsirahMercRespondThreats,DialogOptionSelected,$option == gaFC_isirahMercRespondThreats,"$threatsResponded = true
-FireAll GAFCIsirahMercHubOptions","""喔，""雇佣兵歪了歪{$hisOrHer}头，""我威胁你了吗?""",,
+FireAll GAFCIsirahMercHubOptions","""喔，""雇佣兵歪了歪{$hisOrHer的}头，""我威胁你了吗?""",,
 gaFCIsirahMercWhoWorkFor,DialogOptionSelected,$option == gaFC_isirahMercWhoWorkFor,"$whoWorkFor = true
 FireAll GAFCIsirahMercHubOptions","""我的雇主。""雇佣兵交叉着{$hisOrHer的}双臂。
 
@@ -397,7 +397,7 @@ FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，
 当执政官看完你上传的通讯日志分析报告时，{$heOrShe}脸色苍白，瞪大眼睛看着你。""这只是个小地方，{Siyavong}告诉过我没人会找过来。现在你告诉我已经有该死的左径分子溜进了栖息地里?""",,
 gaFCArchonTellRelay,DialogOptionSelected,$option == gaFC_archonTellRelay,"$toldHypercomm = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告，并向{$personLastName}执政官解释着 它们所展示的内容——你在废弃的 Groombridge 栖息地发现了一个秘密的 超空间通信中继器，它一直在定期向 Laicaille 栖息地 附近的一个中继器 发送信号，同时它还一直在接收 来自一颗离这很远的恒星 周围一系列探测器 的信号。如今这组通讯阵列已经从远端被拾荒者破坏了，所以...
+FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告，并向 $personLastName 执政官解释着 它们所展示的内容——你在废弃的 Groombridge 栖息地发现了一个秘密的 超空间通信中继器，它一直在定期向 Laicaille 栖息地 附近的一个中继器 发送信号，同时它还一直在接收 来自一颗离这很远的恒星 周围一系列探测器 的信号。如今这组通讯阵列已经从远端被拾荒者破坏了，所以...
 
 执政官脸色惨白:}""——所以海盗，甚至是左径分子，都可以...""
 
@@ -407,7 +407,7 @@ FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告�
 gaFCArchonTellRelay2,DialogOptionSelected,"$global.gaFC_ghostStory
 $option == gaFC_archonTellRelay","$toldHypercomm = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你上传了涂装辐射保护镀层的无人机记录下的传感器度数和扫描结果，并向{$personLastName}执政官解释这上边显示的是什么——你在废弃的{Groombridge}栖息地发现了一个秘密的超空间通讯中继器，它一直在向{Laicaille}栖息地附近的一个中继器周期性地传输数据，这意味着有人在使用非官方的渠道进行通讯。
+FireAll gaFCArchonConfrontOptions","你上传了涂装辐射保护镀层的无人机记录下的传感器度数和扫描结果，并向 $personLastName 执政官解释这上边显示的是什么 —— 你在废弃的 Groombridge 栖息地发现了一个秘密的 超空间通讯中继器，它一直在向 Laicaille 栖息地 附近的一个中继器 周期性地传输数据，这意味着 有人在使用非官方的 渠道进行通讯。
 
 执政官脸色苍白，""有人告诉我，英仙座联盟的一切都是光明磊落的。如果他们对我有所隐瞒，不难想象那会是怎样的事...""
 
@@ -526,7 +526,7 @@ gaFCLaicailleVisit5,DialogOptionSelected,$option == gaFC_laicailleVisit5,FireBes
 gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"Coureuse}注意到了你腋下的磷虾酱包，""那是...蓝调酒吧的{Sub-Kay?}你从哪——怎么——""","gaFC_laicailleVisit5Alamang2:""一份来自{Elissa}的礼物。""",
 gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"Coureuse}露出了由衷的喜悦微笑。""当然!}我们总是说它有多难闻，实际上对我们来说没有比它更好吃的东西了。""她接过了磷虾酱包，抚摸着它的塑料包装，沉浸在一些记忆中。接着她回过神来:}""哦，对不起，只是...昔日时光罢了。""她把那东西放到了工作台上，""请继续吧，你为什么在这里?""","gaFC_laicailleVisit6:""我有一则给你的信息。""",
 gaFCLaicailleVisit5AlamangNo,GAFCAlamangCheck2,!$global.gaFC_gotAlamangForScylla,,,"gaFC_laicailleVisit6:""我有一则给你的信息。""",
-gaFCLaicailleVisit6,DialogOptionSelected,$option == gaFC_laicailleVisit6,,"$personLastName}执政官看着你，用非语言的方式询问{$heOrShe}还呆在这是不是有些不合适。""我还是让你们俩单独谈谈吧。公民}Coureuse，我正式告知你，你现在已受到{Laicaille}行政委员会的直接保护。我们将确保你在这个空间站的安全，并且，""{$heOrShe}回头看了一眼英仙座联盟的特工，""遵照英仙座联盟宪章，确保你享有行动自由。""
+gaFCLaicailleVisit6,DialogOptionSelected,$option == gaFC_laicailleVisit6,,"$personLastName 执政官看着你，用非语言的方式询问 $heOrShe 还呆在这是不是 有些不合适。""我还是 让你们俩 单独谈谈吧。公民 Coureuse，我正式告知你， 你现在已受到 Laicaille 行政委员会的 直接保护。我们将确保你 在这个空间站的安全，并且，"" $heOrShe 回头看了一眼 英仙座联盟的特工，""遵照 英仙座联盟宪章，确保你 享有行动自由。""
 
 仿佛想起了它的存在，执政官把联盟特工的手枪塞进{$hisOrHer的}腰带里，点了点头，转身走回两拨人正在吵架的气闸中。
 
