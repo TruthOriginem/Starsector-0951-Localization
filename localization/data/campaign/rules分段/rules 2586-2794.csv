@@ -29,7 +29,7 @@ gaATGkdStationKing3,DialogOptionSelected,$option == gaATG_kdStationKing3,"
 AdjustRepActivePerson INHOSPITABLE -3","""哦，你长了好几个嘴，是吗? 马屁精，你最好注意一点。我可以在换班之前把你和你的旗舰拆成碎片。""",gaATG_kdStationKing4:将 Gargoyle 给你的电子密钥发给他,
 gaATGkdStationKing4,DialogOptionSelected,$option == gaATG_kdStationKing4,,"你按下了发送键，没有说一句话就看到这个海盗脸上的表情完全变了。
 
-""哦。家族，嗯? 没有认出你来，也没有见过你。但是，哈哈，Kanta 的人无处不在，额? 上帝啊，你应该早说的。""{$heOrShe}没有让你去吸真空的时候{$hisOrHer}声音轻柔多了。
+""哦。家族，嗯? 没有认出你来，也没有见过你。但是，哈哈，Kanta 的人无处不在，额? 上帝啊，你应该早说的。""{$heOrShe}没有让你去吸真空的时候{$hisOrHer的}声音轻柔多了。
 
 ""你知道规矩，领主不喜欢用通讯器，所以我必须给你预约一次法庭会见。到空间站上来，我会找人来接你。""",gaATG_kantaIntro1:在 Kanta's Den 着陆,
 gaATGkantaIntro1,DialogOptionSelected,$option == gaATG_kantaIntro1,"ShowDefaultVisual
@@ -37,12 +37,12 @@ EndConversation DO_NOT_FIRE","你把四名警卫和驾驶员留在穿梭机上�
 
 你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的反重力场，你怀疑这是故意所为，因为很多各种各样、各个年龄的海盗都在看着你寻找弱点，低声说着粗鄙之语，或是推搡着争夺声望。
 
-你甚至能从他们的脸上以及他们穿的无政府制服看出他们的关系{-}这是个家族式的组织。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服{-}重新漆上了杂牌颜色，以及速子科技的领巾被粗鲁地打结; 都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。",gaATG_kantaIntro2:继续走,
+你甚至能从他们的脸上以及他们穿的无政府制服看出他们的关系{-}这是个家族式的组织。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服{-}重新漆上了杂牌颜色，还戴着粗鲁打结的速子科技领巾; 都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。",gaATG_kantaIntro2:继续走,
 gaATGkantaIntro2,DialogOptionSelected,$option == gaATG_kantaIntro2,,"穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。这里的空气中弥漫着挥之不去的能量武器释放的刺激性气味，几乎能掩盖这里腐肉的臭味。
 
 你被带到一个只能被称为王座的地方前，不雅的血红色背光灯以最大功率从其后方照着。很多海军军官的军帽，奖章和徽章被刺穿在由战利品武器熔成的花簇上。你能认出其中有英仙座星区各个势力的装备。",gaATG_kantaIntro3:继续,
 gaATGkantaIntro3,DialogOptionSelected,$option == gaATG_kantaIntro3,"BeginConversation kanta false true
-$player.metKanta = true","在其上是发出嘶嘶声和嗡嗡声的领主 Jorien Kanta，她现在比起人类更像一台机器。她的脸是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
+$player.metKanta = true","在其上是发出嘶嘶声和嗡嗡声的领主 Jorien Kanta，她现在比起人类更像一台机器。她的脸就是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
 
 合成的嗓音从王座中发出，""在 Kanta面前屈服!""",gaATG_kantaIntro4:继续,
 gaATGkantaIntro4,DialogOptionSelected,$option == gaATG_kantaIntro4,"ShowSecondPerson cydonia
@@ -97,7 +97,7 @@ gaATGkantaPaymentZal2,DialogOptionSelected,$option == gaATG_kantaPaymentZal2,,"C
 ""伟大的领主会让她的宠物回来的! 由于所有其他人都失败了，这位{$playerName}，将成为她的捍卫者!""
 
 他靠近你，散发着醋的气味。",gaATG_kantaPaymentZal3:继续,
-gaATGkantaPaymentZal3,DialogOptionSelected,$option == gaATG_kantaPaymentZal3,,"Cydonia 轻快地与你说着话，眼睛里闪烁着只有他自己能看到的单词和图像。""Livewell Cotton 兄弟，一个卢德左径升起的新星，通常待在他位于 Al Gebbar 星系，Epiphany 星球的基地中。但他也可能在很多其他地方。他的一个爪牙绑架了 Kanta 的宠物{-}一个前领主 Onesimos Loke 的克隆人，也是我的作品。她想找回她的宠物。但没有其他人能够追踪到 Cotton。""
+gaATGkantaPaymentZal3,DialogOptionSelected,$option == gaATG_kantaPaymentZal3,,"Cydonia 轻快地与你说着话，眼睛里闪烁着只有他自己能看到的单词和图像。""Livewell Cotton 修士，一个卢德左径升起的新星，通常待在他位于 Al Gebbar 星系，Epiphany 星球的基地中。但他也可能在很多其他地方。他的一个爪牙绑架了 Kanta 的宠物{-}一个前领主 Onesimos Loke 的克隆人，也是我的作品。她想找回她的宠物。但没有其他人能够追踪到 Cotton。""
 
 ""她-，""他皱着眉，犹豫要不要继续透露些什么，然后让步了。""她心神不宁的。这也让事情变得... 更加困难。去完成这件事，也许你能从我这里得到 Zal，也就是那个，那个多管闲事的修理匠。""","gaATG_kantaPaymentZal4:""一言为定。""
 gaATG_kantaPaymentZal4a:""我需要一些保证。""
@@ -125,7 +125,7 @@ EndConversation NO_CONTINUE
 $global.gaATG_workingForKanta = true
 $global.gaATG_findingLoke = true
 Call $global.gaATG_ref updateStage
-$global.bairdWillTalk = true","你至少有了切入点，尽管不太有把握: Livewell Cotton 兄弟。Epiphany。Onesimos Loke 的克隆人。
+$global.bairdWillTalk = true","你至少有了切入点，尽管不太有把握: Livewell Cotton 修士。Epiphany。Onesimos Loke 的克隆人。
 
 一个纹着骷髅与弹链的海盗舰长推搡着穿过你，口里嘟哝着一些恭维的话。你的护卫紧张起来，但随着海盗和他们的护卫们不断经过，也都放松下来。他们只是做做样子，并不想打架。尽管 Kanta 或是 Cydonia 很大程度上破坏了你在海盗中的名声，但这些海盗在你践行领主 Kanta 的意志时将不再敢阻拦。",#defaultLeave:离开,
 ,,,,,,
@@ -261,10 +261,10 @@ gaATGEpiphanyAskAdministrator,PopulateOptions,"$postId == administrator
 $market.id == epiphany
 $market.gaATG_findingLoke",FireAll GAATGepiphanySearchOptions,,,
 gaATGEpiphanySearch1,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
-!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnap:""我需要找到一个被 Cotton 兄弟绑架的人。""",
+!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnap:""我需要找到一个被 Cotton 修士绑架的人。""",
 gaATGEpiphanySearch2,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
-!$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 兄弟的情报。""",
-gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 兄弟谈话。你能帮我吗?""",
+!$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 修士的情报。""",
+gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 修士谈话。你能帮我吗?""",
 gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯链接,
 gaATGEpiphanyAskLoke,DialogOptionSelected,"$option == gaATG_epiphanyAskKidnap
 !$awkwardAskForCotton ","$entity.askedForKidnapperCotton = true
@@ -300,24 +300,24 @@ gaATGEpiphanyAskCottonDecline,DialogOptionSelected,$option == gaATG_epiphanyAskC
 gaATGAskEpiphanyBarPrompt,AddBarEvents,"$market.id == epiphany
 $market.gaATG_findingLoke
 !$setUpCottonMeeting
-!$askedBarCotton","AddBarEvent gaATGEpiphany_barEvent ""到处打听一下 Cotton 兄弟"" ""你可以试着问一下是否有人知道一些关于 Cotton 兄弟的事。""",,,
+!$askedBarCotton","AddBarEvent gaATGEpiphany_barEvent ""到处打听一下 Cotton 修士"" ""你可以试着问一下是否有人知道一些关于 Cotton 修士的事。""",,,
 gaATGAskEpiphanyBarStart,DialogOptionSelected,$option == gaATGEpiphany_barEvent,"$askedBarCotton = true
 #FireAll GAFCAskLaicailleBar1Options","你用由来已久的惯常方式开启话题，向陌生人们请一轮，来庆祝一次大丰收。
 
-在这里这很难奏效; 外地人默默饮下自己的陋习以简单地掩饰自己对卢德教的否认。你作为代替选择关注那些经常与远行者做生意的 Epiphany 不信教的本地人。你随便地问起一些关于进出口贸易的机会，所有人都了解这是关于走私工作的委婉表达。然后，你顺便问了起来，你们听说过{'Cotton 兄弟'}吗? 
+在这里这很难奏效; 外地人默默饮下自己的陋习以简单地掩饰自己对卢德教的否认。你作为代替选择关注那些经常与远行者做生意的 Epiphany 不信教的本地人。你随便地问起一些关于进出口贸易的机会，所有人都了解这是关于走私工作的委婉表达。然后，你顺便问了起来，你们听说过{'Cotton 修士'}吗? 
 
 提起这个名字就像扔了一枚 EMP 炸弹一样破坏了这场对话。整张桌子上都在嘟哝着找借口离开，留下他们还没有碰触的饮品在原地。他们担心你是一个告密者，或是一个超级大傻瓜，或者两者都是。",gaATG_epiphanyBar1:继续,
 gaATGAskEpiphanyBar1,DialogOptionSelected,$option == gaATG_epiphanyBar1,,"""说出了那个名字，那就照顾好你自己，""一个老矿石商人告诉你，并拿起你赠送的饮品长饮了一口。""我知道一些人辱骂他，他们最后都死了。他到处都有耳目。他足够聪明地将科技禁令为己所用，你知道的。大多数真正的信徒们? 这些胆小鬼们被哄骗或是放空大脑{-}但并不包括他; 他已经将左径变为自己的东西并且知道如何利用它。""
 
 ""好了，""他一大口喝完了饮品，""接下来就是你了，""然后他快步离开，这时三个穿着采矿协会制服的魁梧暴徒靠近过来。","gaATG_epiphanyBarA1:""晚上，朋友。我再请一轮?""
-gaATG_epiphanyBarB1:""你们中有谁恰好认识 Cotton 兄弟吗?""
+gaATG_epiphanyBarB1:""你们中有谁恰好认识 Cotton 修士吗?""
 gaATG_epiphanyBarC1:""看来我正好需要离开了...""",
 gaATGAskEpiphanyBarA1,DialogOptionSelected,$option == gaATG_epiphanyBarA1,,"""我们拒绝异教徒的金钱贿赂，""其中一个打手说着，并向你的脚上吐了一口。其他人看起来一样对你提供的金钱不感兴趣。
 
 ""我们兄弟的好名声在这个异教徒口中变成了什么样?""第一个人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""我是来谈谈的。Cotton 会认识我。""
 gaATG_epiphanyBarPeace1:""我以为卢德教是一个和平的宗教。""
 gaATG_epiphanyBarC1:简单地向你的护卫点点头",
-gaATGAskEpiphanyBarB1,DialogOptionSelected,$option == gaATG_epiphanyBarB1,,"""Cotton 兄弟的好名声在这个异教徒口中变成了什么样?""个头最大的人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""就告诉 Cotton 我在这里。我会等着。""
+gaATGAskEpiphanyBarB1,DialogOptionSelected,$option == gaATG_epiphanyBarB1,,"""Cotton 修士的好名声在这个异教徒口中变成了什么样?""个头最大的人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""就告诉 Cotton 我在这里。我会等着。""
 gaATG_epiphanyBarC1:简单地向你的护卫点点头",
 gaATGepiphanyBarPeace1,DialogOptionSelected,$option == gaATG_epiphanyBarPeace1,"$option = gaATG_epiphanyBarC1 1
 FireBest DialogOptionSelected","""不要说先知的名字，无信仰的人，""右边的暴徒愤怒地低吼。",,
@@ -333,7 +333,7 @@ gaATGepiphanyBarTalk1b,DialogOptionSelected,$option == gaATG_epiphanyBarTalk1b,"
 FireBest DialogOptionSelected",,,
 gaATGepiphanyBarTalk1,DialogOptionSelected,$option == gaATG_epiphanyBarTalk1,,"带头的打手决心有些动摇，他转向左边。后边的人拿出一个厚重的装置，是一个手制的通讯器，然后嘟哝着询问着。它发出一种带杂音的扭曲回应声。
 
-不管说了什么，那一定是好消息。打手们明显放松了，他们中的领导者现在更像是怀疑态度，而不是敌意，说到:""Cotton 兄弟会好好利用你的。在这里见面，在下次轮班之后。""","gaATG_epiphanyBarEndWait:""我会在这里等着。""
+不管说了什么，那一定是好消息。打手们明显放松了，他们中的领导者现在更像是怀疑态度，而不是敌意，说到:""Cotton 修士会好好利用你的。在这里见面，在下次轮班之后。""","gaATG_epiphanyBarEndWait:""我会在这里等着。""
 gaATG_epiphanyBarEndLeave:""我很快就回来。""",
 gaATGepiphanyBarEndWait,DialogOptionSelected,$option == gaATG_epiphanyBarEndWait,,它们中的领导者谨慎地点了点头，一行人退回到他们自己的桌子上。你可以感觉到他们在背后盯着你。,"gaATG_epiphanyBarEndWait2a:""服务员，请给我一壶茶!""
 gaATG_epiphanyBarEndWait2b:""服务员，请那里的大绅士们喝一轮!""",
@@ -363,16 +363,16 @@ AddText ""当你走进茶馆时，店主吸引了你的目光，她放下一个�
 AddText ""\""求你听我说，\"" 她说。\""我和他以及他的人没有任何关系。你...你不能在这里拒绝他们，舰长。\""""
 AddText ""她无意中朝着一个桌子瞥了一眼，那里坐着几个穿着某个采矿协会制服的打手。他们都密切关注着你。\""后面的房间。他在等着。我- 我今天什么都没看见。\""""",,"gaATG_meetCottonStart2:去后面的房间
 gaATG_meetCottonAvoid:不去后面的房间",
-gaATGmeetCottonAvoid,DialogOptionSelected,$option == gaATG_meetCottonAvoid,"AddBarEvent gaATG_meetCottonStart2 ""去后面的房间见一见 Cotton 兄弟。"" ""左径打手们明显在公然盯着你看，他们满满的几杯茶就要凉了。""
+gaATGmeetCottonAvoid,DialogOptionSelected,$option == gaATG_meetCottonAvoid,"AddBarEvent gaATG_meetCottonStart2 ""去后面的房间见一见 Cotton 修士。"" ""左径打手们明显在公然盯着你看，他们满满的几杯茶就要凉了。""
 BarCMD showOptions",,,
 gaATGmeetCottonStart2,DialogOptionSelected,$option == gaATG_meetCottonStart2,"unset $setUpCottonMeeting
 FireBest GAATGmeetCottonMetCheck
 BeginConversation cotton",这个私人房间很简陋，昏暗，但有一个纸灯笼照在坐在你对面的人身上。当你进来时，他抬起脸，伸出手欢迎你坐下。稀疏的装饰品和家具是真正的卢德手制工艺品，你知道在很多核心世界星球这些可以卖个好价钱。,,
 gaATGmeetCottonMetYes,GAATGmeetCottonMetCheck,$player.metBrotherCotton,"$option = gaATG_meetCottonTea 0
-FireBest DialogOptionSelected","你进来的时候，Livewell Cotton 兄弟站起来微笑着。""$playerName}舰长，""他说，""听说我们的道路再次相交，这是我的荣幸。""
+FireBest DialogOptionSelected","你进来的时候，Livewell Cotton 修士站起来微笑着。""$playerName}舰长，""他说，""听说我们的道路再次相交，这是我的荣幸。""
 
 他给你一个会意的眼神，""我祈祷你思考过我们之前的讨论。""",,
-gaATGmeetCottonMetNo,GAATGmeetCottonMetCheck,!$player.metBrotherCotton,$player.metBrotherCotton = true,"""舰长{$playerName}。我是 Livewell Cotton 兄弟，很高兴见到你。自然是带着卢德和平的祝愿。""他眨了眨眼，伸出一只手。","gaATG_meetCottonShake:和他握手
+gaATGmeetCottonMetNo,GAATGmeetCottonMetCheck,!$player.metBrotherCotton,$player.metBrotherCotton = true,"""舰长{$playerName}。我是 Livewell Cotton 修士，很高兴见到你。自然是带着卢德和平的祝愿。""他眨了眨眼，伸出一只手。","gaATG_meetCottonShake:和他握手
 gaATG_meetCottonNoShake:不和他握手",
 gaATGmeetCottonShake,DialogOptionSelected,$option == gaATG_meetCottonShake,"AdjustRepActivePerson COOPERATIVE 1
 $option = gaATG_meetCottonTea 0
@@ -396,7 +396,7 @@ $player.didNotSitWithCottonCount++","他露齿笑道，""这样我就能满足�
 gaATGmeetCottonTeaSit,DialogOptionSelected,$option == gaATG_meetCottonTeaSit,"$player.satWithCottonCount++
 AdjustRepActivePerson COOPERATIVE 1
 $option = gaATG_meetCottonTeaHubStart 0
-FireBest DialogOptionSelected",你和 Cotton 兄弟，这个臭名昭著的左径恐怖分子坐了下来。,,
+FireBest DialogOptionSelected",你和 Cotton 修士，这个臭名昭著的左径恐怖分子坐了下来。,,
 gaATGmeetCottonTeaHubStart,DialogOptionSelected,$option == gaATG_meetCottonTeaHubStart,FireAll GAATGmeetCottonTeaHub,"Cotton 排出两个塑料杯，试了试茶壶的温度。
 
 ""现在我知道你为什么到这里来了。Jorien Kanta 领主送来鱼龙混杂的一群饭桶想要过早地结束我的性命，窃听到其原因并不是什么很困难的事。如果方便说的话，他们声称要回收她那邪恶的造物。""
@@ -478,13 +478,13 @@ gaATGmeetCottonCydonia2,DialogOptionSelected,$option == gaATG_meetCottonCydonia2
 $cloneQuestion = true 0
 FireAll GAATGmeetCottonTeaHub","""如果说 Loke 这样的东西一开始就贱于人类，那么 Kanta 也通过她对于愤怒和永恒的邪恶追求变成了同样的家伙。""""
 
-Cotton 兄弟又抿了一口茶，""她是霸主体系的故障部分; 是应当被扫除的废弃危害品，就如同她堡垒周围的隐形空雷一样。""",,
+Cotton 修士又抿了一口茶，""她是霸主体系的故障部分; 是应当被扫除的废弃危害品，就如同她堡垒周围的隐形空雷一样。""",,
 gaATGmeetCottonClone,DialogOptionSelected,$option == gaATG_meetCottonClone,"$askedClone = true 0
 FireAll GAATGmeetCottonTeaHub","""坐在 Kanta 鲜血与黄金的王座之中的东西，是神圣卢德教诲中最卑贱的东西，""他用手指轻敲着茶杯。""虽然一个战士不能不了解他的敌人，但我承认我并不想深入凝视那丑恶的深渊。我需要和一个 AI 核心争论吗，我需要思考它的想法吗? 不，因为它没有心，没有灵魂。两者是一样的。""
 
 ""Kanta 想要这个丑恶的东西; 我只要知道这一点就够了。""Cotton 看着你的眼睛，""你将是把这个丑恶的东西还给她的人。""",,
 gaATGmeetCottonClone2,DialogOptionSelected,$option == gaATG_meetCottonClone2,,"""是的，""他目不转睛地说，""它在这里无路可走。它的存在引发了不该被问起的问题。所以你会把它从我的人民中带走。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
-gaATGmeetCottonWish,DialogOptionSelected,$option == gaATG_meetCottonWish,,"Livewell Cotton 兄弟点了点头，出乎你的意料地简单说道，""可以。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
+gaATGmeetCottonWish,DialogOptionSelected,$option == gaATG_meetCottonWish,,"Livewell Cotton 修士点了点头，出乎你的意料地简单说道，""可以。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
 gaATGmeetCottonTaking,DialogOptionSelected,$option == gaATG_meetCottonTaking,,"Cotton 赞同地点点头，出乎你的意料地说""你确实该这么做。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
 gaATGmeetCottonExpected,DialogOptionSelected,$option == gaATG_meetCottonExpected,,"""只有我们两个，我告诉你事实。""
 
@@ -496,7 +496,7 @@ gaATGmeetCottonEnd1,DialogOptionSelected,$option == gaATG_meetCottonEnd1,,"""音
 ""然后，不久前的一天，""他犹豫地说道，看起来有些不安。""它，它又找上了我。"" 
 
 他的声音现在变得柔和了，""那一天我被告知你要来这里。这我该怎么理解呢?""",gaATG_meetCottonEnd2:继续,
-gaATGmeetCottonEnd2,DialogOptionSelected,$option == gaATG_meetCottonEnd2,,"Cotton 兄弟站起来，""我不知道那是天使的吟唱还是恶魔的主持，""他说。""我并不害怕痛苦，死亡，或是审判。但我害怕偏离我的正道。""
+gaATGmeetCottonEnd2,DialogOptionSelected,$option == gaATG_meetCottonEnd2,,"Cotton 修士站起来，""我不知道那是天使的吟唱还是恶魔的主持，""他说。""我并不害怕痛苦，死亡，或是审判。但我害怕偏离我的正道。""
 
 他调整了一下外套; 他的一个仆人打开了门，茶馆的叮当声和谈话声又回来了。
 
