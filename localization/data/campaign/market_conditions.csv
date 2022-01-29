@@ -106,7 +106,7 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 没有大气层,no_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,因此地不存在任何大气层。所以该行星就暴露在各种陨石辐射等恶劣的太空环境中。,graphics/icons/markets/atmosphere_none.png,27
 稀薄大气层,thin_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,一个稀薄的大气层依附于此地的表面。,graphics/icons/markets/atmosphere_thin.png,27
 剧毒大气层,toxic_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的大气层中充满了腐蚀性毒素，并侵蚀着毫无保护的地表，而任何居住的空间都需要进行气密封装。,graphics/icons/markets/atmosphere_toxic.png,27
-稠密大气层,dense_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。感应器在这里会受到干扰，因此执行任务时需要多加小心。,graphics/icons/markets/atmosphere_dense.png,27
+稠密大气层,dense_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。传感器在这里会受到干扰，因此执行任务时需要多加小心。,graphics/icons/markets/atmosphere_dense.png,27
 ,,,,,,,
 ,,,,,,,
 温和气候,mild_climate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.MildClimate,"此地气候舒适而平和，薄雾的消散迎接着每一轮日出，随后朝阳便退入到柔软的云层,}直至每一个落日时分，那时的太阳将散发出最令人着迷的光芒。",graphics/icons/markets/climate_mild.png,28
