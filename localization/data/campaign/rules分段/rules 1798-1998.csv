@@ -215,7 +215,7 @@ GAPZSellFakesOpts2,GAPZSellFakesOpts,,,,"gaPZSellFakes2:""喔，天啊，怎样�
 GAPZSellFakesOpts3,GAPZSellFakesOpts,,"SetStoryOption gaPZSellFakes3 general ""协商支付{Arroyo}伪造的勒索证据""",,gaPZSellFakes3:坚持让对方付款,
 gaPZSellFakes1,DialogOptionSelected,$option == gaPZSellFakes1,,"海盗靠回了椅背上，并努力尝试着给出一个会心的微笑:}""看起来这不是你第一次和像我一样聪明的人谈判了。我的...呃...威胁，只是一个诡计而已，看看你的意志坚不坚定。""
 
-""所以...呃...你通过测试了，""{$heOrShe}说着，又向前倾了倾身体。""我准备要报价了，也请你一定要接受，因为 - ""","gaPZSellFakes1a:""你要付给我{$gaPZ_paymentForCommFakes}个星币。""",
+""所以...呃...你通过测试了，""{$heOrShe}说着，又向前倾了倾身体。""我准备要报价了，也请你一定要接受，因为 - ""","gaPZSellFakes1a:""你要付给我{$gaPZ_paymentForCommFakes}星币。""",
 gaPZSellFakes1a,DialogOptionSelected,$option == gaPZSellFakes1a,,"""我接受，""{$heOrShe}立马回应道，还擦了擦{$heOrShe}额头上的汗水，""这就支付星币。""","gaPZSellFakes1b:""现在我把数据传给你。""",
 gaPZSellFakes1b,DialogOptionSelected,$option == gaPZSellFakes1b,"AddCredits $gaPZ_paymentForCommFakes
 $global.gaPZ_soldBlackmail = true
@@ -234,7 +234,7 @@ gaPZSellFakes3,DialogOptionSelected,$option == gaPZSellFakes3,,"你拿出一个�
 gaPZSellFakes3a,DialogOptionSelected,$option == gaPZSellFakes3a,,"""所以...呃，恭喜，你通过测试了。""{$heOrShe}说，并恢复了镇静，""你会发现，在你面前的是一个同样精通这种事务的人。我准备给你一个提议，也请你一定要接受，因为——""
 
 海盗絮絮叨叨地，解释着你找不到其他愿意使用，或能够充分使用你提供的情报的人的原因。这委实不是一次很好的自我推荐。",gaPZSellFakes3b:继续,
-gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"你等待合适的时机，然后切入了话题，就像赛博导弹二段的弹片狠狠地击打在幅能护盾上一样，与海盗争论起来，直到他愿意为假勒索线索支付{$gaPZ_paymentForCommFakesHigh}个星币。
+gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"你等待合适的时机，然后切入了话题，就像赛博导弹二段的弹片狠狠地击打在幅能护盾上一样，与海盗争论起来，直到他愿意为假勒索线索支付{$gaPZ_paymentForCommFakesHigh}星币。
 
 ""看在卢德的份上，好吧，我接受。""{$heOrShe}最终同意了，擦着{$heOrShe}额头上的汗水，""我接受你的价格。现在开始转移星币。""",gaPZSellFakes3c:继续,
 gaPZSellFakes3c,DialogOptionSelected,$option == gaPZSellFakes3c,"AddCredits $gaPZ_paymentForCommFakesHigh
@@ -304,7 +304,7 @@ gaPZ_adminAstraia2a,DialogOptionSelected,$option == gaPZ_adminAstraia2a,,"你激
 说得好听，其实这就是贿赂，你俩心知肚明。","gaPZ_adminAstraia3a:""当然，那么费用是...?""
 cutCommLink:找个借口关闭通讯链接",
 gaPZ_adminAstraia3a,DialogOptionSelected,$option == gaPZ_adminAstraia3a,"Highlight $gaPZ_culannBribe
-DoCanAffordCheck $gaPZ_culannBribe gaPZ_adminAstraia4a","""{$gaPZ_CulannBribe}个星币，通过这个{UID}预付到我的账户。""当你的数据平板发出轻柔的响声提醒你收到付款所需要的账户信息时，管理员说道。$personName}恢复了 灿烂的笑容，等待你的回复。","gaPZ_adminAstraia4a:支付}""服务费用""
+DoCanAffordCheck $gaPZ_culannBribe gaPZ_adminAstraia4a","""{$gaPZ_culannBribe}星币，通过这个{UID}预付到我的账户。""当你的数据平板发出轻柔的响声提醒你收到付款所需要的账户信息时，管理员说道。$personName 恢复了 灿烂的笑容，等待你的回复。","gaPZ_adminAstraia4a:支付}""服务费用""
 gaPZ_adminAstraia4aNeg:""从各方面考虑，你不会认为...""}(讨价还价)
 cutCommLink:找个借口关闭通讯链接",
 gaPZ_adminAstraia4aNeg,DialogOptionSelected,$option == gaPZ_adminAstraia4aNeg,,"$personName 在你还没来得及 完整地说出 谈判开场白之前 就打断了你: ""舰长，我的收费 已经相当低廉了，这是考虑到 我们特殊的商业合作关系 而做出的折扣。"" 微笑还在，但 $hisOrHer的 眼睛告诉你，再说些不相干的话， 你就该出局了。","gaPZ_adminAstraia4a:支付}""服务费用""
@@ -563,7 +563,7 @@ Call $global.gaRH_ref updateData
 Highlight $gaRH_reward
 $hamatsuSpielSaid = true","Ibrahim}看起来很兴奋，甚至连招呼都没打就滔滔不绝起来:}""如果我的传感器和轨道导航注册系统没有骗我，你带回了我的飞船{Hamatsu}号!}舰长，十分感谢!""
 
-""我现在就给你{$gaRH_reward}个星币，这样一来我们的约定就履行完毕了。你甚至不用把它送到修理厂，我马上就可以修复它。我的仓库里已经有了新的超光速引擎，还有一些优秀的工程师正随时待命。""","gaRH_yes:把{Hamatsu}号交给}Ibrahim
+""我现在就给你{$gaRH_reward}星币，这样一来我们的约定就履行完毕了。你甚至不用把它送到修理厂，我马上就可以修复它。我的仓库里已经有了新的超光速引擎，还有一些优秀的工程师正随时待命。""","gaRH_yes:把{Hamatsu}号交给}Ibrahim
 gaRH_no:""抱歉，我想将这艘船留在我的舰队中。""",
 gaRH_yes,DialogOptionSelected,$option == gaRH_yes,#AdjustRepActivePerson COOPERATIVE 25,"Ibrahim}的脸上笑容灿烂:}""谢谢你，舰长。如果你不介意的话我就先挂断了，毕竟我还有很多事要做。""
 
