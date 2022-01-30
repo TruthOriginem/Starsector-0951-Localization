@@ -3169,70 +3169,70 @@ FireAll PopulateOptions",,,
 "# Ziggurat, Alpha Site, etc",,,,,,
 zig_cacheOpenDialog,OpenInteractionDialog,$ttWeaponsCache score:1000,"SalvageGenFromSeed
 ShowDefaultVisual
-FireBest SalvageCheckHostile","Your $shipOrFleet approaches a lonely clutch of shielded cargo containers drifting through space. They bear no ID-badge, no insignia, no reactive transponders.
+FireBest SalvageCheckHostile","你的{$shipOrFleet}接近了一批漂流在太空中的屏蔽货箱. 上面没有身份认证, 没有徽章, 也没有任何应答装置.
 
-A steady stream of high-energy neutrinos from one particular container spinning outward from the main cluster washes over your sensors in time with its rotation; some sleeping chamber of exotic matter must have given out over the cycles - decades? - since it was left here.",,
+其中一个货箱环绕着货箱集群, 源源不断的发射中微子脉冲冲洗着你的传感器; 这些沉睡的货箱在几十? 十几年的周期中让一些奇特的物质泄露了出来.",,
 zig_beaconOpenDialog,OpenInteractionDialog,"$tag:warning_beacon
 $ttBlackSite score:1000","ShowDefaultVisual
-SetShortcut beaconLeave ""ESCAPE""","An autonomous warning beacon has been left emitting a distorted wail between official channels.
+SetShortcut beaconLeave ""ESCAPE""","一个警告航标在附近的主要通讯频道里发出扭曲的哀嚎声.
 
-Your comms officer reports an easily-defeated software intrusion attempt by what remains of the beacon's security systems.",beaconLeave:Leave,
+你的通信员报告, 信标残骸中的安全系统试图进行简单的软件黑入, 但是被抵挡了下来.",beaconLeave:离开,
 zig_encounterDescScanned,BeginFleetEncounter,"$ziggurat score:1000
 !$printedDesc
-$showAfterScanIntro",,"The capital-class construct appears to be a phase ship due to presenting features common to the type, though its design is otherwise exotic. 
+$showAfterScanIntro",,"这艘主力舰级别的舰船应该是一艘相位舰船, 他的设计十分独特.
 
-There also appear to be small, bright EM sources, ""-Only partially overlapping the visual spectrum,"" your sensors officer reports. They periodically appear and dissipate in a volume encompassing the mysterious ship. Your bridge crew murmurs speculation between their stations: a new form of shielding? microsat thruster bursts? Your sensors officer shakes their head. 
+你的传感器副官说这些非常小但明亮的电磁脉冲源 ""-仅仅与部分可见光谱重叠"". 它们周期性的出现在艘谜团一般的船上并且被排放出来. 舰桥里的船员都开始交头接耳，窃窃私语的猜测着: 新的护盾? 等离子暴裂驱动器? 你的副官摇了摇头。
 
-Your attention strays as the impression of something not unlike distant music insinuates itself into your consciousness; as if a chorus was singing at some great distance, their voices brought to you by a chance gust of wind. When you attempt to focus on the music the impression slips away. You become suddenly aware that your bridge crew is staring expectantly, waiting for your next command.",,
+宛如合唱团站在山的那头, 遥远的音乐声乘风而来, 犹如午后清风一样将你的注意力, 一点, 一点的剥离. 但当你试图去追寻这音乐声之时，它又随风而去. 回过神来时，你意识到整个舰桥的船员都忧心仲仲的看着你，等待你的下一个命令.",,
 zig_encounterDesc1,BeginFleetEncounter,"$ziggurat score:1000
 !$printedDesc
 !$showAfterScanIntro","$printedDesc = true 0
-$fidpi_addContinue = true 0","The capital-class construct appears to be a phase ship due to presenting features common to the type, though its design is otherwise exotic. There also appear to be small, bright EM sources, ""-Only partially overlapping the visual spectrum,"" your sensors officer reports. They periodically appear and dissipate in a volume encompassing the mysterious ship. Your bridge crew murmurs speculation between their stations: a new form of shielding? microsat thruster bursts? Your sensors officer shakes their head.
+$fidpi_addContinue = true 0","这艘主力舰级别的舰船应该是一艘相位舰船, 他的设计十分独特.你的传感器副官说这些非常小但明亮的电磁脉冲源 ""-仅仅与部分可见光谱重叠"". 它们周期性的出现在艘谜团一般的船上并且被排放出来. 舰桥里的船员都开始交头接耳，窃窃私语的猜测着: 新的护盾? 等离子暴裂驱动器? 你的副官摇了摇头。
 
-You order a high-resolution scan performed, and the raw data placed into secure storage.",,
-zig_encounterDesc2,BeginFleetEncounter2,,"AddTextSmall ""Detailed scan of unknown vessel acquired"" highlight
+你命令你的舰队以最高的清晰度对这艘船进行扫描，并将这批数据放进安全的储存区里。",,
+zig_encounterDesc2,BeginFleetEncounter2,,"AddTextSmall ""获得未知舰船详细扫描数据"" highlight
 $global.gaPZ_scannedZiggurat = true
 Call $global.gaPZ_ref updateStage
-$showAfterScanIntro = true","Your attention strays as the impression of something not unlike distant music insinuates itself into your consciousness; as if a chorus was singing at some great distance, their voices brought to you by a chance gust of wind. When you attempt to focus on the music the impression slips away. You become suddenly aware that your bridge crew is staring expectantly, waiting for your next command.",,
-zig_afterDefeating,AfterZigguratDefeat,,,"A final terrific explosion blanks the external visual pickups. A few seconds later, backups are extruded through the hull.
+$showAfterScanIntro = true","宛如合唱团站在山的那头, 遥远的音乐声乘风而来, 犹如午后清风一样将你的注意力, 一点, 一点的剥离. 但当你试图去追寻这音乐声之时, 它又随风而去. 回过神来时, 你意识到整个舰桥的船员都忧心仲仲的看着你, 等待你的下一个命令.",,
+zig_afterDefeating,AfterZigguratDefeat,,,"一场巨大的爆炸晃瞎了外面的摄像头. 几秒钟才切换到备用摄像头上.
 
-Your sensors officer reports in a hushed voice that no escape pods were detected leaving the ship at any point.",zigBattleContinue:Continue,
+你的传感器副官用低沉的声音报告说, 刚才的爆炸并未检测到逃生舱.",zigBattleContinue:继续,
 zig_afterDefeatingContinue,DialogOptionSelected,$option == zigBattleContinue,FireBest OpenInteractionDialog,,,
 zig_wreckDetails,ShowSalvageEntityDetails,"$customType == wreck
-$ziggurat score:1000",ShowDefaultVisual,"The broken phase vessel, now quite dormant, is drifting through space.",,
+$ziggurat score:1000",ShowDefaultVisual,"这艘损坏的相位舰船, 终于平静了下来, 缓缓地在宇宙中飘荡着.",,
 zig_exploreSabotage,CheckSalvageSpecial,"$salvageSpecialData != null
 $customType == wreck
 $ziggurat score:1000
 !$triedSabotage
 PlayerHasCargo alpha_core","#ShowDefaultVisual
-$triedSabotage = true","Salvage teams dock their drone-shuttles at various entry points along the massive vessel's hull. At the precise moment the go-order is given, all telemetry feeds from the shuttles simultaneously blank out.
+$triedSabotage = true","打捞部队将他们的穿梭无人机部署对接在这艘巨型舰船船体的各个入口处. 当舰桥下令进入的时候, 同一时间的所有的遥测信息反馈都消失了.
 
-Your bridge officers initiate fallback procedures with practiced speed, contacting subordinates, performing checks and reinitializations to establish precisely where the systems fault occurred - and determine if it was a hostile act. Several agonizing minutes later, the salvage teams' data-feed and comms snap back to life.
+舰桥副官迅速下令撤退, 并且联络下属开始执行检查并试图初始化无人机, 以精准定位系统故障的位置 - 并试图判断这是不是敌对行为. 整个舰桥这几分钟都像热锅上的蚂蚁, 打捞部队的通讯和数据反馈终于恢复了.
 
-""Captain!"" Your tactical officer salutes, then launches into a status report, ""Someone or something just tried to send a power core collapse signal to the shuttles' computers. Fortunately the security package caught it in time, but they had to perform a full systems shutdown and manually switch to backups; that's why their telemetry cut off. All salvage teams are now reporting all-green and are standing by.""","zigAlphaContinue:""Whoever tried this, what did they hope to accomplish?""",
-zig_alphaContinueOpt,DialogOptionSelected,$option == zigAlphaContinue,,"Your tactical officer rapidly taps a few buttons; holodisplays flicker through status updates.
+""长官!"" 你的战术副官在你面前标准的敬了一个礼, 并且开始向你报告状况, ""有人试图对我们的穿梭机的内部电脑发送核心崩溃指令. 幸运的是安全系统及时拦截了它, 但他们不得不重启整个系统并且手动切换到备份上; 以上是遥测被切断的原因. 现在整个打捞部队随时可以出动. ""","zigAlphaContinue:""无论是谁干的, 他*的到底想干什么? """,
+zig_alphaContinueOpt,DialogOptionSelected,$option == zigAlphaContinue,,"你的战术副官快速的摁下几个按钮; 虚拟影像上映射出刚刚更新的数据
 
-""If the shuttle power cores were overloaded simultaneously, well, with the shuttles so close to the wreck? The hull would have likely been damaged past any hope of recovery. In addition to killing the salvor crews, of course. But I don't think that was their goal; there are easier ways to kill salvage crews."" 
+""如果所有的穿梭机能量核心同时都被过载掉了, 穿梭机又离残骸这么近? 这样做消除了任何恢复这艘船到的可能性了, 当然也能杀死打捞部队的队员. 不过, 我认为这并不是他们的目的, 因为明显有比这更容易杀死打捞部队的办法. ""
 
-As you indicate to your operations chief to ready the salvage teams for a second attempt, your tactical officer adds, ""It comes to mind that what we just experienced was an attempt at an old Tri-Tach trick from the Second AI War. They left black-box EW traps to keep the Hegemony from recovering intel and tech from disabled hulls. And it worked. For a while, anyway. I'm just glad we kept that legacy commsec package installed.""",zigAlphaContinue2:Continue,
-zig_alphaContinueOpt2,DialogOptionSelected,$option == zigAlphaContinue2,,"You dismiss your tactical officer and ponder the situation as the call-and-return proceeds between your command crew and the salvage teams waiting at standby. Reports trickle up through the hierarchy, from junior officers in after-action/sim analyst teams to your bridge crew. A picture begins to form that has too many gaps for your liking: The core-collapse signal appears to have originated not exactly in, but uncomfortably near to a secure cargo bay holding an Alpha Core. The core was shielded in complete isolation at the time, and it denies any responsibility as effortlessly as it offers you its service and advice during this crisis, if you would be so kind as to open up a small data-link. You curtly terminate the secured comm-channel and order the AI put back in isolated lock-down.
+当你指示你的首席行动副官让打捞部队进行第二次尝试的时候, 你的战术副官补充道, ""长官, 看起来刚刚我们遇到的只是第二次AI战争时速子科技用的小把戏罢了. 他们会在黑匣子上留下电磁脉冲陷阱, 以便霸主在回收他们的黑匣子并试图从中提取出有价值的信息和科技之前将他们的舰船停机. 当然这样的小惊喜很容易就可以恢复过来. 我还蛮高兴那些旧的通讯链接安全包依然发挥了作用. """,zigAlphaContinue2:继续,
+zig_alphaContinueOpt2,DialogOptionSelected,$option == zigAlphaContinue2,,"你让战术副官就地解散, 并让通信官通知打捞部队原地待命. 透过下层行动模拟分析官到你舰桥上层的报告, 你逐渐分析出一些事情的端倪: 一梭子来源不明的核心崩溃指令, 发送位置接近舰船上装有阿尔法核心的安全舱. 但这并不能责怪那颗AI核心, 整个核心安全仓在任何时候都被隔离着, 如果你为它打开一个小的数据流窗口, 它会在危机时毫不费力地为你提供服务和建议. 你简单的终止了和阿尔法核心的通讯连接, 并把它重新放进了隔离舱内.
 
-Your comms officer reports that there is uncertainty whether the AI was involved, or if the signal was sent from that location to throw suspicion onto the core. Both possibilities have troubling implications. In the meantime, however, your ops chief calls in, requesting the order to enter the wreck.",zigAlphaContinue3:Order the exploration to proceed,
+你的通信员在报告的时候说, 并不确定这次是否有AI参与到其中, 也无法证实信号确实来自于核心. 这两个消息都令人不安. 此时你的行动指挥官接入了通讯, 申请第二次进入残骸进行探索. ",zigAlphaContinue3:通知行动指挥官继续探索,
 zig_alphaContinueOpt3,DialogOptionSelected,$option == zigAlphaContinue3,"#ShowDefaultVisual
 FireBest ZigExploreDescription",,,
 zig_exploreNoSabotage,CheckSalvageSpecial,"$salvageSpecialData != null
 $customType == wreck
 $ziggurat score:1000","#ShowDefaultVisual
-FireBest ZigExploreDescription",Your salvage teams dock shuttles at various entry points along the vessel's massive hull.,,
-zig_exploreDescription,ZigExploreDescription,,,"After a few tense minutes, reports start to come in - the vessel is heavily damaged, and though of exotic design, it is theoretically recoverable.
+FireBest ZigExploreDescription",你的打捞部队对接在巨型舰船外壳上的各个入口上.,,
+zig_exploreDescription,ZigExploreDescription,,,"你如同热锅上的蚂蚁一般, 焦灼地等待了几分钟, 终于收到了打捞部队发送过来的舰船检查报告 - 目标舰船虽然严重受损, 但因为其独特的构造, 理论上是可以恢复的.
 
-Your operations chief reports that for all of the fancy hull features, it is clear that this ship requires crew to operate. But there are no traces of a crew, not even a single body caught in the battle damage, and the escape pods are all in their berths.
+行动指挥官的报告中描述了这艘船花哨的船体, 这证明了这艘船是需要大量人力来维护的. 然而打捞部队在调查中并未发现任何人类船员, 包括船壳损坏的区域也未发现尸体, 甚至连逃生舱也在他们应该呆着的位置上. 
 
-The operation proceeds with telemetry feeds, officers reports, and authorization orders flowing around you, through the bridge of your flagship. You catch yourself listening for that unheard music in a quiet moment, and shake your head just as a comms request from your chief engineer appears, bringing you back from your reverie. You accept as a matter of course.",zigExploreContinue:Continue,
-zig_exploreDescriptionContinue,DialogOptionSelected,$option == zigExploreContinue,,"""$PlayerSirOrMadam, if I understand half of these systems, this ship is truly one of a kind,"" your chief engineer speaks with a genuine excitement.
+剩下的就是各种遥测数据反馈, 和你手下的报告, 然后等待你在舰桥里传达下一个指示. 在等待的空闲之中, 你再度呼唤起那一段悠扬, 飘渺的音乐. 急促的通讯申请把你从遐想中拉回现实, 你甩了甩头试图保持清醒, 并且接受了舰队里的首席工程师的通讯申请. ",zigExploreContinue:继续,
+zig_exploreDescriptionContinue,DialogOptionSelected,$option == zigExploreContinue,,"""{$PlayerSirOrMadam}, 我只理解了这艘舰船的一半, 这可是一艘独一无二的舰船, "" 你的首席工程师的声音里按耐不住他发自内心的兴奋. 
 
-""I've found a device that appears to generate and control - I'm not sure that either is the right word, really - these ... swarming motes, the EM anomalies. The device appears to have two stages, the first as I've described, and what appears to be a later addition which is, unfortunately, damaged beyond repair. Judging by the complexity of the components and the bizarre discharge pattern... this is the work of a team of specialists doing bleeding-edge work. It's amazing! A device like this, it's simply unheard of nowadays. Except,"" your engineer looks abashed suddenly, ""Rumors. You know, people talk.""",zigExploreContinue2:Continue,
-zig_exploreDescriptionContinue2,DialogOptionSelected,$option == zigExploreContinue2,SalvageSpecialInteraction,"The chief engineer clears their throat, then continues ""I think I can get the main part of this device working again, though I can't claim to understand why it works. Not at all. The ship itself will be fit to fly, too, if we do the usual repairs. Should we proceed with recovery?""",,
+""我发现了舰船上一个负责生成并控制的装置 - 我真的, 不确定我的用词是否准确, 那些...尘埃, 奇特的电磁脉冲源. 这个装置明显有两个阶段, 第一个你已经知道了, 但剩下的已经坏到修不好了. 根据这个设备的复杂度和放电模式...这就是前线专家的工作了. 这太棒了! 这样的装置现今根本找不到, 除了, "" 工程师老脸一红, ""谣传. 人们喜欢八卦. """,zigExploreContinue2:继续,
+zig_exploreDescriptionContinue2,DialogOptionSelected,$option == zigExploreContinue2,SalvageSpecialInteraction,"首席工程师清了清嗓子, 随后 ""我寻思, 我可以让这个装置再度正常工作, 但我得说我一点都不知道这个装置是怎么工作的. 如果我们正常维修这艘船, 它就可以正常工作. 所以, 我们要进行恢复工作吗? """,,
 #zig_exploreDescriptionContinue2,DialogOptionSelected,$option == zigExploreContinue2,"$global.gaPZ_recoverZig = true 0
 Call $global.gaPZ_ref updateStage
 SalvageSpecialInteraction",,,
@@ -3242,48 +3242,49 @@ zig_alphaSite,OpenInteractionDialog,"$id == site_alpha
 $ttBlackSite score:1000
 !$siteExplored","ShowDefaultVisual
 SetShortcut defaultLeave ESCAPE
-$satelliteStillInOrbit = true 739","A disposable navigation satellite set to a decaying orbit identifies the radiation-ravaged rock below as ""Alpha Site"".
+$satelliteStillInOrbit = true 739","一枚抛弃式导航信标被发射到衰减轨道上, 用于分析被辐射长期摧残岩石下方的 ""阿尔法站点"".
 
-A scan of the surface reveals an expansive research facility spilling out of a mid-sized crater. The shield array apparently failed spectacularly some time ago, leaving the ruins awash in heavy radiation. Any material salvage operation would be unprofitable.
+表层扫描显示这个广阔的研究设施已经逐渐陨石坑中脱出. 它原先的护盾阵列应该在不久前彻底的失效, 导致整个遗迹都被强辐射清洗殆尽. 换句话说, 从中打捞任何材料都将无利可图.
 
-However, you might be able to send a salvage team down for a short period to see if any intel can be found about the purpose of this facility. Someone clearly put a lot of resources toward building it in a most inhospitable environment, far from prying eyes. Someone with something valuable to hide.","0:alphaSiteExplore1:Send a salvage team down to the facility
-100:defaultLeave:Leave",
+不过, 你也许可以派遣一支短期打捞小队来试着回收和这个设施有关的情报. 看起来为了有人为了远离他人的窥探, 资助了大量的资源在这个鸟不拉屎的环境里建造这个研究设施来藏匿更有价值的东西. ","0:alphaSiteExplore1:派一支打捞小队下到设施中
+100:defaultLeave:离开",
 zig_alphaSiteAlreadyExplored,OpenInteractionDialog,"$id == site_alpha
 $ttBlackSite score:1000
 $siteExplored","ShowDefaultVisual
-SetShortcut defaultLeave ESCAPE","A small satellite on a decaying orbit identifies the radiation-ravaged rock below as ""Alpha Site"". You estimate it doesn't have much time left until it crashes into the planet - a couple of cycles, at the very most.
+SetShortcut defaultLeave ESCAPE","一枚小型卫星被发射到衰减轨道上, 用于分析被辐射长期摧残岩石下方的 ""阿尔法站点"". 你预计最多几个星球周期内, 这个站点和其所在地就会被星球的引力拉扯到坠毁轨道上.
 
-On a whim, you pull up the recording of your first visit here.","0:alphaSiteExplore1:Replay the recording
-100:defaultLeave:Leave",
+心血来潮, 你调出了第一次拜访这里的记录.","0:alphaSiteExplore1:回放记录
+100:defaultLeave:离开",
 "# this is so frivolous... orbital satellite is gone after 2 years-ish
 # love it.",,,,,,
 zig_alphaSiteAlreadyExploredNoSat,OpenInteractionDialog,"$id == site_alpha
 $ttBlackSite score:1000
 $siteExplored
-!$satelliteStillInOrbit",,"Your $shipOrFleet goes into orbit around the radiation-ravaged rock known as ""Alpha Site"".
+!$satelliteStillInOrbit",,"你的{$shipOrFleet}接近了被辐射长期摧残岩石下方的 ""阿尔法站点""的轨道.
 
-The navigation satellite which once identified this celestial body is now gone; a few taps to your display shows you the small impact crater it left when it hit the surface, a bright smudge in a plain of rad-decayed regolith. In the absence of an atmosphere, it's likely the crater will last longer than the satellite ever did, by many millions of cycles.
+原先用于在导航的卫星早以迷失在了星体之中; 在显示器上轻轻一点, 屏幕上便展现出卫星撞击表面时在被辐射侵蚀的风化层上留下的明亮的斑点和浅坑. 因为该星体缺少大气层, 这颗抛弃式卫星, 它砸出的浅坑应该能坚持数百万个星球周期, 留下了更久远的痕迹.
 
-On a whim, you pull up the recording of your first visit here.","0:alphaSiteExplore1:Replay the recording
-100:defaultLeave:Leave",
-zig_alphaSiteExplore1,DialogOptionSelected,$option == alphaSiteExplore1,$siteExplored = true,"After extensive preparation (and reiteration of the hazard pay policy) a volunteer salvor team is sent down on a heavily-shielded shuttle.
+心血来潮, 你调出了第一次拜访这里的记录.","0:alphaSiteExplore1:回放记录
+100:defaultLeave:离开",
+zig_alphaSiteExplore1,DialogOptionSelected,$option == alphaSiteExplore1,$siteExplored = true,"在经过严密并且冗长的准备(和反复重申对应的危险津贴政策)之后, 一组自愿参与的救助小队乘坐加强辐射屏蔽的重装穿梭机出发了.
 
-They land near what appears to be the main entrance to the facility, and report ingress to the facility without difficulty. On a display projected into your flagship's bridge, you watch as a hardsuited salvor brushes past the clouded-over sensor unit of a defense turret; it collapses into itself at a mere touch. Anything exposed to the merciless sky is slowly crumbling on the chemical level; it appears that all groundside security systems have been destroyed by radiation. ",alphaSiteExplore1b:Continue,
-zig_alphaSiteExplore1b,DialogOptionSelected,$option == alphaSiteExplore1b,,"The interior of the facility has been breached, leaving it unpressurized. While the structure's bulk provides some protection, the delicate computer systems are fried beyond repair. No data is recoverable. 
+他们在设施的主要入口附近着陆, 随后向指挥中心汇报这次入侵不受阻. 在你旗舰的舰桥的投影屏幕上, 一群重装打捞人员掠过被粒子云笼罩的防御炮塔; 仅仅只是轻触, 这些炮台就塌了. 暴露在无情深空之下的任何物质都会从化学分子层面被侵蚀, 瓦解; 似乎所有的安全系统都被辐射所摧毁.",alphaSiteExplore1b:继续,
+zig_alphaSiteExplore1b,DialogOptionSelected,$option == alphaSiteExplore1b,,"设施内部因为大门被摧毁, 内部已经失压. 虽然设施的外壳具有一定的保护作用, 但内部娇贵的电脑系统已经被辐射炸的酥脆. 修复它不太可能, 也导致其没有可以回收的数据.
 
-With no chance of an easy find, the team spreads out for the remaining rad-safe duration to document the facility and see if anything useful can be inferred from the ruin. While exploring, one salvor enters the quarters of a high-ranking member of the facility staff and discovers the journal, a physical book bound in natural materials, of its presumably deceased occupant.",alphaSiteExplore2:Continue,
-zig_alphaSiteExplore2,DialogOptionSelected,$option == alphaSiteExplore2,,"You examine the journal in the quarantine bay. The fine leather cover is discoloured, but you can make out the embossed gold leaf Tri-Tachyon logo. Your salvage team has already scanned the text without opening the delicate pages of the book. The data has been placed in a secure cache for your review. ",alphaSiteExplore2b:Continue,
-zig_alphaSiteExplore2b,DialogOptionSelected,$option == alphaSiteExplore2b,SetShortcut defaultLeave ESCAPE,"Scrolling the virtual pages, you find that the journal appears to hold the private thoughts of the chief technology officer of this facility. It begins with vague complaints of being ordered to disregard safety protocols during tests, and frustration with demands made by Kelise Astraia. From what you understand, this is an effort to establish a hardcopy trail in case of the blame-shifting and record-altering which is common practice for high-ranking Tri-Tachyon executives involved in failed projects.
+由于无法轻易找到任何东西, 小队成员在剩余的抗辐射药剂的安全时间里原地解散, 并开始搜寻遗迹中任何可能有用的物品. 搜寻过程中, 一位打捞队员进入了设施高阶成员的房间, 并且发现了房间已故主人的那本纯天然材料制成的日记.",alphaSiteExplore2:继续,
+zig_alphaSiteExplore2,DialogOptionSelected,$option == alphaSiteExplore2,,"在隔离区, 你亲自检查了这一本日记. 精美的皮革封面已经褪色, 但烫金的速子科技标志依然清晰可辨. 你的打捞队员在未开启这本书的情况下已经完整的扫描了这一本精美的书. 那些扫描页被置于系统的安全缓存中等待你随时读取.",alphaSiteExplore2b:继续,
+zig_alphaSiteExplore2b,DialogOptionSelected,$option == alphaSiteExplore2b,SetShortcut defaultLeave ESCAPE,"翻动着书本的扫描件, 你仿佛进入了这个速子设施技术主管的私人世界. 从最初对于在测试中被命令无视安全协议的含糊抱怨, 以及对Kelise Astraia提出来的要求非常沮丧. 以你对速子科技的理解, 为了在转移责任和变更记录的情况下建立硬拷贝跟踪, 这是速子科技对参与了失败项目高管的常见处理方法.
 
-Concerns about ""going outside"" feature prominently in the entries. Understandable, given the surface conditions, but the increasingly intense obsessiveness of the writing seems to reflect a growing phobia on the part of the author.",alphaSiteExplore3:Continue,
-zig_alphaSiteExplore3,DialogOptionSelected,$option == alphaSiteExplore3,SetShortcut defaultLeave ESCAPE,"The remainder of the journal is difficult to read; most of the pages are torn or defaced, leaving a patchy, noisy scan in your display. Little of what's readable is coherent.
+高管本人对""能否走出这里""的担忧在显著地逐渐增加. 表面情况下, 确实可以理解, 但高管在书中的语气愈发的凸显出他日益增长而不曾消退地恐惧.",alphaSiteExplore3:继续,
+zig_alphaSiteExplore3,DialogOptionSelected,$option == alphaSiteExplore3,SetShortcut defaultLeave ESCAPE,"日记的剩余部分逐渐无法阅读; 剩下的页面不是被污渍污染了, 就是被撕毁了, 在显示屏上留下斑驳的扫描噪点. 可读内容也几乎不是连贯的.
 
-At the very end, there's one line, written in a clear, strong hand. ""They sing to me. Everything will be all right.""",100:defaultLeave:Leave,
+在日记的终末, 手写着一行, 清晰而又沉重的一句话. ""他们的歌声萦绕着我. 一切都会好起来的. """,100:defaultLeave:离开,
 ,,,,,,
 $ziggurat score:1000,,,,,,
-zig_commsOpen,OpenCommLink,$entity.ziggurat score:1000,EndConversation,"The connection request hangs for some time then a wave of holo-noise flickers through the main display before generating a series of error codes. Your comms officer works their console in consternation. 
+zig_commsOpen,OpenCommLink,$entity.ziggurat score:1000,EndConversation,"和数据库的连接突然中断, 直到错误代码出现之前, 虚拟成像在显示区域疯狂的扰动着. 你的通信员在控制台前慌张的操作着.
 
-The soft sounds of the error notifications align just so, almost forming a melody you must have heard somewhere once. Or perhaps not. You return your attention to your command. No time for daydreaming.",,
+错误提示音, 变得柔软, 恰到好处的嵌入到一股似曾相识的旋律之中, 你见过它, 你见过它... 或者, 你并未见过它. 再度回过神来重新专注于自己的命令中, 你没给自己留下做白日梦的时间.
+",,
 ,,,,,,
 # Galatia Academy,,,,,,
 # introduction during tutorial,,,,,,
@@ -3295,188 +3296,187 @@ FireBest GAHegOfficerInteraction",,,
 gaOpenDialogDuringTutorialStart,GAPostOpen,"$global.isInTutorial
 !$global.tutMadeContactAtAncyra score:1000","ShowDefaultVisual
 SetTextHighlights ""Ancyra""
-SetShortcut defaultLeave ESCAPE","As you approach the stark torus-hulls of Galatia Academy Station, your request to the automated docking queue is unexpectedly denied by a Hegemony-coded comm response. It's odd that the Hegemony navy is controlling the docking procedures of this independent station.
+SetShortcut defaultLeave ESCAPE","当你接近Galatia学院空间站的纯白色圆环型外壳时，你对自动停靠队列的请求意外地被 霸主编码的通信响应拒绝了。 奇怪的是，霸主海军正在控制这个独立空间站的对接程序。
 
-Your primary bridge display shows an active view of a matrix of anti-ship batteries tracking your progress. Your tactical officer nods for your attention then activates a sub-display with a close-in view: a Valkyrie-class troop transport and its escorts are emplaced across the primary landing bay. They clearly don't want visitors.
+你的主驾驶台显示器显示出一个反舰电池矩阵的活动视图，跟踪您的进度。 你的战术官朝你点头来引起你的注意，然后激活一个带有近距离视图的子显示器：一艘女武神级运输舰和它的护卫舰被部署在主着陆区。 他们显然不欢迎外人造访。
 
-You should report to Ancyra to find out what's going on.",100:defaultLeave:Leave,
+你应该向 Ancyra 报告以了解发生了什么。",100:defaultLeave:离开,
 gaOpenDialogDuringTutorial,GAHegOfficerInteraction,"$global.isInTutorial
-!$doneFirstVisit",$doneFirstVisit = true,"As you approach the stark white torus-hulls of Galatia Academy Station, your request to the automated docking queue is denied. After a moment, the comms link opens unexpectedly to a Hegemony sigil. Encryption kicks in, and your viewscreen cuts to a harried-looking Hegemony lieutenant using a handheld comms unit.  
+!$doneFirstVisit",$doneFirstVisit = true,"当你接近Galatia学院空间站的纯白色圆环型外壳时，你对自动停靠队列的请求被拒绝。 片刻之后，通讯链接意外打开，指向霸主的标志。 加密开始，你的视屏切换到一位使用手持通讯装置看起来很烦躁的霸主中尉。
 
-""My apologies, captain. The Academy is closed during the, uh, crisis. I shall have to ask you to leave immediately."" 
+""我很抱歉，船长。学院在......呃......危机期间关闭。我不得不请你立即离开。""
 
-An adjutant leans into frame and whispers something in $hisOrHer ear.
+一名副官靠在显示器框里，在{$hisOrHer}耳边低语。
 
-""So you're the freelancer my CO on Ancyra got to help us out."" $HeOrShe relaxes $hisOrHer tone somewhat, ""I'm Lieutenant $personName. We're carrying out the investigation into who screwed up here while you take care of the problem out there. And I wish you luck, captain, because if you don't solve this it's going to get ugly.""","0:gaDuringTutorialMoreInfo1:""What's going on here?""
-100:defaultLeave:Thank the officer and sign off.",
-gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreInfo1,,"$HeOrShe considers whether to answer your question.
+""所以你是我在 Ancyra 的同事 ，那位帮助我们的特约记者。""{$HeOrShe}稍微放松了{$hisOrHer}的语气，""我是{$personName}中尉。我们正在调查是谁搞砸了这里，而你却在处理那里的麻烦。我祝你好运，船长，因为如果你不把问题解决了，事情会变得很糟糕。","0:gaDuringTutorialMoreInfo1:""这是怎么回事？""
+100:defaultLeave:谢谢他并挂断",
+gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreInfo1,,"$HeOrShe 在考虑是否回答你的问题。
 
-""I suppose you're technically in the chain of command as an auxiliary. Right. We arrested the provost of the academy on a screenful of charges- endangering space infrastructure, negligence of habitability protocols, gross conspiracy to manipulate unauthorized technologies; it goes on."" 
+""我想从体系上讲，你在指挥系统中担任辅助人员。对，我们逮捕了学院的院长，指控他一系列罪名——危及太空基础设施、忽视宜居性协议、密谋操纵未经授权的技术的；等等。""
 
-""And by old Earth,"" you note $hisOrHer jaw clenching unconsciously, ""He deserves it.""","0:gaDuringTutorialMoreInfo2:""Why, what did he do?""",
-gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""We were briefed about the experiment, but it was only supposed to cause a minor increase in comms noise, maybe some odd readings near the jump-points. Nothing like this! Obviously something more was going on, something big enough that the provost had to know about it, and-""
+""看在古老的地球的份上，""你注意到他或她的下巴不自觉地紧咬着，""这是他应得的。""","0:gaDuringTutorialMoreInfo2:""为什么，他做了什么？""",
+gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""我们听取了有关实验的简报，但它应该只会导致通信噪音的略微增加，可能是在跳跃点附近出现一些奇怪的读数。从未有过的！显然还有更多的事情正在发生，一些大到院长必须知道的事情，而且——""
 
-The lieutenant's adjutant whispers in $hisOrHer ear again. If you're not mistaken, there is some shouting in the background, barely picked up by the lieutenant's handheld comm unit.
+中尉的副官再次在{$hisOrHer}耳边低语。 如果你没弄错的话，背景中有一些喊叫声，中尉的手持式通讯装置几乎听不到。
 
-""The mob grows restless,"" the lieutenant says with a joyless smile. $HeOrShe barks some orders to someone; the video feed jostles and flickers with static as they begin to move. ""We'll have to chat later, captain. I'll buy you a pint on Coatl Station if you can get us out of this.""",100:defaultLeave:Thank the officer and sign off.,
+""暴徒正变得焦躁不安，""中尉僵硬的笑着说。{$HeOrShe}向某人发出命令； 当他们开始移动时，视频源会因静电而紊乱和闪烁。 ""我们稍后再聊，船长。如果你能帮我们摆脱困境，我会在 Coatl 车站请你喝上一杯。""",100:defaultLeave:谢谢他并挂断,
 gaOpenDialogDuringTutorialAgain,GAHegOfficerInteraction,"$global.isInTutorial
-$doneFirstVisit",SetShortcut defaultLeave ESCAPE,"As you approach the stark white torus-hulls of Galatia Academy Station, your request to the automated docking queue is denied. After a moment, the comms link opens to show lieutenant $personName, who looks like $heOrShe could use some R&R. 
+$doneFirstVisit",SetShortcut defaultLeave ESCAPE,"当你接近Galatia学院空间站的纯白色圆环型外壳时，你对自动停靠队列的请求被拒绝。过了一会儿，通信链接打开，显示出了 {$personName}中尉，看起来{$HeOrShe}可以使用一些 R&R。
 
-""Oh, captain. You're back? I'm sorry but we've got the academy on complete lockdown - strict orders - until the, uh, present crisis is resolved. That means no one enters and no one leaves. If you have any business with my chain of command you should speak with my CO on Ancyra."" An adjutant leans into frame and whispers something to $himOrHer.
+""哦，上尉。你回来了？很抱歉，我们已经对学院实行了全面封锁——严格的命令——直到，呃，目前的危机得到解决。这意味着，没有人进入，也没有人离开。如果你和我的指挥系统有任何关系，你应该和我的同事谈谈Ancyra。""一名副官斜靠在镜头前，低声对{$himOrHer}说了些什么。
 
-""I have to go."" The lieutenant sighs. ""Between you and me, these academy-types? Always asking questions, not following directions, and disagreeing with absolutely anything anyone says. I hope you resolve this mess soon.""",100:defaultLeave:Leave,
+""我得走了。""中尉叹了口气。""悄悄跟你说，这些学院派？总是在问问题，而且不听指挥，绝对不同意任何人所说的。我希望你能尽快解决这个烂摊子。""",100:defaultLeave:离开,
 # meeting the lieutenant on Coatl,,,,,,
 gaMeetHegLieutenantOnCoatl,AddBarEvents,"$market.id == coatl
-!$metHegLieutenant","AddBarEvent coatlOfficer_barEvent ""Take the lieutenant up on that offer of a pint"" ""At the bar you see the lieutenant you met at the Galatia Academy. You recall that he offered to buy you a pint if you ever made it to Coatl.""",,,
+!$metHegLieutenant","AddBarEvent coatlOfficer_barEvent ""和中尉一起去喝一杯""""你在酒吧里看到了你在Galatia认识的那位中尉。你记得他说过你要是来Coatl他要请你喝一杯。""",,,
 gaMeetHegLieutenantOnCoatlSel,DialogOptionSelected,$option == coatlOfficer_barEvent,"$metHegLieutenant = true
 AddGAOfficerToCoatl
-AddPotentialContact heg_ga_officer","You start to introduce yourself, but before you can get two words out Lieutenant Tseen Ke interrupts you, ""Captain $playerName! Of course, how could I forget? What an operation,"" he rolls his eyes in mock-exasperation - dealing with academicians, right?
+AddPotentialContact heg_ga_officer","你开始自我介绍，还没等你说完两个字，Tseen Ke中尉就打断了你，""{$playerName}船长！当然，我怎么会忘记？这是一次多么伟大的行动啊""他假装恼怒地翻了个白眼——和院士打交道 ，对吧？
 
-He buys you that pint - and a couple more - as he relieves those memories. ""We got 'im, you know,"" he says, ""Kallichore. That's his name. Was the boss of the academy who okayed that mad science experiment, almost doomed everyone in the system, can you believe that?""","coatlOfficer_barEvent1:Just smile and nod
-coatlOfficer_barEvent2:""You're right. Totally irresponsible.""
-coatlOfficer_barEvent3:""Maybe the risk was worth it.""",
+他给你买了一品脱酒——接着又来了一些——以此来缓解那些不快的回忆。 ""我们成功了，你明白吗，""他说，""Kallichore。那是他的名字。作为批准那项疯狂科学实验的学院老板，他差点把系统里的所有人都给毁了，你敢相信吗？""","coatlOfficer_barEvent1:微笑点头
+coatlOfficer_barEvent2:""你是对的。太不负责任了。""
+coatlOfficer_barEvent3:""也许回报值得冒一些风险。""",
 gaMeetHegLtCoatl1,DialogOptionSelected,$option == coatlOfficer_barEvent1,"$option = coatlOfficer_barEvent3 0
 FireBest DialogOptionSelected",,,
 gaMeetHegLtCoatl2,DialogOptionSelected,$option == coatlOfficer_barEvent2,"$option = coatlOfficer_barEvent3 0
 FireBest DialogOptionSelected",,,
-gaMeetHegLtCoatl3,DialogOptionSelected,$option == coatlOfficer_barEvent3,AdjustRepActivePerson COOPERATIVE 5,"The lieutenant is silent for a moment, looking at you.
+gaMeetHegLtCoatl3,DialogOptionSelected,$option == coatlOfficer_barEvent3,AdjustRepActivePerson COOPERATIVE 5,"中尉沉默了片刻，他看着你。
 
-Then he bursts out laughing, and slaps your back. ""Hey I like you, $playerName. If you ever find yourself back around Coatl, look me up. The navy contracts out some odd jobs; you never know what might come up.""
+然后他突然大笑起来，拍了拍你的背。""嘿，我喜欢你，{$playerName}。如果你发现自己回到 Coatl 附近，可以来找我。海军雇佣了一些零工；你永远不知道会发生什么。""
 
-He surpresses a belch and stands, ""Duty calls,"" then stumbles toward the lavatories.",backToBar:Take a look around the bar,
-genericBarEventBackToBar,DialogOptionSelected,$option == backToBar,BarCMD returnFromEvent false,,backToBar:Take a look around the bar,
+他忍不住打嗝，站起身说，""我该去值班了""然后跌跌撞撞地走向洗手间。
+",backToBar:在酒吧里四处看看,
+genericBarEventBackToBar,DialogOptionSelected,$option == backToBar,BarCMD returnFromEvent false,,backToBar:在酒吧里四处看看,
 ,,,,,,
 gaDefaultDescription,GAPostOpen,,"ShowDefaultVisual
 FireBest GAAgentGreeting
-FireAll PopulateOptions","The stark white hulls of Galatia Academy Station crawl past in slow, magisterial rotation; the ivory tower looms before you. Your request to the docking queue is approved. Your comms officer helpfully mutes the chirpy, automated vid-feed presenting a bowdlerized history of the Galatia Academy and its role in providing education and research to the Persean Sector while remaining above political influence.
+FireAll PopulateOptions","Galatia学院空间站的纯白色外壳缓慢地、壮观地旋转着掠过；象牙塔在你面前若隐若现。您对停靠队列的请求已批准。您的通信官贴心的帮你静音了欢快的自动视频源，这段视频源展示了Galatia学院的历史，以及Galatia学院在向Persean星区提供教育和科研方面的作用，同时保证不受政治因素影响。
 
-The landing promenade is filled with modest civilian transports, a few high-end personal craft, and, at the far end, a row of freighters offloading supplies. A junior academy agent greets you in a landing lounge with promotional paraphernalia in hand.",,
-gaScholarshipPitch,GAAgentGreeting,!$heardScholarshipPitch,,"""Greetings, captain. Perhaps you are an alumni? Have you considered donating to a scholarship trust with the Academy?""",,
-gaScholarshipPitchRepeat,GAAgentGreeting,$heardScholarshipPitch,,"The agent smiles brightly. ""Have you given some thought to setting up that scholarship fund with the Academy?""",,
+停机坪上满是普通的民用运输机，几艘高端的私人飞船，在远处还有一排货船在卸下补给。一名初级学院代理人在一个登陆休息室迎接你，手里还拿着促销商品。",,
+gaScholarshipPitch,GAAgentGreeting,!$heardScholarshipPitch,,"""你好，船长。也许你是校友？你考虑过向学院的奖学金信托基金捐款吗？""",,
+gaScholarshipPitchRepeat,GAAgentGreeting,$heardScholarshipPitch,,"代理人笑得很灿烂。 ""你有没有考虑过与学院一起设立奖学金？""",,
 gaAddOptionMeetProvost,PopulateOptions,"$id == station_galatia_academy
-!$metProvost",,,1:gaRequestMeeting:Request a meeting with the provost,
-gaAddOptionInfodump,PopulateOptions,$id == station_galatia_academy,,,2:gaInfoDump:Ask about the Galatia Academy,
+!$metProvost",,,1:gaRequestMeeting:请求与教务长会面,
+gaAddOptionInfodump,PopulateOptions,$id == station_galatia_academy,,,2:gaInfoDump:询问Galatia学院相关,
 gaAddOptionCommDir,PopulateOptions,"$id == station_galatia_academy
-$metProvost == true",,,0:gaCommDir:Open the comm directory,
-gaAddOptionLeave,PopulateOptions,$id == station_galatia_academy,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:Leave,
-gaOpenCommDirSel,DialogOptionSelected,$option == gaCommDir,OpenCommDirectory,You connect to the academy's comm directory and browse the public and otherwise known listings.,,
+$metProvost == true",,,0:gaCommDir:打开通讯目录,
+gaAddOptionLeave,PopulateOptions,$id == station_galatia_academy,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:离开,
+gaOpenCommDirSel,DialogOptionSelected,$option == gaCommDir,OpenCommDirectory,你连接到学院的通讯目录并浏览公共列表和其他已知列表。,,
 # Galatia Academy infodump,,,,,,
 gaInfoDump,DialogOptionSelected,$option == gaInfoDump,"$heardScholarshipPitch = true
-FireAll PopulateOptions","The agent launches into a polished spiel, ""The Academy was founded pre-collapse, a humble institution of research and higher education on the grand frontier of the Domain. The dual foci were practical matters in the fields from applied terraforming to engineering sciences and the more theoretical pursuits including study of local astrophysics and xenobiology. The Collapse of course, changed everything, and in the following cycles... ""
+FireAll PopulateOptions","代理人开始高谈阔论：""学院在大崩塌之前成立，是该领域宏伟前沿的一所不起眼的研究和高等教育机构。着重聚焦于从应用地形改造到工程科学领域的实际问题，以及更多的理论研究，包括研究当地的天体物理学和外星生物学。当然，大崩塌改变了一切，在接下来的周期里……""
 
-Your eyes wander over the people coming and going. Groups of youths full of energy and displaying earnest association with various subcultures by modifying their standard Academy uniforms- knockoff hivescum holo tags, ironic Luddic weave, Hegemony officer coats done up in off-code colors and patterns, ill-fitted spacer rigging. A few proper academicians in off-white coats study their datapads or walk swiftly in small groups to meetings and lectures.",,
+你的目光在来来往往的人群中徘徊。 一群充满活力的年轻人通过修改他们的标准学院制服来展示与各种亚文化的真诚联系 - 仿制冒的hivescum holo标签，怪异的卢德编织物，用不合规范的颜色和图案装饰的霸主军官外套，还有不合身的衬垫和索具。 一些穿着米白色外套的院士们有的在他们的数据板上做研究，或者成群结队地快速参加会议和讲座。",,
 ,,,,,,
 # bar event telling you to go check out the GA,,,,,,
 goToTheGABarEventOption,AddBarEvents,"!$market.isHidden
 $global.daysSinceStart > 365
 !$global.metBaird
 !$global.interactedWithGABarEvent
-RollProbability 0.2","AddBarEvent goToGA_barEvent ""Talk to the distinguished academician"" ""A distinguished, uniformed academician seems to be holding court with a handful of successful-looking ship officers."" highlight",,,
+RollProbability 0.2","AddBarEvent goToGA_barEvent ""和学士对话"" ""几位看起来十分成功的舰船军官正倾听着一位穿着制服的著名学士讲话。"" highlight",,,
 goToGA_barEvent,DialogOptionSelected,"$option == goToGA_barEvent
-GenGAIntroAcademician",,"As you approach, $heOrShe looks over and says ""Captain $playerName! Don't look so surprised, you've got a fascinating reputation to, shall we say, movers and shakers the Sector over."" 
+GenGAIntroAcademician",,"当你走近时，$heOrShe 回头看了看并说："" {$playerName} 船长！不要看起来如此惊讶，你的名声非常富有吸引力，可以说，你是整个行业的风云人物。""
 
-$HeOrShe dismisses the other officers with a promise to join them in a moment, then catches your eye, ""Dilettantes. Compared to yourself, I mean. I trust you've heard of the academy's new provost?""","goToGA_barEvent1a:""The new what?""
-goToGA_barEvent1b:""Oh, the Galatia Academy has a new chief executive?""",
-goToGA_barEvent1a,DialogOptionSelected,$option == goToGA_barEvent1a,,"""My apologies,"" $heOrShe grins apologetically, ""We ivory-tower academics get so lost in our own world. Everything revolves around the next paper, the next conference.""
+$HeOrShe 打发了其他军官，并承诺稍后加入他们，然后朝你示意，""真是外行。我的意思，和你相比起来。我相信你听说过学院的新教务长？""","goToGA_barEvent1a:""新的什么？""
+goToGA_barEvent1b:""哦，Galatia学院有新的教务长了？""",
+goToGA_barEvent1a,DialogOptionSelected,$option == goToGA_barEvent1a,,"""我很抱歉，""$heOrShe 带着歉意尴尬地笑着说，""我们象牙塔中的学者在自己的世界里迷失了方向。一切都围绕着下一篇论文，下一次会议。""
 
-The senior academician waves an arm to dismiss all of that. ""The new provost. After that embarrassing incident with Provost Kallichore, the Academy has come under new leadership- bold leadership. To the new provost, Anahita Baird!"" $HeOrShe raises $hisOrHer glass in a toast. You discover that you're holding a glass of something as well.","goToGA_barEvent2a:Raise a glass
-goToGA_barEvent2b:Set it down on the bar",
-goToGA_barEvent1b,DialogOptionSelected,$option == goToGA_barEvent1b,,"""Ah, I knew you were as intelligent as you look,"" $heOrShe winks
+这位资深院士挥了挥手，驳回了这一切。 ""新教务长。在与教务长 Kallichore 的那次尴尬事件之后，学院迎来了新的领导——一位大胆的领导。致新教务长，Anahita Baird！""{$HeOrShe}举起了{$hisOrHer}的酒杯祝酒。 这时你才意识到你手里也拿着一个装满液体的杯子。","goToGA_barEvent2a:举杯
+goToGA_barEvent2b:将酒杯放回吧台上",
+goToGA_barEvent1b,DialogOptionSelected,$option == goToGA_barEvent1b,,"""啊，我就知道你和看起来一样聪明，""$heOrShe 朝你眨了眨眼
 
-""Yes, the academy is renewing itself! After that embarrassing incident with Provost Kallichore, the Academy has come under new leadership- bold leadership. To the new provost, Anahita Baird!"" $HeOrShe raises $hisOrHer glass in a toast. You discover that you're holding a glass of something as well.","goToGA_barEvent2a:Raise a glass
-goToGA_barEvent2b:Set it down on the bar",
+""是的，学院正在不断更新！在与教务长 Kallichore 的那次尴尬事件之后，学院迎来了新的领导——一位大胆的领导。致新教务长，Anahita Baird！"" {$HeOrShe}举起了{$hisOrHer}的酒杯祝酒。 这时你才意识到你手里也拿着一个装满液体的杯子。","goToGA_barEvent2a:举杯
+goToGA_barEvent2b:将酒杯放回吧台上",
 goToGA_barEvent2a,DialogOptionSelected,$option == goToGA_barEvent2a,"$option = goToGA_barEvent3 0
-FireBest DialogOptionSelected","You raise your glass, and the senior academician enthusiastically hits it with their own, then downs the drink.",,
+FireBest DialogOptionSelected",你举起酒杯，这位资深院士热情地与你碰杯，然后一饮而尽。,,
 goToGA_barEvent2b,DialogOptionSelected,$option == goToGA_barEvent2b,"$option = goToGA_barEvent3 0
-FireBest DialogOptionSelected","You set the glass down, giving the academician a skeptical look. $HeOrShe shrugs, and downs $hisOrHer own drink without your accompaniment.",,
-goToGA_barEvent3,DialogOptionSelected,$option == goToGA_barEvent3,,"""To fresh blood, my enemies slaughtered and their lands conquered. Isn't that right? I mean this in purely metaphorical terms, of course, but I daresay the Hegemony purge has cleared out the old guard and opened up some opportunities. Which brings me to you.""
+FireBest DialogOptionSelected",你放下酒杯，向院士投以怀疑的目光。{$HeOrShe}耸了耸肩，在你没有配合的情况下喝下{$hisOrHer}自己的饮品。,,
+goToGA_barEvent3,DialogOptionSelected,$option == goToGA_barEvent3,,"""敬新血液，敌人们被屠杀，土地被征服，你说是不是？当然完全是比喻性的，不过要我说霸主的清洗清除了守旧派并创造了一些机会，这就要说到你了。""
 
-A hand lands on your shoulder, somewhat intrusively. ""The new provost asked me to find someone like you, and now I've found you. Come to the Galatia Academy- in the Galatia system of course, but you don't need me to tell you that, ha-ha. Meet with Provost Baird.""",goToGA_barEvent4:Continue,
+一只手有点无礼地搭在了你的肩膀上。""新上任的教务长委托过我寻找像你一样的人，而现在我找到了。来Galatia学院——在Galatia星系，但你明显不需要我告诉你，哈哈。来和Baird教务长见一面。""",goToGA_barEvent4:继续,
 goToGA_barEvent4,DialogOptionSelected,$option == goToGA_barEvent4,"$global.interactedWithGABarEvent = true
-BeginMission gaIntro","$HisOrHer face turns serious for a moment, ""She has a vision for the future, captain. And in times as extraordinary as these, she might just realize it. Hear what she has to say. Keep an open mind.""
+BeginMission gaIntro","$HeOrShe 的表情严肃了一刻，""她有一个对未来的愿景，舰长。在现在这样的特殊时刻，她可能真的能实现这个愿景。听听她有什么说的。别抱有成见。
 
-$HisOrHer tone lightens again, and $heOrShe glances at the officers $heOrShe was previously carousing with. ""Now if you would pardon me, I do believe that I owe a round for my new friends. I shall see you around the Galatia Academy soon, I'm sure.""",backToBar:Return to the bar,
+$HisOrHer 的语气轻松了些，$HisOrHer 瞥了眼刚刚之前一起狂欢的舰船军官们，""现在请容我先行告退，我相信我还欠我的新朋友们一轮酒。我会很快在Galatia学院见到你的，不是么？""",backToBar:回到吧台,
 ,,,,,,
 "# Galatia Academy, first in-person meeting w/ Baird",,,,,,
 gaRequestMeeting,DialogOptionSelected,$option == gaRequestMeeting,"$global.metBaird = true
 $market.gaIntro_completed = true
-Call $global.gaIntro_ref updateStage","The academy agent makes a quiet request through their personal comms then gives you a patient look. ""The new provost is very, very busy. New administration after the, um, recent unpleasantness, you know? This could take some time. Days, weeks sometimes. You might want to leave your comm id with me and come back in-""
+Call $global.gaIntro_ref updateStage","学院的工作人员在通讯中发出一个请求后耐心地看着你。""新上任地教务长十分的忙。你知道的，经过呃—之前的不愉快后新的行政管理。这可能比较费时，需要数天，甚至数周。也许你可以将你的通讯号码留给我再在别的—""
 
-The comms unit chimes softly.
+通讯设施轻响。
 
-""Yes? ... Really? I mean, yes, we'll come up immediately."" The agent turns to you, ""Provost Baird will see you. Right now. Please follow me, captain.""",0:gaRequestMeeting1:Follow the junior academy agent,
-gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"You are led through a discreet secure-access door to a series of passages that bypass the public concourses. You are brought to a travel-lift which activates at the academy agent's presence and step inside at the agent's encouraging nod.
+""您好？。。。您确定？我是说，是的，我们会立刻上来。""前台转过头来，""Baird教务长现在就会接待你。请跟着我来，舰长""",0:gaRequestMeeting1:跟随工作人员,
+gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"你被带着穿过一扇不显眼的安全门，来到一系列绕过公共大厅的通道。你被带到一部电梯前，工作人员的出现激活了电梯，他向你点了点头示意你进入吊舱。
 
-The lift pod is wrapped by diamond-matrix through which you can watch the canyon-like sweep of plazas pass by, filled with crowds of students, academics, and technicians. Raising your gaze, you see that the pod is approaching a tiered substructure which seems to hang over the curve of the station interior. The pod slows and you shuffle to adjust to the local grav-effect field gradient. You must be near the core of Galatia Station.",0:gaRequestMeeting2:Continue,
-gaRequestMeeting2,DialogOptionSelected,$option == gaRequestMeeting2,,"A guard wearing a mirrored faceplate dismisses the junior agent and ushers you through the first doors to an antechamber filled with small groups of people who are presumably waiting to meet with the provost. They have perfect hair and perfect skin unmarred by the radiation or burns that mark a spacer. Those cybernetics you can spot are consciously stylish adornments rather than crude augments. Many have brought their young progeny with them; the stench of wealth and influence is palpable.
+你透过吊舱周围菱形的矩阵看到你经过的山脉般的广场，挤满了学生，学者，和技工。将目光向上移你看到吊舱在靠近悬在空间站内部弧线上方的一个分层结构。吊舱逐渐减速，你动了动适应此处的重力梯度场。你在接近Galatia空间站的核心。",0:gaRequestMeeting2:继续,
+gaRequestMeeting2,DialogOptionSelected,$option == gaRequestMeeting2,,"一位戴着镜面面罩的卫兵示意工作人员可以离开后带着你穿过大门来到前厅，前厅到处都是一小群一小群的人，大概都在等待与教务长会面。他们的头发与皮肤上看不到漫游者们标志性的辐射与烧伤痕迹。你看到的植入体都是有意的时尚饰品而不是粗糙的强化。很多人带着他们年轻的后辈；财与势的气味如同可触般。
 
-Heads turn as you are led past all of them toward a set of large doors which appear to be inlaid with wood from real trees. You feel their glares on you like point defense fire on heavy armour.","0:gaRequestMeeting3:Play it cool. Eyes forward.
-1:gaRequestMeeting3a:Smile and wink at them. You're special and know it.",
+随着你被领着通往一扇看起来内镶了天然木材的大门，许多人转头看向你。你感觉到他们的视线聚焦在你身上，就像点防火力打在重甲上。","0:gaRequestMeeting3:不为所动，向前看去。
+1:gaRequestMeeting3a:向他们微笑并眨眼，你知道你是特别的。",
 gaRequestMeeting2ConvertOption3a,DialogOptionSelected,$option == gaRequestMeeting3a,"GAReduceRandomRep
 $option = gaRequestMeeting3 0
 FireBest DialogOptionSelected",,,
-gaRequestMeeting3,DialogOptionSelected,$option == gaRequestMeeting3,BeginConversation baird true true,"You enter the office as the doors close silently behind you. Provost Anahita Baird turns to acknowledge your entrance while concluding a call via her desk tablet. 
+gaRequestMeeting3,DialogOptionSelected,$option == gaRequestMeeting3,BeginConversation baird true true,"随着你进入房间，你身后的门无声的关上。教务长Anahita Baird在桌上的平板上挂掉了电话转过头来示意她知道你进来了。
 
-Ancient wooden shelves for real, paper books gleam darkly in subdued light emanating tastefully from nowhere. The shelves are only half-stocked from crates scattered around the office. A brass orrery of the Galatia system adorns a plinth in the center of a seating cluster. Parchments mounted behind the provost's desk display intimidating intellectual rankings, their seals of authenticity softly glowing.
+古老的木制书架上摆放着真正的纸质书籍，在不知何处散发出的哑光下镀出暗芒。办公室内散落的箱子中摆满的书籍目前只填满了书架的一半。一座Galatia星系的铜制轨道模型点缀在座椅群的正中。教务长桌后墙上的羊皮纸展示着令人生畏的学者排名，纸上证明其真实性的印章散发着柔和的光。
 
-""I apologize for the mess,"" she says, having noted your examination. ""I've only just moved office.""",0:gaRequestMeeting4:Continue,
-gaRequestMeeting4,DialogOptionSelected,$option == gaRequestMeeting4,$theQuestionWasRhetorical = true 0,"Before you speak she raises a hand.
+""抱歉这里一团糟，""她说到，看到你环顾四周的样子。""我才刚刚搬到这里。""",0:gaRequestMeeting4:继续,
+gaRequestMeeting4,DialogOptionSelected,$option == gaRequestMeeting4,$theQuestionWasRhetorical = true 0,"在你说话之前，她举起一只手。
 
-""You're not here to set up a donation. Why then? Because it is very much in my interest to know about the up-and-coming mercenary captain who corrected the unfortunate situation created by my ambitious but incautious predecessor.""
+""你当然不是来捐款的。那是因为什么呢，因为我非常想了解纠正了我那位野心过剩但谨慎不足的前任所造成的不幸局面，逐渐走上舞台的雇佣兵舰长。""
 
-A pause.
+她顿了一下。
 
-""This institution is not devoted to purely theoretical work,"" she forms a cradle with her hands, as if to hold an idea as she explains it, ""For what use is knowledge if it does not give us the power, and wisdom, to change the world for the better?""
+""这个机构并不致力于纯粹的理论工作，""她用手形成一个摇篮，像是托住自己的想法。""如果知识不能给我们用于改善世界的力量与智慧，那么知识有什么用？""
 
-She leaves the question hanging in the air for a moment.","0:gaRequestMeeting5a:""Knowledge is good for its own sake.""
-1:gaRequestMeeting5b:""Knowledge uplifts the human spirit.""
-2:gaRequestMeeting5c:""Knowledge can also be very profitable.""
-3:gaRequestMeeting5d:""Knowledge brings us closer to the Creator.""
-4:gaRequestMeetingSayNothing:Say nothing",
+她将这个问题放置了一会儿。","0:gaRequestMeeting5a: ""知识因其本身而美好。""
+1:gaRequestMeeting5b: ""知识鼓舞了人类的精神世界。""
+2:gaRequestMeeting5c: ""知识能带来很大的利润。""
+3:gaRequestMeeting5d: ""知识使我们更接近创造者。""
+4:gaRequestMeetingSayNothing:什么都不说",
 gaRequestMeeting4a,DialogOptionSelected,"$theQuestionWasRhetorical
 $option != gaRequestMeetingSayNothing","$option = gaRequestMeetingSayNothing 0
 unset $theQuestionWasRhetorical
-FireBest DialogOptionSelected","Provost Baird cuts you off as you begin to speak, ""The question was rhetorical, captain.""",,
+FireBest DialogOptionSelected","Baird教务长在你刚要说话时打断了你，""那只是个反问句，舰长。""",,
 gaRequestMeeting5,DialogOptionSelected,$option == gaRequestMeetingSayNothing score:100,"unset $theQuestionWasRhetorical
-FireAll GARequestMeeting5extras","She brings her hands apart. ""My point is that the Galatia Academy could make use of someone like you. Someone capable, discrete,"" and here she pauses, a tactic for emphasis she appears to employ often,  ""And very well paid. I do not wish to make the same mistake as my predecessor. If one wants work done properly, one must provide appropriate incentive."" 
+FireAll GARequestMeeting5extras","她摊开她的手。""我的意思是，Galatia学院可以用到你这样的人。一个有能力的、隐秘的人，""说到这里，她停顿了一下，看来她常用这套来强调重点，""而且报酬很高。我不希望犯和我的前任一样的错误。如果希望事情办得漂亮，就必须提供相应的激励。"" 
 
-She leans back and looks to you, done speaking. For real, this time. Probably.",,
-gaRequestMeeting5a,GARequestMeeting5extras,,,,"0:gaMeetingAccept:""I'm interested. What do you need done?"" (accept)
-1:gaMeetingDecline:""Thanks, but I have other priorities right now."" (decline)",
+她靠在椅背上看着你，似乎她要说的已经说完了。",,
+gaRequestMeeting5a,GARequestMeeting5extras,,,,"0:gaMeetingAccept: ""我很感兴趣。你需要我做什么？"" (接受)
+1:gaMeetingDecline: ""谢谢，但我有些需要优先处理的事项。"" (拒绝)",
 #gaRequestMeeting5b,GARequestMeeting5extras,"!$askedScholarship
 $global.playerReceivingGAStipend",,,"2:gaMeetingScholarship:""Actually, I really did want to create a scholarship.""","# Yeah, uh, this is a bit silly. Maybe do it later. -dgb"
 gaRequestMeeting5c,GARequestMeeting5extras,"!$askedStipend
-$global.playerReceivingGAStipend",,,3:gaMeetingStipend:Ask about the stipend you're receiving,
+$global.playerReceivingGAStipend",,,3:gaMeetingStipend:问问之前提到的津贴,
 #gaMeetingScholarship,DialogOptionSelected,$option == gaMeetingScholarship,"$askedScholarship = true 0
 FireAll GARequestMeeting5extras","You manage to surprise Provost Baird, because she is silent for several seconds while processing your statement. ""I see,"" she says finally, ""Um. Talk to Sebestyen about that, he'll make the arrangements."" The provost shakes her head once as if to clear the idea from her mind. 
 
 ""Now, where were we.""",,
 gaMeetingStipend,DialogOptionSelected,$option == gaMeetingStipend,"$askedStipend = true 0
-FireAll GARequestMeeting5extras","""The Hegemony saddled us with that as a disciplinary measure,"" the provost explains levelly. ""Had they seized our assets directly, it would be a clear violation of their principle of non-intervention in matters pertaining to the politics of the Galatia Academy. They'd look little better than pirates.""
+FireAll GARequestMeeting5extras","""霸主将其作为一个惩罚性措施加于我们身上，""教务长平静地解释道，""如果他们直接扣押我们的资产，那明显违反他们不干涉Galatia学院政策的原则。他们看起来不会比海盗好多少。""
 
-""Instead, as his last act in the office of provost, they had my predecessor Tomas Kallichore sign a range of burdensome contracts before he was removed to a Hegemony oubliette."" Baird smiles wryly, as if admiring the move. ""Much to your benefit.""",,
+""于其如此，他们让我的前任，Tomas Kallichore，在离开他的岗位前签了一系列繁重的合约，紧接着他就被转移到了一个霸主的地牢里。""Baird狡黠地笑了笑，似乎很欣赏这手棋。""便宜了你""",,
 gaMeetingAccept,DialogOptionSelected,$option == gaMeetingAccept,"$entity.acceptedProvost = true
 $entity.metProvost = true
 SetPersonHidden baird false
 SetPersonHidden sebestyen false
-BeginMission gaTTS","""I shall put you in contact with Academician Alviss Sebestyen. He will be your liaison with the academy. You will receive a few mundane tasks from various departments in the Academy so that we may build a working rapport as well as provide you with the funds you require to bring your fleet up to my standards."" 
+BeginMission gaTTS","""我会给你Alviss Sebestyen学士的联系方式。他将会是你在学院的联系人。你将从学院的各个部门接收到几个普通的任务，方便我们建立工作关系，也方便你获得扩编至达标舰队的资金。""
 
-She looks over her spectacles at you, ""Most of all I require evidence of trust. I intend to remain provost here for a long time, and productive relationships are built on trust.""
+她透过镜片看着你，""我最需要的是信任的证明，我准备在这个职位上呆很久，而富有成效的关系是建立在信任上的。""
 
-""We will speak again before long, I'm sure."" She looks out the dimmed windows at the great halls of the Galatia Academy. ""You cannot imagine what we shall accomplish."" 
+""我们下次谈话并不会太久，我确信。""她往昏暗的窗外看去，窗外是Galatia学院的殿堂。""你想象不到我们将成就什么""
 
-She smiles now. Not for you, but for herself.",gaMeetingEnd:Leave,
+她对着窗中的自己微微一笑。",gaMeetingEnd:离开,
 gaMeetingDecline,DialogOptionSelected,$option == gaMeetingDecline,"$entity.declinedProvost = true
 $entity.metProvost = true
 SetPersonHidden baird false
 SetPersonHidden sebestyen false
-BeginMission gaTTS","""I see."" 
+BeginMission gaTTS","从教务长的语气听来你并未给出正确答案。""我相信外面还有别的有远见的舰长对利润极高的工作感兴趣。不过请好好考虑一下我的提议。也许经过思考你能发现它是多么合理。""
 
-The provost's tone seems to suggest that you've answered her question incorrectly. ""There are other visionary space captains out there, I'm sure, who would be interested in extremely profitable work. Nonetheless, consider my offer carefully. Perhaps after some thought you will see just how reasonable it is.""
+她转向办公桌激活了一些屏幕，它们冰冷的光晒在她的脸上。""在你有时间慎重考虑我的提议后，联系我的助手，Sebestyen学士，有人会给你他的通讯ID。""
 
-She turns away, to her desk console, and activates some display which casts cool light over her face. ""After you have time to properly consider my offer, contact my assistant, Academician Sebestyen. Someone will give you his comm ID.""
-
-She taps at her console. ""Good day, captain.""",gaMeetingEnd:Leave,
+她开始在终端上敲键。""日安，舰长。""",gaMeetingEnd:离开,
 gaMeetingEnd,DialogOptionSelected,$option == gaMeetingEnd,"EndConversation DO_NOT_FIRE
 FireAll PopulateOptions
 ShowDefaultVisual",,,
@@ -3485,262 +3485,260 @@ ShowDefaultVisual",,,
 ??? special code doesn't seem needed any more; I removed it, let's see if it breaks... -Alex
 It broke -Alex",,,,,,
 bairdGreetingGoAway,PickGreeting,"$id == baird score:100
-!$global.bairdWillTalk score:100",ShowPersonVisual,"After a short wait, your connection request is accepted by an automated responder.
+!$global.bairdWillTalk score:100",ShowPersonVisual,"短暂的等待过后，你的通讯请求接到了自动应答上。
 
-""You've reached the offices of Provost Anahita Baird. To secure a number in the appointment queue, please inquire with your administrative contact. This call will be terminated in three seconds.""
+""您已连接至教务长Anahita Baird的办公室。请联系您的行政联系人以取得预约队列号码。该通话将于三秒后结束。""
 
-The machine is true to its word.",100:cutCommLink:Cut the comm link,
+它说的确实没错。",100:cutCommLink:挂断,
 bairdDefaultGreeting,PickGreeting,"$id == baird score:100
 $global.bairdWillTalk score:100","ShowPersonVisual
-FireAll PopulateOptions","Your connection is accepted immediately. An assistant appears, and they seem to recognize you without the need for introduction. ""Just a moment $PlayerSirOrMadam, the Provost will be with you shortly.""
+FireAll PopulateOptions","你的通讯立即被接通了。你看到一位助手，看起来不需要你自我介绍他就认出了你。""请稍等片刻 {$PlayerSirOrMadam}，教务长很快就会来。""
 
-After a short wait, the comms open to Provost Baird in her office. She takes just a moment to finish with some work on another holoscreen then turns to you. 
+又等了片刻，通讯被接通到了在办公室里的Baird教务长。她花了些时间完成另一个全息屏上的工作，接着转向你。
 
-""Ah, $playerName. What brings you to me at this hour?""",,
+""啊，{$playerName}。你这个时间点来找我是有什么事呢？""",,
 # bairdOptionMissionInquiry,PopulateOptions,$isPerson,,,0:cutCommLink:Inquire about special missions.,
 bairdConvEnd,DialogOptionSelected,"$option == cutCommLink
 $global.bairdWillTalk
 $id == baird score:1000","ShowDefaultVisual
 EndConversation DO_NOT_FIRE
-FireAll PopulateOptions",You cut the comm link.,,
+FireAll PopulateOptions",你挂断了通讯。,,
 # Baird introduction conversation,,,,,,
 bairdIntroGreeting,PickGreeting,"$id == baird score:100
-$global.bairdWantsToTalk score:2000",,"Your connection is accepted immediately. A junior assistant appears, and they seem to recognize you without the need for introduction. ""Just a moment $PlayerSirOrMadam $playerName,"" and the display flicks to a holding pattern displaying the crest of the Galatia Academy. 
+$global.bairdWantsToTalk score:2000",,"你的通讯立即被接通了。你看到一位初级助手，看起来不需要你自我介绍他就认出了你。""请稍等片刻 {$PlayerSirOrMadam}，""显示屏闪烁了一下变为了显示着Galatia学院徽章的等待画面。
 
-A mere moment later, the junior assistant re-appears. ""I'm very sorry, but the Provost requests your physical presence for a meeting as soon as possible."" Two taps on a datapad, and they continue, ""A landing slot has been set aside from your arrival, $PlayerSirOrMadam. I'm sure we will be delighted to see you shortly. Please have a wonderful day.""
+片刻后，那位助手再次出现，""我很抱歉，但是教务长需要和你面对面会谈，越快越好。""他在数据板上按了两下，继续说道，""已经有一个降落段落为你预留，{$PlayerSirOrMadam}。我相信我们很快就能见到你。祝你一天愉快。""
 
-With that, and you having not spoken a word, the line goes dark.",0:cutCommLink:Shut off comms,
+就这样，你一句话还没说，通讯就暗了下去。",0:cutCommLink:关闭通讯,
 gaBairdShuttleOption,PopulateOptions,"$id == station_galatia_academy
-$global.bairdWantsToTalk",,,1:gaBairdShuttle:Take a shuttle to meet with Provost Baird,
+$global.bairdWantsToTalk",,,1:gaBairdShuttle:乘坐飞梭面见Baird教务长,
 gaBairdShuttleOptionSel,DialogOptionSelected,$option == gaBairdShuttle,"unset $global.bairdWantsToTalk
 unset $global.asebSayBairdWantsToTalk
 $market.gaTTB_completed = true 0
-Call $global.gaTTB_ref updateStage","You find a junior academy agent pacing in the landing bay reception lounge. As soon as you enter, they look relieved and walk quickly to meet you.
+Call $global.gaTTB_ref updateStage","你看到一位初级学院工作人员在降落台的接待休息室里徘徊。看到你进门他明显松了一口气，迅速地走向你。
 
-""Captain $playerLastName! Thank you for coming. The provost will want to see you immediately; if you would just follow me this way, thank you.""",bairdIntroC1:Continue,
-bairdIntro1,DialogOptionSelected,$option == bairdIntroC1,,"The academy agent leads you through a series of back hallways and secure lifts toward the administrative suites occupied by Provost Baird at the core of the station. 
+""舰长{$playerLastName}！谢谢你能来。教务长会想立即与你会面；请跟着我往这边走。""",bairdIntroC1:继续,
+bairdIntro1,DialogOptionSelected,$option == bairdIntroC1,,"工作人员带着你穿过一系列的走廊和安全电梯，向着空间站中心Baird教务长的行政房间走去。
 
-You are led past diamond-matrix windows through which you can see vistas of the curving internal canyons of Galatia Academy Station. The light dims, and you approach the front waiting room of the office of the provost. It is filled with representatives of the most well-connected of the Persean Sector, whose eyes focus on an interloper like the beam array of a Paladin PD system. The self-assured march of the junior agent seems to project the impression that you're performing some adjutant role - your presence is immediately ignored. 
+你被领着走过钻石矩阵构成的窗户，透过它们你可以看到Galatia学院弯曲绵延的内部峡谷。光暗了下来，你接近教务长办公室的外部等候室了。里面都是Persean星域顶层的代表，他们的目光就像帕拉丁PD系统一样聚焦在闯入者的身上。工作人员自信的前进让你看起来就像个副手-你立刻被忽略了。
 
-You enter the inner office.",bairdIntroC2:Continue,
-bairdIntro2,DialogOptionSelected,$option == bairdIntroC2,BeginConversation baird false true,"""Ah, Captain $playerName."" Provost Anahita Baird taps something away on her desk interface and turns to address you. ""I am pleased that you've come to meet with me. And for all the work you've done for my project.""
+你进入了内部办公室。",bairdIntroC2:继续,
+bairdIntro2,DialogOptionSelected,$option == bairdIntroC2,BeginConversation baird false true,"""啊，{$playerName}舰长。""""Anahita Baird教务长在她的办公桌界面上敲了敲什么，然后转身对你说。""我很高兴你能来见我。也感谢你为我的项目所做的一切。""
 
-She lowers her head just a degree, ""You didn't think I'd be wasting your time with make-work, did you?"" She considers a moment, ""Well, there was some. Noise had to be introduced to the system to ensure that an outside observer would not immediately identify you as my agent.""",bairdIntroC3:Continue,
-bairdIntro3,DialogOptionSelected,$option == bairdIntroC3,,"""Which brings us to the subject I wish to discuss. Please, make yourself comfortable."" Baird motions to a set of seats around a table carved from the root structure of some great tree. Hand-carved by the looks of it. The work of Luddic artisans. 
+她微微低下了头，""你不会认为我会用杂活来浪费你的时间吧？"" 她考虑了一会儿，""嗯，当然之前是有一些。不过主要的是在系统中引入杂音，以确保别方的观察者不会立即察觉到你是为我工作的。""",bairdIntroC3:继续,
+bairdIntro3,DialogOptionSelected,$option == bairdIntroC3,,"""这也将我们带到了我想讨论的主题。请不要拘束。"" Baird向一边的座椅示意，这些座椅围绕着一张由某种大树的根部结构雕刻而成的桌子。看上去是手工雕刻的，路德工匠的作品。
 
-""They do fine work,"" she says, ""Whatever their misplaced devotion.""
+""他们的手艺很精妙，""她说，""即使他们的信仰是错置的。""
 
-She clasps her hands together, turning to business. ""You've proven you can be trusted. And now I ask that you take a more active role in my great work.""","bairdIntroC4:""And what is this 'great work'?""",
-bairdIntro4,DialogOptionSelected,$option == bairdIntroC4,FireAll BairdIntroHub,"""Saving the Persean Sector."" She is content to let the words hang in the air for a moment.
+她十指交叉，显然要回到正事上。""你已经证明你可以被信任。而现在我希望你在我的大计划中发挥更积极的作用。""","bairdIntroC4:""那么，这个大计划是什么呢？""",
+bairdIntro4,DialogOptionSelected,$option == bairdIntroC4,FireAll BairdIntroHub,"""拯救Persean星区。"" 她让这句话悬在空中了一会儿。
 
-""I don't ask that you like me and I won't make a sanctimonious appeal to your emotions. What I ask is that you recognize, rationally, that I am pursuing a course of action unburdened by factional demands. Indeed, this will be the foremost effort to ensure the survival of our civilization from collapse.""
+""我不要求你喜欢我，我也不会试着用高尚的理由来触动你的情感。我需要的是你理性地认识到，我所追求的行动方针不受派系要求的影响。事实上，这将是确保我们的文明免于崩溃的首要点。""
 
-""We will not be saved by a retreat to homesteads on fragile balls of rock, nor by an arms race which throws precious resources into the fires of interfactional squabbling. We have to reach beyond the known, develop theories that shatter all that has come before, apply radical technologies to ensure our survival. We must reach further and higher than the Domain ever dared!"" As she speaks, she raises her eyes up toward some abstraction. 
+""撤退到脆弱的岩球上并无法拯救我们，将宝贵的资源扔进派系冲突的火堆里也无法拯救我们。我们必须超越已知，建立粉碎之前一切理论的新理论，发展激进的技术来确保我们的生存。我们必须敢于人之领之先！"" 当她说话时，她目光投向上方，就像是看着那抽象的概念。
 
-This, you think, is something she believes in.",,
-bairdIntroHubA1,BairdIntroHub,!$bairdIntro_whyShould,,,"0:bairdIntro_tellMeMore:""Tell me more.""",
-bairdIntroHubA2,BairdIntroHub,$bairdIntro_whyShould,,,0:bairdIntro_tellMeMore:Let her continue her speech,
+你认为，这是她所深信的。",,
+bairdIntroHubA1,BairdIntroHub,!$bairdIntro_whyShould,,,"0:bairdIntro_tellMeMore:""告诉我更多。""",
+bairdIntroHubA2,BairdIntroHub,$bairdIntro_whyShould,,,0:bairdIntro_tellMeMore:不打断她的演讲,
 bairdIntroHubB1,BairdIntroHub,"!$bairdIntro_whyMe
-!$bairdIntro_whyShould",,,"1:bairdIntro_whyMe:""What do you need me for?""",
+!$bairdIntro_whyShould",,,"1:bairdIntro_whyMe:""那么为什么需要我呢？""",
 bairdIntroHubB2,BairdIntroHub,"!$bairdIntro_whyMe
-$bairdIntro_whyShould",,,"1:bairdIntro_whyMe:""Point made. What do you need me for?""",
-bairdIntroHubC,BairdIntroHub,!$bairdIntro_whyShould,,,"3:bairdIntro_whyShould:""And why should I help you?""",
+$bairdIntro_whyShould",,,"1:bairdIntro_whyMe:""足够了，那么为什么需要我呢？""",
+bairdIntroHubC,BairdIntroHub,!$bairdIntro_whyShould,,,"3:bairdIntro_whyShould:""而我为什么要帮助你呢？""",
 bairdIntroHubD,BairdIntroHub,"!$bairdIntro_willSee
-$bairdIntro_whyShould",,,"2:bairdIntro_willSee:""I guess we'll just have to see.""",
+$bairdIntro_whyShould",,,"2:bairdIntro_willSee:""那我们只能到时候看了。""",
 bairdIntroHubWhyMe,DialogOptionSelected,$option == bairdIntro_whyMe,"$bairdIntro_whyMe = true 0
-FireAll BairdIntroHub","""You have proven yourself to be... capable,"" she says. ""These people,"" she waves a hand to indicate the Galatia Academy, ""are very good at very specific things over which they have obsessed all their lives. But they've kept themselves too long in the ivory tower. They're soft. The world is out there,"" her voice rises, ""And we must change it.""
+FireAll BairdIntroHub","""你已经证明自己......有能力，""她说道。""这些人，""她挥手示意Galatia学院，""在他们痴迷了一生的一些十分具体的事上十分擅长。但他们把自己锁在象牙塔中太久了。他们很软弱。世界就在那里，""她的声音提高了，""而我们必须改变它。""
 
-She lowers her voice again, speaking directly to you, ""And that is why I need you.""",,
+她再次压低声音，直接地对着你说：""而这就是为什么我需要你。""",,
 bairdIntroHubWhyShould,DialogOptionSelected,$option == bairdIntro_whyShould,"$bairdIntro_whyShould = true 0
-FireAll BairdIntroHub","""I imagine your self-interest would provide sufficient motivation. As you well know, we pay in cash. The prospect of the continuity of technological civilization is an added benefit, is it not?""
+FireAll BairdIntroHub","""除非，""她停顿了一下，然后透过她的AR-spex看着你，平稳地说道：""我严重地误判了你，而你的意愿是要变卖你的舰队，把收益捐给慈善机构，然后加入一个Hesperus上的鞭笞者修会。 ......不，或者--你读了很多书--好吧，主要是看暗网频道的全息视频--而这让你起了去当政治执行者的心思，为'辛德里亚之狮'的千年统治四处扫荡。是这样么？""
 
-""Unless,"" she pauses, then looks at you over her AR-spex, speaking evenly ""I've gravely misjudged you, and your heart is set on liquidating your fleet, donating the proceeds to charity, and taking up with a flagellant order on Hesperus... no, I've got it- you've been doing a lot of reading- well, watching dark-channel holovids mostly- and have half a mind to enlist as a political enforcer smashing teeth in for the 1000-year reign of the 'Lion of Sindria'. Did I get it right?""
-
-Your shields hold firm under the broadside of sarcasm deployed by the Provost.",,
+你的护盾在教务长的舷侧讽刺洗礼中巍然不动。",,
 bairdIntroHubWillSee,DialogOptionSelected,$option == bairdIntro_willSee,"$bairdIntro_willSee = true 0
-FireAll BairdIntroHub","""Indeed."" She leans back, interpreting your response as a stand-down.",,
-bairdIntroHubTellMeMore,DialogOptionSelected,$option == bairdIntro_tellMeMore,,"""Your tasks will not be so simple from here on out. I expect you to be clever, to adapt to circumstances in pursuing the objectives I lay out. And."" 
+FireAll BairdIntroHub","""我想也是"" 她往后靠了下去，将你的回答视为退让。",,
+bairdIntroHubTellMeMore,DialogOptionSelected,$option == bairdIntro_tellMeMore,,"""你之后的任务将不会如此简单。我期望你足够聪明，完成我布置的任务时随机应变。还有。""
 
-She pauses for a moment, considering, before continuing in a tone colder than before, ""No matter what you have to do, as long as you pursue the mission goal, I will see that you are rewarded. Securing the future is worth... anything.""","bairdIntro_what:""What do you need done?""
-bairdIntro_morality:""I'm not willing to sacrifice all sense of morality for your 'future'.""
-bairdIntro_safeguard:""I'm willing to do whatever it takes to safeguard the future.""
-bairdIntro_whatIf:""And what if I don't want to help you?""",
-bairdIntro_moralitySel,DialogOptionSelected,$option == bairdIntro_morality,,"""Of course not."" She puts on a smile that isn't entirely friendly. ""And I would never ask it of you. This is exactly why I want to give you so much leeway- so you can do this your way. The right way. You've shown that it works; I cannot deny the evidence in front of my eyes.""",bairdIntro_continueToWhat:Continue,
-bairdIntro_safeguardSel,DialogOptionSelected,$option == bairdIntro_safeguard,,"""Of course you are."" She smiles, and you almost believe it. ""That's why I asked you to help: the ability to set your feelings aside and view the situation objectively. You know what it takes to lead and to prevail. I've seen it.""",bairdIntro_continueToWhat:Continue,
-bairdIntro_whatIfSel,DialogOptionSelected,$option == bairdIntro_whatIf,,"""Ah, the skeptic; of course. As an intellectual, I respect that you don't simply accept my demands due to my authority. I wouldn't have called you here if I wanted an obsequious minion to leap at my every request. I already have those."" 
+她停顿了一会儿，思索些许，然后用更为冷凌的语气继续说：""不管你需要做什么，只要是为了任务完成，你就会得到报酬。我们未来的保障值得......任何事与物。""","bairdIntro_what:""你有什么事需要做的？""
+bairdIntro_morality:""我不愿意为了你的‘未来’牺牲我所有的道德底线。""
+bairdIntro_safeguard:""为了守住未来，我不惜一切代价。""
+bairdIntro_whatIf:""那么如果我不想帮助你呢？""",
+bairdIntro_moralitySel,DialogOptionSelected,$option == bairdIntro_morality,,"""当然不了。"" 她摆出一个并不完全友好的笑容。""我也不会要求你这样做。这正是我想给你这么多周旋余地的原因--让你能用你的方法来办事。正确的方法。你已经证明了你方法的可行性；我不能否认放在我眼前的证据。""",bairdIntro_continueToWhat:继续,
+bairdIntro_safeguardSel,DialogOptionSelected,$option == bairdIntro_safeguard,,"""当然了。"" 她微笑着，你几乎相信了。""这就是为什么我请你帮忙：你那将你个人情感放在一旁，客观看待事态的能力。你知道领导与成功需要什么。我见过。""",bairdIntro_continueToWhat:继续,
+bairdIntro_whatIfSel,DialogOptionSelected,$option == bairdIntro_whatIf,,"""啊，怀疑主义者；当然。作为一个知识分子，我尊重你不因为我的权力就接受我的要求。如果我想要一个言听计从的谄媚奴才，我也不会叫你来。我已经有了。"" 
 
-""To your question: you'll miss out on the opportunity of your life."" She speaks almost casually, like it doesn't matter what you think. But there's an edge to her voice that suggests she does care, very much. ""Whatever your feelings, first hear what I have to say and then consider - rationally - what is best. I am confident that you will discover that our interests align.""
+""现在来回答你的问题：你会错过一生仅有一次的机遇。"" 她说得很随意，就像你怎么想并不重要。但她的声音里有一丝紧张，表明她确实在乎，非常在乎。""不管你怎么想，先听听我要说的，然后--理性地--考虑一下何为最佳。我相信你会发现我们的利益是一致的。""
 
-""So. Hear me out.""",bairdIntro_continueToWhat:Continue,
+""那么。请听我说完。""",bairdIntro_continueToWhat:继续,
 bairdIntro_continueToWhat,DialogOptionSelected,$option == bairdIntro_continueToWhat,"$option = bairdIntro_what 0
 FireBest DialogOptionSelected",,,
-bairdIntro_whatSel,DialogOptionSelected,$option == bairdIntro_what,,"""My predecessor, Provost Tomas Kallichore, led a series of misguided hyperspace manipulation experiments. Ah, how to put it in layman's terms?""
+bairdIntro_whatSel,DialogOptionSelected,$option == bairdIntro_what,,"""我的前任，教务长Tomas Kallichore，领导了一系列错误的超空间操纵实验。呃，怎么说得通俗一点呢？""
 
-Baird looks troubled to have to do this, sighs, then speaks: ""Captain. Your ships fly through hyperspace with special engines. The Gate network of the Domain was similar, but also very different. Kallichore thought there might be a way to use starship hyperdrives to re-open the Gates.""
+看起来这么做让Baird很伤脑筋，她叹了口气，然后开口：""舰长。你的飞船都用特殊的引擎在超空间飞行。类似于人之领的星门网络，但也非常不同。而Kallichore当时认为可能有办法利用星舰的超空间引擎来重新打开星门。""
 
-""Obviously it went terribly wrong, and the Galatia system was cut off from hyperspace when the jump-points were disrupted beyond usability. Though we hear some yahoo found a way to cross unstable jump-points, which is beyond irresponsible considering the chance of a resonance cascade- ah, I apologize. This is irrelevant.""",bairdIntroC5:Continue,
-bairdIntro6,DialogOptionSelected,$option == bairdIntroC5,,"""What matters is that once this mess was finally cleared up, the Hegemony descended on the Galatia Academy with a technological inspection fleet. They tore the place apart, arrested the heads of the hyperphysics department and several labs, and of course took Provost Kallichore in for questioning."" 
+""显然这些实验出了大问题，而Galatia系统也在跳跃点被损害至无法修复后与超空间断开了。虽然我们听说一些疯子找到了穿越不稳定跳跃点的方法，考虑到共振级联的可能性，这是很不负责任的--啊，我道歉。这和我们要讨论的没什么关联。""",bairdIntroC5:继续,
+bairdIntro6,DialogOptionSelected,$option == bairdIntroC5,,"""重要的是，当这个烂摊子终于被清理干净了，霸主就带着一支科技检查舰队降落到Galatia学院。他们把这个地方拆得七零八落，逮捕了超物理系还有几个实验室的负责人，当然还有Kallichore教务长，一并抓去审问。""
 
-She turns away. ""And, with little delay, sentencing."" 
+她面向一旁。""然后，几乎是紧接着，判刑。"" 
 
-""He was a fool, and too trusting,"" Baird says with contempt. ""Nonetheless, we lost good people and good research. Scientific breakthroughs are built on the development of theory and, yes, even negative results.""",bairdIntroC6:Continue,
-bairdIntro7,DialogOptionSelected,$option == bairdIntroC6,,"""I need you to recover Kallichore's secret archive. We need his data from that experiment, and all the others that led up to it. The Hegemony will have kept it. They keep everything. Evidence, you see.""
+""他是个傻瓜，而且太信任别人了，""Baird轻蔑地说。""尽管如此，我们失去了优秀的人和优秀的研究资料。科学的突破是建立在理论的发展上的，是的，甚至是负面的成果。""",bairdIntroC6:继续,
+bairdIntro7,DialogOptionSelected,$option == bairdIntroC6,,"""我需要你回收Kallichore的秘密资料库。我们需要他那次实验的数据，包括其之前的准备性实验。霸主肯定留在手上。他们保存一切。证据。""
 
-""We shall also need Academician Scylla Coureuse. She was a hyperspace physics researcher, the keystone of the theory team behind the jump-point experiments. The Hegemony, small-minded as they are, only arrested team leaders in the first sweep. They didn't understand that the underlying theory being tested was largely written by one particular academician who was... not suitable for leadership.""
+""我们还需要Scylla Coureuse院士。她是一位超空间物理学研究员，跳跃点实验背后理论小组的基石。霸主一直以来目光狭小，在第一次扫荡中只逮捕了队伍领导。他们不明白的是当时测试的基础理论主要是由一位。。。不适合领导的院士撰写的。""
 
-""I need you to find her.""","bairdIntro_archive:How can I get the Kallichore Archive from the Hegemony?
-bairdIntro_scylla:Do you have any leads on this Scylla Coureuse?",
-bairdIntroArchive1,DialogOptionSelected,$option == bairdIntro_archive,,"""Follow the aftermath of the Galatia Experiment. The Hegemony technological inspectors seized everything they thought looked suspicious, and they do like to keep records. The most direct approach would be to get access to the data vaults of the Ministry of Technology Standards. They're who you might call the 'AI Inspectors', among other roles. Not trivial,"" she looks amused, ""but it's been done before.""
+""我需要你找到她。""","bairdIntro_archive:如何能从霸主手上拿到Kallichore的秘密资料库？
+bairdIntro_scylla:你手上有Scylla Coureuse的线索么？",
+bairdIntroArchive1,DialogOptionSelected,$option == bairdIntro_archive,,"""Galatia实验之后。霸主的科技检查员查封了任何他们认为可疑的事物，而他们喜欢保留记录。最直接的方法是进入科技标准部的数据库。他们是你可能称之为'人工智能稽查员'的人，其他职务除外。这可不是小事，""她看起来有些想笑，""但曾经也有人办到过。""
 
-""I have an old... acquaintance who has been rising quickly in the Tri-Tachyon executive ladder. His name is Rayan Arroyo, based out of Eochu Bres. He may be compelled to assist us with a human asset on this front. I'll forward you the contact information."" She taps for a moment on her desk-interface.",bairdIntro_archive1:Continue,
+""我有一个老。。。熟人，他在速子科技的行政梯队中上升很快。他的名字叫Rayan Arroyo，在Eochu Bres办公。也许他能被说动在这一目标上用一些人力资源协助我们。我会把联系信息转发给你。"" 她在她的桌面终端上敲了一会儿。",bairdIntro_archive1:继续,
 bairdIntroArchive2,DialogOptionSelected,$option == bairdIntro_archive1,"$bairdIntro_archive = true 0
-BeginMission gaKA","""Let us say that his future career opportunities are on the line. Mention me. If you are firm but discreet, I believe you will find him more than willing to assist.""","bairdIntro_archive2b:""Rayan Arroyo. Got it.""
-bairdIntro_archive2a:""You want me to blackmail a Tri-Tachyon executive?""
+BeginMission gaKA","""这样说吧，他未来的职业生涯悬在线上。报我的名字。如果你态度强硬而谨慎，我相信你会发现他十分的乐于助人。""","bairdIntro_archive2b:""Rayan Arroyo， 明白了。""
+bairdIntro_archive2a:""你想让我去勒索一位速子科技的高管？""
 ",
-bairdIntro_archive2aSel,DialogOptionSelected,$option == bairdIntro_archive2a,FireBest BairdIntroCheckOutro,"""Not at all. I,"" she says this with emphasis, ""I was simply attentive when a Tri-Tachyon executive compromised corporate security to advance his career over a rival.""
+bairdIntro_archive2aSel,DialogOptionSelected,$option == bairdIntro_archive2a,FireBest BairdIntroCheckOutro,"""当然不是了。我，""她说这句话时加重了语气，""我只是单纯地注意到了一位速子科技的高管为了在事业上超过对手损害了公司安全。""
 
-""He understands the value of the deal he made and has come out ahead compared to the alternative. You will find him quite cooperative.""",,
-bairdIntro_archive2bSel,DialogOptionSelected,$option == bairdIntro_archive2b,FireBest BairdIntroCheckOutro,"""He compromised corporate security to advance his career over a rival. He understands the value of the deal he made with me."" She almost smiles, ""You will find him quite cooperative once you get past his inflated sense of self-importance.""",,
-bairdIntroScyllaSel,DialogOptionSelected,$option == bairdIntro_scylla,,"""As for the prodigy of Galatia..."" Baird trails off. Is that regret? The look quickly disappears.",bairdIntro_scylla1:Continue,
+""他明白他所做的交易的价值，并且比起另一条路他已经算是赚的盆满钵满了。你会发现他相当愿意合作。""",,
+bairdIntro_archive2bSel,DialogOptionSelected,$option == bairdIntro_archive2b,FireBest BairdIntroCheckOutro,"""他为了压过竞争对手损害了公司的安全。他明白他与我达成的交易的价值。"" 她几乎露出笑容，""一旦你克服了他膨胀的自尊心，你会发现他相当愿意配合。""",,
+bairdIntroScyllaSel,DialogOptionSelected,$option == bairdIntro_scylla,,"""至于Galatia的奇才。。。"" Baird逐渐无声。她脸上的是遗憾吗？这个表情很快就消失了。",bairdIntro_scylla1:继续,
 bairdIntroScylla1,DialogOptionSelected,$option == bairdIntro_scylla1,"BeginMission gaFC
-Call $global.gaFC_ref updateData","""Coureuse was always an odd fit. Brilliant, yes, but she had a way of being distracted with involvement in, hmm, antagonistic subcultures."" Baird waves a hand, dismissing the matter as sociological fluff. ""Perhaps the Hegemony crackdown cured her of that childish affectation.""
+Call $global.gaFC_ref updateData","""Coureuse一直都是一个怪胎。才华横溢，是的，但她总是会分心于参与，嗯，对立的亚文化中。"" Baird挥了挥手，将其当作花边新闻。""或许霸主的镇压使她摆脱了那种幼稚的影响。""
 
-""Her family and, presumably, friends,"" you wonder for a moment if Baird has any of those, ""-are from Fikenhild, in the Westerness system. You could start there."" ",bairdIntro_scylla2:Continue,
-bairdIntroScylla2,DialogOptionSelected,$option == bairdIntro_scylla2,$bairdIntro_scylla = true 0,"Baird thinks for a moment, then says ""If you were seen looking for Coureuse, then you may be contacted by others who are looking for her. That could be useful. You could cut a deal, get some leads.""
+""她的家人和，也许，朋友，""你想了片刻Baird有没有这些，""--来自Westerness系统的Filkenhild。你可以从那里开始。"" ",bairdIntro_scylla2:继续,
+bairdIntroScylla2,DialogOptionSelected,$option == bairdIntro_scylla2,$bairdIntro_scylla = true 0,"Baird思考了一会儿，然后说：""如果有人发现你在寻找Coureuse，其他也在找她的人可能会联系你。这可能有益。你可以试着达成交易，尝试获取一些线索。""
 
-""Alternatively, her department was operating experimental packages in the $gaFC_starName system. We have detected some ongoing telemetry that suggests these instruments are still in use by someone, though it isn't clear who."" She taps her desk interface, ""I've sent you the coordinates.""
+""或者，她的部门之前在{$gaFC_starName}系统中操纵着一些实验性组件。我们有检测到一些进行中的遥测，表明这些仪器仍在被某人使用，尽管还不清楚是谁。"" 她敲了敲他的桌面终端，""我已经把坐标发给你了。""
 
-The provost looks at you over her spectacles. ""How do you want to handle this, captain? Are you a diplomat or an explorer? Do you want to find the probes in the $gaFC_starName system or talk your way through this on Fikenhild?"" ","bairdIntro_scylla2choiceB:Take the diplomatic path
-bairdIntro_scylla2choiceA:Take the exploration path",
+教务长透过眼镜看着你。""你想怎么处理这件事，舰长？你是一位外交官还是一位探险家？你想在{$gaFC_starName}系统中找到探测器，还是在Fikenhild上打交道？""","bairdIntro_scylla2choiceB:外交路线
+bairdIntro_scylla2choiceA:探险路线",
 bairdIntroScylla2choiceA,DialogOptionSelected,$option == bairdIntro_scylla2choiceA,"$global.gaFC_pickedBranchProbes = true
 Call $global.gaFC_ref updateStage
-Call $global.gaFC_ref updateData","Baird nods, ""Of course. You are, at heart, a... an adventurer, shall we say, aren't you.""
+Call $global.gaFC_ref updateData","Baird点点头，""当然。你本质上是一个。。。一个冒险家，不是么。""
 
-""If you want to change your approach, you must let me know so that I can ensure you have all the information you require.""",bairdIntro_scylla3:Continue,
+""如果你想换一个方法，你必须让我知道，这样我才能确保你有你所需要的所有信息。""",bairdIntro_scylla3:继续,
 bairdIntroScylla2choiceB,DialogOptionSelected,$option == bairdIntro_scylla2choiceB,"$global.gaFC_pickedBranchFikenhild = true
 Call $global.gaFC_ref updateStage
-Call $global.gaFC_ref updateData","Baird nods, ""I thought so. There's no problem you don't believe you can talk your way through, is there.""
+Call $global.gaFC_ref updateData","Baird点点头，""我想也是。没有什么问题是你觉得没法用交流解决的，是吧。""
 
-""If you want to change your approach, you must let me know so that I can ensure you have all the information you require.""",bairdIntro_scylla3:Continue,
-bairdIntroScylla3,DialogOptionSelected,$option == bairdIntro_scylla3,,"""When you do find Scylla Coureuse, I expect her to be unwilling to cooperate. I have provided you with an encrypted message. It is an, ah, a personal appeal from myself to her. It should prove persuasive.""","bairdIntro_scylla4b:""I'm sure it will.""
-bairdIntro_scylla4a:""Will I be blackmailing Coureuse for you?""",
-bairdIntroScylla4a,DialogOptionSelected,$option == bairdIntro_scylla4a,FireBest BairdIntroCheckOutro,"""You need not be so conspiratorial, captain,"" Baird admonishes, ""Not everything is cloak and dagger, blackmail and bribes.""
+""如果你想换一个方法，你必须让我知道，这样我才能确保你有你所需要的所有信息。""",bairdIntro_scylla3:继续,
+bairdIntroScylla3,DialogOptionSelected,$option == bairdIntro_scylla3,,"""当你真的找到Scylla Coureuse时，我预见她不会很配合。我已经向你提供了一份加密信息。这是一个，啊，一个我个人对她的私人呼吁。它应该有些说服力。""","bairdIntro_scylla4b:""我相信会起到作用的。""
+bairdIntro_scylla4a:""由我来替你威逼利诱Couresue么？""",
+bairdIntroScylla4a,DialogOptionSelected,$option == bairdIntro_scylla4a,FireBest BairdIntroCheckOutro,"""你大可不必这么热衷于阴谋论，舰长，""贝尔德告诫道，""不是所有的事情都是斗篷和匕首，勒索和贿赂。""
 
-""Our ex-academician has avoided all contact with the Galatia Academy since the Hegemony arrested most of her colleagues. I quite appreciate her rational response to that campaign of scientific suppression, but now she is needed for the role she is meant to play.""",,
-bairdIntroScylla4b,DialogOptionSelected,$option == bairdIntro_scylla4b,FireBest BairdIntroCheckOutro,"""Indeed,"" says Baird, looking at you closely. ""Her trepidation is a rational response to previous events; the investigations, arrests, the show-trial of Kallichore. But conditions have changed, and she is needed if we are to escape from stagnant local maxima.""
+""自从霸主逮捕了她的大部分同事后，我们的前学者就避免了与Galatia学院的所有接触。我相当欣赏她对那场科学压迫运动的理性反应，但现在需要她发挥她应有的作用。""",,
+bairdIntroScylla4b,DialogOptionSelected,$option == bairdIntro_scylla4b,FireBest BairdIntroCheckOutro,"""确实，""Baird说，仔细看着你。""她的惶恐不安是对之前情况的合理反应；调查、逮捕、对Kallichore的公开审判。但现状已经改变了，如果我们要突破停滞不前的上限，就必须要找到她。""
 
-Baird turns to the window. ""I will call, Scylla will answer,"" she says. A proclamation?",,
-bairdIntro_archiveCheckOutro1,BairdIntroCheckOutro,!$bairdIntro_scylla,,,bairdIntro_scylla:Do you have any leads on this Scylla Coureuse?,
-bairdIntro_archiveCheckOutro2,BairdIntroCheckOutro,!$bairdIntro_archive,,,bairdIntro_archive:How can I get the Kallichore Archive from the Hegemony?,
+Baird转向窗户。""我会呼吁，Scylla会响应，""她说道。就像宣告一般。",,
+bairdIntro_archiveCheckOutro1,BairdIntroCheckOutro,!$bairdIntro_scylla,,,bairdIntro_scylla:你有关于Scylla Coureuse的任何线索么？,
+bairdIntro_archiveCheckOutro2,BairdIntroCheckOutro,!$bairdIntro_archive,,,bairdIntro_archive:我该如何从霸主手上拿到Kallichore的资料库？,
 bairdIntro_archiveCheckOutro3,BairdIntroCheckOutro,"$bairdIntro_scylla
-$bairdIntro_archive",,,bairdIntro_outro1:Continue,
-bairdIntro_outro1,DialogOptionSelected,$option == bairdIntro_outro1,AddStoryPoints 1,"""Find the Kallichore Archive. Find Scylla Coureuse. Once you have accomplished both of these missions, the project can proceed to the next phase."" Baird smiles, ""And that's when things get exciting.""","bairdIntro_outro2:""So that's all?""
-bairdIntro_project:""So what is 'the project'?""",
-bairdIntro_outroProject,DialogOptionSelected,$option == bairdIntro_project,,"Baird's smile does not reach her eyes. ""You'll see.""",bairdIntro_outro2:Continue,
+$bairdIntro_archive",,,bairdIntro_outro1:继续,
+bairdIntro_outro1,DialogOptionSelected,$option == bairdIntro_outro1,AddStoryPoints 1,"""找到Kallichore的资料库。找到Scylla Coureuse。一旦你完成了这两项任务，项目就可以进入下一个阶段。"" Baird微笑着说：""到时候事情就要刺激起来了。""","bairdIntro_outro2:""就这些了？""
+bairdIntro_project:""所以这项目到底是什么？""",
+bairdIntro_outroProject,DialogOptionSelected,$option == bairdIntro_project,,"Baird笑了，但她的眼睛中却没一丝笑意。""你到时候会看到的。""",bairdIntro_outro2:继续,
 bairdIntro_outro2,DialogOptionSelected,$option == bairdIntro_outro2,"EndConversation DO_NOT_FIRE
 FireAll PopulateOptions
-ShowDefaultVisual","She turns to her desk display and starts inputting a command sequence, done with you for now.
+ShowDefaultVisual","她转向她办公桌上的显示器，开始输入某个命令序列，看来她和你的谈话暂时结束了。
 
-""Good day, captain,"" she says without looking back up, ""You may check in with me via comms for additional analysis as the operation develops, though I expect you to use your initiative.""
+""日安，舰长，""她头也不抬地说，""随着行动的进展，你可以通过通讯器向我汇报，以获得更多解析，尽管我希望你能更多的发挥你自身主动性。""
 
-""Oh, and I've re-authorized Academician Sebestyen with mission assignment access for your file. Carrying out his little jobs might be a good cover for your real work, and will allow us to funnel you additional credits.""
+""哦，还有，我已经重新授权Sebestyen学士向你发布任务。处理他的琐事可能能掩盖你的真实任务，而且还能让我们向你输送更多的资金。""
 
-You feel the subtle movement of air as the doors open silently behind you. Mirror-masked guards flank a junior agent who waits to escort you back to your shuttle.",,
+你察觉到一丝动静，门在你身后无声地打开。一位初级工作人员两侧站着戴着镜面面罩的卫兵，他来护送你回到你的穿梭舱。",,
 ,,,,,,
 # The Kallichore Archive story mission,,,,,,
 # Arroyo conversation,,,,,,
 gaKAArroyoGreeting,PickGreeting,"$id == arroyo
-$gaKA_contact score:1000",ShowPersonVisual,"Your comms officer connects your personal terminal to the local network. You activate the audio suppression field around your command station and enter the comms ID provided to you by Provost Baird. The animated logo of some Tri-Tachyon sub-department makes a half rotation before the call is answered.
+$gaKA_contact score:1000",ShowPersonVisual,"你的通讯官将你的个人终端连接到本地网络。你先启动了指挥台周围的音频抑制场，接着输入Baird教务长提供给你的通信ID。某个速子科技分部门的全息标识转了半圈，然后通讯接通了。
 
-""Arroyo here. Who's talking to me?"" Rayan Arroyo looks you over as if examining a starship hull for scratches. He seems to find something he doesn't quite approve of in you. 
+""这里是Arroyo。你是哪位？"" Rayan Arroyo打量着你，就像看着一艘布满划痕的星舰船体一样。他似乎对你有些意见。
 
-""Who gave you my comms ID?"" he demands.","gaKA_arroyoProblem:""I'm told you can help me solve a problem.""
-gaKA_arroyoProvost:""Provost Anahita Baird.""",
+""谁给了你我的通讯ID？""他质问道。","gaKA_arroyoProblem:""有人告诉我你能帮我解决一个问题。""
+gaKA_arroyoProvost:""教务长Anahita Baird。""",
 gaKAArroyoGreetingIgnoreCall,PickGreeting,"$id == arroyo
-$market.gaKA_visitChalet score:1000",,"Your call connects to an automated receiver. The animated logo of a Tri-Tachyon subsidiary spins endlessly on your display. After half a minute and the second time a voice tells you that your patience is appreciated, you conclude that your call is being ignored.
+$market.gaKA_visitChalet score:1000",,"你的通讯连接到了自动应答。一个速子科技子公司的全息标识在你的显示屏上不停地旋转着。两次""感谢您的耐心""与半分钟后，你得出结论，你的通讯请求被忽略了。
 
-Arroyo wants to discuss business in-person.",cutCommLink:Close comms,
-gaKAArroyoProblemSel,DialogOptionSelected,$option == gaKA_arroyoProblem,,"""Solve a problem."" He says this as if it's a matter far beneath the worth of his attention.
+看来Arroyo想当面讨论业务。",cutCommLink:关闭通讯,
+gaKAArroyoProblemSel,DialogOptionSelected,$option == gaKA_arroyoProblem,,"""解决一个问题。"" 他的语气很不耐烦。
 
-""I don't solve problems, buddy. I pay people to solve problems for me. You got problems? Go talk to the shipyard and get your oxygen leak fixed. I don't care about your problem unless your problem is seven or eight figs of cash in an account that you need put to work.""
+""我不解决问题，伙计。我付钱让别人为我解决问题。你有问题？去和船厂谈谈，把你的氧气泄漏修好。除非你的账户中有七位数八位数的款项没地方用，我对你的问题不感兴趣。""
 
-He's starting to shout. You get the impression that he enjoys this sort of upbraiding. 
+他的嗓门逐渐大了起来。在你看来，他很享受这种责骂他人的时间。
 
-""Done wasting my time? Now tell me who gave you my number because I'm going to fire them right after I cut this link.""","gaKA_arroyoProvost:""Provost Anahita Baird.""",
-gaKAArroyoProvostSel,DialogOptionSelected,$option == gaKA_arroyoProvost,,"For just a moment, you think you see a wave of panic cross Arroyo's face. It's replaced by a cocky grin, ""Oh, of course, of course- the Galatia Academy endowment fund. How could I forget?""
+""浪费够我的时间了么？现在告诉我是谁给了你我的号码，在挂断后我就要立刻去解雇他。""","gaKA_arroyoProvost:""教务长Anahita Baird。""",
+gaKAArroyoProvostSel,DialogOptionSelected,$option == gaKA_arroyoProvost,,"有那么一瞬间，你似乎看到Arroyo的脸上掠过一丝惊慌。取而代之的是一个自信的笑容。""哦，当然，当然--Galatia学院的捐赠基金。我怎么忘记了呢？""
 
-""Here,"" he taps at something and your comms displays an incoming set of coordinates with the code of a landing beacon. 
+""这里，""他敲了敲什么东西，你的通讯器显示了一组刚传入的坐标和一个降落信标的密码。
 
-""Take a shuttle down. We can touch base about the fund. I'm sure the Provost has exciting plans and I want to hear all about them-"" He lifts his eyes upward for a moment and lowers them again to look directly at you. ""In person.""",gaKA_arroyoProvost2:Continue,
+""乘坐穿梭机下来。我们可以就基金的问题进行接洽。我相信教务长有着一些令人吃惊的计划，我想好好了解一下--""他抬起眼睛看了看，又低下头来直视着你。""当面谈。""",gaKA_arroyoProvost2:继续,
 gaKAArroyoProvostSel2,DialogOptionSelected,$option == gaKA_arroyoProvost2,"$toldToVisitChalet = true
 $global.gaKA_visitArroyo = true
-Call $global.gaKA_ref updateStage","He carries on as if this was all perfectly expected. ""Ever been planetside? Doesn't count if it's just the arcology. I'll give you a tour of my chalet. Spectacular views, you'll love it. See you soon.""
+Call $global.gaKA_ref updateStage","他继续说着，好像这一切都在意料之中。""来过地表么？只去过那些拥挤的生态胶囊公寓不算。我带你参观一下我的小屋。迷人的景色，你肯定会喜欢的。等会儿见。""
 
-He closes the connection before you can respond.",cutCommLinkNoText:Continue,
+在你回应之前他关闭了连接。",cutCommLinkNoText:继续,
 gaKAArroyoVisitOption,PopulateOptions,"$hasMarket
 $market.id == eochu_bres
 $menuState == main
-$market.gaKA_visitChalet",#SetOptionColor gaKA_visitChalet highlight,,3:gaKA_visitChalet:Take a shuttle to Rayan Arroyo's chalet on the surface,
-gaKAArroyoVisitStart,DialogOptionSelected,$option == gaKA_visitChalet,,"Your shuttle descends into the young atmosphere of Eochu Bres, through towering battlements of clouds that cast a spray of rain over the viewport which is wiped clean in half a blink by the heat and speed of your descent.
+$market.gaKA_visitChalet",#SetOptionColor gaKA_visitChalet highlight,,3:gaKA_visitChalet:乘坐穿梭舱到Arroyo在地表的小屋,
+gaKAArroyoVisitStart,DialogOptionSelected,$option == gaKA_visitChalet,,"你的穿梭舱下降到Eochu Bres的初生大气层中，穿过的高耸云层在视窗上投下一束雨雾，又在眨眼间被你下降的热量和速度擦拭干净。
 
-The flight path soon deviates from the general approach corridor which has been ticking off minor use-fees from the Tri-Tachyon owned flight control: general volume access fee, priority flight lane fee, service fee, customer satisfaction insurance charge, advertisement bypass fee - you swipe the notifications off and focus on the landscape.",gaKA_arroyoVisit1:Continue,
-gaKAArroyoVisit1,DialogOptionSelected,$option == gaKA_arroyoVisit1,,"Leaving behind the Tri-Tach arcology, a diamond growing atop detritus piles of tiered slums. Over pipelines, a steel-blue bay, jagged fjords interrupted by ice-jams and landslides. Up and over a great crumbling escarpment like a black wave that fills the horizon; you cross a landscape of oddly-hued tundra spotted with thousands of milky-green lakes.
+飞行路线很快就偏离了一般的通行通道，其之前已经在速子科技研发的飞行操控面板上勾选了一些费用：基本数量访问费、优先飞行通道费、服务费、客户满意度保险费、广告屏蔽费--你刷掉通知，专注于风景上。",gaKA_arroyoVisit1:继续,
+gaKAArroyoVisit1,DialogOptionSelected,$option == gaKA_arroyoVisit1,,"越过速子的生态胶囊公寓，一颗在层层贫民窟的碎石堆上生长的钻石。越过管道，钢蓝色的海湾，被冰塞和滑坡分割的锯齿状峡湾。往上越过一个巨大的崩塌悬崖，似一片黑浪填上了地平线；又穿过一片色彩怪异的苔原，上面坐落着成千上万个乳绿色的湖泊。
 
-A new range of mountains rises on the horizon, torn in half by catastrophic workings of the terraformers, and beyond is a chaos of steep valleys populated by dwarf pine and thin white waterfalls. The nav system sounds a tone indicating imminent arrival, and you see Arroyo's private chalet: a small compound of radical geometric architecture surrounded by low outbuildings.
+一座新的山脉在地平线上升起，被地貌改造者的灾难性工程撕成了两半，而更后面是一片混乱的陡峭山谷，被矮松树和细白的瀑布填充。导航系统响起，提示你即将到达，你看到了Arroyo的私人小屋：由激进的几何形状构成的小院，周围围绕着较矮的附属建筑。
 
-Your shuttle approaches an ellipsoid landing pad that appears to hang in the thin air over a gorge.",gaKA_arroyoVisit2:Continue,
-gaKAArroyoVisit2,DialogOptionSelected,$option == gaKA_arroyoVisit2,,"A human and a robotic servant greet you placidly as you arrive and lead you inside to a grand parlor done in dark geometric style. Gold inlay gleams in onyx tabletops, and the polished granite floor is set with tastefully patterned jewel-tone carpets placed slightly askew.
+你的穿梭舱接近一个椭圆形的降落台，一眼看去它就像是悬浮在峡谷上空。",gaKA_arroyoVisit2:继续,
+gaKAArroyoVisit2,DialogOptionSelected,$option == gaKA_arroyoVisit2,,"当你到达时，一个人类仆人和一个机器人仆人平和地迎接你的到来，接着他们带你步入一个宏大的深色几何风格客厅。黄金镶嵌在黑玛瑙的桌面上闪耀，抛光的花岗岩地板上铺着的宝石色调地毯些许偏斜，其上的花纹设计感十足。
 
-The view from the flawless sweep of diamond-matrix bay window is, as Arroyo promised, spectacular.",gaKA_arroyoVisit3:Continue,
-gaKAArroyoVisit3,DialogOptionSelected,$option == gaKA_arroyoVisit3,BeginConversation arroyo false true,"Rayan Arroyo is sitting at one of the bars. He acknowledges your entrance with a nod as the servants disappear. He taps his datapad with two fingers. You hear the soft signal loss ping from your datapad and your sidearm hand twitches instinctively.
+由钻石矩阵构成的无暇凸窗往外望去，映入眼帘的景色确实如Arroyo承诺的一样壮观。",gaKA_arroyoVisit3:继续,
+gaKAArroyoVisit3,DialogOptionSelected,$option == gaKA_arroyoVisit3,BeginConversation arroyo false true,"Rayan Arroyo正坐在屋中一个吧台里。他点头答理你的到来，而那两名仆人则默默退下。Arroyo用两根手指敲了敲他的数据板。随着你听到你的数据板发出柔和的信号丢失的声音，你副武器侧的手本能的抽动了一下。
 
-Arroyo acknowledges this with the rise of one perfectly groomed eyebrow. ""Calm down. Just making sure no one's listening."" He flips through a series of null readouts on a datpad and, satisfied, sets it aside.
+Arroyo挑了挑眉，他的眉毛修剪地十分完美。""冷静。我只是在确保没有人监听。"" 他在一个数据板上翻阅了一系列的空读数，满意地将其放在一边。
 
-""So Baird is calling in another installment. What will that be, Captain $playerName?""","gaKA_arroyoBreakIn:""I need to break into the datavault of the Ministry of Technology Standards.""
-gaKA_arroyoTour:""No small-talk? What about the tour?""",
-gaKAArroyoVisitTour,DialogOptionSelected,$option == gaKA_arroyoTour,,"""No,"" he says. He makes a show of looking around, ""But it's nice isn't it?"" 
+""所以，Baird又来压榨我了。你们需要什么呢？{$playerName}舰长？""","gaKA_arroyoBreakIn:""我需要进入科技标准部的数据库""
+gaKA_arroyoTour:""不先聊些别的么？之前说好的参观呢？""",
+gaKAArroyoVisitTour,DialogOptionSelected,$option == gaKA_arroyoTour,,"""不，""他说道。他环顾了一下四周，""但这确实很不错，不是吗？"" 
 
-""Now I could be doing anything other than talking to you right now, so let's make it quick. You know you're getting something thanks to our mutual 'friend'. What is it?""","gaKA_arroyoBreakIn:""I need to break into the datavault of the Ministry of Technology Standards.""",
-gaKAArroyoVisitBreakIn,DialogOptionSelected,$option == gaKA_arroyoBreakIn,,"As soon as you say it, a smile grows on Arroyo's face. He starts laughing, and takes his time as it builds and falls. He laughs like he's strapped to a madman's rocket, with no escape. So why not enjoy the ride?
+""比起和你对话我宁愿做任何其他事，所以让我们抓紧。你清楚你现在的待遇是因为我们共同的那位‘朋友’，对吧？""","gaKA_arroyoBreakIn:""我需要进入科技标准部的数据库""",
+gaKAArroyoVisitBreakIn,DialogOptionSelected,$option == gaKA_arroyoBreakIn,,"话音刚落，Arroyo就笑了起来。他开始笑，安于自己笑声的起落。他笑得就像被绑在一个疯子的火箭上。既然无路可逃，那为什么不享受这一过程呢？
 
-Finally, he slaps the onyx bar-top one last time and puts his head in his hands.","gaKA_arroyoAMoment:Give him a moment
-gaKA_arroyoSerious:""I'm serious, Arroyo.""",
-gaKAArroyoVisitSerious,DialogOptionSelected,$option == gaKA_arroyoSerious,,"""Of course."" He looks out on the vista of saw-tooth mountains for a moment, then speaks with unusual passivity: ""I'd just hate to start a third AI war.""",gaKA_arroyoAMoment:Continue,
-gaKAArroyoVisitAMoment,DialogOptionSelected,$option == gaKA_arroyoAMoment,,"He sighs and pours something from a crystal decanter into a glass, empties it. ""To a deal that gets worse all the time!"" 
+最后，他狠狠拍了一下黑玛瑙的吧台面，双手抱头。","gaKA_arroyoAMoment:给他点时间
+gaKA_arroyoSerious:""我没开玩笑，Arroyo。""",
+gaKAArroyoVisitSerious,DialogOptionSelected,$option == gaKA_arroyoSerious,,"""当然了。"" 他眺望了一会儿远处的锯齿形山脉，然后用不寻常的平和语气说道。""我只是不想引发第三次AI战争。""",gaKA_arroyoAMoment:继续,
+gaKAArroyoVisitAMoment,DialogOptionSelected,$option == gaKA_arroyoAMoment,,"他叹了口气，将一个水晶酒壶里的液体倒进一个杯子里，一饮而尽。""敬一个越来越差的交易！"" 
 
-Then pours another. He considers a moment, notices you, and tilts the decanter to offer you a drink.","gaKA_arroyoDrinkDecline:Decline
-gaKA_arroyoDrinkAccept:Have a drink",
-gaKAArroyoVisitDrinkNo,DialogOptionSelected,$option == gaKA_arroyoDrinkDecline,,"He shrugs, and sips his second drink. ""Stick to Baird. You'll find your vice to cope,"" he says.",gaKA_arroyoVisit4:Continue,
-gaKAArroyoVisitDrinkYes,DialogOptionSelected,$option == gaKA_arroyoDrinkAccept,,"Arroyo pours another, passes you the tumbler, and clinks his glass into yours, hard. ""And Anahita Baird!"" he shouts.",gaKA_arroyoVisit4:Continue,
-gaKAArroyoVisit4,DialogOptionSelected,$option == gaKA_arroyoVisit4,FireAll GAKAArroyoHub1,"He slams down an empty glass. ""I know someone who can do it. They're a pain in the ass but, this is key, they're crazy enough to do a job as stupid as the one you're proposing. A hacker called Gargoyle - the real one, not one of the wannabes. We've done business before. Here's the comms ID."" Rayan pulls a datakey from a pocket, waves it over his datapad, and after a couple taps pushes it toward you.
+他又倒了一杯。他考虑片刻后注意到了你，将酒壶倾向你示意你喝一杯。","gaKA_arroyoDrinkDecline:拒绝
+gaKA_arroyoDrinkAccept:来一杯",
+gaKAArroyoVisitDrinkNo,DialogOptionSelected,$option == gaKA_arroyoDrinkDecline,,"他耸耸肩，抿了一口他的第二杯酒。""继续跟着Baird。你也会找到能麻醉自己的恶习，""他说。",gaKA_arroyoVisit4:继续,
+gaKAArroyoVisitDrinkYes,DialogOptionSelected,$option == gaKA_arroyoDrinkAccept,,"Arroyo又倒了一杯，把平底杯递给你，狠狠碰了一下杯。""也敬Anahita Baird！""他喊道。",gaKA_arroyoVisit4:继续,
+gaKAArroyoVisit4,DialogOptionSelected,$option == gaKA_arroyoVisit4,FireAll GAKAArroyoHub1,"他猛地放下空杯子。""我知道一个人能办到。他是个麻烦，但是关键是，他们足够疯狂，会接你在提议的这活。一个叫Gargoyle的黑客--真正的黑客，不是那些模仿者。我们以前打过交道。这是他的通信ID。"" Rayan从口袋里掏出一个数据钥，在他的数据板上挥了一挥，点了几下后把它推向你。
 
-""If you get any pushback, if Gargoyle throws a little tantrum, just give it back. It's all about the drama, but in the end you're already in with a job as stupid as this."" He holds a hand up, ""The details of which, by the way, you really did not need to tell me. The last thing I want is Hegemony counterint crawling all over my operation. Or, worse, some vampire from the Company board smelling blood.""",,
-gaKAArroyoVisitGargoyleOpt,GAKAArroyoHub1,!$gaKA_askedGargoyle,,,"gaKA_arroyoGargoyle:""Can you tell me more about this 'Gargoyle'?""",
-gaKAArroyoVisitBairdWhatOpt,GAKAArroyoHub1,!$gaKA_askedBaird,,,"gaKA_arroyoBairdWhat:""What's Baird got on your anyway?""",
-gaKAArroyoVisitLeaveOpt,GAKAArroyoHub1,,,,gaKA_arroyoLeave:Leave,
+""如果你们有什么小矛盾，如果Gargoyle发了小脾气，就照样子发回去。都是戏剧性，但反正你已经在这么蠢的差事里了。"" 他举起一只手，""顺便说一下，你真的没必要告诉我那些细节。我最不想看到的就是霸主情报人员在我的营运上爬来爬去。或者更糟，让董事会的一些吸血鬼闻到血味。""",,
+gaKAArroyoVisitGargoyleOpt,GAKAArroyoHub1,!$gaKA_askedGargoyle,,,"gaKA_arroyoGargoyle:""能不能跟我多聊一聊这位‘Gargoyle’？""",
+gaKAArroyoVisitBairdWhatOpt,GAKAArroyoHub1,!$gaKA_askedBaird,,,"gaKA_arroyoBairdWhat:""所以Baird到底有你什么把柄？""",
+gaKAArroyoVisitLeaveOpt,GAKAArroyoHub1,,,,gaKA_arroyoLeave:离开,
 gaKAArroyoVisitGargoyle,DialogOptionSelected,$option == gaKA_arroyoGargoyle,"$gaKA_askedGargoyle = true 0
-FireAll GAKAArroyoHub1","He gives you a look. ""No. Who cares. Doesn't matter. Most of anything you'll hear about Gargoyle is made up, and half of that is true. So don't bother trying.""
+FireAll GAKAArroyoHub1","他给你了个眼色。""不可以，谁在乎呢。无关紧要。你所听到的关于Gargoyle的事情大部分都是编造的，其中一半还是真的。所以别白费时间了。""
 
-He leans back, looking elsewhere, content to talk to himself some more. ""What's important is that Gargoyle always gets the job done. My theory is it's some kind of obsessive brain thing,"" he twirls a hand at his head to demonstrate. ""Probably implanted a cybermod the wrong way around and got an AI instead of a frontal lobe.""
+他向后靠了靠，目光看向别处，满足于自言自语。""重要的是，Gargoyle总是能完成工作。我的理论是某种强迫症。""他用手在头上转了转，示意。""也许是植入了一个错误的cybermod，多了个AI，少了个额叶。""
 
-""Have fun with that one,"" he says with a smirk.",,
+""祝你们相处愉快，""他嬉笑着说。",,
 gaKAArroyoVisitBairdWhat,DialogOptionSelected,$option == gaKA_arroyoBairdWhat,"$gaKA_askedBaird = true 0
-FireAll GAKAArroyoHub1","""What Baird's got is a good investment, and the longer she waits-"" he waves at the luxurious surroundings; the career of Rayan Arroyo ""-the more interest she'll collect.""
+FireAll GAKAArroyoHub1","""Baird有的是一项很好的投资，而她等的时间越长--""他向周围奢华的环境挥了挥手；Rayan Arroyo的事业""--收到的利息就更多。""
 
-A shrug. ""It's done well enough for me. We all make deals to get ahead, and I've seen worse. Done worse to others. Plus, I'm an asset now. You can't simply snuff an asset owned by a bigger player."" 
+他耸了耸肩。""对我来说，这已经够好了。我们都为了出人头地做出交易，我见过更糟的。做过更糟的。外加，我现在是一份资产了。你不能简单地扼杀一个由更大的玩家拥有的资产。"" 
 
-He turns and stares directly at you, ""And you're an asset now, too. Hypothetical question- what's she got on you?"" He gives a cold smile. ""I hope you know.""",,
-gaKAArroyoVisitLeave0,DialogOptionSelected,$option == gaKA_arroyoLeave,AddPotentialContact,"You've got what you needed from Rayan Arroyo, and with no signal on his part that you can discern, his human and robot servants appear once more.
+他转过身来，死死盯着你，""而你现在，也是一份资产了。一个假设性问题--她有你什么把柄？"" 他露出了冷笑。""希望你知道。""",,
+gaKAArroyoVisitLeave0,DialogOptionSelected,$option == gaKA_arroyoLeave,AddPotentialContact,"你已经从Rayan Arroyo那里得到了你需要的东西，你没看到他有发出什么信号，但他的人类与机器人仆人再次出现。
 
-""I won't say it's been a pleasure, but if you ever have more credits than you know what to do with or, hmm, a truly exceptional business opportunity, let's trade cryptokeys now so you don't have to track space-dust on my carpet again."" 
+""我不会说这次的见面很愉快，但如果你哪天有太多钱不知道怎么花，或者说，一个十分卓越的商业契机，让我们交换一下通讯密钥，这样你下次要找我就不用定位我地毯上的太空尘埃了。"" 
 
-He taps his datapad and offers it, and you perform the mundane ritual which will ensure that anyone who wants to crack your mutual comms will, at least, have to put some effort into the task.",gaKA_arroyoLeave1:Continue,
+他在他的数据板上敲了敲后递给了你，而你也走了一下无聊的流程，至少这会让想要骇入你们共同通讯的人多费些功夫。",gaKA_arroyoLeave1:继续,
 gaKAArroyoVisitLeave1,DialogOptionSelected,$option == gaKA_arroyoLeave1,"EndConversation DO_NOT_FIRE
 ShowDefaultVisual
 $global.gaKA_talkToGargoyle = true
-Call $global.gaKA_ref updateStage","Your shuttle reverses the previous route, down from the highlands, across the plateau of lakes. You spot factory-crawlers disgorging pipe and monorail pylons across the landscape, leaving long tracked trails of torn red dirt.
+Call $global.gaKA_ref updateStage","你的穿梭舱原路返回，从高地往下，穿过湖泊高原。你看到工厂的爬行者把管道和单轨铁路的塔架倾泻在地面上，留下一条条撕裂的红土痕迹。
 
-Across the rocky chaos, and the small cold sea, and over the mountainous slums crowned by glittering spires. Navigation pings and comms noise grows to a small roar over the heart of Tri-Tachyon, and your shuttle takes you back to orbit.",gaKA_arroyoLeave2:Continue,
+穿过乱岩和寒冷的小海，越过点缀在山地贫民窟之上的闪耀高塔。在速子科技的中心，随着导航通讯协议和通讯噪音逐渐成为一阵轰鸣，你的穿梭舱带你回到了轨道上。",gaKA_arroyoLeave2:继续,
 gaKAArroyoVisitLeave2,DialogOptionSelected,$option == gaKA_arroyoLeave2,FireAll PopulateOptions,,,
 "# Gargoyle, initial conversation",,,,,,
 gaKAGargoyleGreeting,PickGreeting,"$id == gargoyle
@@ -6016,7 +6014,7 @@ GAPZSellFakesOpts2,GAPZSellFakesOpts,,,,"gaPZSellFakes2:""喔，天啊，怎样�
 GAPZSellFakesOpts3,GAPZSellFakesOpts,,"SetStoryOption gaPZSellFakes3 general ""协商支付{Arroyo}伪造的勒索证据""",,gaPZSellFakes3:坚持让对方付款,
 gaPZSellFakes1,DialogOptionSelected,$option == gaPZSellFakes1,,"海盗靠回了椅背上，并努力尝试着给出一个会心的微笑:}""看起来这不是你第一次和像我一样聪明的人谈判了。我的...呃...威胁，只是一个诡计而已，看看你的意志坚不坚定。""
 
-""所以...呃...你通过测试了，""{$heOrShe}说着，又向前倾了倾身体。""我准备要报价了，也请你一定要接受，因为 - ""","gaPZSellFakes1a:""你要付给我{$gaPZ_paymentForCommFakes}个星币。""",
+""所以...呃...你通过测试了，""{$heOrShe}说着，又向前倾了倾身体。""我准备要报价了，也请你一定要接受，因为 - ""","gaPZSellFakes1a:""你要付给我{$gaPZ_paymentForCommFakes}星币。""",
 gaPZSellFakes1a,DialogOptionSelected,$option == gaPZSellFakes1a,,"""我接受，""{$heOrShe}立马回应道，还擦了擦{$heOrShe}额头上的汗水，""这就支付星币。""","gaPZSellFakes1b:""现在我把数据传给你。""",
 gaPZSellFakes1b,DialogOptionSelected,$option == gaPZSellFakes1b,"AddCredits $gaPZ_paymentForCommFakes
 $global.gaPZ_soldBlackmail = true
@@ -6035,7 +6033,7 @@ gaPZSellFakes3,DialogOptionSelected,$option == gaPZSellFakes3,,"你拿出一个�
 gaPZSellFakes3a,DialogOptionSelected,$option == gaPZSellFakes3a,,"""所以...呃，恭喜，你通过测试了。""{$heOrShe}说，并恢复了镇静，""你会发现，在你面前的是一个同样精通这种事务的人。我准备给你一个提议，也请你一定要接受，因为——""
 
 海盗絮絮叨叨地，解释着你找不到其他愿意使用，或能够充分使用你提供的情报的人的原因。这委实不是一次很好的自我推荐。",gaPZSellFakes3b:继续,
-gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"你等待合适的时机，然后切入了话题，就像赛博导弹二段的弹片狠狠地击打在幅能护盾上一样，与海盗争论起来，直到他愿意为假勒索线索支付{$gaPZ_paymentForCommFakesHigh}个星币。
+gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"你等待合适的时机，然后切入了话题，就像赛博导弹二段的弹片狠狠地击打在幅能护盾上一样，与海盗争论起来，直到他愿意为假勒索线索支付{$gaPZ_paymentForCommFakesHigh}星币。
 
 ""看在卢德的份上，好吧，我接受。""{$heOrShe}最终同意了，擦着{$heOrShe}额头上的汗水，""我接受你的价格。现在开始转移星币。""",gaPZSellFakes3c:继续,
 gaPZSellFakes3c,DialogOptionSelected,$option == gaPZSellFakes3c,"AddCredits $gaPZ_paymentForCommFakesHigh
@@ -6105,7 +6103,7 @@ gaPZ_adminAstraia2a,DialogOptionSelected,$option == gaPZ_adminAstraia2a,,"你激
 说得好听，其实这就是贿赂，你俩心知肚明。","gaPZ_adminAstraia3a:""当然，那么费用是...?""
 cutCommLink:找个借口关闭通讯链接",
 gaPZ_adminAstraia3a,DialogOptionSelected,$option == gaPZ_adminAstraia3a,"Highlight $gaPZ_culannBribe
-DoCanAffordCheck $gaPZ_culannBribe gaPZ_adminAstraia4a","""{$gaPZ_CulannBribe}个星币，通过这个{UID}预付到我的账户。""当你的数据平板发出轻柔的响声提醒你收到付款所需要的账户信息时，管理员说道。$personName}恢复了 灿烂的笑容，等待你的回复。","gaPZ_adminAstraia4a:支付}""服务费用""
+DoCanAffordCheck $gaPZ_culannBribe gaPZ_adminAstraia4a","""{$gaPZ_culannBribe}星币，通过这个{UID}预付到我的账户。""当你的数据平板发出轻柔的响声提醒你收到付款所需要的账户信息时，管理员说道。$personName 恢复了 灿烂的笑容，等待你的回复。","gaPZ_adminAstraia4a:支付}""服务费用""
 gaPZ_adminAstraia4aNeg:""从各方面考虑，你不会认为...""}(讨价还价)
 cutCommLink:找个借口关闭通讯链接",
 gaPZ_adminAstraia4aNeg,DialogOptionSelected,$option == gaPZ_adminAstraia4aNeg,,"$personName 在你还没来得及 完整地说出 谈判开场白之前 就打断了你: ""舰长，我的收费 已经相当低廉了，这是考虑到 我们特殊的商业合作关系 而做出的折扣。"" 微笑还在，但 $hisOrHer的 眼睛告诉你，再说些不相干的话， 你就该出局了。","gaPZ_adminAstraia4a:支付}""服务费用""
@@ -6364,7 +6362,7 @@ Call $global.gaRH_ref updateData
 Highlight $gaRH_reward
 $hamatsuSpielSaid = true","Ibrahim}看起来很兴奋，甚至连招呼都没打就滔滔不绝起来:}""如果我的传感器和轨道导航注册系统没有骗我，你带回了我的飞船{Hamatsu}号!}舰长，十分感谢!""
 
-""我现在就给你{$gaRH_reward}个星币，这样一来我们的约定就履行完毕了。你甚至不用把它送到修理厂，我马上就可以修复它。我的仓库里已经有了新的超光速引擎，还有一些优秀的工程师正随时待命。""","gaRH_yes:把{Hamatsu}号交给}Ibrahim
+""我现在就给你{$gaRH_reward}星币，这样一来我们的约定就履行完毕了。你甚至不用把它送到修理厂，我马上就可以修复它。我的仓库里已经有了新的超光速引擎，还有一些优秀的工程师正随时待命。""","gaRH_yes:把{Hamatsu}号交给}Ibrahim
 gaRH_no:""抱歉，我想将这艘船留在我的舰队中。""",
 gaRH_yes,DialogOptionSelected,$option == gaRH_yes,#AdjustRepActivePerson COOPERATIVE 25,"Ibrahim}的脸上笑容灿烂:}""谢谢你，舰长。如果你不介意的话我就先挂断了，毕竟我还有很多事要做。""
 
@@ -8506,7 +8504,7 @@ gaATGkdStationKing3,DialogOptionSelected,$option == gaATG_kdStationKing3,"
 AdjustRepActivePerson INHOSPITABLE -3","""哦，你长了好几个嘴，是吗? 马屁精，你最好注意一点。我可以在换班之前把你和你的旗舰拆成碎片。""",gaATG_kdStationKing4:将 Gargoyle 给你的电子密钥发给他,
 gaATGkdStationKing4,DialogOptionSelected,$option == gaATG_kdStationKing4,,"你按下了发送键，没有说一句话就看到这个海盗脸上的表情完全变了。
 
-""哦。家族，嗯? 没有认出你来，也没有见过你。但是，哈哈，Kanta 的人无处不在，额? 上帝啊，你应该早说的。""{$heOrShe}没有让你去吸真空的时候{$hisOrHer}声音轻柔多了。
+""哦。家族，嗯? 没有认出你来，也没有见过你。但是，哈哈，Kanta 的人无处不在，额? 上帝啊，你应该早说的。""{$heOrShe}没有让你去吸真空的时候{$hisOrHer的}声音轻柔多了。
 
 ""你知道规矩，领主不喜欢用通讯器，所以我必须给你预约一次法庭会见。到空间站上来，我会找人来接你。""",gaATG_kantaIntro1:在 Kanta's Den 着陆,
 gaATGkantaIntro1,DialogOptionSelected,$option == gaATG_kantaIntro1,"ShowDefaultVisual
@@ -8514,12 +8512,12 @@ EndConversation DO_NOT_FIRE","你把四名警卫和驾驶员留在穿梭机上�
 
 你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的反重力场，你怀疑这是故意所为，因为很多各种各样、各个年龄的海盗都在看着你寻找弱点，低声说着粗鄙之语，或是推搡着争夺声望。
 
-你甚至能从他们的脸上以及他们穿的无政府制服看出他们的关系{-}这是个家族式的组织。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服{-}重新漆上了杂牌颜色，以及速子科技的领巾被粗鲁地打结; 都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。",gaATG_kantaIntro2:继续走,
+你甚至能从他们的脸上以及他们穿的无政府制服看出他们的关系{-}这是个家族式的组织。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服{-}重新漆上了杂牌颜色，还戴着粗鲁打结的速子科技领巾; 都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。",gaATG_kantaIntro2:继续走,
 gaATGkantaIntro2,DialogOptionSelected,$option == gaATG_kantaIntro2,,"穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。这里的空气中弥漫着挥之不去的能量武器释放的刺激性气味，几乎能掩盖这里腐肉的臭味。
 
 你被带到一个只能被称为王座的地方前，不雅的血红色背光灯以最大功率从其后方照着。很多海军军官的军帽，奖章和徽章被刺穿在由战利品武器熔成的花簇上。你能认出其中有英仙座星区各个势力的装备。",gaATG_kantaIntro3:继续,
 gaATGkantaIntro3,DialogOptionSelected,$option == gaATG_kantaIntro3,"BeginConversation kanta false true
-$player.metKanta = true","在其上是发出嘶嘶声和嗡嗡声的领主 Jorien Kanta，她现在比起人类更像一台机器。她的脸是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
+$player.metKanta = true","在其上是发出嘶嘶声和嗡嗡声的领主 Jorien Kanta，她现在比起人类更像一台机器。她的脸就是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
 
 合成的嗓音从王座中发出，""在 Kanta面前屈服!""",gaATG_kantaIntro4:继续,
 gaATGkantaIntro4,DialogOptionSelected,$option == gaATG_kantaIntro4,"ShowSecondPerson cydonia
@@ -8574,7 +8572,7 @@ gaATGkantaPaymentZal2,DialogOptionSelected,$option == gaATG_kantaPaymentZal2,,"C
 ""伟大的领主会让她的宠物回来的! 由于所有其他人都失败了，这位{$playerName}，将成为她的捍卫者!""
 
 他靠近你，散发着醋的气味。",gaATG_kantaPaymentZal3:继续,
-gaATGkantaPaymentZal3,DialogOptionSelected,$option == gaATG_kantaPaymentZal3,,"Cydonia 轻快地与你说着话，眼睛里闪烁着只有他自己能看到的单词和图像。""Livewell Cotton 兄弟，一个卢德左径升起的新星，通常待在他位于 Al Gebbar 星系，Epiphany 星球的基地中。但他也可能在很多其他地方。他的一个爪牙绑架了 Kanta 的宠物{-}一个前领主 Onesimos Loke 的克隆人，也是我的作品。她想找回她的宠物。但没有其他人能够追踪到 Cotton。""
+gaATGkantaPaymentZal3,DialogOptionSelected,$option == gaATG_kantaPaymentZal3,,"Cydonia 轻快地与你说着话，眼睛里闪烁着只有他自己能看到的单词和图像。""Livewell Cotton 修士，一个卢德左径升起的新星，通常待在他位于 Al Gebbar 星系，Epiphany 星球的基地中。但他也可能在很多其他地方。他的一个爪牙绑架了 Kanta 的宠物{-}一个前领主 Onesimos Loke 的克隆人，也是我的作品。她想找回她的宠物。但没有其他人能够追踪到 Cotton。""
 
 ""她-，""他皱着眉，犹豫要不要继续透露些什么，然后让步了。""她心神不宁的。这也让事情变得... 更加困难。去完成这件事，也许你能从我这里得到 Zal，也就是那个，那个多管闲事的修理匠。""","gaATG_kantaPaymentZal4:""一言为定。""
 gaATG_kantaPaymentZal4a:""我需要一些保证。""
@@ -8602,7 +8600,7 @@ EndConversation NO_CONTINUE
 $global.gaATG_workingForKanta = true
 $global.gaATG_findingLoke = true
 Call $global.gaATG_ref updateStage
-$global.bairdWillTalk = true","你至少有了切入点，尽管不太有把握: Livewell Cotton 兄弟。Epiphany。Onesimos Loke 的克隆人。
+$global.bairdWillTalk = true","你至少有了切入点，尽管不太有把握: Livewell Cotton 修士。Epiphany。Onesimos Loke 的克隆人。
 
 一个纹着骷髅与弹链的海盗舰长推搡着穿过你，口里嘟哝着一些恭维的话。你的护卫紧张起来，但随着海盗和他们的护卫们不断经过，也都放松下来。他们只是做做样子，并不想打架。尽管 Kanta 或是 Cydonia 很大程度上破坏了你在海盗中的名声，但这些海盗在你践行领主 Kanta 的意志时将不再敢阻拦。",#defaultLeave:离开,
 ,,,,,,
@@ -8738,10 +8736,10 @@ gaATGEpiphanyAskAdministrator,PopulateOptions,"$postId == administrator
 $market.id == epiphany
 $market.gaATG_findingLoke",FireAll GAATGepiphanySearchOptions,,,
 gaATGEpiphanySearch1,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
-!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnap:""我需要找到一个被 Cotton 兄弟绑架的人。""",
+!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnap:""我需要找到一个被 Cotton 修士绑架的人。""",
 gaATGEpiphanySearch2,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
-!$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 兄弟的情报。""",
-gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 兄弟谈话。你能帮我吗?""",
+!$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""我会向你支付信用点来换取在哪里可以找到 Cotton 修士的情报。""",
+gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""我想和 Cotton 修士谈话。你能帮我吗?""",
 gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:切断通讯链接,
 gaATGEpiphanyAskLoke,DialogOptionSelected,"$option == gaATG_epiphanyAskKidnap
 !$awkwardAskForCotton ","$entity.askedForKidnapperCotton = true
@@ -8777,24 +8775,24 @@ gaATGEpiphanyAskCottonDecline,DialogOptionSelected,$option == gaATG_epiphanyAskC
 gaATGAskEpiphanyBarPrompt,AddBarEvents,"$market.id == epiphany
 $market.gaATG_findingLoke
 !$setUpCottonMeeting
-!$askedBarCotton","AddBarEvent gaATGEpiphany_barEvent ""到处打听一下 Cotton 兄弟"" ""你可以试着问一下是否有人知道一些关于 Cotton 兄弟的事。""",,,
+!$askedBarCotton","AddBarEvent gaATGEpiphany_barEvent ""到处打听一下 Cotton 修士"" ""你可以试着问一下是否有人知道一些关于 Cotton 修士的事。""",,,
 gaATGAskEpiphanyBarStart,DialogOptionSelected,$option == gaATGEpiphany_barEvent,"$askedBarCotton = true
 #FireAll GAFCAskLaicailleBar1Options","你用由来已久的惯常方式开启话题，向陌生人们请一轮，来庆祝一次大丰收。
 
-在这里这很难奏效; 外地人默默饮下自己的陋习以简单地掩饰自己对卢德教的否认。你作为代替选择关注那些经常与远行者做生意的 Epiphany 不信教的本地人。你随便地问起一些关于进出口贸易的机会，所有人都了解这是关于走私工作的委婉表达。然后，你顺便问了起来，你们听说过{'Cotton 兄弟'}吗? 
+在这里这很难奏效; 外地人默默饮下自己的陋习以简单地掩饰自己对卢德教的否认。你作为代替选择关注那些经常与远行者做生意的 Epiphany 不信教的本地人。你随便地问起一些关于进出口贸易的机会，所有人都了解这是关于走私工作的委婉表达。然后，你顺便问了起来，你们听说过{'Cotton 修士'}吗? 
 
 提起这个名字就像扔了一枚 EMP 炸弹一样破坏了这场对话。整张桌子上都在嘟哝着找借口离开，留下他们还没有碰触的饮品在原地。他们担心你是一个告密者，或是一个超级大傻瓜，或者两者都是。",gaATG_epiphanyBar1:继续,
 gaATGAskEpiphanyBar1,DialogOptionSelected,$option == gaATG_epiphanyBar1,,"""说出了那个名字，那就照顾好你自己，""一个老矿石商人告诉你，并拿起你赠送的饮品长饮了一口。""我知道一些人辱骂他，他们最后都死了。他到处都有耳目。他足够聪明地将科技禁令为己所用，你知道的。大多数真正的信徒们? 这些胆小鬼们被哄骗或是放空大脑{-}但并不包括他; 他已经将左径变为自己的东西并且知道如何利用它。""
 
 ""好了，""他一大口喝完了饮品，""接下来就是你了，""然后他快步离开，这时三个穿着采矿协会制服的魁梧暴徒靠近过来。","gaATG_epiphanyBarA1:""晚上，朋友。我再请一轮?""
-gaATG_epiphanyBarB1:""你们中有谁恰好认识 Cotton 兄弟吗?""
+gaATG_epiphanyBarB1:""你们中有谁恰好认识 Cotton 修士吗?""
 gaATG_epiphanyBarC1:""看来我正好需要离开了...""",
 gaATGAskEpiphanyBarA1,DialogOptionSelected,$option == gaATG_epiphanyBarA1,,"""我们拒绝异教徒的金钱贿赂，""其中一个打手说着，并向你的脚上吐了一口。其他人看起来一样对你提供的金钱不感兴趣。
 
 ""我们兄弟的好名声在这个异教徒口中变成了什么样?""第一个人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""我是来谈谈的。Cotton 会认识我。""
 gaATG_epiphanyBarPeace1:""我以为卢德教是一个和平的宗教。""
 gaATG_epiphanyBarC1:简单地向你的护卫点点头",
-gaATGAskEpiphanyBarB1,DialogOptionSelected,$option == gaATG_epiphanyBarB1,,"""Cotton 兄弟的好名声在这个异教徒口中变成了什么样?""个头最大的人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""就告诉 Cotton 我在这里。我会等着。""
+gaATGAskEpiphanyBarB1,DialogOptionSelected,$option == gaATG_epiphanyBarB1,,"""Cotton 修士的好名声在这个异教徒口中变成了什么样?""个头最大的人对其他人说，""看来我们需要亲自消除影响了。""","gaATG_epiphanyBarTalk1:""就告诉 Cotton 我在这里。我会等着。""
 gaATG_epiphanyBarC1:简单地向你的护卫点点头",
 gaATGepiphanyBarPeace1,DialogOptionSelected,$option == gaATG_epiphanyBarPeace1,"$option = gaATG_epiphanyBarC1 1
 FireBest DialogOptionSelected","""不要说先知的名字，无信仰的人，""右边的暴徒愤怒地低吼。",,
@@ -8810,7 +8808,7 @@ gaATGepiphanyBarTalk1b,DialogOptionSelected,$option == gaATG_epiphanyBarTalk1b,"
 FireBest DialogOptionSelected",,,
 gaATGepiphanyBarTalk1,DialogOptionSelected,$option == gaATG_epiphanyBarTalk1,,"带头的打手决心有些动摇，他转向左边。后边的人拿出一个厚重的装置，是一个手制的通讯器，然后嘟哝着询问着。它发出一种带杂音的扭曲回应声。
 
-不管说了什么，那一定是好消息。打手们明显放松了，他们中的领导者现在更像是怀疑态度，而不是敌意，说到:""Cotton 兄弟会好好利用你的。在这里见面，在下次轮班之后。""","gaATG_epiphanyBarEndWait:""我会在这里等着。""
+不管说了什么，那一定是好消息。打手们明显放松了，他们中的领导者现在更像是怀疑态度，而不是敌意，说到:""Cotton 修士会好好利用你的。在这里见面，在下次轮班之后。""","gaATG_epiphanyBarEndWait:""我会在这里等着。""
 gaATG_epiphanyBarEndLeave:""我很快就回来。""",
 gaATGepiphanyBarEndWait,DialogOptionSelected,$option == gaATG_epiphanyBarEndWait,,它们中的领导者谨慎地点了点头，一行人退回到他们自己的桌子上。你可以感觉到他们在背后盯着你。,"gaATG_epiphanyBarEndWait2a:""服务员，请给我一壶茶!""
 gaATG_epiphanyBarEndWait2b:""服务员，请那里的大绅士们喝一轮!""",
@@ -8840,16 +8838,16 @@ AddText ""当你走进茶馆时，店主吸引了你的目光，她放下一个�
 AddText ""\""求你听我说，\"" 她说。\""我和他以及他的人没有任何关系。你...你不能在这里拒绝他们，舰长。\""""
 AddText ""她无意中朝着一个桌子瞥了一眼，那里坐着几个穿着某个采矿协会制服的打手。他们都密切关注着你。\""后面的房间。他在等着。我- 我今天什么都没看见。\""""",,"gaATG_meetCottonStart2:去后面的房间
 gaATG_meetCottonAvoid:不去后面的房间",
-gaATGmeetCottonAvoid,DialogOptionSelected,$option == gaATG_meetCottonAvoid,"AddBarEvent gaATG_meetCottonStart2 ""去后面的房间见一见 Cotton 兄弟。"" ""左径打手们明显在公然盯着你看，他们满满的几杯茶就要凉了。""
+gaATGmeetCottonAvoid,DialogOptionSelected,$option == gaATG_meetCottonAvoid,"AddBarEvent gaATG_meetCottonStart2 ""去后面的房间见一见 Cotton 修士。"" ""左径打手们明显在公然盯着你看，他们满满的几杯茶就要凉了。""
 BarCMD showOptions",,,
 gaATGmeetCottonStart2,DialogOptionSelected,$option == gaATG_meetCottonStart2,"unset $setUpCottonMeeting
 FireBest GAATGmeetCottonMetCheck
 BeginConversation cotton",这个私人房间很简陋，昏暗，但有一个纸灯笼照在坐在你对面的人身上。当你进来时，他抬起脸，伸出手欢迎你坐下。稀疏的装饰品和家具是真正的卢德手制工艺品，你知道在很多核心世界星球这些可以卖个好价钱。,,
 gaATGmeetCottonMetYes,GAATGmeetCottonMetCheck,$player.metBrotherCotton,"$option = gaATG_meetCottonTea 0
-FireBest DialogOptionSelected","你进来的时候，Livewell Cotton 兄弟站起来微笑着。""$playerName}舰长，""他说，""听说我们的道路再次相交，这是我的荣幸。""
+FireBest DialogOptionSelected","你进来的时候，Livewell Cotton 修士站起来微笑着。""$playerName}舰长，""他说，""听说我们的道路再次相交，这是我的荣幸。""
 
 他给你一个会意的眼神，""我祈祷你思考过我们之前的讨论。""",,
-gaATGmeetCottonMetNo,GAATGmeetCottonMetCheck,!$player.metBrotherCotton,$player.metBrotherCotton = true,"""舰长{$playerName}。我是 Livewell Cotton 兄弟，很高兴见到你。自然是带着卢德和平的祝愿。""他眨了眨眼，伸出一只手。","gaATG_meetCottonShake:和他握手
+gaATGmeetCottonMetNo,GAATGmeetCottonMetCheck,!$player.metBrotherCotton,$player.metBrotherCotton = true,"""舰长{$playerName}。我是 Livewell Cotton 修士，很高兴见到你。自然是带着卢德和平的祝愿。""他眨了眨眼，伸出一只手。","gaATG_meetCottonShake:和他握手
 gaATG_meetCottonNoShake:不和他握手",
 gaATGmeetCottonShake,DialogOptionSelected,$option == gaATG_meetCottonShake,"AdjustRepActivePerson COOPERATIVE 1
 $option = gaATG_meetCottonTea 0
@@ -8873,7 +8871,7 @@ $player.didNotSitWithCottonCount++","他露齿笑道，""这样我就能满足�
 gaATGmeetCottonTeaSit,DialogOptionSelected,$option == gaATG_meetCottonTeaSit,"$player.satWithCottonCount++
 AdjustRepActivePerson COOPERATIVE 1
 $option = gaATG_meetCottonTeaHubStart 0
-FireBest DialogOptionSelected",你和 Cotton 兄弟，这个臭名昭著的左径恐怖分子坐了下来。,,
+FireBest DialogOptionSelected",你和 Cotton 修士，这个臭名昭著的左径恐怖分子坐了下来。,,
 gaATGmeetCottonTeaHubStart,DialogOptionSelected,$option == gaATG_meetCottonTeaHubStart,FireAll GAATGmeetCottonTeaHub,"Cotton 排出两个塑料杯，试了试茶壶的温度。
 
 ""现在我知道你为什么到这里来了。Jorien Kanta 领主送来鱼龙混杂的一群饭桶想要过早地结束我的性命，窃听到其原因并不是什么很困难的事。如果方便说的话，他们声称要回收她那邪恶的造物。""
@@ -8955,13 +8953,13 @@ gaATGmeetCottonCydonia2,DialogOptionSelected,$option == gaATG_meetCottonCydonia2
 $cloneQuestion = true 0
 FireAll GAATGmeetCottonTeaHub","""如果说 Loke 这样的东西一开始就贱于人类，那么 Kanta 也通过她对于愤怒和永恒的邪恶追求变成了同样的家伙。""""
 
-Cotton 兄弟又抿了一口茶，""她是霸主体系的故障部分; 是应当被扫除的废弃危害品，就如同她堡垒周围的隐形空雷一样。""",,
+Cotton 修士又抿了一口茶，""她是霸主体系的故障部分; 是应当被扫除的废弃危害品，就如同她堡垒周围的隐形空雷一样。""",,
 gaATGmeetCottonClone,DialogOptionSelected,$option == gaATG_meetCottonClone,"$askedClone = true 0
 FireAll GAATGmeetCottonTeaHub","""坐在 Kanta 鲜血与黄金的王座之中的东西，是神圣卢德教诲中最卑贱的东西，""他用手指轻敲着茶杯。""虽然一个战士不能不了解他的敌人，但我承认我并不想深入凝视那丑恶的深渊。我需要和一个 AI 核心争论吗，我需要思考它的想法吗? 不，因为它没有心，没有灵魂。两者是一样的。""
 
 ""Kanta 想要这个丑恶的东西; 我只要知道这一点就够了。""Cotton 看着你的眼睛，""你将是把这个丑恶的东西还给她的人。""",,
 gaATGmeetCottonClone2,DialogOptionSelected,$option == gaATG_meetCottonClone2,,"""是的，""他目不转睛地说，""它在这里无路可走。它的存在引发了不该被问起的问题。所以你会把它从我的人民中带走。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
-gaATGmeetCottonWish,DialogOptionSelected,$option == gaATG_meetCottonWish,,"Livewell Cotton 兄弟点了点头，出乎你的意料地简单说道，""可以。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
+gaATGmeetCottonWish,DialogOptionSelected,$option == gaATG_meetCottonWish,,"Livewell Cotton 修士点了点头，出乎你的意料地简单说道，""可以。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
 gaATGmeetCottonTaking,DialogOptionSelected,$option == gaATG_meetCottonTaking,,"Cotton 赞同地点点头，出乎你的意料地说""你确实该这么做。""","gaATG_meetCottonExpected:""这是我没有预料到的。""",
 gaATGmeetCottonExpected,DialogOptionSelected,$option == gaATG_meetCottonExpected,,"""只有我们两个，我告诉你事实。""
 
@@ -8973,7 +8971,7 @@ gaATGmeetCottonEnd1,DialogOptionSelected,$option == gaATG_meetCottonEnd1,,"""音
 ""然后，不久前的一天，""他犹豫地说道，看起来有些不安。""它，它又找上了我。"" 
 
 他的声音现在变得柔和了，""那一天我被告知你要来这里。这我该怎么理解呢?""",gaATG_meetCottonEnd2:继续,
-gaATGmeetCottonEnd2,DialogOptionSelected,$option == gaATG_meetCottonEnd2,,"Cotton 兄弟站起来，""我不知道那是天使的吟唱还是恶魔的主持，""他说。""我并不害怕痛苦，死亡，或是审判。但我害怕偏离我的正道。""
+gaATGmeetCottonEnd2,DialogOptionSelected,$option == gaATG_meetCottonEnd2,,"Cotton 修士站起来，""我不知道那是天使的吟唱还是恶魔的主持，""他说。""我并不害怕痛苦，死亡，或是审判。但我害怕偏离我的正道。""
 
 他调整了一下外套; 他的一个仆人打开了门，茶馆的叮当声和谈话声又回来了。
 
@@ -11505,181 +11503,181 @@ BarCMD returnFromEvent false",,,
 contactMissionDeclineGenericBar,DialogOptionSelected,$option == contact_declineBar,"FireBest ContactPrintDeclineText
 BarCMD returnFromEvent true",,,
 contactMissionDeclineGenericBarNC,DialogOptionSelected,$option == contact_declineBarNoContinue,BarCMD returnFromEvent false,,,
-contactPrintAcceptTextGeneric,ContactPrintAcceptText,,,"""Great! I you won't regret it.""
+contactPrintAcceptTextGeneric,ContactPrintAcceptText,,,"""好极了，我想你不会后悔的""
 OR
-$HeOrShe claps $hisOrHer hands together, ""Excellent!""
+$HeOrShe}拱手致礼，说{""干得好!""
 OR
-""I always enjoy doing business with you.""
+""我就知道，和你的交易令人愉悦""
 OR
-$HeOrShe smiles, ""I knew you'd say yes.""
+$HeOrShe}笑了笑，""我就知道，你会同意的。""
 OR
-""A wise choice,"" $heOrShe says, giving a smile that you suppose is meant to be mysterious.
+""明智的决定。""{$HeOrShe}说着给了你一个很神秘的微笑。
 OR
-""Lovely! I'm sure you'll get the results I- ah, we are hoping for.""
+""真是令人愉悦!我想你会得到我...们所期望的东西。""
 OR
-$HeOrShe simply nods, then says ""Good, good.""",,
-contactPrintAcceptTextSpacer,ContactPrintAcceptText,$voice == spacer,,"""Aye, a good dealing,"" $heOrShe says.
+$HeOrShe}点头致意，说{""干得好!""}",,
+contactPrintAcceptTextSpacer,ContactPrintAcceptText,$voice == spacer,,"""嗯，一个好买卖。""{$HeOrShe}说。
 OR
-$HeOrShe nods, ""That'll do.""
+$HeOrShe}点了点头，""行吧""
 OR
-""Green across the board,"" $heOrShe says.
+""全面绿化!""{$HeOrShe}说道。
 OR
-""That's an aye,"" $heOrShe says with a nod.
+""不错。""{$HeOrShe}点了点头。
 OR
-""Good dealing,"" $heOrShe says.
+""干得好。""{$HeOrShe}说道。
 OR
-""Burn bright,"" $heOrShe says.
+""祝您引擎常亮。""{$HeOrShe}说道。
 OR
-$HeOrShe looks pleased. ""Burn bright, captain.""
+$HeOrShe}看起来很高兴。""一路顺风，舰长。""
 OR
-$HeOrShe nods. ""All systems go.""",,
-contactPrintAcceptTextSoldier,ContactPrintAcceptText,$voice == soldier,,"At that, $heOrShe gives a small salute, ""Captain.""
+$HeOrShe}点了点头说道，""一切就绪。""",,
+contactPrintAcceptTextSoldier,ContactPrintAcceptText,$voice == soldier,,"此时，$HeOrShe}敬了个礼，说:{""长官好!""
 OR
-""Then that's affirmative,"" $heOrShe says.
+$HeOrShe}说道:{""那是肯定的""
 OR
-$HeOrShe nods, ""Then the operation is a go.""
+$HeOrShe}点头致意，""允许操作!""
 OR
-""Then the mission is a go,"" $heOrShe says with a nod.
+$HeOrShe}点了点头，说道。""可以行动!""
 OR
-""Acknowledged, captain,"" $heOrShe says with a nod. ""I'll await your confirm.""",,
-contactPrintAcceptTextFaithful,ContactPrintAcceptText,$voice == faithful,,"$HeOrShe smiles, ""Blessings of Ludd be upon you, captain.""
+""收到!长官，""{$HeOrShe}点头致意。""我会等待你的确认。""",,
+contactPrintAcceptTextFaithful,ContactPrintAcceptText,$voice == faithful,,"$HeOrShe}微笑着说:{""舰长，愿卢德与你同在。""
 OR
-""May this agreement be blessed,"" $heOrShe says softly.
+$HeOrShe}轻声说道。""愿这份协议得到祝福。""
 OR
-$HeOrShe smiles, then clasps $hisOrHer hands together. ""May this labor bear sweet fruit.""
+$HeOrShe}微笑着，拱手致礼，说:{""愿这次付出结出甜美的果实。""
 OR
-""Let our works bear the fruit of harmony,"" $heOrShe says, then bows $hisOrHer head for a moment.
+$HeOrShe}说道:{""愿我们的工作结出和谐的果实。""}然后低头片刻。
 OR
-""Ludd bless,"" $heOrShe says.
+$HeOrShe}说道:{""卢德保佑。""
 OR
-$HeOrShe nods, and says ""Blessings.""",,
-contactPrintAcceptTextAristo,ContactPrintAcceptText,$voice == aristo,,"""What a delightful little exchange, captain.""
+$HeOrShe}点头致意，说道:{""保佑。""",,
+contactPrintAcceptTextAristo,ContactPrintAcceptText,$voice == aristo,,"""多么令人愉悦的小买卖，舰长""
 OR
-""Thank you, captain,"" $heOrShe smiles, ""This will make for a most amusing anecdote.""
+""谢谢你，舰长。""{$HeOrShe}微笑着说:{""这会成为很有趣的一件事。""
 OR
-""What fun! This must be what it's like to work for a living.""
+""多么令人愉悦!这一定是被迫谋生的感觉。""
 OR
-""Splendid! How did I do?"" $HeOrShe asks, seeming not to await an answer, ""This is just as diverting as my uncle said it would be.""
+""噔噔!我干的怎么样?""{$HeOrShe}自问自答，""就像我叔叔说的一样有趣。""
 OR
-""Oh, yes. Father would approve, I think.""
+""噢，太棒了!我想我们的天父会同意的。""
 OR
-""Quite right, then!"" $HeOrShe says. ""Mother would be proud.""",,
-contactPrintAcceptTextOfficial,ContactPrintAcceptText,$voice == official,,"""Good. I should get back to filling out these forms.""
+""那就对了!""{$HeOrShe}说道，""妈妈一定会为我感到骄傲""",,
+contactPrintAcceptTextOfficial,ContactPrintAcceptText,$voice == official,,"""好的，我该回去完成这些表格了。""
 OR
-""Resolved. Can I help you with anything else?""
+""搞定!还需要帮忙吗?""
 OR
-""Then it is agreed and done,"" $heOrShe nods.
+""那就这么定了。""{$HeOrShe}点了点头。
 OR
-""Good,"" $heOrShe says, ""All parties confirmed.""",,
-contactPrintAcceptTextBusiness,ContactPrintAcceptText,$voice == business,,"""A profitable exchange for both of us, captain,"" $heOrShe says.
+""好!""{$HeOrShe}说，""各方确认。""",,
+contactPrintAcceptTextBusiness,ContactPrintAcceptText,$voice == business,,"""我想这对于我们是双赢的，舰长。""{$HeOrShe}说道。
 OR
-""A good deal,"" $HeOrShe smiles, ""Done and sealed.""
+""好买卖!""{$HeOrShe}笑了笑，""就这么定了。""
 OR
-""Always a pleasure doing business,"" $heOrShe says.
+$HeOrShe}说:{""合作愉快!""
 OR
-""I consider working with you an investment in both our futures,"" $heOrShe says, smiling.",,
-contactPrintAcceptTextScientist,ContactPrintAcceptText,$voice == scientist,,"""I applaud your intelligent choice, captain.""
+""我想和你一起投资我们的未来。""{$HeOrShe}微笑着说。",,
+contactPrintAcceptTextScientist,ContactPrintAcceptText,$voice == scientist,,"""我欣赏你的明智选择，舰长。""
 OR
-""A most rational decision.""
+""很理智的决定。""
 OR
-""You're smarter than you look, captain,"" $heOrShe says as if it were a compliment.
+""你比你看起来的明智多了，舰长。""{$HeOrShe}恭敬地说道。
 OR
-""I knew you'd make the logical choice,"" $heOrShe says.
+$HeOrShe}说:{""我知道，你会做出理智的选择。""
 OR
-""Good. Now I just need to calculate... "" $personName starts tapping away at a datapad. 
+""好，我现在只要稍微地计算一下...""{$personName}开始敲键盘。
 
-$HeOrShe looks up, ""Oh, are we done?""
+$HeOrShe}抬头说道:{""哦，我们搞定了？""
 OR
-""Hah! I knew you'd say yes. Statistically speaking assent was all but inevitable sooner or later.""",,
-contactPrintAcceptTextVillain,ContactPrintAcceptText,$voice == villain,,"A slow smile grows on $hisOrHer face. ""A most delectable agreement, captain.""
+""啊哈，从统计学上讲，我知道你迟早会同意的。""",,
+contactPrintAcceptTextVillain,ContactPrintAcceptText,$voice == villain,,"$HeOrShe}的脸上逐渐浮现出微笑，""非常令人愉悦的决定，舰长。""
 OR
-""The pleasure is all mine, I'm sure,"" $heOrShe says darkly.
+""我深知这是我的荣幸""{$HeOrShe}阴沉地说。
 OR
-""Good, good,"" $heOrShe says quietly, then in almost a whisper, ""You will be so very useful to me.""",,
-contactPrintAcceptTextPather,ContactPrintAcceptText,$voice == pather,,"$HeOrShe nods reverently, ""By Ludd's will we do this.""
+""好好好。""{$HeOrShe}轻声地耳语，""你对我会非常地有帮助。""",,
+contactPrintAcceptTextPather,ContactPrintAcceptText,$voice == pather,,"$HeOrShe}虔诚地点头致意，""祂说，我们应当如此。""
 OR
-$HeOrShe makes a sign of supplication, ""We walk the Path together.""",,
-contactPrintDeclineTextGeneric,ContactPrintDeclineText,,,"""Well, let me know if you change your mind.""
+$HeOrShe}恳求道:{""一起走上祂的道路吧。""",,
+contactPrintDeclineTextGeneric,ContactPrintDeclineText,,,"""好吧，如果你改变主意了，务必告诉我们。""
 OR
-$HeOrShe seems to think things over. ""Perhaps next time.""
+$HeOrShe}似乎正在沉思，""或许...下次吧""
 OR
-""Oh well."" $HeOrShe shrugs.
+""噢，好吧。""{$HeOrShe}耸了耸肩。
 OR
-""Right,"" $heOrShe says, ""I'm sure I can figure out some alternative.""
+""好吧。""{$HeOrShe}说:{""我想我一定有办法搞定。""
 OR
-$HeOrShe nods, brow furrowed, and says ""I understand.""
+$HeOrShe}点了点头，皱着眉头说:{""我明白了。""
 OR
-A look of disappointment crosses $hisOrHer face, but $heOrShe simply shrugs.
+$hisOrHer}的脸上闪过一丝失望的表情，但{$HeOrShe}只是耸了耸肩。
 OR
-$HeOrShe looks thoughtful, ""I see, captain. Your loss I suppose.""
+$HeOrShe}体贴地说:{""我想...是你输了，舰长。""
 OR
-""It's a missed opportunity, captain, but it's your decision.""",,
+""我们错失了一个机会，舰长，但这是你的决定，不是吗。""",,
 genericGreetingNeedTOff,PickGreeting,"$doGenericPortAuthorityCheck score:10000
 $player.transponderOn
-$hostileToMarket",ShowPersonVisual,"After a short wait, your connection request is accepted. The $manOrWoman starts to speak, then glances off-screen and closes the connection, leaving you looking at static.
+$hostileToMarket",ShowPersonVisual,"短暂的等待后，你的通讯请求已被接受。一个{$manOrWoman}接通了通讯，浏览了一下屏幕后就切断了连接，丢下你一人傻站着。
 
-You realize that you'll need to come back with your transponder turned off before you're able to do business with this person.",0:cutCommLink:Cut the comm link,
+你明白了，要想和这人交易，就得关了应答器再来找{$HeOrShe}。",0:cutCommLink:切断通信连接,
 genericGreetingNeedClearance,PickGreeting,"$doGenericPortAuthorityCheck score:10000
 !$hostileToMarket
 $entity.tradeMode != null
-$entity.tradeMode != OPEN",ShowPersonVisual,"After a short wait, your connection request is accepted.
+$entity.tradeMode != OPEN",ShowPersonVisual,"短暂的等待后，你的通讯请求已被接受。
 
-""You'll need to sort out your issues with the port authority and get docking clearance before we can do any sort of business.""",0:cutCommLink:Cut the comm link,
+""在我们开始任何交易之前，我想你需要提前和港务局打个招呼，因为你需要入港许可""",0:cutCommLink:切断通信连接,
 genericGreetingNeedNoPatrols,PickGreeting,"$doGenericPortAuthorityCheck score:10000
 $hostileToMarket
 $entity.tradeMode != null
-$entity.tradeMode == NONE",ShowPersonVisual,"After a short wait, your connection request is accepted. The $manOrWoman starts to speak, then glances off-screen and closes the connection, leaving you looking at static.
+$entity.tradeMode == NONE",ShowPersonVisual,"短暂的等待后，你的通讯请求已被接受。一个{$manOrWoman}接通了通讯，浏览了一下屏幕后就切断了连接，丢下你一人傻站着。
 
-You realize that you'll need to come back without attracting the attention of patrols before you're able to do business with this person.",0:cutCommLink:Cut the comm link,
+你明白了，要想和这人交易，就得避免引起巡逻队的注意。",0:cutCommLink:切断通信连接,
 genericGreetingNeedNoPatrolsUW,PickGreeting,"$doGenericPortAuthorityCheck score:10000
 $tag:underworld
 $entity.tradeMode != null
-$entity.tradeMode == NONE",ShowPersonVisual,"After a short wait, your connection request is accepted. The $manOrWoman starts to speak, then glances off-screen and closes the connection, leaving you looking at static.
+$entity.tradeMode == NONE",ShowPersonVisual,"短暂的等待后，你的通讯请求已被接受。一个{$manOrWoman}接通了通讯，浏览了一下屏幕后就切断了连接，丢下你一人傻站着。
 
-You realize that you'll need to come back without attracting the attention of patrols before you're able to do business with this person.",0:cutCommLink:Cut the comm link,
+你明白了，要想和这人交易，就得避免引起巡逻队的注意。",0:cutCommLink:切断通信连接,
 ,,,,,,
 ,,,,,,
 # A quantity of a commodity available cheaply,,,,,,
-cheapComBlurb,cheapCom_blurb,,,"""I have a large stockpile of surplus $cheapCom_commodityName available at a low price.""",,
-cheapComOfferOption,cheapCom_option,,,,cheapCom_start:Ask about the surplus $cheapCom_commodityName,
-cheapComBlurbBar,cheapCom_blurbBar,,,"A $cheapCom_manOrWoman in a cheap business suit sips a reasonably priced drink, occasionally tapping at $hisOrHer TriPad in consternation.",,
-cheapComOfferOptionBar,cheapCom_optionBar,,,,cheapCom_startBar:Talk to the concerned $cheapCom_manOrWoman in a cheap business suit,
+cheapComBlurb,cheapCom_blurb,,,"""{$cheapCom_commodityName}滞销，帮帮我们。""",,
+cheapComOfferOption,cheapCom_option,,,,cheapCom_start:询问{$cheapCom_commodityName}的盈余量,
+cheapComBlurbBar,cheapCom_blurbBar,,,一位穿着廉价西装的{$cheapCom_manOrWoman}啜饮着一杯价格合理的饮料，时不时用{$HeOrShe}的Tri-Pad办公。,,
+cheapComOfferOptionBar,cheapCom_optionBar,,,,cheapCom_startBar:上去和身着商务套装的{$cheapCom_manOrWoman}交谈,
 cheapComOfferTextLocalBar,DialogOptionSelected,"$option == cheapCom_startBar
 $cheapCom_variation == LOCAL","$missionId = cheapCom
 FireBest CheapComOfferText
 ShowRemainingCapacity $cheapCom_commodityId
-DoCanAffordCheck $cheapCom_totalPrice contact_acceptBar true",,"contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+DoCanAffordCheck $cheapCom_totalPrice contact_acceptBar true",,"contact_acceptBar:接受
+contact_declineBarNoContinue:婉拒",
 cheapComOfferTextRemoteBar,DialogOptionSelected,"$option == cheapCom_startBar
 $cheapCom_variation == REMOTE","$missionId = cheapCom
-FireBest CheapComOfferText",,"contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+FireBest CheapComOfferText",,"contact_acceptBar:接受
+contact_declineBarNoContinue:婉拒",
 cheapComOfferTextLocal,DialogOptionSelected,"$option == cheapCom_start
 $cheapCom_variation == LOCAL","$missionId = cheapCom
 FireBest CheapComOfferText
 ShowRemainingCapacity $cheapCom_commodityId
-DoCanAffordCheck $cheapCom_totalPrice contact_accept true",,"contact_accept:Accept
-contact_decline:Decline",
+DoCanAffordCheck $cheapCom_totalPrice contact_accept true",,"contact_accept:接受
+contact_decline:婉拒",
 cheapComOfferTextRemote,DialogOptionSelected,"$option == cheapCom_start
 $cheapCom_variation == REMOTE","$missionId = cheapCom
-FireBest CheapComOfferText",,"contact_accept:Accept
-contact_decline:Decline",
+FireBest CheapComOfferText",,"contact_accept:接受
+contact_decline:婉拒",
 cheapComTextLocal,CheapComOfferText,"$cheapCom_variation == LOCAL
-!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"""It would come out to,"" $heOrShe squints at $hisOrHer TriPad, ""There- $cheapCom_quantity units of $cheapCom_commodityName for $cheapCom_pricePerUnit per unit. If you can help me clear out this warehouse, it'd do me a real favor.""",,
+!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"""让我看看...""{$HeOrShe}眯着眼睛看着{$HeOrShe}的TriPad, ""这里有{$cheapCom_quantity}单位的{$cheapCom_commodityName，价格方面...只要{$cheapCom_pricePerUnit}星币每单位。如果你能帮我处理掉这些库存，这会帮我一个大忙。""",,
 cheapComTextRemote,CheapComOfferText,"$cheapCom_variation == REMOTE
-!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"""There's a surplus stockpile of $cheapCom_quantity units of $cheapCom_commodityName $cheapCom_marketOnOrAt $cheapCom_marketName - that's $cheapCom_dist light-years away - that I can let you have at $cheapCom_pricePerUnit per unit, or $cheapCom_totalPrice total. You'd need to talk to $cheapCom_personPost $cheapCom_personName to make the arrangement.""",,
+!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"""在{$cheapCom_marketOnOrAt}的{$cheapCom_marketName，有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，距离这儿有{$cheapCom_dist}光年。我可以给你{$cheapCom_pricePerUnit}星币每单位的优惠价格，或者以{$cheapCom_totalPrice}星币的价格一次性买断。但你需要联系{$cheapCom_personPost}的{$cheapCom_personName}进行进一步洽谈。""}",,
 cheapComTextLocalBar,CheapComOfferText,"$cheapCom_variation == LOCAL score:10
-$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"$HeOrShe looks up, ""You're a trader, running a merchant fleet?"" You mumble something inconclusive. ""Oh, that's perfect,"" $heOrShe says.
+$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"$HeOrShe}抬头看着你，""你...是个商人吗？跑商的那种？""}你含糊不清地说了些有的没的话来应付{$HeOrShe}。""哦，这简直是好极了。""{$HeOrShe}说道。
 
-""I need to clear out a warehouse as soon as possible,"" $heOrShe shows you $hisOrHer datapad - a cheap TriPad knockoff, now that you see it more closely. ""Right now it's full of $cheapCom_quantity units of $cheapCom_commodityName. If you could help me get rid of them I'd accept a price as low as $cheapCom_pricePerUnit credits per unit. That's a real bargain!""
+""我需要清理一批库存，""{$HeOrShe}给你展示了{$HeOrShe}的个人终端...一个廉价的山寨TriPad...以便你能靠近点看清屏幕。""我现在有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销。如果你能帮我处理掉它们，我保证以{$cheapCom_pricePerUnit}星币每单位的优惠价卖给你。要知道，这可是个大便宜。""
 
-$HeOrShe puts down the datapad. ""So what do you think?""",,
+$HeOrShe}放下了个人终端，说:""所以，阁下意见如何？""",,
 cheapComTextRemoteBar,CheapComOfferText,"$cheapCom_variation == REMOTE score:10
-$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"$HeOrShe looks up, ""You're a trader, running a merchant fleet?"" You mumble something inconclusive. ""Oh, that's perfect,"" $heOrShe says.
+$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"$HeOrShe}抬头看着你，""你...是个商人吗？跑商的那种？""}你含糊不清地说了些有的没的话来应付{$HeOrShe}。""哦，这简直是好极了。""{$HeOrShe}说道。
 
-""We've got a stockpile of $cheapCom_quantity units of $cheapCom_commodityName $cheapCom_marketOnOrAt $cheapCom_marketName that we need to get rid of as soon as possible - that's $cheapCom_dist light-years away. If you could help me out, I'd accept $cheapCom_pricePerUnit credits per unit, which makes it $cheapCom_totalPrice total. A real bargain, captain!""
+""在{$cheapCom_marketOnOrAt}的{$cheapCom_marketName}我们有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，急需脱手，但距离这儿有{$cheapCom_dist}光年。如果你能帮我处理掉这些库存，我保证以{$cheapCom_pricePerUnit}星币每单位的价格卖给你，合计{$cheapCom_totalPrice}星币。这可是个好机会啊，我亲爱的舰长同志。""
 
-$HeOrShe shows you $hisOrHer TriPad displaying a comms contact ID, ""Here, you'd need to speak with my associate $cheapCom_personPost $cheapCom_personName to finalize the sale. I mean, if you're interested.""",,
+$HeOrShe}给你展示了{$HeOrShe}的Tri-Pad，上面显示了一个公共联系ID，说道:{""这是我的合作伙伴，你对此有兴趣，你可以找{$cheapCom_personPost{$cheapCom_personName}谈谈以便签订合同。""",,
 cheapComPostAccept,ContactPostAccept,"$missionId == cheapCom
 $cheapCom_variation == LOCAL","RemoveCommodity credits $cheapCom_totalPrice
 AddCommodity $cheapCom_commodityId $cheapCom_quantity
@@ -11689,166 +11687,166 @@ cheapComPickupGreeting,PickGreeting,"$cheapCom_hasCommodity score:1100
 Call $cheapCom_ref updateData","ShowPersonVisual
 SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit
 ShowRemainingCapacity $cheapCom_commodityId
-DoCanAffordCheck $cheapCom_totalPrice contact_accept true","""Ah, it's $playerName isn't it? You must be here to pick up $cheapCom_quantity units of $cheapCom_commodityName for $cheapCom_pricePerUnit credits per unit,"" $heOrShe taps at a TriPad, nodding, ""We can get you set right up if you're prepared to receive the cargo now.""","cheapCom_pickup:Pick up the $cheapCom_commodityName
-cutCommLink:Cut the comm link",
+DoCanAffordCheck $cheapCom_totalPrice contact_accept true","""啊哈，你就是著名的{$playerName}阁下?你一定是来帮我处理我滞销的{$cheapCom_quantity}单位的{$cheapCom_commodityName}的吧!它们只要{$cheapCom_pricePerUnit}星币每单位!""{$heOrShe}点了点 {$heOrShe}的Tri-Pad，点头致意。""只要您同意，我们这边随时发货。""","cheapCom_pickup:带上{$cheapCom_commodityName}
+cutCommLink:切断通信连接",
 cheapComPickupOptionSel,DialogOptionSelected,$option == cheapCom_pickup,"RemoveCommodity credits $cheapCom_totalPrice
 AddCommodity $cheapCom_commodityId $cheapCom_quantity
 $cheapCom_completed = true
 Call $cheapCom_ref updateStage
-FireAll PopulateOptions","""Thank you for taking this off my hands.""",,
+FireAll PopulateOptions","""多谢你帮我处理了这些烫手的山芋。""",,
 ,,,,,,
 # commodity procurement,,,,,,
-proComBlurb,proCom_blurb,,,"""I need to procure a quantity of $proCom_commodityName.""
+proComBlurb,proCom_blurb,,,"""我急需一大批{$proCom_commodityName}。""
 OR
-""I require delivery of a cargo of $proCom_commodityName.""
+我需要交付一批{""$proCom_commodityName}。""
 OR
-""I need a shipment of $proCom_commodityName.""",,
-proComBlurbAristo,proCom_blurb,$voice == aristo,,"""The family decided that I must 'demonstrate initiative' by procuring a cargo of $proCom_commodityName. Perhaps I could pay you to solve this little conundrum.""",,
-proComOfferOption,proCom_option,,,,proCom_start:Ask about the $proCom_commodityName procurement,
-proComBlurbBar,proCom_blurbBar,,,A handful of commodity traders downing caffeine-spiked drinks seems to be giving a $proCom_manOrWoman some disappointing news.,,
-proComBlurbBarUnderworld,proCom_blurbBar,$proCom_underworld,,A pack of seedy-looking traders passing around a narco-stick seem to give a $proCom_manOrWoman disappointing news.,,
-proComOfferOptionBar,proCom_optionBar,,,,proCom_startBar:Talk to the $proCom_manOrWoman who looks disappointed by the commodity traders,
-proComOfferOptionBarUnderworld,proCom_optionBar,$proCom_underworld,,,proCom_startBar:Talk to the $proCom_manOrWoman who looks disappointed by the seedy-looking traders,
+""我需要一批{$proCom_commodityName}。""",,
+proComBlurbAristo,proCom_blurb,$voice == aristo,,"""迫于家庭原因，我必须买一批{$proCom_commodityName}来展示我的{'主动性'}。或许...我可以给你{'好处'}来帮我摆脱这个小麻烦。""",,
+proComOfferOption,proCom_option,,,,proCom_start:询问如何采购{$proCom_commodityName},
+proComBlurbBar,proCom_blurbBar,,,少数几个日用品经销商大肆抛售咖啡因饮品的事件似乎令一位{$proCom_manOrWoman}十分失望。,,
+proComBlurbBarUnderworld,proCom_blurbBar,$proCom_underworld,,一群面目可憎的经销商成功走私了一些毒品(?)，这似乎一位{$proCom_manOrWoman}很失望。,,
+proComOfferOptionBar,proCom_optionBar,,,,proCom_startBar:与那位对日用品经销商表示失望的{$proCom_manOrWoman}交谈,
+proComOfferOptionBarUnderworld,proCom_optionBar,$proCom_underworld,,,proCom_startBar:与那位对面目可憎的经销商表示失望的{$proCom_manOrWoman}交谈,
 proComOfferBeginBar,DialogOptionSelected,$option == proCom_startBar,"$missionId = proCom
-FireBest ProComOfferText",,"contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+FireBest ProComOfferText",,"contact_acceptBar:接受
+contact_declineBarNoContinue:婉拒",
 proComOfferBegin,DialogOptionSelected,$option == proCom_start,"$missionId = proCom
-FireBest ProComOfferText",,"contact_accept:Accept
-contact_decline:Decline",
+FireBest ProComOfferText",,"contact_accept:接受
+contact_decline:婉拒",
 proComTextLocal,ProComOfferText,"$proCom_variation == LOCAL
-!$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"""I require $proCom_quantity units of $proCom_commodityName delivered here as soon as possible. It's a rush job so I'll pay over market value, $proCom_pricePerUnit per unit.""",,
+!$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"""我急需{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。当然，这是加急订单，我会以{$proCom_pricePerUnit}星币每单位的价格进行支付。""",,
 proComTextLocalUnderworld,ProComOfferText,"$proCom_variation == LOCAL
 !$proCom_barEvent
-$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"""I need $proCom_quantity units of $proCom_commodityName delivered right here as soon as possible. I don't care where it comes from or how it gets done, so long as it gets here.""
+$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"""我急需{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。我不在乎它们是从哪里来的，是怎么来的，反正交到我手里就完事了。""
 
-""Because I appreciate your... efficiency, let's call it, I'm willing to pay you a generous $proCom_pricePerUnit per unit. Agreed?""",,
+""我很欣赏你的...效率？暂且这么称呼吧。所以，我愿意以{$proCom_pricePerUnit}星币每单位的价格进行支付，如何?""",,
 proComTextRemote,ProComOfferText,"$proCom_variation == REMOTE
-!$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""I need $proCom_quantity units of $proCom_commodityName delivered to $proCom_marketName - that's $proCom_dist light-years away. Due to the importance of this shipment, I'll ensure that you're paid $proCom_pricePerUnit per unit, which makes for a total of $proCom_totalPrice credits.""
+!$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""我需要将{$proCom_quantity}单位的{$proCom_commodityName}送到{$proCom_marketName}，距离大概有{$proCom_dist}光年。介于这批货物十分重要，我保证支付你{$proCom_pricePerUnit}星币每单位，共计{$proCom_totalPrice}星币。""
 
-""$proCom_PersonPost $proCom_personName will receive the shipment from you $proCom_marketOnOrAt $proCom_marketName and deliver payment upon completion.""",,
+""{$proCom_PersonPost}的{$proCom_personName}负责收货，然后{$proCom_marketOnOrAt}的{$proCom_marketName}会在订单完成后进行付款。""",,
 proComTextRemoteUnderworld,ProComOfferText,"$proCom_variation == REMOTE
 !$proCom_barEvent
-$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""I need $proCom_quantity units of $proCom_commodityName delivered delivered to $proCom_marketName - that's $proCom_dist light-years away. I don't care who you have to shoot to make it happen so long as it gets there.""
+$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""我需要将{$proCom_quantity}单位的{$proCom_commodityName}送到{$proCom_marketName}，距离大概有{$proCom_dist}光年。我不在乎你要如何完成这个任务，只要完成就行...哪怕{'做掉'}某些人。""
 
-""Call it $proCom_pricePerUnit per unit. That makes $proCom_totalPrice total, because I know that you'll do what it takes to get it done. You'll need to talk to my, ah, associate, $proCom_personPost $proCom_personName to make the delivery and receive payment. And there's no need to mention my name.""",,
+""我给出的价格是每单位{$proCom_pricePerUnit}星币，总计{$proCom_totalPrice}星币，因为我知道你会尽你所能。你可以去找我的...额...助手吧，{$proCom_personPost}的{$proCom_personName}进行交货和收款，不必提及我的名字。""",,
 proComTextLocalBar,ProComOfferText,"$proCom_variation == LOCAL score:10
-$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"$HeOrShe looks up with a flicker of hope as you approach, ""You're a starship captain, right?""
+$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"当你靠近的时候，$HeOrShe}带着一丝希望抬起头，说:{""你是一名星舰的舰长，对吧?""}
 
-$HeOrShe sighs, and taps at a TriPad, ""I need to get $proCom_quantity units of $proCom_commodityName delivered here as soon as possible. It's very important. I'll even pay above market rates, $proCom_pricePerUnit credits per unit. Is this something you could do?""
+$HeOrShe}叹了口气，然后点了几下Tri-pad，说:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。这可是非常的重要，我愿以超过市场价的每单位{$proCom_pricePerUnit}星币的价格支付给你。你一定能做些什么，对吧?""
 OR
-$HeOrShe looks up from $hisOrHer TriPad, brow creased. ""Perhaps you can help. Your $shipOrFleet just arrived, did it not?"" $HeOrShe holds up a hand, ""Hear me out, it'll just be a moment. I need $proCom_quantity units of $proCom_commodityName as soon as possible, and I'll pay above market price, $proCom_pricePerUnit credits per unit. Are you interested?""
+$HeOrShe}皱着眉头，把目光从Tri-Pad上移开。""或许你能帮帮我，你的{$shipOrFleet}是不是刚到?""{$HeOrShe}举起一只手，说道:{""这只要占用你一丁点儿时间，请听我说完。我需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好，我会支付每单位{$proCom_pricePerUnit}星币。远高于市场价，如何?""
 OR
-$HeOrShe interrupts your attempt at a greeting with a quick wave, ""I'm sorry, captain, is it? I don't mean to be abrupt, but I really need to secure a delivery of $proCom_quantity units of $proCom_commodityName as soon as possible."" 
+$HeOrShe}快速挥手打断了你的招呼，""舰长，非常抱歉，我也不是故意的，但我真的非常需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。"" 
 
-$HeOrShe hesitates, sighs, then says ""I'm willing to pay above market value, $proCom_pricePerUnit per unit. If you're interested.""",,
+$HeOrShe}犹豫了一下，叹了口气，说道:{""我愿意出价{$proCom_pricePerUnit}星币每单位，远超市场均价，你觉得如何?""",,
 proComTextLocalBarUnderworld,ProComOfferText,"$proCom_variation == LOCAL score:10
 $proCom_barEvent
-$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"$HeOrShe brushes off $hisOrHer coat, muttering ""They don't know who they've-"" then smiles suddenly as you approach. 
+$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"$HeOrShe}轻轻脱下{$HeOrShe}的外套，小声咕哝着:{""他们对自己的身份和能力一点B数都没有...""}。在你走近时，$HeOrShe}突然露出一丝微笑。
 
-""Finally, someone reasonable."" $HeOrShe pulls you aside as if you're old business partners, and says quietly ""I'm looking for $proCom_quantity units of $proCom_commodityName. Delivered here, as soon as possible, don't care how it gets done so long as it gets done, understand? I'm willing to pay $proCom_pricePerUnit per unit, isn't that generous? It's because I respect what you're capable of."" 
+""可算有个通情达理的人了。""{$HeOrShe}把你拉到一边，仿佛你是{$HeOrShe}的老朋友，然后悄悄地说:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。我不在乎这些货是怎么到达这里的，只要能交货就行。我欣赏你的能力，我愿大方地给出{$proCom_pricePerUnit}星币每单位的价格，如何?""
 
-$HeOrShe rolls $hisOrHer eyes at the group nearby, shrugging with one shoulder ""Some people, they have no respect. They'll learn. What do you say?""",,
+$HeOrShe}向附近的人群翻了翻{$HeOrShe}的眼睛，耸了耸一边的肩膀，说道:{""不守礼，无以立，有些人就是学不会，你说呢?""",,
 proComTextRemoteBar,ProComOfferText,"$proCom_variation == REMOTE score:10
-$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"$HeOrShe looks up with a flicker of hope as you approach, ""You're a starship captain, right?""
+$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"当你靠近的时候，{$HeOrShe}带着一丝希望抬起头，说:{""你是一艘星舰的舰长，对吧?""
 
-$HeOrShe taps at a TriPad, ""I need $proCom_quantity units of $proCom_commodityName delivered to $proCom_marketName, $proCom_dist light-years away. You'd be paid above market rates, $proCom_pricePerUnit per unit for $proCom_totalPrice total on delivery to $proCom_personPost $proCom_personName. Are you interested?""",,"#$HeOrShe looks up from $hisOrHer TriPad as you approach, and says ""Maybe you can help. Your $shipOrFleet just arrived, right?"" $HeOrShe holds up a hand, ""Hear me out, it'll be quick. I need someone to ship $proCom_quantity units of $proCom_commodityName. It's a delivery job, and you'd be paid above market prices, $proCom_pricePerUnit per unit, or $proCom_totalPrice total, to ship the cargo to $proCom_personPost $proCom_personName $proCom_marketOnOrAt $proCom_marketName, which is $proCom_dist light-years away.""
+$HeOrShe}在TriPad点了几下，""我需要{$proCom_quantity}单位的{$proCom_commodityName}，送到{$proCom_dist}光年外的{$proCom_marketName}。你会得到应有的报酬，我每单位出价{$proCom_pricePerUnit}星币，总计{$proCom_totalPrice}星币，高于市场价。你的交接人是{$proCom_personPost}的{$proCom_personName}。阁下是否有合作意向?""",,"#$HeOrShe looks up from $hisOrHer TriPad as you approach, and says ""Maybe you can help. Your $shipOrFleet just arrived, right?"" $HeOrShe holds up a hand, ""Hear me out, it'll be quick. I need someone to ship $proCom_quantity units of $proCom_commodityName. It's a delivery job, and you'd be paid above market prices, $proCom_pricePerUnit per unit, or $proCom_totalPrice total, to ship the cargo to $proCom_personPost $proCom_personName $proCom_marketOnOrAt $proCom_marketName, which is $proCom_dist light-years away.""
 
 $HeOrShe takes a breath, then asks ""Can you do it?"""
 proComTextRemoteBarUnderworld,ProComOfferText,"$proCom_variation == REMOTE score:10
 $proCom_barEvent
-$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"You approach the $manOrWoman as she glares icily, muttering ""-big mistake,"" then turns to you with a cool smile. ""Ah, captain."" $HisOrHer eye twitches, the tell of a black market ocular implant, ""Your $shipOrFleet just arrived, yes? Let's talk."" 
+$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"你走近{$manOrWoman}，她冷冰冰地瞪着你，喃喃地说:{""大错特错啊...""}。然后朝你冷冷地笑了笑，说:{""啊，船长。""{$HeOrShe}的眼睛不停抽搐...这是一个来自黑市的义眼...""你的{$shipOrFleet}刚刚到达，不是吗？让我们谈个交易吧。""
 
-$HeOrShe raises two fingers at the bartender, ""I need $proCom_quantity units of $proCom_commodityName delivered to $proCom_marketName. $proCom_dist light-years away. I won't ask or answer any questions. It's full payment above market rate- $proCom_pricePerUnit per unit, for $proCom_totalPrice total on delivery to the contact,  $proCom_personName. They'll pay. And don't mention my name.""
+$HeOrShe}一边向酒保举起两根手指示意，一边说道:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，送到{$proCom_dist}光年之外的{$proCom_marketName}。我不会问或回答任何问题。每单位{$proCom_pricePerUnit}星币，远超均价，总计{$proCom_totalPrice}星币。交货给{$proCom_personName}来获取报酬，且不要提起我的名字。""
 
-$HisOrHer cool smile returns just as the bartender arrives with two small, potent drinks. ""Do we have a deal?""",,
+当酒保带着两杯烈酒走过来的时候，{$HeOrShe}露出了冷笑，说道:{""怎么样?成交吗?""",,
 proComDeliverGreetingNotEnough,PickGreeting,"$proCom_needsCommodity score:1000
 Call $proCom_ref updateData
 !$proCom_playerHasEnough","ShowPersonVisual
 SetTextHighlights $proCom_quantity
-FireAll PopulateOptions","""Yes, hello."" $HeOrShe appears to be busy browsing a shipping manifest on an adjacent display, ""I'm expecting a cargo of $proCom_quantity units of $proCom_commodityName. To be paid for,"" $hisOrHer eyes turn to you. ""Upon delivery. In full.""
+FireAll PopulateOptions","""是的...你好!""}$HeOrShe}似乎正忙于浏览显示器上的货运清单，""我希望有{$proCom_quantity}单位的{$proCom_commodityName}送到我这里。付款方式是...""{$HeOrShe}把目光转向了你，""货到付款，不耍花招。""
 OR
-""I'm expecting a delivery of $proCom_commodityName, $proCom_quantity units, exact."" $HeOrShe idly reads from a datapad. ""That's the deal.""",,
+""我希望有一批{$proCom_commodityName}送到我这里，确切数量是{$proCom_quantity}单位。""{$HeOrShe}漫不经心的看了看数据板上的内容，""不接受讲价。""",,
 proComDeliverGreetingNotEnoughUW,PickGreeting,"$proCom_needsCommodity score:1000
 Call $proCom_ref updateData
 !$proCom_playerHasEnough
 $proCom_underworld","ShowPersonVisual
 SetTextHighlights $proCom_quantity
-FireAll PopulateOptions","""You're here to deliver $proCom_quantity units of $proCom_commodityName? This manifest says you can't fulfill the shipment.""
+FireAll PopulateOptions","""你是来送货的对吧，物品是{$proCom_quantity}单位的{$proCom_commodityName}对吧?但这份货运清单显示你不能完成这个任务。""
 
-$HeOrShe drops the datapad to $hisOrHer desk with, you sense, more force than necessary. 
+{$HeOrShe}把{$HeOrShe}的数据板拍在了桌面上，根据你的目测，这个力度明显不是必要的。
 
-""So why are you here?"" $heOrShe asks.
+""所以...是什么风把你吹来了?""{$heOrShe}问道。
 OR
-""I'm expecting a cargo of exactly $proCom_quantity units of $proCom_commodityName."" $HeOrShe says, reading from a datapad. ""Delivery in full."" $HeOrShe looks up, finally, ""That's the deal.""",,
+""我需要{$proCom_quantity}单位的{$proCom_commodityName}，一个不少。""{$HeOrShe}边浏览数据板边说。""足量交货""{$HeOrShe}最终抬起头看着你，""且不接受讲价。""",,
 proComDeliverGreeting,PickGreeting,"$proCom_needsCommodity score:1000
 Call $proCom_ref updateData
 $proCom_playerHasEnough","ShowPersonVisual
-SetTextHighlights $proCom_quantity $proCom_pricePerUnit","""Ah, you must be $playerName. We've been expecting you."" $personName reads a datapad, ""And I believe- yes, it says here you're delivering $proCom_quantity units of $proCom_commodityName. Is that correct?""","proCom_deliver:Deliver the $proCom_commodityName
-cutCommLink:Cut the comm link",
+SetTextHighlights $proCom_quantity $proCom_pricePerUnit","""啊，你一定是{$playerName}阁下，我们已经等候多时了。""{$personName}看了看数据板，""我相信...哦不，你已经把{$proCom_quantity}单位的{$proCom_commodityName}带来了，对吧?""","proCom_deliver:交付{$proCom_commodityName}
+cutCommLink:切断通信连接",
 proComDeliverGreetingUnderworld,PickGreeting,"$proCom_needsCommodity score:1000
 Call $proCom_ref updateData
 $proCom_playerHasEnough
 $proCom_underworld","ShowPersonVisual
-SetTextHighlights $proCom_quantity $proCom_pricePerUnit","$personName looks you over nervously. ""You have the goods. And they're ready to be offloaded - as agreed, $proCom_quantity units at $proCom_pricePerUnit per?""
+SetTextHighlights $proCom_quantity $proCom_pricePerUnit","$personName}紧张兮兮地看着你。""你拿到货了。他们也已经准备好卸货了...按照协议...一共是{$proCom_quantity}单位，价格是{$proCom_pricePerUnit}星币每单位?""
 OR
-$personName eyes you suspiciously, ""You're $playerName? I thought you'd look different."" $HisOrHer eyes flick over to a secondary display, ""It says here you've got the cargo, all $proCom_quantity units. We'll go ahead with the agreed $proCom_pricePerUnit per unit. I'll provide you with a drop-off point.""","proCom_deliver:Deliver the $proCom_commodityName
-cutCommLink:Cut the comm link",
+$personName}惊喜地看着你。""你是{$playerName}?你简直和照片上的一模一样。""{$HeOrShe}的目标转向了第二个显示器，""这边显示您有一批货物，共计{$proCom_quantity}单位。我们将继续执行协议，价格是{$proCom_pricePerUnit}星币每单位。我稍后会给你提供卸货地点。""","proCom_deliver:交付{$proCom_commodityName}
+cutCommLink:切断通信连接",
 proComDeliverOptionSel,DialogOptionSelected,$option == proCom_deliver,"FireBest ProComCompletedText
 AddCommodity credits $proCom_totalPrice
 RemoveCommodity $proCom_commodityId $proCom_quantity
 $proCom_completed = true
 Call $proCom_ref updateStage
 FireAll PopulateOptions",,,
-proComDeliverCompleted,ProComCompletedText,,,"""Thank you, this cargo of $proCom_commodityName is more important than you might think.""
+proComDeliverCompleted,ProComCompletedText,,,"""非常感谢，这批{$proCom_commodityName}的重要程度比你想象的大多了""
 OR
-""I knew we could count on you. Thank you for the shipment.""
+""我就知道我们可以依靠你。多谢了你的护送。""
 OR
-""Good work, you've really saved us a lot of trouble.""
+""干的漂亮，你一下子就帮我们解决了好多麻烦。""
 OR
-""This was handled perfectly, captain. I'll be sure to put in a good word for you.""",,
-proComDeliverCompletedUnderworld,ProComCompletedText,$proCom_underworld,,"$HeOrShe nods, ""The boss will be pleased.""
+""这件事处理得很好，舰长。我有机会一定会为你说句好话。""",,
+proComDeliverCompletedUnderworld,ProComCompletedText,$proCom_underworld,,"{$HeOrShe}点了点头，说:{""我的老板一定很高兴吧。""
 OR
-""Good. Very good,"" $heOrShe looks more relieved than the situation calls for. ""You have no idea how important this was.""
+""好，非常好!""{$HeOrShe}看起来紧迫的任务更放松些。""你不知道这东西有多重要。""
 OR
-""Okay, it's done."" $HeOrShe seems to key in some kind of confirmation on an off-brand datapad, then looks back up at you. ""This never happened.""",,
+""好极了，任务完成了""{$HeOrShe}似乎在一个杂牌数据板上输入了某种确认信息，然后回头看你。""就当这事从未发生过。""",,
 # Pirate encounter at some point after accepting the proCom mission,,,,,,
-PROCOMPirateHail,PROCOMPirateHail,,$entity.ignorePlayerCommRequests = true,"""Oh, captain,"" the pirate $personRank looks almost apologetic. ""It's about the $proCom_commodityName procurement you've taken on. A minor matter,"" $heOrShe waggles a hand as if it's not quite important enough to explain, but $heOrShe will indulge you, ""But there is a competitor who hired me to send a message about the risks of doing business with that particular individual.""","cutCommLink2:""This isn't personal? That's a relief.""
-cutCommLink:Say nothing",
+PROCOMPirateHail,PROCOMPirateHail,,$entity.ignorePlayerCommRequests = true,"""噢，舰长阁下，""海盗{$personRank}的态度看起来几乎就是道歉。""这是关于你已采购的{$proCom_commodityName}的一件事。""{$heOrShe}甩了甩手，好像这件事没有解释的必要，但{$heOrShe}考虑到你的木鱼脑袋，还是进行了解释，""您有一位竞争对手派我来传达一条信息...是关于和某个人做生意的风险的。""","cutCommLink2:""原来不是私人恩怨吗?}这可真是令人'欣慰'。""
+cutCommLink:保持沉默",
 ,,,,,,
 # hand-me-down freighter,,,,,,
-hmdfBlurb,hmdf_blurb,,,"""I have an old freighter that's just taking up hangar space. Perhaps you could use it.""",,
-hmdfBlurbAristo,hmdf_blurb,$voice == aristo,,"""Father has demanded I rid myself of an old frieghter I've been meaning to fix up, he says it's taking up valuable space in his orbital hangar. I think he's being tremendously unfair. Perhaps you could take it?""",,
-hmdfOfferOption,hmdf_option,,,,hmdf_start:Ask about the old freighter,
-hmdfBlurbBar,hmdf_blurbBar,,,At a corner table a spacer in a dirty uniform is quietly drowning $hmdf_hisOrHer sorrows.,,
-hmdfOfferOptionBar,hmdf_optionBar,,,,hmdf_startBar:Talk to the hard-drinking spacer,
+hmdfBlurb,hmdf_blurb,,,"""我正好有一个占我船位的旧货船，或许你用的上{它}。""",,
+hmdfBlurbAristo,hmdf_blurb,$voice == aristo,,"""神父要求我抛弃那艘需要维护的旧货船，说它占用了{他}的轨道船坞的宝贵空间。我觉得{他}太不公平了。或许你可以帮我带走这艘船?""",,
+hmdfOfferOption,hmdf_option,,,,hmdf_start:询问这艘旧货船的情况。,
+hmdfBlurbBar,hmdf_blurbBar,,,在一个角落的桌子上，一名衣冠不整的船员正试图将自己的悲伤悄悄地淹没在酒精饮料里。,,
+hmdfOfferOptionBar,hmdf_optionBar,,,,hmdf_startBar:走上去和这名醉酒的船员交谈。,
 hmdfOfferTextBar,DialogOptionSelected,$option == hmdf_startBar,"$missionId = hmdf
-SetTextHighlights $hmdf_price","""I've got a $hmdf_hullClass freighter. I won't... I won't be needing it any more."" $HeOrShe looks at you with reddened eyes that suggest sorrows which require quite a lot of drowning.
+SetTextHighlights $hmdf_price","""我曾有过一艘{$hmdf_hullClass}^级}货船。我...我现在不会再需要{它}了""{$HeOrShe}用一双红红的眼睛看着你，你明白{$HeOrShe}之前流了不少眼泪。
 
-""I can sell it to you for $hmdf_price credits,"" $heOrShe says, then looks down at $hisOrHer half-empty drink. ""It was good to me, once.""","hmdf_lookBar:Ask for detailed info on the freighter
-contact_declineBarNoContinue:Decline",
+""我能将{它}以{$hmdf_price}星币的价格卖给你，""{$heOrShe}说道，然后低头看着{$heOrShe}的喝了一半的饮料，""{它}曾经对我很好。""","hmdf_lookBar:询问这艘旧货船的详细信息
+contact_declineBarNoContinue:婉言拒绝",
 hmdfOfferTextContactAristo,DialogOptionSelected,"$option == hmdf_start
 $voice == aristo","$missionId = hmdf
-SetTextHighlights $hmdf_price","""It's a vintage $hmdf_hullClass freighter, and I was told by the seller that it's seen some real adventures. Terribly exciting, I feel, and it'd have made a fabulous conversation piece once I got it fixed up. There's always something coming up, however.""
+SetTextHighlights $hmdf_price","""这是一艘成色不错的{$hmdf_hullClass}^级{货船，它曾经的主人告诉过我，它}经历了一些真正的冒险。非常令人激动，不是吗?，我想我一旦把{它}修好了，它}一定会成为一个传奇。我相信{它}是不平凡的。""
 
-""I suppose I ought to make you pay for it to 'develop my business sense', as father put it. How much does a freighter cost, anyway. $hmdf_price credits, perhaps?""","hmdf_look:Ask for detailed info on the freighter
-contact_decline:Decline",
+""我想我应当让你交个学费，名称就叫'商业意识速成'，正如我父亲所言。一艘货船能值多少钱?{$hmdf_price credits}星币?""","hmdf_look:询问这艘旧货船的详细信息
+contact_decline:婉言拒绝",
 hmdfOfferTextContact,DialogOptionSelected,$option == hmdf_start,"$missionId = hmdf
-SetTextHighlights $hmdf_price","""This $hmdf_hullClass freighter has seen some light-years, but it'll fly. Would be a waste to simply scrap it. I can sell it to you for $hmdf_price credits.""","hmdf_look:Ask for detailed info on the freighter
-contact_decline:Decline",
+SetTextHighlights $hmdf_price","""这艘{$hmdf_hullClass}^级{货船的行驶里程已经有好几光年了，但它还能飞。简单地把{它}扔掉是一种浪费。我可以把它以{$hmdf_price}星币的价格卖给你。""","hmdf_look:询问这艘旧货船的详细信息
+contact_decline:婉言拒绝",
 hmdfBarLookAtFreighter,DialogOptionSelected,$option == hmdf_lookBar,"Call $hmdf_ref showShip
-DoCanAffordCheck $hmdf_price contact_acceptBar","The spacer taps a few buttons on a greasy TriPad so you can see the freighter's schematics. 
+DoCanAffordCheck $hmdf_price contact_acceptBar","这名船员在一块满是油污的TriPad上点了几下，以便你能看到这艘货船的行程规划。
 
-""Got a few light-years on 'er, for sure. But it'll burn bright and true,"" $heOrShe says wistfully.","contact_acceptBar:Buy the freighter for $hmdf_price credits
-contact_declineBarNoContinue:Decline",
+""应该...肯定有好几光年了。但它的引擎依旧相当健康。""{$heOrShe}满怀希望地说。","contact_acceptBar:以{$hmdf_price}星币的价格买下这艘货船
+contact_declineBarNoContinue:婉拒",
 hmdfLookAtFreighterAristo,DialogOptionSelected,"$option == hmdf_look
 $voice == aristo","Call $hmdf_ref showShip
-DoCanAffordCheck $hmdf_price contact_accept","$personName taps a few buttons to pull up the freighter schematics for your examination.
+DoCanAffordCheck $hmdf_price contact_accept","$personName}点击了几下TriPad，调出这艘货船地航行记录给你看。
 
-""I was thinking to augment the engines and install black market safety overrides to compel some utterly thrilling burn speeds. Don't tell father my plan, he'd be simply wroth.""","contact_accept:Buy the freighter for $hmdf_price credits
-contact_decline:Decline",
+""我正考虑升级一下引擎，再安装一个来自黑市安全协议超驰，以获得一些令人愉悦的航速。别告诉父亲我的计划，他会生气的。""","contact_accept:以{$hmdf_price}星币的价格买下这艘货船
+contact_decline:婉拒",
 hmdfLookAtFreighter,DialogOptionSelected,$option == hmdf_look,"Call $hmdf_ref showShip
-DoCanAffordCheck $hmdf_price contact_accept","$personName taps a few buttons to pull up the freighter schematics for your examination. ""For me, it's just taking up space, which is why I'm offering a reasonable price.""","contact_accept:Buy the freighter for $hmdf_price credits
-contact_decline:Decline",
+DoCanAffordCheck $hmdf_price contact_accept","$personName}点击了几下TriPad，调出这艘货船地航行记录给你看。""对我来说，它}只是占用了我的空间这么简单，这也是我为什么提供这样的一个合理的价格。""","contact_accept:以{$hmdf_price}星币的价格买下这艘货船
+contact_decline:婉拒",
 hmdfPostAccept,ContactPostAccept,$missionId == hmdf,"ShowPersonVisual
 RemoveCommodity credits $hmdf_price
 AddShip $hmdf_member
@@ -11856,65 +11854,65 @@ Call $hmdf_ref2 repSuccess
 Call $hmdf_ref2 addContacts",,,
 ,,,,,,
 # disrupt a competitor - raid warehouse or industry,,,,,,
-dcomBlurb,dcom_blurb,,,"""I trust you, captain,"" $heOrShe says carefully, ""There's a sensitive matter regarding the facilities of a long-time competitor of mine..."" 
+dcomBlurb,dcom_blurb,,,"""我相信你，舰长""{$heOrShe}小心地说，""我有一个敏感问题...是关于我的长期竞争对手的设施的..."" 
 OR
-""We've built up a good rapport, I think,"" $heOrShe says, watching you carefully. ""I have a sensitive matter to discuss regarding the facilities of a... competitor.""",,
-dcomOfferOption,dcom_option,,,,dcom_start:Ask about the 'sensitive matter',
-dcomBlurbBar,dcom_blurbBar,,,A $dcom_manOrWoman in an expensive business suit is clutching a TriPad with what seems like barely-restrained rage. Just staring into space.,,
-dcomOfferOptionBar,dcom_optionBar,,,,dcom_startBar:Carefully approach the angry $dcom_manOrWoman in the expensive suit,
+""我想我们已经建立了良好的关系，""{$heOrShe}说道，诚惶诚恐地看着你，""我有一件敏感的事情要讨论...关于竞争对手的。""",,
+dcomOfferOption,dcom_option,,,,"dcom_start:询问""敏感事项""",
+dcomBlurbBar,dcom_blurbBar,,,一个身着昂贵商务套装的{$dcom_manOrWoman}正抓着一个TriPad，似乎正在强忍愤怒，呆呆地盯着空气。,,
+dcomOfferOptionBar,dcom_optionBar,,,,dcom_startBar:小心地接近这名身着昂贵西装的{$dcom_manOrWoman},
 dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines","You exude an aura of understanding. If someone needed to vent a little flux, why, you'd be the perfect audience. It takes you only halfway through a light drink before you have the angry $manOrWoman opening up about her problems. 
+SetTextHighlights $dcom_reward $dcom_marines","你表现出出善解人意地气质。如果某人需要v排一下自己的苦水，你会是一个完美的倾诉对象。只要有一杯低酒精度的饮料，你就能事半功倍地打开这个{$manOrWoman}的话匣子。
 
-You murmur vague agreement at the injustice done to honest folk, the irony of laws used as a shield by dishonest actors. Someone should do something, maybe.
+关于这个坦诚的人受到的不公正待遇，你含糊其辞地表示同意:法律被骗子屡屡用作盾牌的事情真是讽刺，总得有人做些什么。
 
-""It'd be a rational response. A proportional response,"" $heOrShe says quietly, $hisOrHer rage now the cold death of a cryovolcanic world. ""If their warehouse $dcom_marketOnOrAt $dcom_marketName was raided by an unassociated third party,"" $heOrShe smiles vengefully, lifting a drink in a salute to you, ""I could arrange $dcom_reward credits to find their way into your account if that happened. I can provide all the necessary tactical details, of course.""
+""这将是一个明智的回敬，以牙还牙!""{$heOrShe}悄悄地说，$heOrShe}的愤怒现在就是这个冰火山星球的冷酷死神。""如果{他们}在{$dcom_marketOnOrAt}的仓库{$dcom_marketName}被无关的第三方势力袭击，""{$heOrShe}露出了复仇的微笑，举杯向你致敬，""如果成功了，我许诺{$dcom_reward}星币作为报酬。当然，我可以提供所有必要的战术细节。""
 
-A quick review of $dcom_hisOrHer TriPad suggests that you'd need around $dcom_marines marines to carry off the operation.","contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+快速浏览了一下{$dcom_hisOrHer}的TriPad，上面的信息表明你需要至少{$dcom_marines}名陆战队员才能搞定这次行动。","contact_acceptBar:接受
+contact_declineBarNoContinue:婉拒",
 dcomOfferTextContact,DialogOptionSelected,$option == dcom_start,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines","""If my competitor's warehouse $dcom_marketOnOrAt $dcom_marketName was raided by a third party,"" $heOrShe nods slowly at you, $hisOrHer meaning clear ""I would arrange for $dcom_reward credits to be transferred to your account.""
+SetTextHighlights $dcom_reward $dcom_marines","""如果{他们}在{$dcom_marketOnOrAt}的仓库{$dcom_marketName}被无关的第三方势力袭击了..."" {$heOrShe}向你缓慢地点着头，{$heOrShe}的意思很明白了:{""我会把{$dcom_reward}星币的资金打到你的账户上。""
 
-$HeOrShe hesitates for a moment, then adds ""My tacticians' ah, speculative analysis suggests that $dcom_marines marines would be sufficient.""","contact_accept:Accept
-contact_decline:Decline",
+{$HeOrShe}犹豫了一下，然后补充说道:{""我亲爱的战术家阁下，我的投机分析表明，只要{$dcom_marines}名陆战队就能搞定这次任务。""","contact_accept:接受
+contact_decline:婉拒",
 dcomOpenMarket,OpenInteractionDialog,"$market.dcom_target score:1000
 !$dcom_addedRaidObjective","Call $market.dcom_ref updateData
 AddRaidObjective genericIcon ""Raid designated warehouse"" $dcom_danger 5000 DCOMRaidFinished
 $dcom_addedRaidObjective = true 0
 FireBest OpenInteractionDialog",,,
 DCOMRaidFinished,DCOMRaidFinished,Call $market.dcom_ref updateData,"$market.dcom_completed = true
-Call $market.dcom_ref updateStage","You review a ground-level feed from a marine's suit cam. Flashbulbs of demolition charges stutter then after half a breath a heavy roll of thunder catches up with the photons.
+Call $market.dcom_ref updateStage","你从陆战队的随身摄像机那边获得了实施地面图像传输。爆破的闪光和爆炸声断断续续，随后爆发出一声伴随着耀眼闪光的巨响。
 
-With the raid completed and proof uploaded to a secure darknet address, your datapad pings softly to indicate that an anonymous payment has been received.",,
+突袭完成后，相关证据被上传到一个安全的暗网地址，你的个人终端柔和地{""叮""}了一声，表明你收到了匿名付款。",,
 "# merc shows up later, maybe",,,,,,
-DCOMMercHail,DCOMMercHail,,$entity.ignorePlayerCommRequests = true,"The mercenary $personRank looks very pleased, and perhaps a touch overconfident as the comms display stabilizes. 
+DCOMMercHail,DCOMMercHail,,$entity.ignorePlayerCommRequests = true,"这名{$personRank}级雇佣兵看起来十分欣喜，随着通讯显示稳定下来，甚至显得有点自负。
 
-""Tsk, tsk,"" $heOrShe says. ""One can't expect to raid the holdings of major business concerns $dcom_marketOnOrAt $dcom_marketName and not have to deal with the consequences."" $HeOrShe smiles, satisfied, as $heOrShe motions to someone off-display. The tell-tale glint of combat alerts appear in $hisOrHer eyes.","cutCommLink2:""If that's so, sending you was a mistake.""
-cutCommLink:Say nothing",
+""啧啧啧...""{$heOrShe}说道，""某些人可不能指望在{$dcom_marketOnOrAt}的{$dcom_marketName}打劫了一家大型商业公司的私有财产之后还能逃之夭夭。""{$HeOrShe}满足地笑了笑，随后向屏幕外的某些人示意了一下，{$HeOrShe}的眼中闪烁着战斗警报的闪光。","cutCommLink2:""如果是这样的话，送你走可真是个错误""
+cutCommLink:保持沉默",
 ,,,,,,
 # produce X units of commodity at colony,,,,,,
-cpmBlurb,cpm_blurb,,,"""I'd like to set up an economic arrangement with a reliable colonial producer of $cpm_commodityName covering a period of several cycles.""
+cpmBlurb,cpm_blurb,,,"""我想与一位可靠的殖民地生产商签订一项经济协议，生产{$cpm_commodityName，交付周期涵盖几个星历年。""
 OR
-""I'm looking to invest in a colony which can produce $cpm_commodityName reliably for several cycles.""",,
-cpmOfferOption,cpm_option,,,,cpm_start:Ask about becoming a supplier of $cpm_commodityName,
-cpmBlurbBar,cpm_blurbBar,,,A $cpm_manOrWoman in a business suit sits in a private booth thoughtfully perusing a top-line TriPad alongside a bottle of something expensive.,,
-cpmOfferOptionBar,cpm_optionBar,,,,cpm_startBar:Approach the thoughtful-looking business$cpm_manOrWoman in the private booth,
+""我想投资一个能可靠生产{$cpm_commodityName}的殖民地，交付周期几个星历年左右。""",,
+cpmOfferOption,cpm_option,,,,cpm_start:询问有关成为{$cpm_commodityName}的供应商的相关事宜,
+cpmBlurbBar,cpm_blurbBar,,,一个身着商务套装的{$cpm_manOrWoman}坐在一个专属座位上，一边若有所思地阅读着{$HeOrShe}的顶配TriPad，一边喝着一瓶昂贵的高档饮品。,,
+cpmOfferOptionBar,cpm_optionBar,,,,cpm_startBar:靠近这名坐在专属座位上的若有所思的{$cpm_manOrWoman},
 cpmOfferTextBar,DialogOptionSelected,$option == cpm_startBar,"$missionId = cpm
-","You approach the private booth, doing your best to look both important and well-connected. It seems to work; the $cpm_manOrWoman looks up from $hisOrHer TriPad and motions for you to join $himOrHer.
+","你走近这个专属座位，尽量让自己看起来像个有影响的大人物。你的伪装奏效了，这个{$cpm_manOrWoman}从{$HeOrShe}的TriPad上开了目光，想你示意，请你过去和{$HeOrShe}聊聊.
 
-""Captain $playerName. Please, sit."" $heOrShe gives a small smile at catching you off-guard, and pours a tiny glass of something decadent from the bottle. ""I've heard so much about your accomplishments. It's all very enterprising. Bravo.""
+""请坐，{$playerName}舰长。""{$heOrShe}在你不知所措的时侯露出一丝微笑，然后从瓶子里倒了一小杯纨绔子弟才会享用的东西。""我听说过很多关于你的成就，你是个很有事业心的人，我很欣赏。""
 
-$HeOrShe raises the tiny glass, ""To opportunity,"" sips, then places the glass down beside $hisOrHer TriPad. ""I have a proposal for you. An opportunity.""","cpm_startBar2:""What kind of opportunity?""
-contact_declineBarNoContinue:Decline",
-cpmOfferTextBar2,DialogOptionSelected,$option == cpm_startBar2,SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment,"""I need a steady supply of $cpm_needed units of $cpm_commodityName from a reliable colonial administrator. My organization would expect first delivery within $cpm_missionCycles cycles. Once established, I would arrange for monthly payments of $cpm_monthlyPayment credits over $cpm_contractCycles cycles, for a total of $cpm_totalPayment credits.""
+{$HeOrShe}举起小酒杯，""祝未来机会多多!""{$HeOrShe}抿了一口，然后将酒杯放在了{$HeOrShe}的 TriPad旁边。""我有个提议，一个机遇。""","cpm_startBar2:""什么样的机会呢?""
+contact_declineBarNoContinue:婉拒",
+cpmOfferTextBar2,DialogOptionSelected,$option == cpm_startBar2,SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment,"""我需要一个能稳定提供{$cpm_needed}单位的{$cpm_commodityName}的殖民地供应商。我的公司预计第一批货物需要在{$cpm_missionCycles}个星历年内完成交付。一旦协议达成，我会每个月付款{$cpm_monthlyPayment}星币，协议持续{$cpm_contractCycles}星历年，总计是{$cpm_totalPayment}星币。""
 
-$HeOrShe slides $hisOrHer TriPad across the table for your review. It states the terms of the contract as described. ""I believe this arrangement could benefit both of us for a long time.""","contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+{$HeOrShe}将{$HeOrShe}的TriPad从桌面上滑过来请你过目，它显示了刚才所述的合同条款。""我相信这次合作对我们双方都有好处。""","contact_acceptBar:接受
+contact_declineBarNoContinue:婉拒",
 cpmOfferTextContact,DialogOptionSelected,$option == cpm_start,"$missionId = cpm
-SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment","""I need a steady supply of $cpm_needed units of $cpm_commodityName from a reliable colonial administrator. I would expect full production brought online within $cpm_missionCycles cycles. Once established, I would would arrange for monthly payments of $cpm_monthlyPayment credits over $cpm_contractCycles cycles, for a total of $cpm_totalPayment credits.""
+SetTextHighlights $cpm_needed $cpm_missionCycles $cpm_monthlyPayment $cpm_contractCycles $cpm_totalPayment","""我需要一个能稳定提供{$cpm_needed}单位的{$cpm_commodityName}的殖民地供应商。我的公司预计第一批货物需要在{$cpm_missionCycles}个星历年内完成交付。一旦协议达成，我会每个月付款{$cpm_monthlyPayment}星币，协议持续{$cpm_contractCycles}星历年，总计是{$cpm_totalPayment}星币。""
 
-""This could prove quite lucrative if you could guarantee the stable supply chain our operation requires,"" $heOrShe says.","contact_accept:Accept
-contact_decline:Decline",
-cpmBlurbUW,cpm_blurb,$cpm_underworld,,"""I need someone I can count on to arrange for a colonial producer of $cpm_commodityName over a period of several cycles.""",,
+""如果你能保证我司所需的稳定供货，这可是相当有利可图。""{$heOrShe}说道。","contact_accept:接受
+contact_decline:婉拒",
+cpmBlurbUW,cpm_blurb,$cpm_underworld,,"""我需要一个信的过的殖民地生产商，在未来几个星历年里能稳定提供{$cpm_commodityName}。""",,
 cpmOfferOptionUW,cpm_option,$cpm_underworld,,,cpm_start:询问关于供应{$cpm_commodityName}的事,
 cpmBlurbBarUW,cpm_blurbBar,$cpm_underworld,,一个{$cpm_manOrWoman}独自坐在私人隔间里，隔间旁站着神经紧绷的保镖。他们的姿态让隔间蒙上了不祥的氛围。,,
 cpmOfferOptionBarUW,cpm_optionBar,$cpm_underworld,,,cpm_startBar:接近坐在隔间里的}$cpm_manOrWoman,
@@ -13062,7 +13060,7 @@ $entity.fwt_payment > 0
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 Highlight $entity.fwt_payment","通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中，还潇洒地把一只脚搭在{$hisOrHer的}控制台上。
 
-""通畅的航道线!}清晰的跳跃点!}舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天!}但有个混蛋给了我一堆星币并想让我把它们转交给你。确切地说，$fwt_payment}个星币。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
+""通畅的航道线!}清晰的跳跃点!}舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天!}但有个混蛋给了我一堆星币并想让我把它们转交给你。确切地说，$fwt_payment}星币。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
