@@ -225,7 +225,7 @@ $entity.fwt_payment > 0
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
 Highlight $entity.fwt_payment","通讯图像波动了一阵子，接着一个雇佣舰长出现在了画面中，还潇洒地把一只脚搭在{$hisOrHer的}控制台上。
 
-""通畅的航道线!}清晰的跳跃点!}舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天!}但有个混蛋给了我一堆星币并想让我把它们转交给你。确切地说，$fwt_payment}个星币。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
+""通畅的航道线!}清晰的跳跃点!}舰长!""{$HeOrShe}带着愉快的表情向你点头致意。""多么美好的一天!}但有个混蛋给了我一堆星币并想让我把它们转交给你。确切地说，$fwt_payment}星币。而你要做的，""{$HeOrShe}把腿从控制台上拿了下来，俯身靠向全息通信画面，""就是交出那个特别的东西，那个我的雇主们心心念念的东西。""
 
 你意识到{$HeOrShe}正在说的东西是{$entity.fwt_thingDesc}。
 
