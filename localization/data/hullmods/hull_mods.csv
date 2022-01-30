@@ -186,7 +186,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 Do Not Back Off,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,Sets DO_NOT_BACK_OFF AIFlag,,
 ,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,
-第十四军团,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,基于原人之领第十四军团幸存者为蓝本改造的霸主舰船，该舰不仅是研究大崩塌前人之领海军决战理论的最好样本，其通过一系列激进的结构修改，来加装更厚重的装甲钢板。提高}%s}装甲值，降低}%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高了}%s。,,graphics/hullmods/fourteenth.png
+第十四军团,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"基于}霸主}的建立者}-}人之领}第十四军团}为蓝本而建造的战舰，作为研究}人之领}海军}""决战""}教条的主要样本，其采用的大崩塌前的工业技术所进行的一系列激进化的结构改装方案，其目的就是为了安装更加厚重的装甲钢板。提高}%s}点装甲值，降低}%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高}%s。",,graphics/hullmods/fourteenth.png
 霸主军事配件,heg_militarized,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Militarized,由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据舰船级别，提高}%s/%s/%s/%s}装甲。而升级到军用标准的核心系统，让该舰的机动性提高}%s，幅能容量提高}%s，幅能耗散提高}%s。最大宇宙航速亦提升了}%s。,,graphics/hullmods/militarized_hegemony_auxiliary.png
 ,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
