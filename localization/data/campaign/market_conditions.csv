@@ -1,11 +1,11 @@
 name,id,planetary,decivRemove,script,desc,icon,order
-城市化,urbanized_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.UrbanizedPolity,人口稠密，拥有商业中心与各种工业园区的国际化大都市。各行各业的人们在这座宏伟的{HAD}综合型圆顶城市中，生活，工作直至死亡。粮食产量下降，奢侈品和日用品需求增加。,graphics/icons/markets/urbanized_polity.png,130
+城市化,urbanized_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.UrbanizedPolity,人口稠密，拥有商业中心与各种工业园区的国际化大都市。各行各业的人们在这座宏伟的{HAD}综合型圆顶城市中生活，工作直至死亡。食品产量下降，奢侈品和日用品需求增加。,graphics/icons/markets/urbanized_polity.png,130
 工业化,industrial_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.IndustrialPolity,一处繁荣的工业中心，因地方政府大肆鼓励工业发展，而牺牲了其他所有方面的利益。,graphics/icons/markets/urbanized_polity.png,130
-村镇化,rural_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RuralPolity,人口稀少，由宅基地与岛屿城镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。粮食产量增加，奢侈品和日用品需求减少。,graphics/icons/markets/rural_polity.png,130
+村镇化,rural_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RuralPolity,人口稀少，由宅基地与岛屿城镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。食品产量增加，奢侈品和日用品需求减少。,graphics/icons/markets/rural_polity.png,130
 难民潮,large_refugee_population,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LargeRefugeePopulation,充斥着大量为逃离灾难而涌入的难民。这些绝望且生活在社会最底层的人们，因占用过多生活资源而导致基础设施不堪重负，进而让本地劳动生产率降低。在那些试图逃离这片恶劣生活环境的人中，应该能发现不少等待雇佣的船员。,graphics/icons/markets/refugee_population.png,140
 Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,混合了多种旧地球物种和一点想象力而创造出的生物，它们主要栖息在{Volturn}海底深处的破碎海床上，据说味道非常独特。,graphics/icons/markets/lobster_pens.png,137
 违禁品需求,vice_demand,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ViceDemand,这里有着非常高的违禁品需求。,graphics/icons/markets/vice_demand.png,145
-犯罪组织,organized_crime,,TRUE,com.fs.starfarer.api.impl.campaign.econ.OrganizedCrime,包括了生产毒品和收割器官。增加对重型武器}(各个犯罪集团的首脑与本地居民)}太空和陆战队员}(地方政府)}的需求。,graphics/icons/markets/organized_crime.png,148
+犯罪组织,organized_crime,,TRUE,com.fs.starfarer.api.impl.campaign.econ.OrganizedCrime,包括了生产毒品和收割器官。增加对重型武器}(各个犯罪集团的首脑与本地居民)}和陆战队员}(地方政府)}的需求。,graphics/icons/markets/organized_crime.png,148
 边境之地,frontier,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Frontier,远离人口聚集地，仅为生存，自力更生，拥有生活必需品即可。武器与日用品需求增加，奢侈品需求降低{-}活下去才是边境生存的首要法则。,graphics/icons/markets/frontier.png,130
 拆船中心,shipbreaking_center,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ShipbreakingCenter,以拆卸舰船为产业中心，不同势力的军队与其它客户都会将报废船只送往这里以供拆卸。,graphics/icons/markets/shipbreaking.png,360
 贸易中心,trade_center,,TRUE,com.fs.starfarer.api.impl.campaign.econ.TradeCenter,主要的贸易中心，星域各地的商船都会停靠于此，并期待为他们的货物找到买家或买到那些能赚取更高利润的廉价货物。,graphics/icons/markets/trade_center.png,280
@@ -23,7 +23,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 死寂之地,uninhabitable,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一颗贫瘠的星球，正如我们所知，此地的地表不仅没有有机生命，也无法在封闭的生态系统之外进行农业活动。,graphics/icons/markets/uninhabitable_wide.png,10
 冰川地貌,ice,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldIce,此地的平均温度非常之低，且宜居的大气已成为降雪。因积雪和冰川质量较轻。使挥发物更容易提取。,graphics/icons/markets/ice_world_wide.png,10
 沙漠地貌,desert,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldDesert,一颗沙漠星球。仅有的旱生植物维持着稀薄的大气，几乎无法进行农耕作业。,graphics/icons/markets/desert_world_wide.png,10
-干旱地貌,arid,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldArid,此地被辽阔而干燥的平原与荒地覆盖着。由于水资源非常稀缺，因此想要大规模发展农业是非常困难的。,graphics/icons/markets/arid_world_wide.png,10
+干旱地貌,arid,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldArid,此地被辽阔而干燥的平原与荒地覆盖着。由于水资源非常稀缺，因此想要大规模发展农业将非常困难。,graphics/icons/markets/arid_world_wide.png,10
 海洋地貌,water,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldWater,此地的气候十分宜人，但农业被很大程度的限制在水产养殖业中，且任何居住区和工业的发展都需要借助高度专业化的设施支持。,graphics/icons/markets/water_world_wide.png,10
 丛林地貌,jungle,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldJungle,此地是一个潮湿温暖的丛林世界，缤纷的植被覆盖和异国情调的生命形式，使得这里的农业和设施的维护变得非常困难。,graphics/icons/markets/jungle_world_wide.png,10
 宜居地貌,terran,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTerran,此地有着与旧地球环境非常接近的地形地貌，为居住和农业提供了良好的环境。,graphics/icons/markets/terran_world_wide.png,10
@@ -36,7 +36,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 指挥中心,headquarters,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Headquarters,"此地是军事指挥和后勤运作的枢纽。提升市场稳定性。
 
 提高此地舰队的军官质量与数量。",graphics/icons/markets/headquarters.png,360
-水培复合体,hydroponics_complex,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Hydroponics,此处利用于密封生物圈的农业生产设施使在这颗荒芜的星球上进行养殖成为可能。需要人员进行操作，且有机物和重型机械的需求增长。,graphics/icons/markets/hydroponics.png,120
+水培复合体,hydroponics_complex,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Hydroponics,利用密封式生物圈中的农业生产设施，使其可在轨道空间站或荒凉行星的表面上进行农业生产。需要人员进行操作，且有机物和重型机械的需求增长。,graphics/icons/markets/hydroponics.png,120
 ,,,,,,,
 人口,population_1,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,只有数十人永久居住在这里。,graphics/icons/markets/population01.png,20
 人口,population_2,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,仅有数百人在此地定居。,graphics/icons/markets/population02.png,20
@@ -47,14 +47,14 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 人口,population_7,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,此地是一处拥有数以千万人口的行星。,graphics/icons/markets/population07.png,20
 人口,population_8,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,此地是世界上少数几个人口数亿的行星之一。,graphics/icons/markets/population08.png,20
 人口,population_9,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,人类在危险星域中的宝贵避难所，此地正是数十亿灵魂的家园。,graphics/icons/markets/population09.png,20
-人口,population_10,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,此地是星域主要的人口中心，一处与旧地球一样的数十亿人类的家园。,graphics/icons/markets/population10.png,20
+人口,population_10,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,此地是星域主要的人口中心，一处与旧地球一样的数百亿人类的家园。,graphics/icons/markets/population10.png,20
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
 # event-related market conditions,,,,,,,
 食品短缺,event_food_shortage,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FoodShortage,"此地的食品暂时出现短缺。
 -稳定性降低{$stabilityPenalty}
--解决粮食短缺需要{$neededFood}单位
+-解决食品短缺需要{$neededFood}单位
 -由于供应缺口而导致食品价格上升
 -倒卖食品可以提升关系和经验",graphics/icons/markets/food_shortage.png,1000
 最近动乱,recent_unrest,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RecentUnrest,此地最近经历了一些动荡，即使骚乱已结束，但影响仍在持续。,graphics/icons/markets/recent_unrest.png,2000
@@ -86,10 +86,10 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 宜居,habitable,TRUE,,com.fs.starfarer.api.impl.campaign.econ.Habitable,人类能够在无需保护的情况下生存于此地的地表之上。,graphics/icons/markets/habitable.png,21
 ,,,,,,,
 ,,,,,,,
-散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,"在}""大崩塌""}之前，此地只不过被}人之领}的伟大项目轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",graphics/icons/markets/ruins_scattered.png,100
+散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,"在}""大崩塌""}之前，此地只不过被}人之领}的伟大项目所轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",graphics/icons/markets/ruins_scattered.png,100
 普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,根据雷达上那些辐射源光点，你可以在此地找到不少发泡结构和独特的复合硬质合金轧辊，而这就是}人之领}后扩张时期努力殖民的证据。,graphics/icons/markets/ruins_widespread.png,100
-大量的废墟,ruins_extensive,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的整个表面布满了城市的废墟，从破碎的市中心一直延伸出去，可以发现不少断裂的铁轨线，废弃工厂，水培农场以及通讯塔的骨架。,graphics/icons/markets/ruins_extensive.png,100
-巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地覆盖着巨大的废墟、城市、工厂、矿山、农场、住宅。死亡与救助物资、货物、工具以及武器交织在一起。此地正是}人之领}星系殖民化和霸权项目傲慢的坟墓。,graphics/icons/markets/ruins_vast.png,100
+大量的废墟,ruins_extensive,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的整个表面布满了城市的废墟，从破碎的市中心一直延伸出去，可以发现不少断裂的铁轨线、废弃工厂，水培农场以及通讯塔的骨架。,graphics/icons/markets/ruins_extensive.png,100
+巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,这里覆盖着巨大的废墟、城市、工厂、矿山、农场、住宅。死亡与救助物资、货物、工具以及武器交织在一起。此地正是}人之领}星系殖民化和霸权项目下傲慢的坟墓。,graphics/icons/markets/ruins_vast.png,100
 ,,,,,,,
 ,,,,,,,
 寒冷,cold,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地因较低的表面温度而需要专业的设备来进行安全操作，且生命维持与基础设施也是必不可少的。,graphics/icons/markets/cold.png,25
@@ -103,13 +103,13 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 极端构造活动性,extreme_tectonic_activity,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的地表长期经受着极端地震与火山爆发等灾难性事件的蹂躏。任何操作都需要格外谨慎，并需要遍地铺设警报系统以起预防作用。这里的建筑无法长时维持存在。,graphics/icons/markets/tectonic_extreme.png,26
 ,,,,,,,
 ,,,,,,,
-没有大气层,no_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,因此地不存在任何大气层。因此该行星就暴露在各种陨石辐射等恶劣的太空环境中。,graphics/icons/markets/atmosphere_none.png,27
+没有大气层,no_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,因此地不存在任何大气层。所以该行星就暴露在各种陨石辐射等恶劣的太空环境中。,graphics/icons/markets/atmosphere_none.png,27
 稀薄大气层,thin_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,一个稀薄的大气层依附于此地的表面。,graphics/icons/markets/atmosphere_thin.png,27
 剧毒大气层,toxic_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的大气层中充满了腐蚀性毒素，并侵蚀着毫无保护的地表，而任何居住的空间都需要进行气密封装。,graphics/icons/markets/atmosphere_toxic.png,27
-稠密大气层,dense_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。感应器在这里会受到干扰，因此执行任务时需要多加小心。,graphics/icons/markets/atmosphere_dense.png,27
+稠密大气层,dense_atmosphere,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,此地的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。传感器在这里会受到干扰，因此执行任务时需要多加小心。,graphics/icons/markets/atmosphere_dense.png,27
 ,,,,,,,
 ,,,,,,,
-温和气候,mild_climate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.MildClimate,此地的大气层是温暖而平和的，薄雾的消散迎接着每一轮日出，直至太阳退回到柔软的云层，那一刻的日落最令人着迷。,graphics/icons/markets/climate_mild.png,28
+温和气候,mild_climate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.MildClimate,"此地气候舒适而平和，薄雾的消散迎接着每一轮日出，随后朝阳便退入到柔软的云层,}直至每一个落日时分，那时的太阳将散发出最令人着迷的光芒。",graphics/icons/markets/climate_mild.png,28
 极端气候,extreme_weather,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,猛烈风暴与闪电肆虐着此地的天空。虽然从轨道上看起来壮观美丽，但是这样恶劣的地面条件，使运输与居住条件都非常糟糕。,graphics/icons/markets/weather_extreme.png,28
 ,,,,,,,
 低重力,low_gravity,TRUE,,com.fs.starfarer.api.impl.campaign.econ.LowGravity,尽管重力较低，但明显高于零重力，在其地表之上，重型机械的工作流程相对于标准程序来说，因摩擦、重量、压力的动态变化而变得更加复杂。,graphics/icons/markets/gravity_low.png,24

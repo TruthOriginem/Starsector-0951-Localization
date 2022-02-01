@@ -251,15 +251,15 @@
 	},
 	"ranks":{
 		"ranks":{
-			"spaceAdmiral":{"name":"Senior Operation Manager"},
-			"spaceCommander":{"name":"Operation Manager"},
-			"factionLeader":{"name":"CEO"},
+			"spaceAdmiral":{"name":"高级营运经理"},
+			"spaceCommander":{"name":"运营经理"},
+			"factionLeader":{"name":"首席执行官"},
 		},
 		"posts":{
-			"factionLeader":{"name":"CEO"},
-			"patrolCommander":{"name":"Patrol Director"},
-			"fleetCommander":{"name":"Fleet Director"},
-			"baseCommander":{"name":"Base Director"},
+			"factionLeader":{"name":"首席执行官"},
+			"patrolCommander":{"name":"巡逻主管"},
+			"fleetCommander":{"name":"舰队主管"},
+			"baseCommander":{"name":"基地主管"},
 		},
 	},
 	"voices":{

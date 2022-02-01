@@ -88,7 +88,7 @@
 
 	"uiFadeSpeedMult":1,
 	
-	"showCNTranslationCredits":false,
+	"showCNTranslationCredits":true,
 	#"cnTranslationCreditsStringOverride":"",
 	
 	# no longer used due to saving/loading rendering happening on the main thread, bypassing the issue

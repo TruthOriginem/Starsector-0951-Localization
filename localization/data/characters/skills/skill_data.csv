@@ -6,8 +6,8 @@ combat_endurance,战斗耐力,20,1,0,,"通过灾难，十四军团得以成长�
 通过责任，人性得以永存。",Kali Molina 海军上将 - [霸主宣言] c49,TRUE,,,,graphics/icons/skills/combat_endurance3.png,
 impact_mitigation,冲击缓解,30,2,0,,舰船的机动导致了斜向冲击角度的产生，并将弹体冲击力完全分散到泡沫金属层中。不幸的是，因为产生震荡的时机过于刁钻，船员{York}在日常运输重型机械的过程中发生了悲剧。,关于发生于 c120.03.08 的 Thule 小规模冲突，海军都统 Zhou 提交的行动后检视报告,TRUE,,,,graphics/icons/skills/impact_mitigation.png,
 damage_control,损伤管制,40,2,0,,从}Kazeron}的伟大锻炉中诞生，这艘船无疑是同类中的翘楚。我们应该珍惜这份礼物，只因其立于我们的家园和那些将要终结我们的生活方式的人之间。,海军都统 Tethys 于 PLS Astelene Key 出航仪式的讲话,TRUE,,,,graphics/icons/skills/damage_control2.png,
-field_modulation,相场调制,50,2,0,,"很少有人具有我认为的""主动调音""的天赋。我发现音乐家才是最好的外勤人员。",Ardis Soloman，将泄露的数据提交给 COMSEC 的修订算法时,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
-point_defense,点防专精,60,3,0,,"我？我对那种什么激光可不感冒。是，乱七八糟的灯光秀是很好看啊，但没什么能比火神炮阵列的贫铀弹之壁更能阻挡那些飞过来的""小亮点""了。","""下层甲板的英雄""，连载于霸主通讯",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
+field_modulation,相场调制,50,2,0,,"很少有人具有我认为的}""主动调音""}的天赋。我发现音乐家才是最好的外勤人员。",Ardis Soloman，将泄露的数据提交给 COMSEC 的修订算法时,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
+point_defense,点防专精,60,3,0,,"我？我对那种什么激光可不感冒。是，乱七八糟的灯光秀是很好看啊，但没什么能比火神炮阵列的贫铀弹之壁更能阻挡那些飞过来的}""小亮点""}了。","""下层甲板的英雄""，连载于霸主通讯",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
 target_analysis,目标解析,70,4,0,,机械协助下的人脑有能力在冲突的传感器数据和矛盾的战术指导中分析出有效方案，目标定位计算机永远无法独立代替一位战士。,"""太空战斗，第二十二卷 卷末""，来自 人之领第十四军团图书馆",TRUE,,,,graphics/icons/skills/target_analysis2.png,
 ballistic_mastery,实弹大师,80,4,0,,"是什么阻止了速子的阴谋? (大炮!)
 是什么被老卢德忘在脑后? (大炮!)
@@ -37,7 +37,7 @@ energy_weapon_mastery,能量大师,1030,2,1,0,天使之眼被发现于微不足�
 electronic_warfare,电子对抗,1040,4,2,0,"错误. 401 // 连接被拒绝 [是否重试?]
 错误. 401 // 连接被拒绝 [是否重试?]
 错误. 401 // 连接被拒绝 [是否重试?]",Celadon Immeasurable，阿尔法,,TRUE,,,graphics/icons/skills/EW.png,
-flux_regulation,幅能调节,1060,4,2,0,警告：通过改变这些设置，用户将视为放弃速子科技对于因此造成的设备损伤、人员受伤、人员死亡或其它未知后果的所有责任。您仍要继续吗？,速子科技 标准证书,,TRUE,,,graphics/icons/skills/flux_dynamics.png,
+flux_regulation,幅能调节,1060,4,2,0,警告：通过改变这些设置，用户将视为放弃速子科技对因此造成的设备损伤、人员受伤、人员死亡或其它未知后果的所有责任。您仍要继续吗？,速子科技 标准证书,,TRUE,,,graphics/icons/skills/flux_dynamics.png,
 cybernetic_augmentation,模控增强,1075,4,2,0,不要听信伦理委员会里那些哭闹的卢德份子的话。它的排斥率可远远不及传言所暗示的那样严重。,"Wyatt Cydonia ""博士"" (化名)，COMSEC 拦截员",,TRUE,,,graphics/icons/skills/cybernetic_augmentation.png,
 phase_corps,相位兵团,1070,4,2,0,速子科技每天都在试图撬开神圣的造物，每一次的亵渎都带来了对全人类的诅咒。我们的道路是艰险的。我们的道路是痛苦的。我们应该以信仰为凭对抗他们，只因救赎存于末日审判之中。,卢德左径恐怖分子 Livewell Cotton 于 c205.2.12 的布道,,TRUE,,,graphics/icons/skills/phase_corps.png,
 special_modifications,特殊改装,1080,5,,,那些人之领设计师？噢，他们的设计确实百世流传，当然没错。但看看那些舒适化设计，你就知道那些设计师可不太敢把它们的性能推到极限。,独立工程师 Luna Hexagen 于 Agreus city,,,,"npc_only, deprecated",graphics/icons/skills/special_modifications.png,
@@ -51,7 +51,7 @@ salvaging,打捞作业,1510,1,0,,"这让我感觉自己非常渺小，就像是�
 但这也使我富有。",Zion Hurst，Asher 打捞工会的熟练工,,,,,graphics/icons/skills/salvaging.png,
 field_repairs,现场维修,1520,1,0,,20光年内没有一艘船的船体不印着海盗标志。能带我们脱离此地的只有我们自己的技术，以及那片残骸场里能找到的任何东西。,Callisto Ibrahim，探索日志 c202.10.15,,,,,graphics/icons/skills/field_repairs.png,
 ordnance_expert,军械专家,1530,3,1,,弱者只会畏惧杀戮机器的力量，而强者则会本能地认识到它的美。,最高行政官语录,TRUE,,,,graphics/icons/skills/ordnance_expert2.png,
-polarized_armor,极化装甲,1540,3,1,,"""大崩塌""前传下来的手册说千万不要这么做...}啊，我对此没什么看法。但我目前还没遇到啥问题。",工程主管 Kasi Thea-Radiative，出自隐蔽式全息采访,TRUE,,,,graphics/icons/skills/polarized_armor.png,
+polarized_armor,极化装甲,1540,3,1,,"""大崩塌""}前传下来的手册说千万不要这么做...}啊，我对此没什么看法。但我目前还没遇到啥问题。",工程主管 Kasi Thea-Radiative，出自隐蔽式全息采访,TRUE,,,,graphics/icons/skills/polarized_armor.png,
 containment_procedures,密闭流程,1550,4,2,,封口查三遍，死神不来见。,太空舰长俗语,,,,,graphics/icons/skills/containment_procedures.png,
 makeshift_equipment,临时设备,1560,4,2,,我们好像把备用的丢在轨道了，不过没事...}(滋滋声)...}看好了啊}——,"""H"" 探索小队的领袖 Jericho Wheeler 的音频备份转录",,,,,graphics/icons/skills/makeshift_equipment.png,
 industrial_planning,工业规划,1570,4,2,,一个荒芜但具有潜力的星球，位置便于成为}Magec}的文化和工业中心，我们的模型预计在开发}Guayota}行星环的资源上将需要大量投资。,"速子科技策略发展备忘录，""大崩塌"" 前",,,TRUE,,graphics/icons/skills/industrial_planning.png,
@@ -71,20 +71,20 @@ hypercognition,极化认知,10001,0,,,"一台拥有无限可能的机器可将�
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 "# removed in 0.95.1a, but kept around for save compatibility",,,,,,,,,,,,,
-space_operations,Space Operations,590,5,4,2,The same stars are seen in the sky of every world.,Persean League founding charter,,,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
-planetary_operations,Ground Operations,600,5,4,2,"The mud? I don't mind it. Spacers always carry on about mud.
-It's the blood I can't stand.","Griffin Sweet, mercenary marine",,,,"npc_only, deprecated",graphics/icons/skills/planetary_ops.png,
-colony_management,Colony Management,1590,5,4,2,"Where there is life, that is the throne of God, and all that is good can be found there.",Sacred Texts of Ludd,,,,"npc_only, deprecated",graphics/icons/skills/colony_management.png,
-strike_commander,Strike Commander,20,1,0,,You will fly and it will be a storm like they've never known. You are a thunderbolt come to split the sky itself!,"Navarch Mars Kato, address to the bomber crews of the Sirocco
+space_operations,太空行动,590,5,4,2,每个世界仰望的都是同一片星空。,英仙座联盟宪章,,,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
+planetary_operations,地表行动,600,5,4,2,"The mud? I don't mind it. Spacers always carry on about mud.
+It's the blood I can't stand.",Griffin Sweet，佣兵陆战队员,,,,"npc_only, deprecated",graphics/icons/skills/planetary_ops.png,
+colony_management,殖民管理,1590,5,4,2,此有生命，此为上帝之座，此为万有之地。,卢德圣本,,,,"npc_only, deprecated",graphics/icons/skills/colony_management.png,
+strike_commander,打击指挥,20,1,0,,诸位马上就要起飞，诸位将形成一场敌人从未见过的风暴。诸位就是划破天际的雷霆!,"Navarch Mars Kato, address to the bomber crews of the Sirocco
 ",TRUE,,,"carrier, spec, npc_only, deprecated",graphics/icons/skills/strike_commander.png,
-ranged_specialization,Ranged Specialization,60,3,0,,"See this firing solution? It'll make the defensive algorithms overreact at just the wrong time. The catch is, they've got to see it coming.","CPO Cameron Fourth-Phobos, instructor posted to Coatl Gunnery Range",TRUE,,,"spec, npc_only, deprecated",graphics/icons/skills/ranged_specialization.png,
-shield_modulation,Shield Modulation,70,4,0,,Few have a talent for what I like to think of as 'active tuning'. I find musicians make the best shield officers.,"Ardis Soloman, leaked data submitted to COMSEC redaction algorithm",TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
-phase_mastery,Phase Mastery,80,4,0,,"I'm not getting back on that ship, not never.","Court martial log, [REDACTED], dated ~c196?",TRUE,,,"phase, spec, elite_player_only, npc_only, deprecated",graphics/icons/skills/phase_mastery.png,
-reliability_engineering,Reliability Engineering,1530,2,0,,"In the end, by time and rads, my body will die. My comrades will return me to the stars that made me, and my ship will go on.",Spacer tradition,TRUE,,,"npc_only, deprecated",graphics/icons/skills/reliability_engineering.png,
-weapon_drills,Weapon Drills,500,1,0,,"What's it stopped the Tri-Tach plot? (Guns!)
+ranged_specialization,远程特化,60,3,0,,看到这个射击方案了吗?它能让防御算法在正好错误的时间过度反应。关键就在于，要让对手看见你的攻击。,首席士官 Cameron Fourth-Phobos 于 Coatl 炮兵训练场发布的指导意见,TRUE,,,"spec, npc_only, deprecated",graphics/icons/skills/ranged_specialization.png,
+shield_modulation,护盾调制,70,4,0,,"很少人拥有我称之为""主动调谐""的才能，我发现音乐家总能成为最好的护盾长。",Ardis Soloman，来自被通信安全节录算法所泄露的数据,TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
+phase_mastery,相位大师,80,4,0,,我永远不会回到那艘船上的——绝不。,"军事法庭记录 [数据删除], 大约于 ~c196?",TRUE,,,"phase, spec, elite_player_only, npc_only, deprecated",graphics/icons/skills/phase_mastery.png,
+reliability_engineering,可靠工程,1530,2,0,,终，以宇与辐之名，吾身将逝。吾将为同袍送归星辰之中，然吾舟将永航。,太空舰长俗语,TRUE,,,"npc_only, deprecated",graphics/icons/skills/reliability_engineering.png,
+weapon_drills,武装演习,500,1,0,,"What's it stopped the Tri-Tach plot? (Guns!)
 What was it ol' Ludd forgot? (Guns!)
-What’ve we got that they have not? (Big, big, guns!)",drinking song of the Hegemony navy,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
-auxiliary_support,Auxiliary Support,510,1,0,,No reserves? Look around you! There are a thousand space-capable ships in the civilian docks and a billion citizens in the arcologies. We need only open the stockpiles and give them weapons before the invasion arrives.,Baikal Daud at the Defense of Chicomoztoc,,,,"npc_only, deprecated",graphics/icons/skills/auxiliary_support.png,
+What’ve we got that they have not? (Big, big, guns!)",霸主海军的酒醉歌,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
+auxiliary_support,辅助支援,510,1,0,,没有后备部队?看看你的周围!民用船坞里停着上千艘星舰而居住区里有着近十亿的平民。我们要做的就是打开军械库，在入侵到来之前把武器分发给他们。,Baikal Daud 于 Chicomoztoc 防御战 发表的讲话,,,,"npc_only, deprecated",graphics/icons/skills/auxiliary_support.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
@@ -97,8 +97,7 @@ auxiliary_support,Auxiliary Support,510,1,0,,No reserves? Look around you! There
 #ordnance_expert,Ordnance Expertise,10,2,,,A detailed knowledge of the operational characteristics and maintenance protocols of armaments can be applied to achieve increased combat performance.,Lorem Ipsum,TRUE,,,"npc_only, deprecated",graphics/icons/skills/ordnance_expert.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
-,,,,,,,,,,,,,"
-"
+,,,,,,,,,,,,,
 #defensive_systems,Defensive Systems,37.5,4,,,Extensive knowledge of the interactions between the ship's power grid and its defensive systems can produce qualitative improvements in operational characteristics.,Lorem Ipsum,TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
 #advanced_countermeasures,Advanced Countermeasures,39,4,,,Attention to detail and regular maintenance can allow the various defensive systems of a hull to excel in their role.,Lorem Ipsum,TRUE,,,"npc_only, deprecated",graphics/icons/skills/advanced_countermeasures.png,
 #evasive_action,Evasive Action,40,5,,,"Even if incoming fire cannot be completely avoided, the pilot often has a choice in just where the damage is taken, which can result in reduced damage impact.",Lorem Ipsum,TRUE,,,"npc_only, deprecated",graphics/icons/skills/evasive_maneuvering.png,

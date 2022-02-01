@@ -191,15 +191,15 @@
 	},
 	"ranks":{
 		"ranks":{
-			"spaceCommander":{"name":"Captain"},
+			"spaceCommander":{"name":"船长"},
 		},
 		"posts":{
-			"patrolCommander":{"name":"Captain"},
-			"fleetCommander":{"name":"Warlord"},
-			"baseCommander":{"name":"Warboss"},
-			"stationCommander":{"name":"Station King"},
-			"portmaster":{"name":"Portboss"},
-			"administrator":{"name":"Boss"},
+			"patrolCommander":{"name":"船长"},
+			"fleetCommander":{"name":"军阀"},
+			"baseCommander":{"name":"督军"},
+			"stationCommander":{"name":"港口王"},
+			"portmaster":{"name":"港口管事"},
+			"administrator":{"name":"头目"},
 		},
 	},
 	"voices":{

@@ -31,14 +31,14 @@
 		# $yourForcesWereOrYourSideWas	 
 	
 		"initialWithStationVsLargeFleet":"$faction}$fleetOrShip}采取机动措施停留在空间站的支援范围内,}让你的舰队有机会摆脱战斗接触.}然而你的部队很可能在撤退时遭到骚扰.",
-		"initialAggressive":"$faction}$fleetOrShip}进行了机动调遣,}防止你直接脱离战斗接触.",
+		"initialAggressive":"$faction}$fleetOrShip}进行了一轮机动动作,}来防止你直接脱离战斗.",
 		"initialDisengage":"$faction}$fleetOrShip}正尝试摆脱战斗接触.",
-		"initialCareful":"$faction}$fleetOrShip}正小心地保持着距离,}做好了在遭受敌对行动时能立即摆脱战斗的准备.",
+		"initialCareful":"$faction}$fleetOrShip}正小心保持距离,}并做好在遭受敌对行动时能立即摆脱战斗的准备.",
 		"initialNeutral":"$faction}$fleetOrShip}维持着正常航行的中立姿态.",
 		"initialHoldVsStrongerEnemy":"面对你的优势兵力,}$faction}$fleetOrShip}依然摆出了准备战斗的架势,}不过不太可能主动出击.",
-		"initialAggressiveSide":"$enemyFactionAndTheirAllies}进行了机动调遣,}防止你直接脱离战斗接触.",
+		"initialAggressiveSide":"$enemyFactionAndTheirAllies}进行了一轮机动动作,}来防止你直接脱离战斗.",
 		"initialDisengageSide":"$enemyFactionAndTheirAllies}正尝试摆脱战斗接触.",
-		"initialCarefulSide":"$enemyFactionAndTheirAllies}正小心地保持着距离,}做好了在遭受敌对行动时能立即摆脱战斗的准备.",
+		"initialCarefulSide":"$enemyFactionAndTheirAllies}正小心保持距离,}并做好在遭受敌对行动时能立即摆脱战斗的准备.",
 		"initialNeutralSide":"$enemyFactionAndTheirAllies}维持着可攻可退的中立姿态.",
 		"initialHoldVsStrongerEnemySide":"面对你的优势兵力,$enemyFactionAndTheirAllies}依然摆出了准备战斗的架势,}不过不太可能主动出击.",
 	
@@ -79,9 +79,9 @@
 		"enemyDecidesNotToPursue":"敌舰没有进行追击,}使你的部队顺利撤离.",
 		"enemyPursuit":"敌方舰队追击你的部队.",
 		
-		"playerRecovery":"由于成功控制了战区且交战规模有限,}$yourForcesWereOrYourSideWas恢复了的一些战备状态.",
-		"enemyRecovery":"由于成功控制了战区且交战规模有限,}敌军恢复了的一些战备状态.",
-		"bothRecovery":"由于双方在经过有限的混乱交战后都暂时解除了戒备状态,}因此双方都恢复了一些战备状态.",
+		"playerRecovery":"由于成功控制了战区且交战规模有限,}让$yourForcesWereOrYourSideWas恢复了一些战备值.",
+		"enemyRecovery":"由于成功控制了战区且交战规模有限,}让敌军恢复了一些战备值.",
+		"bothRecovery":"由于双方在经过有限的混乱交战后都暂时解除了戒备状态,}因此双方都恢复了一些战备值.",
 		
 		"enemyCleanDisengage":"由于你的部队无法进行追击,}对方舰队直接脱离了战斗.",
 		"enemyCleanDisengageSide":"由于你的部队所在方进行追击,}对方舰队直接脱离了战斗.",
@@ -89,9 +89,9 @@
 		# in playerUnableToPursue, the player can still harass the escaping ships, so it's not a "clean" disengagement.
 		"playerUnableToPursue":"由于你无法强迫对方应战,}因此看起来对方可以直接脱离战斗.",
 		"playerUnableToPursueNoReadyShips":"你没有任何舰船还处于可以承担追击任务的状态.",
-		"playerUnableToPursueStoodDown":"你的船只必须重整战备状态,}因此无法承担追击任务.",
+		"playerUnableToPursueStoodDown":"你的船只正专注于恢复战备值,}因此无法承担追击任务.",
 		
-		"playerDisruptedEnemy":"虽然从上次交战中撤退,}你的部队已经打乱了敌人的阵脚,}因此可以脱离战斗而不被追击.",
+		"playerDisruptedEnemy":"尽管从上次交战中撤退,}但我方已打乱了敌人的阵脚,}因此可以脱离战斗而不被追击.",
 		"enemyDisruptedPlayer":"尽管你的部队取得了上一次交战的胜利,}但损失惨重,}因此你的部队在敌人脱离战斗时无法进行追击.",
 		"enemyDisruptedPlayerSide":"尽管你的部队所在方取得了上一次交战的胜利,}但损失惨重,}因此你的部队所在方无法在敌人脱离战斗时执行追击任务.",
 		"cleanDisengageOpportunity":"在上次战术性胜利之后,}你的部队获得了直接全身而退的机会.",
@@ -114,18 +114,18 @@
 		"playerHarass":"我军在敌方撤退时骚扰了其船只,}虽造成很大的干扰,}但并没有迫使对方应战.",
 		
 		
-		"engageForce":"你下令进行了一系列的机动调遣,}将敌方指挥官可用的对应手段逼得越来越少.",
+		"engageForce":"你下令进行了一系列的机动动作,}来将敌方指挥官可用的对应手段逼得越来越少.",
 		"engagePursuit":"对方舰队试图脱离,}但他们必须为突围而战.",
 		"engageMutual":"对方舰队进场参战.",
 		"pursue":"你的部队开始追击敌人,}并设法接近到了能迫使对方应战的距离.",
 		
-		"postBattleAggressive":"$faction}$fleetOrShip}进行了一轮机操纵后,}准备再次交战.",
-		"postBattleDisengage":"$faction}$fleetOrShip}进行了一轮机操纵后,}准备脱离战斗.",
+		"postBattleAggressive":"$faction}$fleetOrShip}进行了一轮机动动作后,}准备再次交战.",
+		"postBattleDisengage":"$faction}$fleetOrShip}进行了一轮机动动作后,}准备脱离战斗.",
 		"postBattleNeutral":"$faction}$fleetOrShip}维持着可攻可退的中立姿态.",
 		"postBattleHoldVsStrongerEnemy":"面对你的优势兵力,}$faction}$fleetOrShip}依然摆出了准备战斗的架势,}不过不太可能主动出击.",
 		
-		"postBattleAggressiveSide":"$enemyFactionAndTheirAllies}进行了一轮机操纵后,}准备再次交战.",
-		"postBattleDisengageSide":"$enemyFactionAndTheirAllies}进行了一轮机操纵后,}准备脱离战斗.",
+		"postBattleAggressiveSide":"$enemyFactionAndTheirAllies}进行了一轮机动动作后,}准备再次交战.",
+		"postBattleDisengageSide":"$enemyFactionAndTheirAllies}进行了一轮机动动作后,}准备脱离战斗.",
 		"postBattleNeutralSide":"$enemyFactionAndTheirAllies}维持着可攻可退的中立姿态.",
 		"postBattleHoldVsStrongerEnemySide":"面对你的优势兵力,}$enemyFactionAndTheirAllies}依然摆出了准备战斗的架势,}不过不太可能主动出击.",
 		
@@ -203,18 +203,18 @@
 		#
 		# TOOLTIPS
 		#
-		"tooltipPursue":"正在尝试脱离战斗的部队将被迫应战,}并会在战斗中试图逃跑.",
+		"tooltipPursue":"正尝试脱离战斗的部队将被迫应战,}并会在战斗中试图逃跑.",
 		"tooltipPursueAutoresolve":"命令你的副官组织追击.}没有损失我方舰船的风险,}但可能不如亲自指挥追击来得有效.",
 		"tooltipPursueLostLast":"你的部队在上次交战中被击败,}因此无法进行追击.",
-		"tooltipPursueStoodDown":"你的部队在上次交战后解除了战备状态,}因此无法进行追击.",
+		"tooltipPursueStoodDown":"你的部队在上次交战后撤退了,}因此无法进行追击.",
 		"tooltipPursueSeriousLosses":"你的部队在上一次交战中蒙受了巨大的损失,}因此无法进行追击.",
 		"tooltipPursueTooSlow":"敌方舰队速度太快,}你的部队无法追上.",
 		
 		"tooltipNoReadyShips":"你没有可以作战的船只.",
 		"tooltipNoPersonnel":"没有陆战队可派遣.",
 		
-		"tooltipHarassRetreat":"降低所有逃离船只的战备状态,}相当于经历一次战斗部署. \n\n同时也会使你的舰队减速一段时间,}因为你的部队在实施骚扰行动后需要时间重整.",
-		"tooltipHarassRetreatUnavailable":"无法骚扰撤退部队.}因为没有可以作战的船只或已经下令解除战备状态.",
+		"tooltipHarassRetreat":"降低所有逃离船只的战备值,}相当于经历一次战斗部署. \n\n同时也会使你的舰队减速一段时间,}因为你的部队在实施骚扰行动后需要时间重整.",
+		"tooltipHarassRetreatUnavailable":"无法骚扰撤退部队.}因为没有可以作战的船只或已下令撤退.",
 		
 		"tooltipLetThemGoNoPenalty":"让对方的舰队安全离开. \n\n你的舰队在脱离接触后不需要进行重整,}也不会被减速.",
 		"tooltipLetThemGo":"让对方的舰队安全离开. \n\n你的舰队在脱离接触后不需要进行重整,}也不会被减速",
@@ -249,12 +249,12 @@
 		"playerOutFirstEngageLoss":"你的舰队在战斗结束前就撤离了战场,}并获得了一个能较为安全地脱离战斗的机会.",
 		"playerOutFirstPursuitWin":"你的舰队在战斗结束前就撤离了战场.",
 		"playerOutFirstPursuitLoss":"你的舰队在战斗结束前就撤离了战场.",
-		"ongoingBattleEngage":"$alliedFactionAndTheirAllies 进入与}$enemyFactionAndTheirAllies}交战的位置.",
-		"ongoingBattleStation":"$alliedFactionAndTheirAllies 坚守阵地,}抵御 $enemyFactionAndTheirAllies}的进攻.",
-		"ongoingBattlePursue":"$alliedFactionAndTheirAllies 追击撤退中的}$enemyFactionAndTheirAllies.",
-		"ongoingBattleHarass":"$alliedFactionAndTheirAllies 骚扰了撤退中的}$enemyFactionAndTheirAllies,}虽造成很大的干扰,}但没有迫使对方应战.",
-		"ongoingBattleLetGo":"$alliedFactionAndTheirAllies 让}$enemyFactionAndTheirAllies}顺利撤出.",
-		"ongoingBattleDisengage":"$alliedFactionAndTheirAllies}将尝试从与}$enemyFactionAndTheirAllies}的接触中脱离.",
+		"ongoingBattleEngage":"$alliedFactionAndTheirAllies 进入了与 $enemyFactionAndTheirAllies 交战的位置.",
+		"ongoingBattleStation":"$alliedFactionAndTheirAllies 尝试坚守阵地, 来抵御 $enemyFactionAndTheirAllies 的进攻.",
+		"ongoingBattlePursue":"$alliedFactionAndTheirAllies 正在追击撤退中的 $enemyFactionAndTheirAllies.",
+		"ongoingBattleHarass":"$alliedFactionAndTheirAllies 骚扰了撤退中的 $enemyFactionAndTheirAllies, 虽造成很大的干扰, 但没有迫使对方应战.",
+		"ongoingBattleLetGo":"$alliedFactionAndTheirAllies 让 $enemyFactionAndTheirAllies 顺利撤出.",
+		"ongoingBattleDisengage":"$alliedFactionAndTheirAllies 将尝试从与 $enemyFactionAndTheirAllies 的接触中脱离.",
 		#"ongoingBattleJoinEnemyWillFlee":"Your forces join the battle, and the now-outclassed $enemyFactionAndTheirAllies}attempt to disengage.",
 		#"ongoingBattleJoinAlliesWillFight":"Your forces join the battle, and encouraged by this turn of events, the $alliedFactionAndTheirAllies turn to engage the enemy.",
 		#"ongoingBattleJoinTurnTables":"Your forces join the battle, shifting the balance drastically. The $alliedFactionAndTheirAllies turn to engage the $enemyFactionAndTheirAllies}which, in turn, attempt to disengage.",
