@@ -46,7 +46,7 @@ public class Valhalla {
 		
 		/* The Valkyries asteroid belt - some notable large ones? */ 
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 3100, 190f, null, null);
-		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "Valkyries 陨石带");
+		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "Valkyries 小行星带");
 		
 			// Valkyrie jump
 			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", " Valkyrie 跳跃点");
@@ -56,7 +56,7 @@ public class Valhalla {
 			system.addEntity(jumpPoint);
 		
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3450, 200f, null, null);
-		system.addAsteroidBelt(star, 100, 3350, 256, 150, 250, Terrain.ASTEROID_BELT, "Valkyries 陨石带");
+		system.addAsteroidBelt(star, 100, 3350, 256, 150, 250, Terrain.ASTEROID_BELT, "Valkyries 小行星带");
 		
 	// Yggdrasil, largest gas giant in the system.
 		PlanetAPI val2 = system.addPlanet("yggdrasil", star, "Yggdrasil", "gas_giant", 230, 350, 6000, 250);
@@ -97,7 +97,7 @@ public class Valhalla {
 							30, // max asteroid count
 							4f, // min asteroid radius 
 							16f, // max asteroid radius
-							"Yggdrasil L4 陨石区")); // null for default name
+							"Yggdrasil L4 小行星带")); // null for default name
 				
 				SectorEntityToken yggdrasilL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 						new AsteroidFieldParams(
@@ -107,7 +107,7 @@ public class Valhalla {
 							30, // max asteroid count
 							4f, // min asteroid radius 
 							16f, // max asteroid radius
-							"Yggdrasil L5 陨石区")); // null for default name
+							"Yggdrasil L5 小行星带")); // null for default name
 				
 				yggdrasilL4.setCircularOrbit(star, 230 - 60, 6000, 250);
 				yggdrasilL5.setCircularOrbit(star, 230 + 60, 6000, 250);
@@ -172,7 +172,7 @@ public class Valhalla {
 				40, // max asteroid count
 				4f, // min asteroid radius 
 				16f, // max asteroid radius
-				"Vipers 陨石带")); // null for default name
+				"Vipers 小行星带")); // null for default name
 			
 			ragnar_asteroid_field.setCircularOrbit(system.getEntityById("ragnar"), 45 + 240, 1400, 50);
 				

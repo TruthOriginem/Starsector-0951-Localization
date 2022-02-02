@@ -52,7 +52,7 @@ public class ManeuveringJetsStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("提升机动性", false);
+			return new StatusData("提高机动性", false);
 		} else if (index == 1) {
 			return new StatusData("+50 最高航速", false);
 		}

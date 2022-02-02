@@ -34,7 +34,7 @@
 			"buffalo2":0,
 			"brawler":0, # since there's a TT-specific skin
 			"gremlin":0, # otherwise can end up with too many gremlins and no other phase ships when importing
-			
+			"fury":10,
 			"aurora":10,
 			"scarab":10,
 			"monitor":10,
@@ -54,6 +54,7 @@
 	"shipsWhenImporting":{
 		"tags":["base_bp", "midline_bp", "hightech_bp"],
 		"hulls":[
+			"apogee",
 			"eagle",
 		],
 	},
@@ -61,6 +62,7 @@
 		"tags":["base_bp", "midline_bp", "hightech_bp", "tritachyon"],
 		"hulls":[
 			"aurora",
+			"apogee",
 			"fury",
 			"astral",
 			"atlas",
@@ -172,6 +174,8 @@
 			"stabilizedshieldemitter",
 			"hiressensors",
 			"efficiency_overhaul",
+			"adaptive_coils",
+			"phase_anchor",
 		],
 	},
 	"factionDoctrine":{
@@ -199,6 +203,7 @@
 			"fighter_uplink",
 			"carrier_group",
 			"flux_regulation",
+			"cybernetic_augmentation",
 		],
 	},
 	"illegalCommodities":[
@@ -221,33 +226,40 @@
 			"graphics/portraits/portrait_corporate05.png",
 			"graphics/portraits/portrait_corporate06.png",
 			"graphics/portraits/portrait_corporate08.png",
+			"graphics/portraits/portrait_corporate10.png",
 			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait18.png",
 			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
 			"graphics/portraits/portrait30.png",
 			"graphics/portraits/portrait35.png",
 		],
 		"standard_female":[
 			"graphics/portraits/portrait_corporate02.png",
 			"graphics/portraits/portrait_corporate04.png",
-			"graphics/portraits/portrait_mercenary02.png",
-			"graphics/portraits/portrait_corporate04.png",
 			"graphics/portraits/portrait_corporate07.png",
 			"graphics/portraits/portrait_corporate09.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary08.png",
 			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait32.png",
 			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait41.png",
 		],
 	},
 	"ranks":{
 		"ranks":{
 			"spaceAdmiral":{"name":"高级营运经理"},
-			"spaceCommander":{"name":"营运经理"},
+			"spaceCommander":{"name":"运营经理"},
 			"factionLeader":{"name":"首席执行官"},
 		},
 		"posts":{
 			"factionLeader":{"name":"首席执行官"},
-			"patrolCommander":{"name":"巡逻队指挥官"},
-			"fleetCommander":{"name":"舰队指挥官"},
-			"baseCommander":{"name":"基地指挥官"},
+			"patrolCommander":{"name":"巡逻主管"},
+			"fleetCommander":{"name":"舰队主管"},
+			"baseCommander":{"name":"基地主管"},
 		},
 	},
 	"voices":{

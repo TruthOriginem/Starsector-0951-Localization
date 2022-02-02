@@ -1,6 +1,6 @@
 {
     "displayName": "实验性",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 3,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "scarab",
@@ -10,6 +10,7 @@
         "fluxdistributor"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "scarab_Experimental",
     "weaponGroups": [
         {

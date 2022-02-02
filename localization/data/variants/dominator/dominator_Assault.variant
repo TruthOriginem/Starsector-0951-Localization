@@ -1,6 +1,6 @@
 {
     "displayName": "突击",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 15,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "dominator",
@@ -9,7 +9,7 @@
         "dedicated_targeting_core"
     ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "dominator_Assault",
     "weaponGroups": [
         {

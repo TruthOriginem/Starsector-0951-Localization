@@ -81,7 +81,7 @@ public class KumariKandam {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Kumari Aru L4 陨石区")); // null for default name
+						"Kumari Aru L4 小行星带")); // null for default name
 			
 			SectorEntityToken kumari_aruL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -91,7 +91,7 @@ public class KumariKandam {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Kumari Aru L5 陨石区")); // null for default name
+						"Kumari Aru L5 小行星带")); // null for default name
 			
 			kumari_aruL4.setCircularOrbit(kumarikandam_star, 270 +60, 2800, 80);
 			kumari_aruL5.setCircularOrbit(kumarikandam_star, 270 -60, 2800, 80);
@@ -169,7 +169,7 @@ public class KumariKandam {
 		
 		
 		system.addRingBand(kumarikandam_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 5900, 220f, null, null);
-		system.addAsteroidBelt(kumarikandam_star, 150, 5900, 128, 200, 240, Terrain.ASTEROID_BELT, "Mullam 陨石带");
+		system.addAsteroidBelt(kumarikandam_star, 150, 5900, 128, 200, 240, Terrain.ASTEROID_BELT, "Mullam 小行星带");
 		
 		PlanetAPI olinadu = system.addPlanet("olinadu", kumarikandam_star, "Olinadu", "cryovolcanic", 270, 100, 6800, 340);
 		olinadu.setCustomDescriptionId("planet_olinadu");

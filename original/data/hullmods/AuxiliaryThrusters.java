@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class AuxiliaryThrusters extends BaseHullMod {
 
-	public static final float MANEUVER_BONUS = 50f;
+	public static float MANEUVER_BONUS = 50f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getAcceleration().modifyPercent(id, MANEUVER_BONUS * 2f);

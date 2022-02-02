@@ -1,6 +1,6 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 40,
+    "fluxCapacitors": 28,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "onslaught",
@@ -36,12 +36,14 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 019": "hephag"}
+            "weapons": {"WS 019": "mark9"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 008": "lightac",
+                "WS 009": "lightac",
                 "WS 014": "heavyac",
                 "WS 015": "heavyac"
             }
@@ -50,8 +52,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 012": "shredder",
-                "WS 013": "shredder"
+                "WS 012": "hveldriver",
+                "WS 013": "hveldriver"
             }
         },
         {
@@ -73,8 +75,6 @@
                 "WS 005": "vulcan",
                 "WS 006": "vulcan",
                 "WS 007": "dualflak",
-                "WS 008": "vulcan",
-                "WS 009": "vulcan",
                 "WS 010": "flak",
                 "WS 011": "flak"
             }

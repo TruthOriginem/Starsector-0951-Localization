@@ -1,9 +1,9 @@
 {
 	"baseHullId":"talon",
 	"skinHullId":"talon_tritachyon",
-	"hullName":"利爪 (Tri-Tachyon)",
+	"hullName":"利爪 (TT)",
 	"descriptionId":"talon",  # optional
-	"descriptionPrefix":"该舰已由速子科技公司进行了彻底改造。包括安装内置TriPad(R)状态监视协议的速子科技软件补丁，进行高规格的辐能导管升级，翻新武器挂点以安装先进的能量武器",
+	"descriptionPrefix":"已被}速子科技}公司进行了彻底改造。不仅安装了符合}速子科技}标准的软件补丁，还集成了}TriPad}(R)}状态监测协议，且高规格的幅能管道升级与翻新的武器挂载点，使其足以安装最先进的能量武器 ",
 	"spriteName":"graphics/ships/talon/talon_tritachyon.png",
 	"baseValueMult":0.75,
 	"removeWeaponSlots":[], 		# ids

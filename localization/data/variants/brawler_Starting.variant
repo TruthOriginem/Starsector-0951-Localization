@@ -1,6 +1,6 @@
 {
     "displayName": "征召",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 9,
     "fluxVents": 10,
     "hullId": "brawler",
     "hullMods": ["fluxbreakers"],

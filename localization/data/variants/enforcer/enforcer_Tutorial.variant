@@ -1,14 +1,14 @@
 {
-    "displayName": "近程援护",
-    "fluxCapacitors": 8,
+    "displayName": "密接支援",
+    "fluxCapacitors": 12,
     "fluxVents": 20,
-    "goalVariant": false,
     "hullId": "enforcer",
     "hullMods": [
         "missleracks",
         "auxiliarythrusters"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "enforcer_Tutorial",
     "weaponGroups": [
         {

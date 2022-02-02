@@ -29,8 +29,8 @@ def findDiff():
     print("用于查找Source文件夹和Target文件夹的不同，以此来判断更新内容")
     print("最终结果会保存至logs文件夹")
     print()
-    source_folder = '095-RC14 data'
-    target_folder = '095-RC15 data'
+    source_folder = '095-RC15 data'
+    target_folder = '0951-RC6 data'
     general_change_filepath = 'logs/file_changes.log'
     detail_folder = 'logs/details'
 
@@ -49,10 +49,9 @@ def findDiff():
         if not os.path.exists(source_path):
             new_files_list.append(path)
         else:
-            md5_original = hashlib.md5(
-                open(target_path, 'rb').read()).hexdigest()
-            md5_old = hashlib.md5(
-                open(source_path, 'rb').read()).hexdigest()
+            md5_original = hashlib.md5(open(target_path,
+                                            'rb').read()).hexdigest()
+            md5_old = hashlib.md5(open(source_path, 'rb').read()).hexdigest()
             if md5_original != md5_old:
                 changed_files_list.append(path)
 
@@ -79,7 +78,7 @@ def findDiff():
             if os.path.exists(detail_folder):
                 shutil.rmtree(detail_folder)
             os.makedirs(detail_folder)
-        except:
+        except Exception:
             input("请关闭后台的logs/details文件夹")
             exit()
         else:
@@ -88,11 +87,20 @@ def findDiff():
                 target_path = os.path.join(target_folder, path)
                 source_path = os.path.join(source_folder, path)
 
-                with codecs.open(target_path, 'r', encoding='utf-8', errors='ignore') as target_f, codecs.open(source_path, 'r', encoding='utf-8', errors='ignore') as source_f:
+                with codecs.open(target_path,
+                                 'r',
+                                 encoding='utf-8',
+                                 errors='ignore') as target_f, codecs.open(
+                                     source_path,
+                                     'r',
+                                     encoding='utf-8',
+                                     errors='ignore') as source_f:
                     target_content = target_f.readlines()
                     source_content = source_f.readlines()
 
-                with open(os.path.join(detail_folder, convertPathToFilename(path) + '.html'), 'w+',
+                with open(os.path.join(detail_folder,
+                                       convertPathToFilename(path) + '.html'),
+                          'w+',
                           encoding='utf-8') as f:
                     f.write(d.make_file(source_content, target_content))
                     print(path + '生成diff成功')

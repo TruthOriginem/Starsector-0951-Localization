@@ -127,18 +127,18 @@
 		"defaultName":"目标位置", # used if name=null in addCustomEntity()
 		"nameInText":"目标位置",
 		"shortName":"目标位置",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"mission_location",
 		"interactionImage":"graphics/illustrations/free_orbit.jpg",
 		"tags":["has_interaction_dialog", "mission_location"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"cargo_pod_special":{
-		"defaultName":"货运舱", # used if name=null in addCustomEntity()
-		"nameInText":"货运舱",
-		"shortName":"货运舱",
-		"aOrAn":"一个",
+		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
+		"nameInText":"货物吊舱",
+		"shortName":"货物吊舱",
+		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"defaultRadius":24, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"cargo_pod_special",
@@ -162,10 +162,10 @@
 		"renderCircleIndicatorSelectionFlash":true,
 	},
 	"generic_probe":{
-		"defaultName":"探测器", # used if name=null in addCustomEntity()
-		"nameInText":"探测器",
-		"shortName":"探测器",
-		"aOrAn":"一个",
+		"defaultName":"探针", # used if name=null in addCustomEntity()
+		"nameInText":"探针",
+		"shortName":"探针",
+		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
@@ -361,7 +361,7 @@
 	},
 	
 	"station_galatia":{
-		"defaultName":"Galatia 学院空间站", # used if name=null in addCustomEntity()
+		"defaultName":"Galatia 学院", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"station_galatia_academy",
 		"interactionImage":"graphics/illustrations/corporate_lobby.jpg",
@@ -578,7 +578,7 @@
 	},
 	
 	"orbital_junk":{
-		"defaultName":"栖息地", # used if name=null in addCustomEntity()
+		"defaultName":"居住站", # used if name=null in addCustomEntity()
 		"defaultRadius":0, # used if radius<0 in addCustomEntity()
 		"sheet":"graphics/stations/ministations_sheet00.png",
 		"sheetCellSize":32,
@@ -858,7 +858,7 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
-		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "coronal_tap", "protects_from_corona_in_battle", "not_random_mission_target"],
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "coronal_tap", "protects_from_corona_in_battle"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,
@@ -871,7 +871,7 @@
 	"debris_field_shared":{
 		"defaultName":"残骸区", # used if name=null in addCustomEntity()
 		"nameInText":"残骸区",
-		"shortName":"残骸区",
+		"shortName":"残骸",
 		"aOrAn":"一座",
 		"isOrAre":"可能",
 		"customDescriptionId":"debris_field_shared",
@@ -946,7 +946,7 @@
 	
 	"equipment_cache":{
 		"baseId":"supply_cache",
-		"aOrAn":"an",
+		"aOrAn":"一处",
 		"defaultName":"设备藏匿点",
 		"defaultRadius":35, 
 		"nameInText":"设备藏匿点",
@@ -963,19 +963,19 @@
 	
 	"alpha_site_weapons_cache":{
 		"baseId":"supply_cache",
-		"defaultName":"高强度屏蔽藏匿点",
+		"defaultName":"大型屏蔽式藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"屏蔽藏匿点",
-		"shortName":"藏匿点",
+		"nameInText":"屏蔽式藏匿点",
+		"shortName":"屏蔽式藏匿点",
 		"tags":["has_interaction_dialog", "salvageable", "neutrino_high"],
 	},
 	
 	"supply_cache_small":{
 		"baseId":"supply_cache",
-		"defaultName":"小型补给藏匿点",
+		"defaultName":"小型武器藏匿点",
 		"defaultRadius":25, 
-		"nameInText":"小型补给藏匿点",
-		"shortName":"补给藏匿点",
+		"nameInText":"小型武器藏匿点",
+		"shortName":"武器藏匿点",
 	},
 	
 	"weapons_cache_small":{
@@ -1056,11 +1056,11 @@
 	},
 	
 	"orbital_habitat":{
-		"defaultName":"轨道栖息地", # used if name=null in addCustomEntity()
+		"defaultName":"轨道居住站", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
 		"aOrAn":"一处",
-		"nameInText":"轨道栖息地",
-		"shortName":"轨道栖息地",
+		"nameInText":"轨道居住站",
+		"shortName":"轨道居住站",
 		"customDescriptionId":"orbital_habitat_abandoned",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station_broken.png",
@@ -1098,10 +1098,10 @@
 
 
 	"cargo_pods":{
-		"defaultName":"货运舱", # used if name=null in addCustomEntity()
+		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
-		"nameInText":"货运舱",
-		"shortName":"货运舱",
+		"nameInText":"货物吊舱",
+		"shortName":"货物吊舱",
 		"aOrAn":"一个",
 		"isOrAre":"可能",
 		"showInCampaign":true,
@@ -1370,6 +1370,35 @@
 		"tags":["station"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
+	"sensor_ghost":{
+		"defaultName":"不明实体", # used if name=null in addCustomEntity()
+		"nameInText":"传感器幽灵",
+		"shortName":"传感器幽灵",
+		"aOrAn":"一个",
+		"isOrAre":"可能",
+		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":0,		
+		"defaultRadius":25, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"sensor_ghost", # should be unused since it'll always be unidentified
+		"iconWidth":16,
+		"iconHeight":16,
+		#"sprite":"graphics/stations/probe.png",
+		#"spriteWidth":36,
+		#"spriteHeight":36,
+		"renderShadow":false,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["ghost"],
+		"layers":[FLEETS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":false,
+	},
+	
 }
 
 

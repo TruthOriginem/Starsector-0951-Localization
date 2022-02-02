@@ -1,6 +1,6 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 8,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "radiant",
@@ -10,7 +10,7 @@
         "fluxbreakers"
     ],
     "permaMods": [],
-    "quality": 0,
+    "sMods": [],
     "variantId": "radiant_Strike",
     "weaponGroups": [
         {
@@ -39,14 +39,12 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 009": "pdlaser",
-                "WS 010": "pdlaser",
                 "WS 011": "pdlaser",
                 "WS 012": "pdlaser",
                 "WS 013": "pdlaser",
                 "WS 014": "pdlaser",
                 "WS 015": "pdlaser",
                 "WS 016": "pdlaser",
-                "WS 017": "pdlaser",
                 "WS 018": "pdlaser"
             }
         }

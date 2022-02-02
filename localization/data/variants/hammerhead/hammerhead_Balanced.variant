@@ -1,7 +1,7 @@
 {
     "displayName": "平衡",
-    "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxCapacitors": 1,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "hammerhead",
     "hullMods": [

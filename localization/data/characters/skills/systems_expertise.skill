@@ -21,6 +21,8 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise$Level5"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise$Level6"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise$Level7"},
 			]
 		},
 	],

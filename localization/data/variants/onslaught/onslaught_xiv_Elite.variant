@@ -1,6 +1,6 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 36,
+    "fluxCapacitors": 44,
     "fluxVents": 50,
     "hullId": "onslaught_xiv",
     "hullMods": [
@@ -41,8 +41,8 @@
             "weapons": {
                 "WS 001": "heavyac",
                 "WS 003": "heavyac",
-                "WS 012": "heavyac",
-                "WS 013": "heavyac",
+                "WS 008": "lightac",
+                "WS 009": "lightac",
                 "WS 014": "heavyac",
                 "WS 015": "heavyac"
             }
@@ -51,12 +51,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "lightag",
-                "WS 004": "lightag",
-                "WS 005": "lightag",
-                "WS 006": "lightag",
-                "WS 008": "lightdualac",
-                "WS 009": "lightdualac"
+                "WS 012": "hveldriver",
+                "WS 013": "hveldriver"
             }
         },
         {
@@ -71,9 +67,13 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 002": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
                 "WS 007": "dualflak",
-                "WS 010": "dualflak",
-                "WS 011": "dualflak"
+                "WS 010": "flak",
+                "WS 011": "flak"
             }
         }
     ]

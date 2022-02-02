@@ -65,7 +65,7 @@ public class TiaTaxet {
 		// An asteroid belts
 		system.addRingBand(tia_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4300, 220f, null, null);
 		system.addRingBand(tia_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 4400, 226f, null, null);
-		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua 陨石带");
+		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua 小行星带");
 		
 		// Arbitrary Asteroid field 
 		SectorEntityToken tia_field1 = system.addTerrain(Terrain.ASTEROID_FIELD,
@@ -76,7 +76,7 @@ public class TiaTaxet {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Tia-Tax'et 陨石区")); // null for default name
+					"Tia-Tax'et 小行星带")); // null for default name
 		
 		tia_field1.setCircularOrbit(tia_star, 180, 4500, 250);
 		

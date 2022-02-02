@@ -1,5 +1,5 @@
 {
-    "displayName": "EMP阻滞",
+    "displayName": "EMP 阻滞",
     "fluxCapacitors": 8,
     "fluxVents": 10,
     "hullId": "cerberus",
@@ -9,6 +9,7 @@
         "insulatedengine"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "cerberus_Hardened",
     "weaponGroups": [
         {

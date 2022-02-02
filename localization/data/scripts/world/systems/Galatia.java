@@ -142,7 +142,7 @@ public class Galatia {
 		
 		SectorEntityToken pontus = system.addPlanet("pontus", star, "Pontus", "gas_giant", 200, 300, 6200, 400);
 		
-			SectorEntityToken galatiaAcademy = system.addCustomEntity("station_galatia_academy", "Galatia 学院空间站", "station_galatia", Factions.INDEPENDENT);
+			SectorEntityToken galatiaAcademy = system.addCustomEntity("station_galatia_academy", "Galatia 学院", "station_galatia", Factions.INDEPENDENT);
 			galatiaAcademy.setCircularOrbitPointingDown(pontus, 30, 434, 55);
 			galatiaAcademy.setInteractionImage("illustrations", "galatia_academy");
 			galatiaAcademy.setCustomDescriptionId("station_galatia_academy");

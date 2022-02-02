@@ -3,7 +3,7 @@
 	"governingAptitude":"leadership",
 	"compressHullmods":false,
 	"scope":"CUSTOM",
-	"scopeStr":"所有携带军官的包括旗舰在内的舰船",
+	"scopeStr":"所有配备军官的舰船, 包括旗舰",
 	#"scope2":"FLEET",
 	"effectGroups":[
 		{

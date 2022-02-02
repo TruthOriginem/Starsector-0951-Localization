@@ -1,11 +1,14 @@
 {
     "displayName": "突击",
-    "fluxCapacitors": 22,
+    "fluxCapacitors": 23,
     "fluxVents": 30,
     "hullId": "dominator_d",
-    "hullMods": ["heavyarmor"],
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons"
+    ],
     "permaMods": [],
-    "quality": 0,
+    "sMods": [],
     "variantId": "dominator_d_Assault",
     "weaponGroups": [
         {

@@ -3,6 +3,7 @@
 	"governingAptitude":"combat",
 	"compressHullmods":false,
 	"elite":true,
+	"permanent":true,
 	"scope":"PILOTED_SHIP",
 	"effectGroups":[
 		{

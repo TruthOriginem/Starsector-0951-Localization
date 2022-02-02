@@ -1,6 +1,6 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 30,
+    "fluxCapacitors": 35,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "paragon",

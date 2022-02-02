@@ -18,6 +18,7 @@
 			"requiredSkillLevel":2,
 			"effectBasedOnLevel":false,
 			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level4"},
 				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level3"},
 			]
 		},

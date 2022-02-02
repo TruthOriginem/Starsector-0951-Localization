@@ -1,21 +1,18 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 13,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
     "goalVariant": true,
     "hullId": "mora",
-    "hullMods": [],
+    "hullMods": ["dedicated_targeting_core"],
     "permaMods": [],
+    "sMods": [],
     "variantId": "mora_Strike",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "lightac",
-                "WS 007": "lightac",
-                "WS 013": "lightac"
-            }
+            "weapons": {"WS 002": "railgun"}
         },
         {
             "autofire": false,
@@ -29,8 +26,17 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 007": "railgun",
+                "WS 013": "railgun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 005": "vulcan",
-                "WS 012": "vulcan"
+                "WS 012": "vulcan",
+                "WS 014": "vulcan"
             }
         }
     ],

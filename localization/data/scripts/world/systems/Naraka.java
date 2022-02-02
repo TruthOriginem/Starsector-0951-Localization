@@ -36,14 +36,14 @@ public class Naraka {
 		SectorEntityToken naraka_stable1 = system.addCustomEntity(null, null, "stable_location", "neutral");
 		naraka_stable1.setCircularOrbitPointingDown(naraka_star, 0, 2750, 160);
 		
-		system.addRingBand(naraka_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3300, 220f, Terrain.RING, "Yamuna 陨石带");
+		system.addRingBand(naraka_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3300, 220f, Terrain.RING, "Yamuna 小行星带");
 		
 		PlanetAPI naraka_b = system.addPlanet("yama", naraka_star, "Yama", "arid", 60, 165, 4600, 140);
 		naraka_b.setCustomDescriptionId("planet_yama");
 			PlanetAPI naraka_b1 = system.addPlanet("yami", naraka_b, "Yami", "barren-bombarded", 0, 60, 450, 40);
 		
 		// Yamidutas : asteroids
-		system.addAsteroidBelt(naraka_b, 60, 900, 170, 200, 250, Terrain.ASTEROID_BELT, "Servants 陨石带");
+		system.addAsteroidBelt(naraka_b, 60, 900, 170, 200, 250, Terrain.ASTEROID_BELT, "Servants 小行星带");
 		system.addRingBand(naraka_b, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 900, 220f);
 		
 		PlanetAPI naraka_b2 = system.addPlanet("nachiketa", naraka_star, "Nachiketa", "barren", 60 - 60, 65, 4600, 140);
@@ -65,7 +65,7 @@ public class Naraka {
 		system.addEntity(jumpPoint1);
 		
 		// Naraka Relay
-		SectorEntityToken relay = system.addCustomEntity("naraka_relay", "Naraka Relay", "comm_relay", "hegemony");
+		SectorEntityToken relay = system.addCustomEntity("naraka_relay", "Naraka 通讯中继站", "comm_relay", "hegemony");
 		relay.setCircularOrbitPointingDown(system.getEntityById("naraka"), 60 + 180, 4600, 140);
 		
 		float radiusAfter = StarSystemGenerator.addOrbitingEntities(system, naraka_star, StarAge.AVERAGE,
