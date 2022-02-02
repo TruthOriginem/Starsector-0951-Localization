@@ -162,7 +162,7 @@ class CsvFile(DataFile):
     def generate_row_context(self, row: dict) -> str:
         row_num = self.original_data.index(row)
 
-        return f"提取自 {self.path.name} 第 {row_num + 1} 行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
+        return f"{self.path.name}第{str(row_num + 1).zfill(4)}行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
 
     # 将数据转换为 ParaTranz 词条数据对象，并保存到json文件中
     def save_strings_json(self, ensure_ascii=False, indent=4) -> None:
