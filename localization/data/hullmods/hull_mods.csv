@@ -135,12 +135,12 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 勘探设备,surveying_equipment,1,,,"special, req_spaceport","后勤, 需要船坞",5000,,,,5,10,15,25,data.hullmods.SurveyingEquipment,根据舰船级别，降低}%s/%s/%s/%s}勘探星球时所需的重型机械和补给。所消耗资源的数量最低可以降低到}%s。,降低勘探时所需的资源.,graphics/hullmods/surveying_equipment.png
 ,,,,,,,,,,,,,,,,,,
 # standard built-in hullmods,,,,,,,,,,,,,,,,,,
-终结者核心,terminator_core,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,"Used by the terminator drone, this text should not be visible to the player.",,graphics/hullmods/terminator_core.png
+终结者核心,terminator_core,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,终结者无人机的专属插件。,,graphics/hullmods/terminator_core.png
 共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前模块平台的完整度，最高提高}%s}所有模块平台的幅能耗散。如果这些模块遭到破坏，则额外的幅能耗散奖励将在剩余模块间重新分配。而}%s}耗散奖励将适用于硬幅能耗散。,"提高幅能与硬幅能的耗散效率, 可模块一旦破坏, 其增益也一并丢失.",graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应机雷，并破坏靠近的敌舰。,"战场周遭会布置大量感应空雷, 并破坏靠近的敌舰.",graphics/hullmods/stealth_mines.png
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应机雷，并破坏靠近的敌舰。,"战场周遭会布置大量感应空雷, 并破坏靠近的敌舰.",graphics/hullmods/stealth_mines.png
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机更换时间。,战机更换速率不会下降.,graphics/hullmods/expanded_deck_crew.png
-保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,"Forces shield to stay on. Hidden, doesn't need description or icon.",graphics/hullmods/hardened_shields.png
+保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,graphics/hullmods/hardened_shields.png
 导弹工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器.,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，来降低违禁物品被发现的概率。,降低被检查到违禁品的风险.,graphics/hullmods/shielded_cargo_hold.png
 打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据舰船级别，提高}%s/%s/%s/%s}从遗弃物、 舰船残骸等 打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高}%s}战后打捞效率。,提高打捞收益.,graphics/hullmods/repair_gantry.png
@@ -183,7 +183,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 零幅能武器,no_weapon_flux,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.NoWeaponFlux,武器开火时将不产生幅能。,,
 无需开火,do_not_fire_through,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.DoNotFireThrough,其他模块上的武器会避免朝着该模块进行射击，且所有炮火均会穿过本模块而不会命中。,,
 生成碎片,shard_spawner,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShardSpawner,该舰被摧毁或停机时生成欧米伽子机碎片。,,
-Do Not Back Off,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,Sets DO_NOT_BACK_OFF AIFlag,,
+取消后退,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,设置}DO_NOT_BACK_OFF}AI}行为,,
 ,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,
 第十四军团,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"基于}霸主}的建立者}-}人之领}第十四军团}为蓝本而建造的战舰，作为研究}人之领}海军}""决战""}教条的主要样本，其采用的大崩塌前的工业技术所进行的一系列激进化的结构改装方案，其目的就是为了安装更加厚重的装甲钢板。提高}%s}点装甲值，降低}%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高}%s。",,graphics/hullmods/fourteenth.png
