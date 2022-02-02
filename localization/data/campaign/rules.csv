@@ -12532,7 +12532,7 @@ OR
 OR
 $HeOrShe}点了点头，皱着眉头说:{""我明白了。""
 OR
-$hisOrHer}的脸上闪过一丝失望的表情，但{$HeOrShe}只是耸了耸肩。
+$HeOrShe}的脸上闪过一丝失望的表情，但{$HeOrShe}只是耸了耸肩。
 OR
 $HeOrShe}体贴地说:{""我想...是你输了，舰长。""
 OR
@@ -12600,7 +12600,7 @@ $HeOrShe}放下了个人终端，说:""所以，阁下意见如何？""",,
 cheapComTextRemoteBar,CheapComOfferText,"$cheapCom_variation == REMOTE score:10
 $cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"$HeOrShe}抬头看着你，""你...是个商人吗？跑商的那种？""}你含糊不清地说了些有的没的话来应付{$HeOrShe}。""哦，这简直是好极了。""{$HeOrShe}说道。
 
-""在{$cheapCom_marketOnOrAt}的{$cheapCom_marketName}我们有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，急需脱手，但距离这儿有{$cheapCom_dist}光年。如果你能帮我处理掉这些库存，我保证以{$cheapCom_pricePerUnit}星币每单位的价格卖给你，合计{$cheapCom_totalPrice}星币。这可是个好机会啊，我亲爱的舰长同志。""
+""在{$cheapCom_marketName，我们有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，急需脱手，但距离这儿有{$cheapCom_dist}光年。如果你能帮我处理掉这些库存，我保证以{$cheapCom_pricePerUnit}星币每单位的价格卖给你，合计{$cheapCom_totalPrice}星币。这可是个好机会啊，我亲爱的舰长同志。""
 
 $HeOrShe}给你展示了{$HeOrShe}的Tri-Pad，上面显示了一个公共联系ID，说道:{""这是我的合作伙伴，你对此有兴趣，你可以找{$cheapCom_personPost{$cheapCom_personName}谈谈以便签订合同。""",,
 cheapComPostAccept,ContactPostAccept,"$missionId == cheapCom
@@ -12648,7 +12648,7 @@ $proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"""�
 proComTextRemote,ProComOfferText,"$proCom_variation == REMOTE
 !$proCom_barEvent",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""我需要将{$proCom_quantity}单位的{$proCom_commodityName}送到{$proCom_marketName}，距离大概有{$proCom_dist}光年。介于这批货物十分重要，我保证支付你{$proCom_pricePerUnit}星币每单位，共计{$proCom_totalPrice}星币。""
 
-""{$proCom_PersonPost}的{$proCom_personName}负责收货，然后{$proCom_marketOnOrAt}的{$proCom_marketName}会在订单完成后进行付款。""",,
+""在{$proCom_marketName}完成交货，$proCom_PersonPost}的{$proCom_personName}会在订单完成后进行付款。""",,
 proComTextRemoteUnderworld,ProComOfferText,"$proCom_variation == REMOTE
 !$proCom_barEvent
 $proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"""我需要将{$proCom_quantity}单位的{$proCom_commodityName}送到{$proCom_marketName}，距离大概有{$proCom_dist}光年。我不在乎你要如何完成这个任务，只要完成就行...哪怕{'做掉'}某些人。""
@@ -12786,16 +12786,16 @@ dcomOfferOption,dcom_option,,,,"dcom_start:询问""敏感事项""",
 dcomBlurbBar,dcom_blurbBar,,,一个身着昂贵商务套装的{$dcom_manOrWoman}正抓着一个TriPad，似乎正在强忍愤怒，呆呆地盯着空气。,,
 dcomOfferOptionBar,dcom_optionBar,,,,dcom_startBar:小心地接近这名身着昂贵西装的{$dcom_manOrWoman},
 dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines","你表现出出善解人意地气质。如果某人需要v排一下自己的苦水，你会是一个完美的倾诉对象。只要有一杯低酒精度的饮料，你就能事半功倍地打开这个{$manOrWoman}的话匣子。
+SetTextHighlights $dcom_reward $dcom_marines","你表现出善解人意的气质。如果某人需要v排一下自己的苦水，你会是一个完美的倾诉对象。只要有一杯低酒精度的饮料，你就能事半功倍地打开这个{$manOrWoman}的话匣子。
 
 关于这个坦诚的人受到的不公正待遇，你含糊其辞地表示同意:法律被骗子屡屡用作盾牌的事情真是讽刺，总得有人做些什么。
 
-""这将是一个明智的回敬，以牙还牙!""{$heOrShe}悄悄地说，$heOrShe}的愤怒现在就是这个冰火山星球的冷酷死神。""如果{他们}在{$dcom_marketOnOrAt}的仓库{$dcom_marketName}被无关的第三方势力袭击，""{$heOrShe}露出了复仇的微笑，举杯向你致敬，""如果成功了，我许诺{$dcom_reward}星币作为报酬。当然，我可以提供所有必要的战术细节。""
+""这将是一个明智的回敬，以牙还牙!""{$heOrShe}悄悄地说，$heOrShe}的愤怒现在就是这个冰火山星球的冷酷死神。""如果{他们}在{$dcom_marketName}的仓库被无关的第三方势力袭击，""{$heOrShe}露出了复仇的微笑，举杯向你致敬，""如果成功了，我许诺{$dcom_reward}星币作为报酬。当然，我可以提供所有必要的战术细节。""
 
-快速浏览了一下{$dcom_hisOrHer}的TriPad，上面的信息表明你需要至少{$dcom_marines}名陆战队员才能搞定这次行动。","contact_acceptBar:接受
+你}快速浏览了一下{$heOrShe}的TriPad，上面的信息表明你需要至少{$dcom_marines}名陆战队员才能搞定这次行动。","contact_acceptBar:接受
 contact_declineBarNoContinue:婉拒",
 dcomOfferTextContact,DialogOptionSelected,$option == dcom_start,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines","""如果{他们}在{$dcom_marketOnOrAt}的仓库{$dcom_marketName}被无关的第三方势力袭击了..."" {$heOrShe}向你缓慢地点着头，{$heOrShe}的意思很明白了:{""我会把{$dcom_reward}星币的资金打到你的账户上。""
+SetTextHighlights $dcom_reward $dcom_marines","""如果{他们}在{$dcom_marketName}的仓库被无关的第三方势力袭击了..."" {$heOrShe}向你缓慢地点着头，{$heOrShe}的意思很明白了:{""我会把{$dcom_reward}星币的资金打到你的账户上。""
 
 {$HeOrShe}犹豫了一下，然后补充说道:{""我亲爱的战术家阁下，我的投机分析表明，只要{$dcom_marines}名陆战队就能搞定这次任务。""","contact_accept:接受
 contact_decline:婉拒",
@@ -12811,7 +12811,7 @@ Call $market.dcom_ref updateStage","你从陆战队的随身摄像机那边获�
 "# merc shows up later, maybe",,,,,,
 DCOMMercHail,DCOMMercHail,,$entity.ignorePlayerCommRequests = true,"这名{$personRank}级雇佣兵看起来十分欣喜，随着通讯显示稳定下来，甚至显得有点自负。
 
-""啧啧啧...""{$heOrShe}说道，""某些人可不能指望在{$dcom_marketOnOrAt}的{$dcom_marketName}打劫了一家大型商业公司的私有财产之后还能逃之夭夭。""{$HeOrShe}满足地笑了笑，随后向屏幕外的某些人示意了一下，{$HeOrShe}的眼中闪烁着战斗警报的闪光。","cutCommLink2:""如果是这样的话，送你走可真是个错误""
+""啧啧啧...""{$heOrShe}说道，""某些人可不能指望在{$dcom_marketName}打劫了一家大型商业公司的私有财产之后还能逃之夭夭。""{$HeOrShe}满足地笑了笑，随后向屏幕外的某些人示意了一下，{$HeOrShe}的眼中闪烁着战斗警报的闪光。","cutCommLink2:""如果是这样的话，送你走可真是个错误""
 cutCommLink:保持沉默",
 ,,,,,,
 # produce X units of commodity at colony,,,,,,
