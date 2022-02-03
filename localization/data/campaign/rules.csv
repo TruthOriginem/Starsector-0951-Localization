@@ -930,7 +930,7 @@ flavorTextMarketDecivilized,TradePanelFlavorText,"$global.tradePanelMode == MARK
 $market.mc:decivilized == true score:1000
 $marketSize <= 3","AddText ""你们降落在了一个通过加密传输安排的地点。起初，一切似乎都很平静，但随后就有身着迷彩的人带着武器从隐蔽的通道里走出来。他们非常多疑，态度也很不友善。经过一番安抚之后，贸易意向终于接受，使得谈判最终得以开始。"" marketFlavorTextColor",,,
 flavorTextMarketDiktat,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == sindrian_diktat","AddText ""商船和军舰交错着塞满了港区。卸货的船长们都要先接受一个呆板辛达后勤官员的审查之后才能继续前行之。商人们都穿着两侧衣领上别有辛达徽章的沉闷的西装，安静地互相传递载有船货清单的数据板。"" marketFlavorTextColor 
+$faction.id == sindrian_diktat","AddText ""商船和军舰交错着塞满了港区。卸货的船长们都要先接受一个呆板辛达后勤官员的审查之后才能继续前行之。商人们都穿着两侧衣领上别有辛达徽章的沉闷的西装，安静地互相传递载有船货清单的数据平板。"" marketFlavorTextColor 
 AddText ""由在风中挥舞的辛达旗帜簇拥在两侧，一个全息投影仪正在展示辛德里亚之狮}Andrada}上将}的形象，比他真人更伟岸。不过他运筹帷幄的目光只是投向了面前一个排气管。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatCruor,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
@@ -945,7 +945,7 @@ AddText ""你和你的随行人员穿过迷宫般的通道，来到了一条公�
 flavorTextMarketDiktatVolturn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
 $market.id == volturn score:100
-$player.transponderOn == true","AddText ""Volturn}的主要港口由一系列巨大驳船所组成。驳船起来像是被烧过一样，被油腻的水面所环绕。你一下船，臭氧和海盐的气味就向你扑面袭来。卸货的船长们都要先接受一个呆板辛达后勤官员的审查之后才能继续前行之。商人们都穿着两侧衣领上别有辛达徽章的沉闷的西装，安静地互相传递载有船货清单的数据板。"" marketFlavorTextColor 
+$player.transponderOn == true","AddText ""Volturn}的主要港口由一系列巨大驳船所组成。驳船起来像是被烧过一样，被油腻的水面所环绕。你一下船，臭氧和海盐的气味就向你扑面袭来。卸货的船长们都要先接受一个呆板辛达后勤官员的审查之后才能继续前行之。商人们都穿着两侧衣领上别有辛达徽章的沉闷的西装，安静地互相传递载有船货清单的数据平板。"" marketFlavorTextColor 
 AddText ""被风中挥舞的辛达旗帜两侧簇拥着，一个有些闪烁的全息投影仪正在展示辛德里亚之狮}Andrada}上将}的形象，比他真人更伟岸。不过他运筹帷幄般的目光却只是投向了在上空盘旋的类似海鸥的鸟群。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatVolturnSneak,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
@@ -3019,7 +3019,7 @@ $metalsReq = 20000 0
 $tpReq = 5000 0 
 ShowResCost crew $crewReq metals $metalsReq true rare_metals $tpReq true","打捞人员在登上了设施的关键部位，并很快回报了大量的损伤与消耗。虽然很难对整个设施进行详细的评估，但很明显，它在目前的状态下是无法运作的。 
 
-幸好，和其他大崩溃前最后建造的人之领巨型技术遗物一样，}$nameInText}具有奇迹般强大的自主修复能力，只需要提供足够的资源就可以进行自我修复。",0:cTap_continue:继续,
+幸好，和其他大崩塌前最后建造的人之领巨型技术遗物一样，}$nameInText}具有奇迹般强大的自主修复能力，只需要提供足够的资源就可以进行自我修复。",0:cTap_continue:继续,
 cTap_infoTextRepaired,BeginSalvage,"$customType == coronal_tap score:1000
 $usable
 !$beingRepaired",FireBest CTapPrintEffect,该设施看起来运作正常。,100:defaultLeave:离开,
@@ -3042,7 +3042,7 @@ cTapRepairSel,DialogOptionSelected,$option == cTap_repair,"RemoveCommodity metal
 RemoveCommodity rare_metals $tpReq 
 $usable = true 
 $beingRepaired = true 5 
-FireBest CTapRepairInitiatedText",,100:defaultLeave:Leave,
+FireBest CTapRepairInitiatedText",,100:defaultLeave:离开,
 cTapRepairInitText,CTapRepairInitiatedText,,,"船员完成了原料的卸载，你向该设施的分散式维修节点发送了激活信号。 
 
 一开始几乎没有任何反应，只是由有少数几个之前没发现的中继节点开始在超构造体中相互传递信息。你的科学官员保证修复速率将会以指数形式成倍增加，并拉出一个显示屏向你展示中继节点的信息传递逐渐向外扩展，同时能量传输曲线稳步上升。短短的几分钟之后，尽管外观没有什么变化，但传感器显示的总体热输出已经急剧上升。不管是什么，有什么东西正在这个天体级大小的机器的心脏里加速... 
@@ -3421,9 +3421,9 @@ gaAddOptionLeave,PopulateOptions,$id == station_galatia_academy,SetShortcut defa
 gaOpenCommDirSel,DialogOptionSelected,$option == gaCommDir,OpenCommDirectory,你连接到学院的通讯目录并浏览公共列表和其他已知列表。,,
 # Galatia Academy infodump,,,,,,
 gaInfoDump,DialogOptionSelected,$option == gaInfoDump,"$heardScholarshipPitch = true
-FireAll PopulateOptions","代理人开始高谈阔论：""学院在大崩塌之前成立，是该领域宏伟前沿的一所不起眼的研究和高等教育机构。着重聚焦于从应用地形改造到工程科学领域的实际问题，以及更多的理论研究，包括研究当地的天体物理学和外星生物学。当然，大崩塌改变了一切，在接下来的周期里……""
+FireAll PopulateOptions","代理人开始高谈阔论：""学院在大崩塌之前成立，是该领域宏伟前沿的一所不起眼的研究和高等教育机构。着重聚焦于从应用地形改造到工程科学领域的实际问题，以及更多的理论研究，包括研究当地的天体物理学和外星生物学。当然，大崩塌改变了一切，在接下来的星历年里……""
 
-你的目光在来来往往的人群中徘徊。 一群充满活力的年轻人通过修改他们的标准学院制服来展示与各种亚文化的真诚联系 - 仿制冒的hivescum holo标签，怪异的卢德编织物，用不合规范的颜色和图案装饰的霸主军官外套，还有不合身的衬垫和索具。 一些穿着米白色外套的院士们有的在他们的数据板上做研究，或者成群结队地快速参加会议和讲座。",,
+你的目光在来来往往的人群中徘徊。 一群充满活力的年轻人通过修改他们的标准学院制服来展示与各种亚文化的真诚联系 - 仿制的全息蜂巢标签，怪异的卢德编织物，用不合规范的颜色和图案装饰的霸主军官外套，还有不合身的衬垫和索具。 一些穿着米白色外套的院士们有的在他们的数据平板上做研究，或者成群结队地快速参加会议和讲座。",,
 ,,,,,,
 # bar event telling you to go check out the GA,,,,,,
 goToTheGABarEventOption,AddBarEvents,"!$market.isHidden
@@ -3837,7 +3837,7 @@ gaKAGargoyleCont5a,DialogOptionSelected,$option == gaKA_gargoyleCont5a,"$option 
 FireBest DialogOptionSelected",,,
 gaKAGargoyleCont5,DialogOptionSelected,$option == gaKA_gargoyleCont5,,"""这可能很难。我得给几个朋友寄些钱来让他们帮忙搞点事情。嗯...我们真要那么拼命?{Rayan}在买零食...我想我们得全力以赴了，没错。""
 
-""好，现在情况是这样的——我的朋友会给你做一个小玩意儿，在你到达{Magec}星系的{Nova}Maxios}时那东西就该准备好了。拿上它，然后用你花里胡哨的航行技巧或者什么其他的手段把它装到{Aztlan}星系内霸主的通信中继器上。""
+""好，现在情况是这样的——我的朋友会给你做一个小玩意儿，在你到达{Magec}星系的{Nova}Maxios}时那东西就该准备好了。拿上它，然后用你花里胡哨的航行技巧或者什么其他的手段把它装到{Aztlan}星系内霸主的通信中继站上。""
 
 ""安装的方法并不难掌握，你船上任何一个技术人员应该都能搞定。""",gaKA_gargoyleCont6:继续,
 gaKAGargoyleCont6,DialogOptionSelected,$option == gaKA_gargoyleCont6,,"""然后就进入重点啦:}破解霸主的加密系统。我打算把几年前就掌握的一个小漏洞留到现在用。""{Gargoyle}早早地展示了胜利的气势，然后坐了回去，""多么辉煌!""
@@ -3888,7 +3888,7 @@ gaKANewMaxiosVisit4,DialogOptionSelected,$option == gaKA_visitStorage4,,"首席�
 你下令把它搬到你的旗舰上。",gaKA_visitStorage5:继续,
 gaKANewMaxiosVisit5,DialogOptionSelected,$option == gaKA_visitStorage5,"AddStoryPoints 1
 $global.gaKA_installHack = true
-Call $global.gaKA_ref updateStage","搭乘返回{$shipOrFleet}的穿梭机时，你思考着将这个设备安装到{Aztlan}超波中继器上而不被霸主巡逻队发现的方法。一支小而快的舰队就能做到，或者相位舰船，它们的相位场可以降低被探测的范围。运气好的话，你也可以碰到巡逻队轮班的时刻...
+Call $global.gaKA_ref updateStage","搭乘返回{$shipOrFleet}的穿梭机时，你思考着将这个设备安装到{Aztlan}超空间波中继站上而不被霸主巡逻队发现的方法。一支小而快的舰队就能做到，或者相位舰队，它们的相位场可以降低被探测的范围。运气好的话，你也可以碰到巡逻队轮班的时刻...
 
 对讲器噼里啪啦地响了起来:}""舰长，我们到了。""",gaKA_visitStorage6:继续,
 gaKANewMaxiosVisit6,DialogOptionSelected,$option == gaKA_visitStorage6,FireAll PopulateOptions,,,
@@ -3904,7 +3904,7 @@ gaKA_relayInstallHack0,DialogOptionSelected,$option == daKA_installHack,,"你向
 整个行动都按照事先规划好的迅速进行完毕。技师用有着低电磁信号的工具进行了几次快速切割，移除了部分舱壁，将{Gargoyle}的装置固定到位。安装在底盘上寄生微型无人机则完成了联接的关键部分——主要是接入光纤线路。最后，舱壁被密封完成，队员们随着货运无人机的冷气体推进器启动开始了撤退，就如他们来时一样安静。",daKA_installHack1:继续,
 gaKA_relayInstallHack1,DialogOptionSelected,$option == daKA_installHack1,,"很快，你的通讯技师收到了一个短脉冲信号，这证明{Gargoyle}的装置已经开始正常运作。
 
-哪怕是不将{Gargoyle}那漫不经心的态度纳入考量范围，你的通讯和技术官员依然推测这样的入侵很快会被发现。趁你还没被抓个现行，马上逃走会是个正确的选择。",daKA_installHack2:继续,
+哪怕是不将{Gargoyle}那漫不经心的态度纳入考量范围，你的通讯官和技术专家依然推测这样的入侵很快会被发现。趁你还没被抓个现行，马上逃走会是个正确的选择。",daKA_installHack2:继续,
 gaKA_relayInstallHack2,DialogOptionSelected,$option == daKA_installHack2,"$global.gaKA_retrieveArchive = true
 Call $global.gaKA_ref updateStage","你在想，霸主会不会利用黑客装置反向追踪到{Gargoyle}的藏身处。速子科技不太可能迅速回应霸主的调查申请，只是这不意味着调查行动不会以{""非官方""}的方式进行——或许那种机密行动也不能用""调查""一词来形容了。
 
@@ -4167,7 +4167,7 @@ $gaKA_stage == INSTALL_HACK score:1000",ShowPersonVisual,"你输入通讯ID，�
 
 你的主屏幕上显示出了一张神态夸张，顽皮地向你咧嘴笑着的脸，没有发生任何意外。""啊，$playerFirstName}舰长! 你一定是忘了我简单的提示。""
 
-{Gargoyle}数着手指，""第一步，收集设备。你做到了，万岁!}第二步，把它安装在位于{Aztlan}星系的——现在注意了，也许你该让你愁眉紧锁的通讯员做个备忘录——Aztlan}中继器里。第三步，回到我这里来拿你宝贵的数据档案。""
+{Gargoyle}数着手指，""第一步，收集设备。你做到了，万岁!}第二步，把它安装在位于{Aztlan}星系的——现在注意了，也许你该让你愁眉紧锁的通讯员做个备忘录——Aztlan}中继站里。第三步，回到我这里来拿你宝贵的数据档案。""
 
 黑客用剩下的两根手指粗鲁地朝你挥了挥。""事情就是这样。再见，我现在很忙。""
 
@@ -4175,13 +4175,13 @@ $gaKA_stage == INSTALL_HACK score:1000",ShowPersonVisual,"你输入通讯ID，�
 "# Baird, various mid-mission comments",,,,,,
 GAKABairdGreeting_GET_HACK_HARDWARE,PopulateOptions,"$id == baird
 Call $global.gaKA_ref updateData
-$gaKA_stage == GET_HACK_HARDWARE score:1000",,,10:gaKA_tellBaird1:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继器的计划,
+$gaKA_stage == GET_HACK_HARDWARE score:1000",,,10:gaKA_tellBaird1:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继站的计划,
 GAKABairdGreeting_GET_HACK_HARDWARE_Sel,DialogOptionSelected,$option == gaKA_tellBaird1,,"Baird}院长耐心地听着你的解释。当你说完时，她等了一会儿，然后干脆地说:}""舰长，我只需要你完成任务，不需要知道你的每一步行动，如果这个{'Gargoyle'}是我久仰大名的那个，那么我们得到{Kallichore}档案的可能性就很大了。""
 
 ""你的行动方针很明显:}帮助黑客，用任何必要的手段，不惜任何代价。""她的语气就像失望的老师，""你肯定不需要我来告诉你这些。""",cutCommLink:继续,
 GAKABairdGreeting_INSTALL_HACK,PopulateOptions,"$id == baird
 Call $global.gaKA_ref updateData
-$gaKA_stage == INSTALL_HACK score:1000",,,10:gaKA_tellBaird2:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继器的计划,
+$gaKA_stage == INSTALL_HACK score:1000",,,10:gaKA_tellBaird2:告诉{Baird}关于{Gargoyle}黑掉霸主通讯中继站的计划,
 GAKABairdGreeting_INSTALL_HACK_Sel,DialogOptionSelected,$option == gaKA_tellBaird2,,"Baird}院长耐心地听着你的解释。当你说完时，她等了一会儿，然后干脆地说:}""舰长，我只需要你完成任务，不需要知道你的每一步行动。""
 
 ""你的行动方针很明显:}帮助黑客，用任何必要的手段，不惜任何代价。""{Baird}看向了她桌上的显示屏，检查着她的日程表。看起来你可以走了。
@@ -4762,7 +4762,7 @@ FireBest DialogOptionSelected","你的军需官通过通讯联系问道：""{$Pl
 gaFCZalRecordingEnd,DialogOptionSelected,$option == gaFC_zalRecordingEnd,"ShowDefaultVisual
 SetPersonHidden zal true
 SetPersonPortrait zal ""zal""
-MovePersonToMarket zal kantas_den",你断开了通讯，想知道{Elissa}Zal}到底发生了什么，还有非官方的超波通讯中继器到底是什么。似乎所有答案都可以在{Isirah}星系中找到。,cutCommLink:切断通讯链接,
+MovePersonToMarket zal kantas_den",你断开了通讯，想知道{Elissa}Zal}到底发生了什么，还有非官方的超空间波通讯中继站到底是什么。似乎所有答案都可以在{Isirah}星系中找到。,cutCommLink:切断通讯链接,
 ,,,,,,
 "# gaFC Fikenhild, Elissa Zal contact before Siyavong",,,,,,
 gaFCZalFirstGreeting_INVESTIGATE_FIKENHILD,PickGreeting,"$id == zal score:1000
@@ -4825,7 +4825,7 @@ SetPersonPortrait zal ""zal""
 MovePersonToMarket zal kantas_den
 $global.gaFC_gotIsirahLeadFromZal = true
 $global.gaFC_searchIsirah = true
-Call $global.gaFC_ref updateStage","你断开了通讯，想知道这个自非官方的超波通讯中继器上到底发生了什么。任何答案，似乎都可以在{Isirah}星系中找到。
+Call $global.gaFC_ref updateStage","你断开了通讯，想知道这个自非官方的超空间波通讯中继站上到底发生了什么。任何答案，似乎都可以在{Isirah}星系中找到。
 
 在你忘记之前，你呼唤你的军需官，指示他采购一箱这种特殊的磷虾酱。",cutCommLink:继续,
 ,,,,,,
@@ -5011,14 +5011,14 @@ gaFCProveInvestigate,DialogOptionSelected,$option == gaFC_probeInvestigate,FireB
 gaFCProbe1InvestigationStart,ProbeInvestigateOption,$global.gaFC_probesDone == 0,,"在你行动长官的监督下，一支打捞小组被派了出去。该小组用{Baird}院长提供的口令打开了探测器，并安装了一个短程中继器，使你的技术人员能够完全监测探测器的数据环境。
 
 数据回报成功启动；随着一阵离子焊枪的闪光，探测器的外壳被密封。你的行动长官召回了打捞人员。",gaFC_probe1Investigation1:从技术小队里获取情况说明,
-gaFCProbe1Investigation1,DialogOptionSelected,$option == gaFC_probe1Investigation1,,"你在简报室里见到了你的技术官员，他们已经展开了一个便携式工作站，并连接了一个整体投影仪来介绍调查结果。
+gaFCProbe1Investigation1,DialogOptionSelected,$option == gaFC_probe1Investigation1,,"你在简报室里见到了你的技术专家，他们已经展开了一个便携式工作站，并连接了一个整体投影仪来介绍调查结果。
 
 该探测器由一组被安装在一个小型网络中的冗余计算核心组成；一团相连的字符的在空间中央缓缓旋转：导航系统和固定推进器；电池和恒温系统；雷达传感器和民用级的立场发生器。
 
-你的技术官员将一半的图标挪去一边，把剩余的图标放大，找到特定研究项目的图标。黄色的警告字样表示这是一个不符合你们存档标准的{Galatia}学院规格的项目。",gaFC_probe1Investigation2:继续,
-gaFCProbe1Investigation2,DialogOptionSelected,$option == gaFC_probe1Investigation2,,"""有趣的地方在这，""你的技术官说，把一个未知的图标挪到屏幕中间，""这里面有一个改良过的超空间航行核心，是小型星舰可能使用的那种。"" 
+你的技术专家将一半的图标挪去一边，把剩余的图标放大，找到特定研究项目的图标。黄色的警告字样表示这是一个不符合你们存档标准的{Galatia}学院规格的项目。",gaFC_probe1Investigation2:继续,
+gaFCProbe1Investigation2,DialogOptionSelected,$option == gaFC_probe1Investigation2,,"""有趣的地方在这，""你的技术专家说，把一个未知的图标挪到屏幕中间，""这里面有一个改良过的超空间航行核心，是小型星舰可能使用的那种。"" 
 
-随着几个键的按下和一股波浪，它的图标变为某种类发光电路图被嵌入探测器的阴影中的样子。""就像模拟战场中的超空间通讯中继器，""一种钦佩的语气传来，""干得漂亮。不知道他们是如何在如此廉价的硬件上稳定脉冲强度的。""",gaFC_probe1Investigation3:继续,
+随着几个键的按下和一股波浪，它的图标变为某种类发光电路图被嵌入探测器的阴影中的样子。""就像模拟战场中的超空间通讯中继站，""一种钦佩的语气传来，""干得漂亮。不知道他们是如何在如此廉价的硬件上稳定脉冲强度的。""",gaFC_probe1Investigation3:继续,
 gaFCProbe1Investigation3,DialogOptionSelected,$option == gaFC_probe1Investigation3,"$global.gaFC_probesDone++
 DespawnEntity","你明确表示，无论这技术有多么吸引人，你更感兴趣的是它的信号指向哪里。
 
@@ -5030,7 +5030,7 @@ DespawnEntity","你明确表示，无论这技术有多么吸引人，你更感�
 gaFCProbe2InvestigationStart,ProbeInvestigateOption,$global.gaFC_probesDone == 1,"$global.gaFC_probesDone++
 DespawnEntity","所有船员都以模范般的效率完成了他们的工作；你的打捞小组报告已经成功安装了接口，并将控制权移交给你的技术团队，他们正在远程调查这个探测器。
 
-""超空间波分析不是一个简单的线性过程，""你的技术官员解释说，""现在还差一个数据集才能完成...嗯，它不是三角测量，但可能有点类似，对。""
+""超空间波分析不是一个简单的线性过程，""你的技术专家解释说，""现在还差一个数据集才能完成...嗯，它不是三角测量，但可能有点类似，对。""
 
 他们清了清嗓子。""$PlayerSirOrMadam}舰长。"" 
 
@@ -5039,7 +5039,7 @@ gaFCProbe3InvestigationStart,ProbeInvestigateOption,$global.gaFC_probesDone == 2
 
 在简报室里，第三个探测器的原理图漂浮在你面前。
 
-""我们的工程师一直在工作，""你的技术官解释说，强调了这个高度改良的微型超空间器核心的规格有多么诡异，""在这里，我们看到与之前的基本相同的设置，但又做了一些改进，""他指向被一大堆难以理解的注释包围的组件图标，""这里，和这里。一个怪异的，不同来源的零件集合。甚至有受官方限制的军事技术。""","gaFC_probeInvestigaitonWrapUp1:""结论?""",
+""我们的工程师一直在工作，""你的技术专家解释说，强调了这个高度改良的微型超空间器核心的规格有多么诡异，""在这里，我们看到与之前的基本相同的设置，但又做了一些改进，""他指向被一大堆难以理解的注释包围的组件图标，""这里，和这里。一个怪异的，不同来源的零件集合。甚至有受官方限制的军事技术。""","gaFC_probeInvestigaitonWrapUp1:""结论?""",
 gaFCProbeInvestigaitonWrapUp1,DialogOptionSelected,$option == gaFC_probeInvestigaitonWrapUp1,"$global.gaFC_searchIsirah = true
 $global.gaFC_gotIsirahLeadFromProbes = true
 Call $global.gaFC_ref updateStage
@@ -5048,11 +5048,11 @@ unset $global.gaFC_probesDone
 unset $global.gaFC_discoveredFirstProbe","""嗯，""技术人员注意到你的举止，""这很好。非常好。我们得到了一个更准确的元阵列的读数，这，嗯。"" 他疯狂地敲击着一块{TriPad}。
 
 ""它看起来像是......在{Isirah}星系的某处的一个轨道上。不管是谁在操作这些东西，他的接收器就在那里。""","gaFC_probeInvestigaitonWrapUp2:""这个接收器是什么样子的?""",
-gaFCProbeInvestigaitonWrapUp2,DialogOptionSelected,$option == gaFC_probeInvestigaitonWrapUp2,,"你的技术官员认为。""它不会像普通的通信阵列那样大。想必有非常聪明的小型化改造--虽然会很精密而脆弱，但保持隐秘才是它的设计目的。我们的工程师认为它似乎使用了搜刮来的零件。各种各样的来源，也许是海盗的? 至少比我们想的更复杂。""
+gaFCProbeInvestigaitonWrapUp2,DialogOptionSelected,$option == gaFC_probeInvestigaitonWrapUp2,,"你的技术专家认为。""它不会像普通的通信阵列那样大。想必有非常聪明的小型化改造--虽然会很精密而脆弱，但保持隐秘才是它的设计目的。我们的工程师认为它似乎使用了搜刮来的零件。各种各样的来源，也许是海盗的? 至少比我们想的更复杂。""
 
-""它也会在中子探测器上显示，就像任何星舰驱动器或民用反应堆一样。超空间波效应将是--嗯，它不可能被放置在人口密集的地方，这是肯定的。因此，这个超空间波通讯中继器将带领我们找到最后的接收器，大概是这样。如果我们找到了这个中继器，我们就会知道在哪里找到这个东西另一端的人。""
+""它也会在中微子探测器上显示，就像任何星舰驱动器或民用反应堆一样。超空间波效应将是——嗯，它不可能被放置在人口密集的地方，这是肯定的。因此，这个超空间波通讯中继站将带领我们找到最后的接收器，大概是这样。如果我们找到了这个中继站，我们就会知道在哪里找到这个东西另一端的人。""
 
-稳定的轨道，中微子源，无人居住。{Isirah}星系。你回到舰桥，命令你的军官们进入岗位。",defaultLeave:离开,
+稳定的轨道，中微子源，无人居住的地点。Isirah}星系。你回到舰桥，命令你的军官们进入岗位。",defaultLeave:离开,
 ,,,,,,
 "# gaFC probe, scavenger",,,,,,
 gaFCScavengerDefeated,gaFCScavengerDefeated,"$someShipsDestroyed
@@ -5137,12 +5137,12 @@ gaFCStolenProbePodStart,OpenInteractionDialog,$tag:gaFC_lootedProbe,"ShowDefault
 FireBest GAFCStolenProbePodStartOption",一支打捞小组确保目标收纳以便你的技术团队进行调查。,,
 gaFCStolenProbePodStartOption1,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 0,,技术人员工作迅速，并报告说，他们已经与探测器的机箱建立了连接。,gaFC_probe1Investigation1:继续,
 gaFCStolenProbePodStartOption2,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 1,"$global.gaFC_probesDone++
-DespawnEntity","""超空间波分析不是一个单纯的线性过程，""你的技术官员解释说。""我们还需要一个数据集来完成......嗯，好吧，它不是三角测量，但如果它能帮助理解的话你可以先这样认为。嗯。""
+DespawnEntity","""超空间波分析不是一个单纯的线性过程，""你的技术专家解释说。""我们还需要一个数据集来完成......嗯，好吧，它不是三角测量，但如果它能帮助理解的话你可以先这样认为。嗯。""
 
 他们清了清嗓子。""舰长{$PlayerSirOrMadam}。"" 
 
 你让他们回去工作。找到了两个，还有一个。",defaultLeave:离开,
-gaFCStolenProbePodStartOption3,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 2,,"在简报室里，第三个探测器的原理图漂浮在你面前。""我们的工程师一直在工作，""你的技术官解释说，强调了这个高度改良的微型超空间器核心的规格有多么诡异。""在这里，我们看到与之前的基本相同的设置，但又做了一些改进，""他指向被一大堆难以理解的注释包围的组件图标，""这里，和这里。一个怪异的，不同来源的零件集合。甚至有受官方限制的军事技术。""","gaFC_probeInvestigaitonWrapUp1:""所以结论是?""",
+gaFCStolenProbePodStartOption3,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 2,,"在简报室里，第三个探测器的原理图漂浮在你面前。""我们的工程师一直在工作，""你的技术专家解释说，强调了这个高度改良的微型超空间器核心的规格有多么诡异。""在这里，我们看到与之前的基本相同的设置，但又做了一些改进，""他指向被一大堆难以理解的注释包围的组件图标，""这里，和这里。一个怪异的，不同来源的零件集合。甚至有受官方限制的军事技术。""","gaFC_probeInvestigaitonWrapUp1:""所以结论是?""",
 ,,,,,,
 "# gaFC probe, Pather ambush",,,,,,
 gaFCProbeAmbushEncounter,BeginFleetEncounter,"$gaFC_patherProbeAmbush score:1000
@@ -5283,23 +5283,23 @@ PrintDescription 3",,"gaFC_groombridgeSearch1:在空间站里找一个临时的�
 defaultLeave:离开",
 gaFCGroombridgeSearch1,DialogOptionSelected,$option == gaFC_groombridgeSearch1,,"你召集你舰队中的高级官员讨论与{Coureuse}有关的，Isirah}星系中的超空间通讯信息。Groombridge}栖息地的初步扫描图在全息投影仪的显示屏上缓慢旋转。
 
-""理论上，""你的导航技师说，""超空间相互作用场只能周期性地产生脉冲。除非我们在适当的时候捕捉到，否则它是不可能被发现的。如今我们也不知道有关的时刻表。""",gaFC_groombridgeSearch2:继续,
-gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,"你的通讯技师说: ""同样的原理也可以应用到星系内的中继器上。数据可以被缓存，然后脉冲到栖息地，飞船，另一个中继器...""
+""理论上，""你的导航技师说，""超空间相互作用场只能周期性地产生脉冲。只有在适当的时候捕捉到，否则就无法探测的。现在我们也不知道具体时刻。""",gaFC_groombridgeSearch2:继续,
+gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,"你的通讯技师说: ""同样的原理也可以应用到星系内的中继站上。数据可以被缓存，然后脉冲到栖息地，飞船，或是另一个中继站...""
 
-你的行动长官则开口道，""——反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是，""说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继器里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
-gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,你们舰桥上的船员交换了一下眼神——他们的舰长又发出了这样的一个命令——而你的行动长官向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
-gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的行动长官会监督它们的部署。你则通过{Groombridge}栖息地的投影来跟踪他们的进展，影像十分模糊——它被保护得很好导致你的扫描无法穿透，亦或是放射性太强以至于无法很好地读取数据——但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里，一团奇怪的东西被发现了。
+你的行动长官则开口道，""——反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是""说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继站里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
+gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,舰桥上的船员交换了一下眼神——他们的舰长又发出了这样的一个命令——而你的行动长官向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
+gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的行动长官会监督它们的部署。你则通过{Groombridge}栖息地的全息投影来跟踪他们的进展，影像十分模糊——可能此地的屏蔽做的很好让你的扫描无法穿透，亦或是放射性太强以至于难以读取数据——但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里，一团奇怪的东西被发现了。
 
-技术人员和通讯技师开始讨论如何攻破和骇入中继;}你的行动长官咆哮起来，只用一句话就让他们安静了下来:}""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
+技术人员和通讯技师开始讨论如何攻破和骇入中继站;}你的行动长官咆哮起来，只用一句话就让他们安静了下来:}""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
 
 传感器技师大声道:}""我们只需要拦截星系内的信号，对吗?}现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""你的行动长官看着你的传感器技师叹了口气。
 ","gaFC_groombridgeSearch5:""就那么做吧。""",
 gaFCGroombridgeSearch5,DialogOptionSelected,$option == gaFC_groombridgeSearch5,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
-FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数小时内，中继器发射了一个通讯信号。向外射出的一丝信号被你的领航员投射到了你的旗舰舰桥主全息显示器上，这条线指向{Laicaille}栖息地。不完全是，但已经很接近了。也许是轨道上的另一个中继器。
+FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数小时内，中继站发射了一个通讯信号。向外射出的一丝信号被你的领航员投射到了你的旗舰舰桥主全息显示器上，这条线指向{Laicaille}栖息地。不完全是，但已经很接近了。也许是轨道上的另一个中继站。
 
-""我们跟着这条线走就可以了。""你的通讯技师说。",,
+""我们跟着这条线走就可以了。""你的通讯官说。",,
 gaFCGroombridgeSearchBStart,OpenInteractionDialog,"$id == groombridge_habitat
 $global.gaFC_ghostStory
 Call $global.gaFC_ref updateData
@@ -5309,21 +5309,21 @@ PrintDescription 3",,"gaFC_groombridgeSearchB1:在空间站上寻找神秘信号
 defaultLeave:离开",
 gaFCGroombridgeSearchB1,DialogOptionSelected,$option == gaFC_groombridgeSearchB1,,"你召集你舰队中的高级官员来讨论{Isirah}星系中的秘密通讯爆发事件。Groombridge}栖息地的初步扫描图在全息投影仪的显示屏上缓缓旋转着。
 
-""为什么呢?}我这只是个设问，""你的导航官说，""因为从这里向{Laicaille}传递信号的唯一可能性是，你的信号来自一个隐藏的超空间通讯中继器。""
+""为什么呢?}我这只是个设问，""你的导航官说，""因为从这里向{Laicaille}传递信号的唯一可能性是，你的信号来自一个隐藏的超空间通讯中继站。""
 
-你的通讯技师举起手，在你点头的时候说，""这比较非常规。但{Groombridge}是无人居住的，所以没有人会对超空间信号的冲洗提出抱怨。""
+你的通讯官举起手，在你点头的时候说，""这比较非常规。但{Groombridge}是无人居住的，所以没有人会对超空间信号的冲洗提出抱怨。""
 
-你的行动长官接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继器，我们该怎样找到它?""",
-gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继器里通常会有非常强大的辐射屏障，""你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
-gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的行动长官会监督它们的部署。你则通过{Groombridge}栖息地的投影来跟踪他们的进展，影像十分模糊——它被保护得很好导致你的扫描无法穿透，亦或是放射性太强以至于无法很好地读取数据——但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里发现了一团奇怪的东西。
+你的行动长官接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继站，我们该怎样找到它?""",
+gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继站里通常会有非常强大的辐射屏障，""你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
+gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的行动长官会监督它们的部署。你则通过{Groombridge}栖息地的投影来跟踪他们的进展，影像十分模糊——可能此地的屏蔽做的很好让你的扫描无法穿透，亦或是放射性太强以至于难以读取数据——但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里发现了一团奇怪的东西。
 
-技术人员和通讯技师开始讨论如何攻破和骇入中继;}你的行动长官咆哮起来，只用一句话就让他们安静了下来:}""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
+技术人员和通讯技师开始讨论如何攻破和骇入中继站;}你的行动长官咆哮起来，只用一句话就让他们安静了下来:}""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西!""
 
 传感器技师大声道:}""我们只需要拦截星系内的信号，对吗?}现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""你的行动长官看着你的传感器技师叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
 gaFCGroombridgeSearchB4,DialogOptionSelected,$option == gaFC_groombridgeSearchB4,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
-FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数小时内，中继器发射了一个通讯信号。向外射出的一丝信号被你的领航员投射到了你的旗舰舰桥主全息显示器上，这条线指向{Laicaille}栖息地。不完全是，但已经很接近了。也许是轨道上的另一个中继器。
+FireBest GAFCSearchIsirahSummary","在建立一个临时的探测器集群后数小时内，中继器发射了一个通讯信号。向外射出的一丝信号被你的领航员投射到了你的旗舰舰桥主全息显示器上，这条线指向{Laicaille}栖息地。不完全是，但已经很接近了。也许是轨道上的另一个中继站。
 
 这是{Coureuse}熟悉的一种技术，即使它可以说是间接的，也巧合得太诡异了，你也许能用这个发现吓到{Laicaille}的当局。
 
@@ -5406,7 +5406,7 @@ gaFCAskLaicailleBarPather,DialogOptionSelected,$option == gaFC_askLaicailleBarPa
 他站了起来，留下一杯没碰过的饮料。""愿卢德的恩惠遍及所有生灵，无论大小，""留下这么一句话后，对方跺着脚离开了。",backToBar:返回酒吧,
 gaFCAskAroundLaicailleBarStartB,AddBarEvents,"$global.gaFC_searchIsirah
 $market.id == laicaille_habitat
-!$askedBarTechnicians","AddBarEvent gaFCLaicaille_barEvent2 ""问问技术人员发生什么事了"" ""几个技术人员在抱怨奇怪的信号干扰了导航中继器""",,,
+!$askedBarTechnicians","AddBarEvent gaFCLaicaille_barEvent2 ""问问技术人员发生什么事了"" ""几个技术人员在抱怨奇怪的信号干扰了导航中继站""",,,
 gaFCAskAroundLaicailleBar2,DialogOptionSelected,$option == gaFCLaicaille_barEvent2,$askedBarTechnicians = true,"当你提出可以为他们买一杯饮料并愿意倾听他们的烦恼时，穿着破旧的{Laicaille}栖息地连身裤的太空站技术人员给出了不错的回应。你以自己有一次在离子风暴中遇到了通信困难为引子，问他们遇到了什么样的麻烦。
 
 ""倒是有件怪事，""一个大个子说，""不过没什么规律。每过几次轮班，一些轨道信标就会失灵，发出大量的噪音。上头的人让我们去检查信标，结果什么都没查出来。让我说，大概是有什么人发神经了，无缘无故地在那里整我们。""
@@ -5561,7 +5561,7 @@ $global.gaFC_hackedIsirahRelay
 !$toldPathers ",,,gaFC_archonTellPathers:告诉执政官这里有左径分子组织存在,
 gaFCArchonConfrontOption2,gaFCArchonConfrontOptions,"$global.gaFC_isirahClues >= 2
 $global.gaFC_foundGroombridgeRelay
-!$toldHypercomm",,,gaFC_archonTellRelay:告诉执政官{Groombridge}空间站上存在着一个秘密的超空间通讯中继器,
+!$toldHypercomm",,,gaFC_archonTellRelay:告诉执政官{Groombridge}空间站上存在着一个秘密的超空间通讯中继站,
 gaFCArchonConfrontOption3,gaFCArchonConfrontOptions,"$global.gaFC_isirahClues >= 2
 $global.gaFC_knowAboutLeagueOp
 !$toldIntel",,,gaFC_archonTellIntel:告诉执政官英仙座联盟正在这里进行一些情报活动,
@@ -5576,7 +5576,7 @@ FireAll gaFCArchonConfrontOptions","你向{$personLastName}执政官解释说，
 当执政官看完你上传的通讯日志分析报告时，{$heOrShe}脸色苍白，瞪大眼睛看着你。""这只是个小地方，{Siyavong}告诉过我没人会找过来。现在你告诉我已经有该死的左径分子溜进了栖息地里?""",,
 gaFCArchonTellRelay,DialogOptionSelected,$option == gaFC_archonTellRelay,"$toldHypercomm = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告，并向 $personLastName 执政官解释着 它们所展示的内容——你在废弃的 Groombridge 栖息地发现了一个秘密的 超空间通信中继器，它一直在定期向 Laicaille 栖息地 附近的一个中继器 发送信号，同时它还一直在接收 来自一颗离这很远的恒星 周围一系列探测器 的信号。如今这组通讯阵列已经从远端被拾荒者破坏了，所以...
+FireAll gaFCArchonConfrontOptions","你上传了通讯中继站的调查报告，并向 $personLastName 执政官解释着 它们所展示的内容——你在废弃的 Groombridge 栖息地发现了一个秘密的 超空间通信中继站，它一直在定期向 Laicaille 栖息地 附近的一个中继站 发送信号，同时它还一直在接收 来自一颗离这很远的恒星 周围一系列探测器 的信号。如今这组通讯阵列已经从远端被拾荒者破坏了，所以...
 
 执政官脸色惨白:}""——所以海盗，甚至是左径分子，都可以...""
 
@@ -5586,7 +5586,7 @@ FireAll gaFCArchonConfrontOptions","你上传了通讯中继器的调查报告�
 gaFCArchonTellRelay2,DialogOptionSelected,"$global.gaFC_ghostStory
 $option == gaFC_archonTellRelay","$toldHypercomm = true 0
 $confrontsDone++ 0
-FireAll gaFCArchonConfrontOptions","你上传了涂装辐射保护镀层的无人机记录下的传感器度数和扫描结果，并向{$personLastName}执政官解释这上边显示的是什么——你在废弃的{Groombridge}栖息地发现了一个秘密的超空间通讯中继器，它一直在向{Laicaille}栖息地附近的一个中继器周期性地传输数据，这意味着有人在使用非官方的渠道进行通讯。
+FireAll gaFCArchonConfrontOptions","你上传了涂装辐射保护镀层的无人机记录下的传感器度数和扫描结果，并向{$personLastName}执政官解释这上边显示的是什么——你在废弃的{Groombridge}栖息地发现了一个秘密的超空间通讯中继站，它一直在向{Laicaille}栖息地附近的一个中继站周期性地传输数据，这意味着有人在使用非官方的渠道进行通讯。
 
 执政官脸色苍白，""有人告诉我，英仙座联盟的一切都是光明磊落的。如果他们对我有所隐瞒，不难想象那会是怎样的事...""
 
@@ -7273,7 +7273,7 @@ FireBest DialogOptionSelected",,,
 gaATGgetScanner3,DialogOptionSelected,$option == gaATG_getScanner3,,"""对，当然了。我们现在就把星门扫描设备转交给你的 {$shipOrFleet} 。我会给你简要讲解一下任务流程。""
 
 Coureuse拿出一块新的全息显示屏，上面显示着一座人之领时期星门的线框图。距离星门约三倍于其直径的地方有一个小点，看上去应该是指代你的旗舰。你认出了包裹在这个点周围的泡泡，它表示的是驱动力场的影响范围。","gaATG_getScanner4:""看起来还挺简单的.""",
-gaATGgetScanner4,DialogOptionSelected,$option == gaATG_getScanner4,,"""你得和星门保持相当近的距离。此外，你还必须确保星门附近没有其他的驱动力场。"" 她的注意力再次回到显示屏上，""你就位以后，只需要执行预先设定好的指令。扫描数据会被加密，待你靠近一处通讯中继器后就会自动传输到我这里。""
+gaATGgetScanner4,DialogOptionSelected,$option == gaATG_getScanner4,,"""你得和星门保持相当近的距离。此外，你还必须确保星门附近没有其他的驱动力场。"" 她的注意力再次回到显示屏上，""你就位以后，只需要执行预先设定好的指令。扫描数据会被加密，待你靠近一处通讯中继站后就会自动传输到我这里。""
 
 ""当然，我们还需要进一步校准超维度转换，所以你得扫描六个星门。Galatia星门已经被我们扫描过了，你需要扫描六个别的星门。然后就可以进行下一步了。""","gaATG_getScanner5:""还有下一步?""",
 gaATGgetScanner5,DialogOptionSelected,$option == gaATG_getScanner5,"AddTextSmall ""收到了星门扫描装置"" highlight
@@ -7376,7 +7376,7 @@ gaATGcontactYaribayB2,DialogOptionSelected,$option == gaATG_contactYaribayB2,Fir
 他好像突然意识到了自己在说什么。""抱歉，舰长。我家的大儿子总说我止不住长篇大论，他说的确实没错。""",,
 gaATGcontactYaribayC1,DialogOptionSelected,$option == gaATG_contactYaribayC1,$didOptionC = true,"""也许你是对的。至少和kazeron的几大氏族相比来说不受欢迎，这才是最关键的。Hannan氏族会领着我们走向帝国，变成另一个辛达。而Kato氏族则注重与其他英仙座联盟的星球增进关系。虽然我很敬佩他们的成就，但是他们的反霸主情绪太重，都到了煽动人们参与狂热主义的地步了。""
 
-""另一方面，联盟里的哪个星球能比肩Kazeron的力量? 我们稳定的盟友屈指可数。如果事态演变成全面战争，我的星空啊，我觉得霸主一定会获胜。"" 他看起来心烦意乱，""然后这些恶狼会把我们弱不禁风的星球一个个撕碎的。若真是那样，恐怕英仙座星区是没法从第二次大崩塌中恢复过来了。""
+""另一方面，联盟里的哪个星球能比肩Kazeron的力量? 我们稳定的盟友屈指可数。如果事态演变成全面战争，我的星空啊，我觉得霸主一定会获胜。"" 他看起来心烦意乱，""然后这些恶狼会把我们弱不禁风的星球一个个撕碎的。若真是那样，恐怕英仙座星区是没法从第二次""大崩塌""中恢复过来了。""
 
 ""这是唯一的办法。我希望你也是这么想的，舰长。""","gaATG_contactYaribayC2:""我希望尽量避免掺和进你们的政治.""
 gaATG_contactYaribayC3:""的确. 这是个崇高的目标.""
@@ -8126,7 +8126,7 @@ gaATGscanJammerRecover2,DialogOptionSelected,$option == gaATG_scanJammerRecover2
 
 之后的行动就是常规流程了。打捞小组成功收集了微型卫星残骸的大部分碎片，并在主货舱内的一处小型车间里对其进行重新组装。你通过视频通讯观察着这一切。
 
-""基本都是随处可见的零部件，任何人都能造出这玩意，"" 你的行动长官解释道。""不过这种设计的用途可不常见。你知道吧，干扰那个扫描星门的，叫什么玩意来着，"" 他瞟了一眼你的技术官，显然是已经听够了后者对{Coureuse}最新的超场理论一遍又一遍的讲解。",gaATG_scanJammerRecover3:继续,
+""基本都是随处可见的零部件，任何人都能造出这玩意，"" 你的行动长官解释道。""不过这种设计的用途可不常见。你知道吧，干扰那个扫描星门的，叫什么玩意来着，"" 他瞟了一眼你的技术专家，显然是已经听够了后者对{Coureuse}最新的超场理论一遍又一遍的讲解。",gaATG_scanJammerRecover3:继续,
 gaATGscanJammerRecover3,DialogOptionSelected,$option == gaATG_scanJammerRecover3,"unset $GAATGscanJammer
 FireAll PopulateGateOptions","你能做的只有揣测了。不过至少这个干扰设备已经被解除了。
 
@@ -10568,7 +10568,7 @@ $gaOp_variation == ROGUE_AI",,"你的通讯官向{Galatia}学院提供的位置�
 随着一条通讯链接的建立，使你能够与前哨站的领导人相互问候。他们似乎很想和你成为朋友，并邀请你和研究小组的领导共进晚餐。这一切都让你觉得很虚幻，但在{Galatia}学院的经验提醒你，这些学生的事业都取决于培养那些有影响力的人脉网络。
 
 在确认了穿梭机的降落细节后，你们寒暄了几句，关闭了通讯频道。",gaOp_rogueCont:继续,
-gaOpPlanetRogueAICont,DialogOptionSelected,$option == gaOp_rogueCont,FireBest GAOpUpdateBizarreProject,"""{$PlayerSirOrMadam}，有件事你应该看看，""你的通讯官说到。""我们收到了来自低轨道上的一个看起来改装过的通讯中继器的信号传输。""
+gaOpPlanetRogueAICont,DialogOptionSelected,$option == gaOp_rogueCont,FireBest GAOpUpdateBizarreProject,"""{$PlayerSirOrMadam}，有件事你应该看看，""你的通讯官说到。""我们收到了来自低轨道上的一个看起来改装过的通讯中继站的信号传输。""
 
 这是个求救信号。",gaOp_rogueCont2:继续,
 gaOpPlanetRogueAICont2,DialogOptionSelected,$option == gaOp_rogueCont2,,"刚刚与你交谈的是前哨站领导人匆忙录制的全息影像-在这里，衣冠不整，大汗淋漓，充满了恐惧-显示研究前哨站已经被某种Beta级AI核心所接管，它正强迫研究人员在{$gaOp_bizarreProjectStr}上工作。
@@ -12402,8 +12402,8 @@ OR
 ""对其中哪一个有兴趣吗?""
 OR
 ""任务清单上就是这些。觉得自己能做哪个的话可以告诉我。""",,
-contactAddMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""Not right now.""",
-contactAddMhubCloseOptionNothing,AddMHCloseOption,$mh_count <= 0,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""Maybe next time.""",
+contactAddMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""不是现在。""",
+contactAddMhubCloseOptionNothing,AddMHCloseOption,$mh_count <= 0,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""下次再说吧。""",
 contactConvEnd,DialogOptionSelected,"$option == cutCommLink
 MissionHubCMD hasHub score:100","ShowDefaultVisual
 EndConversation DO_NOT_FIRE
@@ -12565,8 +12565,8 @@ $entity.tradeMode == NONE",ShowPersonVisual,"短暂的等待后，你的通讯�
 # A quantity of a commodity available cheaply,,,,,,
 cheapComBlurb,cheapCom_blurb,,,"""{$cheapCom_commodityName}滞销，帮帮我们。""",,
 cheapComOfferOption,cheapCom_option,,,,cheapCom_start:询问{$cheapCom_commodityName}的盈余量,
-cheapComBlurbBar,cheapCom_blurbBar,,,一位穿着廉价西装的{$cheapCom_manOrWoman}啜饮着一杯价格合理的饮料，时不时用{$HeOrShe}的Tri-Pad办公。,,
-cheapComOfferOptionBar,cheapCom_optionBar,,,,cheapCom_startBar:上去和身着商务套装的{$cheapCom_manOrWoman}交谈,
+cheapComBlurbBar,cheapCom_blurbBar,,,一位穿着廉价西装的{$cheapCom_manOrWoman}啜饮着一杯差不多价格的饮料，时不时用{$HeOrShe}的{TriPad}办公。,,
+cheapComOfferOptionBar,cheapCom_optionBar,,,,cheapCom_startBar:上去和身着廉价西装的{$cheapCom_manOrWoman}交谈,
 cheapComOfferTextLocalBar,DialogOptionSelected,"$option == cheapCom_startBar
 $cheapCom_variation == LOCAL","$missionId = cheapCom
 FireBest CheapComOfferText
@@ -12588,13 +12588,13 @@ $cheapCom_variation == REMOTE","$missionId = cheapCom
 FireBest CheapComOfferText",,"contact_accept:接受
 contact_decline:婉拒",
 cheapComTextLocal,CheapComOfferText,"$cheapCom_variation == LOCAL
-!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"""让我看看...""{$HeOrShe}眯着眼睛看着{$HeOrShe}的TriPad, ""这里有{$cheapCom_quantity}单位的{$cheapCom_commodityName，价格方面...只要{$cheapCom_pricePerUnit}星币每单位。如果你能帮我处理掉这些库存，这会帮我一个大忙。""",,
+!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"""让我看看...""{$HeOrShe}眯着眼睛看着{$HeOrShe的}TriPad, ""这里有{$cheapCom_quantity}单位的{$cheapCom_commodityName，价格方面...每单位只要{$cheapCom_pricePerUnit}星币。如果你能帮我处理掉这些库存，这会帮我一个大忙。""",,
 cheapComTextRemote,CheapComOfferText,"$cheapCom_variation == REMOTE
-!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"""在{$cheapCom_marketOnOrAt}的{$cheapCom_marketName，有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，距离这儿有{$cheapCom_dist}光年。我可以给你{$cheapCom_pricePerUnit}星币每单位的优惠价格，或者以{$cheapCom_totalPrice}星币的价格一次性买断。但你需要联系{$cheapCom_personPost}的{$cheapCom_personName}进行进一步洽谈。""}",,
+!$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice,"""在{$cheapCom_marketOnOrAt}的{$cheapCom_marketName，有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销，距离这儿有{$cheapCom_dist}光年。我可以给你每单位{$cheapCom_pricePerUnit}星币的优惠价格，总计{$cheapCom_totalPrice}星币。但你需要联系{$cheapCom_personPost}的{$cheapCom_personName}进行进一步洽谈。""}",,
 cheapComTextLocalBar,CheapComOfferText,"$cheapCom_variation == LOCAL score:10
-$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"$HeOrShe}抬头看着你，""你...是个商人吗？跑商的那种？""}你含糊不清地说了些有的没的话来应付{$HeOrShe}。""哦，这简直是好极了。""{$HeOrShe}说道。
+$cheapCom_barEvent",SetTextHighlights $cheapCom_quantity $cheapCom_pricePerUnit,"$HeOrShe}抬头看着你，""你...是个商人吗？跑商的那种？""}你含糊不清地说了些有的没的话来应付}$HeOrShe。""哦，这简直是好极了。""{$HeOrShe}说道。
 
-""我需要清理一批库存，""{$HeOrShe}给你展示了{$HeOrShe}的个人终端...一个廉价的山寨TriPad...以便你能靠近点看清屏幕。""我现在有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销。如果你能帮我处理掉它们，我保证以{$cheapCom_pricePerUnit}星币每单位的优惠价卖给你。要知道，这可是个大便宜。""
+""我需要清理一批库存，""{$HeOrShe}给你展示了{$HeOrShe}的个人终端...一个廉价的山寨}TriPad...以便你能靠近点看清屏幕。""我现在有{$cheapCom_quantity}单位的{$cheapCom_commodityName}滞销。如果你能帮我处理掉它们，我保证以{$cheapCom_pricePerUnit}星币每单位的优惠价卖给你。要知道，这可是个大便宜。""
 
 $HeOrShe}放下了个人终端，说:""所以，阁下意见如何？""",,
 cheapComTextRemoteBar,CheapComOfferText,"$cheapCom_variation == REMOTE score:10
