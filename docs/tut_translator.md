@@ -43,14 +43,9 @@ ParaTranz 上的翻译以**词条**为单位，每一个词条
 - 平台提供了方便的全局搜索功能，可以搜索全部原文，译文或词条键值
 - 在翻译界面按`Ctrl-F`快速进行搜索
 
-#### 按源文件或列名进行筛选
-- 每一个词条则对应csv中需要翻译的**某一格**，词条下方的`键值`中指示了这种对应关系：
-  - ![][string-kv]
-  - 格式为`文件名`#`行id`$`列名`
-  - 例如`industries`#`heavybatteries`$`name`意味着
-    - 词条来自于`industries.csv`
-    - 词条所在行的id是`heavybatteries`
-    - 词条的内容来自于`name`这一列
+#### 筛选某一列
+- 搜索`$列名`即可
+  - 例：打开`rules`后，搜索`$text`即可只显示text列的词条
 
 ### 词条和游戏文件的对应关系
 - 平台上的每一个文件与游戏中的csv一一对应。
@@ -62,8 +57,6 @@ ParaTranz 上的翻译以**词条**为单位，每一个词条
     - 词条来自于`industries.csv`
     - 词条所在行的id是`heavybatteries`
     - 词条的内容来自于`name`这一列
-- 如果需要查询来自同一文件的词条，则搜索`文件名.csv`即可
-- 如果需要查询来自该列的词条，则搜索`$列名`即可
 
 [string-kv]:string-kv.png
 [order-by-context]:order_by_context.png
