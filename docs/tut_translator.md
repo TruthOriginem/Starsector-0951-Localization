@@ -33,14 +33,17 @@ ParaTranz 上的翻译以**词条**为单位，每一个词条
   词条。
 - 打开词条后，如果内容无误，点击译文文本框右下角的【审核】即可完成校对。
 
-## 其它（不用看也能翻译）
-### 全局搜索
+## 平台使用技巧
+### 按源文件顺序显示词条
+- 平台提供了按源csv文件中的顺序排列词条的选项
+- 在翻译界面，在浏览器顶部地址栏末尾添加`&orderBy=context`即可启用该功能
+  - ![][order-by-context]
+
+### 搜索词条
 - 平台提供了方便的全局搜索功能，可以搜索全部原文，译文或词条键值
 - 在翻译界面按`Ctrl-F`快速进行搜索
 
-### 词条和游戏文件的对应关系
-- 平台上的每一个文件与游戏中的csv一一对应。
-  - 例如`data/campaign/rules.json`对应本地的`data/campaign/rules.csv`
+#### 按源文件或列名进行筛选
 - 每一个词条则对应csv中需要翻译的**某一格**，词条下方的`键值`中指示了这种对应关系：
   - ![][string-kv]
   - 格式为`文件名`#`行id`$`列名`
@@ -48,10 +51,19 @@ ParaTranz 上的翻译以**词条**为单位，每一个词条
     - 词条来自于`industries.csv`
     - 词条所在行的id是`heavybatteries`
     - 词条的内容来自于`name`这一列
-- 因此，如果需要查询来自同一行的其它词条，可以在左上方搜索栏中输入键值的前两部分
-  - 在本例中，可以搜索`industries`#`heavybatteries`
-  - ![][kv-search]
 
+### 词条和游戏文件的对应关系
+- 平台上的每一个文件与游戏中的csv一一对应。
+  - 例如`data/campaign/rules.json`对应本地的`data/campaign/rules.csv`
+- 每一个词条则对应csv中需要翻译的**某一格**，词条下方的`键值`中指示了这种对应关系：
+  - ![][string-kv]
+  - 格式为`文件名`#`行id`$`列名`
+  - 例如`industries.csv#heavybatteries$name`意味着
+    - 词条来自于`industries.csv`
+    - 词条所在行的id是`heavybatteries`
+    - 词条的内容来自于`name`这一列
+- 如果需要查询来自同一文件的词条，则搜索`文件名.csv`即可
+- 如果需要查询来自该列的词条，则搜索`$列名`即可
 
 [string-kv]:string-kv.png
-[kv-search]:kv-search.png
+[order-by-context]:order_by_context.png
