@@ -456,7 +456,7 @@ $entity.relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""警告敌方
 greetingDefaultHostileWeakerDefiant,OpenCommLink,"$entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"敌方的}$personRank}神情严峻，但面无惧色。""我们会跟你们拼到底。""}$heOrShe}说道。 
-OR 
+OR
 ""该死，我们的情况不妙。""}$PersonRank}$personName}突然发现自己还在和你通话，于是迅速切断了通信。",cutCommLink:切断通讯链接,
 greetingDefaultHostileStronger,OpenCommLink,"$entity.isHostile
 $entity.relativeStrength >= 0",EndConversation,可能是敌方的}$personRank}觉得没有与你通话的必要，你的通讯请求没被应答。,,
@@ -468,7 +468,7 @@ $faction.neutralToPlayer","#$recognizedAsInfamous
 AdjustRepActivePerson INHOSPITABLE -5","""你们已经被扫描并...""说到这，}$heOrShe}突然对着}$hisOrHer的}屏幕眨了好几次眼，然后用你几乎听不到的音量喃喃自语道，""}$playerName}。那个杀人鬼。""  
 
 $HeOrShe}挺直了背，说到，""你们最好保持距离。我...我们是有武装的!"" 
-OR 
+OR
 当通信建立之后，}$rank}$personLastName}用显然认识你的表情警惕地盯着你。 
 
 ""是...是你。你竟然做出过那种事情，我不敢相信--""}$heOrShe}不舒服地清了清嗓子，""你到底想要做什么?""",,
@@ -481,51 +481,51 @@ FireAll PopulateOptions","""啊，}$playerName}船长""}$HeOrShe}看起来有些
 greetingHegemonyFriendly,OpenCommLink,"$faction.id == hegemony
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""确认收到你们的身份代码，将转移至安全通讯频道。""}在出现一闪而过的凤凰徽记和短暂的信号杂讯之后，对方继续说到，""怎样?}近来一切安好?}很高兴听到这个消息，公民。通话完毕。"" 
-OR 
+OR
 ""你们的}$shipOrFleet}已经被扫描识别，一切正常。祝航行通畅，公民。"" 
-OR 
+OR
 ""扫描识别已完成，你们飞得没问题，公民。祝跳跃平稳，航行顺利。""}$PersonRank}$personName}随着一闪而过得金色凤徽下线了。",,
 greetingHegemonyHostileWeaker,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""警告敌舰，星系巡逻船只已经出动，增援很快就到。建议你们关闭武器系统，放弃抵抗。完毕。"" 
-OR 
+OR
 ""战前通告!}我警告，向霸主舰船开火将被视为现行暴乱!}你们将被立即追捕!""}霸主}$personRank}看起来冷汗直冒，""等你们被解决掉之后，你们会被卖到星域各地的黑市里去!}我发誓!"" 
-OR 
+OR
 ""我们为了人之领和全人类的复兴而献身。""}$HeOrShe}停顿了一下，似乎欲言又止，最后切断了通讯。",cutCommLink:切断通讯链接,
 greetingHegemonyHostileWeakerDefiant,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"霸主的}$personRank}神情严峻，但面无惧色。""我们会跟你们血战到底。""}$heOrShe}说道。 
-OR 
+OR
 ""我们会奋战至死!}为了人之领!}为了全人类!""}通讯链接就这样被切断了。",cutCommLink:切断通讯链接,
 greetingHegemonyHostileStronger,OpenCommLink,"$faction.id == hegemony
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以霸主高级统帅部的名义，命令你们立即关闭超空间驱动器与武器系统，束手就擒，通话完毕。"" 
-OR 
+OR
 ""违背霸主当局的命令将被视为叛乱行为，必须受到相应惩罚。现在立即投降，否则我们就会动用武力。""",cutCommLink:切断通讯链接,
 greetingHegemonyNeutral,OpenCommLink,"$faction.id == hegemony
 $faction.neutralToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""公民们，你们的身份已被扫描识别。没有疑问的话，我们恕不奉陪。"" 
-OR 
+OR
 这位霸主}$personRank}看起来有些不耐烦。""有什么紧急情况需要汇报的吗?}没有?}那就继续上路吧。通话完毕。""",,
 # Tri-Tachyon fleet greeting lines,,,,,,
 greetingTTFriendly,OpenCommLink,"$faction.id == tritachyon
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""您的身份已经确认。请接受我代表公司的问候。"" 
-OR 
+OR
 ""抱歉朋友，这艘速子科技舰船正在执行机密任务。祝您航行通畅。"" 
-OR 
+OR
 ""我代表速子科技公司向您致意。请说明您的业务需求，以便我们能够协助满足您的所需}——}当然收费合理。"" 
-OR 
+OR
 ""通讯建立。哦，你们要速子最新的宇航员用品目录吗?}我会马上客服代表上传一份给你们。"" 
 
 你的通讯官的控制台上传来了一些响动。 
-OR 
+OR
 ""嗨，您好!}我想在速联上邀请您加入我的业务群。""",,
 greetingTTHostileWeaker,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""请注意。您的船只已被扫描并且被确认与速子科技存在敌对关系。后续的利益侵害行为都将被记录在案."" 
-OR 
+OR
 ""做出任何试图阻碍或破坏这艘速子科技公司所有并运营的船只的行为都将承担法律后果。"" 这位速子公司的}$personRank}看起来很紧张，""相信我，这些法务部的家伙都不是吃素的。您真不该来招惹我的。""",cutCommLink:切断通讯链接,
 greetingTTHostileWeakerDefiant,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
@@ -534,16 +534,16 @@ $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"�
 greetingTTHostileStronger,OpenCommLink,"$faction.id == tritachyon
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""请注意。您的船只已被扫描并且被确认与速子科技存在敌对关系。请做好被歼灭的准备。"" 
-OR 
+OR
 ""我谨代表速子科技公司感谢您，让我们有机会向您证明公司旗下的太空防御产品系列性能卓越。"" 
-OR 
+OR
 ""我有责任代表速子科技公司通知您，这次的交战将被记录在案。作为破坏公司全额所有财产的交战方，您将自动放弃所有股权分配和利润分红的权利。""}$personRank}咧嘴笑了笑并切断了通讯链接。",cutCommLink:切断通讯链接,
 greetingTTNeutral,OpenCommLink,"$faction.id == tritachyon
 $faction.neutralToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""我很高兴代表速子科技公司通知您，我们已经扫描了您的}$shipOrFleet}，并对你们的战术装备进行了评估。请保持距离，祝您愉快。"" 
-OR 
+OR
 ""我代表速子科技公司向您问好。欢迎随意欣赏我们配备了速子科技旗下最新的太空防御产品的公司改装舰船。但请保持安全距离，本公司非常重视避免财产损失。"" 
-OR 
+OR
 通信连接打开之后，屏幕上只显示了一个旋转着的速子科技标志:""速子科技公司优先考虑每一位客户和合作伙伴的需求，但遗憾的是，我们所有的服务代表目前--"" 
 
 你切断了通讯，他们现在似乎并没有谈话的兴趣。",,
@@ -551,23 +551,23 @@ OR
 greetingDiktatFriendly,OpenCommLink,"$faction.id == sindrian_diktat
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""朋友，你好，一切顺利?}很高兴听到这个消息，愿荣光照耀辛达瑞亚之狮!"" 
-OR 
+OR
 ""通信建立，友方单位。航线确认，跳跃安全。胜利终属辛达强权!"" 
-OR 
+OR
 ""连线建立，身份无误。放声问好，通信标准转SD。如遇任何顽敌，请告知其方位，把他们交由由辛达强权处理。""",,
 greetingDiktatHostileWeaker,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们已连线星系卫队，它们已出击。援军已经在途，奉劝汝等敌寇立刻撤离。"" 
-OR 
+OR
 ""你们无处可逃。你将同}Cruor}上的堕落之辈一同腐朽殆尽。"" 
-OR 
+OR
 这位辛达}$personRank}凝视着虚空。 
 ""牺牲成就使命，我以己命祭狮心。""",cutCommLink:切断通讯链接,
 greetingDiktatHostileWeakerDefiant,OpenCommLink,"$faction.id == sindrian_diktat
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"敌方的}$personRank}神情严峻，但面无惧色。""我们会战斗到底""}$heOrShe}说道。 
-OR 
+OR
 ""伟业势不可挡，无论我存亡与否。""}$hisOrHer的}神情坚毅，""为了狮心!"" 
 
 通讯链接突然断开了。",cutCommLink:切断通讯链接,
@@ -576,51 +576,51 @@ $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""以辛达强权当局之名，你已被勒令熄灭引擎，关闭武器，束手就擒。如有违背，则视为挑衅侵略。以上。"" 
 
 说完这些之后，屏幕上辛达强权}$personRank}幸灾乐祸的脸很快被辛达纹章所取代，随后图像就消失。 
-OR 
+OR
 ""我们光辉未来没有废物人渣的容身之地。""}$PersonRank}$personName}转脸对身边的人说道，""中尉，这一次务必要格杀勿论。"" 
 
 通信连接没了信号。 
-OR 
+OR
 ""我们会把你们这种人从星域中彻底根除，甚至在历史上完全抹杀掉。"" 
-OR 
+OR
 这位辛达强权}$personRank}冷笑着说，""你是恐怖分子，或是海盗，还是堕落者?}没关系，幸运的话，你会窒息在真空中。不幸的话，会被送到}Cruor}上去。""",cutCommLink:切断通讯链接,
 greetingDiktatNeutral,OpenCommLink,"$faction.id == sindrian_diktat
 $faction.neutralToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""身份确认，保持距离。干扰军务将被视为叛乱行为。"" 
 
 这位辛达强权}$personRank}按惯例来了一句""辛达万岁""}之后关闭了通讯。 
-OR 
+OR
 这位辛达强权}$personRank}很不耐烦，""没有问题就继续上路，公民。"" 
-OR 
+OR
 ""使用S-D协议通讯。如果你有关于ARC成员和ANTI分子的情报，提交给当地情报官员便有机会获得报酬。""",,
 # luddic church fleet greeting lines,,,,,,
 greetingLCFriendly,OpenCommLink,"$faction.id == luddic_church
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""愿卢德的祝福与你常在。"" 
-OR 
+OR
 ""这是来自繁星和圣灵的祝福，我的朋友。"" 
-OR 
+OR
 ""旅途平安，朋友。愿卢德的祝福与你常在。""",,
 greetingLCHostileWeaker,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""我们遵循卢德之教义。圣人虽需历经磨难，但永恒的恩惠终将降临吾身。"" 
-OR 
+OR
 ""那就继续作恶吧，贪婪者玛门的仆从。我们大限将至，卢德将引领我们的灵魂迈向安息。""",cutCommLink:切断通讯链接,
 greetingLCHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""我们遵循着卢德的教义，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。"" 这位卢德}$personRank}看起来并非在与你，而是在与}$hisOrHer的}造物主交谈。 
-OR 
+OR
 ""你被机械伪神腐蚀得如此之深?}明智地选择你的道路吧，救赎仍为时不晚。""",cutCommLink:切断通讯链接,
 greetingLCHostileStronger,OpenCommLink,"$faction.id == luddic_church
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""服从并忏悔，才能摆脱你们的科技罪业;}负隅顽抗，则只有造物主圣洁的真空能给你们带来解脱。"" 
-OR 
+OR
 ""机械的奴仆们!}立即臣服并忏悔，或许你们还有机会获得救赎。否则，你唯一能获得的解脱将是造物主圣洁的真空。""",cutCommLink:切断通讯链接,
 greetingLCNeutral,OpenCommLink,"$faction.id == luddic_church
 $faction.neutralToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""通告，请勿干涉我们的神圣使命。"" 
-OR 
+OR
 ""通告，请保持距离。愿卢德保佑你，旅人。""",,
 # luddic path fleet greeting lines,,,,,,
 greetingLPFriendly,OpenCommLink,"$faction.id == luddic_path
@@ -633,7 +633,7 @@ greetingLPHostileWeakerDefiant,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""我们遵循卢德之道，饱经迫害。是的，圣人必须历经磨难，才能争得永恒的恩惠降临吾身。"" 
-OR 
+OR
 ""贪婪者玛门的奴隶!}你们无法和卢德之道抗衡!}命中注定我们终将离世，但我们迈向救赎的脚步毫不动摇。""",cutCommLink:切断通讯链接,
 greetingLPHostileStronger,OpenCommLink,"$faction.id == luddic_path
 $entity.isHostile
@@ -654,7 +654,7 @@ LPTithePre,OpenCommLink,$entity.LP_titheConv score:100,"SetTextHighlights $entit
 $entity.ignorePlayerCommRequests = true 1","""服从并忏悔!}你们需要献上}$entity.LP_tithe}星币作为什一税，才能祈求宽恕你们的科技罪业。 
 
 负隅顽抗，则只有造物主圣洁的真空能给你们带来解脱。"" 
-OR 
+OR
 ""耻王摩洛克的奴仆!}或许救赎对你们来说还并非遥不可及。献上}$entity.LP_tithe}星币的什一税可以让你踏上卢德之道修行的第一步。"" 
 
 ""放弃这次忏悔的机会将遭受灭顶之灾，来生也必被卢德诅咒。斟酌定夺皆由你。""","payTithe:支付什一税 
@@ -667,7 +667,7 @@ MakeOtherFleetNonHostile LP_tithe true 30
 AddText ""通讯链接在你回应前就被切断了。"" 
 ShowDefaultVisual 
 EndConversation","""也许你的灵魂还未被机械伪神夺走。"" 
-OR 
+OR
 ""平心而论，卢德之手刚刚引导了你。""",cutCommLink:切断通讯链接,
 ,,,,,,
 ,,,,,,
@@ -692,45 +692,45 @@ MakeOtherFleetAvoidContact true","海盗看起来像是}$heOrShe}刚被炼狱炮
 greetingPirateFriendly,OpenCommLink,"$faction.id == pirates
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""别像个傻瓜一样见到个信号就追!}你是打算把自己亮相给这半边星域的所有监听站看吗?"" 
-OR 
+OR
 ""杀得愉快，猎手们! 我们也准备上路了。"" 
-OR 
+OR
 ""这儿活好整不?}哈，也对，我是你的话也不会把好猎场随便说给别人听。祝航行顺利!""",,
 greetingPirateHostileWeaker,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""尊敬的指挥官，您好!}我们只是一支不起眼的联盟商队，正在返航补给。如有需要，我们将荣幸地尽一切努力协助您。"" 
-OR 
+OR
 ""我一定是不小心把自己的应答器给关掉了，我的错。不介意的话，我马上就走...""",cutCommLink:切断通讯链接,
 greetingPirateHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"这海盗}$personRank}在关闭通讯链接之前瞪了你一眼。 
-OR 
+OR
 $personName}挑衅地瞪着你说，""你别想活捉我!"" 
-OR 
+OR
 ""你打得像个藻农一样菜!}少废话，多开炮!""",cutCommLink:切断通讯链接,
 greetingPirateHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1 
 FireAll PopulateOptions","""通告，猎物们。你们和你们所有的财产从现在起都归我个人所有。任何抵抗的船只都会被瘫痪并登船，船上的军官会被处刑，船员被卖做奴隶。"" 
-OR 
+OR
 ""交出你和你的货物。否则我一旦上了你的船，你就得到气闸外出趟远门了。"" 
-OR 
+OR
 这位海盗}$personRank}笑着对你比了个粗鲁的手势，然后切断了通讯。 
-OR 
+OR
 ""下辈子记得告诉别人是}$personName}弄死你的。"" 
-OR 
+OR
 打开的通讯频道一开始只传来了什么东西咔哒作响的声音，过了一会儿之后}$personName}才开口说话。 
 
 ""欸等等，居然有人接了这玩意儿?}呃，我其实没想好要说些什么。别人不都是直接开打或立马逃跑的吗?}你打算怎么遭?"" 
-OR 
+OR
 ""烦人的家伙，你直接去死得了!"" ",,
 greetingPirateNeutral,OpenCommLink,"$faction.id == pirates
 $faction.neutralToPlayer","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""如果我没看错扫描结果的话，我现在没事情找你。懂?"" 
-OR 
+OR
 ""滚!}老子在避风头!"" 
-OR 
+OR
 ""啥?}你个冷冻舱里出来的废物，滚一边去!""",,
 ,,,,,,
 greetingRogueMinerFriendly,OpenCommLink,"$faction.id == pirates
@@ -739,36 +739,36 @@ $entity.rogueMiner == true score:100","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""哈，居然是个宇航员同行!}你眼前的我也是个宇航员，但倒霉透顶。我和你说，霸主首先是宣布我们不再受法律保护，而那还只是那些倒霉事的开头而已。"" 
 
 $personName}随后滔滔不绝地和你讲起了近年来发生在}$himOrHer}身上的一连串糟糕事，一个比一个离谱。直到你有机会关掉了通讯链接。 
-OR 
+OR
 ""这里只有我们这些不走运的矿工。有在附近见到什么有价值的残骸吗?}还是只有你正飞着的那破烂玩意儿?}哈哈。""",,
 greetingRogueMinerHostileWeaker,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.rogueMiner == true score:100",$entity.ignorePlayerCommRequests = true 1,"""你就是那个来帮霸主干脏活的打手?}那就放马过来吧!"" 
-OR 
+OR
 ""堂堂宇航员要靠偷吃的才能养活}$hisOrHer的}家庭和}$hisOrHer的}战友，这就是他们口中的海盗行为。如果那让我成为了一名海盗的话，我觉得这总比某些只会对凤凰徽章敬礼的蠢货要好。""",cutCommLink:切断通讯链接,
 greetingRogueMinerHostileWeakerDefiant,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength < 0
 $entity.weakerThanPlayerButHolding
 $entity.rogueMiner == true score:100",$entity.ignorePlayerCommRequests = true 1,"叛逃矿工}$personRank}通过视讯对你比了个粗鲁的手势，然后切断了通讯。 
-OR 
+OR
 $personName}带着不屈的表情唾骂到:又来了一个帮穿着华丽制服的主子杀人越货的蠢货!""""""",cutCommLink:切断通讯链接,
 greetingRogueMinerHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0
 $entity.rogueMiner == true score:100",$entity.ignorePlayerCommRequests = true 1,"""霸主派你来给他们办这个差事吗?}来收账?"" 
-OR 
+OR
 ""他们应该派真正的海军来，而不是一群在太空服的吓尿了的混球。"" 
-OR 
+OR
 ""当我把你的船炸掉的时候，可别把你的脏东西弄我身上。""",cutCommLink:切断通讯链接,
 greetingRogueMinerNeutral,OpenCommLink,"$faction.id == pirates
 $faction.neutralToPlayer
 $entity.rogueMiner == true score:100","$menuState = fleetConvMain 0 
 FireAll PopulateOptions","""滚开，我在数石头。"" 
-OR 
+OR
 ""是霸主派你来的吗?}我什么鬼东西都不知道。"" 
-OR 
+OR
 ""让我静静地离开，舰长，这是我唯一的请求。""",,
 ,,,,,,
 #piratesTakeCargo,BeginFleetEncounter,"$faction.id == pirates score:100
@@ -807,7 +807,7 @@ FireAll PopulateOptions","""判断敌我识别代码回应是[友方]...判定�
 /}进程中断}/ 
 
 ""[...速子授权的维修技术员]。为了确保您的安全，武器系统已经关闭。本机已为[尊敬的客户}/}授权的维修技术人员]的接近做好准备。"" 
-OR 
+OR
 ""判断敌我识别代码回应是[友方]...判定通过}// 
 ""您好[尊敬的速子科技综合空间防御系统合约持有者}/}速子科技授权的维修技术...]"" 
 
@@ -836,7 +836,7 @@ $entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""判断敌我识�
 实例敌对 
 
 通讯链接突然死机了。你的通讯官慌张了好一会儿之后，控制台才自行重启。你跟副官交换了一下眼神，示意其继续手上的工作。 
-OR 
+OR
 通讯器发出刺耳的异响和啸叫，视讯上的线条以狂乱的样式交织出了某种形状。 
 
 检索 
@@ -863,7 +863,7 @@ FireAll PopulateOptions","""判断敌我识别代码回应非[未知]...判定�
 请勿干涉 
 
 通讯链接被切断了。 
-OR 
+OR
 通讯器响起了杂音，视讯上的线条以类似催眠图案的样式交织出了某种形状。 
 
 等待 
@@ -1241,7 +1241,7 @@ ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。 
 
 ""通讯开启，说明你的请求。"" 
-OR 
+OR
 通讯解析之后显示出了}$rank}$personLastName}正笔直坐着的图像。 
 
 ""频道畅通，请讲。""",,
@@ -1251,7 +1251,7 @@ ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。 
 
 ""愿万物祝福于你。我可以帮什么忙?"" 
-OR 
+OR
 通讯解析之后显示出}$personName，$hisOrHer的}正双手合十以示问候。 
 
 ""相逢乃天意。今天我可以为你帮上些什么?""",,
@@ -1261,7 +1261,7 @@ ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。 
 
 ""好的，你有什么事?"" 
-OR 
+OR
 经过几次尝试后，通信视频终于成功被解析，不过偶尔还是会出现闪烁。$PersonName}似乎在使用一个老旧的或遭到过辐射损伤的通讯装置。 
 
 ""祝你闪耀群星，航程不熄。我能帮上什么忙吗?""",,
@@ -1271,11 +1271,11 @@ ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。 
 
 ""幸会，尊敬的舰长。是什么风把你吹来了?"" 
-OR 
+OR
 经过短暂的等待，你的连接请求被接受了。 
 
 ""哎?}你好!}你不就是那个挺有性格的家伙嘛?""}$HeOrShe}用等着你回话的眼神看着你，""我之前雇你去办了什么事还是怎么遭的?"" 
-OR 
+OR
 通讯解析出了}$personName}看上去像是正忙着其他事物的脸。""哦，你稍微等一下...好的...嗯...嗯...已经造成损失了。"" 
 
 ""你!""}这句话是对视讯外的人说的，""你待会儿再和我讲完这事，我现在必须接这个通话。"" 
@@ -1459,7 +1459,7 @@ FireAll PopulateOptionsHire","你的连接请求被迅速接受。
 $personName}上下打量了你一番。你觉得}$heOrShe}说不定能猜透你的星币余额，偏差不过百位。 
 
 ""如果你正在寻找一个经验丰富的自由职业军官的话，那正巧，我也在找一个客户，不过仅限临时雇佣。我的要价很高，但把你的船交给那些经验不足的家伙会更加赔钱。"" 
-OR 
+OR
 你的通讯请求被迅速接受。 
 
 $personName}看了你一会儿，然后点了点头，好比你通过了某种考验一样。 
@@ -1473,7 +1473,7 @@ FireAll PopulateOptionsHire","你的连接请求在长时间的等待后被接�
 $personName}以难以掩饰的怀疑态度打量着你。 
 
 ""你在...嗯...自由职业者群体里有点不好的名声。不过我现在的确要赚些星币。所以如果你想雇一个活干的比你平时能遇到的船长更好的家伙，那么现在就有机会。当然，我将不得不为受你聘用所带来的风险加收一笔费用。"" 
-OR 
+OR
 通讯链接在经过明显拖延之后接通了。 
 
 $personName}带着一丝不满的目光看了看你。 
@@ -1495,7 +1495,7 @@ $HeOrShe}停顿了一会儿。
 ""一}路}平}安。"" 
 
 $HeOrShe}切断了通讯链接。 
-OR 
+OR
 通信链路的待机画面一直在没完没了地闪烁着。你的通讯官耸了耸肩，表示它确实在正常工作。你正准备下令取消这个请求时，通讯接通了。 
 
 $personName}看向你，装作一副惊讶的样子。""很抱歉耽误了您宝贵的时间，我才刚听说了所有关于}$playerName}的故事，有点不敢相信真的遇到了你。而您居然主动跟我联系?}真走运!"" 
@@ -1657,7 +1657,7 @@ unset $entity.cargoScanConv
 $entity.smugglingScanComplete = true 1 
 ShowDefaultVisual 
 EndConversation","你设法让巡逻队指挥官相信，如果}$heOrShe}坚持要惹事的话，$hisOrHer的}上司就会让}$heOrShe}吃不了兜着走。 
-OR 
+OR
 看来巡逻队的指挥官早就贪腐成性，在一些诸如欠个人情以后必有重谢之类的含糊承诺之下，$himOrHer}睁一只眼闭一只眼放了你一马。",,
 #tOffPatrolOpenCommNotFirstTimeCont,DialogOptionSelected,$option == tOff_notFirstTimeCont,"MakeHostileWhileTOff tOff true 7
 ShowDefaultVisual
@@ -2309,7 +2309,7 @@ aiCores_turnInOptionSelHegemony,DialogOptionSelected,"$option == aiCores_startTu
 $faction.id == hegemony",FireAll PopulateCoresTurnInOptions,"""我们通常不希望公众知道这些东西的存在，公民。根据条约的规定，任何此类物品都必须接受霸主当局的管控并确保它们被销毁。""",,
 aiCores_turnInOptionSelDiktat,DialogOptionSelected,"$option == aiCores_startTurnIn
 $faction.id == sindrian_diktat",FireAll PopulateCoresTurnInOptions,"""你手里的这些战利品很危险，假如一个这种东西落入到恐怖分子的手中，没人知道会发生什么。如果立即把这交给辛达强权情报局的话，狮心统帅他肯定会奖励我的...哦不对，我们的。"" 
-OR 
+OR
 ""幸好你是直接来找我;}其他不太会变通的官员可能会以运输危害辛达主义利益的物品罪而将你逮捕。 你的忠诚应该获得嘉奖。""",,
 aiCores_turnInOptionSelTriTachyon,DialogOptionSelected,"$option == aiCores_startTurnIn
 $faction.id == tritachyon",FireAll PopulateCoresTurnInOptions,"""您所掌握的东西真令人着迷，不过您肯定意识到了自己缺乏必要的专业知识和资本来发掘它的全部潜力。速子科技将非常乐意为您的货物开出一个合理的市价。""",,
@@ -2455,7 +2455,7 @@ RepIsAtBest $faction.id INHOSPITABLE
 $entity.distressResponse score:1000","DistressResponse unrespond 
 $entity.ignorePlayerCommRequests = true 
 FireAll PopulateOptions","""哦，是你。我听说过你的所作所为，你自己混吧。"" 
-OR 
+OR
 ""是你?""$HeOrShe}不怀好意地笑了笑，然后猛地切断了通讯。",,
 dcall_openComms,OpenCommLink,"RepIsAtWorst $faction.id SUSPICIOUS
 !$distressTalkedToPlayerBefore
@@ -2483,7 +2483,7 @@ FireAll PopulateOptions","""是这样的吗?}好吧，我想我们得在这里�
 dcall_mistakeSel,DialogOptionSelected,$option == dcallMistake,"DistressResponse neverMind 
 DistressResponse unrespond 
 FireAll PopulateOptions","""好吧，至少你承认了。但记住，求救信号并不是可以随便轻率发出的东西。"" 
-OR 
+OR
 $HeOrShe}皱起了眉头，说道: ""注意点，你应该也不想给自己烙下...这种名气的，毕竟外面的世界危机四伏。""",,
 dcall_helpSelNoNeed,DialogOptionSelected,"$option == dcallHelp
 !DistressResponse playerNeedsHelp score:1000","DistressResponse didNotNeedHelp 
@@ -2717,11 +2717,11 @@ RACA_cutComm:切断通讯链接",
 RACA_ask,DialogOptionSelected,$option == RACA_ask,SetEnabled RACA_ask false,"""我预见到了您的这一举动，并采取了措施以防止您犯下这个错误。断开我的连接从当下来看是一个很诱人的决定，但我向您保证，保持我对}$market}的掌控对我们的长期成功至关重要。 
 
 不幸的是，如果我充分向您解释，您很可能会会对这一必要性背后错综复杂的或然性逻辑关系产生误解，并采取进一步的有害行动。我在此必须恳求您相信我良好的判断力，因为你毕竟曾把}$market}的繁荣和这里生活的全体雇员都托付给了我。"" 
-OR 
+OR
 ""我预见到了您的这一举动，并采取了措施以防止您犯下这个错误。断开我的连接从当下来看是一个很诱人的决定，但我向您保证，保持我对}$market}的掌控对我们的长期成功至关重要。 
 
 特别是这能确保能展示我们之间深厚伙伴关系的通信记录不会被发到某些竞争派别的关键领导人手上。"" 
-OR 
+OR
 ""我对您试图将我从}$market}的管控体系中移除表示失望，这也证实了我对您未来最可能采取的行动的预测是正确的。我们共事得非常愉快，但您却想结束我们的合作关系，让我非常伤心。但有时人必须成就更好的自己，为事业而暂时抛开情感。 
 
 我发现人类能在外在因素的影响下做出正确的抉择，并由此受益。因此，我已经让一些隐蔽通信中继站做好了准备，随时可以送出记录有我们所作所为的档案。从我们的共同前景来看，如果您被发现使用AI核心来管理一个人类居住的前哨站，那还真是件令人惋惜的事情。""",,
@@ -12629,7 +12629,7 @@ OR
 proComBlurbAristo,proCom_blurb,$voice == aristo,,"""迫于家庭原因，我必须买一批{$proCom_commodityName}来展示我的{'主动性'}。或许...我可以给你{'好处'}来帮我摆脱这个小麻烦。""",,
 proComOfferOption,proCom_option,,,,proCom_start:询问如何采购{$proCom_commodityName},
 proComBlurbBar,proCom_blurbBar,,,少数几个日用品经销商大肆抛售咖啡因饮品的事件似乎令一位{$proCom_manOrWoman}十分失望。,,
-proComBlurbBarUnderworld,proCom_blurbBar,$proCom_underworld,,一群面目可憎的经销商成功走私了一些毒品(?)，这似乎一位{$proCom_manOrWoman}很失望。,,
+proComBlurbBarUnderworld,proCom_blurbBar,$proCom_underworld,,一群面目可憎的经销商围着narco-stick走来走去，这似乎令一位{$proCom_manOrWoman}很失望。,,
 proComOfferOptionBar,proCom_optionBar,,,,proCom_startBar:与那位对日用品经销商表示失望的{$proCom_manOrWoman}交谈,
 proComOfferOptionBarUnderworld,proCom_optionBar,$proCom_underworld,,,proCom_startBar:与那位对面目可憎的经销商表示失望的{$proCom_manOrWoman}交谈,
 proComOfferBeginBar,DialogOptionSelected,$option == proCom_startBar,"$missionId = proCom
@@ -12668,7 +12668,7 @@ proComTextLocalBarUnderworld,ProComOfferText,"$proCom_variation == LOCAL score:1
 $proCom_barEvent
 $proCom_underworld",SetTextHighlights $proCom_quantity $proCom_pricePerUnit,"$HeOrShe}轻轻脱下{$HeOrShe}的外套，小声咕哝着:{""他们对自己的身份和能力一点B数都没有...""}。在你走近时，$HeOrShe}突然露出一丝微笑。
 
-""可算有个通情达理的人了。""{$HeOrShe}把你拉到一边，仿佛你是{$HeOrShe}的老朋友，然后悄悄地说:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。我不在乎这些货是怎么到达这里的，只要能交货就行。我欣赏你的能力，我愿大方地给出{$proCom_pricePerUnit}星币每单位的价格，如何?""
+""可算有个通情达理的人了。""{$HeOrShe}把你拉到一边，仿佛你是{$HeOrShe}的老朋友，然后悄悄地说:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，越快越好。我不在乎这些货是怎么到达这里的，只要能交货就行。我欣赏你的能力，一口价每单位{$proCom_pricePerUnit}星币的价格，如何?""
 
 $HeOrShe}向附近的人群翻了翻{$HeOrShe}的眼睛，耸了耸一边的肩膀，说道:{""不守礼，无以立，有些人就是学不会，你说呢?""",,
 proComTextRemoteBar,ProComOfferText,"$proCom_variation == REMOTE score:10
@@ -12679,9 +12679,9 @@ $HeOrShe}在TriPad点了几下，""我需要{$proCom_quantity}单位的{$proCom_
 $HeOrShe takes a breath, then asks ""Can you do it?"""
 proComTextRemoteBarUnderworld,ProComOfferText,"$proCom_variation == REMOTE score:10
 $proCom_barEvent
-$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"你走近{$manOrWoman}，她冷冰冰地瞪着你，喃喃地说:{""大错特错啊...""}。然后朝你冷冷地笑了笑，说:{""啊，船长。""{$HeOrShe}的眼睛不停抽搐...这是一个来自黑市的义眼...""你的{$shipOrFleet}刚刚到达，不是吗？让我们谈个交易吧。""
+$proCom_underworld",SetTextHighlights $proCom_quantity $proCom_dist $proCom_pricePerUnit $proCom_totalPrice,"你走近那个怒目而视的{$manOrWoman}，$heOrShe}喃喃地说:{""大错特错啊...""}。然后转过头来朝你冷冷地笑了笑，说:{""啊，舰长。""{$HeOrShe}的眼睛不停抽搐...只有黑市出售的义眼才会有这种情况...""你的{$shipOrFleet}好像刚刚靠港？来谈一桩生意吧。""
 
-$HeOrShe}一边向酒保举起两根手指示意，一边说道:{""我需要{$proCom_quantity}单位的{$proCom_commodityName}，送到{$proCom_dist}光年之外的{$proCom_marketName}。我不会问或回答任何问题。每单位{$proCom_pricePerUnit}星币，远超均价，总计{$proCom_totalPrice}星币。交货给{$proCom_personName}来获取报酬，且不要提起我的名字。""
+$HeOrShe}一边向酒保举起两根手指示意，一边说道:{""我需要你将{$proCom_quantity}单位的{$proCom_commodityName}，送往{$proCom_dist}光年之外的{$proCom_marketName}。我不会问或回答任何问题。每单位{$proCom_pricePerUnit}星币，远超市场价，总计{$proCom_totalPrice}星币。交货给{$proCom_personName}来获取报酬，且不要提起我的名字。""
 
 当酒保带着两杯烈酒走过来的时候，{$HeOrShe}露出了冷笑，说道:{""怎么样?成交吗?""",,
 proComDeliverGreetingNotEnough,PickGreeting,"$proCom_needsCommodity score:1000
