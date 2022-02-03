@@ -1,6 +1,6 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "hullId": "cerberus_d_pirates",
     "hullMods": [

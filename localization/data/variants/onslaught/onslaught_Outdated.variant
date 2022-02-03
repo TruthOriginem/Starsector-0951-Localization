@@ -1,14 +1,14 @@
 {
-    "displayName": "过时",
-    "fluxCapacitors": 42,
+    "displayName": "旧式",
+    "fluxCapacitors": 33,
     "fluxVents": 50,
     "hullId": "onslaught",
     "hullMods": [
         "heavyarmor",
         "armoredweapons",
-        "magazines",
         "fluxdistributor",
-        "dedicated_targeting_core"
+        "dedicated_targeting_core",
+        "ballistic_rangefinder"
     ],
     "permaMods": [],
     "sMods": [],
@@ -41,10 +41,10 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "lightag",
-                "WS 004": "lightag",
-                "WS 005": "lightag",
-                "WS 006": "lightag",
+                "WS 002": "lightac",
+                "WS 004": "lightac",
+                "WS 005": "lightac",
+                "WS 006": "lightac",
                 "WS 014": "arbalest",
                 "WS 015": "arbalest"
             }
@@ -53,8 +53,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 008": "lightdualac",
-                "WS 009": "lightdualac",
+                "WS 008": "lightac",
+                "WS 009": "lightac",
                 "WS 012": "arbalest",
                 "WS 013": "arbalest"
             }

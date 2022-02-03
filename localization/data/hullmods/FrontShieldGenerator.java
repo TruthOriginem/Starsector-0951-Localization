@@ -3,8 +3,8 @@ package data.hullmods;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
-import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class FrontShieldGenerator extends BaseHullMod {
@@ -59,6 +59,9 @@ public class FrontShieldGenerator extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship != null && ship.getHullSpec().getDefenseType() == ShieldType.PHASE) {
+			return "该舰不能拥有护盾";
+		} 
 		return "该舰已经拥有护盾";
 	}
 }

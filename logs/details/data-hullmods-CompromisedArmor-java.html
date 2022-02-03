@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        table.diff {font-family:Courier; border:medium;}
+        .diff_header {background-color:#e0e0e0}
+        td.diff_header {text-align:right}
+        .diff_next {background-color:#c0c0c0}
+        .diff_add {background-color:#aaffaa}
+        .diff_chg {background-color:#ffff77}
+        .diff_sub {background-color:#ffaaaa}
+    </style>
+</head>
+
+<body>
+    
+    <table class="diff" id="difflib_chg_to48__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        
+        <tbody>
+            <tr><td class="diff_next"><a href="#difflib_chg_to48__0">f</a></td><td class="diff_header" id="from48_1">1</td><td nowrap="nowrap">package&nbsp;data.hullmods;</td><td class="diff_next"><a href="#difflib_chg_to48__0">f</a></td><td class="diff_header" id="to48_1">1</td><td nowrap="nowrap">package&nbsp;data.hullmods;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_2">2</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_2">2</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_3">3</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.BaseHullMod;</td><td class="diff_next"></td><td class="diff_header" id="to48_3">3</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.BaseHullMod;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_4">4</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.MutableShipStatsAPI;</td><td class="diff_next"></td><td class="diff_header" id="to48_4">4</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.MutableShipStatsAPI;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_5">5</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.ShipAPI;</td><td class="diff_next"></td><td class="diff_header" id="to48_5">5</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.ShipAPI;</td></tr>
+            <tr><td class="diff_next" id="difflib_chg_to48__0"></td><td class="diff_header" id="from48_6">6</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.ShipAPI.HullSize;</td><td class="diff_next"></td><td class="diff_header" id="to48_6">6</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.combat.ShipAPI.HullSize;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_7">7</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.impl.campaign.ids.Stats;</td><td class="diff_next"></td><td class="diff_header" id="to48_7">7</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.impl.campaign.ids.Stats;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_8">8</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.impl.hullmods.CompromisedStructure;</td><td class="diff_next"></td><td class="diff_header" id="to48_8">8</td><td nowrap="nowrap">import&nbsp;com.fs.starfarer.api.impl.hullmods.CompromisedStructure;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_9">9</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_9">9</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_10">10</td><td nowrap="nowrap">public&nbsp;class&nbsp;CompromisedArmor&nbsp;extends&nbsp;BaseHullMod&nbsp;{</td><td class="diff_next"></td><td class="diff_header" id="to48_10">10</td><td nowrap="nowrap">public&nbsp;class&nbsp;CompromisedArmor&nbsp;extends&nbsp;BaseHullMod&nbsp;{</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to48__top">t</a></td><td class="diff_header" id="from48_11">11</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;final&nbsp;float&nbsp;ARMOR_PENALTY_MULT&nbsp;=&nbsp;0.<span class="diff_chg">7</span>f;</td><td class="diff_next"><a href="#difflib_chg_to48__top">t</a></td><td class="diff_header" id="to48_11">11</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;final&nbsp;float&nbsp;ARMOR_PENALTY_MULT&nbsp;=&nbsp;0.<span class="diff_chg">8</span>f;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_12">12</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_12">12</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_13">13</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;applyEffectsBeforeShipCreation(HullSize&nbsp;hullSize,&nbsp;MutableShipStatsAPI&nbsp;stats,&nbsp;String&nbsp;id)&nbsp;{</td><td class="diff_next"></td><td class="diff_header" id="to48_13">13</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;applyEffectsBeforeShipCreation(HullSize&nbsp;hullSize,&nbsp;MutableShipStatsAPI&nbsp;stats,&nbsp;String&nbsp;id)&nbsp;{</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_14">14</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;effect&nbsp;=&nbsp;stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</td><td class="diff_next"></td><td class="diff_header" id="to48_14">14</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;effect&nbsp;=&nbsp;stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_15">15</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;mult&nbsp;=&nbsp;ARMOR_PENALTY_MULT&nbsp;+&nbsp;(1f&nbsp;-&nbsp;ARMOR_PENALTY_MULT)&nbsp;*&nbsp;(1f&nbsp;-&nbsp;effect);</td><td class="diff_next"></td><td class="diff_header" id="to48_15">15</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;mult&nbsp;=&nbsp;ARMOR_PENALTY_MULT&nbsp;+&nbsp;(1f&nbsp;-&nbsp;ARMOR_PENALTY_MULT)&nbsp;*&nbsp;(1f&nbsp;-&nbsp;effect);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_16">16</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_16">16</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_17">17</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stats.getArmorBonus().modifyMult(id,&nbsp;mult);</td><td class="diff_next"></td><td class="diff_header" id="to48_17">17</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stats.getArmorBonus().modifyMult(id,&nbsp;mult);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_18">18</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompromisedStructure.modifyCost(hullSize,&nbsp;stats,&nbsp;id);</td><td class="diff_next"></td><td class="diff_header" id="to48_18">18</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompromisedStructure.modifyCost(hullSize,&nbsp;stats,&nbsp;id);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_19">19</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td><td class="diff_next"></td><td class="diff_header" id="to48_19">19</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_20">20</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_20">20</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_21">21</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;getDescriptionParam(int&nbsp;index,&nbsp;HullSize&nbsp;hullSize,&nbsp;ShipAPI&nbsp;ship)&nbsp;{</td><td class="diff_next"></td><td class="diff_header" id="to48_21">21</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;getDescriptionParam(int&nbsp;index,&nbsp;HullSize&nbsp;hullSize,&nbsp;ShipAPI&nbsp;ship)&nbsp;{</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_22">22</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;effect&nbsp;=&nbsp;1f;</td><td class="diff_next"></td><td class="diff_header" id="to48_22">22</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;effect&nbsp;=&nbsp;1f;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_23">23</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(ship&nbsp;!=&nbsp;null)&nbsp;effect&nbsp;=&nbsp;ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</td><td class="diff_next"></td><td class="diff_header" id="to48_23">23</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(ship&nbsp;!=&nbsp;null)&nbsp;effect&nbsp;=&nbsp;ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_24">24</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;mult&nbsp;=&nbsp;ARMOR_PENALTY_MULT&nbsp;+&nbsp;(1f&nbsp;-&nbsp;ARMOR_PENALTY_MULT)&nbsp;*&nbsp;(1f&nbsp;-&nbsp;effect);</td><td class="diff_next"></td><td class="diff_header" id="to48_24">24</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;mult&nbsp;=&nbsp;ARMOR_PENALTY_MULT&nbsp;+&nbsp;(1f&nbsp;-&nbsp;ARMOR_PENALTY_MULT)&nbsp;*&nbsp;(1f&nbsp;-&nbsp;effect);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_25">25</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to48_25">25</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_26">26</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(index&nbsp;==&nbsp;0)&nbsp;return&nbsp;""&nbsp;+&nbsp;(int)&nbsp;Math.round((1f&nbsp;-&nbsp;mult)&nbsp;*&nbsp;100f)&nbsp;+&nbsp;"%";</td><td class="diff_next"></td><td class="diff_header" id="to48_26">26</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(index&nbsp;==&nbsp;0)&nbsp;return&nbsp;""&nbsp;+&nbsp;(int)&nbsp;Math.round((1f&nbsp;-&nbsp;mult)&nbsp;*&nbsp;100f)&nbsp;+&nbsp;"%";</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_27">27</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(index&nbsp;&gt;=&nbsp;1)&nbsp;return&nbsp;CompromisedStructure.getCostDescParam(index,&nbsp;1);</td><td class="diff_next"></td><td class="diff_header" id="to48_27">27</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(index&nbsp;&gt;=&nbsp;1)&nbsp;return&nbsp;CompromisedStructure.getCostDescParam(index,&nbsp;1);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_28">28</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;null;</td><td class="diff_next"></td><td class="diff_header" id="to48_28">28</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;null;</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_29">29</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td><td class="diff_next"></td><td class="diff_header" id="to48_29">29</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from48_30">30</td><td nowrap="nowrap">}</td><td class="diff_next"></td><td class="diff_header" id="to48_30">30</td><td nowrap="nowrap">}</td></tr>
+        </tbody>
+    </table>
+    <table class="diff" summary="Legends">
+        <tr> <th colspan="2"> Legends </th> </tr>
+        <tr> <td> <table border="" summary="Colors">
+                      <tr><th> Colors </th> </tr>
+                      <tr><td class="diff_add">&nbsp;Added&nbsp;</td></tr>
+                      <tr><td class="diff_chg">Changed</td> </tr>
+                      <tr><td class="diff_sub">Deleted</td> </tr>
+                  </table></td>
+             <td> <table border="" summary="Links">
+                      <tr><th colspan="2"> Links </th> </tr>
+                      <tr><td>(f)irst change</td> </tr>
+                      <tr><td>(n)ext change</td> </tr>
+                      <tr><td>(t)op</td> </tr>
+                  </table></td> </tr>
+    </table>
+</body>
+
+</html>

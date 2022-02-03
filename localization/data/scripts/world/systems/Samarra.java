@@ -53,11 +53,11 @@ public class Samarra {
 		samarra1.setCustomDescriptionId("planet_eventide");
 		
 			// Eventide mirror system 
-			SectorEntityToken eventide_mirror1 = system.addCustomEntity("eventide_mirror1", "Eventide 恒星镜 Alpha", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror2 = system.addCustomEntity("eventide_mirror2", "Eventide 恒星镜 Beta", "stellar_mirror", "hegemony");	
-			SectorEntityToken eventide_mirror3 = system.addCustomEntity("eventide_mirror3", "Eventide 恒星镜 Gamma", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror4 = system.addCustomEntity("eventide_mirror4", "Eventide 恒星镜 Delta", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror5 = system.addCustomEntity("eventide_mirror5", "Eventide 恒星镜 Epsilon", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror1 = system.addCustomEntity("eventide_mirror1", "Eventide '阿尔法' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror2 = system.addCustomEntity("eventide_mirror2", "Eventide '贝塔' 恒星镜", "stellar_mirror", "hegemony");	
+			SectorEntityToken eventide_mirror3 = system.addCustomEntity("eventide_mirror3", "Eventide '伽马' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror4 = system.addCustomEntity("eventide_mirror4", "Eventide '德尔塔' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror5 = system.addCustomEntity("eventide_mirror5", "Eventide '艾普西龙' 恒星镜", "stellar_mirror", "hegemony");
 			eventide_mirror1.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 - 60, 400, 200);
 			eventide_mirror2.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 - 30, 400, 200);	
 			eventide_mirror3.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 + 0, 400, 200);	
@@ -70,9 +70,9 @@ public class Samarra {
 			eventide_mirror5.setCustomDescriptionId("stellar_mirror");
 			
 			// Eventide shade system 
-			SectorEntityToken eventide_shade1 = system.addCustomEntity("eventide_mirror1", "Eventide 恒星罩 Omega", "stellar_shade", "hegemony");
-			SectorEntityToken eventide_shade2 = system.addCustomEntity("eventide_mirror3", "Eventide 恒星罩 Psi", "stellar_shade", "hegemony");
-			SectorEntityToken eventide_shade3 = system.addCustomEntity("eventide_mirror5", "Eventide 恒星罩 Chi", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade1 = system.addCustomEntity("eventide_mirror1", "Eventide '欧米伽' 恒星罩", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade2 = system.addCustomEntity("eventide_mirror3", "Eventide '普西' 恒星罩", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade3 = system.addCustomEntity("eventide_mirror5", "Eventide '器' 恒星罩", "stellar_shade", "hegemony");
 			eventide_shade1.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 - 26, 390, 200);
 			eventide_shade2.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 + 0, 425, 200);	
 			eventide_shade3.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 + 26, 390, 200);		
@@ -138,7 +138,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L4 陨石区")); // null for default name
+						"Typhon L4 小行星带")); // null for default name
 			
 			SectorEntityToken typhonL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -148,7 +148,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L5 陨石区")); // null for default name
+						"Typhon L5 小行星带")); // null for default name
 			
 			typhonL4.setCircularOrbit(samarra_star, 60 + 60, 7000, 500);
 			typhonL5.setCircularOrbit(samarra_star, 60 - 60, 7000, 500);

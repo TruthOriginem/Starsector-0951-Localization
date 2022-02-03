@@ -109,7 +109,7 @@ public class SafetyOverrides extends BaseHullMod {
 			return "不能被安装在主力舰上";
 		}
 		if (ship.getVariant().hasHullMod(HullMods.CIVGRADE) && !ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
-			return "不能被安装在民用船上";
+			return "不能被安装在民用舰上";
 		}
 		
 		return null;

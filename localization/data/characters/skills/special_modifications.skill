@@ -1,8 +1,9 @@
 {
 	"id":"special_modifications",
-	"governingAptitude":"technology",
+	#"governingAptitude":"technology",
+	"governingAptitude":"leadership",
 	"compressHullmods":false,
-	"permanent":true,
+	#"permanent":true,
 	"scope":CUSTOM,
 	"scopeStr":"舰船装配",
 	"effectGroups":[

@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class StabilizedShieldEmitter extends BaseHullMod {
 
-	public static final float SHIELD_UPKEEP_BONUS = 50f;
+	public static float SHIELD_UPKEEP_BONUS = 50f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getShieldUpkeepMult().modifyMult(id, 1f - SHIELD_UPKEEP_BONUS * 0.01f);

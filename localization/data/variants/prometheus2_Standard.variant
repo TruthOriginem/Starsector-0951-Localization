@@ -1,11 +1,12 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 16,
+    "fluxCapacitors": 31,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "prometheus2",
     "hullMods": ["dedicated_targeting_core"],
     "permaMods": [],
+    "sMods": [],
     "variantId": "prometheus2_Standard",
     "weaponGroups": [
         {

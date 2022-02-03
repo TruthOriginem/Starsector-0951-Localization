@@ -48,14 +48,13 @@ class String:
     context: str = ''  # 词条的备注信息
 
     def __post_init__(self):
-        self.original = self.original.replace('/n', '\n')
-        self.translation = self.translation.replace('/n', '\n')
+        # 如果从 ParaTranz 输出的 json 导入，则需要将\\n替换回\n
+        # 本程序输出的 json 不应包含 \\n，原文中的\\n使用^n替代
+        self.original = self.original.replace('\\n', '\n')
+        self.translation = self.translation.replace('\\n', '\n')
 
     def as_dict(self) -> Dict:
-        d = dataclasses.asdict(self)
-        d['original'] = self.original.replace('\n', '/n')
-        d['translation'] = self.translation.replace('\n', '/n')
-        return d
+        return dataclasses.asdict(self)
 
 
 # 用于表示游戏原文、译文文件的抽象类
@@ -163,14 +162,14 @@ class CsvFile(DataFile):
     def generate_row_context(self, row: dict) -> str:
         row_num = self.original_data.index(row)
 
-        return f"提取自 {self.path.name} 第 {row_num + 1} 行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
+        return f"{self.path.name}第{str(row_num + 1).zfill(4)}行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
 
     # 将数据转换为 ParaTranz 词条数据对象，并保存到json文件中
     def save_strings_json(self, ensure_ascii=False, indent=4) -> None:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
         self.para_tranz_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(self.para_tranz_path, 'w') as f:
+        with open(self.para_tranz_path, 'w', encoding='utf-8') as f:
             data = []
             for string in strings:
                 data.append(string.as_dict())
@@ -184,15 +183,15 @@ class CsvFile(DataFile):
         for s in strings:
             _, id, column = re.split('[#$]', s.key)
             if id in self.translation_id_data:
-                if s.translation:
+                # 如果词条已翻译并且译文不为空，则使用新译文覆盖
+                if s.stage > 0 and s.translation:
                     self.translation_id_data[id][column] = s.translation
-                elif not contains_chinese(self.translation_id_data[id][column]):
-                    self.translation_id_data[id][column] = s.original
-                else:
+                elif contains_chinese(self.translation_id_data[id][column]):
                     logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行已被翻译，'
                                    f'但更新的译文数据未翻译该词条，保持原始翻译不变')
             else:
                 logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条')
+
     # 从json文件读取 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings_from_json(self) -> None:
         if self.para_tranz_path.exists():
@@ -200,7 +199,8 @@ class CsvFile(DataFile):
             with open(self.para_tranz_path, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)  # type:List[Dict]
             for d in data:
-                strings.append(String(d['key'], d['original'], d.get('translation', '')))
+                strings.append(
+                    String(d['key'], d['original'], d.get('translation', ''), d['stage']))
             self.update_strings(strings)
             logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
@@ -209,7 +209,7 @@ class CsvFile(DataFile):
 
     # 将译文数据写回译文csv中
     def save_translation_data(self) -> None:
-        with open(self.translation_path, 'r', newline='') as f:
+        with open(self.translation_path, 'r', newline='', encoding='utf-8') as f:
             csv = reader(f)
             real_column_names = csv.__next__()
 
@@ -223,10 +223,11 @@ class CsvFile(DataFile):
             for col, value in dict_row.items():
                 if col:
                     # 将csv行内换行的\n替换为\r\n以避免csv写入时整个文件变成\n换行(LF)的问题
-                    value = value.replace('\n', '\r\n')
+                    # 将读取csv时使用的^n替换回\\n
+                    value = value.replace('^n', '\\n').replace('\n', '\r\n')
                     row[real_column_index[col]] = value
             rows.append(row)
-        with open(self.translation_path, 'w', newline='') as f:
+        with open(self.translation_path, 'w', newline='', encoding='utf-8') as f:
             writer(f).writerows(rows)
 
     @staticmethod
@@ -240,8 +241,9 @@ class CsvFile(DataFile):
         """
         data = []
         id_data = {}
-        with open(path, 'r', errors="surrogateescape") as csv_file:
-            csv_lines = [replace_weird_chars(l) for l in csv_file]
+        with open(path, 'r', errors="surrogateescape", encoding='utf-8') as csv_file:
+            # 替换不可识别的字符，并将原文中的 \n 转换为 ^n，以与csv中的直接换行进行区分
+            csv_lines = [replace_weird_chars(l).replace('\\n', '^n') for l in csv_file]
             rows = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
@@ -302,7 +304,7 @@ def load_csv_files() -> List[CsvFile]:
     ]
     """
     logger.info('开始读取游戏原文与译文数据')
-    with open(CONFIG_PATH) as f:
+    with open(CONFIG_PATH, encoding='utf-8') as f:
         d = json.load(f)
     files = [CsvFile(**mapping) for mapping in d]
     logger.info('游戏原文与译文数据读取完成')
@@ -328,6 +330,8 @@ def replace_weird_chars(s: str) -> str:
     return s.replace('\udc94', '""') \
         .replace('\udc93', '""') \
         .replace('\udc92', "'") \
+        .replace('\udc91', "'") \
+        .replace('\udc96', "-") \
         .replace('\udc85', '...')
 
 

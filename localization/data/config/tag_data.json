@@ -19,7 +19,7 @@
 		"name":"重大事件",
 		#"color":"buttonShortcut",
 		"width":119,
-		"putFirst":true,
+		#"putFirst":true,
 		"sort":30,
 	},
 	"Contacts":{

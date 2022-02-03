@@ -22,14 +22,17 @@
 	"screenScaleOverride":0, # > 0 overrides UI scaling value from in-game settings 
 	"enableLauncherWarnings":true,
 	
-	"baseMemoryRequired":1024,
-	"maxMemoryFractionOfTotal":0.5,
-	"maxMemoryMB":6144,
 	
 	# experimental feature; can cause problems such as invisible ships in combat and mouse-panning issues
 	# but only on some PCs
 	"allowJVMRestartFromLauncher":false,
 	"allowJVMRestartFromLauncherInDevMode":false,
+	
+	# these only have any effect if allowJVMRestartFromLauncher is set to true
+	"baseMemoryRequired":1024,
+	"maxMemoryFractionOfTotal":0.5,
+	"maxMemoryMB":6144,
+	
 	
 	"doRAMandVRAMChecksWhenRunningWithMods":true, # will periodically check if ram/vram is low and warn the player
 	"memoryCheckVerbose":false,
@@ -66,7 +69,7 @@
 	"idleWhileWindowNotVisible":true,
 	
 	"legacyLauncher":false,
-	"oneClickJumpPoints":false,
+	"oneClickJumpPoints":false, # does not work do not set to true
 	"altMouseMoveToMassTransfer":false,
 	
 	"combatSpeedMult":1f,
@@ -97,6 +100,8 @@
 	"fogOfWar":true,
 	"fogOfWarColor":[70,92,114,0],   # alpha channel of this color is not used
 	"smallClouds":true,  # set to true to improve nebula rendering performance
+	# set to false to *maybe* work around driver issue re: fps drop when using Heron's system with shielded fighters
+	"renderShieldJitterEffect":true,
 	"compressSaveGameData":false, # smaller files, faster saving/loading
 	
 	# disabled for now, causes issues with subsequent runs if game is shut down during startup
@@ -118,6 +123,7 @@
 	"enableShipExplosionWhiteout":true,
 	"asteroidBeltMapColor":[70,50,40,255],
 	"ringSystemMapColor":[100,130,145,255],
+	"slipstreamUseGLLines":true, # a bit faster but may have some rendering issues depending on drivers
 	
 	"allowShipControlWhilePaused":true,
 	"transferCommandCRCost":0,
@@ -575,15 +581,15 @@
 	
 	#"adminMaxHireable":20,
 	"adminHireTier0":5000,
-	"adminHireTier1":10000,
-	"adminHireTier2":50000,
+	"adminHireTier1":40000,
+	"adminHireTier2":40000, # need to keep for backwards comp for now
 	"adminSalaryTier0":2500,
-	"adminSalaryTier1":5000,
-	"adminSalaryTier2":25000,
+	"adminSalaryTier1":20000,
+	"adminSalaryTier2":20000, # need to keep for backwards comp for now
 	"idleAdminSalaryMult":0.1,
 	
 	"baseMaxOutposts":2,
-	"baseMaxAdmins":2,
+	"baseMaxAdmins":3,
 	"colonyOverMaxPenalty":2,
 	
 	
@@ -598,17 +604,26 @@
 	"adminBaseProb":0.05,
 	"adminProbPerColonySize":0.05,
 	"maxOfficerPromoteProb":0.1, # post-combat
+	"officerPromoteProbMult":0.2, # post-combat; multiplier applied to ratio of FP destroyed to player fleet FP
 	
 	"officerMercMinLevel":4,
 	"officerMercMaxLevel":6,
 	"officerMercPayMult":2, # hiring bonus and salary
-	"officerMercContractDur":365, # minimum days before mercs will try to leave
+	"officerMercContractDur":730, # minimum days before mercs will try to leave
 	
+	"officerXPRequiredMult":5, # higher number = slower officer level gain
 	"officerMaxLevel":5,
 	"officerMaxEliteSkills":1,
 	"officerAIMax":10,
-	"minSleeperPodsOfficerLevel":4,
-	"maxSleeperPodsOfficerLevel":7,
+	
+	"minSleeperPodsOfficerLevel":4, # unused but leaving it in til post 0.95.1
+	"maxSleeperPodsOfficerLevel":7, # unused but leaving it in til post 0.95.1
+	"standardSleeperPodsOfficerLevel":5,
+	"exceptionalSleeperPodsOfficerLevel":7,
+	"exceptionalSleeperPodsOfficerEliteSkills":5,
+	"maxExceptionalSleeperPodsOfficers":4, # per Sector; can be generated in derelict ships, too, so eventually there WILL be that many
+	"probSleeperPodsOfficerIsExceptional":0.2, # there's 20ish sleeper pod officers total
+	
 	"maxAIFleetCommanderLevel":7,
 	"commanderLevelForTwoSkills":6,
 	"commanderLevelForOneSkill":4,
@@ -636,6 +651,7 @@
 	"suppliesPerCargoUnitOverCapacity":0.1;
 	"suppliesPerFuelUnitOverCapacity":0.1;
 	"suppliesPerPersonnelUnitOverCapacity":0.1;
+	"maxSuppliesPerDayForOverCapacity":50; # for each type of capacity, so, max 150 total
 	"supplyConsumptionMothballedMult":0;
 	
 	"suppliesPerShipOverMaxInFleet":0.2, # this is actually a fraction for the total maintenance cost, this * (ships - maxShipsInFleet) 
@@ -691,7 +707,7 @@
 	"detectionRangeDetailsAlwaysNonFleet":0.3, # fraction of max detection range at which hidden entities are "discovered"
 	
 	"minBattleSize":200, # in supplies-to-recover. min value for settings slider
-	"defaultBattleSize":300, # in supplies-to-recover. starting value for settings slider
+	"defaultBattleSize":400, # in supplies-to-recover. starting value for settings slider
 	"maxBattleSize":400, # in supplies-to-recover. max value for settings slider
 	"stationDeploymentBonusMult":1, # battlesize is increased by (station cost * this) deployment points
 	"minFractionOfBattleSizeForSmallerSide":0.4,
@@ -725,6 +741,7 @@
 		"permModMaxBonusXP":0.8, 
 		
 		"mentorOfficer":1,
+		"retrainOfficer":1,
 		"pickEliteSkillForOfficer":0,
 		"fullyIntegrateAICore":0,
 		"promoteCrewMember":1,
@@ -787,6 +804,7 @@
 		"gaATG_hegFleetStory4":1,
 		"gaATG_luddicScan32":1,
 		"gaATG_pirateScanReason3":1,
+		"soe_duelPrepStudied":1,
 		
 	},
 	
@@ -811,6 +829,7 @@
 		
 		"coordinatedManeuversPlugin":"com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript",
 		"electronicWarfarePlugin":"com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfareScript",
+		"neuralLinkPlugin":"com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript",
 		"genericCombatPlugin":"com.fs.starfarer.api.impl.combat.GenericCombatPlugin",
 		"commRelayPlugin":"com.fs.starfarer.api.impl.campaign.skills.CommRelayScript",
 	},
@@ -900,68 +919,51 @@
 	"bottomMenuButtonInsetColor":[87,202,250,255],
 
 	"designTypeColors":{
-		"Common":[190,200,200,255],
 		"普通":[190,200,200,255],
-		
+		"Common":[190,200,200,255],
+		#"Common":[170,222,255,255],
+		#"Low Tech":[245,150,30,255],
+		#"Midline":[200,200,200,255],
+		#"High Tech":[135,206,255],
 		"Low Tech":[209,110,91,255],
 		"主宰纪元":[209,110,91,255],
-		
 		"Midline":[221,201,104,255],
 		"核心纪元":[221,201,104,255],
-		
 		"High Tech":[160,213,225,255],
 		"扩展纪元":[160,213,225,255],
-		
 		"Remnant":[70,255,235,255],
 		"余辉":[70,255,235,255],
-		
 		"Explorarium":[155,139,134,255],
 		"开拓者":[155,139,134,255],
-		
 		"Pirate":[200,0,0,255],
 		"海盗":[200,0,0,255],
-		
 		"Tri-Tachyon":[135,206,255,255],
 		"速子科技":[135,206,255,255],
-		
 		"Hegemony":[245,150,30,255],
 		"霸主":[245,150,30,255],
-		
 		"XIV Battlegroup":[252,173,60,255],
 		"第十四军团":[252,173,60,255],
-		
 		"Luddic Path":[150,200,0,255],
 		"卢德左径":[150,200,0,255],
-		
 		"Luddic Church":[76,169,20,255],
-		"卢德教会":[75,169,20,255],
-		
+		"卢德教会":[76,169,20,255],
 		"Persean League":[220,185,20],
 		"英仙座联盟":[220,185,20],
 		
-		
-		"Unknown":[155,155,155,255], # special weapons
+		"Unknown":[155,155,155,255],
 		"未知":[155,155,155,255], # special weapons
-		
 		"Domain Restricted":[155,155,155,255],
 		"人之领管制科技":[155,155,155,255],
-		
 		"Fabrique Orbitale":[100,100,200,255],
 		"轨道工厂制造公司":[100,100,200,255],
-		
 		"Exodyne Biotech":[201,219,4,255],
 		"艾克索达因生物科技":[201,219,4,255],
-		
 		"Ko Combine":[221,201,104,255],
 		"Ko 联合实业":[221,201,104,255],
-		"Ko联合实业":[221,201,104,255],
-		
 		"Eridani-Utopia Terraforming":[204,229,255,255],
 		"天苑四-乌托邦地貌改造集团":[204,229,255,255],
-		
 		"Mbaye-Gogol":[233,233,121,255],
 		"姆巴耶-果戈尔":[233,233,121,255],
-		
 		"Bhilai Astra":[200,80,67,255],
 		"比莱空间":[200,80,67,255],
 	},
@@ -989,6 +991,12 @@
 		},
 		"misc":{
 			#"beam_dark_core":"graphics/fx/beam_dark_core.png",
+			"slipstream_map":"graphics/fx/slipstream_map3.png",
+			"slipstream_map_edge":"graphics/fx/slipstream_map_edge2.png",
+			"slipstream0":"graphics/fx/slipstream_dark.png",
+			"slipstream1":"graphics/fx/slipstream_layer1.png",
+			"slipstream2":"graphics/fx/slipstream_layer2.png",
+			"slipstream_edge":"graphics/fx/slipstream_edge3.png",
 			"fx_radial":"graphics/fx/radial_fx.png",
 			"fx_particles1":"graphics/fx/fx_clouds00.png",
 			"fx_particles2":"graphics/fx/fx_clouds01.png",
@@ -1017,6 +1025,7 @@
 			"fighterButtonBlank":"graphics/ui/fighter_blank.png",
 			"cargoPods":"graphics/debris/cargo_pod_sheet1.png",
 			"campaignDerelictOverlay":"graphics/damage/ship_damage_over5.png",
+			"THEDUEL":"graphics/misc/the_duel.png",
 		},
 		"abilities":{
 			"holder":"graphics/ui/campaign_abilities.png",
@@ -1039,7 +1048,6 @@
 			"nebula_amber_map":"graphics/terrain/nebula_amber_map.png",
 			#"nebula_dark":"graphics/fx/nebula_dark.png",
 			#"nebula_dark_map":"graphics/terrain/nebula_blue_map.png",
-			#"slipstream_point":"graphics/fx/hit_glow_small.png",
 			"aurora":"graphics/planets/aurorae.png",
 			#"aurora_neutron":"graphics/planets/aurorae2.png",
 			"pulsar":"graphics/fx/beam_pulsar.png",
@@ -1122,6 +1130,7 @@
 		"characters":{
 			"andrada":"graphics/portraits/characters/andrada1.png",
 			"arroyo":"graphics/portraits/characters/arroyo.png",
+			"balashi":"graphics/portraits/characters/balashi.png",
 			"cotton":"graphics/portraits/characters/cotton.png",
 			"coureuse":"graphics/portraits/characters/coureuse.png",
 			"gargoyle":"graphics/portraits/characters/gargoyle.png",
@@ -1143,6 +1152,13 @@
 			"cavin_pharoh":"graphics/portraits/portrait36.png",
 			"horus_yaribay":"graphics/portraits/characters/horus_yaribay.png",
 			"orcus_rao":"graphics/portraits/characters/orcus_rao.png",
+			"elek":"graphics/portraits/characters/elek.png",
+			"jethro_bornanew":"graphics/portraits/characters/jethro_bornanew.png",
+			"jaspis":"graphics/portraits/characters/jaspis.png",
+			"caspian":"graphics/portraits/characters/caspian_sang.png",
+			"neriene_rao":"graphics/portraits/characters/neriene_rao.png",
+			"augusta_rao":"graphics/portraits/characters/augusta_rao.png",
+			"magnus_cardona":"graphics/portraits/characters/magnus_cardona.png",
 			
 			# unused right now
 			#"tt_fixer_MALE":"graphics/portraits/portrait_corporate03.png",
@@ -1351,7 +1367,7 @@
 			"dead_gate":"graphics/illustrations/dead_gate.jpg",
 			"active_gate":"graphics/illustrations/active_gate.jpg",
 			#"harry":"graphics/illustrations/harry.jpg",
-			
+			"eventide":"graphics/illustrations/eventide.jpg",
 			"space_bar":"graphics/illustrations/space_bar.jpg",
 			"pirate_bar":"graphics/illustrations/pirate_bar.jpg",
 			"hegemony_bar":"graphics/illustrations/hegemony_bar.jpg",
@@ -1424,6 +1440,7 @@
 			
 		
 			# ship status list icons begin
+			"icon_neural_link":"graphics/icons/tactical/neural_link.png",
 			"icon_tactical_coordinated_maneuvers":"graphics/warroom/objective_nav_buoy.png",
 			"icon_tactical_electronic_warfare":"graphics/warroom/objective_sensor_array.png",
 			

@@ -62,7 +62,7 @@ public class Tyle {
 		// An asteroid field
 		system.addRingBand(tyle_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 4300, 220f, null, null);
 		system.addRingBand(tyle_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 4400, 226f, null, null);
-		system.addAsteroidBelt(tyle_star, 60, 4350, 170, 200, 250, Terrain.ASTEROID_BELT, "Tyle 陨石带");
+		system.addAsteroidBelt(tyle_star, 60, 4350, 170, 200, 250, Terrain.ASTEROID_BELT, "Tyle 小行星带");
 		
 		PlanetAPI tyle_c = system.addPlanet("zuni", tyle_star, "Zuni", "barren", 90, 60, 4800, 260);
 		
@@ -75,7 +75,7 @@ public class Tyle {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Wuya 陨石带")); // null for default name
+					"Wuya 小行星带")); // null for default name
 		
 		tyle_field1.setCircularOrbit(tyle_star, 90 + 60, 4800, 260);
 		
@@ -112,7 +112,7 @@ public class Tyle {
 					60, // max asteroid count
 					4f, // min asteroid radius 
 					20f, // max asteroid radius
-					"Sargossa 陨石带")); // null for default name
+					"Sargossa 小行星带")); // null for default name
 		
 		tyle_field2.setCircularOrbit(tyle_star, 180 - 60, 9000, 750);
 		

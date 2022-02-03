@@ -34,6 +34,7 @@
 		"tags":{
 		},
 		"hulls":{
+			"dominator":0.2, # fewer of those, mostly eradicators
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
@@ -45,6 +46,7 @@
 	"knownShips":{
 		"tags":["base_bp", "lowtech_bp", "luddic_church", "LC_bp"],
 		"hulls":[
+			"eradicator",
 			"atlas",
 			"prometheus",
 			"legion",
@@ -118,9 +120,9 @@
 			"fluxbreakers",
 			"surveying_equipment",
 			"efficiency_overhaul",
-			"escort_package",
-			"assault_package",
 			"converted_fighterbay",
+			"ballistic_rangefinder",
+			"shield_shunt",
 		],
 	},
 	"factionDoctrine":{
@@ -173,6 +175,7 @@
 		"combatLarge":{
 			"includeDefault":true,
 			"dominator_Fighter_Support":50,
+			"eradicator_Fighter_Support":50,
 		},
 		"phaseSmall":{
 			"fallback":{"combatSmall":1},
@@ -217,7 +220,6 @@
 			"graphics/portraits/portrait_luddic09.png",
 		],
 		"standard_female":[
-			"graphics/portraits/portrait_mercenary02.png",
 			"graphics/portraits/portrait14.png",
 			"graphics/portraits/portrait16.png",
 			"graphics/portraits/portrait21.png",

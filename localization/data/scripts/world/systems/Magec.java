@@ -169,14 +169,14 @@ public class Magec {
 		
 		
 		//SectorEntityToken civilianStation = system.addOrbitalStation("new_maxios", star, 0, 3900, 160, "New Maxios", "independent");
-		SectorEntityToken civilianStation = system.addCustomEntity("new_maxios", "Nova Maxios", "station_side07", "independent");
+		SectorEntityToken civilianStation = system.addCustomEntity("new_maxios", "新 Maxios", "station_side07", "independent");
 		civilianStation.setCustomDescriptionId("station_new_maxios");
 		civilianStation.setInteractionImage("illustrations", "cargo_loading");
 		civilianStation.setCircularOrbitWithSpin(star, 0, 3900, 160, 2, 5);
 		
 		// Guayota Relay - L5 (behind); well, okay, not quite the L5. But whatever.
 		SectorEntityToken guayota_relay = system.addCustomEntity("guayota_relay", // unique id
-				 "Guayota Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Guayota 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay_makeshift", // type of object, defined in custom_entities.json
 				 "independent"); // faction
 		

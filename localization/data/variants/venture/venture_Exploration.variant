@@ -1,6 +1,6 @@
 {
     "displayName": "勘探",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 10,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "venture",

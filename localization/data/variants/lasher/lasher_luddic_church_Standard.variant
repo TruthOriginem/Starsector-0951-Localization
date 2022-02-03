@@ -1,7 +1,7 @@
 {
-    "displayName": "路德",
-    "fluxCapacitors": 10,
-    "fluxVents": 9,
+    "displayName": "卢德",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
     "hullId": "lasher_luddic_church",
     "hullMods": [
         "blast_doors",
@@ -10,7 +10,7 @@
         "auxiliarythrusters"
     ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "lasher_luddic_church_Standard",
     "weaponGroups": [
         {

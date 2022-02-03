@@ -21,7 +21,9 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				#{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation$Level3"},
-				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation$Level1"},
+				#{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation$Level1"},
+				#{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation$Level5"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation$Level6"},
 			]
 		},
 	],

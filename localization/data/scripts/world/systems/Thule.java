@@ -47,13 +47,13 @@ public class Thule {
 				SectorEntityToken array1 = system.addCustomEntity(null, null, "sensor_array", Factions.PERSEAN); 
 				array1.setCircularOrbitPointingDown( thule_star, 60, 2870, 90);
 		
-		system.addAsteroidBelt(thule_star, 90, 3750, 500, 100, 120, Terrain.ASTEROID_BELT,  "Ingwin 陨石带");
+		system.addAsteroidBelt(thule_star, 90, 3750, 500, 100, 120, Terrain.ASTEROID_BELT,  "Ingwin 小行星带");
 		system.addRingBand(thule_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3600, 105f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3720, 115f, null, null);
 		
 		PlanetAPI laki = system.addPlanet("laki", thule_star, "Laki", "barren3", 0, 95, 4000, 100);
 		
-		system.addAsteroidBelt(thule_star, 90, 4550, 500, 290, 310, Terrain.ASTEROID_BELT,  "Hama 陨石带");
+		system.addAsteroidBelt(thule_star, 90, 4550, 500, 290, 310, Terrain.ASTEROID_BELT,  "Hama 小行星带");
 		system.addRingBand(thule_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4500, 305f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 4600, 295f, null, null);
 		
@@ -89,7 +89,7 @@ public class Thule {
 			SectorEntityToken kazeron_relay = system.addCustomEntity("kazeron_relay", "Kazeron 通讯中继站",  "comm_relay", Factions.PERSEAN); 
 			kazeron_relay.setCircularOrbitPointingDown( thule_star, 150, 5200, 225);
 			
-		system.addAsteroidBelt(thule_star, 90, 5950, 500, 150, 300, Terrain.ASTEROID_BELT,  "Inged 陨石带");
+		system.addAsteroidBelt(thule_star, 90, 5950, 500, 150, 300, Terrain.ASTEROID_BELT,  "Inged 小行星带");
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 1, Color.white, 256f, 5900, 305f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 2, Color.white, 256f, 6020, 295f, null, null);
 			
@@ -117,7 +117,7 @@ public class Thule {
 				SectorEntityToken eldfell_stable = system.addCustomEntity(null, null, "stable_location", "neutral");
 				eldfell_stable.setCircularOrbitPointingDown( thule_star, 180-60 , 6700, 360);
 				
-		system.addAsteroidBelt(thule_star, 90, 7650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Garmund 陨石带");
+		system.addAsteroidBelt(thule_star, 90, 7650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Garmund 小行星带");
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 2, Color.white, 256f, 7750, 385, null, null);
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 1, new Color(230,240,255,255), 256f, 7870, 395, null, null);
 		
