@@ -11,7 +11,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。 ",提高船体结构、装甲强度、以及幅能容量.,graphics/hullmods/assault_package.png
 自动修复模组,autorepair,2,,,"engines, defensive, merc",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低}%s}在战斗中修复受损武器及引擎的时间。,加快战斗中武器的维修速率.,graphics/hullmods/automated_repair_unit.png
 辅助推进器,auxiliarythrusters,1,,,"engines, merc",引擎,5000,TRUE,,,5,10,15,25,data.hullmods.AuxiliaryThrusters,提高舰船}%s}机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性.,graphics/hullmods/auxilliary_thrusters.png
-弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,<tooltip created in the script due to lots of highlighting>,"提高在实弹武器槽中, 小型与中型武器的基础射程.",graphics/hullmods/ballistic_rangefinder.png
+弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高小型实弹槽位上的武器与中型实弹槽位上的武器的射程。,"提高在实弹武器槽中, 小型与中型武器的基础射程.",graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc",防御,2500,TRUE,,,5,10,15,25,data.hullmods.BlastDoors,"在各个要害部位安装坚固的钢制密封门，提高}%s}船体结构。
 
 降低}%s}战斗中因船体结构受损而造成的船员伤亡。 ","提高舰船耐久, 降低船员损失.",graphics/hullmods/blast_doors.png
@@ -57,7 +57,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 同时还降低了}%s}战备值}(CR)}在战斗中衰减的速度。 ","提高峰值时间, 且降低战备值}(CR)}的衰减速率.",graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc",防御,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,按舰船级别，提高}%s/%s/%s/%s}装甲，降低}%s}机动性。,"提高装甲值, 降低机动性.",graphics/hullmods/heavy_armor.png
-高散射增幅器,high_scatter_amp,3,,,"offensive, merc",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,<tooltip created in the script due to sections>,"提高光束武器的伤害, 还可对护盾造成硬幅能伤害, 但降低其基础射程.",graphics/hullmods/high_scatter_amp.png
+高散射增幅器,high_scatter_amp,3,,,"offensive, merc",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。,"提高光束武器的伤害, 还可对护盾造成硬幅能伤害, 但降低其基础射程.",graphics/hullmods/high_scatter_amp.png
 整合点防御 AI,pointdefenseai,3,,,"defensive, merc","武器, 防御",10000,,,,4,8,12,20,data.hullmods.IntegratedPointDefenseAI,"给予所有小型的非导弹型武器自动拦截敌方来袭导弹以及识别并无视热诱弹的能力。锁定导弹的优先级大于战机与敌舰。
 
 此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。且对导弹造成的伤害提高}%s。 ",所有非导弹的小型武器都具备点防能力.,graphics/hullmods/integrated_point_defense_ai.png
@@ -181,7 +181,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 永久分离,always_detaches,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.AlwaysDetaches,当被破坏时，会从主体上分离。,,graphics/hullmods/detach_always.png
 永不分离,never_detaches,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.NeverDetaches,当被破坏时，不会从主体上分离。,,graphics/hullmods/detach_never.png
 零幅能武器,no_weapon_flux,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.NoWeaponFlux,武器开火时将不产生幅能。,,
-无需开火,do_not_fire_through,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.DoNotFireThrough,其他模块上的武器会避免朝着该模块进行射击，且所有炮火均会穿过本模块而不会命中。,,
+视为障碍,do_not_fire_through,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.DoNotFireThrough,其他模块上的武器会避免朝着该模块进行射击，且所有炮火均会穿过本模块而不会命中。,,
 生成碎片,shard_spawner,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShardSpawner,该舰被摧毁或停机时生成欧米伽子机碎片。,,
 取消后退,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,设置}DO_NOT_BACK_OFF}AI}行为,,
 ,,,,,,,,,,,,,,,,,,

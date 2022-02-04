@@ -42,7 +42,7 @@ cybernetic_augmentation,模控增强,1075,4,2,0,不要听信伦理委员会里�
 phase_corps,相位兵团,1070,4,2,0,速子科技每天都在试图撬开神圣的造物，每一次的亵渎都带来了对全人类的诅咒。我们的道路是艰险的。我们的道路是痛苦的。我们应该以信仰为凭对抗他们，只因救赎存于末日审判之中。,卢德左径恐怖分子 Livewell Cotton 于 c205.2.12 的布道,,TRUE,,,graphics/icons/skills/phase_corps.png,
 special_modifications,特殊改装,1080,5,,,那些人之领设计师？噢，他们的设计确实百世流传，当然没错。但看看那些舒适化设计，你就知道那些设计师可不太敢把它们的性能推到极限。,独立工程师 Luna Hexagen 于 Agreus city,,,,"npc_only, deprecated",graphics/icons/skills/special_modifications.png,
 neural_link,神经链接,1080,5,4,2,为什么舰长必须要和他们的舰船一起沉没？速子科技公司从不浪费顶级人才。,"运营副总裁 Nereid De Jong 在 ""赫克特项目"" 揭幕仪式上的致辞",,,,,graphics/icons/skills/neural_link.png,
-automated_ships,无人战舰,1090,5,4,2,[数据删除],霸主通信安全协议,,,,,graphics/icons/skills/automated_ships.png,
+automated_ships,无人战舰,1090,5,4,2,[数据删除],霸主 COMSEC,,,,,graphics/icons/skills/automated_ships.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 # INDUSTRY,,,,,,,,,,,,,
@@ -55,7 +55,7 @@ polarized_armor,极化装甲,1540,3,1,,"""大崩塌""}前传下来的手册说�
 containment_procedures,密闭流程,1550,4,2,,封口查三遍，死神不来见。,太空舰长俗语,,,,,graphics/icons/skills/containment_procedures.png,
 makeshift_equipment,临时设备,1560,4,2,,我们好像把备用的丢在轨道了，不过没事...}(滋滋声)...}看好了啊}——,"""H"" 探索小队的领袖 Jericho Wheeler 的音频备份转录",,,,,graphics/icons/skills/makeshift_equipment.png,
 industrial_planning,工业规划,1570,4,2,,一个荒芜但具有潜力的星球，位置便于成为}Magec}的文化和工业中心，我们的模型预计在开发}Guayota}行星环的资源上将需要大量投资。,"速子科技策略发展备忘录，""大崩塌"" 前",,,TRUE,,graphics/icons/skills/industrial_planning.png,
-derelict_contingent,废船舰队,1590,5,4,2,那些漂亮星舰里的高管和提督们觉得我们是一堆垃圾，一旦战局不妙就会抛下我们。既然这片星区是我们建立起来的，那我们也有资格将它毁灭。,不知名的海盗煽动者，出自霸主情报部监视报告,,TRUE,,player_only,graphics/icons/skills/derelict_contingent.png,
+derelict_contingent,废船舰队,1590,5,4,2,那些漂亮星舰里的高管和提督们觉得我们是一堆垃圾，一旦战局不妙就会抛下我们。既然这片星区是我们建立起来的，那我们也有资格将它毁灭。,不知名的海盗煽动者，出自 HEGINT 监视报告,,TRUE,,player_only,graphics/icons/skills/derelict_contingent.png,
 hull_restoration,船体修复,1580,5,4,2,再破烂的船体也不能阻止一名真正的太空船员视之为家。,Sol Secondshift，资深打捞员,,,,,graphics/icons/skills/recovery_ops.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
@@ -72,18 +72,17 @@ hypercognition,极化认知,10001,0,,,"一台拥有无限可能的机器可将�
 ,,,,,,,,,,,,,
 "# removed in 0.95.1a, but kept around for save compatibility",,,,,,,,,,,,,
 space_operations,太空行动,590,5,4,2,每个世界仰望的都是同一片星空。,英仙座联盟宪章,,,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
-planetary_operations,地表行动,600,5,4,2,"The mud? I don't mind it. Spacers always carry on about mud.
-It's the blood I can't stand.",Griffin Sweet，佣兵陆战队员,,,,"npc_only, deprecated",graphics/icons/skills/planetary_ops.png,
+planetary_operations,地表行动,600,5,4,2,"泥?我不在乎沾上泥巴，那些太空船长总是在乎泥巴。
+沾上血才是我不能忍受的。",Griffin Sweet，佣兵陆战队员,,,,"npc_only, deprecated",graphics/icons/skills/planetary_ops.png,
 colony_management,殖民管理,1590,5,4,2,此有生命，此为上帝之座，此为万有之地。,卢德圣本,,,,"npc_only, deprecated",graphics/icons/skills/colony_management.png,
-strike_commander,打击指挥,20,1,0,,诸位马上就要起飞，诸位将形成一场敌人从未见过的风暴。诸位就是划破天际的雷霆!,"Navarch Mars Kato, address to the bomber crews of the Sirocco
-",TRUE,,,"carrier, spec, npc_only, deprecated",graphics/icons/skills/strike_commander.png,
+strike_commander,打击指挥,20,1,0,,诸位马上就要起飞，诸位将形成一场敌人从未见过的风暴。诸位就是划破天际的雷霆!,海军都统{Mars Kato}对{Sirocco}号轰炸机乘员的演讲,TRUE,,,"carrier, spec, npc_only, deprecated",graphics/icons/skills/strike_commander.png,
 ranged_specialization,远程特化,60,3,0,,看到这个射击方案了吗?它能让防御算法在正好错误的时间过度反应。关键就在于，要让对手看见你的攻击。,首席士官 Cameron Fourth-Phobos 于 Coatl 炮兵训练场发布的指导意见,TRUE,,,"spec, npc_only, deprecated",graphics/icons/skills/ranged_specialization.png,
 shield_modulation,护盾调制,70,4,0,,"很少人拥有我称之为""主动调谐""的才能，我发现音乐家总能成为最好的护盾长。",Ardis Soloman，来自被通信安全节录算法所泄露的数据,TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
 phase_mastery,相位大师,80,4,0,,我永远不会回到那艘船上的——绝不。,"军事法庭记录 [数据删除], 大约于 ~c196?",TRUE,,,"phase, spec, elite_player_only, npc_only, deprecated",graphics/icons/skills/phase_mastery.png,
 reliability_engineering,可靠工程,1530,2,0,,终，以宇与辐之名，吾身将逝。吾将为同袍送归星辰之中，然吾舟将永航。,太空舰长俗语,TRUE,,,"npc_only, deprecated",graphics/icons/skills/reliability_engineering.png,
-weapon_drills,武装演习,500,1,0,,"What's it stopped the Tri-Tach plot? (Guns!)
-What was it ol' Ludd forgot? (Guns!)
-What’ve we got that they have not? (Big, big, guns!)",霸主海军的酒醉歌,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
+weapon_drills,武装演习,500,1,0,,"是什么阻止了速子的阴谋? (大炮!)
+是什么被老卢德忘在脑后? (大炮!)
+是什么我们有而他们没有? (更大，更大，更大的大炮!)",霸主海军的酒醉歌,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
 auxiliary_support,辅助支援,510,1,0,,没有后备部队?看看你的周围!民用船坞里停着上千艘星舰而居住区里有着近十亿的平民。我们要做的就是打开军械库，在入侵到来之前把武器分发给他们。,Baikal Daud 于 Chicomoztoc 防御战 发表的讲话,,,,"npc_only, deprecated",graphics/icons/skills/auxiliary_support.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,

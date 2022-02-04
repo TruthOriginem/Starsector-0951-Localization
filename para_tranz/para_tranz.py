@@ -195,12 +195,7 @@ class CsvFile(DataFile):
     # 从json文件读取 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings_from_json(self) -> None:
         if self.para_tranz_path.exists():
-            strings = []
-            with open(self.para_tranz_path, 'r', encoding='utf-8-sig') as f:
-                data = json.load(f)  # type:List[Dict]
-            for d in data:
-                strings.append(
-                    String(d['key'], d['original'], d.get('translation', ''), d['stage']))
+            strings = self.load_json_strings(self.para_tranz_path)
             self.update_strings(strings)
             logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
@@ -229,6 +224,16 @@ class CsvFile(DataFile):
             rows.append(row)
         with open(self.translation_path, 'w', newline='', encoding='utf-8') as f:
             writer(f).writerows(rows)
+
+    @staticmethod
+    def load_json_strings(path: Path) -> List[String]:
+        strings = []
+        with open(path, 'r', encoding='utf-8-sig') as f:
+            data = json.load(f)  # type:List[Dict]
+        for d in data:
+            strings.append(
+                String(d['key'], d['original'], d.get('translation', ''), d['stage']))
+        return strings
 
     @staticmethod
     def load_csv(path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
