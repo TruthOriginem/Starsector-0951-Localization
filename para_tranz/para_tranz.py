@@ -44,7 +44,7 @@ class String:
     key: str
     original: str
     translation: str
-    stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为已校对
+    stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为有疑问，3为已校对，5为已审核（二校），9为已锁定，-1为已隐藏
     context: str = ''  # 词条的备注信息
 
     def __post_init__(self):
@@ -168,6 +168,22 @@ class CsvFile(DataFile):
     def save_strings_json(self, ensure_ascii=False, indent=4) -> None:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
+        # 如果Paratranz json文件已存在，则从中同步任何已翻译词条的状态
+        if self.para_tranz_path.exists():
+            logger.info(f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条状态")
+
+            special_stages = (1, 2, 3, 5, 9, -1)
+            para_strings = self.load_json_strings(self.para_tranz_path)
+            para_key_strings = {s.key: s for s in para_strings if
+                                s.stage in special_stages}  # type:Dict[str, String]
+            for s in strings:
+                if s.key in para_key_strings:
+                    para_s = para_key_strings[s.key]
+                    if s.stage != para_s.stage:
+                        logger.debug(f"更新词条{s.key}的stage：{s.stage}->{para_s.stage}")
+                        s.stage = para_s.stage
+
+        # 导出Paratranz词条
         self.para_tranz_path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.para_tranz_path, 'w', encoding='utf-8') as f:
             data = []
