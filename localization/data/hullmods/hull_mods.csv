@@ -230,7 +230,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 受损的飞行甲板,damaged_deck,,,,"dmod, fighterBayDamage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DamagedFlightDeck,"因该舰的飞行甲板受到重创，且一般的维修已无法挽回。提高}%s}战机联队重返战场所需要的时间。 
 
 但部署所需补给下降}%s。",,graphics/hullmods/damaged_flight_deck.png
-不可靠子系统,fragile_subsystems,,,,"dmod, damage, peak_time, notPhase",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FragileSubsystems,"过多的组件损失导致峰值时间降低了}%s}秒，并且战斗时的战备损失率提高}%s。 
+不可靠子系统,fragile_subsystems,,,,"dmod, damage, peak_time, notPhase",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FragileSubsystems,"过多的组件损失导致峰值时间降低}%s，且战备状态的衰减速率提高}%s。 
 
 但部署所需补给下降}%s。",,graphics/hullmods/fragile_subsystems.png
 受损货舱,comp_storage,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.CompromisedStorage,"该舰存储能力大大降低。船员，货物和燃料容量均降低}%s。 

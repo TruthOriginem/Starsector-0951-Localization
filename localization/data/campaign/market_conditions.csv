@@ -17,7 +17,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,如果此地是由}卢德教会}掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。,graphics/icons/markets/luddic_majority.png,142
 感应雷区,stealth_minefields,,TRUE,com.fs.starfarer.api.impl.campaign.econ.StealthMinefields,此地的感应雷区不仅能抵御外敌入侵，也能为来访的外来商人提供了安全保障。稳定性提高。,graphics/icons/markets/stealth_mines.png,510
 地区首府,regional_capital,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RegionalCapital,一处控制安全以及后勤的主要行政中心。稳定性提高。,graphics/icons/markets/capital.png,500
-自由港,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,当地港务局不仅对所交易的商品没有任何明文规定。且相当宽松的移民管制，也让大量外来人口纷纷涌入此地，尽管某些人的移民性质非常可疑。正因如此，这也导致部分势力以不信任的态度看待着该殖民地。,graphics/icons/markets/free_port.png,141
+自由港,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,当地港务局不仅对所交易的商品不加任何管制，移民管制也同样宽松，进而导致大量外来人口涌入，尽管其中某些人的身份非常可疑。正因如此，其他势力以不信任的态度看待着该殖民地。,graphics/icons/markets/free_port.png,141
 禁止移民,closed_immigration,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ClosedImmigration,当地政府禁止了一切移民到此地的请求。在该政策下，不仅会导致人口增长率显著放缓，也为某些犯罪分子创造了活动空间。,graphics/icons/markets/vice_demand.png,142
 ,,,,,,,
 死寂之地,uninhabitable,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一颗贫瘠的星球，正如我们所知，此地的地表不仅没有有机生命，也无法在封闭的生态系统之外进行农业活动。,graphics/icons/markets/uninhabitable_wide.png,10
@@ -28,7 +28,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 丛林地貌,jungle,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldJungle,此地是一个潮湿温暖的丛林世界，缤纷的植被覆盖和异国情调的生命形式，使得这里的农业和设施的维护变得非常困难。,graphics/icons/markets/jungle_world_wide.png,10
 宜居地貌,terran,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTerran,此地有着与旧地球环境非常接近的地形地貌，为居住和农业提供了良好的环境。,graphics/icons/markets/terran_world_wide.png,10
 贫瘠地貌,barren_marginal,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldBarrenMarginal,此地的外界环境荒凉且无情，即便装备有空气面罩和防护设备依旧难以生存，不过在一些被地球化改造后的地衣附近还是可以勉强落脚。,graphics/icons/markets/barren_desert_wide.png,10
-暮光之地,twilight,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTwilight,因潮汐力将该行星牢牢锁住，使此地成为了四季一天的改造世界。极昼极夜的温差即便在改造设施中也使生活显得异常苛刻。通过明智地使用恒星罩和恒星镜，而创造了一片温和的生态圈和聚集文明的岛屿。,graphics/icons/markets/twilight_terran_world.png,10
+暮光之地,twilight,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTwilight,潮汐力将该行星牢牢锁住，使此地成为了每季一天的星球。即使是地貌改造过环境也无法抵消极昼极夜带来的苛刻生存条件。必须明智地使用恒星罩和恒星镜，才能创造一个个勉强温和的生态圈来支持文明存续。,graphics/icons/markets/twilight_terran_world.png,10
 苔原地貌,tundra,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTundra,此地经地球化改造后已经足以让人类居住，但仍处在旧地球的冰河时期水平。虽数百万平方公里都覆盖着冰川，但在温和的地方也存在着针叶林和草原。,graphics/icons/markets/tundra_terran_wide.png,10
 冰火山地貌,cryovolcanic,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一个极寒世界，甲烷雪覆盖在随时会喷发的氨火山上。恒星辐射催化了挥发物，使其形成氧气和氮气，而氢气则被挤上了太空。,graphics/icons/markets/cryo_world_wide.png,10
 ,,,,,,,
@@ -135,7 +135,7 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 少量的矿床,ore_moderate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地含有适度的矿床，只需适当的经济投资，就能获取不错的回报。,graphics/icons/markets/ore_moderate.png,50
 大量的矿床,ore_abundant,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地拥有丰富，广阔且价值较高的矿床。,graphics/icons/markets/ore_abundant.png,50
 丰富的矿床,ore_rich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,富饶的矿床在其地壳内闪闪发光，但只有雄心勃勃的企业家才能利用它们获取丰厚回报。,graphics/icons/markets/ore_rich.png,50
-富饶的矿床,ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,这里的矿产资源存在于此地寸土寸金的地表之下，其富饶程度甚至会让{人之领}的矿业巨头或超级军团都为之疯狂。,graphics/icons/markets/ore_ultrarich.png,50
+富饶的矿床,ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,这里的矿产资源存在于此地寸土寸金的地表之下，其富饶程度甚至会让{人之领}的矿业巨头都为之疯狂。,graphics/icons/markets/ore_ultrarich.png,50
 ,,,,,,,
 ,,,,,,,
 零星的稀土矿床,rare_ore_sparse,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,这里存在一些稀疏的稀土矿床，但它们的价值基本是学术上的，而非工业利益。,graphics/icons/markets/rareore_sparse.png,60

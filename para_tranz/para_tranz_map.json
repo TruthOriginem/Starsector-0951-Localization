@@ -118,7 +118,8 @@
     "id_column_name": ["id", "type"],
     "text_column_names": [
       "text1",
-      "text2"
+      "text2",
+      "text3"
     ]
   },
   {
