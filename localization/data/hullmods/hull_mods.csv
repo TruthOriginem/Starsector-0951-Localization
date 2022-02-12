@@ -107,17 +107,17 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 ,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
 # logistics hullmods,,,,,,,,,,,,,,,,,,
-船员宿舍扩容,additional_berthing,0,,,"req_spaceport, merc","后勤, 需要船坞",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"根据舰船级别，提高}%s/%s/%s/%s}最大载员，或提高}%s，两者以较高的为准。 
+船员宿舍扩容,additional_berthing,0,,,"req_spaceport, merc","后勤, 需要船坞",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}最大载员，两者以较高的为准。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的最大载员.,graphics/hullmods/berthing.png
 增强驱动力场,augmentedengines,1,,,"req_spaceport, merc","后勤, 需要船坞",8000,,,,8,16,24,40,data.hullmods.AugmentedEngines,最大宇宙航速提高}%s。,提高最大宇宙航速.,graphics/hullmods/augmented_drive_field2.png
-辅助燃料罐,auxiliary_fuel_tanks,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"根据舰船级别，提高}%s/%s/%s/%s}燃料存储量，或提高}%s} 两者以较高的为准。 
+辅助燃料罐,auxiliary_fuel_tanks,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}燃料存储量，两者以较高的为准。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的燃料存储量.,graphics/hullmods/fuel_tanks.png
 高效检修,efficiency_overhaul,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.EfficiencyOverhaul,"降低}%s}维修消耗的补给、燃料的使用量以及最低船员需求。 
 
 提高}%s}战备恢复和修理速率。但随着效率的提高，每日补给消耗量也会提高，但总补给消耗量不变。 ","降低维护成本, 但提高部署成本.",graphics/hullmods/efficiency.png
-货舱扩容,expanded_cargo_holds,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds,"根据舰船级别，提高}%s/%s/%s/%s}的载货量，或提高}%s，两者以较高的为准。 
+货舱扩容,expanded_cargo_holds,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}载货量，两者以较高的为准。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的载货量.,graphics/hullmods/expanded_cargo.png
 高精度传感器,hiressensors,2,,,"req_spaceport, merc","后勤, 需要船坞",9000,,,,9,9,9,15,com.fs.starfarer.api.impl.hullmods.HighResSensors,提高}%s}点护卫舰、驱逐舰和巡洋舰的探测范围，而主力舰则提高}%s}点。,提高探测范围.,graphics/hullmods/high_res_sensors.png
