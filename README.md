@@ -51,6 +51,10 @@
 
 - 中英文之间空格
 - token 前后空格
+  - 人称代词前后不空格
+    - `$heOrShe`、`$hisOrHer`、`$himOrHer`、`$himOrHerself`、`$manOrWoman` 前后不空格
+    - `$**_manOrWoman`、`$**_heOrShe` 等这种代表人称代词的也不空格
+  - `$shipOrFleet` 前后不空格
 - 人名，地名，专有名词或需要强调的词组前后空格
     - 例：`舰长}Peter}在一次战斗中取得了胜利。`
     - 例：`前往}Galatia}学院接受任务。`
@@ -80,8 +84,9 @@
 
 - token指以`$`开头的特殊词语，其内容在游戏运行过程中由系统动态替换。
 - `$heOrShe`将会被系统替换成`他`或者`她`。
-- `$hisOrHer`**也会被系统替换成`他`或者`她`**。
-    - 如果需要翻译成`他的`或者`她的`，请写成`$hisOrHer的`。
+- `$hisOrHer`、`$himOrHer`、`$himOrHerself`**也会被系统替换成`他`或者`她`**。
+    - 如果需要翻译成`他(她)的`，请写成`$hisOrHer的`。
+    - 如果需要翻译成`他(她)自己`，请写成`$himOrHerself自己`。
 
 ### ParaTranz 平台规则
 
