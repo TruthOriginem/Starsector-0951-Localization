@@ -107,17 +107,17 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 ,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
 # logistics hullmods,,,,,,,,,,,,,,,,,,
-船员宿舍扩容,additional_berthing,0,,,"req_spaceport, merc","后勤, 需要船坞",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}最大载员，两者以较高的为准。 
+船员宿舍扩容,additional_berthing,0,,,"req_spaceport, merc","后勤, 需要船坞",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"根据舰船级别，提高}%s/%s/%s/%s}或至少}%s}名最大载员。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的最大载员.,graphics/hullmods/berthing.png
 增强驱动力场,augmentedengines,1,,,"req_spaceport, merc","后勤, 需要船坞",8000,,,,8,16,24,40,data.hullmods.AugmentedEngines,最大宇宙航速提高}%s。,提高最大宇宙航速.,graphics/hullmods/augmented_drive_field2.png
-辅助燃料罐,auxiliary_fuel_tanks,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}燃料存储量，两者以较高的为准。 
+辅助燃料罐,auxiliary_fuel_tanks,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"根据舰船级别，提高}%s/%s/%s/%s}或至少}%s}单位燃料存储量。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的燃料存储量.,graphics/hullmods/fuel_tanks.png
 高效检修,efficiency_overhaul,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.EfficiencyOverhaul,"降低}%s}维修消耗的补给、燃料的使用量以及最低船员需求。 
 
 提高}%s}战备恢复和修理速率。但随着效率的提高，每日补给消耗量也会提高，但总补给消耗量不变。 ","降低维护成本, 但提高部署成本.",graphics/hullmods/efficiency.png
-货舱扩容,expanded_cargo_holds,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds,"根据舰船级别，提高}%s/%s/%s/%s}或}%s}载货量，两者以较高的为准。 
+货舱扩容,expanded_cargo_holds,0,,,"req_spaceport, merc","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds,"根据舰船级别，提高}%s/%s/%s/%s}或至少}%s}单位载货量。 
 
 而对于民用舰船，则会提高}%s}维护时所消耗的补给量。",提高舰船的载货量.,graphics/hullmods/expanded_cargo.png
 高精度传感器,hiressensors,2,,,"req_spaceport, merc","后勤, 需要船坞",9000,,,,9,9,9,15,com.fs.starfarer.api.impl.hullmods.HighResSensors,提高}%s}点护卫舰、驱逐舰和巡洋舰的探测范围，而主力舰则提高}%s}点。,提高探测范围.,graphics/hullmods/high_res_sensors.png
@@ -186,7 +186,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 取消后退,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,设置}DO_NOT_BACK_OFF}AI}行为,,
 ,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,
-第十四军团,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"基于}霸主}的建立者}-}人之领}第十四军团}为蓝本而建造的战舰，作为研究}人之领}海军}""决战""}教条的主要样本，其采用的大崩塌前的工业技术所进行的一系列激进化的结构改装方案，其目的就是为了安装更加厚重的装甲钢板。提高}%s}点装甲值，降低}%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高}%s。",,graphics/hullmods/fourteenth.png
+第十四战斗群,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"基于}霸主}的建立者}-}人之领}第十四战斗群}为蓝本而建造的战舰，作为研究}人之领}海军}""决战""}教条的主要样本，其采用的大崩塌前的工业技术所进行的一系列激进化的结构改装方案，其目的就是为了安装更加厚重的装甲钢板。提高}%s}点装甲值，降低}%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高}%s。",,graphics/hullmods/fourteenth.png
 霸主军事配件,heg_militarized,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Militarized,由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据舰船级别，提高}%s/%s/%s/%s}装甲。而升级到军用标准的核心系统，让该舰的机动性提高}%s，幅能容量提高}%s，幅能耗散提高}%s。最大宇宙航速亦提升了}%s。,,graphics/hullmods/militarized_hegemony_auxiliary.png
 ,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
@@ -257,5 +257,5 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 但部署所需补给下降}%s。",提高护盾所受伤害.,graphics/hullmods/degraded_shields.png
 ,,,,,,,,,,,,,,,,,,
-武器位损毁,destroyed_mounts,,,,dmod,,,,TRUE,,0,0,0,0,data.hullmods.DestroyedWeaponMounts,该舰的部分武器位已经遭到了不可修复的严重损伤，无法继续使用。,,graphics/hullmods/damaged_weapon_mounts.png
+武器位损毁,destroyed_mounts,,,,dmod,,,,TRUE,,0,0,0,0,data.hullmods.DestroyedWeaponMounts,该舰的部分武器位已经遭到了无法修复的严重损伤，无法继续使用。,,graphics/hullmods/damaged_weapon_mounts.png
 不明智改装,ill_advised,,,,dmod,,,,TRUE,,0,0,0,0,data.hullmods.IllAdvised,该舰所搭载的系统已经经过了大刀阔斧的修改，且过程中并未受到合规的工程监督。尽管系统看上去能在常规条件下正常工作，但在战备不足时，关键部位的故障概率将非常之高。,,graphics/hullmods/illadvised.png
