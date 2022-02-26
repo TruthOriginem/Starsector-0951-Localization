@@ -9,7 +9,7 @@ spaceport,太空港,10,15,,3,,megaport,"spaceport, important, structure",,graphi
 megaport,特大型港口,60,150,,4,spaceport,,"spaceport, structure",,graphics/icons/industry/megaport.png,com.fs.starfarer.api.impl.campaign.econ.impl.Spaceport,"一座气势磅礴的星港,}轨道上的星舰在此着陆.}一组组星舰着陆平台和附有装甲的燃料罐被纵横交错的通道与短程货运有轨电车连接到了一起,}并为大片错落有致的仓库以及物流终端提供了运输支持.}而这所有的一切都大大提高了殖民地的流通性.",151,EXTREME
 lightindustry,轻工业,45,90,,8,,,"lightindustry, industry, rural",,graphics/icons/industry/light_industry.png,com.fs.starfarer.api.impl.campaign.econ.impl.LightIndustry,"通常生产日用品与奢侈品.}由于技术含量较低,}它成为了少数几个未受}""大崩塌""}影响的支柱产业之一. ",1400,MEDIUM
 heavyindustry,重工业,100,120,,12,,orbitalworks,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/heavy_industry.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量.",1600,HIGH
-orbitalworks,轨道设施,60,150,,12,heavyindustry,,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/orbital_works.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量. 
+orbitalworks,轨道工业设施,60,150,,12,heavyindustry,,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/orbital_works.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量. 
 
 升级添加了在轨生产设施,}可以进一步提高舰船生产效率,}并减少制造缺陷.",1700,HIGH
 fuelprod,燃料生产,90,120,,10,,,"fuelprod, industry, industrial",,graphics/icons/industry/fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"该设施生产着被誉为星际文明生命线的星舰燃料.}因缺乏}人之领}先进的制造技术,}燃料的生产不仅十分艰难,}而且异常缓慢.",1800,HIGH
