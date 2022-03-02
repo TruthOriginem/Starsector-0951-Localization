@@ -363,11 +363,11 @@ if __name__ == '__main__':
     print('2 - 将 ParaTranz 词条写回汉化文件(localization)')
 
     while True:
-        option = int(input('请输入选项数字：'))
-        if option == 1:
+        option = input('请输入选项数字：')
+        if option == '1':
             csv_to_paratranz()
             break
-        elif option == 2:
+        elif option == '2':
             paratranz_to_csv()
             break
         else:

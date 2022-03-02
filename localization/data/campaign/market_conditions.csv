@@ -2,12 +2,12 @@ name,id,planetary,decivRemove,script,desc,icon,order
 城市化,urbanized_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.UrbanizedPolity,人口稠密的国际化大都市。各行各业的人们在城中的高层住宅群，商业中心与各种工业园区中生活，工作直至死亡。食品产量下降，奢侈品和日用品需求增加。,graphics/icons/markets/urbanized_polity.png,130
 工业化,industrial_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.IndustrialPolity,一处繁荣的工业中心，因地方政府大肆鼓励工业发展，而牺牲了其他所有方面的利益。,graphics/icons/markets/urbanized_polity.png,130
 村镇化,rural_polity,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RuralPolity,人口稀少，由农庄与偏远乡镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。,graphics/icons/markets/rural_polity.png,130
-难民潮,large_refugee_population,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LargeRefugeePopulation,这里充斥着大量为逃离灾难而涌入的难民。这些生活在社会最底层的难民在影响社会秩序的同时也导致基础设施不堪重负，进而让本地劳动生产率降低。在那些试图逃离这片恶劣生活环境的人中，应该能发现不少等待雇佣的船员。,graphics/icons/markets/refugee_population.png,140
+难民潮,large_refugee_population,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LargeRefugeePopulation,这里充斥着大量为逃离灾难而涌入的难民。这些只能勉强维持半合法身份的难民无望地在社会的最底层挣扎，对社会基础设施带来了很大的压力，使本地劳动生产率降低。为了逃离这种恶劣的生活环境，许多人都愿意成为船员被雇佣。,graphics/icons/markets/refugee_population.png,140
 Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,混合了多种旧地球物种和一点想象力而创造出的生物，它们主要栖息在{Volturn}海底深处的破碎海床上，据说味道非常独特。,graphics/icons/markets/lobster_pens.png,137
 违禁品需求,vice_demand,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ViceDemand,这里有着非常高的违禁品需求。,graphics/icons/markets/vice_demand.png,145
 犯罪组织,organized_crime,,TRUE,com.fs.starfarer.api.impl.campaign.econ.OrganizedCrime,包括了生产毒品和收割器官。增加对重型武器}(各个犯罪集团的首脑与本地居民)}和陆战队员}(地方政府)}的需求。,graphics/icons/markets/organized_crime.png,148
 边境之地,frontier,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Frontier,远离人口聚集地，仅为生存，自力更生，拥有生活必需品即可。武器与日用品需求增加，奢侈品需求降低{-}活下去才是边境生存的首要法则。,graphics/icons/markets/frontier.png,130
-拆船中心,shipbreaking_center,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ShipbreakingCenter,以拆卸舰船为产业中心，核心世界的不同势力的军队与其它客户都会将报废船只送往这里以供拆解。,graphics/icons/markets/shipbreaking.png,360
+拆船中心,shipbreaking_center,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ShipbreakingCenter,这片星域的船只拆解中心。核心世界的不同势力的军队与其它客户都会将报废船只送往这里以供拆解。,graphics/icons/markets/shipbreaking.png,360
 贸易中心,trade_center,,TRUE,com.fs.starfarer.api.impl.campaign.econ.TradeCenter,主要的贸易中心，星域各地的商船都会停靠于此，并期待为他们的货物找到买家或买到那些能赚取更高利润的廉价货物。,graphics/icons/markets/trade_center.png,280
 荒蛮之地,decivilized,,,com.fs.starfarer.api.impl.campaign.econ.Decivilized,"没有稳定的政体，且文明早已崩溃。虽然能探测到幸存者，土匪和强盗等群体,但实际人口依然不明。",graphics/icons/markets/decivilized.png,130
 法外之地,decivilized_subpop,,,com.fs.starfarer.api.impl.campaign.econ.DecivilizedSubpop,在武力保护下此地已经有文明复苏的迹象，但这一法外之地的边缘地带仍然充斥着幸存者，强盗以及掠夺者。,graphics/icons/markets/decivilized.png,130
@@ -30,7 +30,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 贫瘠地貌,barren_marginal,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldBarrenMarginal,此地的外界环境荒凉且无情，即便装备有空气面罩和防护设备依旧难以生存，只有部分专用于地貌改造的基因工程改造地衣能够勉强存活。,graphics/icons/markets/barren_desert_wide.png,10
 暮光之地,twilight,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTwilight,潮汐力将该行星牢牢锁住，这个经过地貌改造的星球昼夜交替有如季节轮转之长。极端的昼夜温差甚至对于人工培育的类地生命都过于严酷，必须明智地使用恒星罩和恒星镜，才能勉强维持一个个温和的生态圈来支持文明存续。,graphics/icons/markets/twilight_terran_world.png,10
 苔原地貌,tundra,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTundra,此地经地貌改造后已经足以让人类居住，但仍处在旧地球的冰河时期水平。虽数百万平方公里都覆盖着冰川，但在温和的地方也存在着针叶林和草原。,graphics/icons/markets/tundra_terran_wide.png,10
-冰火山地貌,cryovolcanic,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一个极寒世界，甲烷雪覆盖在冰川和随时会喷发的氨火山上。恒星辐射分解了挥发物，使其形成由轻质气体如氧气和氮气组成的大气层，而氢气则逸散进入太空。,graphics/icons/markets/cryo_world_wide.png,10
+冰火山地貌,cryovolcanic,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一个极寒世界，甲烷雪覆盖在冰川和随时会喷发的氨火山上。恒星辐射分解挥发物，使氢气则逸散进入太空，留下主要由氧气和氮气等轻质气体组成的大气层。,graphics/icons/markets/cryo_world_wide.png,10
 ,,,,,,,
 异议人士,dissident,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Dissident,此地聚集着各种异政者、反叛者、自由思想家，艺术家和其他麻烦制造者。为管理这群乌合之众，武器和陆战队的需求增加。因频繁的移民也使可雇佣的船员增多。,graphics/icons/markets/dissidents.png,139
 指挥中心,headquarters,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Headquarters,"此地是军事指挥和后勤运作的枢纽。提升市场稳定性。
@@ -113,7 +113,7 @@ AI 行政官(隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.econ
 极端气候,extreme_weather,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,猛烈风暴与闪电肆虐着此地的天空。虽然从轨道上看起来壮观美丽，但是这样恶劣的地面条件，使运输与居住条件都非常糟糕。,graphics/icons/markets/weather_extreme.png,28
 ,,,,,,,
 低重力,low_gravity,TRUE,,com.fs.starfarer.api.impl.campaign.econ.LowGravity,尽管重力较低，但明显高于零重力，在其地表之上，重型机械的工作流程相对于标准程序来说，因摩擦、重量、压力的动态变化而变得更加复杂。,graphics/icons/markets/gravity_low.png,24
-高重力,high_gravity,TRUE,,com.fs.starfarer.api.impl.campaign.econ.HighGravity,此地的重力高得惊人。尽管人类配备了动力外骨骼辅助日常活动，但即便简单动作都十分令人疲惫，因此居住在此简直就是一种折磨。因所有行动都可能发生崩塌，所以进行的专业工程都必须近乎偏执的严谨，否则极易发生结构性大崩溃。,graphics/icons/markets/gravity_high.png,24
+高重力,high_gravity,TRUE,,com.fs.starfarer.api.impl.campaign.econ.HighGravity,此地的地表引力高得惊人。人类进行日常活动时必须配备动力外骨骼，但就算是简单的动作也都会令人非常疲惫。长期定居在此简直是一种折磨。任何行动都可能导致倒塌，如果不用近乎偏执的严谨来开展专业工程的话，极有可能发生结构性的大面积坍塌。,graphics/icons/markets/gravity_high.png,24
 ,,,,,,,
 辐射,irradiated,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,其地表因长期遭受辐射的侵袭，导致任何生物都必须在狭小的圆顶栖息地中生存。而暴露在恶劣条件中的电路，纳米材料与机械都将会迅速老化。,graphics/icons/markets/irradiated.png,29
 ,,,,,,,
