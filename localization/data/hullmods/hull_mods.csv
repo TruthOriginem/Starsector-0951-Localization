@@ -3,7 +3,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 自适应相位线圈,adaptive_coils,2,,,"phase, merc",相位,5000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AdaptivePhaseCoils,"当舰船的硬幅能水平上升时，相位线圈与正常空间保持连接的能力也会逐渐下降，并迫使线圈需更努力的获得其牵引力，从而导致最高航速大大降低。
 
 由于该调整能让线圈处理更高水平的硬幅能，从而让航速将至最低的硬幅能阈值提高}%s。相较于其他未经处理的标准线圈来说，标准版硬幅能在}%s}时航速就会降至最低，而调整版则需}%s}才会降至最低。",降低硬幅能水平对最高航速的惩罚.,graphics/hullmods/phase_field.png
-先进光学器件,advancedoptics,2,,,"offensive, merc",武器,1000,,,,5,10,15,25,data.hullmods.AdvancedOptics,提高光束武器}%s}的射程，但会降低其}%s}转向速度，兼容于目标定位系统。,提高光束武器射程.,graphics/hullmods/advanced_optics.png
+先进光学器件,advancedoptics,2,,,"offensive, merc",武器,1000,,,,5,10,15,25,data.hullmods.AdvancedOptics,提高光束武器}%s}的射程，但会降低其}%s}的转向速度，兼容于目标定位系统。,提高光束武器射程.,graphics/hullmods/advanced_optics.png
 高级炮塔陀螺仪,turretgyros,0,,,"defensive, merc",武器,2500,,,,2,4,6,10,data.hullmods.AdvancedTurretGyros,提高所有炮台}%s}的转向速度。,提高炮台的转向速度.,graphics/hullmods/advanced_turret_gyros.png
 炮塔装甲,armoredweapons,0,,,"defensive, merc","武器, 防御",2500,TRUE,,,3,6,9,15,data.hullmods.ArmoredWeapons,提高}%s}武器的耐久度，并降低}%s}的后坐力，但降低}%s}的转向速度。同时提高}%s}的船体装甲。,"令武器更难下线, 并降低后坐力.",graphics/hullmods/armored_weapon_emplacements.png
 突击套件,assault_package,1,,,"defensive, civ_package, no_drop, no_drop_salvage","特殊, 防御",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AssaultPackage,"提高}%s}船体结构、%s}的装甲以及}%s}的幅能容量。
@@ -30,9 +30,9 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 除了一些特化的装配，绝大多数的战斗舰船都会选择安装{目标定位系统}而非}专注型目标锁定核心。",提高实弹和能量武器的射程.,graphics/hullmods/targeting_core.png
 电子反制组件,eccm,2,,,"offensive, defensive, merc",武器,2500,,,,5,8,15,20,data.hullmods.ECCMPackage,"降低}%s}导弹被电子反制或热诱弹拦截的概率。
 
-由计算机提供优化算法的导弹提升了}%s}的飞行速度以及}%s}的机动性。追踪能力亦得到了加强。  
+每枚导弹都附加了一个CPU核心，能提高导弹}%s}的飞行速度以及}%s}的机动性，同时也显著改善了制导算法，即追踪能力。  
 
-降低}%s}因电子战失利所造成的武器射程降低。","提高导弹速度与追踪能力, 并抑制电子战的影响.",graphics/hullmods/eccm_package.png
+降低}%s}因电子战失利所造成的武器射程降低。","提高导弹速度与追踪能力, 并抑制敌方电子战的效果.",graphics/hullmods/eccm_package.png
 电子对抗组件,ecm,2,,,"offensive, special, merc","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,在战斗时，根据舰船级别，提高}%s/%s/%s/%s}电子战强度。,增强舰船的电子战能力.,graphics/hullmods/ecm_package.png
 护航套件,escort_package,1,,,"weapons, engines, civ_package, no_drop, no_drop_salvage","特殊, 武器, 引擎",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.EscortPackage,"提高}%s}的机动性，并提高所有点防御武器}%s}的射程，同时提高}%s}对战机与导弹的伤害。
 
@@ -136,7 +136,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 ,,,,,,,,,,,,,,,,,,
 # standard built-in hullmods,,,,,,,,,,,,,,,,,,
 终结者核心,terminator_core,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,终结者无人机的专属插件。,,graphics/hullmods/terminator_core.png
-共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前模块平台的完整度，最高提高}%s}所有模块平台的幅能耗散。如果这些模块遭到破坏，则额外的幅能耗散奖励将在剩余模块间重新分配。而}%s}耗散奖励将适用于硬幅能耗散。,"提高幅能与硬幅能的耗散效率, 可模块一旦破坏, 其增益也一并丢失.",graphics/hullmods/shared_flux_sink.png
+共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前存活模块的数量，最高提高}%s}的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而}%s}耗散增益将适用于硬幅能耗散。,模块损失后提高其他模块幅能与硬幅能的耗散效率.,graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应机雷，并破坏靠近的敌舰。,"战场周遭会布置大量感应空雷, 并破坏靠近的敌舰.",graphics/hullmods/stealth_mines.png
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应机雷，并破坏靠近的敌舰。,"战场周遭会布置大量感应空雷, 并破坏靠近的敌舰.",graphics/hullmods/stealth_mines.png
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机更换时间。,战机更换速率不会下降.,graphics/hullmods/expanded_deck_crew.png
@@ -159,7 +159,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 进阶地面支援,advanced_ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AdvancedGroundSupport,配备近距离支援武器与地面防御对策。提高}%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高突袭的效率.,graphics/hullmods/ground_support_adv.png
 精密机械,delicate,,,,,,,,TRUE,,0,0,0,0,data.hullmods.DelicateMachinery,"不仅系统需要巨量维护，且无法长期在战斗下维持良好运转。 
 
-当峰值时间耗尽后，战备值}(CR)}衰减的速率提高}%s。",提高峰值时间耗尽后的 (CR) 衰减速率.,graphics/hullmods/delicate_machinery.png
+当峰值时间耗尽后，战备值}(CR)}衰减的速率提高}%s。",提高峰值时间耗尽后的战备值 (CR) 衰减速率.,graphics/hullmods/delicate_machinery.png
 重弹集成,hbi,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.HeavyBallisticsIntegration,降低}%s}点所有大型实弹武器所需的装配点。,降低大型实弹武器所需装配点.,graphics/hullmods/ballistics_integration.png
 坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,将大多数}D-插件}的负面影响降低}%s。如果在战斗中停机或被摧毁，则该舰有}%s}的几率避免新}D-插件}的产生，并有高几率在战后将其打捞回来。,"降低}D-插件}的影响, 且在击沉后有高几率将其打捞回来.",graphics/hullmods/rugged_construction.png
 全自动舰船,automated,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.Automated,"能全自动化运作，无需人类船员操作，亦无法搭载任何人类。 
@@ -247,8 +247,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 但部署所需补给下降}%s。","提高最低船员需求, 并降低战备值}(CR)}上限.",graphics/hullmods/faulty_automated_systems.png
 武器位损坏,damaged_mounts,,,,"dmod, damage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DamagedWeaponMounts,"降低武器转向速度}%s，并提高射击时的后坐力}%s。 
 
-
-但部署所需补给下降}%s。",降低武器旋转速度且提高后坐力。,graphics/hullmods/damaged_weapon_mounts.png
+但部署所需补给下降}%s。",降低武器转向速度且提高后坐力。,graphics/hullmods/damaged_weapon_mounts.png
 维生系统故障,degraded_life_support,,,,"dmod, damage, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DegradedLifeSupport,"降低最大载员数量}%s，并降低}%s}战备值}(CR)}上限。 
 
 
