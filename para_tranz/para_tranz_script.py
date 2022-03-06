@@ -184,12 +184,7 @@ class CsvFile(DataFile):
                         s.stage = para_s.stage
 
         # 导出Paratranz词条
-        self.para_tranz_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(self.para_tranz_path, 'w', encoding='utf-8') as f:
-            data = []
-            for string in strings:
-                data.append(string.as_dict())
-            json.dump(data, f, ensure_ascii=ensure_ascii, indent=indent)
+        self.save_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
 
         logger.info(
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
@@ -250,6 +245,15 @@ class CsvFile(DataFile):
             strings.append(
                 String(d['key'], d['original'], d.get('translation', ''), d['stage']))
         return strings
+
+    @staticmethod
+    def save_json_strings(path: Path, strings:List[String], ensure_ascii=False, indent=4) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, 'w', encoding='utf-8') as f:
+            data = []
+            for string in strings:
+                data.append(string.as_dict())
+            json.dump(data, f, ensure_ascii=ensure_ascii, indent=indent)
 
     @staticmethod
     def load_csv(path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
@@ -373,4 +377,5 @@ if __name__ == '__main__':
         else:
             print('无效选项！')
 
-    input('程序执行完毕，请按任意键退出')
+    logger.info("程序执行完毕，请按回车键退出")
+    input()
