@@ -196,7 +196,7 @@
 	},
 	"star_orange_giant":{
 		"name":"橙巨星",
-		"aOrAn":"an",
+		"aOrAn":"一颗",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -311,8 +311,8 @@
 		"cloudRotation":-7, # degrees/second, optional
 	},
 	"ice_giant":{ # like Neptune or Uranus
-		"name":"冰巨行星",
-		"aOrAn":"an",
+		"name":"冰态巨行星",
+		"aOrAn":"一颗",
 		"tilt":65, # left-right (>0 tilts to the left)
 		"pitch":-25, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second

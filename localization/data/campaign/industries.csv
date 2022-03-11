@@ -9,12 +9,12 @@ spaceport,太空港,10,15,,3,,megaport,"spaceport, important, structure",,graphi
 megaport,特大型港口,60,150,,4,spaceport,,"spaceport, structure",,graphics/icons/industry/megaport.png,com.fs.starfarer.api.impl.campaign.econ.impl.Spaceport,"一座气势磅礴的星港,}轨道上的星舰在此着陆.}一组组星舰着陆平台和附有装甲的燃料罐被纵横交错的通道与短程货运有轨电车连接到了一起,}并为大片错落有致的仓库以及物流终端提供了运输支持.}而这所有的一切都大大提高了殖民地的流通性.",151,EXTREME
 lightindustry,轻工业,45,90,,8,,,"lightindustry, industry, rural",,graphics/icons/industry/light_industry.png,com.fs.starfarer.api.impl.campaign.econ.impl.LightIndustry,"通常生产日用品与奢侈品.}由于技术含量较低,}它成为了少数几个未受}""大崩塌""}影响的支柱产业之一. ",1400,MEDIUM
 heavyindustry,重工业,100,120,,12,,orbitalworks,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/heavy_industry.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量.",1600,HIGH
-orbitalworks,轨道设施,60,150,,12,heavyindustry,,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/orbital_works.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量. 
+orbitalworks,轨道工业设施,60,150,,12,heavyindustry,,"heavyindustry, uses_blueprints, industry, industrial",,graphics/icons/industry/orbital_works.png,com.fs.starfarer.api.impl.campaign.econ.impl.HeavyIndustry,"用于生产重型机械,}补给与武器的集中制造基础设施.}同时也能生产些勉强适航的星舰船体.}可通过安装纳米锻炉来提高生产质量. 
 
 升级添加了在轨生产设施,}可以进一步提高舰船生产效率,}并减少制造缺陷.",1700,HIGH
 fuelprod,燃料生产,90,120,,10,,,"fuelprod, industry, industrial",,graphics/icons/industry/fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"该设施生产着被誉为星际文明生命线的星舰燃料.}因缺乏}人之领}先进的制造技术,}燃料的生产不仅十分艰难,}而且异常缓慢.",1800,HIGH
 #advfuelprod,先进燃料生产,120,60,,5,fuelprod,,fuelprod,,graphics/icons/industry/advanced_fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"被赋予了}人之领}先进技术的燃料生产设施正源源不断地输送着}""星际血液"". ",1900,
-commerce,贸易中心,90,90,,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,"通过制定法规,}提供资助和建设基础设施,}来促进民间贸易的蓬勃发展.}但也会大大降低当局对殖民地的掌控程度.",1950,MEDIUM
+commerce,贸易中心,90,90,,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,"通过制定法规,}提供资助和建设基础设施,}来促进民间贸易的蓬勃发展.但也会大大降低当局对殖民地的掌控程度.",1950,MEDIUM
 station_base,轨道站,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一处能够为殖民地附近的友军舰队提供火力支援的空间站,}它的存在将阻止任何轰炸行动的发生. 
 
 尽管有数种不同的设计类型,}但这通常仅影响其所采用的战术,}而非整体战力.",2000,
@@ -29,14 +29,14 @@ battlestation,作战基地 - 主宰纪元,100,120,,4,orbitalstation,starfortress
 radius:65,
 variant:station2_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座轨道站,}在原有基础上增建了火力与防御平台,}并加装了一些外挂装甲以提高其防御力. 
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站,}在原有基础上增建了厚重的棱堡与点防御平台,}并加装了外挂装甲以提高其防御力. 
 
 它的存在将阻止任何轰炸行动的发生.",2020,
 starfortress,星际要塞 - 主宰纪元,200,180,,5,battlestation,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座全副武装的作战基地,}在原有基础上增建了大量的外挂装甲,}并配备{城齿-级}无人机,}且布置了感应雷区. 
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地,}在原有基础上增建了大量的外挂装甲,}在配备{城齿-级}无人机的同时布置了感应雷区. 
 
 它的存在将阻止任何轰炸行动的发生.",2030,
 orbitalstation_mid,轨道站 - 核心纪元,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
@@ -50,14 +50,14 @@ battlestation_mid,作战基地 - 核心纪元,100,120,,4,orbitalstation_mid,star
 radius:65,
 variant:station2_midline_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座轨道站,}在原有基础上增建了两处轻型支援平台.
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站,}在原有基础上增建了两处导弹支援平台.
 
 它的存在将阻止任何轰炸行动的发生.",2050,
 starfortress_mid,星际要塞 - 核心纪元,200,180,,5,battlestation_mid,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_midline_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座全副武装的作战基地,}在原有基础上增建了大量的外挂装甲,}配备了{三角堡-级}无人机,}可以部署感应雷区. 
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地,}在原有基础上增建了大量的外挂装甲,}配备了{三角堡-级}无人机,}可以部署感应雷区. 
 
 它的存在将阻止任何轰炸行动的发生.",2060,
 orbitalstation_high,轨道站 - 扩展纪元,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
@@ -71,24 +71,24 @@ battlestation_high,作战基地 - 扩展纪元,100,120,,4,orbitalstation_high,st
 radius:65,
 variant:station2_hightech_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座轨道站,}在原有基础上增建了一处装备重型火力的防御碉堡. 
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站,}在原有基础上增建了一处装备重型火力的防御碉堡. 
 
 它的存在将阻止任何轰炸行动的发生.",2080,
 starfortress_high,星际要塞 - 扩展纪元,200,180,,5,battlestation_high,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_hightech_Standard,
 fleetName:Star Fortress
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一座全副武装的作战基地,}在原有基础上增加了强大的{石像鬼-级}无人机,}并给部分平台内置了长程感应空雷传送战术系统. 
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地,}在原有基础上增加了强大的{石像鬼-级}无人机,}并给部分平台内置了长程感应空雷传送战术系统. 
 
 它的存在将阻止任何轰炸行动的发生.",2090,
 grounddefenses,地面防御设施,30,60,,2,,heavybatteries,"grounddefenses, unraidable, tactical_bombardment, structure",,graphics/icons/industry/ground_defenses.png,com.fs.starfarer.api.impl.campaign.econ.impl.GroundDefenses,"由小型隐蔽式武器所组成的一种分散的,}半自动火炮阵地.}能让敌方一些小规模的突袭与轰炸行动的成本变得更加昂贵.}只有压倒性的轨道轰炸或大规模的突袭舰队才能压制这些地面设施. ",2200,
 heavybatteries,重型防御阵列,60,90,,3,grounddefenses,,"grounddefenses, unraidable, tactical_bombardment, structure",,graphics/icons/industry/heavy_batteries.png,com.fs.starfarer.api.impl.campaign.econ.impl.GroundDefenses,"利用密集的重型防空火炮来替代分散的小型隐蔽式火炮.}这些反舰巨炮所具备的强大火力,}可让敌方对地行动变得异常困难,}因为没有任何星舰舰长会愚蠢到将舰队暴露在它们的射程范围内.",2300,
 patrolhq,巡逻队总部,60,60,,8,,militarybase,"patrol, unraidable, tactical_bombardment, structure",,graphics/icons/industry/patrol_hq.png,com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase,"配备了必要的机库、维修站、指挥/控制中心、陆战队军营以及对整片星系投射部队所需的后勤部.}一旦建立完毕,}军事化的巡逻队将积极追捕海盗并保护友军商队. ",2400,
-militarybase,军事基地L,90,120,,10,patrolhq,highcommand,"military, unraidable, tactical_bombardment, industry",,graphics/icons/industry/military_base.png,com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase,"这些设施足以让星系间的力量投射成为可能,}因为任何一次军事计划不仅意味着一项大规模的后勤行动,}同时也需要数十艘甚至数百艘的星舰以及数千名军官,}无数船员与陆战队的协调运作. ",2500,
+militarybase,军事基地,90,120,,10,patrolhq,highcommand,"military, unraidable, tactical_bombardment, industry",,graphics/icons/industry/military_base.png,com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase,"这些设施足以让星系间的力量投射成为可能,}因为任何一次军事计划不仅意味着一项大规模的后勤行动,}同时也需要数十艘甚至数百艘的星舰以及数千名军官,}无数船员与陆战队的协调运作. ",2500,
 highcommand,最高指挥部,30,120,,14,militarybase,,"command, unraidable, tactical_bombardment, industry",,graphics/icons/industry/high_command.png,com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase,"任何跨星系帝国的建立都离不开一群特殊的高级军官与官僚们的帮助.}他们不仅掌控着整个星系资源的管辖权力,}还能下达最高命令来号令所属势力发动席卷整片星域的滔天战火. ",2600,
-lionsguard,狮心守卫总部,90,60,,6,,,"military, unraidable, tactical_bombardment, structure",,graphics/icons/industry/lions_guard.png,com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ,"Phillip}的私人卫队总部.}""辛达瑞亚之狮""}号称拥有大批一流军官,}且配备了时下所能够买到的最好装备.}而卫队所表现出的狂热忠诚是通过一种高额津贴与奖励制度来维持的,}这种制度不仅能提高卫队作战水准,}还能将其与执行常规军事行动的部队隔离开来.",2650,
+lionsguard,狮心守卫总部,90,60,,6,,,"military, unraidable, tactical_bombardment, structure",,graphics/icons/industry/lions_guard.png,com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ,"""辛达瑞亚之狮""}Phillip}Andrada}令人畏惧的私人卫队总部.}卫队成员都接受过一流的训练,}并配备当下能买到的最顶尖装备.}卫队采用一种与正规军截然不同的高额津贴与奖励制度以确保卫队成员都狂热地忠于领袖.",2650,
 planetaryshield,行星护盾,150,90,,3,,,"grounddefenses, structure",,graphics/icons/industry/planetary_shield.png,com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield,"由一种带电等离子体包络而成,}其内含的奇异虚拟粒子不仅能有效抵御轨道轰炸还能阻止小型舰队的突袭行动.}整个行星护盾由一个中央设施集中控制并持续充能,}对于任何形式的地面突击行动都是难以逾越的障碍.",2700,EXTREME
 waystation,星际驿站,20,60,,2,,,"waystation, structure",,graphics/icons/industry/waystation.png,com.fs.starfarer.api.impl.campaign.econ.impl.Waystation,为星际舰队提供补给/维修服务的中途站.}可小幅增加殖民地的流通性. ,155,MEDIUM
-cryosanctum,寒冰圣地,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,"一座巨大如墓穴般的建筑,}用来储存为度过这次危机而冒险选择冷冻睡眠的人们,}有可能的话,}他们将在一个更文明的时代醒来.}建筑配备了多套冗余的支持设施,}大规模自动化保安系统以及反舰防御阵列.}与之相比,}冷冻舱本身的体积简直微不足道,}而这一切都被安置在地下一个四通八达如迷宫般的堡垒内.",3000,EXTREME
+cryosanctum,寒冰圣地,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,"一座巨大如墓穴般的建筑,}用来安放为度过这次危机而冒险选择冷冻睡眠的人们,}有可能的话,}他们将在一个更文明的时代醒来.}建筑配备了多套冗余的维生设施,}大规模自动化保安系统以及反舰防御阵列.}与之相比,}冷冻舱本身的体积简直微不足道,}而这一切都被安置在四通八达如迷宫般的地下堡垒内.",3000,EXTREME
 ,,,,,,,,,,,,,,
 cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为}人之领}时代的低温睡眠者提供复苏与同化的重要设施.}大幅度提高人口增长率. ,3200,MEDIUM
