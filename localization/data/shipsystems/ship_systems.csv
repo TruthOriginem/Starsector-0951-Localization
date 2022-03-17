@@ -2,7 +2,7 @@ name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u 
 热诱弹发射器,flarelauncher,,,,,,,,5,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
 罐式高射炮,canister_flak,,,,,,,,2,0.05,,,,3,,,,,,,,,,,,,
 诱饵发射器,flarelauncher_fighter,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
-诱饵发射器 (单),flarelauncher_single,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+诱饵发射器 (单发),flarelauncher_single,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
 追踪热诱弹发射器,flarelauncher_active,,,,,,0.1,,,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 烈焰驱动器,burndrive,1,,,,,,,,,2,5,1,10,TRUE,,,,,TRUE,TRUE,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
 等离子爆裂驱动器,microburn,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
@@ -32,7 +32,7 @@ EMP 发生器,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,,graphics/icons/hullsy
 幅能场变频,cryoflux,,,,,,0.75,,,,0.5,,0.5,,TRUE,,,,,,,,,,,restricted,graphics/icons/hullsys/quantum_disruptor.png
 后备部署,reservewing,,,,,,0.5,,,,0.1,,3,60,,,,,,,,,,,,,graphics/icons/hullsys/reserve_deployment.png
 目标馈送系统,targetingfeed,,,,,,0.5,,,,0.5,20,0.5,10,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
-召回设备,recalldevice,,,,,,0.5,,,,0.5,,0.5,30,,,,,,,,,,,,,graphics/icons/hullsys/recall_device.png
+召回装置,recalldevice,,,,,,0.5,,,,0.5,,0.5,30,,,,,,,,,,,,,graphics/icons/hullsys/recall_device.png
 等离子推进器,plasmajets,,,,,,,,,,1,3,2,5,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 能量转换,energy_conversion,,,,,,0,,3,0.1,0.5,,2,0,,TRUE,,TRUE,,,,,,,,restricted,graphics/icons/hullsys/displacer.png
@@ -52,4 +52,4 @@ EMP 发生器,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,,graphics/icons/hullsy
 石像鬼无人机,drone_station_high,,,,,,,,4,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
 传送感应空雷,mine_strike_station,,,,,,0,,7,0.33,0.25,,0.25,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
 光尘吸引场,mote_control,,,,,,0,,,,0.1,,0.4,,,,,,,,,,,,,restricted,graphics/icons/hullsys/reserve_deployment.png
-终止序列,drone_strike,,,,600,,,,,,0,0.05,0.2,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+终结指令,drone_strike,,,,600,,,,,,0,0.05,0.2,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
