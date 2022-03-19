@@ -13060,7 +13060,7 @@ contact_declineBarNoContinue:拒绝",
 extrOfferTextContact1,DialogOptionSelected,"$option == extr_start
 $extr_variation == COLONY","$missionId = extr
 Highlight $extr_reward $extr_marines
-Call $extr_ref showMap ""目标：$extr_marketName """,""" $playerName 舰长，""$HeOrShe说。""如我所说，我们需要从 $extr_marketOnAt $extr_marketName 星球殖民地撤离一名特工。指挥中心已经授权为这次成功的任务支付 $extr_reward 星币。""
+Call $extr_ref showMap ""目标：$extr_marketName """,""" $playerName 舰长，""$HeOrShe说。""如我所说，我们需要从 $extr_marketName 星球殖民地撤离一名特工。指挥中心已经授权为这次成功的任务支付 $extr_reward 星币。""
 
 ""你的对手可能预料到你的到来。我建议你保持低调，我们确实掌握了关于它们的防御能力的相当情报，"" $personName 说到这里，指尖连点几下，将一份非常详细的情报报告传了过来，供你参考。
 
@@ -13089,7 +13089,9 @@ contact_decline:拒绝",
 extrOfferTextBar3,DialogOptionSelected,"$option == extr_startBar
 $extr_variation == LUDDIC_PATH_BASE","$missionId = extr
 Highlight $extr_reward $extr_marines
-Call $extr_ref showMap ""目标：$extr_marketName """,""" $playerName 舰长，""$HeOrShe说。""我方的一名特工渗透了在 $extr_marketOnAt $extr_marketName 的激进的卢德教派。他已经被发现并且被监禁了。当前的任务目标是以任何可行手段将其撤离 $extr_marketName，但如果我们动用己方被标记的海军将会造成宗教文化上的...不便。对此，我们提供 $extr_reward 星币，作为我方特工安全返回的奖励。""
+Call $extr_ref showMap ""目标：$extr_marketName ""","这个$manOrWoman坐在角落的暗处，桌上没摆酒。尽管$HeOrShe打扮成普通技术人员，说话时却透露着那种身居高位的威严。
+
+"" $playerName 舰长，""$HeOrShe说。""我方的一名特工渗透了在 $extr_marketName 的激进的卢德教派。他已经被发现并且被监禁了。当前的任务目标是以任何可行手段将其撤离 $extr_marketName，但如果我们动用己方被标记的海军将会造成宗教文化上的...不便。对此，我们提供 $extr_reward 星币，作为我方特工安全返回的奖励。""
 
 ""左径可能预料到你的到来。但我们有他们防线的情报，""$manOrWoman把一个数据信息板放在桌上供你检查。
 
@@ -13098,7 +13100,7 @@ contact_declineBarNoContinue:拒绝",
 extrOfferTextContact3,DialogOptionSelected,"$option == extr_start
 $extr_variation == LUDDIC_PATH_BASE","$missionId = extr
 Highlight $extr_reward $extr_marines
-Call $extr_ref showMap ""目标：$extr_marketName ""","我方的一名特工渗透了在 $extr_marketOnAt $extr_marketName 的激进的卢德教派。他已经被发现并且被监禁了。当前的任务目标是以任何可行手段将其撤离 $extr_marketName，我相信你最适合执行这个任务。""$HeOrShe叹气到。""如果我们动用己方被标记的海军将会造成政治上的...不便。对此我们你找到你。我们提供 $extr_reward 星币，作为我方特工安全返回的奖励。""
+Call $extr_ref showMap ""目标：$extr_marketName ""","我方的一名特工渗透了在 $extr_marketName 的激进的卢德教派。他已经被发现并且被监禁了。当前的任务目标是以任何可行手段将其撤离 $extr_marketName，我相信你最适合执行这个任务。""$HeOrShe叹气到。""如果我们动用己方被标记的海军将会造成政治上的...不便。对此我们你找到你。我们提供 $extr_reward 星币，作为我方特工安全返回的奖励。""
 
 $hisOrHer在控制面板上轻触几下，你收到一个数据流传入，""这是左径的防御布局。至少我们不会让你盲目地冲进去。""
 
