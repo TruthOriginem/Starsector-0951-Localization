@@ -6094,7 +6094,7 @@ $faction.id == tritachyon
 !$global.gaPZ_pointedToCulannAdmin
 Call $global.gaPZ_ref updateData
 $gaPZ_stage == GET_KELISE_LEAD","AddBarEvent gaPZ_keliseBarEvent ""四处打听关于 Kelise Astraia 的事"" """"",,,
-gaPZ_keliseBarEvent,DialogOptionSelected,$option == gaPZ_keliseBarEvent,,"你开始免费请酒，把目标锁定在那些穿着昂贵职业套装的顾客身上 —— 那种职业套装基本上就是 速子科技 初级管理人员的制服。他们中的大多数人都在试图与你 ""建立关系""，向你兜售一些不太靠谱的商业计划，因此你不得不顶着瞌睡反复努力把谈话引向那个军械工程师。
+gaPZ_keliseBarEvent,DialogOptionSelected,$option == gaPZ_keliseBarEvent,,"你开始免费请酒，把目标锁定在那些穿着昂贵职业套装的顾客身上 —— 那种职业套装基本上就是 速子科技 初级管理人员的制服。他们中的大多数人都在试图与你 ""建立关系""，向你兜售一些不太靠谱的商业计划，因此你不得不一边点头应付一边努力把谈话引向那个军械工程师。
 
 经过一番努力之后你成功了，至少在某种程度上。",gaPZ_keliseBarEvent1:继续,
 gaPZ_keliseBarEvent1,DialogOptionSelected,$option == gaPZ_keliseBarEvent1,"$global.gaPZ_pointedToCulannAdmin = true
