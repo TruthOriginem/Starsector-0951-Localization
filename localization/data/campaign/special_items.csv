@@ -1,5 +1,5 @@
 name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
-基础船体插件,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,一组说明，实例与指导方针，使用户能够将此修改适配/应用于各种船体中。,50
+基础船体插件,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,一组说明，实例与指导方针，使用户能够将此修改适配并应用于各种船体中。,50
 ,,,,,,,,,,,,,,,
 # industry-slotted items,,,,,,,,,,,,,,,
 受损的纳米锻炉,corrupted_nanoforge,"nanoforge, pather4",人之领管制科技,,50000,1000,1,HIGH,graphics/icons/cargo/nanoforge_corrupted.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"heavyindustry, orbitalworks","全能而高效的制造设施，同时也是一个内部原理不明的 ""黑箱"" 装置。只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。
@@ -9,7 +9,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 
 从主控板提供的诊断结果来看，这台锻炉几乎完好如初。鉴于当前星域的整体制造水平，在实际生产中获得毫无缺陷的星舰组件仍是一种挑战。但没有什么能比获得这样的一台纳米锻炉更能提高生产质量了。",139.1
 同步加速器核心,synchrotron,"hist3t, pather4",人之领管制科技,,250000,1000,1,EXTREME,graphics/icons/cargo/synchrotron_core.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,fuelprod,特化型纳米锻炉。其预载的固件和基本纳米技术群将其自身构建成一个同步加速器，用于开展工业规模的反物质生产。,139.2
-轨道聚变射灯,orbital_fusion_lamp,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fusion_lamp.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一座微型化、输出可控的聚变反应堆，能够为一整颗星球带来光和热。
+轨道聚变射灯,orbital_fusion_lamp,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fusion_lamp.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一座输出可控的微型化聚变反应堆，能够为一整颗星球带来光和热。
 
 因该射灯需消耗大量的挥发物来确保其能安全运转，一旦供给不足，则可能使该设备失稳，进而让失控的能量输出激增。直到 大崩塌 发生时，人之领 的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼仍未终止。",135
 超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"能与附近星冕分流器相连的微型虫洞连接器，可给殖民地提供近乎无限的能源
@@ -37,10 +37,10 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 核心纪元蓝图包,midline_package,package_bp,,,25000,1000,1,,graphics/icons/cargo/blueprint_midline.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,midline_bp,使重工业设施能够制造 核心纪元 设计中的常规船体，武器以及战机 LPC。,210
 扩展纪元蓝图包,high_tech_package,package_bp,,,30000,1000,1,,graphics/icons/cargo/blueprint_hightech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hightech_bp,使重工业设施能够制造 扩展纪元 设计中的常规船体，武器以及战机 LPC。,220
 导弹蓝图包,missile_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_missile.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,missile_bp,使重工业设施能制造出一系列的常规导弹武器。,230
-海盗蓝图包,pirate_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,pirate_bp,一些由非法盗取蓝图，市售产品改造方案蓝图，不完全修复的损坏蓝图组成的大杂烩。使重工业设施能够制造出这些质量低劣但颇具威胁的船体，这些蓝图通常都被海盗与其他不法之徒使采用。,240
+海盗蓝图包,pirate_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,pirate_bp,一些由非法改装结果、二手改造方案与蓝图残片恢复产物所组成的大杂烩。使重工业设施能够制造出这些质量低劣但颇具威胁的船体，它们通常都被海盗与其他不法之徒采用。,240
 卢德左径蓝图包,LP_package,package_bp,,,18000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,LP_bp,使重工业设施能够制造出这些经蓝图黑客非法改装后的 卢德左径 船体。,250
 卢德教会蓝图包,LC_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,LC_bp,使重工业设施能够制造出这些涂装有 卢德教会 标志的蓝图。由于这些修改均以装饰性为主，所以船体生产与其他设计基本都保持原样。,260
-第十四战斗群蓝图包,XIV_package,"package_bp, no_drop",,,1000000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,XIV_bp,使重工业设施能够制造出一整套充满传奇色彩的第十四战斗群战舰。而关于这些蓝图是依旧存在以及隐藏何处仍是当前酒吧内的热议话题。,270
+第十四战斗群蓝图包,XIV_package,"package_bp, no_drop",,,1000000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,XIV_bp,一整套使重工业设施能够制造出充满传奇色彩的 第十四战斗群 战舰的蓝图。而关于这些蓝图是依旧存在以及隐藏何处仍是当前酒吧内的热议话题。,270
 霸主军事配件蓝图包,heg_aux_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,heg_aux_bp,一整套将民用舰船升级至军用标准或仅涂装有 霸主 标志的蓝图。由于是在 大崩塌 不久后为了改善舰队性能而创造的，因此合理的设计规范才杜绝了因后期蓝图黑客非法改装而形成的 D 插件。,280
 ,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,

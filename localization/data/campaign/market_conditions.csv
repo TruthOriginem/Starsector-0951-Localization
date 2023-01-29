@@ -87,9 +87,9 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 ,,,,,,,
 ,,,,,,,
 散落的废墟,ruins_scattered,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,在 大崩塌 之前，$market 只不过被 人之领 的伟大项目所轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。,graphics/icons/markets/ruins_scattered.png,100
-普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,大量的废墟、辐射源讯号与泡沫陶化金属建筑物的独特雷达回波一起广泛地分布在 $market 的四周，印证了这里曾进行过的可追溯到人之领开拓纪元末期的规模虽小但运作协调的殖民活动。,graphics/icons/markets/ruins_widespread.png,100
+普遍的废墟,ruins_widespread,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,大量的废墟、辐射源讯号与泡沫陶化金属建筑物的独特雷达回波一起广泛地分布在 $market 上，印证了这里曾进行过的可追溯到人之领开拓纪元末期的规模虽小但运作协调的殖民活动。,graphics/icons/markets/ruins_widespread.png,100
 大量的废墟,ruins_extensive,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,破败的城市废墟遍布于 $market 地表。以它们为中心，失修的道路和损坏的磁轨线四向放射出去，连接着只剩下遗骸的制造厂房，水培建筑和通讯塔楼。,graphics/icons/markets/ruins_extensive.png,100
-巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,$market 被大量的城市遗迹、工厂废墟、矿山残骸、农场遗址和住宅碎片所覆盖。而那些数不清的尸体则与可回收的材料、货物、工具和武器交缠在了一起。这个世界是一个坟墓，一个彰显人之领霸道星系殖民统治的，暴风雨般的坟墓。,graphics/icons/markets/ruins_vast.png,100
+巨大的废墟,ruins_vast,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,$market 被大量的城市遗迹、工厂废墟、矿山残骸、农场遗址和住宅碎片覆盖。死者不计其数，尸体与可回收的材料、货物、工具和武器交缠在一起，触目惊心。这个世界是一座坟墓，人之领 狂妄的银河殖民统治计划被埋葬于此。,graphics/icons/markets/ruins_vast.png,100
 ,,,,,,,
 ,,,,,,,
 寒冷,cold,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,$market 因较低的地表温度而需要专业的设备确保行动安全，且对维生设备和基础设施的要求也有所增加。,graphics/icons/markets/cold.png,25
@@ -139,8 +139,8 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 ,,,,,,,
 ,,,,,,,
 零星的稀土矿床,rare_ore_sparse,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地存在着分布稀疏的稀土矿床，但因开发难度大，且不太可能产生效益，所以只可以进行科研探查而无工业利益。,graphics/icons/markets/rareore_sparse.png,60
-少量的稀土矿床,rare_ore_moderate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地含有适度的稀土矿床，只需适当的经济投资，就能获取不错的回报。,graphics/icons/markets/rareore_moderate.png,60
-大量的稀有矿床,rare_ore_abundant,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,丰富的稀土矿床存在于此地的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。,graphics/icons/markets/rareore_abundant.png,60
+少量的稀土矿床,rare_ore_moderate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market 含有适度的稀土矿床，只需适当的经济投资，就能获取不错的回报。,graphics/icons/markets/rareore_moderate.png,60
+大量的稀有矿床,rare_ore_abundant,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,丰富的稀土矿床存在于 $market 的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。,graphics/icons/markets/rareore_abundant.png,60
 丰富的稀土矿床,rare_ore_rich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,富饶的稀土矿床在 $market 的地壳内四处蔓延，其蕴含的强大力量足以促使拥有足够资格的人们将手伸向这里。,graphics/icons/markets/rareore_rich.png,60
 富饶的稀土矿床,rare_ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,标志着稀有矿物矿床的光点以令人难以置信的密度闪耀在传感器网格上，预示着一份伟力：它能铸造燃尽诸多星球的强大舰队，它能创造堪比大崩塌前人之领的伟大时代与无穷财富。,graphics/icons/markets/rareore_ultrarich.png,60
 ,,,,,,,
