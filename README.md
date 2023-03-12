@@ -3,26 +3,28 @@
 本项目为《远行星号》游戏的中文翻译项目。
 
 目前正在进行的是游戏 **0.95.1a** 版本的汉化，目前进展顺利，主要的剩余任务是对 rules.csv
-的翻译和校对工作。
+的校对工作。
 
 ## 下载汉化
 
-**警告：目前汉化工作仍未完成，使用测试版汉化包可能造成游戏不稳定**
-
 **注意：本汉化包仅适用于 0.95.1a-RC6 版本**
+
+### 从论坛下载
+
+您可以在论坛帖子 [远行星号 0.95.1a-RC6 中文汉化v1.0.0](https://www.fossic.org/thread-3060-1-1.html) 下载最新的汉化版游戏安装包。
+
+### 下载 GitHub 上的最新汉化
 
 如果您希望抢先体验汉化内容，请参照如下步骤下载汉化：
 
 1. 下载汉化文件
-   1. [点这里下载0.95.1汉化文件](https://github.com/TruthOriginem/Starsector-0951-Localization/archive/refs/heads/main.zip)
-      1. [点这里下载0.95汉化文件](https://github.com/TruthOriginem/Starsector-0951-Localization/archive/refs/tags/0.95-1.0.0.zip)
+   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-0951-Localization/archive/refs/heads/main.zip)
    3. 解压下载的文件，其中应包括名为`localization`的文件夹
 2. 安装汉化文件
    1. 打开游戏目录下的`starsector-core`文件夹
    2. 将下载解压文件中`localization`文件夹内的全部内容复制到`starsector-core`文件夹中
       1. 如提示文件已存在，请选择【覆盖】
 3. 正常游玩，**如果遇到翻译质量问题或bug，请及时向我们报告**
-   1. 由于0.95版本汉化已经结束，请不要报告0.95汉化包存在的问题
 
 ## 参与汉化
 
