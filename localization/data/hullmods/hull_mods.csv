@@ -42,7 +42,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 扩展发射架,missleracks,1,,,"offensive, merc",武器,5000,,,,8,12,20,30,data.hullmods.ExpandedMissileRacks,提高导弹武器 %s 备弹量。,提高导弹武器的备弹量。,graphics/hullmods/expanded_missile_racks.png
 扩展护盾,extendedshieldemitter,1,,,"shields, defensive, merc",护盾,5000,,,,4,8,12,20,data.hullmods.ExtendedShieldEmitter,提高护盾覆盖角度 %s 度。,提高护盾的最大展开角度。,graphics/hullmods/extended_shields.png
 附加幅能线圈,fluxcoil,0,,,"special, merc",特殊,4000,TRUE,,,4,8,12,20,data.hullmods.FluxCoilAdjunct,根据舰船级别，提高 %s/%s/%s/%s 幅能容量。但不如直接提高幅能寄存器有效，只有前者加满后才有使用价值。,提高幅能容量。,graphics/hullmods/flux_coil_adjunct.png
-能量配送,fluxdistributor,0,,,"special, merc",特殊,4000,TRUE,,,4,8,12,20,data.hullmods.FluxDistributor,根据舰船级别，提高 %s/%s/%s/%s 幅能耗散速率，但不如直接提高耗散通道有效，只有前者加满后才有使用价值。,提高幅能耗散。,graphics/hullmods/flux_distributor.png
+幅能配送器,fluxdistributor,0,,,"special, merc",特殊,4000,TRUE,,,4,8,12,20,data.hullmods.FluxDistributor,根据舰船级别，提高 %s/%s/%s/%s 幅能耗散速率，但不如直接提高耗散通道有效，只有前者加满后才有使用价值。,提高幅能耗散。,graphics/hullmods/flux_distributor.png
 固化护盾转化器,frontemitter,2,,,"shields, defensive, merc",护盾,7000,,,,3,6,10,18,data.hullmods.FrontShieldEmitter,"将全角护盾发生器锁定至正前方并额外获得 %s 的护盾角度。此外还将降低 %s 维持护盾所需的幅能。
 
 定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",将全盾转换为前盾，并增大护盾面积。,graphics/hullmods/front_shield_emitter.png

@@ -6055,7 +6055,7 @@ gaPZSellFakes3,DialogOptionSelected,$option == gaPZSellFakes3,,"你拿出了一�
 gaPZSellFakes3a,DialogOptionSelected,$option == gaPZSellFakes3a,,"""所以...呃...恭喜，你够格了。""$heOrShe说，并恢复了镇静，""在你面前的是一个同样懂行的人。我等下会开个价，而你会接受，因为...""
 
 海盗开始瞎扯，讲着些什么就你给出的那些材料，你没办法找到其他有意愿或有能力运用的人了之类的事情。这商谈的口才还真说不上好。",gaPZSellFakes3b:继续,
-gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"就像用赛博弹芯打穿了满载幅能的护盾外壳一样，你找准合适的时机，洞穿了海盗的装腔作势之态，直接和他争论了起来，直到他愿意为假勒索线索支付 $gaPZ_paymentForCommFakesHigh 星币为止。
+gaPZSellFakes3b,DialogOptionSelected,$option == gaPZSellFakes3b,Highlight $gaPZ_paymentForCommFakesHigh,"犹如用赛博弹芯打穿幅能满载的护盾一般，你找准合适的时机，直接撕破了海盗装腔作势的嘴脸。争论直到对方愿意为假勒索线索支付 $gaPZ_paymentForCommFakesHigh 星币才算告一段落。
 
 ""看在卢德的份上，好吧，我接受。""$heOrShe最终同意了，擦着$heOrShe额头上的冷汗，""我接受你的开价。现在开始转账星币。""",gaPZSellFakes3c:继续,
 gaPZSellFakes3c,DialogOptionSelected,$option == gaPZSellFakes3c,"AddCredits $gaPZ_paymentForCommFakesHigh
@@ -6535,9 +6535,9 @@ gaPZ_bairdHurryUp,PickGreeting,"$id == baird
 $global.gaPZ_bairdHurryUp == true score:1000
 Call $global.gaPZ_ref updateData
 $gaPZ_stage == GO_TO_RELAY_SYSTEM","ShowPersonVisual
-unset $global.gaPZ_bairdHurryUp",""" $playername，你怎么还在这里？去跟着 Kelise Astraia 和 Hamatsu 号的线索，弄明白速子科技在 '阿尔法研究站' 做了什么，然后再回来。"" Baird 摘下了她的眼镜，她看上去不太自然。
+unset $global.gaPZ_bairdHurryUp",""" $playername，你怎么还在这里？去追查 Kelise Astraia ，追查 Hamatsu 号。去弄明白速子科技到底在 '阿尔法研究站' 做了什么，然后再回来。"" 有些一反常态， Baird 摘下了她的眼镜。
 
-""舰长，你要明白，你不再是一个精巧的工具了。你已经赢得了一些属于自己的名誉，我承认你的能力和成就令人印象深刻。""",gaPZ_bairdHurryUp2:继续,
+""舰长，你要明白，你不再是一个没什么存在感的工具人了。你要继续做些有出息的事才能出人头地。就你的能力和成就而言，我觉得你有这个能力。""",gaPZ_bairdHurryUp2:继续,
 gaPZ_bairdHurryUp2,DialogOptionSelected,$option == gaPZ_bairdHurryUp2,,"她向前倾着身子，眼眶被阴影覆盖：""你给星域中许多强大的势力留下了深刻的印象。在你身后，有一小群间谍、线人和机会主义者，随时准备着抓住你。""
 
 Baird 院长又向后靠了靠，把眼镜放回原处：""伟大的计划正在酝酿，舰长，我们将会改变世界。""",cutCommLink:切断通讯链接,
@@ -7043,7 +7043,7 @@ gaPZ_cottonCont4,DialogOptionSelected,$option == gaPZ_cottonCont4,,"他放下茶
 他又拿起茶杯，说道 ""卢德都预见到了。都白纸黑字地写在这里面。"" 他再一次将一只手握拳放在胸口，这次你注意到，他的手中有个口袋，里面是一本书。卢德圣书。""作为造物主的子民，我们微不足道且满身瑕疵。但我们是否应该追寻光明的引导？这是我们都要面临的一个问题。""","gaPZ_cottonConvert:""你是想把我也变成一名左径信徒吗？""
 gaPZ_cottonPoint:""你到底想说什么？""
 gaPZ_cottonSomething:""我觉得你说的或许有些道理。""",
-gaPZ_cottonConvert,DialogOptionSelected,$option == gaPZ_cottonConvert,FireBest GAPZCottonSelCont3,"Cotton 修士做了个苦笑道，""看来我的祷告水平真是不比当年了。我还是向你开诚布公把，$playerName 舰长。""",,
+gaPZ_cottonConvert,DialogOptionSelected,$option == gaPZ_cottonConvert,FireBest GAPZCottonSelCont3,"Cotton 修士做了个苦笑道，""看来我的祷告水平真是不比当年了。我还是向你开诚布公吧，$playerName 舰长。""",,
 gaPZ_cottonPoint,DialogOptionSelected,$option == gaPZ_cottonPoint,FireBest GAPZCottonSelCont3,"Cotton 修士做了个苦笑道，""看来我的祷告水平真是不比当年了。我还是向你开诚布公把，$playerName 舰长。""",,
 gaPZ_cottonSomething,DialogOptionSelected,$option == gaPZ_cottonSomething,FireBest GAPZCottonSelCont3,"Cotton 修士看上去似乎感到了一丝宽慰，""那么你终于开始明白了。卢德之光保佑啊..."" 他仰起头，低声自言自语了些什么。然后他重新看向你，""那么，请你听好了。""",,
 GAPZCottonSelCont3,GAPZCottonSelCont3,,,""" '通灵塔'，它所预示的...既是我最深的恐惧，也是我最大的希望，坦白来说。但有件事我非常明白，你已经手握着逆经叛道的工具，足以毁灭世界。""
@@ -10228,11 +10228,11 @@ gaVIPBlurbOfferOption,gaVIP_option,,,,gaVIP_start:询问有关 VIP 护送有关�
 gaVIPBlurbMissionTextBasic,DialogOptionSelected,"$option == gaVIP_start
 $gaVIP_variation == BASIC","$missionId = gaVIP
 SetTextHighlights $gaVIP_timeLimit $gaVIP_reward
-Call $global.gaVIP_ref showMap ""目的地：$gaVIP_marketName ""","""学院为那些非常、非常重要的学生提供安全和，唔，谨慎的交通途径。你知道的，他们都来自非常重要的家族，而且过去我们也遇到过一些..."" Sebestyen 看起来好像在努力不让自己看起来很担心。""遇到过些风险？也许吧，谁知道呢。""
+Call $global.gaVIP_ref showMap ""目的地：$gaVIP_marketName ""","""学院为那些非常、非常重要的学生提供安全和，唔，谨慎的交通途径。你知道的，他们都来自非常重要的家族，而且过去我们也遇到过一些..."" Sebestyen 好像在努力掩饰自己的担心。""遇到过些风险？也许吧，谁知道呢。""
 
 他敲了几下桌上的数据平板，然后就继续说了下去。
 
-""这位学生是 $gaVIP_VIPName 的 $gaVIP_subjectRelation -这可是 $gaVIP_marketName 的 $gaVIP_VIPPost 啊，你知道吗？多么令人兴奋啊！哈，他们要求在 $gaVIP_timeLimit 天内，将其优先运送到 $gaVIP_starName 星系的 $gaVIP_marketName，我们已经获得了对方的授权，酬金为...""，Sebestyen 检查了另一个数据平板，"" $gaVIP_reward 星币，这对于一次穿越核心世界的轻松旅途来说，算是笔相当不错的报酬了，对吧？""","aseb_accept:接受
+""这位学生是 $gaVIP_VIPName 的 $gaVIP_subjectRelation -这可是 $gaVIP_marketName 的 $gaVIP_VIPPost 啊，你知道吗？多么令人兴奋啊！哈，他们要求在 $gaVIP_timeLimit 天内，将其优先运送到 $gaVIP_starName 星系的 $gaVIP_marketName，我们已经获得了对方的授权，酬金为...""，Sebestyen 检查了另一个数据平板，"" $gaVIP_reward 星币，对于一次穿越核心世界的轻松旅途来说，这算是笔相当不错的报酬了，对吧？""","aseb_accept:接受
 aseb_decline:拒绝
 gaVIP_threats:""风险？""",
 gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,,"""噢，呃，你懂的。就是...那些风险。""
@@ -11799,53 +11799,53 @@ soe_askOrcus:"" Rao 家族。应该是那位 Orcus Rao 将军，Raesvelg 的英�
 soe_notExcited:""你好像对这场舞会不太感兴趣。""",
 soeNerieneAskWhyCover,DialogOptionSelected,$option == soe_askWhyCover,,"她盯着你的眼睛看了一会儿，然后回头看向人群。""因为...我觉得这可能会很有趣。""
 
-""毕竟这家族的人都以叛逆而著称。我不继承一下也太对不起他们了。""","soe_askEstate:"" Rao 家族，应该是这庄园的主人。""
+""毕竟家里人都以叛逆著称。我不继承一下也太对不起他们了。""","soe_askEstate:"" Rao 家族，应该是这庄园的主人。""
 soe_askOrcus:"" Rao 家族。应该是那位 Orcus Rao 将军，Raesvelg 的英雄。""
 soe_notExcited:""你好像对这场舞会不太感兴趣。""",
-soeNerieneAskEstate,DialogOptionSelected,$option == soe_askEstate,,"""对。对，我们是。真荒缪，不是吗？""她看起来有点窘迫，""我的意思是，这是我的家没错。但这座富丽堂皇的宫殿？展现在风雨飘摇的世界面前的这座宫殿？""
+soeNerieneAskEstate,DialogOptionSelected,$option == soe_askEstate,,"""对，对，是我们的。满目荒唐，不是吗？"" 她看起来并不以此为荣，""我的意思是，这是我的家没错。但这样一座富丽堂皇的宫殿？展现在外面风雨飘摇的世界面前？""
 
-她抬起头，目光越过照亮舞厅窗户的恒星镜。""我们理应重建人之领，不是吗？""
+她抬起头，目光看向了把气派的舞厅窗户点缀得流光溢彩的恒星镜组。""我们不是应该去重建 人之领 吗？""
 
-""也许这也是一部分吧。""她阴郁地补充道。","soe_danceStarting1a:""那是什么意思？""
+""搞不好这就是。"" 她阴沉地小声嘟囔。","soe_danceStarting1a:""那是什么意思？""
 soe_danceStarting1b:"" Orcus Rao 将军同意你的观点吗？""",
-soeNerieneAskOrcus,DialogOptionSelected,$option == soe_askOrcus,,"""哦对，Orcus 伯祖。""她微笑着，重温着往日时光。
+soeNerieneAskOrcus,DialogOptionSelected,$option == soe_askOrcus,,"""哦对，Orcus 伯祖。""她笑了，重温着往日时光。
 
-""没有人相信他能逃脱他所做的一切。但是，如果你的运气像他的一样好，一次又一次地从灾难中幸存下来 —— 更夸张的是，在希望最渺茫的时候取得胜利 —— 他们会让你逃脱任何惩罚。""
+""每一次他做了什么出格事情的时候，人们都会认为他这次铁定要被追责了。但如果你运气像他一样好得让人咂舌，能一次又一次地活着走出灾难，甚至还能在战争中最黑暗的日子里带来胜利，他们就不会追究你到底做过什么出格的事情。""
 
-她想了一会儿，然后补充道：""几乎所有事吧。不过，我想他已经有点昏头了。""","soe_danceStarting1a:""那是什么意思？""
+她细想了一下，接着说到：""也不能说是一点都不追究吧。依我看，这种待遇已经让他有些上头了。""","soe_danceStarting1a:""那是什么意思？""
 soe_danceStarting1b:""你的，呃，Orcus 伯祖在这里吗？""",
-soeNerieneNotExcited,DialogOptionSelected,$option == soe_notExcited,,"""看看他们，""她说。""这些自命不凡的人在公众面前互相吹捧，笑容满面，胸怀大志。可一旦关起门来，他们就会策划阴谋，暗箭伤人，散布谣言。""
+soeNerieneNotExcited,DialogOptionSelected,$option == soe_notExcited,,"""看看他们，""她说。""这些衣帽岸然的家伙们全都在互相吹捧，在人前全都表现出一副团结友善共怀大志的情形。可一旦关起门来，他们就会开始策划阴谋，暗箭伤人，散布谣言。""
 
-""我无法忍受这一切两面派行为。祖母说，把它当作个人行为是幼稚的，这就是政治。""她晃了晃身子，好像要抖掉这些人让她染上的尘土。","soe_danceStarting1a:""那你为什么要来？""
+""我根本受不了这种一切都是两面派的样子。祖母说过只有傻孩子才会去计较这些，毕竟政治就是这样的。""她猛地抖了抖身子，仿佛要弄掉身上的脏东西一样。","soe_danceStarting1a:""那你为什么要来？""
 soe_danceStarting1b:"" Orcus Rao 将军同意你的观点吗？""",
 soeDanceStarting1a,DialogOptionSelected,$option == soe_danceStarting1a,"$option = soe_danceStarting1b 0
 FireBest DialogOptionSelected",,,
-soeDanceStarting1b,DialogOptionSelected,$option == soe_danceStarting1b,,"当 Neriene 正要开始回答时，你发现舞厅里的人群都向房间的墙壁退去。在和 Sang 交谈的过程中，你一定是错过了一些通知，因为这时你发现大厅尽头的乐队开始演奏华尔兹。
+soeDanceStarting1b,DialogOptionSelected,$option == soe_danceStarting1b,,"正当 Neriene 要开口答话时，你注意到舞厅里的人群都向房间的墙壁退去。看来一定是你在和 Sang 交锋的时错过了什么通知，因为这时你发现大厅尽头的乐队开始演奏起了华尔兹。
 
-舞者们开始一一搭档起来。你瞥见 Sang 和他的跟屁虫们正盯着你，却因为 Neriene 的存在而不敢上前。
+场边的舞者们开始争相结伴。在其中你碰巧瞥见 Sang 和他的跟屁虫们还正盯着你，却因为 Neriene 在场而不敢上前。
 
-你看着她，想要获得一些提示。而她带着期待的目光看着你。","soe_danceStarting2a:""我们一起？""
+你用寻求提示的眼神看向了她，而她却用期许目光看着你。","soe_danceStarting2a:""我们一起？""
 soe_danceStarting2b:什么也不说
 soe_noDancing:""我并不会跳舞。""
-soe_startDanceDrink:""唔，那么太空舰长该去哪找饮料喝呢？""
+soe_startDanceDrink:""呃，那么太空舰长该去哪找饮料喝呢？""
 soe_startDanceJump:努力开始手搓横轴跳跃进行跑路",
-soeDanceStarting2a,DialogOptionSelected,$option == soe_danceStarting2a,$player.playerStartedDance = true 0,Rao 家族的 Neriene 点了点头，握起了你的手。你发现自己被一股奇怪的引力拉向了舞池的中心。,soe_danceRound1:继续,
-soeDanceStarting2b,DialogOptionSelected,$option == soe_danceStarting2b,$player.nerieneStartedDance = true 0,Rao 家族的 Neriene 握起了你的手，接着你发现自己被一股奇怪的引力拉向了舞池的中心。,soe_danceRound1:继续,
-soeDanceStarting2c,DialogOptionSelected,$option == soe_noDancing,,"Rao 家族的 Neriene 用怀疑的目光盯着你。""你至少愿意试一试吧？""","soe_danceStarting2cYes:""好吧。""
+soeDanceStarting2a,DialogOptionSelected,$option == soe_danceStarting2a,$player.playerStartedDance = true 0,这位 Rao 家的 Neriene 大小姐点了点头，握起了你的手。你发现自己立即就被拉入了舞池的正中央，仿佛有个无法摆脱的奇点重力井在那儿一样。,soe_danceRound1:继续,
+soeDanceStarting2b,DialogOptionSelected,$option == soe_danceStarting2b,$player.nerieneStartedDance = true 0,这位 Rao 家的 Neriene 大小姐抓起你的手，把你拉入了舞池的正中央，仿佛有个无法摆脱的奇点重力井在那儿一样。,soe_danceRound1:继续,
+soeDanceStarting2c,DialogOptionSelected,$option == soe_noDancing,,"这位 Rao 家的 Neriene 大小姐一脸狐疑地盯着你。""你至少愿意试一试吧？""","soe_danceStarting2cYes:""好吧。""
 soe_danceEscape1:""不，我现在得走了。""",
-soeDanceStarting2cYes,DialogOptionSelected,$option == soe_danceStarting2cYes,$player.nerieneStartedDance = true 0,"""那我来教你。""她说着拉起了你的手。你发现自己被一股奇怪的引力拉向了舞池的中心。",soe_danceRound1:继续,
+soeDanceStarting2cYes,DialogOptionSelected,$option == soe_danceStarting2cYes,$player.nerieneStartedDance = true 0,"""那我来教你。""她这么说着，拉起了你的手。你发现自己立即就被拉入了舞池的正中央，仿佛有个无法摆脱的奇点重力井在那儿一样。",soe_danceRound1:继续,
 soeDanceStarting2d,DialogOptionSelected,"$option == soe_startDanceDrink
-$player.tookDrink",,"Rao 家族的 Neriene 用怀疑的目光盯着你。""你手里就有，但如果我们要一起跳舞，你得把它放下。""
+$player.tookDrink",,"这位 Rao 家的 Neriene 大小姐一脸狐疑地盯着你。""你手里不就有吗？但得先把它放一放，如果我们要一起去跳个舞的话。""
 
-她打了个响指，立马有一个端着托盘的侍者过来拿你的饮料。","soe_danceStarting2b:把饮料交出
+她打了个响指，立马有一个端着托盘的侍者过来准备接过你的饮料。","soe_danceStarting2b:把饮料交出
 soe_danceStarting2a:将饮料一饮而尽并交出空杯子
 soe_danceEscape1:""呃，我得走了。""",
-soeDanceStarting2g,DialogOptionSelected,$option == soe_startDanceJump,,"Rao 家族的 Neriene 用怀疑的目光盯着你。""你不舒服吗，$playerSirOrMadam ?""","soe_danceStarting2f:""我将用横轴跳跃逃离。""
+soeDanceStarting2g,DialogOptionSelected,$option == soe_startDanceJump,,"她一脸狐疑地盯着你。""你不舒服吗，$playerSirOrMadam ?""","soe_danceStarting2f:""我将用横轴跳跃逃离。""
 soe_danceStarting2a:""你想跳支舞吗？""
 soe_danceStarting2b:""你想做什么？""
 soe_danceEscape1:""呃，我得走了。""",
 soeDanceStarting2e,DialogOptionSelected,"$option == soe_startDanceDrink
-!$player.tookDrink",,"她用怀疑的目光看着你。""你在拖时间吗，$playerSirOrMadam ? 这可与你的名声不符。""","soe_danceStarting2f:""我的名声？""
+!$player.tookDrink",,"她一脸狐疑地盯着你。""""你在拖时间吗，$playerSirOrMadam ? 这可与你的名声不符。""","soe_danceStarting2f:""我的名声？""
 soe_danceStarting2a:""你想跳支舞吗？""
 soe_danceStarting2b:""你想做什么？""
 soe_danceEscape1:""呃，我得走了。""",
@@ -11854,16 +11854,16 @@ soe_danceStarting2b:""你想做什么？""
 soe_danceEscape1:""呃，我得走了。""",
 soeDanceEscape1,DialogOptionSelected,$option == soe_danceEscape1,"$player.leftNerieneOnDanceFloor = true
 EndConversation DO_NOT_FIRE
-AdjustRepPerson neriene_rao NEUTRAL -1",你转身朝房间的边缘走去，将 Rao 家族的 Neriene 留在舞池里不知所措。,soe_danceEscape2:继续,
+AdjustRepPerson neriene_rao NEUTRAL -1",你转身朝房间的边缘走去，将 Rao 家的 Neriene 大小姐一脸茫然地留在舞池里。,soe_danceEscape2:继续,
 soeDanceEscape2,DialogOptionSelected,$option == soe_danceEscape2,"MarketReduceRandomRep
-AdjustRep hegemony SUSPICIOUS -1","Sang 的跟屁虫那里传来了嘲笑的声音，但当你转身背对舞厅时，它们不难忽视。
+AdjustRep hegemony SUSPICIOUS -1","嘲笑声从 Sang 的跟屁虫们那边传了过来，但在你转身离开舞厅时，忽视它们并不难。
 
-你毫不怀疑自己会成为他们一整晚的笑柄。
+你肯定成为了他们一整晚的笑柄。
 
-询问身着制服的工作人员后，你进入了不起眼的侍者用电梯，以最简单的方式返回了你的穿梭机",soe_danceEscape3:继续,
-soeDanceEscape3,DialogOptionSelected,$option == soe_danceEscape3,BeginConversation neriene_rao,"这里的员工效率很高；不需要你的提醒，他们就招来了你的随从，不过后者似乎在吃饭的时候被打断了，一些人擦着手，有一个保镖还在喝醒酒饮料。
+简短地询问身着制服的工作人员后，你进入了不起眼的侍者用电梯，返回了你的穿梭机停机坪，没遇到什么麻烦。",soe_danceEscape3:继续,
+soeDanceEscape3,DialogOptionSelected,$option == soe_danceEscape3,BeginConversation neriene_rao,"这的员工效率很高；不需要你的提醒，他们就招来了你的随从。不过他们应该是饭才吃到一半的时候被叫出来的，全都还在擦着手。有个保镖还在你面前磕了一片醒酒药。
 
-你的穿梭机已经准备好出发了。",soe_danceEscapeEnd:乘穿梭机返回轨道,
+你的穿梭机已经准备就绪，可以出发了。",soe_danceEscapeEnd:乘穿梭机返回轨道,
 soeDanceEscapeEnd,DialogOptionSelected,$option == soe_danceEscapeEnd,"EndConversation DO_NOT_FIRE
 $global.soe_completed = true
 Call $global.soe_ref updateStage
@@ -11871,46 +11871,46 @@ ShowDefaultVisual
 FireBest MarketPostOpen",你的穿梭机返回了 $entityName 上方的$shipOrFleet中。,,
 soeDanceRound1a,DialogOptionSelected,"$option == soe_danceRound1
 $player.nerieneStartedDance","$option = soe_danceRound2 0
-FireBest DialogOptionSelected",一开始你因为不习惯和 Eventide 的精英们跳交谊舞而完全跟不上节奏，但 Neriene 有耐心且乐于助人，她低声指导着你根据当地的习惯进行舞步。你感觉她是一个能够激励新手船员在高压环境下高效完成任务的指挥官。,,
+FireBest DialogOptionSelected",一开始你的步调温和，也没习惯 Eventide 的精英们跳的这种交谊舞，但 Neriene 随和且耐心，低声指导你跟上当地的习俗舞步。你感觉她是一个能够激励新手船员在高压之下高效完成任务的指挥官。,,
 soeDanceRound1b,DialogOptionSelected,"$option == soe_danceRound1
 $player.playerStartedDance","$option = soe_danceRound2 0
-FireBest DialogOptionSelected",她的舞步快得让人难以跟随，你怀疑她还不习惯这个角色，但与 Eventide 上的霸主精英跳交谊舞也不是你的专长。察觉到这一点后，Neriene 开始低声指导你根据当地的习惯进行舞步。你感觉她是一个能够激励新手船员在高压环境下高效完成任务的指挥官。,,
-soeDanceRound2,DialogOptionSelected,$option == soe_danceRound2,,不久之后，你发现自己跟上了舞步的节奏，有那么一小会儿，你甚至忘却了之前受到的欺压和这里充斥着的政治压力。,soe_danceRound3:继续,
-soeDanceRound3,DialogOptionSelected,$option == soe_danceRound3,,"下一支乐曲开始了，而你随心起舞。
+FireBest DialogOptionSelected",她的舞步活泼，尽管你觉得她应该不是那种人。可惜你和 Eventide 的霸主精英跳交谊舞时的表现没和你的操舵技术一样好。察觉到这一点后，Neriene 低声指导了你几句，让你跟上当地的习俗舞步。你感觉她是一个能够激励新手船员在高压环境下高效完成任务的指挥官。,,
+soeDanceRound2,DialogOptionSelected,$option == soe_danceRound2,,很快你就发现自己跟上了当下舞步的节奏，暂时把周围无聊的欺压和派系的政见全都给抛到了脑后。,soe_danceRound3:继续,
+soeDanceRound3,DialogOptionSelected,$option == soe_danceRound3,,"下一支曲开始，你们顺势继续。
 
-""那么，"" Neriene 的声音从你身后传来，""你知道我是谁，我为什么在这里。""她踩着舞步，旋转着。
+""那么，"" 在你身后时，Neriene 开口说到，""你知道我是谁，我为什么在这里。""顺着舞步，她转到了你的面前。
 
-""你又是为什么来，舰长？我知道不是为了 Caspian Sang。""","soe_danceReplyImportant:""我想和些重要的人谈谈。""
-soe_danceReplyParty:""我没法拒绝这样一个通往美好宴会的邀请。""
-soe_danceReplySang:""从某种程度上来说，我来着就是想证明 Sang 是错的。""
+""你又是为什么来，舰长？我知道不是为了 Caspian Sang。""","soe_danceReplyImportant:""我想和些大人物谈谈。""
+soe_danceReplyParty:""我没法拒绝这样一个美妙宴会的邀请。""
+soe_danceReplySang:""不晓得怎么的，我之前就是想来证明 Sang 惹错人了。""
 soe_danceReplyFelt:""很难说，我就觉得我该来这里。""
 soe_danceReplyYou:""当然是为了你而来。""",
 soeDanceRound3important,DialogOptionSelected,$option == soe_danceReplyImportant,AdjustRepPerson neriene_rao FRIENDLY 1,"""那很抱歉让你失望了，""她苦笑着说。",soe_danceRound4:继续,
 soeDanceRound3party,DialogOptionSelected,$option == soe_danceReplyParty,AdjustRepPerson neriene_rao FRIENDLY 1,"""不错，""她笑着说，""因为我也终于开始感受到乐趣了。""",soe_danceRound4:继续,
-soeDanceRound3sang,DialogOptionSelected,$option == soe_danceReplySang,,"她皱起眉头，""我同意你的观点，但你需要在意的不是他。""",soe_danceRound4:继续,
+soeDanceRound3sang,DialogOptionSelected,$option == soe_danceReplySang,,"她皱起眉头，""我理解你这种情绪，但你需要在意的不是他。""",soe_danceRound4:继续,
 soeDanceRound3felt,DialogOptionSelected,$option == soe_danceReplyFelt,AdjustRepPerson neriene_rao FRIENDLY 1,"""那就是命运了，""她露出了个古怪的笑容，""我没料到你是个浪漫的人。""",soe_danceRound4:继续,
-soeDanceRound3you,DialogOptionSelected,$option == soe_danceReplyYou,AdjustRepPerson neriene_rao FRIENDLY 1,"""不要脸的谎言，""她笑着说，""但是个不错的想法。""",soe_danceRound4:继续,
+soeDanceRound3you,DialogOptionSelected,$option == soe_danceReplyYou,AdjustRepPerson neriene_rao FRIENDLY 1,"""这谎说得太不要脸了，""她笑着说，""不过想法倒还不错。""",soe_danceRound4:继续,
 soeDanceRound4,DialogOptionSelected,$option == soe_danceRound4,,你注意到 Neriene 似乎在看着你身后的什么，随即她的脸色变得不太好看，把你推开了。,soe_danceRound5:继续,
 soeDanceRound5,DialogOptionSelected,$option == soe_danceRound5,ShowSecondPerson caspian,"""喔，$playerName !""
 
 你现在对他的声音已经再熟悉不过了，你慢慢地转过身去，看见 Caspian Sang 和他的跟班们正站在一个粗脖子的中尉后面。",soe_danceRound6:继续,
 soeDanceRound6,DialogOptionSelected,$option == soe_danceRound6,"ShowThirdPerson magnus_cardona
 FireBest SOEDuelIntro
-$player.metCardona = true","新来的上尉完全无视了 Sang 的话。""Neriene，""他说，""你在做什么，和平民窟来的垃圾混在一起？""
+$player.metCardona = true","新来的上尉完全无视了 Sang。""Neriene，""他说，""你在做什么，和边缘星区来的垃圾瞎混在一起？""
 
-""Magnus Cardona，"" 她朝你耳语，""这人就是一坨 —— """,,
+""Magnus Cardona，"" 她朝你耳语，""这人就是一坨...""",,
 soeDuelIntro1a,SOEDuelIntro,!$player.threwPunch,"AdjustRepPerson magnus_cardona VENGEFUL -40
 #AdjustRep hegemony SUSPICIOUS -2","Sang 大声道，""让这个辅助军舰长自己说！""
 
-Cardona 看了 Sang 一眼，让后者闭上了嘴，然后他死死地盯着你。""我觉得嘛，这个边缘星区来的野蛮人，今晚让一位 霸主 军官的荣誉蒙尘了。""
+Cardona 瞪了 Sang 一眼让他闭嘴，然后他死死地盯住了你。""我已经充分了解到今晚一有个边缘星区来的野蛮人践踏了一位 霸主 军官的荣誉。""
 
-乐队似乎终于明白了什么，舞曲停息，你现在是目光的焦点了。","soe_duelIntroCaspian:""不，Caspian 自己就能做到让 霸主 的荣誉蒙尘了。""
+舞曲停了下来，看来乐队已经看到了这边的情况。所有人的目光都集中在了你的身上。","soe_duelIntroCaspian:""不，那是Caspian 自导自演的。""
 soe_introWhoMe:""谁，我？""
-soe_introDrink:""不如喝一杯，然后冷静下来谈谈？""",
+soe_introDrink:""不如一起喝一杯，然后冷静下来谈谈？""",
 soeDuelIntro1b,SOEDuelIntro,$player.threwPunch,"AdjustRepPerson magnus_cardona VENGEFUL -40
-#AdjustRep hegemony SUSPICIOUS -2","Cardona 喊到，""我已经充分了解到今晚一个边缘星区来的野蛮人践踏了一位 霸主 军官的荣誉。""
+#AdjustRep hegemony SUSPICIOUS -2","Cardona 喊到，""我已经充分了解到今晚有个边缘星区来的野蛮人践踏了一位 霸主 军官的荣誉。""
 
-乐队似乎终于明白了什么，舞曲停息，你现在是目光的焦点了。","soe_duelIntroCaspian:""Caspian 长得挺讨打的，我只是没忍住。""
+舞曲停了下来，看来乐队已经看到了这边的情况。所有人的目光都集中在了你的身上。","soe_duelIntroCaspian:""Caspian 长得挺讨打的，我只是没忍住。""
 soe_introWhoMe:""谁，我？""
 soe_introDrink:""不如喝一杯，然后冷静下来谈谈？""",
 soeDuelIntroCaspian,DialogOptionSelected,$option == soe_duelIntroCaspian,"FireAll SOEDuelResponses
@@ -11926,27 +11926,27 @@ Sang 在他身后咧嘴笑着，似乎很享受这一刻。",,
 soeDuelResponseAccept,SOEDuelResponses,,,,"soe_duelAccept:""我接受。""",
 soeDuelResponseScared,SOEDuelResponses,!$scaredSang,,,"soe_duelScared:""不敢自己上啊，Caspian?""",
 soeDuelResponseLegal,SOEDuelResponses,!$isThisLegal,,,"soe_duelLegal:""这合法吗？""",
-soeDuelResponseSpace,SOEDuelResponses,!$preferSpace,,,"soe_duelSpace:""我倾向于太空战。""",
+soeDuelResponseSpace,SOEDuelResponses,!$preferSpace,,,"soe_duelSpace:""我更喜欢太空决斗。""",
 soeDuelResponseNo,SOEDuelResponses,,,,"soe_duelNo:""不了，谢谢。""",
 soeDuelAccept,DialogOptionSelected,$option == soe_duelAccept,,"Cardona 点了点头，""做好准备。""",soe_duelPrepare:继续,
 soeDuelScared,DialogOptionSelected,$option == soe_duelScared,"$scaredSang = true 0
 HideSecondPerson
-FireAll SOEDuelResponses","你注意到了 Sang 的惊慌，然后 Cardona 走上前挡在了你们面前，""挑战你的是我，现在做出答复！""",,
+FireAll SOEDuelResponses","你注意到 Sang 慌了起来，但这时 Cardona 走上前挡在了你们之间，""挑战你的是我，现在做出答复！""",,
 soeDuelLegal,DialogOptionSelected,$option == soe_duelLegal,"$isThisLegal = true 0
-FireAll SOEDuelResponses","""恐怕，"" Neriene 说，""是合法的。""",,
+FireAll SOEDuelResponses","""恐怕，"" Neriene 说，""的确是合法的。""",,
 soeDuelSpace,DialogOptionSelected,$option == soe_duelSpace,"$preferSpace = true 0
 FireAll SOEDuelResponses","""在 Eventide 我们有面对面对决的勇气，"" Cardona 说。
 
 ""现在做出你的答复！""",,
 soeDuelNo,DialogOptionSelected,$option == soe_duelNo,,"""那就证明你不配站在这里。"" Cardona 冷笑道。
 
-""你留着边缘世界居民的血，就是个小偷和失败者。现在滚吧，野蛮人，你们已经证明了自己无法管束自己，这时候你应该感谢霸主来拯救你的同胞。""","soe_duelAccept:""我又想了想，觉得我还是接受吧。""
+""你这边缘世界的贱骨头注定了你就是个坑蒙拐骗的废物。现在滚吧，没文化的，等到你们都管不好自己的时候，再来感谢去拯救你们的 霸主 吧。""","soe_duelAccept:""我又考虑了一下，还是接受吧。""
 soe_duelNoLeave1:""你那粗俗的传统什么也证明不了，再见。""
-soe_duelWhoBarbarian:""野蛮人？现在在用大号餐具威胁别人的可是你啊。""
+soe_duelWhoBarbarian:""野蛮人？现在用超大号餐具威胁客人的可是你啊。""
 soe_duelNoLeave2:离开",
-soeDuelWhoBarbarian,DialogOptionSelected,$option == soe_duelWhoBarbarian,AdjustRepPerson magnus_cardona VENGEFUL -5,"这让周围的人笑了起来，Cardona 愤怒地朝两边看了看，然后又直直瞪向了你。
+soeDuelWhoBarbarian,DialogOptionSelected,$option == soe_duelWhoBarbarian,AdjustRepPerson magnus_cardona VENGEFUL -5,"这恰到好处的反讽让周围的人群里传来了零星忍俊不禁的笑声。Cardona 怒不可遏地朝两边看了看，然后又直直瞪向了你。
 
-""回应我的挑战，""他喊道，""现在就做出回应！""","soe_duelAccept:""我又想了想，觉得我还是接受吧。""
+""回应我的挑战，""他喊道，""现在就做出回应！""","soe_duelAccept:""我又考虑了一下，还是接受吧。""
 soe_duelNoLeave1:""你那粗俗的传统什么也证明不了，再见。""
 soe_duelNoLeave2:径直离开",
 soeDuelNoLeave1,DialogOptionSelected,$option == soe_duelNoLeave1,"$option = soe_duelNoLeave2 0
@@ -11960,22 +11960,22 @@ soeDuelPrepare,DialogOptionSelected,$option == soe_duelPrepare,"HideSecondPerson
 HideThirdPerson","你的决定震惊了人群，把他们从恍惚中唤醒。他们的窃窃私语充满了大厅。Cardona，Sang 和剩下的人聚到了一起，开始走向舞厅一端一扇高高的门。其他人也加入了他们，大部分是军官和年轻人。
 
 ""祖母！"" Neriene 喊道；你顺着她那恳求的眼神，发现一位端庄的女士在看着这一切。""叫停吧，今晚没必要发生流血事件。""",soe_duelPrepare2:继续,
-soeDuelPrepare2,DialogOptionSelected,$option == soe_duelPrepare2,ShowSecondPerson augusta_rao,你在新闻里见到过这个人，Augusta Rao。她转过了身，脑袋动也没动 —— 看起来是拒绝了 —— 随后她与一群牧师和贵族随从一同离开了。,soe_duelPrepare3:继续,
+soeDuelPrepare2,DialogOptionSelected,$option == soe_duelPrepare2,ShowSecondPerson augusta_rao,你在全息新闻里见到过这个人，Augusta Rao。她用旁人难以察觉的幅度抬了一下脸表示拒绝，然后后就转过身，在一群随行官员和贵族的陪同下离开了。,soe_duelPrepare3:继续,
 soeDuelPrepare3,DialogOptionSelected,$option == soe_duelPrepare3,"EndConversation DO_NOT_FIRE
 ShowImageVisual eventide
 Call $global.soe_ref THEDUEL",,soe_duelPrepare4:继续,
-soeDuelPrepare4,DialogOptionSelected,$option == soe_duelPrepare4,FireAll SOEDuelPrepResponse,"你面前的长凳上放着一套决斗用装备：坚硬的靴子，手套和头盔。同时还有一套折叠整齐的连身衣，它的材料足够先进和智能，只允许被判断为非致命的伤害穿过它，它还带有一套嵌入式医疗设备，可以在受伤时自动执行急救。""几乎没人在决斗时死去，""一个小贵族向你保证道，同时他把一个剑鞘交给了 Neriene Rao。
+soeDuelPrepare4,DialogOptionSelected,$option == soe_duelPrepare4,FireAll SOEDuelPrepResponse,"你面前的长台面上摆着一整套的决斗装备：坚固的靴子、手套和头盔，还有一套连身衣整齐地叠放在一旁。连身衣由智能材料构成，只允许被认定为非致命的刺击和劈砍穿过它。同时它还带有一套嵌入式医疗设备，可以在受伤时自动执行急救。""几乎没人在决斗时死去，""一个小贵族向你保证道，同时他把一支没出鞘的剑递给了 Neriene Rao。
 
-她带着恼怒的表情把这个小贵族赶回了看客群中。相对于围在 Cardona 和 Sang 那边的人来说，你周围的普通人和军官都更少。
+她挥手把这个小贵族赶回了看客群中，脸上止不住地露出一副懊恼的神情。相对于 Cardona 和 Sang 那边，你这边围上来的人很少，而其中穿制服的家伙就更少了。
 
-""这太蠢了，""她说着，把剑抽出一手掌宽，仔细检查起剑刃来。""你没必要这么做。""",,
+""这太蠢了，""她说着，把剑抽出一掌宽，仔细检查起剑刃来。""你没必要这么做。""",,
 soeDuelPrepResponseBeginDuel,SOEDuelPrepResponse,$player.gotSword,,,"soe_duelPrepReady:""我准备好了。""",
 soeDuelPrepResponseCoward,SOEDuelPrepResponse,!$prepSaidCoward,,,"soe_duelPrepCoward:""我不会让他们把我当成懦夫的。""",
 soeDuelPrepResponseCoward2,SOEDuelPrepResponse,"$prepSaidCoward
 !$prepSaidCoward2",,,"soe_duelPrepCoward2:""你说' Cardona 那样的人'是什么意思？""",
-soeDuelPrepResponseQuaint,SOEDuelPrepResponse,!$prepSaidQuaint,,,"soe_duelPrepQuaint:""你们这里的传统真迷人。""",
+soeDuelPrepResponseQuaint,SOEDuelPrepResponse,!$prepSaidQuaint,,,"soe_duelPrepQuaint:""你们这儿的传统还真迷人。""",
 soeDuelPrepResponseSword,SOEDuelPrepResponse,!$player.gotSword,,,soe_duelPrepSword:沉默地接过剑,
-soeDuelPrepResponseStudied,SOEDuelPrepResponse,!$player.gotSword,"SetStoryOption soe_duelPrepStudied 1 soe_duelPrepStudied combat ""即将于 Eventide 进行决斗时忆起曾经受过的剑术训练""",,"soe_duelPrepStudied:""我略有涉猎。""(简单模式)",
+soeDuelPrepResponseStudied,SOEDuelPrepResponse,!$player.gotSword,"SetStoryOption soe_duelPrepStudied 1 soe_duelPrepStudied combat ""即将于 Eventide 进行决斗时忆起曾经受过的剑术训练""",,"soe_duelPrepStudied:""我略懂击剑。""(简单模式)",
 soeDuelPrepTutorialAsk,SOEDuelPrepResponse,"$player.gotSword
 !$askDoTutorial",$askDoTutorial = true 0,"Neriene 停顿了一阵，然后开口道，""在开始之前，要不要先挥几下试试？""",,
 soeDuelPrepTutorialDo,SOEDuelPrepResponse,"$player.gotSword
@@ -11985,38 +11985,38 @@ soeDuelTutorialStart,DialogOptionSelected,"$option == soe_duelTutorialStart
 !$player.bladeSkill",Call $global.soe_ref beginTutorial false,,,
 soeDuelTutorialStartSkilled,DialogOptionSelected,"$option == soe_duelTutorialStart
 $player.bladeSkill",Call $global.soe_ref beginTutorial true,,,
-soeDuelTutorialEnd,SOETutorialFinished ,,FireAll SOEDuelPrepResponse,"""好吧，"" Neriene 仔细斟酌着字句，""我想 Cardona 没少喝酒，那多少有点帮助。""",,
+soeDuelTutorialEnd,SOETutorialFinished ,,FireAll SOEDuelPrepResponse,"""好吧，"" Neriene 仔细斟酌字句着想要说些中听的话，""我想 Cardona 应该没少喝酒，那多少能上点忙。""",,
 soeDuelPrepCoward,DialogOptionSelected,$option == soe_duelPrepCoward,"$prepSaidCoward = true 0
 FireAll SOEDuelPrepResponse","Neriene 叹了口气，""没必要和那些孩子较真。我只是不敢相信，祖母居然会允许这件事发生。纵容 Cardona 那样的人只会带来麻烦。""",,
 soeDuelPrepCoward2,DialogOptionSelected,$option == soe_duelPrepCoward2,"$prepSaidCoward2 = true 0
 FireAll SOEDuelPrepResponse","""这，嗯。很复杂，政治因素。""看起来她不太愿意谈这个。
 
-""霸主中有些人是第十四战斗群的后裔，他们认为他们 —— 不，我们，比其他任何人都强。但这太荒谬了。""",,
+""霸主中有些人是第十四战斗群的后裔，他们认为他们...不，应该说是我们，比其他任何人都强。但这太荒谬了。""",,
 soeDuelPrepSword,DialogOptionSelected,$option == soe_duelPrepSword,"$player.gotSword = true 0
-FireAll SOEDuelPrepResponse","她把一把带鞘的剑交给了你，""这是我父亲给我的。""
+FireAll SOEDuelPrepResponse","她把剑连鞘一起递给了你，""这是我父亲给我的。""
 
-""没有情感价值在里边。""她飞快地看了你一眼，""我不怎么喜欢剑术。""",,
+""但这没什么情感价值在里边。""她瞥了一眼你的表情，""我不怎么喜欢剑术。""",,
 soeDuelPrepQuaint,DialogOptionSelected,$option == soe_duelPrepQuaint,"$prepSaidQuaint = true 0
-FireAll SOEDuelPrepResponse","""但这在文明社会没有立足之地。""她说，然后把目光投向了一面恒星镜，""但我想我们还没到那个程度，不是吗？""",,
+FireAll SOEDuelPrepResponse","""那东西在文明社会里根本没有用武之地。但看来我们还没文明到那个程度，不是吗？""目光看向一套恒星镜组，她这么说到。",,
 soeDuelPrepStudied,DialogOptionSelected,$option == soe_duelPrepStudied,"AddTextSmall ""透露出接受过剑术训练"" highlight
 $player.bladeSkill = true
 $player.gotSword = true 0
-FireAll SOEDuelPrepResponse","Neriene 把剑鞘递给了你，看起来有些怀疑。
+FireAll SOEDuelPrepResponse","Neriene 把剑递你的时候看起来还有些将信将疑。
 
-你利落地拔剑并进行了一两次凌厉的突刺。聚集在你周围的人群欢呼雀跃着，还向走廊另一端发出吹嘘的声音。
+你干脆利落地拔剑出鞘，比划了个凌厉的弓步直刺，快得没法看清是出手了一次还是两次。聚在你周围的人群欢呼雀跃起来，还向走廊另一端发出吹嘘的声音。
 
-""那些白痴犯了比我想象中更大的错误，""她一副印象深刻的表情如此承认道。",,
+""那些白痴犯了比我想象中更大的错误。""她看起来承认了你有些本事。",,
 soeDuelPrepReady,DialogOptionSelected,$option == soe_duelPrepReady,,"""如果你如此自信，就开始吧。""她说道。
 
 当你迈步离开时，她补充道，""顺便...送他下地狱吧！""",soe_duelPrepDone:继续,
 soeDuelPrepLeave,DialogOptionSelected,$option == soe_duelPrepLeave,"$option = soe_duelLeaveGo 0
 FireBest DialogOptionSelected","""很好，""她说着，把剑鞘扔到了那堆决斗用具里。",,
 soeDuelLeaveGo,DialogOptionSelected,$option == soe_duelLeaveGo,MarketReduceRandomRep,人群哄笑起来。Neriene 向旁边咧嘴大笑的人递去了一个杀气腾腾的眼神；很快他们发现，自己对这场决斗的热情没有想象中那么高。她作为 Rao 家族成员和舞会主持人却并不能替你挡住所有的蔑视，不论如何，她指引你进入了一个不起眼的侍者专用电梯，让你回到了你穿梭机的停泊处。,soe_duelPrepLeave2:继续,
-soeDuelPrepLeave2,DialogOptionSelected,$option == soe_duelPrepLeave2,BeginConversation neriene_rao,"这里的员工效率很高；不需要你的提醒，他们就招来了你的随从，不过后者似乎在吃饭的时候被打断了，一些人擦着手，有一个保镖还在喝醒酒饮料。
+soeDuelPrepLeave2,DialogOptionSelected,$option == soe_duelPrepLeave2,BeginConversation neriene_rao,"这的员工效率很高；不需要你的提醒，他们就招来了你的随从。不过他们应该是饭才吃到一半的时候被叫出来的，全都还在擦着手。有个保镖还在你面前磕了一片醒酒药。
 
-穿梭机准备好了，Neriene 在发射台送别你。
+穿梭机已经准备就绪，Neriene 在发射台送别你。
 
-""总之，""她很不舒服地说，""我为...这一切向你道歉。我们并不都是排外的畜牲。""","soe_duelPrepLeaveWontHold:""我不会因为他们的行为指责你。""
+""总之，""她听上去一点都高兴不起来，""我为...这一切向你道歉。我们并不都是排外的畜牲。""","soe_duelPrepLeaveWontHold:""我不会因为他们的行为指责你。""
 soe_duelPrepLeaveBravado:""我见过更糟的，这又不是船上破了个洞。""
 soe_duelPrepLeaveDatingSim:""至少我觉得跳舞很好玩，有机会我们该再试试。""
 soe_duelPrepLeaveRude:""别，他们才刚让我看到你们这些人的真面目。""",
