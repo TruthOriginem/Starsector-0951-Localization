@@ -898,7 +898,7 @@ flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MAR
 $faction.id == luddic_church","AddText ""港区内挤满了各种大小的贸易飞船。衣着服饰低调的卢德商人们等待着着与卸货的船长们会面。小贩们向太空船员们贩卖街头食品和手工艺品，而僧侣们则在自己的托钵前安静地祈祷。偶尔会出现一些狂热教徒执意要叱责外来者公开展示他们的科技物件和生化植入体，但很快就会被身披手纺卢德绿袍背着 CP 卡宾枪的卢德骑士及时送走。毕竟教会也讲究务实，在商人区，这点罪过可以被容忍。"" marketFlavorTextColor",,,
 flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == pirates
-$market.id == umbra score:100","AddText ""一些军舰上喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区充满了真空的金属味，混有些许维生系统的不堪负荷与人性的龌龊。货物都会被检查，偶尔也会被没收，这都由那个在护卫陪同下正俯视着卸货船员们的区域领导负责。"" marketFlavorTextColor",,,
+$market.id == umbra score:100","AddText ""几艘军舰被喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区里充满了真空的金属味，还混有些许维生系统的不堪负荷与人性的龌龊。货物全都会被检查，其中一小部分会被没收。这里的一切都由那些领着护卫居高临下俯视着一众卸货船员们的部门长官所负责。"" marketFlavorTextColor",,,
 flavorTextMarketCryosanctum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.ind:cryosanctum == true score:100
 $stability > 3","AddText ""深穴般的停机坪让停靠的寥寥几艘星际飞船显得格外渺小。传感器探测到隐蔽休眠中的自动炮塔阵列之间的耳语般的电磁波交互，暗示着这里的部署了远超过仅需确保访问寒冰圣地的少数商人、雇佣兵和有钱的怪胎的行为良好所必需的火力。一位官员会见了卸货的船长们，把他们到了访客休息室，并他们提供了有关标准超低温冬眠套餐的服务目录。"" marketFlavorTextColor",,,
@@ -1308,7 +1308,7 @@ EndConversation NO_CONTINUE",,,
 convEndNoText2,DialogOptionSelected,$option == cutCommLinkNoText2,"ShowDefaultVisual
 EndConversation NO_CONTINUE",,,
 convEndPolite,DialogOptionSelected,$option == cutCommLinkPolite,"ShowDefaultVisual
-EndConversation",你在礼貌地寒暄了几句之后，就切断了通讯链接。,,
+EndConversation",你在礼貌地寒暄了几句之后中断了通讯链接。,,
 # NPC comm requests when player enters market,,,,,,
 checkNPCWantingToTalk,MarketPostOpen,"!$global.initiatedCommsAlready
 NPCWantsComms
@@ -1838,7 +1838,7 @@ $personName 用怀疑地目光看着你。
 
 ""我相信你应该清楚，我目前正在负责进行一项非常敏感的调查行动，没有时间闲聊。更何况来的人还是个众所周知的调查嫌疑人。""
 
-在 众所周知"" 这四个字上微妙的强调给你一种感觉，如果你关闭应答器隐瞒身份进入港口，事情可能会有更多的进展。""",0:cutCommLink:切断通讯链接,
+在 众所周知 这四个字上微妙的强调给你一种感觉，如果你关闭应答器隐瞒身份进入港口，事情可能会有更多的进展。",0:cutCommLink:切断通讯链接,
 igr_greetingTOff,PickGreeting,"$igr_investigator
 !$player.transponderOn
 !CallEvent $igr_eventRef paidBribe","ShowPersonVisual
@@ -2883,7 +2883,7 @@ bar_descPirate,BarPrintDesc,$faction.id == pirates,ShowImageVisual pirate_bar,�
 bar_descHegemony,BarPrintDesc,$faction.id == hegemony,ShowImageVisual hegemony_bar,刚踏入这明亮而拥挤的地方，你的目光就被缀满墙上的一排排酒水龙头吸引过去。龙头上的瓶装酒产地遍布核心世界的每个星球，甚至还有几种出自界外的酒水。商船舰长和休班军官在酒吧里打成一片，穿着制服的工作人员麻利地穿梭其间。在一个角落里，一群海军学员正高唱呐喊，拼命地享受着他们最后一班的自由。,,
 bar_descDiktat,BarPrintDesc,$faction.id == sindrian_diktat,ShowImageVisual space_bar,你进入酒吧，把宣传政治大方向的嘈杂广播抛在了身后。下班的劳动者们聚在 辛达强权 标志下方的长凳上，尽职尽责地喝掉他们的粮票。角落里，一群衣着光鲜的军官和文职人员叫嚣着要再来一轮。就算在这种地方，也有个比真人更伟岸的 辛达瑞亚之狮 全息投影俯视着你，等着你做出下一步的决定。,,
 bar_descPerseanLeague,BarPrintDesc,$faction.id == persean,ShowImageVisual space_bar,从进入酒吧的那一刻起，你就感受到了来自联盟世界各地的船员之间求同存异的氛围。不苟言笑的 Kazeron 人身着光鲜的制服喝着烈酒，旁边高傲但落魄的 Mayasura 人则一扎又一扎地灌着稻啤酒。一群 Tyle 船员与几名 Zagan 人舰桥军官边吹牛边拼酒，为卢德教规提倡的节制立了个坏榜样。众多显示屏五光十色地展示着来自联盟各个行星的媒体资讯，而它们的扬声器也为这众人的喧哗平添了一分吵闹。,,
-bar_descLuddicChurch,BarPrintDesc,$faction.id == luddic_church,ShowImageVisual space_bar,你低头避开鼓励节欲与克制的告示进入了酒吧。角落的凹室里有人在演奏着某种弦乐器。吧台旁边一排手工制作的茶炊提醒着你这里经常供应茶水，销量可能和吧台上那些三大五粗的劳工爱喝的淡啤酒差不多。不少看起来像是外星访客的人和不信教的当地人一起聚集在实为情报摊子的几个桌台附近，构成了这里最像是罪恶巢穴的地方。,,
+bar_descLuddicChurch,BarPrintDesc,$faction.id == luddic_church,ShowImageVisual space_bar,你低头避开了鼓励节欲与克制的告示牌，走入酒吧。角落的凹室里有人在演奏着某种弦乐器。吧台旁边一排手工制作的茶炊，提醒你这里经常供应茶水，销量可能和吧台上那些劳工大老粗们爱喝的淡啤酒差不多。不少看起来像是外星访客的人和不信教的当地人聚集几张桌台附近，交流买卖着情报，构成了这里最像罪恶巢穴的地方。,,
 bar_descLuddicPath,BarPrintDesc,$faction.id == luddic_path,ShowImageVisual space_bar,在你经过时，当地惩戒团的一头饱经沧桑的彪形大汉狠狠地瞪了你一眼，但并没有阻止你进门。他们只是想让你知道，要不是能为开展圣战提供有利的交易渠道，这样一个违禁的茶楼酒馆他们随时都可以取缔掉。在这昏暗压抑且拥挤不堪的地方里，因不屑使用现代酶制香皂而产生的独特体臭四处弥漫，与毒品的烟雾和廉价烈酒的气味竞相争奇斗艳。,,
 ,,,,,,
 # TriTach Loan Intel,,,,,,
@@ -3055,7 +3055,7 @@ ShowDefaultVisual
 EndConversation DO_NOT_FIRE",你展现出非凡的领袖气质，迎合$hisOrHer的雄心壮志把对方好好夸奖了一番。同时你旁敲侧击，让$himOrHer觉得再坚持干一会儿就会有更好的收获 (当然你没给出具体承诺)。于是你说服$himOrHer延长了合同的期限。,mercs_leaveContinue:继续,
 mercs_letGoOpt,DialogOptionSelected,$option == mercs_letGo,"MarketCMD mercLeaves
 ShowDefaultVisual
-EndConversation DO_NOT_FIRE",你公事公办地接受了$hisOrHer的决定，寒暄几句后，切断了通讯链接。,mercs_leaveContinue:继续,
+EndConversation DO_NOT_FIRE",你公事公办地接受了$hisOrHer的决定，互相调侃了几句之后就切断了通讯链接。,mercs_leaveContinue:继续,
 mercs_letGoOptJerk,DialogOptionSelected,$option == mercs_letGoJerk,"MarketCMD mercLeaves
 $player.wasJerkToMerc = true 1000
 ShowDefaultVisual
@@ -3171,7 +3171,7 @@ $market.isPlanetConditionMarketOnly
 $market.mc:ruins_extensive
 !$market.ruinsExplored
 $tag:gas_giant","$salvageSpecId = ruins_extensive
-FireBest DisableRuinsExploreIfNeeded",在 $market 的云层中可以看到毁坏的漂浮城市和工厂拖着数公里的系绳，正慢慢地沉入破碎的深渊。低轨道工厂、环形舱和通信中继站慢慢地屈服于大气阻力，偶尔会坠入大气层的漩涡中，燃烧成一颗划过行星表面的火流星。,5:salExplore:探索废墟,
+FireBest DisableRuinsExploreIfNeeded",悬浮都市和浮游工厂的废墟在 $market 的云层中依稀可见。它们拖着几公里长的系绳，缓慢地向着压力能粉碎一切深度沉下去。低轨道工厂、环形居住舱和通信中继站逐渐屈服于大气阻力，时不时地划过星球表面的巨大漩涡，留下壮观的火流星尾迹。,5:salExplore:探索废墟,
 salRuinsGG_vast,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_vast
@@ -4524,21 +4524,21 @@ $global.gaFC_knowElissasName = true
 FireBest DialogOptionSelected",Elissa Zal，这个名字是新的线索，你在 TriPad 上迅速记下了这些信息。,,
 gaFCQuestionBioneAend,DialogOptionSelected,"$option == gaFC_questionBioneAend
 $global.gaFC_knowElissasName ",unset $elissaAside,通讯面板跳转，跳舞的海堤绿洲吉祥物取代了 Bione 的脸，它提醒你，未登记的客人将在工作结束时被要求离开郊区。,gaFC_fikenhildBioneLeave:离开,
-gaFCFikenhildBioneB,DialogOptionSelected,$option == gaFC_fikenhildBioneB,,"""哦，嗯，那是几个星期前。Finlay? 哦，你是说舰队情报部的 Siyavong 探员，他的名字是 Finlay。你一定是来自 Westernesse 内部安全部吧？""",gaFC_fikenhildBioneB2:摸棱两可地点一下头,
+gaFCFikenhildBioneB,DialogOptionSelected,$option == gaFC_fikenhildBioneB,,"""哦，嗯，那是几个星期前。Finlay? 哦，你是说舰队情报部的 Siyavong 探员吧，Finlay 是他的名。你一定是来自 Westernesse 内部安全部吧？""",gaFC_fikenhildBioneB2:摸棱两可地点一下头,
 gaFCFikenhildBioneB2,DialogOptionSelected,$option == gaFC_fikenhildBioneB2,"SetPersonHidden siyavong false
 $global.gaFC_knowSiyavongContact = true
-AddTextSmall ""收到了 Finlay Siyavong 的通讯 ID"" highlight","""这很合理，联盟部门从不与星球当地部门协调，是吗？好吧，你们这些人从不交流与我无关。Siyavong 探员留下了一张通讯卡。""
+AddTextSmall ""收到了 Finlay Siyavong 的通讯 ID"" highlight","""这很合理，联盟部门从不与星球当地部门协调，这你也知道。你们这些人从不互相交流也不能怪我。Siyavong 探员留下了一张通讯卡。""
 
-""在这里，""她按了几个键，出现了一个 ID 字样。当你用 TriPad 调出联系信息时，你听到从通讯面板和院墙那边传来的婴儿的细微哭声。""我真的要走了 —— 再见，调查员，嗯，没听清你的名字 —— 抱歉！""
+""给，""她按了几个键，出现了一个 ID 字样。当你用 TriPad 调出联系信息时，你听到从通讯面板和院墙那边传来的婴儿的细微哭声。""我真的要走了 —— 再见，调查员，嗯，没听清你的名字 —— 抱歉！""
 
-通讯面板跳转，跳舞的海口绿洲吉祥物取代了 Bione 的脸。你瞥了一眼你 TriPad 上的新通讯联络人，一个叫 Finlay Siyavong 的人。",gaFC_fikenhildBioneLeave:离开,
+通讯面板跳转，跳舞的海口绿洲吉祥物取代了 Bione 的脸。你瞥了一眼你 TriPad 上的新通讯联络人，这个叫 Finlay Siyavong 的人。",gaFC_fikenhildBioneLeave:离开,
 gaFCFikenhildBioneC,DialogOptionSelected,$option == gaFC_fikenhildBioneC,$global.gaFC_knowFinlaysName = true,"""哦，嗯，那是几个星期前。他人很好，穿得很好。Finlay 探员... Finlay Siyavong，他是舰队情报局的人。你也是吧？""
 
 你做了一个不置可否的动作，点了一下头。
 
-""嗯，他问了很多问题。你就不能和他谈谈吗？我真的有急事..."" 你从通讯板和院墙那边都听到了婴儿的细微哭声，""我现在得走了。对不起，调查员，再见。""
+""嗯，他问了很多问题。你就不能和他直接谈谈吗？我真的有急事..."" 你从通讯板和院墙那边都听到了婴儿的细微哭声，""我现在得走了。抱歉，探员，再见。""
 
-通讯板跳转，跳舞的海银绿洲吉祥物取代了 Bione 的脸。探员 Finlay Siyavong，可能是为 英仙座联盟 的情报部门工作，有意思。",gaFC_fikenhildBioneLeave:离开,
+通讯板跳转，跳舞的海银绿洲吉祥物取代了 Bione 的脸。探员 Finlay Siyavong，应该是在 英仙座联盟 的情报部门工作。有意思。",gaFC_fikenhildBioneLeave:离开,
 gaFCFikenhildBioneD,DialogOptionSelected,$option == gaFC_fikenhildBioneD,$global.gaFC_beingConspicuous++,"你退后一步，用你响亮而富有感染力的 '负责人腔调' 开了口：首先你向 Bione 表明你只是在跟进上一次特工的访问，然后强调她是在跟 $playerName 说话。你仔细地念出你的名字，保证在查询时不会打错字，无论是通过语音还是文字。
 
 在通讯板前踱步，你再次提到 Scylla Coureuse，但主要是谈论的是你自己，以及配合官员的工作有多么重要。一位隔壁邻居从窗户里探出头来，对你的噪音感到不快，但在你的目光接触下就缩了回去。
@@ -4670,7 +4670,7 @@ gaFCFikenhildCavinLeave2,gaFCFikenhildCavinLeaveOption,$global.gaFC_gotZalContac
 FireBest DialogOptionSelected",你从这个破烂的门廊转过身来，考虑你最后的选择。似乎 Elissa Zal 是离 Scylla 最近的人，而且她把自己藏得很深。是时候再打一个电话了。,,
 gaFCFikenhildCavinLeave2b,gaFCFikenhildCavinLeaveOption,"$global.gaFC_knowSiyavongContact
 $global.gaFC_gotZalContactFromCavin","$option = gaFC_fikenhildCavinLeaveEnd 0
-FireBest DialogOptionSelected",你从这个破烂的门廊转过身来，考虑你的选择。似乎 Elissa Zal 是最接近 Scylla 的人，而且她把自己藏的很深。Finlay Siyavong 问了很多关于 Scylla 的问题，所以他可能知道些什么。是时候再打一个电话了。,,
+FireBest DialogOptionSelected",你从这个破烂的门廊转过身来，考虑着你下一步。似乎 Elissa Zal 是最接近 Scylla 的人，而且她把自己藏的很深。Finlay Siyavong 问了很多关于 Scylla 的问题，所以他可能知道些什么。是时候做出决定了。,,
 gaFCFikenhildCavinLeave3,gaFCFikenhildCavinLeaveOption,"!$global.gaFC_knowSiyavongContact
 !$global.gaFC_gotZalContactFromCavin 
 !$siyavongDidInterrupt",FireAll GAFCCavinInterruptLeaveOption,"当你开始转身离开这个破烂的门廊时，通讯面板再次发出噼啪声。它说话了。""你已经表达了你的来意，$playerName ""。
@@ -4707,9 +4707,9 @@ ShowPersonVisual","在使用几个自动转发服务连接和加密协议后，�
 
 "" $playerName，"" Zal 在信号最终稳定后说，""我想你可能会联系我。""
 
-她的讲话和视频都不同步，而且很不稳定。你不知道她是否在 Fikenhild 的本地节点，或者她在用有某种偷工减料的超波通讯装置。或者，这只是某种生成的影像。","gaFC_zalRecording0:""一个叫 Siyavong 的联盟特工告诉了我 Scylla 的位置""
-gaFC_zalRecording1:""Cavin 认为你知道 Scylla 在哪里""
-gaFC_zalRecording2:""你的通讯系统真有意思""",
+她的讲话和视频都不同步，而且很不稳定。你不知道她是否在 Fikenhild 的本地节点，或者她在用有某种偷工减料的超波通讯装置。或者，这只是某种生成的影像。","gaFC_zalRecording0:""一个叫 Siyavong 的联盟特工告诉了我 Scylla 的位置。""
+gaFC_zalRecording1:""Cavin 认为你知道 Scylla 在哪里。""
+gaFC_zalRecording2:""你的通讯系统真有意思。""",
 gaFCZalRecording0,DialogOptionSelected,$option == gaFC_zalRecording0,"$option = gaFC_zalRecording3 0
 FireBest DialogOptionSelected",,,
 gaFCZalRecording1,DialogOptionSelected,$option == gaFC_zalRecording1,"$option = gaFC_zalRecording3 0
@@ -4816,15 +4816,15 @@ FireBest DialogOptionSelected",""" $playerName。我是 Finlay Siyavong，我们
 他看向一旁。""你真的能把事情复杂化，比如在 Kay-arco 开展局部监视行动。让我强调一下 -""他突然顿了顿。""算了，让我们直接说说手头的事吧。""",,
 GAFCSiyavongFikenhildGreet3,FCFikenhildSiyavongGreeting,$global.gaFC_madeSiyavongAngry,"AdjustRepPerson siyavong INHOSPITABLE -10
 $option = gaFC_fikenhildSiyavongHub 0
-FireBest DialogOptionSelected","""我是 Finlay Siyavong，尽管你已经很清楚地表明你知道这一点，而且乐于在当局感兴趣的人面前展示你拥有的知识。""
+FireBest DialogOptionSelected","""我是 Finlay Siyavong，不过你已经很清楚地表明你知道我的身份，而且乐于在当局感兴趣的人面前展示你拥有的知识。""
 
-""让我说清楚，联盟 保证了星系内商人的某些权利，尽管考虑到你 '丰富多彩' 的记录，赋予你这样的地位是一种牵强。所以即使你表现出对这个机构和我提出要求的不尊重，我也不能简单地把你关起来。"" 他折起手臂，向后靠去。""尽管我很想这么做。""
+""让我说清楚，联盟 保证了星系内商人的某些权利，尽管考虑到你 '丰富多彩' 的记录，赋予你这样的地位是一种牵强。所以即使你表现出对这个机构和我提出要求的不尊重，我也不能简单地把你关起来。"" 他双臂抱在胸前，身体向后倚去。""哪怕我的确很想这么做。""
 
-""但我们有更重要的事情要讨论，不是吗？""。",,
+""但眼下我们有更重要的事情要讨论，不是吗？""",,
 GAFCSiyavongFikenhildHub,DialogOptionSelected,$option == gaFC_fikenhildSiyavongHub,FireAll GAFCSiyavongFikenhildHubOptions,,,
-GAFCSiyavongFikenhildHub1,GAFCSiyavongFikenhildHubOptions,!$askedWhatDoYouDo ,,,"gaFC_fikenhildSiyavongWhatDo:""你在做的东西到底是什么""",
+GAFCSiyavongFikenhildHub1,GAFCSiyavongFikenhildHubOptions,!$askedWhatDoYouDo ,,,"gaFC_fikenhildSiyavongWhatDo:""你到底是做什么工作的？""",
 GAFCSiyavongFikenhildHub2,GAFCSiyavongFikenhildHubOptions,!$tookYouLongEnough,,,"gaFC_fikenhildSiyavongLongEnough:""你真是过了好一会才联系我。""",
-GAFCSiyavongFikenhildHub3,GAFCSiyavongFikenhildHubOptions,,,,"gaFC_fikenhildSiyavongWhereSyclla:""Scylla Coureuse 在哪""",
+GAFCSiyavongFikenhildHub3,GAFCSiyavongFikenhildHubOptions,,,,"gaFC_fikenhildSiyavongWhereSyclla:""Scylla Coureuse 在哪？""",
 GAFCSiyavongFikenhildWhatDo,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWhatDo,"$askedWhatDoYouDo = true
 $option = gaFC_fikenhildSiyavongHub 0
 FireBest DialogOptionSelected","""如你所见，我是 英仙座联盟 舰队情报部的代表。"" Siyavong 摊开双手，似乎在表明他没有恶意。""我的工作是防止并确保 联盟 成员享受的自由不被侵犯。""
@@ -4838,12 +4838,12 @@ FireBest DialogOptionSelected","""是的，我们已经观察你有一段时间�
 
 ""说实话，""他说，并微微一笑，""我曾希望我们不会发展到需要面对面交谈的地步。但你让我不得不这么做，所以我们现在坐在这里。""",,
 GAFCSiyavongFikenhildWhereScylla,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWhereSyclla,"$option = gaFC_fikenhildSiyavongHubB 0
-FireBest DialogOptionSelected","Siyavong 特工看起来被你逗乐了，""你不觉得这对于公共部门的特工是一个过于直接的问题吗？不过这确实是问题的关键，而你的档案表明你的确有一种...怎么说呢，直言不讳的倾向。""
+FireBest DialogOptionSelected","Siyavong 特工看起来被你逗乐了，""你不觉得这个问题对于一名现役特工来说有些太直接了吗？不过这确实是问题的关键，而你的档案表明你的确有一种...怎么说呢，直言不讳的倾向。""
 
-""让我用一个问题来回答，""他靠过来，""你为什么要知道 Scylla Coureuse 在哪里？""",,
+""既然如此，我也用一个问题来回答你吧，""他靠过来，""你为什么想要知道 Scylla Coureuse 在哪里？""",,
 GAFCSiyavongFikenhildHubB,DialogOptionSelected,$option == gaFC_fikenhildSiyavongHubB,FireAll GAFCSiyavongFikenHildHubBOptions,,,
 GAFCSiyavongFikenhildHubB1,GAFCSiyavongFikenHildHubBOptions,!$saidWantToHelpScylla,,,"gaFC_fikenhildSiyavongHelp:""我希望帮助 Scylla。""",
-GAFCSiyavongFikenhildHubB2,GAFCSiyavongFikenHildHubBOptions,,,,"gaFC_fikenhildSiyavongFindHer:""我不想透露这些，无论你帮还是不帮，我都会找到她。""",
+GAFCSiyavongFikenhildHubB2,GAFCSiyavongFikenHildHubBOptions,,,,"gaFC_fikenhildSiyavongFindHer:""我不能透露原因，而且我一定会找到她。有没有你的帮助都一样。""",
 GAFCSiyavongFikenhildHubB3,GAFCSiyavongFikenHildHubBOptions,!$askedOtherPeople,,,"gaFC_fikenhildSiyavongOtherPeople:""某人认为她非常重要。""",
 GAFCSiyavongFikenhildHubB4,GAFCSiyavongFikenHildHubBOptions,,,,"gaFC_fikenhildSiyavongBaird:""我在为 Anahita Baird 院长做一件非常重要的事。""",
 GAFCSiyavongFikenhildHubB5,GAFCSiyavongFikenHildHubBOptions,$global.gaFC_gotZalContactFromCavin ,,,"gaFC_fikenhildSiyavongContactZal:""我能让你联系到 Elissa Zal。""",
@@ -4859,23 +4859,24 @@ Call $global.gaFC_ref updateStage
 $askedHowKnowBaird = true 0
 FireAll GAFCSiyavongFikenhildRevealOptions","他好奇地看着你，眉头紧皱。""有趣，""他对自己说，""直接。""
 
-""$playerHeOrShe真的是这么想吗？""他喃喃自语，然后挥挥手把问题抛开，""没必要回应这个。你已经甩给我很多问题了。现在 —— 有更重要的事情要做：拯救 Scylla Coureuse。"" 他就像我们在某个笑话上达成了默契一样笑了起来。
+""$playerHeOrShe真的是这么想吗？""他喃喃自语，然后挥挥手把问题抛开，""没必要回应这个。你已经甩给我很多问题了。现在 —— 有更重要的事情要做：救出 Scylla Coureuse。"" 他就像我们在某个笑话上达成了默契一样笑了起来。
 
-""Coureuse 在 Isirah 星系里。当然。我可以告诉你 —— ""他戏剧性地停顿了一下，因为他在他的桌面控制台敲击了一些东西；你的 TriPad 响了，"" —— 有一个看起来可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""",,
+""Coureuse 在 Isirah 星系里。当然。我可以告诉你 —— ""他故意停顿了一下，好让你瞧见他往他的桌面控制台敲入了些什么。接着你的 TriPad 响了，"" —— 有一个看起来可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""",,
 GAFCSiyavongFikenhildSortOf,DialogOptionSelected,$option == gaFC_fikenhildSiyavongSortOf,"$option = gaFC_fikenhildSiyavongSortOf2 0
 FireBest DialogOptionSelected",,,
 GAFCSiyavongFikenhildSortOf2,DialogOptionSelected,$option == gaFC_fikenhildSiyavongSortOf2,"$global.gaFC_searchIsirah = true
 $global.gaFC_gotIsirahLeadFromSiyavong = true
 Call $global.gaFC_ref updateStage","Siyavong 特工看起来很开心；现在你着了他的道。
 
-""Coureuse 在 Isirah 星系里。当然。我可以告诉你 —— ""他戏剧性地停顿了一下，因为他在他的桌面控制台敲击了一些东西，你的 TriPad 响了，"" —— 有个看起来可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""
+""Coureuse 在 Isirah 星系里。当然。另外我还可以给你提供 —— ""他故意停顿了一下，好让你瞧见他往他的桌面控制台敲入了些什么。接着你的 TriPad 响了，"" —— 一份看起来十分可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""
 
-""这能告诉 Baird 院长，你真的在很努力工作，""他眨着眼睛说。","gaFC_fikenhildSiyavongJustTellingMe:""直接告诉我她现在在哪。""
+""想必这能让 Baird 院长明白，你真的在很努力地工作。""他眨着眼睛说。
+","gaFC_fikenhildSiyavongJustTellingMe:""就这样？你打算直接告诉我她现在在哪？""
 gaFC_fikenhildSiyavongHowKnowBaird:""你怎么会认识 Baird？""",
 GAFCSiyavongFikenhildJustTellingMe,DialogOptionSelected,$option == gaFC_fikenhildSiyavongJustTellingMe,"$askedJustTellingMe = true 0
-FireAll GAFCSiyavongFikenhildRevealOptions","""我没告诉你任何东西。"" 他朝你做了个手势，""是你自己截获了一个通讯，记得吗？而且，Isirah —— 嗯，不是一个大地方，我相信你很快就会把这些碎片拼凑起来的。""",,
+FireAll GAFCSiyavongFikenhildRevealOptions","""我没告诉你任何东西。"" 他朝你做了个手势，""是你自己截获了一个通讯，记得吗？再说，Isirah —— 呃，地方又不大，我相信你很快就会把必要的碎片拼凑起来的。""",,
 GAFCSiyavongFikenhildHowKnowBaird,DialogOptionSelected,$option == gaFC_fikenhildSiyavongHowKnowBaird,"$askedHowKnowBaird = true 0
-FireAll GAFCSiyavongFikenhildRevealOptions","Siyavon 的笑容扩大了，""就算我之前不知道，你刚刚不也自招了吗？""",,
+FireAll GAFCSiyavongFikenhildRevealOptions","Siyavon 笑得更灿烂了一些，""就算我之前不知道，你刚刚不是不打自招了吗？""",,
 GAFCSiyavongFikenhildNo,DialogOptionSelected,$option == gaFC_fikenhildSiyavongNo,FireAll GAFCSiyavongFikenHildHubBOptions,"""很诚实，""他以一种公事公办的方式折叠双手，""那么？""",,
 GAFCSiyavongFikenhildFindHer,DialogOptionSelected,$option == gaFC_fikenhildSiyavongFindHer,"$option = gaFC_fikenhildSiyavongSortOf2 0
 FireBest DialogOptionSelected",,,
@@ -4884,28 +4885,28 @@ FireAll GAFCSiyavongFikenHildHubBOptions","Siyavong 探员看起来很开心，�
 
 ""好吧，$playerName，我正好也是'某些人'中的一个。她很重要 —— 或者，更确切地说，如果当她的机会来临，她会变得很重要。""
 
-他靠过来，轻轻地说：""有一些人希望她就这么保持无足轻重的状况，直到永远。我认为...我们不应该让事情变成那样。我怀疑你的 '某些人' 在这一点上同意我的观点，如果没有其他问题的话。""",,
-GAFCSiyavongFikenhildBaird,DialogOptionSelected,$option == gaFC_fikenhildSiyavongBaird,,"Siyavong 特工眨了眨眼，皱着眉头，似乎没有想到你会就这么说出来。""我必须得说，你的直率有些令人不安。""
+他靠过来，轻轻地说：""有一些人希望她就这么保持无足轻重的状况，或许永远这样。我认为...我们不应该让事情变成那样。我怀疑你的 '某些人' 在这一点上同意我的观点，如果没有其他问题的话。""",,
+GAFCSiyavongFikenhildBaird,DialogOptionSelected,$option == gaFC_fikenhildSiyavongBaird,,"Siyavong 特工眼睛一眨，换上了眉头紧皱的表情，似乎没料到你会这么直截了当地说出来。""我不得不说，你直率得令人有些不安。""
 
-""我建议你注意一下分享信息的对象，""他严厉地说，""特别是考虑到你即将了解一些更重要的情报。""","gaFC_fikenhildSiyavongCoureuseIsirah:""你在指什么？""",
+""我建议你在分享信息时注意一下对方的身份，""他严肃地说到，""特别是在分享你即将得知的这份重要情报之前。""","gaFC_fikenhildSiyavongCoureuseIsirah:""你在指什么？""",
 GAFCSiyavongFikenhildContactZal,DialogOptionSelected,$option == gaFC_fikenhildSiyavongContactZal,,"Siyavon 停顿了一下，没有表现出任何情绪或动作。你几乎要怀疑通讯信号是否卡住了，然后他开口了。""我很感兴趣，舰长。我们可以做个交易吗？用 Zal 的通讯 ID 换取 Scylla Coureuse 的位置？""
 他现在笑了。","gaFC_fikenhildSiyavongZal:把 Elissa Zal 的通讯 ID 给他
 gaFC_fikenhildSiyavongHubB:""我不这么想。""",
 GAFCSiyavongFikenhildZal,DialogOptionSelected,$option == gaFC_fikenhildSiyavongZal,"$global.gaFC_gaveZalContactToSiyavong = true
 $option = gaFC_fikenhildSiyavongCoureuseIsirah 0
-FireBest DialogOptionSelected","Siyavong 研究了一会手中的 TriPad。""很有趣。"" 他说完便抬起头，并把它放在了一边。",,
+FireBest DialogOptionSelected","Siyavong 研究了一会手中的 TriPad。""有意思。"" 他说完便抬起头，并把它放在了一边。",,
 GAFCSiyavongFikenhildCoureuseIsirah,DialogOptionSelected,$option == gaFC_fikenhildSiyavongCoureuseIsirah,"$global.gaFC_searchIsirah = true
 $global.gaFC_gotIsirahLeadFromSiyavong = true
 Call $global.gaFC_ref updateStage
 FireAll GAFCSiyavongFikenhildRevealOptions
-$global.gaFC_isirahClues++","""Coureuse 在 Isirah 星系里。当然。我可以告诉你 —— ""他戏剧性地停顿了一下，因为他在他的桌面控制台敲击了一些东西，你的 TriPad 响了，"" —— 有个看起来可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""
+$global.gaFC_isirahClues++","""Coureuse 在 Isirah 星系里。当然。我可以告诉你 —— ""他故意停顿了一下，好让你瞧见他往他的桌面控制台敲入了些什么。接着你的 TriPad 响了，"" —— 有个看起来可信的数据，我们截获了她和 Cavin Pharoh 先生之间的通信。""
 
 ""这能告诉 Baird 院长，你真的在很努力工作，""他眨着眼睛说。",,
 GAFCSiyavongFikenhildRevealOption1,GAFCSiyavongFikenhildRevealOptions,!$askedHowKnowBaird,,,"gaFC_fikenhildSiyavongHowKnowBaird:""你怎么会认识 Baird?""",
 GAFCSiyavongFikenhildRevealOption2,GAFCSiyavongFikenhildRevealOptions,!$askedJustTellingMe,,,"gaFC_fikenhildSiyavongJustTellingMe:""你直接告诉我她现在在哪，好吧？""",
 GAFCSiyavongFikenhildRevealOption3,GAFCSiyavongFikenhildRevealOptions,"$askedJustTellingMe
 $askedHowKnowBaird",,,"gaFC_fikenhildSiyavongWrapUp:""你的目的是什么，为什么要帮我？""",
-GAFCFikenhildSiyavongWrapUp,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWrapUp,,"""别担心。你在追踪一个流氓科学家，而我代表舰队情报局，在这个问题上我可不能告诉你任何事情。我们也没有见过面；我不认识你，你也不认识我。""
+GAFCFikenhildSiyavongWrapUp,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWrapUp,,"""别担心。你在追踪一个逃跑的科学家，而我代表舰队情报局，在这个问题上我没法告诉你任何事情。那么，我们从未见过面，我不认识你，你也不认识我。""
 
 Siyavong 特工拍了拍手，""我相信我们已经谈完了。你们这些人怎么说来着 —— '航行无阻'，舰长？""","gaFC_fikenhildSiyavongWrapUp2:""等等，我还有几个问题。""
 cutCommLink:切断通讯链接",
@@ -4925,13 +4926,13 @@ GAFCSiyavongStonewallGreetOption2,GAFCSiyavongStonewallGreetOptions,,,,"
 cutCommLink:切断通讯链接",
 GAFCSiyavongStoneWallScylla,DialogOptionSelected,$option == gaFC_siyavongStonewallScylla,FireAll GAFCSiyavongStonewall,"""对不起，$playerSirOrMadam，但我们的工作人员中没有用这个名字的。我建议你在公共目录中查询。""",,
 GAFCSiyavongStonewallOption1,GAFCSiyavongStonewall,$spokeOpenly,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption1:""你为什么要装作不认识我的样子？""",
-GAFCSiyavongStonewallOption2,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption2:""好吧，我知道了""",
+GAFCSiyavongStonewallOption2,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption2:""好吧，我知道了。""",
 GAFCSiyavongStonewallOption3,GAFCSiyavongStonewall,$global.gaFC_gotIsirahLeadFromSiyavong,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption3:""Scylla Coureuse，记得吗，你说过知道去哪找她。""",
-GAFCSiyavongStonewallOption4,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption4:""Coureuse 院士，你问过关于她的事情。""",
+GAFCSiyavongStonewallOption4,GAFCSiyavongStonewall,,$siyavongStonewall = true 0,,"gaFC_siyavongStonewallOption4:""Coureuse 院士。你向认识她的人打听过她的事情。""",
 GAFCSiyavongStonewallOption5,GAFCSiyavongStonewall,,,,cutCommLink:切断通讯链接,
-GAFCSiyavongStonewall1,DialogOptionSelected,$siyavongStonewall,unset $siyavongStonewall,"恐怕我不知道你在说什么。"" Siyavong 看着你，无懈可击地模拟着既礼貌又官腔的困惑态度。""如果你想报告跨势力的犯罪，或在当地政体中涉及非 英仙座联盟 成员国公民的犯罪，我可以把你转给适当的联系人。""
+GAFCSiyavongStonewall1,DialogOptionSelected,$siyavongStonewall,unset $siyavongStonewall,"""恐怕我不知道你在说什么。"" Siyavong 看着你，打着官腔装糊涂，那故作殷勤的做派简直无懈可击。""如果你想报告跨势力的犯罪，或在当地政体中涉及非 英仙座联盟 成员国公民的犯罪，我可以把你转给适当的联系人。""
 
-无论你尝试什么，他都在搪塞。而且他很擅长这个。",cutCommLinkNoText:切断通讯链接,
+无论你怎么试探，他都在搪塞。而且他还很擅长这个。",cutCommLinkNoText:切断通讯链接,
 ,,,,,,
 # gaFC_pickedBranchProbes,,,,,,
 # gaFC Coureuse probe interactions,,,,,,
@@ -5100,7 +5101,7 @@ gaFCStolenProbePodStart,OpenInteractionDialog,$tag:gaFC_lootedProbe,"ShowDefault
 FireBest GAFCStolenProbePodStartOption",一支打捞小组确保目标收纳以便你的技术团队进行调查。,,
 gaFCStolenProbePodStartOption1,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 0,,技术人员工作迅速，并报告说，他们已经与探测器的机箱建立了连接。,gaFC_probe1Investigation1:继续,
 gaFCStolenProbePodStartOption2,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 1,"$global.gaFC_probesDone++
-DespawnEntity","""超波分析不是单纯的线性过程，""你的技术专家解释道。""现在还差一个数据集才能完成... 嗯，好吧，它虽然不是三角测量，但你可以先试着这样理解，好了。""
+DespawnEntity","""超波分析不是单纯的线性过程，""你的技术专家解释道。""现在还差一个数据集才能完成... 嗯，好吧，它虽然不是三角定位，但如果那样更好理解的话，你可以当成是那样，嗯。""
 
 他们清了清嗓子。""舰长$PlayerSirOrMadam。""
 
@@ -5253,11 +5254,12 @@ gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,
 
 行动长官则开口道，"" —— 反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是""说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继站里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
 gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,舰桥上的船员交换了一下眼神 —— 他们的舰长随之继续下令 —— 而你的行动长官向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
-gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有保护层的无人机已经准备好了，你的行动长官会监督它们的部署。你则通过 Groombridge 栖息地的全息投影来跟踪他们的进展，影像十分模糊 —— 可能此地的屏蔽做的很好让你的扫描无法穿透，亦或是放射性太强以至于难以读取数据 —— 但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里发现了一团奇怪的东西。
+gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
-技术专家和通讯官开始讨论如何攻破和骇入中继站，行动长官吼了一句话就让他们安静下来：""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西！""
+技术员和通讯官开始讨论如何攻破和骇入中继站，这时行动长官吼了一句话就让他们安静下来：""如果我是那些人，就肯定会做点手脚把来看热闹的家伙给炸个稀巴烂！""
 
-传感器技师大声道：""我们只需要拦截星系内的信号，对吗？现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""行动长官看着传感器技师叹了口气。","gaFC_groombridgeSearch5:""就那么做吧。""",
+传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？""
+行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearch5:""就那么做吧。""",
 gaFCGroombridgeSearch5,DialogOptionSelected,$option == gaFC_groombridgeSearch5,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
@@ -5279,11 +5281,12 @@ gaFCGroombridgeSearchB1,DialogOptionSelected,$option == gaFC_groombridgeSearchB1
 
 行动长官接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继站，我们该怎样找到它？""",
 gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继站里通常会有非常强大的辐射屏障，""你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
-gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有保护层的无人机已经准备好了，行动长官会监督它们的部署。你则通过 Groombridge 栖息地的投影来跟踪他们的进展，影像十分模糊 —— 可能此地的屏蔽做的很好让你的扫描无法穿透，亦或是放射性太强以至于难以读取数据 —— 但仍带有一些清晰的细节。很快，在一个靠近死寂的空间站核心的损坏工作间里发现了一团奇怪的东西。
+gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
-技术人员和通讯技师开始讨论如何攻破和骇入中继站，行动长官吼了一句就让他们安静了下来：""如果我是这里的负责人，我不会部署一个这么简单就能被攻陷的东西！""
+技术员和通讯官开始讨论如何攻破和骇入中继站，这时行动长官吼了一句话就让他们安静下来：""如果我是那些人，就肯定会做点手脚把来看热闹的家伙给炸个稀巴烂！""
 
-传感器技师大声道：""我们只需要拦截星系内的信号，对吗？现在不清楚什么时候会有信号，我们可以部署一...呃...一大堆探测器。""行动长官看着传感器技师叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
+传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？""
+行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
 gaFCGroombridgeSearchB4,DialogOptionSelected,$option == gaFC_groombridgeSearchB4,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
@@ -6264,7 +6267,7 @@ Call $global.gaPZ_ref updateData",ShowDefaultVisual,"初步扫描结果显示，
 defaultLeave:离开",
 gaPZ_investigateRelay,DialogOptionSelected,$option == gaPZ_investigateRelay,,"你的舰桥显示器集中展示着调查工作相关的图像，从如同蜂群一般围绕探测器运行的工作无人机，到设备箱和各式数据传输管线。行动长官在通讯频道中嚷嚷着，确保呼应环节严格按照安全协议进行。
 
-打捞小组很快在探测器结构的中心发现了一个非标准的微型超通信中继核心。行动长官望向你并给了一个眼神，告诉你打捞到了有意思的东西。","gaPZ_investigateRelay1:""行动长官，你们有什么发现？""",
+打捞小组很快在探测器结构的中心发现了一个非标准的微型超通信中继核心。行动长官望向你并给了一个眼神，示意你打捞到了有意思的东西。","gaPZ_investigateRelay1:""行动长官，你们有什么发现？""",
 gaPZ_investigateRelay1,DialogOptionSelected,$option == gaPZ_investigateRelay1,,行动长官带你浏览了一遍已经整理好的现场调查数据：超通讯核心是由密集的超导材料形成的，曾经精心安排的回路已经被其所遭受的冲击弯曲，刺穿，它脆弱的管道则已经被辐射灼伤。这个复杂的大崩塌后工程产物已经成了废铁，但超通讯核心的存在表明这片星域中最大的势力之一有参与平台的搭建。,gaPZ_investigateRelay2:继续,
 gaPZ_investigateRelay2A,DialogOptionSelected,"$option == gaPZ_investigateRelay2
 $global.gaFC_gotIsirahLeadFromProbes
@@ -6733,7 +6736,7 @@ ZigguratCMD updateData","$entity.ignorePlayerCommRequests = true
 FireBest GAPZSiyavongGreeting
 $hadMetBefore = $metAlready 0
 $metAlready = true",,,
-GAPZSiyavongGreetingA,GAPZSiyavongGreeting,!$metAlready,FireBest GAPZSiyavongGreetingCont,""" $playerName 舰长。我是海军上尉 Finlay Siyavong，从属于 英仙座联盟 舰队情报部。能和您见面可真是有趣。""",,
+GAPZSiyavongGreetingA,GAPZSiyavongGreeting,!$metAlready,FireBest GAPZSiyavongGreetingCont,""" $playerName 舰长。我是海军上尉 Finlay Siyavong，从属于 英仙座联盟 舰队情报部。能和您见上一面，真是令我感到非常有趣。""",,
 GAPZSiyavongGreetingB,GAPZSiyavongGreeting,$metAlready,FireBest GAPZSiyavongGreetingCont,""" $playername 舰长。"" 英仙座联盟 舰队情报部特勤队的 Finlay Siyavong 海军上尉向你打招呼，""和您再次见面令我很高兴，"" 他微笑着说道。",,
 GAPZSiyavongGreetingContA,GAPZSiyavongGreetingCont,$entity.hasZiggurat,FireAll GAPZSiyavongHub,"他礼貌地向你点了点头，""您这艘船还真是有点不同寻常。""",,
 GAPZSiyavongGreetingContB,GAPZSiyavongGreetingCont,!$entity.hasZiggurat,FireAll GAPZSiyavongHub,"他礼貌地向你点了点头，""我听说您最近在使用一艘很不寻常的船。实际上，甚至可以说是独一无二。""",,
@@ -6762,7 +6765,7 @@ gaPZ_siya3,DialogOptionSelected,$option == gaPZ_siya3,,"Siyavong 尽可能挤出
 Siyavong 双手合十。""如果可以的话，舰长，我很好奇你是从哪找到这艘船的。当然，如果你能亲自讲述，那就更好了。""","gaPZ_siyaBusiness:""我不是很想谈生意。""
 gaPZ_siya4:""我是在一处 速子科技 的秘密研究站的轨道上找到它的。""
 gaPZ_siya5:""见到你很高兴，上尉。我该走了。""",
-gaPZ_siyaBusiness,DialogOptionSelected,$option == gaPZ_siyaBusiness,,"""没有问题，舰长。"" Siyavong 的笑容中夹着一丝僵硬。""如果你不希望和舰队情报部合作，那也是你的选择，我们没有任何合理的反对意见。""","gaPZ_siyaThreat:""这是在威胁我吗？""
+gaPZ_siyaBusiness,DialogOptionSelected,$option == gaPZ_siyaBusiness,,"""没有问题，舰长。"" Siyavong 的笑容中夹着一丝僵硬。""无论你希不希望与舰队情报部合作，那都是你个人的选择，我们没有任何合理的反对意见。""","gaPZ_siyaThreat:""这是在威胁我吗？""
 gaPZ_siya5:""和你谈话很高兴，上尉。我该走了。""",
 gaPZ_siyaThreat,DialogOptionSelected,$option == gaPZ_siyaThreat,"MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
@@ -7399,14 +7402,14 @@ gaATGsiyavongQuestioning3,DialogOptionSelected,$option == gaATG_siyavongQuestion
 gaATG_siyavongQuestioning4:""只是一次私人谈话。希望你有美好的一天，上尉。""
 gaATG_siyavongQuestioning8:""哦，Baird 在敲诈 Horus Yaribay, 为了和至高霸主达成个什么交易。""",
 gaATGsiyavongQuestioning4,DialogOptionSelected,$option == gaATG_siyavongQuestioning4,"$option = gaATG_siyavongQuestioningEnd 0
-FireBest DialogOptionSelected","Siyavong 的笑容僵住了。""真遗憾，"" 他说道。他脸上的笑容已经褪去，""看来我的好奇心是得不到满足了；我得到的只有苦涩的失落。""
+FireBest DialogOptionSelected","Siyavong 的笑容僵住了。""那可真遗憾，"" 他说道。他脸上的笑容已经褪去，""看来我的好奇心是得不到满足了。我能得到的只有苦涩的失落。""
 
 他叹了口气，垂下头看着什么，过了一会，又抬起头来，好像已经恢复了之前的精神。",,
-gaATGsiyavongQuestioning5,DialogOptionSelected,$option == gaATG_siyavongQuestioning5,,"""这很有趣，""他说，""因为尽管他们拥有庞大影响力，但 Yaribays 家族却倾向于使用他们自己的亲属作为使节。""
+gaATGsiyavongQuestioning5,DialogOptionSelected,$option == gaATG_siyavongQuestioning5,,"""这很有趣，""他说，""因为 Yaribay 家族虽然拥有极为广泛的影响力，但却倾向于使用他们自己的亲属作为使节。""
 
-Siyavong 看上去想了一下，接着说：""这一定是你独特的能力，再加上，""他向你伸出一只手，""我怎么可以忽略你的个人魅力。""
+Siyavong 看上去想了一下，接着说：""我想这一定是因为你独特的能力，再加上，""他向你伸出一只手，""我怎么可以忽略你的个人魅力。""
 
-""但肯定还有其他原因，你最近经常受雇于 Galatia 学院的事一直在我脑海中浮现，我无法理解。""","gaATG_siyavongQuestioning6:""你这是阴谋论，上尉。""
+""但肯定还有其他原因，你最近经常受雇于 Galatia 学院的事一直在我脑海中浮现。我无法理解其中原因。""","gaATG_siyavongQuestioning6:""你这是阴谋论，上尉。""
 gaATG_siyavongQuestioning7:""和那些没有关系。但如果我是你的话，我会更加注意 Horus Yaribay。""
 gaATG_siyavongQuestioning4:""如果你说的是真的，那这次就只是私人谈话了。希望你有美好的一天，上尉。""
 gaATG_siyavongQuestioning8:""哦，Baird 在敲诈 Horus Yaribay，为了和至高霸主达成个什么交易。""",
@@ -7434,7 +7437,7 @@ gaATGsiyavongQuestioning8c-1,GAATGsiyavongQuestioning8cOption,$entity.relValue >
 $option = gaATG_siyavongQuestioningEnd 0
 FireBest DialogOptionSelected","""那我们十分感谢，"" Siyavong 怀疑地看着你说。
 
-""如果你真的这样觉得，我希望我们以后的谈话也能如此富有成果。如果时机成熟，我们或许都可以对彼此更坦率些。但是...到时再说吧。""",,
+""如果你真的这样觉得，那我希望我们以后的谈话也能如此富有成果。如果时机成熟，我们或许都可以对彼此敞开心扉。但是...到时再说吧。""",,
 gaATGsiyavongQuestioning8c-2,GAATGsiyavongQuestioning8cOption,$entity.relValue <= 0,"#AdjustRepPerson siyavong COOPERATIVE 1
 $option = gaATG_siyavongQuestioningEnd 0
 FireBest DialogOptionSelected","""老实告诉你吧，舰长，我没想到你会实话实说，"" Siyavong 说。
@@ -7986,8 +7989,8 @@ DoCanAffordCheck $gaATG_pireateScanCost gaATG_pirateScanPay false","""你也想�
 海盗咧嘴笑了笑，你能看到$hisOrHer上一口食物的残渣，还有两颗金刚石门牙，这在他们那个巢区黑帮里应该算是个很霸气的东西。
 
 ""给我付 $gaATG_pirateScanCost 星币，你就可以拿走这个大铁环，随便你拿去干什么。""","gaATG_pirateScanPay:支付贿赂款
-gaATG_pirateScanReason:""难道知识不是对全人类都有价值吗？根据慷慨的推论，你也是人，所以对你也有价值。""
-gaATG_pirateScanThreaten1:""如果我能把你的舰队炸成灰，为什么要付款？""
+gaATG_pirateScanReason:""难道知识不是对全人类都有价值吗？你既然是个海盗，那么四舍五入也算个人吧？仔细想想吧，我要做的事对你也有价值。""
+gaATG_pirateScanThreaten1:""如果我能把你的舰队炸成灰，是不是就不用付款了？""
 cutCommLink:""我正要走呢。好好享受你的星门。""",
 gaATGpirateScanPay,DialogOptionSelected,$option == gaATG_pirateScanPay,"AdjustRepActivePerson COOPERATIVE 5
 $entity.ignorePlayerCommRequests = true
@@ -9831,17 +9834,17 @@ gaDAScavBluff1,DialogOptionSelected,$option == gaDA_scavBluff,,"拾荒者眼神�
 
 现在轮到你了。你开始回想起了之前在某个港口里读过的一些琐碎的报告，你也搞不懂当时你为什么会这么细致地查阅邻近船只的所有权状况和公共合同关系的记录。也许只是为了在装货时打发时间。
 
-根据刚回忆到的一些细节，你解释道自己清楚他们是 $personName，与注册在 Agreus 临时商业协会 旗下的 原产地供应库存联合公司 签有长期服务合同。而幸运的是，他们是现在碰到了你，而不是在返回 Nortia 之后才发现情况不对。
+根据刚回忆到的一些细节，你解释道自己清楚他们是 $personName，与注册在 阿加雷斯临时商贸协会 旗下的 土产供销社 签有长期服务合同。而幸运的是，他们是现在碰到了你，而不是在返回 Nortia 之后才发现情况不对。
 
 ""发现什么情况？""$heOrShe的语气毫无起伏，显然已经对坏消息做好了心理准备。","gaDA_scavBluff2:""当然是调查的结果。""",
 gaDAScavBluff2,DialogOptionSelected,$option == gaDA_scavBluff2,,"$HeOrShe看起来相当担心，""调查？""
 
-你开始讲述那起那次调查，还不时地摇头表示同情。事件的起因是 Agreus 临时商业协会 接到密告，得知某几个特定的 '幽灵资本' 提供者在相互转移资金，涉及一项通过往卢德左径控制的空域走私重型武器以便对 Eventide 的优质房地产业产生杠杆影响的计划。随后揭示的丑闻和一系列的法律诉讼然让 原产地供应库存联合公司 的董事会几乎全面崩塌。由于丑闻影响很广，再加上产生了势力间的外交压力，协会肯定会在下一个星历年里看到更多的人头落地。
+你开始讲述那起那次调查，还不时地摇头表示同情。事件的起因是 阿加雷斯临时商贸协会 接到密告，得知某几个特定的 '幽灵资本' 提供者在相互转移资金，涉及一项往卢德左径控制的空域走私重型武器的计划。他们打算以此对 Eventide 的优质房地产业产生杠杆式的影响。随后揭示的丑闻和一系列的法律诉讼然让 土产供销社 的董事会几乎全面崩塌。由于丑闻影响很广，再加上产生了势力间的外交压力，协会肯定会在下一个星历年里让更多的人头落地。
 
 你不断地危言耸听，舰长看起来也越来越像一具太空尸体。","gaDA_scavBluff3:""但真正会给你惹麻烦的是罚沒令...""",
 gaDAScavBluff3,DialogOptionSelected,$option == gaDA_scavBluff3,,"""..."" $heOrShe甚至连一个字都说不出来了。
 
-""对...""你表示遗憾并确认了$heOrShe的猜想。原产地供应库存联合公司 所有资产 —— 无论是其拥有的，还是其租赁的、协议担保的、契约占有的、或是其他任何通过合同成分所有的 —— 都将被 Agreus 临时商业协会 没收并出售，以用于支付巨额罚款。而就算是那些在当前所有权还没完成转移的资产，也有在一次匿名拍卖中被出售过。
+""对...""你表示遗憾并确认了$heOrShe的猜想。土产供销社 所有资产 —— 无论是其拥有的，还是其租赁的、协议担保的、契约占有的、或是其他任何通过合同成分所有的 —— 都将被 阿加雷斯临时商贸协会 没收并出售，以用于支付巨额罚款。而就算是那些在当前所有权还没完成转移的资产，也有在一次匿名拍卖中被出售过。
 
 总而言之，你先到这儿来向他们说明这些乱七八糟的事情算是做了件善事。毕竟如果是某个讨债人首先发现了他们，那么他们可能就会失去所有非必要的器官，然后在一个随波逐流逃生舱里醒来。有这个警告在先，他们就有机会洗掉自己的应答器 ID，找一个最近的黑市上卖掉他们正在运输的所有东西，在随便哪个独立政体里买个公民身份，兴许还能剩下点启动资金来拥抱接下来可能碰到的机遇。","gaDA_scavBluff4:""作为通风报信的小费，也许我可以拿一些打捞物...""",
 gaDAScavBluff4,DialogOptionSelected,$option == gaDA_scavBluff4,$gaDA_scavPrice = 0 0,"$personLastName 舰长马上同意了提议。你确实帮了大忙，一箱打捞物根本就回报不了你的恩情。你摇头微笑，解释说，在群星之中，像你和$himOrHer这样的独立舰长必须互相照应。
@@ -10410,7 +10413,7 @@ gaVIPConMerc,DialogOptionSelected,$option == gaVIP_mercSendFake,,"迅速思考�
 你说到伸张正义和尊重权威时，雇佣兵郑重地点点头。当你在通讯器准备登出去 ""亲自监督转移"" 的时候，$HeOrShe甚至还给你行了个小礼。",gaVIP_mercCon1:继续,
 gaVIPConMerc1,DialogOptionSelected,$option == gaVIP_mercCon1,,"因为听懂了你在通话中的暗示，你的后勤官和行动长官已经开始动手把一个多余的冷冻舱塞进标准货柜里了。
 
-当你进入货舱时，行动长官问到：""我们不搞一具尸体吗？""
+当你进入货舱时，行动长官问到：""我们不搞个尸体进去吗？""
 
 所有人面面相觑。没有人吐出一个字来。
 
@@ -12006,24 +12009,24 @@ FireAll SOEDuelPrepResponse","Neriene 把剑递你的时候看起来还有些将
 你干脆利落地拔剑出鞘，比划了个凌厉的弓步直刺，快得没法看清是出手了一次还是两次。聚在你周围的人群欢呼雀跃起来，还向走廊另一端发出吹嘘的声音。
 
 ""那些白痴犯了比我想象中更大的错误。""她看起来承认了你有些本事。",,
-soeDuelPrepReady,DialogOptionSelected,$option == soe_duelPrepReady,,"""如果你如此自信，就开始吧。""她说道。
+soeDuelPrepReady,DialogOptionSelected,$option == soe_duelPrepReady,,"""如果你确定的话。""她说道。
 
-当你迈步离开时，她补充道，""顺便...送他下地狱吧！""",soe_duelPrepDone:继续,
+当你迈步离开时，她补了一句，""顺便...给他点颜色看看！""",soe_duelPrepDone:继续,
 soeDuelPrepLeave,DialogOptionSelected,$option == soe_duelPrepLeave,"$option = soe_duelLeaveGo 0
-FireBest DialogOptionSelected","""很好，""她说着，把剑鞘扔到了那堆决斗用具里。",,
-soeDuelLeaveGo,DialogOptionSelected,$option == soe_duelLeaveGo,MarketReduceRandomRep,人群哄笑起来。Neriene 向旁边咧嘴大笑的人递去了一个杀气腾腾的眼神；很快他们发现，自己对这场决斗的热情没有想象中那么高。她作为 Rao 家族成员和舞会主持人却并不能替你挡住所有的蔑视，不论如何，她指引你进入了一个不起眼的侍者专用电梯，让你回到了你穿梭机的停泊处。,soe_duelPrepLeave2:继续,
+FireBest DialogOptionSelected","""很好，""她说着，把剑扔到了那堆决斗用具里。",,
+soeDuelLeaveGo,DialogOptionSelected,$option == soe_duelLeaveGo,MarketReduceRandomRep,人群哄笑起来。随着 Neriene 向旁边咧嘴大笑的人投去了一个杀气腾腾的眼神，他们很快就识趣地发现了自己对这场决斗的热情没有想象中那么高。虽然身为 Rao 家的一员和舞会主持人，她并不能替你挡下所有的蔑视，但尽其所能地，她指引你进入了一个不起眼的侍者专用电梯，让你回到了你穿梭机的停泊处。,soe_duelPrepLeave2:继续,
 soeDuelPrepLeave2,DialogOptionSelected,$option == soe_duelPrepLeave2,BeginConversation neriene_rao,"这的员工效率很高；不需要你的提醒，他们就招来了你的随从。不过他们应该是饭才吃到一半的时候被叫出来的，全都还在擦着手。有个保镖还在你面前磕了一片醒酒药。
 
 穿梭机已经准备就绪，Neriene 在发射台送别你。
 
 ""总之，""她听上去一点都高兴不起来，""我为...这一切向你道歉。我们并不都是排外的畜牲。""","soe_duelPrepLeaveWontHold:""我不会因为他们的行为指责你。""
-soe_duelPrepLeaveBravado:""我见过更糟的，这又不是船上破了个洞。""
-soe_duelPrepLeaveDatingSim:""至少我觉得跳舞很好玩，有机会我们该再试试。""
-soe_duelPrepLeaveRude:""别，他们才刚让我看到你们这些人的真面目。""",
+soe_duelPrepLeaveBravado:""我见过更糟的，这次又不是船上破了个洞。""
+soe_duelPrepLeaveDatingSim:""至少我觉得跳舞挺有趣的，有机会我们该再试试。""
+soe_duelPrepLeaveRude:""别装了，他们只不过是让我看到了你们的真面目而已。""",
 soeDuelPrepLeaveWontHold,DialogOptionSelected,$option == soe_duelPrepLeaveWontHold,,"她点点头，接受了你的话，但脸色依旧不好看。""再择良日吧，舰长。""你还没来得及回答，她就转身朝庄园走了回去。",soe_duelPrepLeaveEnd:离开,
 soeDuelPrepLeaveBravado,DialogOptionSelected,$option == soe_duelPrepLeaveBravado,,"""嗯，确实。""她说，脸上笑容重现。""再择良日吧，舰长。""你还没来得及回答，她就转身朝庄园建筑群走了回去。",soe_duelPrepLeaveEnd:离开,
 soeDuelPrepLeaveDatingSim,DialogOptionSelected,$option == soe_duelPrepLeaveDatingSim,AdjustRepPerson neriene_rao FRIENDLY 1,"""我也这么想，""她说，脸上笑容重现。她看起来还想说什么，但取而代之地，她点了点头后转身朝庄园建筑群走了回去 —— 在你能做出答复之前。",soe_duelPrepLeaveEnd:离开,
-soeDuelPrepLeaveRude,DialogOptionSelected,$option == soe_duelPrepLeaveRude,AdjustRepPerson neriene_rao SUSPICIOUS -5,她看起来受到了不小的打击，张开嘴想说些什么，但很快又沉默了，转身朝庄园建筑群走了回去。,soe_duelPrepLeaveEnd:离开,
+soeDuelPrepLeaveRude,DialogOptionSelected,$option == soe_duelPrepLeaveRude,AdjustRepPerson neriene_rao SUSPICIOUS -5,她看起来受到了不小的打击，张开嘴想说些什么，但很快一言不发地闭上嘴，转身朝庄园建筑群走了回去。,soe_duelPrepLeaveEnd:离开,
 soeDuelPrepLeaveEnd,DialogOptionSelected,$option == soe_duelPrepLeaveEnd,"Call $global.soe_ref cleanUpMusicPlayer
 EndConversation DO_NOT_FIRE
 $global.soe_completed = true
@@ -12032,36 +12035,36 @@ ShowDefaultVisual
 FireBest MarketPostOpen",你的穿梭机返回了 $entityName 上方的$shipOrFleet中。,,
 ,,,,,,
 soeDuelPrepDone,DialogOptionSelected,$option == soe_duelPrepDone,"EndConversation DO_NOT_FIRE
-ShowImageVisual eventide","你穿着决斗装备，提着 Neriene 的剑，被带到了一个似乎位于山巅的，周围立着圆柱的凉廊一端。
+ShowImageVisual eventide","披挂好决斗装备之后，你握起 Neriene 的剑，跟着领路人走到了一条长廊的尽头。长廊被高耸的立柱支起，看起来仿佛是悬在峡谷之上。
 
-Magnus Cardona 走上前来，人群则开始后退。",soe_duelStart:开战,
+Magnus Cardona 踏步上前，人群向后退去。",soe_duelStart:开战,
 soeDuelStart,DialogOptionSelected,$option == soe_duelStart,"EndConversation DO_NOT_FIRE
 Call $global.soe_ref beginDuel false",,,
 soeDuelStartSkilled,DialogOptionSelected,"$player.bladeSkill
 $option == soe_duelStart","EndConversation DO_NOT_FIRE
 Call $global.soe_ref beginDuel true",,,
 # soe Won Duel ,,,,,,
-soeFightWin,SOEDuelFinished,$soe_playerWonDuel,Call $global.soe_ref postDuel,"当 Cardona 重重地倒地时，围观的人群发出了同情的声音。接着是紧张的沉默。
+soeFightWin,SOEDuelFinished,$soe_playerWonDuel,Call $global.soe_ref postDuel,"当 Cardona 重重地倒地时，围观的人群感同身受般地爆出了一阵痛呼。接着是紧张的沉默。
 
 Sang 和他的跟班们看起来吓坏了。他们身后的旁观者呆若木鸡，不敢相信眼前的一切。",soe_fightWin2:继续,
-soeFightWin2,DialogOptionSelected,$option == soe_fightWin2,AdjustRep hegemony WELCOMING 3,"某种看不见的东西来到了临界点，随着它缓缓地转向另一面，周围的环境发生了变化。
+soeFightWin2,DialogOptionSelected,$option == soe_fightWin2,AdjustRep hegemony WELCOMING 3,"就像是有看不见的巨大物体被隐形撬杆推过了支点一样，周围的气氛仿佛是突破了临界质量一般发生了质变。
 
-有人开始欢呼，之后便有人跟随，掌声和喊叫声越来越多。看起来大家达成了共识，那就是今天或许可以为一个外人欢呼。",soe_fightWin3:继续,
-soeFightWin3,DialogOptionSelected,$option == soe_fightWin3,,"你发现自己被抬到了一群兴奋的欢呼者的肩膀上，而他们几分钟前还不是你的朋友。你被抬回了大厅，那里已经满是开了盖的饮料。
+先是不知道是谁起头开始了欢呼，之后便有人附和起来，掌声和喝彩如波澜般向外传开。看起来大家达成了共识，今天是一个可以为外人欢呼的日子。",soe_fightWin3:继续,
+soeFightWin3,DialogOptionSelected,$option == soe_fightWin3,,"你发现自己被一群兴奋的欢呼者抬到了他们的肩膀上，而就在几分钟前，他们还不是你的朋友。你不由自主地被抬回了大厅，那里已经满是开了盖的香槟什么的。
 
-你像国王一样被放到了主桌上，你将作为某种崇拜对象，胜利，荣誉或其他一些概念的化身被呈现给聚集在一起的人，这些概念在明天大家清醒时可能就没有什么意义了。",soe_fightWin4:继续,
-soeFightWin4,DialogOptionSelected,$option == soe_fightWin4,,"你突然想到 Neriene 的剑已经不在你手里了。你默默念叨最好是被人妥善保管了。你看到了 Neriene 的脸；她正试图挤过人群。她看上去喜忧参半。
+你像国王一样被放到了主桌上，被周围的人犹如狂热信徒一般崇拜着。胜利的化身，荣誉的代言，抑或是其他什么理想概念的象征，不管怎么样，等明天大家都酒醒了之后，这些应该就没有什么意义了。",soe_fightWin4:继续,
+soeFightWin4,DialogOptionSelected,$option == soe_fightWin4,,"你突然想到 Neriene 的剑已经不在你手里了。你默默念叨最好是被人妥善保管了。你看到了 Neriene 的脸，她正试图挤过人群，脸上的神情却是喜忧参半。
 
-Augusta Rao 远远地看着你，神情冷漠。",soe_fightWin5:继续,
-soeFightWin5,DialogOptionSelected,$option == soe_fightWin5,BeginConversation neriene_rao,"那之后 —— 究竟过了多久你不愿意去想 —— 你摇摇晃晃地来到了你的穿梭机前。这里的员工效率很高；不需要你的提醒，他们就招来了你的随从。一些人看起来刚刚被叫醒，你还注意到有一个保镖在偷偷喝醒酒饮料。他们依旧保持着专业的语气，但你可以看到他们脸上写满了自豪。看起来你胜利的消息已经在等候的船员中传开了。
+Augusta Rao 则只是远远地看着你，神情冷漠。",soe_fightWin5:继续,
+soeFightWin5,DialogOptionSelected,$option == soe_fightWin5,BeginConversation neriene_rao,"不久之后，嘛，到底是多久之后你已经不在乎了，你摇摇晃晃地回到了你的穿梭机前。这里的员工效率很高；不需要你的提醒，他们就招来了你的随从。一些人看起来刚刚被叫醒，你还注意到有一个保镖在偷偷地磕了一片醒酒药。他们依旧保持着专业的语气，但你可以看到他们脸上写满了自豪。看起来你胜利的消息已经在等候的船员中传开了。
 
 Neriene 也来为你送行了。尽管在舞会上她玩得很尽兴，现在她却很镇静。
 
-""你今晚结识了一些朋友，"" Neriene 说，脸上带着一丝微笑，但笑容渐渐消失了。""但也和一些人结仇了。""","soe_fightWinMaybe:""很有趣的舞会，之后再见了，也许吧。""
-soe_fightWinBravado:""现在那些人也知道等着他们的是什么了。""
-soe_fightWinDatingSim:""我希望能把你算入朋友之列。""
-soe_fightWinNeverAgain:""我真不想再参加这些舞会了。""
-soe_fightWinRude:""我真不敢相信你会说服我去参加那个堕落的血腥游戏。""
+""你今晚结识了一些朋友，"" Neriene 说，脸上带着一丝微笑，但笑容渐渐消失了。""但也招惹了一些仇人。""","soe_fightWinMaybe:""很有趣的舞会。之后有缘再见吧。""
+soe_fightWinBravado:""不过那些仇人应该清楚等着他们的是什么了。""
+soe_fightWinDatingSim:""我真希望那些朋友之中能把你也算一个进去。""
+soe_fightWinNeverAgain:""我真不想再参加这种舞会了。""
+soe_fightWinRude:""我真不敢相信你居然说服了我，让我去参加那个堕落的血腥游戏。""
 ",
 soeFightWinMaybe,DialogOptionSelected,$option == soe_fightWinMaybe,AdjustRepPerson neriene_rao FRIENDLY 1,"她点了点头，脸上又出现了一丝微笑。""也许吧。""你还没来得及回答，她就转过身去走回了庄园。",soe_fightWinPrevail:离开,
 soeFightWinBravado,DialogOptionSelected,$option == soe_fightWinBravado,,"她皱了皱眉头。""你的朋友也是，我想。""她说着转过了身。
@@ -12070,10 +12073,10 @@ soeFightWinBravado,DialogOptionSelected,$option == soe_fightWinBravado,,"她皱�
 soeFightWinDatingSim,DialogOptionSelected,$option == soe_fightWinDatingSim,AdjustRepPerson neriene_rao FRIENDLY 2,"""我也乐于接受。""她说，脸上又出现了微笑。
 
 她看起来还想说什么，但取而代之地，她点了点头后转身朝庄园建筑群走了回去 —— 在你能做出答复之前。",soe_fightWinPrevail:离开,
-soeFightWinNeverAgain,DialogOptionSelected,$option == soe_fightWinNeverAgain,,"她点了点头，看向远处的风暴云墙，若有所思地开口了，""我也不能怪你。也许下次我们能在一个...更文明的环境里碰面。""
+soeFightWinNeverAgain,DialogOptionSelected,$option == soe_fightWinNeverAgain,,"她点了点头，看向远处的风暴云墙，若有所思。""我也不能怪你。也许下次我们能在一个...更文明的环境里碰面。""
 
 说完后，她转身朝庄园建筑群走去。",soe_fightWinPrevail:离开,
-soeFightWinRude,DialogOptionSelected,$option == soe_fightWinRude,AdjustRepPerson neriene_rao SUSPICIOUS -5,"她看起来很震惊，""你原来认为是我 —— ""她硬生生地刹住了自己的话，向你做出了个 ""推开"" 的动作，神情僵硬，
+soeFightWinRude,DialogOptionSelected,$option == soe_fightWinRude,AdjustRepPerson neriene_rao SUSPICIOUS -5,"她看起来很震惊，""你原来认为是我 —— ""她硬生生地刹住了自己的话，向你做出了个 ""推开"" 的动作，神情僵硬。
 
 Neriene 又张开了嘴想说些什么，但很快沉默了，迅速转身朝庄园建筑群走了回去。",soe_fightWinPrevail:离开,
 soeFightWinPrevail,DialogOptionSelected,$option == soe_fightWinPrevail,"Call $global.soe_ref cleanUpMusicPlayer
@@ -12089,12 +12092,12 @@ FireBest MarketPostOpen",你的穿梭机返回了 $entityName 上方的$shipOrFl
 soeFightLose,SOEDuelFinished,$soe_playerLostDuel,Call $global.soe_ref postDuel,"你缓缓醒来。你感到很不舒服，并不是疼痛，而只有肉体错位的怪异感。
 
 一个便携式自动设备在你身边哔哔作响，冰冷的管子镶入了你的身体中。一个模模糊糊的看起来像 Neriene Rao 的人影在问你一些事情。",soe_fightLose1:继续,
-soeFightLose1,DialogOptionSelected,$option == soe_fightLose1,,"你大概是靠在长凳上，你想，而有人把制服外套垫在了你的脑袋后。高耸的窗户在暮色中闪闪发光，狂欢者模糊的身影在里面闪动。
+soeFightLose1,DialogOptionSelected,$option == soe_fightLose1,,"你大概是靠在长凳上，你想，有人帮你把制服外套垫在了脑袋后面。高耸的窗户在暮色中闪闪发光，狂欢者模糊的身影在里面摇曳闪动。
 
-恒星镜大概已经被关上了，天空中只有深蓝色的微光。",soe_fightLose2:继续,
+恒星镜的傍晚已经落暮，天空中只剩下深蓝色的微光。",soe_fightLose2:继续,
 soeFightLose2,DialogOptionSelected,$option == soe_fightLose2,BeginConversation neriene_rao,"""来吧，我送你回穿梭机。""
 
-Neriene 把你拉了起来。你刚转了转头，自动装置就开始嗡嗡作响。一种脆弱的健康感充斥着你的身躯。
+Neriene 把你拉了起来，让你感到一阵头晕眼花。这时自动医疗装置开始嗡嗡作响，把一股脆弱的健康感填入了你的身躯。
 
 她小心翼翼地把你带到了一个不起眼的侍者用电梯里，让你回到了你的穿梭机旁。",soe_fightLose3:继续,
 soeFightLose3,DialogOptionSelected,$option == soe_fightLose3,,"这里的员工效率很高。不需要你的提醒，他们就招来了你的随从。他们依旧保持着专业的语气，但你可以看出他们情绪低落。看起来你战败的消息已经在等候的船员中传开了。
@@ -12102,23 +12105,23 @@ soeFightLose3,DialogOptionSelected,$option == soe_fightLose3,,"这里的员工�
 穿梭机准备好了，Neriene 在发射台送别你。
 
 ""总之，""她很不舒服地说，""我为...这一切向你道歉。我们并不都是排外的畜牲。""","soe_fightLoseWontHold:""我不会因为他们的行为指责你。""
-soe_fightLoseParty:""有趣的派对，很高兴我活了下来。""
-soe_fightLoseBravado:""现在他们知道我不会退缩了，那是我仅有的胜利。""
-soe_fightLoseDatingSim:至少我觉得跳舞很好玩，有机会我们该再试试。""
-soe_fightLoseRude:""别，他们才刚让我看到你们这些人的真面目。""",
+soe_fightLoseParty:""有趣的派对，很高兴我还挺得过来。""
+soe_fightLoseBravado:""现在他们至少知道我不会退缩了，也算是一种小胜吧。""
+soe_fightLoseDatingSim:""至少我觉得跳舞很有趣，有机会我们该再试试。""
+soe_fightLoseRude:""别装了，他们只不过是让我看到了你们的真面目而已。""",
 soeFightLoseWontHold,DialogOptionSelected,$option == soe_fightLoseWontHold,,"她点点头，接受了你的话。
 
 ""再择良日吧，舰长。""你还没来得及回答，她就转身朝庄园走了回去。",soe_fightLoseLeave:离开,
 soeFightLoseParty,DialogOptionSelected,$option == soe_fightLoseParty,AdjustRepPerson neriene_rao FRIENDLY 1,"""我也是，"" 她笑了起来。
 
 ""再择良日吧，舰长。""你还没来得及回答，她就转身朝庄园走了回去。",soe_fightLoseLeave:离开,
-soeFightLoseBravado,DialogOptionSelected,$option == soe_fightLoseBravado,,"她皱了皱眉，""在学院里，我们被教导要避免在敌人设定的环境中战斗。""
+soeFightLoseBravado,DialogOptionSelected,$option == soe_fightLoseBravado,,"她皱了皱眉，""在学院里，我们被教会了别按照敌人设下的规矩来战斗。""
 
 她看起来还想说更多，但放弃了。她点了点头后转身朝庄园建筑群走了回去 —— 在你能做出答复之前。",soe_fightLoseLeave:离开,"# translation: ""you idiot"""
 soeFightLoseDatingSim,DialogOptionSelected,$option == soe_fightLoseDatingSim,AdjustRepPerson neriene_rao FRIENDLY 2,"""我也这么想，""她说，脸上笑容重现。
 
 她看起来还想说什么，但取而代之地，她点了点头后转身朝庄园建筑群走了回去——在你能做出答复之前。",soe_fightLoseLeave:离开,
-soeFightLoseRude,DialogOptionSelected,$option == soe_fightLoseRude,AdjustRepPerson neriene_rao SUSPICIOUS -3,她看起来受到了不小的打击，张开嘴想说些什么，但很快又沉默了，转身朝庄园建筑群走了回去。,soe_fightLoseLeave:离开,
+soeFightLoseRude,DialogOptionSelected,$option == soe_fightLoseRude,AdjustRepPerson neriene_rao SUSPICIOUS -3,她看起来受到了不小的打击，张开嘴想说些什么，但很快一言不发地闭上嘴，转身朝庄园建筑群走了回去。,soe_fightLoseLeave:离开,
 soeFightLoseLeave,DialogOptionSelected,$option == soe_fightLoseLeave,"Call $global.soe_ref cleanUpMusicPlayer
 EndConversation DO_NOT_FIRE
 AddStoryPoints 1
@@ -13599,7 +13602,7 @@ SetTextHighlights $hijack_price","""有一艘 $hijack_hull $hijack_designation �
 contact_decline:拒绝",
 hijackBarLookAtFreighter,DialogOptionSelected,$option == hijack_lookBar,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1
-FireBest HijackNotEnoughMarines","$hijack_manOrWoman 在 $hijack_hisOrHer的破旧 TriPad 上轻触了几下，目标舰船的相关数据就出现在了上面。""不错的船，不是吗？""","hijack_op1:同意
+FireBest HijackNotEnoughMarines","$hijack_manOrWoman 在$hijack_hisOrHer的破旧 TriPad 上轻触了几下，目标舰船的相关数据就出现在了上面。""很能飞的家伙，不是吗？""","hijack_op1:同意
 contact_declineBarNoContinue:拒绝",
 hijackLookAtFreighter,DialogOptionSelected,$option == hijack_look,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1 false
@@ -13852,7 +13855,7 @@ FireBest $entity.fwt_missionFailTrigger
 AddCommodity credits $entity.fwt_payment
 unset $entity.fwt_wantsThing","在$HeOrShe转移款项时，这位 $faction $personRank 看起来十分高兴。
 
-""完美！太棒了。和你做生意十分愉快，$playerName。""你们寒暄了几句后，互相切断了通讯链接。",cutCommLinkNoText:继续,
+""完美！太棒了。和你做生意十分愉快，$playerName。""你们在敷衍地相互寒暄了几句之后就切断了通讯链接。",cutCommLinkNoText:继续,
 FWTDefaultFailTrigger,FWTDefaultFailTrigger,,Call $entity.fwt_ref endFailure,,,
 DFEFWTRepLossMinor,DFEFWTRepLossMinor,,Call $entity.fwt_ref repLossMinor,,,
 DFEFWTRepLossMedium,DFEFWTRepLossMedium,,Call $entity.fwt_ref repLossMedium,,,

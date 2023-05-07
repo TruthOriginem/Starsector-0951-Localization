@@ -47,7 +47,7 @@ automated_ships,无人战舰,1090,5,4,2,[数据删除],霸主 COMSEC,,,,,graphic
 ,,,,,,,,,,,,,
 # INDUSTRY,,,,,,,,,,,,,
 bulk_transport,大宗物流,1500,1,0,,就像不能摆脱引力一样，人无法摆脱经济。经济包围着我们，容纳着我们。经济曾将银河联系在一起，也会再度如此。,Artemisia Sun 于星历 203 年的年度汇报,,,,,graphics/icons/skills/bulk_transport.png,
-salvaging,打捞作业,1510,1,0,,"这让我感觉自己非常渺小，就像是在失落神使的城市里搜刮的虫豸一样。
+salvaging,打捞作业,1510,1,0,,"这使我感觉自己非常渺小，就像是在失落神使的城市里搜刮的虫豸一样。
 但这也使我富有。",Zion Hurst，Asher 打捞工会的熟练工,,,,,graphics/icons/skills/salvaging.png,
 field_repairs,现场维修,1520,1,0,,20 光年内没有一艘船的船体不印着海盗标志。能带我们脱离此地的只有我们自己的技术，以及那片残骸区里能找到的任何东西。,Callisto Ibrahim，探索日志星历 202.10.15,,,,,graphics/icons/skills/field_repairs.png,
 ordnance_expert,军械专家,1530,3,1,,弱者只会畏惧杀戮机器的力量，而强者则会本能地认识到它的美。,最高行政官语录,TRUE,,,,graphics/icons/skills/ordnance_expert2.png,
